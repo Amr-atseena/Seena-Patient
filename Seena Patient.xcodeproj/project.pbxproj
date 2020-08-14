@@ -7,23 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2323E64FD27D63A6AF60C1F6 /* Pods_Seena_Patient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A829CAD199C8BC7D0018D428 /* Pods_Seena_Patient.framework */; };
 		8C8CB3C224E6B815009679E5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8CB3C124E6B815009679E5 /* AppDelegate.swift */; };
-		8C8CB3C424E6B815009679E5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8CB3C324E6B815009679E5 /* SceneDelegate.swift */; };
-		8C8CB3C624E6B815009679E5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8CB3C524E6B815009679E5 /* ViewController.swift */; };
-		8C8CB3C924E6B815009679E5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C8CB3C724E6B815009679E5 /* Main.storyboard */; };
 		8C8CB3CB24E6B817009679E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C8CB3CA24E6B817009679E5 /* Assets.xcassets */; };
 		8C8CB3CE24E6B817009679E5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C8CB3CC24E6B817009679E5 /* LaunchScreen.storyboard */; };
+		8C8CB3E024E6C3F7009679E5 /* RootRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8CB3DF24E6C3F7009679E5 /* RootRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		8C8CB3BE24E6B815009679E5 /* Seena Patient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Seena Patient.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C8CB3C124E6B815009679E5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8C8CB3C324E6B815009679E5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		8C8CB3C524E6B815009679E5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		8C8CB3C824E6B815009679E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8C8CB3CA24E6B817009679E5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8C8CB3CD24E6B817009679E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8C8CB3CF24E6B817009679E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8C8CB3DF24E6C3F7009679E5 /* RootRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootRouter.swift; sourceTree = "<group>"; };
+		A829CAD199C8BC7D0018D428 /* Pods_Seena_Patient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Seena_Patient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE9E485092256443C69FE26D /* Pods-Seena Patient.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Seena Patient.release.xcconfig"; path = "Target Support Files/Pods-Seena Patient/Pods-Seena Patient.release.xcconfig"; sourceTree = "<group>"; };
+		E338E54FF4A9A0DE828B1EE8 /* Pods-Seena Patient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Seena Patient.debug.xcconfig"; path = "Target Support Files/Pods-Seena Patient/Pods-Seena Patient.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +31,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2323E64FD27D63A6AF60C1F6 /* Pods_Seena_Patient.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3288411462DA13A346952D9E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E338E54FF4A9A0DE828B1EE8 /* Pods-Seena Patient.debug.xcconfig */,
+				CE9E485092256443C69FE26D /* Pods-Seena Patient.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		8C8CB3B524E6B815009679E5 = {
 			isa = PBXGroup;
 			children = (
 				8C8CB3C024E6B815009679E5 /* Seena Patient */,
 				8C8CB3BF24E6B815009679E5 /* Products */,
+				3288411462DA13A346952D9E /* Pods */,
+				E8CA0B891E95ACDF7CCD0B36 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +69,109 @@
 		8C8CB3C024E6B815009679E5 /* Seena Patient */ = {
 			isa = PBXGroup;
 			children = (
-				8C8CB3C124E6B815009679E5 /* AppDelegate.swift */,
-				8C8CB3C324E6B815009679E5 /* SceneDelegate.swift */,
-				8C8CB3C524E6B815009679E5 /* ViewController.swift */,
-				8C8CB3C724E6B815009679E5 /* Main.storyboard */,
-				8C8CB3CA24E6B817009679E5 /* Assets.xcassets */,
-				8C8CB3CC24E6B817009679E5 /* LaunchScreen.storyboard */,
-				8C8CB3CF24E6B817009679E5 /* Info.plist */,
+				8C8CB3D824E6BA2D009679E5 /* Configurations */,
+				8C8CB3D924E6BA42009679E5 /* Utils */,
+				8C8CB3D724E6BA21009679E5 /* Services */,
+				8C8CB3D624E6BA18009679E5 /* Modules */,
+				8C8CB3DA24E6BA50009679E5 /* Resources */,
 			);
 			path = "Seena Patient";
+			sourceTree = "<group>";
+		};
+		8C8CB3D624E6BA18009679E5 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				8C8CB3DD24E6BAB2009679E5 /* RootModule */,
+				8C8CB3E224E6C671009679E5 /* SplashModule */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		8C8CB3D724E6BA21009679E5 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		8C8CB3D824E6BA2D009679E5 /* Configurations */ = {
+			isa = PBXGroup;
+			children = (
+				8C8CB3CF24E6B817009679E5 /* Info.plist */,
+			);
+			path = Configurations;
+			sourceTree = "<group>";
+		};
+		8C8CB3D924E6BA42009679E5 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		8C8CB3DA24E6BA50009679E5 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8C8CB3DC24E6BA69009679E5 /* StoryBoards */,
+				8C8CB3DB24E6BA5D009679E5 /* Images */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		8C8CB3DB24E6BA5D009679E5 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				8C8CB3CA24E6B817009679E5 /* Assets.xcassets */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		8C8CB3DC24E6BA69009679E5 /* StoryBoards */ = {
+			isa = PBXGroup;
+			children = (
+				8C8CB3CC24E6B817009679E5 /* LaunchScreen.storyboard */,
+			);
+			path = StoryBoards;
+			sourceTree = "<group>";
+		};
+		8C8CB3DD24E6BAB2009679E5 /* RootModule */ = {
+			isa = PBXGroup;
+			children = (
+				8C8CB3DE24E6C3E8009679E5 /* Router */,
+				8C8CB3E124E6C661009679E5 /* AppDelegate */,
+			);
+			path = RootModule;
+			sourceTree = "<group>";
+		};
+		8C8CB3DE24E6C3E8009679E5 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				8C8CB3DF24E6C3F7009679E5 /* RootRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		8C8CB3E124E6C661009679E5 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				8C8CB3C124E6B815009679E5 /* AppDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		8C8CB3E224E6C671009679E5 /* SplashModule */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SplashModule;
+			sourceTree = "<group>";
+		};
+		E8CA0B891E95ACDF7CCD0B36 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A829CAD199C8BC7D0018D428 /* Pods_Seena_Patient.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +181,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8C8CB3D224E6B817009679E5 /* Build configuration list for PBXNativeTarget "Seena Patient" */;
 			buildPhases = (
+				7889C2936D208C21B7E37BB4 /* [CP] Check Pods Manifest.lock */,
 				8C8CB3BA24E6B815009679E5 /* Sources */,
 				8C8CB3BB24E6B815009679E5 /* Frameworks */,
 				8C8CB3BC24E6B815009679E5 /* Resources */,
+				8C8CB3D524E6B9C1009679E5 /* Swift Lint Script */,
+				D9D7AE5C710171623E74723D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -127,34 +237,84 @@
 			files = (
 				8C8CB3CE24E6B817009679E5 /* LaunchScreen.storyboard in Resources */,
 				8C8CB3CB24E6B817009679E5 /* Assets.xcassets in Resources */,
-				8C8CB3C924E6B815009679E5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7889C2936D208C21B7E37BB4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Seena Patient-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8C8CB3D524E6B9C1009679E5 /* Swift Lint Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Swift Lint Script";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+		D9D7AE5C710171623E74723D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Seena Patient/Pods-Seena Patient-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Seena Patient/Pods-Seena Patient-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Seena Patient/Pods-Seena Patient-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8C8CB3BA24E6B815009679E5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8C8CB3C624E6B815009679E5 /* ViewController.swift in Sources */,
+				8C8CB3E024E6C3F7009679E5 /* RootRouter.swift in Sources */,
 				8C8CB3C224E6B815009679E5 /* AppDelegate.swift in Sources */,
-				8C8CB3C424E6B815009679E5 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		8C8CB3C724E6B815009679E5 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8C8CB3C824E6B815009679E5 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		8C8CB3CC24E6B817009679E5 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -282,11 +442,13 @@
 		};
 		8C8CB3D324E6B817009679E5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E338E54FF4A9A0DE828B1EE8 /* Pods-Seena Patient.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LL84DY2BWT;
-				INFOPLIST_FILE = "Seena Patient/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Seena Patient/Configurations/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -294,17 +456,19 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.RKAnjel.Seena-Patient";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		8C8CB3D424E6B817009679E5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CE9E485092256443C69FE26D /* Pods-Seena Patient.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LL84DY2BWT;
-				INFOPLIST_FILE = "Seena Patient/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Seena Patient/Configurations/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -312,7 +476,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.RKAnjel.Seena-Patient";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

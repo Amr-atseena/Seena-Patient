@@ -18,5 +18,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         RootRouter.assembleModule(window: window)
         return true
     }
-    //MARK: - Methods
+    // MARK: - Methods
 }
