@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,6 +12,12 @@
 		8C8CB3CB24E6B817009679E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C8CB3CA24E6B817009679E5 /* Assets.xcassets */; };
 		8C8CB3CE24E6B817009679E5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C8CB3CC24E6B817009679E5 /* LaunchScreen.storyboard */; };
 		8C8CB3E024E6C3F7009679E5 /* RootRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8CB3DF24E6C3F7009679E5 /* RootRouter.swift */; };
+		8C8CB3EA24E6CA46009679E5 /* UICollectionView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8CB3E424E6CA45009679E5 /* UICollectionView+Extensions.swift */; };
+		8C8CB3EB24E6CA46009679E5 /* UINavigationController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8CB3E524E6CA45009679E5 /* UINavigationController+Extensions.swift */; };
+		8C8CB3EC24E6CA46009679E5 /* UITableView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8CB3E624E6CA45009679E5 /* UITableView+Extensions.swift */; };
+		8C8CB3ED24E6CA46009679E5 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8CB3E724E6CA45009679E5 /* String+Extensions.swift */; };
+		8C8CB3EE24E6CA46009679E5 /* NSObject+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8CB3E824E6CA45009679E5 /* NSObject+Extensions.swift */; };
+		8C8CB3EF24E6CA46009679E5 /* UIApplication+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8CB3E924E6CA46009679E5 /* UIApplication+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +27,12 @@
 		8C8CB3CD24E6B817009679E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8C8CB3CF24E6B817009679E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8C8CB3DF24E6C3F7009679E5 /* RootRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootRouter.swift; sourceTree = "<group>"; };
+		8C8CB3E424E6CA45009679E5 /* UICollectionView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extensions.swift"; sourceTree = "<group>"; };
+		8C8CB3E524E6CA45009679E5 /* UINavigationController+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Extensions.swift"; sourceTree = "<group>"; };
+		8C8CB3E624E6CA45009679E5 /* UITableView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Extensions.swift"; sourceTree = "<group>"; };
+		8C8CB3E724E6CA45009679E5 /* String+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		8C8CB3E824E6CA45009679E5 /* NSObject+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+Extensions.swift"; sourceTree = "<group>"; };
+		8C8CB3E924E6CA46009679E5 /* UIApplication+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extensions.swift"; sourceTree = "<group>"; };
 		A829CAD199C8BC7D0018D428 /* Pods_Seena_Patient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Seena_Patient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE9E485092256443C69FE26D /* Pods-Seena Patient.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Seena Patient.release.xcconfig"; path = "Target Support Files/Pods-Seena Patient/Pods-Seena Patient.release.xcconfig"; sourceTree = "<group>"; };
 		E338E54FF4A9A0DE828B1EE8 /* Pods-Seena Patient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Seena Patient.debug.xcconfig"; path = "Target Support Files/Pods-Seena Patient/Pods-Seena Patient.debug.xcconfig"; sourceTree = "<group>"; };
@@ -44,7 +56,6 @@
 				E338E54FF4A9A0DE828B1EE8 /* Pods-Seena Patient.debug.xcconfig */,
 				CE9E485092256443C69FE26D /* Pods-Seena Patient.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -105,6 +116,7 @@
 		8C8CB3D924E6BA42009679E5 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				8C8CB3E324E6C9F3009679E5 /* Extenstions */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -164,6 +176,19 @@
 			children = (
 			);
 			path = SplashModule;
+			sourceTree = "<group>";
+		};
+		8C8CB3E324E6C9F3009679E5 /* Extenstions */ = {
+			isa = PBXGroup;
+			children = (
+				8C8CB3E824E6CA45009679E5 /* NSObject+Extensions.swift */,
+				8C8CB3E724E6CA45009679E5 /* String+Extensions.swift */,
+				8C8CB3E924E6CA46009679E5 /* UIApplication+Extensions.swift */,
+				8C8CB3E424E6CA45009679E5 /* UICollectionView+Extensions.swift */,
+				8C8CB3E524E6CA45009679E5 /* UINavigationController+Extensions.swift */,
+				8C8CB3E624E6CA45009679E5 /* UITableView+Extensions.swift */,
+			);
+			path = Extenstions;
 			sourceTree = "<group>";
 		};
 		E8CA0B891E95ACDF7CCD0B36 /* Frameworks */ = {
@@ -307,8 +332,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C8CB3EC24E6CA46009679E5 /* UITableView+Extensions.swift in Sources */,
 				8C8CB3E024E6C3F7009679E5 /* RootRouter.swift in Sources */,
+				8C8CB3EE24E6CA46009679E5 /* NSObject+Extensions.swift in Sources */,
 				8C8CB3C224E6B815009679E5 /* AppDelegate.swift in Sources */,
+				8C8CB3EA24E6CA46009679E5 /* UICollectionView+Extensions.swift in Sources */,
+				8C8CB3ED24E6CA46009679E5 /* String+Extensions.swift in Sources */,
+				8C8CB3EF24E6CA46009679E5 /* UIApplication+Extensions.swift in Sources */,
+				8C8CB3EB24E6CA46009679E5 /* UINavigationController+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
