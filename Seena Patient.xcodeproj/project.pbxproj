@@ -18,6 +18,10 @@
 		8C8CB3ED24E6CA46009679E5 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8CB3E724E6CA45009679E5 /* String+Extensions.swift */; };
 		8C8CB3EE24E6CA46009679E5 /* NSObject+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8CB3E824E6CA45009679E5 /* NSObject+Extensions.swift */; };
 		8C8CB3EF24E6CA46009679E5 /* UIApplication+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8CB3E924E6CA46009679E5 /* UIApplication+Extensions.swift */; };
+		8C8CB3FB24E6CF23009679E5 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8CB3F224E6CF23009679E5 /* APIService.swift */; };
+		8C8CB3FC24E6CF23009679E5 /* RemoteServiceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8CB3F324E6CF23009679E5 /* RemoteServiceType.swift */; };
+		8C8CB3FD24E6CF23009679E5 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8CB3F524E6CF23009679E5 /* Environment.swift */; };
+		8C8CB3FE24E6CF23009679E5 /* EnvironmentProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8CB3F624E6CF23009679E5 /* EnvironmentProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +37,10 @@
 		8C8CB3E724E6CA45009679E5 /* String+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		8C8CB3E824E6CA45009679E5 /* NSObject+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+Extensions.swift"; sourceTree = "<group>"; };
 		8C8CB3E924E6CA46009679E5 /* UIApplication+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extensions.swift"; sourceTree = "<group>"; };
+		8C8CB3F224E6CF23009679E5 /* APIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		8C8CB3F324E6CF23009679E5 /* RemoteServiceType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteServiceType.swift; sourceTree = "<group>"; };
+		8C8CB3F524E6CF23009679E5 /* Environment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
+		8C8CB3F624E6CF23009679E5 /* EnvironmentProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnvironmentProtocol.swift; sourceTree = "<group>"; };
 		A829CAD199C8BC7D0018D428 /* Pods_Seena_Patient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Seena_Patient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE9E485092256443C69FE26D /* Pods-Seena Patient.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Seena Patient.release.xcconfig"; path = "Target Support Files/Pods-Seena Patient/Pods-Seena Patient.release.xcconfig"; sourceTree = "<group>"; };
 		E338E54FF4A9A0DE828B1EE8 /* Pods-Seena Patient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Seena Patient.debug.xcconfig"; path = "Target Support Files/Pods-Seena Patient/Pods-Seena Patient.debug.xcconfig"; sourceTree = "<group>"; };
@@ -101,6 +109,10 @@
 		8C8CB3D724E6BA21009679E5 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				8C8CB3F424E6CF23009679E5 /* Environment */,
+				8C8CB3F124E6CF23009679E5 /* GenaricAPIServices */,
+				8C8CB3F724E6CF23009679E5 /* RemoteServices */,
+				8C8CB3F024E6CF23009679E5 /* LocalServices */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -189,6 +201,38 @@
 				8C8CB3E624E6CA45009679E5 /* UITableView+Extensions.swift */,
 			);
 			path = Extenstions;
+			sourceTree = "<group>";
+		};
+		8C8CB3F024E6CF23009679E5 /* LocalServices */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = LocalServices;
+			sourceTree = "<group>";
+		};
+		8C8CB3F124E6CF23009679E5 /* GenaricAPIServices */ = {
+			isa = PBXGroup;
+			children = (
+				8C8CB3F224E6CF23009679E5 /* APIService.swift */,
+				8C8CB3F324E6CF23009679E5 /* RemoteServiceType.swift */,
+			);
+			path = GenaricAPIServices;
+			sourceTree = "<group>";
+		};
+		8C8CB3F424E6CF23009679E5 /* Environment */ = {
+			isa = PBXGroup;
+			children = (
+				8C8CB3F624E6CF23009679E5 /* EnvironmentProtocol.swift */,
+				8C8CB3F524E6CF23009679E5 /* Environment.swift */,
+			);
+			path = Environment;
+			sourceTree = "<group>";
+		};
+		8C8CB3F724E6CF23009679E5 /* RemoteServices */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = RemoteServices;
 			sourceTree = "<group>";
 		};
 		E8CA0B891E95ACDF7CCD0B36 /* Frameworks */ = {
@@ -339,7 +383,11 @@
 				8C8CB3EA24E6CA46009679E5 /* UICollectionView+Extensions.swift in Sources */,
 				8C8CB3ED24E6CA46009679E5 /* String+Extensions.swift in Sources */,
 				8C8CB3EF24E6CA46009679E5 /* UIApplication+Extensions.swift in Sources */,
+				8C8CB3FE24E6CF23009679E5 /* EnvironmentProtocol.swift in Sources */,
+				8C8CB3FD24E6CF23009679E5 /* Environment.swift in Sources */,
+				8C8CB3FB24E6CF23009679E5 /* APIService.swift in Sources */,
 				8C8CB3EB24E6CA46009679E5 /* UINavigationController+Extensions.swift in Sources */,
+				8C8CB3FC24E6CF23009679E5 /* RemoteServiceType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
