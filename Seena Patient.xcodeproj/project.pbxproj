@@ -22,6 +22,16 @@
 		8C8CB3FC24E6CF23009679E5 /* RemoteServiceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8CB3F324E6CF23009679E5 /* RemoteServiceType.swift */; };
 		8C8CB3FD24E6CF23009679E5 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8CB3F524E6CF23009679E5 /* Environment.swift */; };
 		8C8CB3FE24E6CF23009679E5 /* EnvironmentProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8CB3F624E6CF23009679E5 /* EnvironmentProtocol.swift */; };
+		8C8CB40324E6D3B3009679E5 /* SplashVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8CB40124E6D3B3009679E5 /* SplashVC.swift */; };
+		8C8CB40424E6D3B3009679E5 /* SplashVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C8CB40224E6D3B3009679E5 /* SplashVC.xib */; };
+		8C8CB40624E6DA9B009679E5 /* SplashProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8CB40524E6DA9B009679E5 /* SplashProtocols.swift */; };
+		8C8CB40D24E6E283009679E5 /* SplashRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8CB40C24E6E283009679E5 /* SplashRouter.swift */; };
+		8C8CB40F24E6E53A009679E5 /* SplashInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8CB40E24E6E53A009679E5 /* SplashInteractor.swift */; };
+		8C8CB41124E6E651009679E5 /* SplashPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8CB41024E6E651009679E5 /* SplashPresenter.swift */; };
+		8C8CB41424E6EBFD009679E5 /* CustomizedTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8CB41324E6EBFD009679E5 /* CustomizedTabBar.swift */; };
+		8C8CB41D24E6F999009679E5 /* HomeTabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8CB41C24E6F999009679E5 /* HomeTabBarVC.swift */; };
+		8C8CB42124E71353009679E5 /* DesignSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8CB42024E71353009679E5 /* DesignSystem.swift */; };
+		8C8CB42324E71369009679E5 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8CB42224E71369009679E5 /* Colors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +51,16 @@
 		8C8CB3F324E6CF23009679E5 /* RemoteServiceType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteServiceType.swift; sourceTree = "<group>"; };
 		8C8CB3F524E6CF23009679E5 /* Environment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		8C8CB3F624E6CF23009679E5 /* EnvironmentProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnvironmentProtocol.swift; sourceTree = "<group>"; };
+		8C8CB40124E6D3B3009679E5 /* SplashVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashVC.swift; sourceTree = "<group>"; };
+		8C8CB40224E6D3B3009679E5 /* SplashVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SplashVC.xib; sourceTree = "<group>"; };
+		8C8CB40524E6DA9B009679E5 /* SplashProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashProtocols.swift; sourceTree = "<group>"; };
+		8C8CB40C24E6E283009679E5 /* SplashRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashRouter.swift; sourceTree = "<group>"; };
+		8C8CB40E24E6E53A009679E5 /* SplashInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashInteractor.swift; sourceTree = "<group>"; };
+		8C8CB41024E6E651009679E5 /* SplashPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashPresenter.swift; sourceTree = "<group>"; };
+		8C8CB41324E6EBFD009679E5 /* CustomizedTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomizedTabBar.swift; sourceTree = "<group>"; };
+		8C8CB41C24E6F999009679E5 /* HomeTabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarVC.swift; sourceTree = "<group>"; };
+		8C8CB42024E71353009679E5 /* DesignSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSystem.swift; sourceTree = "<group>"; };
+		8C8CB42224E71369009679E5 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		A829CAD199C8BC7D0018D428 /* Pods_Seena_Patient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Seena_Patient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE9E485092256443C69FE26D /* Pods-Seena Patient.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Seena Patient.release.xcconfig"; path = "Target Support Files/Pods-Seena Patient/Pods-Seena Patient.release.xcconfig"; sourceTree = "<group>"; };
 		E338E54FF4A9A0DE828B1EE8 /* Pods-Seena Patient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Seena Patient.debug.xcconfig"; path = "Target Support Files/Pods-Seena Patient/Pods-Seena Patient.debug.xcconfig"; sourceTree = "<group>"; };
@@ -90,6 +110,8 @@
 			children = (
 				8C8CB3D824E6BA2D009679E5 /* Configurations */,
 				8C8CB3D924E6BA42009679E5 /* Utils */,
+				8C8CB41F24E7130C009679E5 /* DesignSystem */,
+				8C8CB41E24E712FA009679E5 /* Entities */,
 				8C8CB3D724E6BA21009679E5 /* Services */,
 				8C8CB3D624E6BA18009679E5 /* Modules */,
 				8C8CB3DA24E6BA50009679E5 /* Resources */,
@@ -102,6 +124,7 @@
 			children = (
 				8C8CB3DD24E6BAB2009679E5 /* RootModule */,
 				8C8CB3E224E6C671009679E5 /* SplashModule */,
+				8C8CB41B24E6F974009679E5 /* TabBarModule */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -128,6 +151,7 @@
 		8C8CB3D924E6BA42009679E5 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				8C8CB41224E6EBEC009679E5 /* CustomUI */,
 				8C8CB3E324E6C9F3009679E5 /* Extenstions */,
 			);
 			path = Utils;
@@ -186,6 +210,11 @@
 		8C8CB3E224E6C671009679E5 /* SplashModule */ = {
 			isa = PBXGroup;
 			children = (
+				8C8CB40724E6DAB6009679E5 /* Protocols */,
+				8C8CB40924E6DACD009679E5 /* Router */,
+				8C8CB40A24E6DAD9009679E5 /* Interactor */,
+				8C8CB40B24E6DAE1009679E5 /* Presenter */,
+				8C8CB40824E6DAC2009679E5 /* View */,
 			);
 			path = SplashModule;
 			sourceTree = "<group>";
@@ -233,6 +262,79 @@
 			children = (
 			);
 			path = RemoteServices;
+			sourceTree = "<group>";
+		};
+		8C8CB40724E6DAB6009679E5 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				8C8CB40524E6DA9B009679E5 /* SplashProtocols.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		8C8CB40824E6DAC2009679E5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8C8CB40124E6D3B3009679E5 /* SplashVC.swift */,
+				8C8CB40224E6D3B3009679E5 /* SplashVC.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8C8CB40924E6DACD009679E5 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				8C8CB40C24E6E283009679E5 /* SplashRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		8C8CB40A24E6DAD9009679E5 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				8C8CB40E24E6E53A009679E5 /* SplashInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		8C8CB40B24E6DAE1009679E5 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				8C8CB41024E6E651009679E5 /* SplashPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		8C8CB41224E6EBEC009679E5 /* CustomUI */ = {
+			isa = PBXGroup;
+			children = (
+				8C8CB41324E6EBFD009679E5 /* CustomizedTabBar.swift */,
+			);
+			path = CustomUI;
+			sourceTree = "<group>";
+		};
+		8C8CB41B24E6F974009679E5 /* TabBarModule */ = {
+			isa = PBXGroup;
+			children = (
+				8C8CB41C24E6F999009679E5 /* HomeTabBarVC.swift */,
+			);
+			path = TabBarModule;
+			sourceTree = "<group>";
+		};
+		8C8CB41E24E712FA009679E5 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		8C8CB41F24E7130C009679E5 /* DesignSystem */ = {
+			isa = PBXGroup;
+			children = (
+				8C8CB42024E71353009679E5 /* DesignSystem.swift */,
+				8C8CB42224E71369009679E5 /* Colors.swift */,
+			);
+			path = DesignSystem;
 			sourceTree = "<group>";
 		};
 		E8CA0B891E95ACDF7CCD0B36 /* Frameworks */ = {
@@ -304,6 +406,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C8CB40424E6D3B3009679E5 /* SplashVC.xib in Resources */,
 				8C8CB3CE24E6B817009679E5 /* LaunchScreen.storyboard in Resources */,
 				8C8CB3CB24E6B817009679E5 /* Assets.xcassets in Resources */,
 			);
@@ -380,11 +483,20 @@
 				8C8CB3E024E6C3F7009679E5 /* RootRouter.swift in Sources */,
 				8C8CB3EE24E6CA46009679E5 /* NSObject+Extensions.swift in Sources */,
 				8C8CB3C224E6B815009679E5 /* AppDelegate.swift in Sources */,
+				8C8CB40624E6DA9B009679E5 /* SplashProtocols.swift in Sources */,
 				8C8CB3EA24E6CA46009679E5 /* UICollectionView+Extensions.swift in Sources */,
 				8C8CB3ED24E6CA46009679E5 /* String+Extensions.swift in Sources */,
+				8C8CB41424E6EBFD009679E5 /* CustomizedTabBar.swift in Sources */,
+				8C8CB40F24E6E53A009679E5 /* SplashInteractor.swift in Sources */,
 				8C8CB3EF24E6CA46009679E5 /* UIApplication+Extensions.swift in Sources */,
+				8C8CB42324E71369009679E5 /* Colors.swift in Sources */,
 				8C8CB3FE24E6CF23009679E5 /* EnvironmentProtocol.swift in Sources */,
+				8C8CB40324E6D3B3009679E5 /* SplashVC.swift in Sources */,
+				8C8CB41124E6E651009679E5 /* SplashPresenter.swift in Sources */,
+				8C8CB41D24E6F999009679E5 /* HomeTabBarVC.swift in Sources */,
+				8C8CB40D24E6E283009679E5 /* SplashRouter.swift in Sources */,
 				8C8CB3FD24E6CF23009679E5 /* Environment.swift in Sources */,
+				8C8CB42124E71353009679E5 /* DesignSystem.swift in Sources */,
 				8C8CB3FB24E6CF23009679E5 /* APIService.swift in Sources */,
 				8C8CB3EB24E6CA46009679E5 /* UINavigationController+Extensions.swift in Sources */,
 				8C8CB3FC24E6CF23009679E5 /* RemoteServiceType.swift in Sources */,

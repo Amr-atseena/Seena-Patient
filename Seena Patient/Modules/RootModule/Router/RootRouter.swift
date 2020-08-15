@@ -10,7 +10,7 @@ import UIKit
 
 class RootRouter {
     static func assembleModule(window: UIWindow?) {
-        //window.rootViewController 
+        window?.rootViewController  = SplashRouter.assembleModule()
         window?.makeKeyAndVisible()
     }
 }

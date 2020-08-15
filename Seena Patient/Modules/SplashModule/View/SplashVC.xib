@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SplashVC" customModule="Seena_Patient" customModuleProvider="target">
+            <connections>
+                <outlet property="loadingIndictor" destination="Hfw-dv-a7m" id="Uqv-Ol-zVa"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Seena-Logo" translatesAutoresizingMaskIntoConstraints="NO" id="Hzp-Rd-HAQ">
+                    <rect key="frame" x="88.5" y="269.5" width="237" height="357"/>
+                </imageView>
+                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Hfw-dv-a7m">
+                    <rect key="frame" x="188.5" y="653.5" width="37" height="37"/>
+                    <color key="color" red="0.85882352941176465" green="0.078431372549019607" blue="0.078431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </activityIndicatorView>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="Hzp-Rd-HAQ" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="D5x-xT-57e"/>
+                <constraint firstItem="Hfw-dv-a7m" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" multiplier="1.5" id="EZL-q1-YXo"/>
+                <constraint firstItem="Hfw-dv-a7m" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Idg-Fg-ZpB"/>
+                <constraint firstItem="Hzp-Rd-HAQ" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="KzS-XT-IEN"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="139" y="125"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Seena-Logo" width="237" height="357"/>
+    </resources>
+</document>
