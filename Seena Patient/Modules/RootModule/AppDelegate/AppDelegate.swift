@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import IQKeyboardManagerSwift
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     // MARK: - Attributes
@@ -15,8 +15,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // MARK: - Life Cycle
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         window = UIWindow(frame: UIScreen.main.bounds)
+        setupIQKeyboardManager()
+        setupNavBarApperance()
+        setupTabBarApperance()
         RootRouter.assembleModule(window: window)
         return true
     }
     // MARK: - Methods
+    private func setupIQKeyboardManager() {
+        IQKeyboardManager.shared.enable = true
+        IQKeyboardManager.shared.enableAutoToolbar = false
+        IQKeyboardManager.shared.shouldResignOnTouchOutside = true
+    }
+    private func setupNavBarApperance() {
+    }
+    private func setupTabBarApperance() {
+    }
 }
