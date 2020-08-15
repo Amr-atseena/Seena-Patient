@@ -34,6 +34,7 @@
 		8C8CB42324E71369009679E5 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8CB42224E71369009679E5 /* Colors.swift */; };
 		8CAB097124E7CEA700D38CDD /* TabBarLocalization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAB097024E7CEA700D38CDD /* TabBarLocalization.swift */; };
 		8CAB097524E7DDED00D38CDD /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAB097424E7DDED00D38CDD /* UIView+Extensions.swift */; };
+		8CAB097924E7E6CB00D38CDD /* UIViewContorller+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAB097824E7E6CA00D38CDD /* UIViewContorller+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,6 +66,7 @@
 		8C8CB42224E71369009679E5 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		8CAB097024E7CEA700D38CDD /* TabBarLocalization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarLocalization.swift; sourceTree = "<group>"; };
 		8CAB097424E7DDED00D38CDD /* UIView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		8CAB097824E7E6CA00D38CDD /* UIViewContorller+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewContorller+Extensions.swift"; sourceTree = "<group>"; };
 		A829CAD199C8BC7D0018D428 /* Pods_Seena_Patient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Seena_Patient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE9E485092256443C69FE26D /* Pods-Seena Patient.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Seena Patient.release.xcconfig"; path = "Target Support Files/Pods-Seena Patient/Pods-Seena Patient.release.xcconfig"; sourceTree = "<group>"; };
 		E338E54FF4A9A0DE828B1EE8 /* Pods-Seena Patient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Seena Patient.debug.xcconfig"; path = "Target Support Files/Pods-Seena Patient/Pods-Seena Patient.debug.xcconfig"; sourceTree = "<group>"; };
@@ -226,6 +228,7 @@
 		8C8CB3E324E6C9F3009679E5 /* Extenstions */ = {
 			isa = PBXGroup;
 			children = (
+				8CAB097824E7E6CA00D38CDD /* UIViewContorller+Extensions.swift */,
 				8C8CB3E824E6CA45009679E5 /* NSObject+Extensions.swift */,
 				8C8CB3E724E6CA45009679E5 /* String+Extensions.swift */,
 				8C8CB3E924E6CA46009679E5 /* UIApplication+Extensions.swift */,
@@ -321,8 +324,8 @@
 		8C8CB41B24E6F974009679E5 /* TabBarModule */ = {
 			isa = PBXGroup;
 			children = (
-				8C8CB41C24E6F999009679E5 /* HomeTabBarVC.swift */,
-				8CAB097024E7CEA700D38CDD /* TabBarLocalization.swift */,
+				8CAB097724E7E58A00D38CDD /* View */,
+				8CAB097624E7E57E00D38CDD /* Localization */,
 			);
 			path = TabBarModule;
 			sourceTree = "<group>";
@@ -341,6 +344,22 @@
 				8C8CB42224E71369009679E5 /* Colors.swift */,
 			);
 			path = DesignSystem;
+			sourceTree = "<group>";
+		};
+		8CAB097624E7E57E00D38CDD /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				8CAB097024E7CEA700D38CDD /* TabBarLocalization.swift */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
+		8CAB097724E7E58A00D38CDD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8C8CB41C24E6F999009679E5 /* HomeTabBarVC.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		E8CA0B891E95ACDF7CCD0B36 /* Frameworks */ = {
@@ -497,6 +516,7 @@
 				8C8CB3EF24E6CA46009679E5 /* UIApplication+Extensions.swift in Sources */,
 				8C8CB42324E71369009679E5 /* Colors.swift in Sources */,
 				8C8CB3FE24E6CF23009679E5 /* EnvironmentProtocol.swift in Sources */,
+				8CAB097924E7E6CB00D38CDD /* UIViewContorller+Extensions.swift in Sources */,
 				8C8CB40324E6D3B3009679E5 /* SplashVC.swift in Sources */,
 				8CAB097524E7DDED00D38CDD /* UIView+Extensions.swift in Sources */,
 				8C8CB41124E6E651009679E5 /* SplashPresenter.swift in Sources */,
