@@ -33,7 +33,7 @@ class HomeTabBarVC: UITabBarController {
         self.setValue(customTabBar, forKey: "tabBar")
     }
     private func homeModule() -> UIViewController {
-        let home = UINavigationController(rootViewController: UIViewController())
+        let home = UINavigationController(rootViewController: HomeRouter.assembleModule())
         home.tabBarItem = UITabBarItem(title: localization.home, image: #imageLiteral(resourceName: "Home"), tag: 0)
         return home
     }

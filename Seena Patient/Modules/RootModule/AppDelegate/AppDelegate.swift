@@ -28,7 +28,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         IQKeyboardManager.shared.shouldResignOnTouchOutside = true
     }
     private func setupNavBarApperance() {
+        let attributes = [NSAttributedString.Key.font: DesignSystem.Typography.subHeading.font]
+        UINavigationBar.appearance().titleTextAttributes = attributes
     }
     private func setupTabBarApperance() {
+        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font: DesignSystem.Typography.title3.font], for: .normal)
+        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font: DesignSystem.Typography.title2.font], for: .selected)
     }
 }

@@ -35,6 +35,26 @@
 		8CAB097124E7CEA700D38CDD /* TabBarLocalization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAB097024E7CEA700D38CDD /* TabBarLocalization.swift */; };
 		8CAB097524E7DDED00D38CDD /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAB097424E7DDED00D38CDD /* UIView+Extensions.swift */; };
 		8CAB097924E7E6CB00D38CDD /* UIViewContorller+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAB097824E7E6CA00D38CDD /* UIViewContorller+Extensions.swift */; };
+		8CAB098124E7E8C200D38CDD /* HomeProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAB098024E7E8C200D38CDD /* HomeProtocols.swift */; };
+		8CAB098324E7E9A900D38CDD /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAB098224E7E9A900D38CDD /* HomeRouter.swift */; };
+		8CAB098524E7F22000D38CDD /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAB098424E7F22000D38CDD /* HomeInteractor.swift */; };
+		8CAB098724E7F25900D38CDD /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAB098624E7F25900D38CDD /* HomePresenter.swift */; };
+		8CAB098A24E7F2F400D38CDD /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAB098824E7F2F400D38CDD /* HomeVC.swift */; };
+		8CAB098B24E7F2F400D38CDD /* HomeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CAB098924E7F2F400D38CDD /* HomeVC.xib */; };
+		8CAB098E24E7F55800D38CDD /* HomeLocalization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAB098D24E7F55800D38CDD /* HomeLocalization.swift */; };
+		8CAB099224E806C100D38CDD /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAB099124E806C100D38CDD /* Font.swift */; };
+		8CAB099B24E808A700D38CDD /* Tajawal-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8CAB099424E808A700D38CDD /* Tajawal-ExtraBold.ttf */; };
+		8CAB099D24E808A700D38CDD /* Tajawal-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8CAB099624E808A700D38CDD /* Tajawal-Bold.ttf */; };
+		8CAB099F24E808A700D38CDD /* Tajawal-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8CAB099824E808A700D38CDD /* Tajawal-Regular.ttf */; };
+		8CAB09A024E808A700D38CDD /* Tajawal-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8CAB099924E808A700D38CDD /* Tajawal-Medium.ttf */; };
+		8CAB09A324E80BC600D38CDD /* CustomFontDiscriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAB09A224E80BC600D38CDD /* CustomFontDiscriptor.swift */; };
+		8CAB09A524E80C2700D38CDD /* Typography.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAB09A424E80C2700D38CDD /* Typography.swift */; };
+		8CAB09AB24E8274200D38CDD /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAB09A924E8274200D38CDD /* CategoryCell.swift */; };
+		8CAB09AC24E8274200D38CDD /* CategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CAB09AA24E8274200D38CDD /* CategoryCell.xib */; };
+		8CAB09B024E8357E00D38CDD /* ServiceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAB09AE24E8357E00D38CDD /* ServiceCell.swift */; };
+		8CAB09B124E8357E00D38CDD /* ServiceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CAB09AF24E8357E00D38CDD /* ServiceCell.xib */; };
+		8CAB09B424E84C6800D38CDD /* ServiceOfTheWeakCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAB09B224E84C6800D38CDD /* ServiceOfTheWeakCell.swift */; };
+		8CAB09B524E84C6800D38CDD /* ServiceOfTheWeakCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CAB09B324E84C6800D38CDD /* ServiceOfTheWeakCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,6 +87,26 @@
 		8CAB097024E7CEA700D38CDD /* TabBarLocalization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarLocalization.swift; sourceTree = "<group>"; };
 		8CAB097424E7DDED00D38CDD /* UIView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		8CAB097824E7E6CA00D38CDD /* UIViewContorller+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewContorller+Extensions.swift"; sourceTree = "<group>"; };
+		8CAB098024E7E8C200D38CDD /* HomeProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeProtocols.swift; sourceTree = "<group>"; };
+		8CAB098224E7E9A900D38CDD /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
+		8CAB098424E7F22000D38CDD /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
+		8CAB098624E7F25900D38CDD /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		8CAB098824E7F2F400D38CDD /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		8CAB098924E7F2F400D38CDD /* HomeVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeVC.xib; sourceTree = "<group>"; };
+		8CAB098D24E7F55800D38CDD /* HomeLocalization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeLocalization.swift; sourceTree = "<group>"; };
+		8CAB099124E806C100D38CDD /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
+		8CAB099424E808A700D38CDD /* Tajawal-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tajawal-ExtraBold.ttf"; sourceTree = "<group>"; };
+		8CAB099624E808A700D38CDD /* Tajawal-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tajawal-Bold.ttf"; sourceTree = "<group>"; };
+		8CAB099824E808A700D38CDD /* Tajawal-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tajawal-Regular.ttf"; sourceTree = "<group>"; };
+		8CAB099924E808A700D38CDD /* Tajawal-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tajawal-Medium.ttf"; sourceTree = "<group>"; };
+		8CAB09A224E80BC600D38CDD /* CustomFontDiscriptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFontDiscriptor.swift; sourceTree = "<group>"; };
+		8CAB09A424E80C2700D38CDD /* Typography.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typography.swift; sourceTree = "<group>"; };
+		8CAB09A924E8274200D38CDD /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
+		8CAB09AA24E8274200D38CDD /* CategoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryCell.xib; sourceTree = "<group>"; };
+		8CAB09AE24E8357E00D38CDD /* ServiceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceCell.swift; sourceTree = "<group>"; };
+		8CAB09AF24E8357E00D38CDD /* ServiceCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServiceCell.xib; sourceTree = "<group>"; };
+		8CAB09B224E84C6800D38CDD /* ServiceOfTheWeakCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceOfTheWeakCell.swift; sourceTree = "<group>"; };
+		8CAB09B324E84C6800D38CDD /* ServiceOfTheWeakCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServiceOfTheWeakCell.xib; sourceTree = "<group>"; };
 		A829CAD199C8BC7D0018D428 /* Pods_Seena_Patient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Seena_Patient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE9E485092256443C69FE26D /* Pods-Seena Patient.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Seena Patient.release.xcconfig"; path = "Target Support Files/Pods-Seena Patient/Pods-Seena Patient.release.xcconfig"; sourceTree = "<group>"; };
 		E338E54FF4A9A0DE828B1EE8 /* Pods-Seena Patient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Seena Patient.debug.xcconfig"; path = "Target Support Files/Pods-Seena Patient/Pods-Seena Patient.debug.xcconfig"; sourceTree = "<group>"; };
@@ -131,6 +171,7 @@
 				8C8CB3DD24E6BAB2009679E5 /* RootModule */,
 				8C8CB3E224E6C671009679E5 /* SplashModule */,
 				8C8CB41B24E6F974009679E5 /* TabBarModule */,
+				8CAB097A24E7E87500D38CDD /* HomeModule */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -166,6 +207,7 @@
 		8C8CB3DA24E6BA50009679E5 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				8CAB099324E808A700D38CDD /* Tajewal Font */,
 				8C8CB3DC24E6BA69009679E5 /* StoryBoards */,
 				8C8CB3DB24E6BA5D009679E5 /* Images */,
 			);
@@ -341,7 +383,8 @@
 			isa = PBXGroup;
 			children = (
 				8C8CB42024E71353009679E5 /* DesignSystem.swift */,
-				8C8CB42224E71369009679E5 /* Colors.swift */,
+				8CAB099024E806A400D38CDD /* Typography */,
+				8CAB098F24E8069C00D38CDD /* Colors */,
 			);
 			path = DesignSystem;
 			sourceTree = "<group>";
@@ -360,6 +403,136 @@
 				8C8CB41C24E6F999009679E5 /* HomeTabBarVC.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		8CAB097A24E7E87500D38CDD /* HomeModule */ = {
+			isa = PBXGroup;
+			children = (
+				8CAB098C24E7F54200D38CDD /* Localization */,
+				8CAB097F24E7E8A700D38CDD /* Protocols */,
+				8CAB097E24E7E8A000D38CDD /* Router */,
+				8CAB097D24E7E89A00D38CDD /* Interactor */,
+				8CAB097C24E7E89000D38CDD /* Presenter */,
+				8CAB097B24E7E88900D38CDD /* View */,
+			);
+			path = HomeModule;
+			sourceTree = "<group>";
+		};
+		8CAB097B24E7E88900D38CDD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8CAB09AD24E8356000D38CDD /* ServiceCell */,
+				8CAB09A824E8271C00D38CDD /* CategoryCell */,
+				8CAB09A724E826B700D38CDD /* ServiceOfTheWeakCell */,
+				8CAB09A624E826AB00D38CDD /* HomeVC */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8CAB097C24E7E89000D38CDD /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				8CAB098624E7F25900D38CDD /* HomePresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		8CAB097D24E7E89A00D38CDD /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				8CAB098424E7F22000D38CDD /* HomeInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		8CAB097E24E7E8A000D38CDD /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				8CAB098224E7E9A900D38CDD /* HomeRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		8CAB097F24E7E8A700D38CDD /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				8CAB098024E7E8C200D38CDD /* HomeProtocols.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		8CAB098C24E7F54200D38CDD /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				8CAB098D24E7F55800D38CDD /* HomeLocalization.swift */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
+		8CAB098F24E8069C00D38CDD /* Colors */ = {
+			isa = PBXGroup;
+			children = (
+				8C8CB42224E71369009679E5 /* Colors.swift */,
+			);
+			path = Colors;
+			sourceTree = "<group>";
+		};
+		8CAB099024E806A400D38CDD /* Typography */ = {
+			isa = PBXGroup;
+			children = (
+				8CAB099124E806C100D38CDD /* Font.swift */,
+				8CAB09A224E80BC600D38CDD /* CustomFontDiscriptor.swift */,
+				8CAB09A424E80C2700D38CDD /* Typography.swift */,
+			);
+			path = Typography;
+			sourceTree = "<group>";
+		};
+		8CAB099324E808A700D38CDD /* Tajewal Font */ = {
+			isa = PBXGroup;
+			children = (
+				8CAB099424E808A700D38CDD /* Tajawal-ExtraBold.ttf */,
+				8CAB099624E808A700D38CDD /* Tajawal-Bold.ttf */,
+				8CAB099824E808A700D38CDD /* Tajawal-Regular.ttf */,
+				8CAB099924E808A700D38CDD /* Tajawal-Medium.ttf */,
+			);
+			name = "Tajewal Font";
+			path = "../../../Slaughter Model/Slaughter Model/Resouces/Tajewal Font";
+			sourceTree = "<group>";
+		};
+		8CAB09A624E826AB00D38CDD /* HomeVC */ = {
+			isa = PBXGroup;
+			children = (
+				8CAB098824E7F2F400D38CDD /* HomeVC.swift */,
+				8CAB098924E7F2F400D38CDD /* HomeVC.xib */,
+			);
+			path = HomeVC;
+			sourceTree = "<group>";
+		};
+		8CAB09A724E826B700D38CDD /* ServiceOfTheWeakCell */ = {
+			isa = PBXGroup;
+			children = (
+				8CAB09B224E84C6800D38CDD /* ServiceOfTheWeakCell.swift */,
+				8CAB09B324E84C6800D38CDD /* ServiceOfTheWeakCell.xib */,
+			);
+			path = ServiceOfTheWeakCell;
+			sourceTree = "<group>";
+		};
+		8CAB09A824E8271C00D38CDD /* CategoryCell */ = {
+			isa = PBXGroup;
+			children = (
+				8CAB09A924E8274200D38CDD /* CategoryCell.swift */,
+				8CAB09AA24E8274200D38CDD /* CategoryCell.xib */,
+			);
+			path = CategoryCell;
+			sourceTree = "<group>";
+		};
+		8CAB09AD24E8356000D38CDD /* ServiceCell */ = {
+			isa = PBXGroup;
+			children = (
+				8CAB09AE24E8357E00D38CDD /* ServiceCell.swift */,
+				8CAB09AF24E8357E00D38CDD /* ServiceCell.xib */,
+			);
+			path = ServiceCell;
 			sourceTree = "<group>";
 		};
 		E8CA0B891E95ACDF7CCD0B36 /* Frameworks */ = {
@@ -432,8 +605,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				8C8CB40424E6D3B3009679E5 /* SplashVC.xib in Resources */,
+				8CAB09B524E84C6800D38CDD /* ServiceOfTheWeakCell.xib in Resources */,
+				8CAB09B124E8357E00D38CDD /* ServiceCell.xib in Resources */,
+				8CAB098B24E7F2F400D38CDD /* HomeVC.xib in Resources */,
 				8C8CB3CE24E6B817009679E5 /* LaunchScreen.storyboard in Resources */,
+				8CAB099B24E808A700D38CDD /* Tajawal-ExtraBold.ttf in Resources */,
+				8CAB099D24E808A700D38CDD /* Tajawal-Bold.ttf in Resources */,
+				8CAB099F24E808A700D38CDD /* Tajawal-Regular.ttf in Resources */,
 				8C8CB3CB24E6B817009679E5 /* Assets.xcassets in Resources */,
+				8CAB09AC24E8274200D38CDD /* CategoryCell.xib in Resources */,
+				8CAB09A024E808A700D38CDD /* Tajawal-Medium.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -510,23 +691,35 @@
 				8C8CB3C224E6B815009679E5 /* AppDelegate.swift in Sources */,
 				8C8CB40624E6DA9B009679E5 /* SplashProtocols.swift in Sources */,
 				8C8CB3EA24E6CA46009679E5 /* UICollectionView+Extensions.swift in Sources */,
+				8CAB098524E7F22000D38CDD /* HomeInteractor.swift in Sources */,
+				8CAB098724E7F25900D38CDD /* HomePresenter.swift in Sources */,
 				8C8CB3ED24E6CA46009679E5 /* String+Extensions.swift in Sources */,
 				8C8CB41424E6EBFD009679E5 /* CustomizedTabBar.swift in Sources */,
+				8CAB09A324E80BC600D38CDD /* CustomFontDiscriptor.swift in Sources */,
 				8C8CB40F24E6E53A009679E5 /* SplashInteractor.swift in Sources */,
 				8C8CB3EF24E6CA46009679E5 /* UIApplication+Extensions.swift in Sources */,
 				8C8CB42324E71369009679E5 /* Colors.swift in Sources */,
 				8C8CB3FE24E6CF23009679E5 /* EnvironmentProtocol.swift in Sources */,
 				8CAB097924E7E6CB00D38CDD /* UIViewContorller+Extensions.swift in Sources */,
 				8C8CB40324E6D3B3009679E5 /* SplashVC.swift in Sources */,
+				8CAB09B024E8357E00D38CDD /* ServiceCell.swift in Sources */,
+				8CAB09AB24E8274200D38CDD /* CategoryCell.swift in Sources */,
 				8CAB097524E7DDED00D38CDD /* UIView+Extensions.swift in Sources */,
 				8C8CB41124E6E651009679E5 /* SplashPresenter.swift in Sources */,
+				8CAB098124E7E8C200D38CDD /* HomeProtocols.swift in Sources */,
+				8CAB098E24E7F55800D38CDD /* HomeLocalization.swift in Sources */,
 				8C8CB41D24E6F999009679E5 /* HomeTabBarVC.swift in Sources */,
 				8C8CB40D24E6E283009679E5 /* SplashRouter.swift in Sources */,
+				8CAB098324E7E9A900D38CDD /* HomeRouter.swift in Sources */,
 				8CAB097124E7CEA700D38CDD /* TabBarLocalization.swift in Sources */,
+				8CAB099224E806C100D38CDD /* Font.swift in Sources */,
+				8CAB098A24E7F2F400D38CDD /* HomeVC.swift in Sources */,
 				8C8CB3FD24E6CF23009679E5 /* Environment.swift in Sources */,
 				8C8CB42124E71353009679E5 /* DesignSystem.swift in Sources */,
 				8C8CB3FB24E6CF23009679E5 /* APIService.swift in Sources */,
+				8CAB09B424E84C6800D38CDD /* ServiceOfTheWeakCell.swift in Sources */,
 				8C8CB3EB24E6CA46009679E5 /* UINavigationController+Extensions.swift in Sources */,
+				8CAB09A524E80C2700D38CDD /* Typography.swift in Sources */,
 				8C8CB3FC24E6CF23009679E5 /* RemoteServiceType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

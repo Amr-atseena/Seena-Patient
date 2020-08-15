@@ -24,6 +24,7 @@ extension DesignSystem {
         case secondaryBorder
         case primaryNavBarBackground
         case secondaryNavBarBackground
+        case primaryNavBarText
         var color: UIColor {
             return UIColor(named: self.rawValue)!
         }

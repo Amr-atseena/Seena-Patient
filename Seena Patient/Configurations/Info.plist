@@ -39,5 +39,12 @@
 	</array>
     <key>UIUserInterfaceStyle</key>
     <string>Light</string>
+    <key>UIAppFonts</key>
+    <array>
+        <string>Tajawal-Bold.ttf</string>
+        <string>Tajawal-ExtraBold.ttf</string>
+        <string>Tajawal-Medium.ttf</string>
+        <string>Tajawal-Regular.ttf</string>
+    </array>
 </dict>
 </plist>
