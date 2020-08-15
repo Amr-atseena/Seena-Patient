@@ -22,6 +22,8 @@ extension DesignSystem {
         case unSelectedTabBar
         case primaryBorder
         case secondaryBorder
+        case primaryNavBarBackground
+        case secondaryNavBarBackground
         var color: UIColor {
             return UIColor(named: self.rawValue)!
         }

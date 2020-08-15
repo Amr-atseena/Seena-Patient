@@ -9,11 +9,20 @@
 import UIKit
 @IBDesignable
 class CustomizedTabBar: UITabBar {
- // MARK: - Variables
+    // MARK: - Attibutes
     @objc public var centerButtonActionHandler: () -> Void = {}
     private var centerButtonHeight: CGFloat = 70.0
     private var shapeLayer: CALayer?
-    
+    private let localization = TabBarLocalization()
+    private lazy var centerButton: UIButton = {
+        let centerButton = UIButton(frame: CGRect(x: (self.bounds.width / 2)-(centerButtonHeight/2), y: -40, width: centerButtonHeight, height: centerButtonHeight))
+        centerButton.backgroundColor = DesignSystem.Colors.primaryActionBackground.color
+        centerButton.layer.cornerRadius = centerButton.frame.size.width / 2.0
+        centerButton.setTitle(localization.pay, for: .normal)
+        centerButton.addTarget(self, action: #selector(self.centerButtonAction), for: .touchUpInside)
+        return centerButton
+    }()
+    // MARK: - Methods
     override public func draw(_ rect: CGRect) {
         self.addShape()
     }
@@ -23,7 +32,6 @@ class CustomizedTabBar: UITabBar {
         shapeLayer.strokeColor = UIColor.clear.cgColor
         shapeLayer.fillColor = UIColor.white.cgColor
         shapeLayer.lineWidth = 0
-        //The below 4 lines are for shadow above the bar. you can skip them if you do not want a shadow
         shapeLayer.shadowOffset = CGSize(width: 0, height: 0)
         shapeLayer.shadowRadius = 10
         shapeLayer.shadowColor = UIColor.gray.cgColor
@@ -62,21 +70,13 @@ class CustomizedTabBar: UITabBar {
         path.addLine(to: CGPoint(x: self.frame.width, y: self.frame.height))
         path.addLine(to: CGPoint(x: 0, y: self.frame.height))
         path.close()
-
         return path.cgPath
     }
     private func setupMiddleButton() {
-        let centerButton = UIButton(frame: CGRect(x: (self.bounds.width / 2)-(centerButtonHeight/2), y: -40, width: centerButtonHeight, height: centerButtonHeight))
-        centerButton.layer.cornerRadius = centerButton.frame.size.width / 2.0
-        centerButton.setTitle("pay", for: .normal)
-        centerButton.backgroundColor = .red
-        centerButton.tintColor = UIColor.white
-        //add to the tabbar and add click event
         self.addSubview(centerButton)
-        centerButton.addTarget(self, action: #selector(self.centerButtonAction), for: .touchUpInside)
     }
-    // Menu Button Touch Action
-     @objc func centerButtonAction(sender: UIButton) {
+    // MARK: - Actions
+    @objc func centerButtonAction(sender: UIButton) {
         self.centerButtonActionHandler()
-     }
+    }
 }

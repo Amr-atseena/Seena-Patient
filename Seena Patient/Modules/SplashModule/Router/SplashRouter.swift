@@ -28,7 +28,6 @@ class SplashRouter: SplashRouterProtocol {
         switch router {
         case .tabBar:
             let tabBar = HomeTabBarVC()
-            tabBar.modalPresentationStyle = .fullScreen
             viewController?.present(tabBar, animated: true)
         }
     }
