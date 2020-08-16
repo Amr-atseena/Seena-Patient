@@ -40,11 +40,7 @@ class HomeVC: UIViewController, HomeViewProtocol {
     }
     // MARK: - Methods
     func setupNavBar(withTitle title: String) {
-        self.configureNavigationBar(titleColor: DesignSystem.Colors.primaryNavBarText.color,
-                                    backgoundColor: DesignSystem.Colors.primaryNavBarBackground.color,
-                                    tintColor: DesignSystem.Colors.primaryNavBarBackground.color,
-                                    title: title,
-                                    preferredLargeTitle: false)
+        self.navigationController?.navigationBar.isHidden = true
     }
     func setupUI() {
         helloKeywordLabel.text = presenter.localization.hello
@@ -75,7 +71,7 @@ class HomeVC: UIViewController, HomeViewProtocol {
     }
     // MARK: - DeInit
     deinit {
-        print(HomeVC.className + "Release from Momery")
+        debugPrint(HomeVC.className + "Release from Momery")
     }
 }
 // MARK: - CategoriesTableView DataSource Implementation
@@ -109,8 +105,8 @@ extension HomeVC: UICollectionViewDataSource {
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if collectionView == headerView {
-           let cell = collectionView.dequeueReusableCell(withClass: ServiceOfTheWeakCell.self, for: indexPath)
-           return cell
+            let cell = collectionView.dequeueReusableCell(withClass: ServiceOfTheWeakCell.self, for: indexPath)
+            return cell
         } else {
             let cell = collectionView.dequeueReusableCell(withClass: ServiceCell.self, for: indexPath)
             return cell
@@ -119,6 +115,13 @@ extension HomeVC: UICollectionViewDataSource {
 }
 // MARK: - ServicesCollection Delegate Implementation
 extension HomeVC: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if collectionView == headerView {
+            presenter.serviceSelected(atIndex: indexPath.item, andSection: -1)
+        } else {
+            presenter.serviceSelected(atIndex: indexPath.item, andSection: collectionView.tag)
+        }
+    }
 }
 
 // MARK: - ServicesCollection FlowLayoutDelegate Implementation

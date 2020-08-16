@@ -36,6 +36,7 @@ protocol HomePresenterProtocol: class {
     // View -> Presenter
     func viewDidLoad()
     func configure(categoryCell cell: CategoryCellView, atIndex index: Int )
+    func serviceSelected(atIndex index: Int, andSection section: Int)
     func numberOfServices(atRow row: Int) -> Int
     var numberOfCategories: Int { get }
     var numberOfServicesOfWeak: Int { get }

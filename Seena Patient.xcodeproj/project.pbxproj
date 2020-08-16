@@ -55,10 +55,19 @@
 		8CAB09B124E8357E00D38CDD /* ServiceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CAB09AF24E8357E00D38CDD /* ServiceCell.xib */; };
 		8CAB09B424E84C6800D38CDD /* ServiceOfTheWeakCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAB09B224E84C6800D38CDD /* ServiceOfTheWeakCell.swift */; };
 		8CAB09B524E84C6800D38CDD /* ServiceOfTheWeakCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CAB09B324E84C6800D38CDD /* ServiceOfTheWeakCell.xib */; };
+		8CEC77F924E9BB2A000CED1F /* ServiceDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEC77F724E9BB2A000CED1F /* ServiceDetailsVC.swift */; };
+		8CEC77FA24E9BB2A000CED1F /* ServiceDetailsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CEC77F824E9BB2A000CED1F /* ServiceDetailsVC.xib */; };
+		8CEC77FD24E9BC5C000CED1F /* ServiceDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEC77FC24E9BC5C000CED1F /* ServiceDetailsPresenter.swift */; };
+		8CEC780024E9BCED000CED1F /* ServiceDetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEC77FF24E9BCED000CED1F /* ServiceDetailsInteractor.swift */; };
+		8CEC780324E9BD68000CED1F /* ServiceDetailsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEC780224E9BD68000CED1F /* ServiceDetailsRouter.swift */; };
+		8CEC780624E9CB58000CED1F /* ServiceDetailsProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEC780524E9CB58000CED1F /* ServiceDetailsProtocols.swift */; };
+		8CEC780924E9CC2B000CED1F /* ServiceDetailsLocalizaition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEC780824E9CC2B000CED1F /* ServiceDetailsLocalizaition.swift */; };
+		8CEC780E24E9DDDB000CED1F /* ServiceClinicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEC780C24E9DDDB000CED1F /* ServiceClinicCell.swift */; };
+		8CEC780F24E9DDDB000CED1F /* ServiceClinicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CEC780D24E9DDDB000CED1F /* ServiceClinicCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		8C8CB3BE24E6B815009679E5 /* Seena Patient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Seena Patient.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C8CB3BE24E6B815009679E5 /* Seena Patients.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Seena Patients.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C8CB3C124E6B815009679E5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8C8CB3CA24E6B817009679E5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8C8CB3CD24E6B817009679E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -107,6 +116,15 @@
 		8CAB09AF24E8357E00D38CDD /* ServiceCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServiceCell.xib; sourceTree = "<group>"; };
 		8CAB09B224E84C6800D38CDD /* ServiceOfTheWeakCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceOfTheWeakCell.swift; sourceTree = "<group>"; };
 		8CAB09B324E84C6800D38CDD /* ServiceOfTheWeakCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServiceOfTheWeakCell.xib; sourceTree = "<group>"; };
+		8CEC77F724E9BB2A000CED1F /* ServiceDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceDetailsVC.swift; sourceTree = "<group>"; };
+		8CEC77F824E9BB2A000CED1F /* ServiceDetailsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServiceDetailsVC.xib; sourceTree = "<group>"; };
+		8CEC77FC24E9BC5C000CED1F /* ServiceDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceDetailsPresenter.swift; sourceTree = "<group>"; };
+		8CEC77FF24E9BCED000CED1F /* ServiceDetailsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceDetailsInteractor.swift; sourceTree = "<group>"; };
+		8CEC780224E9BD68000CED1F /* ServiceDetailsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceDetailsRouter.swift; sourceTree = "<group>"; };
+		8CEC780524E9CB58000CED1F /* ServiceDetailsProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceDetailsProtocols.swift; sourceTree = "<group>"; };
+		8CEC780824E9CC2B000CED1F /* ServiceDetailsLocalizaition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceDetailsLocalizaition.swift; sourceTree = "<group>"; };
+		8CEC780C24E9DDDB000CED1F /* ServiceClinicCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceClinicCell.swift; sourceTree = "<group>"; };
+		8CEC780D24E9DDDB000CED1F /* ServiceClinicCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServiceClinicCell.xib; sourceTree = "<group>"; };
 		A829CAD199C8BC7D0018D428 /* Pods_Seena_Patient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Seena_Patient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE9E485092256443C69FE26D /* Pods-Seena Patient.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Seena Patient.release.xcconfig"; path = "Target Support Files/Pods-Seena Patient/Pods-Seena Patient.release.xcconfig"; sourceTree = "<group>"; };
 		E338E54FF4A9A0DE828B1EE8 /* Pods-Seena Patient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Seena Patient.debug.xcconfig"; path = "Target Support Files/Pods-Seena Patient/Pods-Seena Patient.debug.xcconfig"; sourceTree = "<group>"; };
@@ -146,7 +164,7 @@
 		8C8CB3BF24E6B815009679E5 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8C8CB3BE24E6B815009679E5 /* Seena Patient.app */,
+				8C8CB3BE24E6B815009679E5 /* Seena Patients.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -172,6 +190,7 @@
 				8C8CB3E224E6C671009679E5 /* SplashModule */,
 				8C8CB41B24E6F974009679E5 /* TabBarModule */,
 				8CAB097A24E7E87500D38CDD /* HomeModule */,
+				8CEC77F524E9B7B2000CED1F /* ServiceDetails */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -535,6 +554,86 @@
 			path = ServiceCell;
 			sourceTree = "<group>";
 		};
+		8CEC77F524E9B7B2000CED1F /* ServiceDetails */ = {
+			isa = PBXGroup;
+			children = (
+				8CEC780724E9CC08000CED1F /* Locolization */,
+				8CEC780424E9CB2B000CED1F /* Protocols */,
+				8CEC780124E9BD38000CED1F /* Router */,
+				8CEC77FE24E9BCD9000CED1F /* Interactor */,
+				8CEC77FB24E9BC46000CED1F /* Presenter */,
+				8CEC77F624E9BB13000CED1F /* View */,
+			);
+			path = ServiceDetails;
+			sourceTree = "<group>";
+		};
+		8CEC77F624E9BB13000CED1F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8CEC780B24E9DD5B000CED1F /* ServiceClinicCell */,
+				8CEC780A24E9DC85000CED1F /* ServiceDetailsVC */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8CEC77FB24E9BC46000CED1F /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				8CEC77FC24E9BC5C000CED1F /* ServiceDetailsPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		8CEC77FE24E9BCD9000CED1F /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				8CEC77FF24E9BCED000CED1F /* ServiceDetailsInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		8CEC780124E9BD38000CED1F /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				8CEC780224E9BD68000CED1F /* ServiceDetailsRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		8CEC780424E9CB2B000CED1F /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				8CEC780524E9CB58000CED1F /* ServiceDetailsProtocols.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		8CEC780724E9CC08000CED1F /* Locolization */ = {
+			isa = PBXGroup;
+			children = (
+				8CEC780824E9CC2B000CED1F /* ServiceDetailsLocalizaition.swift */,
+			);
+			path = Locolization;
+			sourceTree = "<group>";
+		};
+		8CEC780A24E9DC85000CED1F /* ServiceDetailsVC */ = {
+			isa = PBXGroup;
+			children = (
+				8CEC77F724E9BB2A000CED1F /* ServiceDetailsVC.swift */,
+				8CEC77F824E9BB2A000CED1F /* ServiceDetailsVC.xib */,
+			);
+			path = ServiceDetailsVC;
+			sourceTree = "<group>";
+		};
+		8CEC780B24E9DD5B000CED1F /* ServiceClinicCell */ = {
+			isa = PBXGroup;
+			children = (
+				8CEC780C24E9DDDB000CED1F /* ServiceClinicCell.swift */,
+				8CEC780D24E9DDDB000CED1F /* ServiceClinicCell.xib */,
+			);
+			path = ServiceClinicCell;
+			sourceTree = "<group>";
+		};
 		E8CA0B891E95ACDF7CCD0B36 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -563,7 +662,7 @@
 			);
 			name = "Seena Patient";
 			productName = "Seena Patient";
-			productReference = 8C8CB3BE24E6B815009679E5 /* Seena Patient.app */;
+			productReference = 8C8CB3BE24E6B815009679E5 /* Seena Patients.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -605,7 +704,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				8C8CB40424E6D3B3009679E5 /* SplashVC.xib in Resources */,
+				8CEC77FA24E9BB2A000CED1F /* ServiceDetailsVC.xib in Resources */,
 				8CAB09B524E84C6800D38CDD /* ServiceOfTheWeakCell.xib in Resources */,
+				8CEC780F24E9DDDB000CED1F /* ServiceClinicCell.xib in Resources */,
 				8CAB09B124E8357E00D38CDD /* ServiceCell.xib in Resources */,
 				8CAB098B24E7F2F400D38CDD /* HomeVC.xib in Resources */,
 				8C8CB3CE24E6B817009679E5 /* LaunchScreen.storyboard in Resources */,
@@ -686,12 +787,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				8C8CB3EC24E6CA46009679E5 /* UITableView+Extensions.swift in Sources */,
+				8CEC780924E9CC2B000CED1F /* ServiceDetailsLocalizaition.swift in Sources */,
 				8C8CB3E024E6C3F7009679E5 /* RootRouter.swift in Sources */,
 				8C8CB3EE24E6CA46009679E5 /* NSObject+Extensions.swift in Sources */,
 				8C8CB3C224E6B815009679E5 /* AppDelegate.swift in Sources */,
 				8C8CB40624E6DA9B009679E5 /* SplashProtocols.swift in Sources */,
 				8C8CB3EA24E6CA46009679E5 /* UICollectionView+Extensions.swift in Sources */,
 				8CAB098524E7F22000D38CDD /* HomeInteractor.swift in Sources */,
+				8CEC77F924E9BB2A000CED1F /* ServiceDetailsVC.swift in Sources */,
 				8CAB098724E7F25900D38CDD /* HomePresenter.swift in Sources */,
 				8C8CB3ED24E6CA46009679E5 /* String+Extensions.swift in Sources */,
 				8C8CB41424E6EBFD009679E5 /* CustomizedTabBar.swift in Sources */,
@@ -701,16 +804,20 @@
 				8C8CB42324E71369009679E5 /* Colors.swift in Sources */,
 				8C8CB3FE24E6CF23009679E5 /* EnvironmentProtocol.swift in Sources */,
 				8CAB097924E7E6CB00D38CDD /* UIViewContorller+Extensions.swift in Sources */,
+				8CEC780E24E9DDDB000CED1F /* ServiceClinicCell.swift in Sources */,
 				8C8CB40324E6D3B3009679E5 /* SplashVC.swift in Sources */,
 				8CAB09B024E8357E00D38CDD /* ServiceCell.swift in Sources */,
 				8CAB09AB24E8274200D38CDD /* CategoryCell.swift in Sources */,
 				8CAB097524E7DDED00D38CDD /* UIView+Extensions.swift in Sources */,
+				8CEC780324E9BD68000CED1F /* ServiceDetailsRouter.swift in Sources */,
+				8CEC780024E9BCED000CED1F /* ServiceDetailsInteractor.swift in Sources */,
 				8C8CB41124E6E651009679E5 /* SplashPresenter.swift in Sources */,
 				8CAB098124E7E8C200D38CDD /* HomeProtocols.swift in Sources */,
 				8CAB098E24E7F55800D38CDD /* HomeLocalization.swift in Sources */,
 				8C8CB41D24E6F999009679E5 /* HomeTabBarVC.swift in Sources */,
 				8C8CB40D24E6E283009679E5 /* SplashRouter.swift in Sources */,
 				8CAB098324E7E9A900D38CDD /* HomeRouter.swift in Sources */,
+				8CEC77FD24E9BC5C000CED1F /* ServiceDetailsPresenter.swift in Sources */,
 				8CAB097124E7CEA700D38CDD /* TabBarLocalization.swift in Sources */,
 				8CAB099224E806C100D38CDD /* Font.swift in Sources */,
 				8CAB098A24E7F2F400D38CDD /* HomeVC.swift in Sources */,
@@ -721,6 +828,7 @@
 				8C8CB3EB24E6CA46009679E5 /* UINavigationController+Extensions.swift in Sources */,
 				8CAB09A524E80C2700D38CDD /* Typography.swift in Sources */,
 				8C8CB3FC24E6CF23009679E5 /* RemoteServiceType.swift in Sources */,
+				8CEC780624E9CB58000CED1F /* ServiceDetailsProtocols.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -865,8 +973,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.RKAnjel.Seena-Patient";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.RKAnjel.Seena-Patients";
+				PRODUCT_NAME = "Seena Patients";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -885,8 +993,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.RKAnjel.Seena-Patient";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.RKAnjel.Seena-Patients";
+				PRODUCT_NAME = "Seena Patients";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

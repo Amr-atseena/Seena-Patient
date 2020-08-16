@@ -29,6 +29,9 @@ class HomePresenter: HomePresenterProtocol {
     func configure(categoryCell cell: CategoryCellView, atIndex index: Int) {
         cell.setCategoryName("Dental")
     }
+    func serviceSelected(atIndex index: Int, andSection section: Int) {
+        router?.go(to: .serviceDetails)
+    }
     func numberOfServices(atRow row: Int) -> Int {
         return 5
     }
@@ -39,6 +42,6 @@ class HomePresenter: HomePresenterProtocol {
         return 4
     }
 }
-// MARK: - HomeOutputInteractorProtocol Extenstion
+// MARK: - HomeOutputInteractorProtocol Implementation
 extension HomePresenter: HomeOutputInteractorProtocol {
 }

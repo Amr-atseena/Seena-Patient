@@ -58,7 +58,19 @@
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oxH-vJ-72N" customClass="AnimatableView" customModule="IBAnimatable">
                         <rect key="frame" x="5" y="5" width="287" height="131"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xat-i4-BbT">
+                                <rect key="frame" x="15" y="100" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="0.28000000000000003" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="xat-i4-BbT" firstAttribute="leading" secondItem="oxH-vJ-72N" secondAttribute="leading" constant="15" id="Kwq-iT-xJo"/>
+                            <constraint firstAttribute="bottom" secondItem="xat-i4-BbT" secondAttribute="bottom" constant="10" id="b3n-Ip-AZr"/>
+                        </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                 <real key="value" value="8"/>
@@ -79,6 +91,10 @@
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="297" height="141"/>
+            <connections>
+                <outlet property="serviceImage" destination="hP4-AD-6Pz" id="K24-LK-LX2"/>
+                <outlet property="serviceName" destination="xat-i4-BbT" id="C6v-SA-cdf"/>
+            </connections>
             <point key="canvasLocation" x="131" y="54"/>
         </collectionViewCell>
     </objects>

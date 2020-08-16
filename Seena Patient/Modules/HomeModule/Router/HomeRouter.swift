@@ -24,5 +24,14 @@ class HomeRouter: HomeRouterProtocol {
     }
     // MARK: - Routing
     func go(to router: HomeRoute) {
+        switch router {
+        case .serviceDetails:
+            navigateToServiceDetails()
+        default:
+            print("")
+        }
+    }
+    private func navigateToServiceDetails() {
+        viewController?.navigationController?.pushViewController(ServiceDetailsRouter.assembleModule(), animated: true)
     }
 }

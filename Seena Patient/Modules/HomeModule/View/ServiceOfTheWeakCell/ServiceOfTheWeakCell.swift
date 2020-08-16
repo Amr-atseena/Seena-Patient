@@ -9,10 +9,13 @@
 import UIKit
 
 class ServiceOfTheWeakCell: UICollectionViewCell {
-
+    // MARK: - Outlets
+    @IBOutlet var serviceImage: UIImageView!
+    @IBOutlet var serviceName: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        serviceName.textColor = DesignSystem.Colors.headingText.color
+        serviceName.font = DesignSystem.Typography.subHeading.font
     }
 
 }
