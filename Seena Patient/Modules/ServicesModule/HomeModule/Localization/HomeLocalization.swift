@@ -18,6 +18,9 @@ class HomeLocalization {
     var searchPlaceholder: String {
         return "Search by Service".localized
     }
+    var beautySubscription: String {
+        return "Beauty Subscription".localized
+    }
     var guest: String {
         return "Guest".localized
     }

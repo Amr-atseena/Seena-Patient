@@ -47,7 +47,3 @@ protocol ServiceDetailsViewProtocol: class {
     func setupUI()
     func setupClinicsCollectionView()
 }
-//// MARK: - Category Cell View
-//protocol CategoryCellView {
-//    func setCategoryName(_ categoryName: String)
-//}

@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		2323E64FD27D63A6AF60C1F6 /* Pods_Seena_Patient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A829CAD199C8BC7D0018D428 /* Pods_Seena_Patient.framework */; };
+		88F706C024EE6804005C2ADB /* PackageDetailsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88F706B924EE6804005C2ADB /* PackageDetailsVC.xib */; };
+		88F706C124EE6804005C2ADB /* PackageDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F706BA24EE6804005C2ADB /* PackageDetailsPresenter.swift */; };
+		88F706C224EE6804005C2ADB /* PackageDetailsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F706BB24EE6804005C2ADB /* PackageDetailsRouter.swift */; };
+		88F706C324EE6804005C2ADB /* PackageDetailsProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F706BC24EE6804005C2ADB /* PackageDetailsProtocols.swift */; };
+		88F706C424EE6804005C2ADB /* PackageDetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F706BD24EE6804005C2ADB /* PackageDetailsInteractor.swift */; };
+		88F706C524EE6804005C2ADB /* PackageDetailsLocalization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F706BE24EE6804005C2ADB /* PackageDetailsLocalization.swift */; };
+		88F706C624EE6804005C2ADB /* PackageDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F706BF24EE6804005C2ADB /* PackageDetailsVC.swift */; };
 		8C81545024EB21CA00CA30E7 /* ServicesSearchVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C81544824EB21CA00CA30E7 /* ServicesSearchVC.xib */; };
 		8C81545224EB21CA00CA30E7 /* ServicesSearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C81544A24EB21CA00CA30E7 /* ServicesSearchPresenter.swift */; };
 		8C81545324EB21CA00CA30E7 /* ServicesSearchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C81544B24EB21CA00CA30E7 /* ServicesSearchRouter.swift */; };
@@ -62,8 +69,8 @@
 		8CAB09AC24E8274200D38CDD /* CategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CAB09AA24E8274200D38CDD /* CategoryCell.xib */; };
 		8CAB09B024E8357E00D38CDD /* ServiceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAB09AE24E8357E00D38CDD /* ServiceCell.swift */; };
 		8CAB09B124E8357E00D38CDD /* ServiceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CAB09AF24E8357E00D38CDD /* ServiceCell.xib */; };
-		8CAB09B424E84C6800D38CDD /* ServiceOfTheWeakCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAB09B224E84C6800D38CDD /* ServiceOfTheWeakCell.swift */; };
-		8CAB09B524E84C6800D38CDD /* ServiceOfTheWeakCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CAB09B324E84C6800D38CDD /* ServiceOfTheWeakCell.xib */; };
+		8CAB09B424E84C6800D38CDD /* PackageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAB09B224E84C6800D38CDD /* PackageCell.swift */; };
+		8CAB09B524E84C6800D38CDD /* PackageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CAB09B324E84C6800D38CDD /* PackageCell.xib */; };
 		8CEC77F924E9BB2A000CED1F /* ServiceDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEC77F724E9BB2A000CED1F /* ServiceDetailsVC.swift */; };
 		8CEC77FA24E9BB2A000CED1F /* ServiceDetailsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CEC77F824E9BB2A000CED1F /* ServiceDetailsVC.xib */; };
 		8CEC77FD24E9BC5C000CED1F /* ServiceDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEC77FC24E9BC5C000CED1F /* ServiceDetailsPresenter.swift */; };
@@ -76,6 +83,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		88F706B924EE6804005C2ADB /* PackageDetailsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PackageDetailsVC.xib; sourceTree = "<group>"; };
+		88F706BA24EE6804005C2ADB /* PackageDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageDetailsPresenter.swift; sourceTree = "<group>"; };
+		88F706BB24EE6804005C2ADB /* PackageDetailsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageDetailsRouter.swift; sourceTree = "<group>"; };
+		88F706BC24EE6804005C2ADB /* PackageDetailsProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageDetailsProtocols.swift; sourceTree = "<group>"; };
+		88F706BD24EE6804005C2ADB /* PackageDetailsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageDetailsInteractor.swift; sourceTree = "<group>"; };
+		88F706BE24EE6804005C2ADB /* PackageDetailsLocalization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageDetailsLocalization.swift; sourceTree = "<group>"; };
+		88F706BF24EE6804005C2ADB /* PackageDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageDetailsVC.swift; sourceTree = "<group>"; };
 		8C81544824EB21CA00CA30E7 /* ServicesSearchVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServicesSearchVC.xib; sourceTree = "<group>"; };
 		8C81544A24EB21CA00CA30E7 /* ServicesSearchPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesSearchPresenter.swift; sourceTree = "<group>"; };
 		8C81544B24EB21CA00CA30E7 /* ServicesSearchRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesSearchRouter.swift; sourceTree = "<group>"; };
@@ -132,8 +146,8 @@
 		8CAB09AA24E8274200D38CDD /* CategoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryCell.xib; sourceTree = "<group>"; };
 		8CAB09AE24E8357E00D38CDD /* ServiceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceCell.swift; sourceTree = "<group>"; };
 		8CAB09AF24E8357E00D38CDD /* ServiceCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServiceCell.xib; sourceTree = "<group>"; };
-		8CAB09B224E84C6800D38CDD /* ServiceOfTheWeakCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceOfTheWeakCell.swift; sourceTree = "<group>"; };
-		8CAB09B324E84C6800D38CDD /* ServiceOfTheWeakCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServiceOfTheWeakCell.xib; sourceTree = "<group>"; };
+		8CAB09B224E84C6800D38CDD /* PackageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageCell.swift; sourceTree = "<group>"; };
+		8CAB09B324E84C6800D38CDD /* PackageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PackageCell.xib; sourceTree = "<group>"; };
 		8CEC77F724E9BB2A000CED1F /* ServiceDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceDetailsVC.swift; sourceTree = "<group>"; };
 		8CEC77F824E9BB2A000CED1F /* ServiceDetailsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServiceDetailsVC.xib; sourceTree = "<group>"; };
 		8CEC77FC24E9BC5C000CED1F /* ServiceDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceDetailsPresenter.swift; sourceTree = "<group>"; };
@@ -167,6 +181,76 @@
 				CE9E485092256443C69FE26D /* Pods-Seena Patient.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		88F706B824EE67E0005C2ADB /* PackageDetails */ = {
+			isa = PBXGroup;
+			children = (
+				88F706C824EE683F005C2ADB /* Localization */,
+				88F706CA24EE6867005C2ADB /* Protocol */,
+				88F706CB24EE687E005C2ADB /* Router */,
+				88F706C924EE684A005C2ADB /* Interactor */,
+				88F706CC24EE688C005C2ADB /* Presenter */,
+				88F706C724EE6837005C2ADB /* View */,
+			);
+			path = PackageDetails;
+			sourceTree = "<group>";
+		};
+		88F706C724EE6837005C2ADB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				88F706CD24EE691E005C2ADB /* PackageDetailsVC */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		88F706C824EE683F005C2ADB /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				88F706BE24EE6804005C2ADB /* PackageDetailsLocalization.swift */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
+		88F706C924EE684A005C2ADB /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				88F706BD24EE6804005C2ADB /* PackageDetailsInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		88F706CA24EE6867005C2ADB /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				88F706BC24EE6804005C2ADB /* PackageDetailsProtocols.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		88F706CB24EE687E005C2ADB /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				88F706BB24EE6804005C2ADB /* PackageDetailsRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		88F706CC24EE688C005C2ADB /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				88F706BA24EE6804005C2ADB /* PackageDetailsPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		88F706CD24EE691E005C2ADB /* PackageDetailsVC */ = {
+			isa = PBXGroup;
+			children = (
+				88F706BF24EE6804005C2ADB /* PackageDetailsVC.swift */,
+				88F706B924EE6804005C2ADB /* PackageDetailsVC.xib */,
+			);
+			path = PackageDetailsVC;
 			sourceTree = "<group>";
 		};
 		8C81544724EB21AC00CA30E7 /* ServicesSearch */ = {
@@ -261,6 +345,7 @@
 			children = (
 				8CAB097A24E7E87500D38CDD /* HomeModule */,
 				8CEC77F524E9B7B2000CED1F /* ServiceDetails */,
+				88F706B824EE67E0005C2ADB /* PackageDetails */,
 				8C81544724EB21AC00CA30E7 /* ServicesSearch */,
 			);
 			path = ServicesModule;
@@ -557,7 +642,7 @@
 			children = (
 				8CAB09AD24E8356000D38CDD /* ServiceCell */,
 				8CAB09A824E8271C00D38CDD /* CategoryCell */,
-				8CAB09A724E826B700D38CDD /* ServiceOfTheWeakCell */,
+				8CAB09A724E826B700D38CDD /* PackageCell */,
 				8CAB09A624E826AB00D38CDD /* HomeVC */,
 			);
 			path = View;
@@ -642,13 +727,13 @@
 			path = HomeVC;
 			sourceTree = "<group>";
 		};
-		8CAB09A724E826B700D38CDD /* ServiceOfTheWeakCell */ = {
+		8CAB09A724E826B700D38CDD /* PackageCell */ = {
 			isa = PBXGroup;
 			children = (
-				8CAB09B224E84C6800D38CDD /* ServiceOfTheWeakCell.swift */,
-				8CAB09B324E84C6800D38CDD /* ServiceOfTheWeakCell.xib */,
+				8CAB09B224E84C6800D38CDD /* PackageCell.swift */,
+				8CAB09B324E84C6800D38CDD /* PackageCell.xib */,
 			);
-			path = ServiceOfTheWeakCell;
+			path = PackageCell;
 			sourceTree = "<group>";
 		};
 		8CAB09A824E8271C00D38CDD /* CategoryCell */ = {
@@ -818,9 +903,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88F706C024EE6804005C2ADB /* PackageDetailsVC.xib in Resources */,
 				8C8CB40424E6D3B3009679E5 /* SplashVC.xib in Resources */,
 				8CEC77FA24E9BB2A000CED1F /* ServiceDetailsVC.xib in Resources */,
-				8CAB09B524E84C6800D38CDD /* ServiceOfTheWeakCell.xib in Resources */,
+				8CAB09B524E84C6800D38CDD /* PackageCell.xib in Resources */,
 				8CEC780F24E9DDDB000CED1F /* ServiceClinicCell.xib in Resources */,
 				8C81545024EB21CA00CA30E7 /* ServicesSearchVC.xib in Resources */,
 				8CAB09B124E8357E00D38CDD /* ServiceCell.xib in Resources */,
@@ -903,12 +989,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88F706C224EE6804005C2ADB /* PackageDetailsRouter.swift in Sources */,
 				8C8CB3EC24E6CA46009679E5 /* UITableView+Extensions.swift in Sources */,
 				8CEC780924E9CC2B000CED1F /* ServiceDetailsLocalizaition.swift in Sources */,
 				8C81546224EB329800CA30E7 /* ServiceResultCell.swift in Sources */,
 				8C8CB3E024E6C3F7009679E5 /* RootRouter.swift in Sources */,
 				8C8CB3EE24E6CA46009679E5 /* NSObject+Extensions.swift in Sources */,
 				8C8CB3C224E6B815009679E5 /* AppDelegate.swift in Sources */,
+				88F706C124EE6804005C2ADB /* PackageDetailsPresenter.swift in Sources */,
 				8C8CB40624E6DA9B009679E5 /* SplashProtocols.swift in Sources */,
 				8C81545224EB21CA00CA30E7 /* ServicesSearchPresenter.swift in Sources */,
 				8C8CB3EA24E6CA46009679E5 /* UICollectionView+Extensions.swift in Sources */,
@@ -929,15 +1017,19 @@
 				8CAB09B024E8357E00D38CDD /* ServiceCell.swift in Sources */,
 				8CAB09AB24E8274200D38CDD /* CategoryCell.swift in Sources */,
 				8CAB097524E7DDED00D38CDD /* UIView+Extensions.swift in Sources */,
+				88F706C524EE6804005C2ADB /* PackageDetailsLocalization.swift in Sources */,
 				8CEC780324E9BD68000CED1F /* ServiceDetailsRouter.swift in Sources */,
 				8CEC780024E9BCED000CED1F /* ServiceDetailsInteractor.swift in Sources */,
 				8C8CB41124E6E651009679E5 /* SplashPresenter.swift in Sources */,
 				8CAB098124E7E8C200D38CDD /* HomeProtocols.swift in Sources */,
 				8C81545724EB21CA00CA30E7 /* ServicesSearchVC.swift in Sources */,
 				8CAB098E24E7F55800D38CDD /* HomeLocalization.swift in Sources */,
+				88F706C424EE6804005C2ADB /* PackageDetailsInteractor.swift in Sources */,
+				88F706C624EE6804005C2ADB /* PackageDetailsVC.swift in Sources */,
 				8C81545424EB21CA00CA30E7 /* ServicesSearchProtocols.swift in Sources */,
 				8C8CB41D24E6F999009679E5 /* HomeTabBarVC.swift in Sources */,
 				8C8CB40D24E6E283009679E5 /* SplashRouter.swift in Sources */,
+				88F706C324EE6804005C2ADB /* PackageDetailsProtocols.swift in Sources */,
 				8CAB098324E7E9A900D38CDD /* HomeRouter.swift in Sources */,
 				8CEC77FD24E9BC5C000CED1F /* ServiceDetailsPresenter.swift in Sources */,
 				8CAB097124E7CEA700D38CDD /* TabBarLocalization.swift in Sources */,
@@ -947,7 +1039,7 @@
 				8C8CB3FD24E6CF23009679E5 /* Environment.swift in Sources */,
 				8C8CB42124E71353009679E5 /* DesignSystem.swift in Sources */,
 				8C8CB3FB24E6CF23009679E5 /* APIService.swift in Sources */,
-				8CAB09B424E84C6800D38CDD /* ServiceOfTheWeakCell.swift in Sources */,
+				8CAB09B424E84C6800D38CDD /* PackageCell.swift in Sources */,
 				8C8CB3EB24E6CA46009679E5 /* UINavigationController+Extensions.swift in Sources */,
 				8CAB09A524E80C2700D38CDD /* Typography.swift in Sources */,
 				8C8CB3FC24E6CF23009679E5 /* RemoteServiceType.swift in Sources */,

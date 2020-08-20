@@ -12,6 +12,7 @@ import UIKit
 // MARK: - Home Router
 enum HomeRoute {
     case serviceDetails
+    case packageDetails
     case serviceList
     case servicesSearch
 }

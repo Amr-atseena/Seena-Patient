@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ServiceOfTheWeakCell: UICollectionViewCell {
+class PackageCell: UICollectionViewCell {
     // MARK: - Outlets
     @IBOutlet var serviceImage: UIImageView!
     @IBOutlet var serviceName: UILabel!

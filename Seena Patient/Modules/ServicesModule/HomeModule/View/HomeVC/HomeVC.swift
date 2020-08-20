@@ -11,6 +11,7 @@ import UIKit
 class HomeVC: UIViewController, HomeViewProtocol {
     // MARK: - Outlets
     @IBOutlet var helloKeywordLabel: UILabel!
+    @IBOutlet var beautySubscriptionKeywordLabel: UILabel!
     @IBOutlet var usernameLabel: UILabel!
     @IBOutlet var searchTextFiled: UITextField!
     @IBOutlet var categoriesTableView: UITableView!
@@ -47,6 +48,10 @@ class HomeVC: UIViewController, HomeViewProtocol {
         helloKeywordLabel.text = presenter.localization.hello
         helloKeywordLabel.font = DesignSystem.Typography.title1.font
         helloKeywordLabel.textColor = DesignSystem.Colors.secondaryText.color
+        // beauty subscriptions keyword label
+        beautySubscriptionKeywordLabel.text = presenter.localization.beautySubscription
+        beautySubscriptionKeywordLabel.font = DesignSystem.Typography.subHeading.font
+        beautySubscriptionKeywordLabel.textColor = DesignSystem.Colors.secondaryText.color
         // username label
         usernameLabel.text = presenter.localization.guest
         usernameLabel.textColor = DesignSystem.Colors.secondaryText.color
@@ -62,7 +67,7 @@ class HomeVC: UIViewController, HomeViewProtocol {
         categoriesTableView.register(cellWithClass: CategoryCell.self)
         headerView.delegate = self
         headerView.dataSource = self
-        headerView.register(cellWithClass: ServiceOfTheWeakCell.self)
+        headerView.register(cellWithClass: PackageCell.self)
         categoriesTableView.tableHeaderView = headerView
     }
     func showSkeltonView() {
@@ -109,7 +114,7 @@ extension HomeVC: UICollectionViewDataSource {
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if collectionView == headerView {
-            let cell = collectionView.dequeueReusableCell(withClass: ServiceOfTheWeakCell.self, for: indexPath)
+            let cell = collectionView.dequeueReusableCell(withClass: PackageCell.self, for: indexPath)
             return cell
         } else {
             let cell = collectionView.dequeueReusableCell(withClass: ServiceCell.self, for: indexPath)

@@ -27,6 +27,8 @@ class HomeRouter: HomeRouterProtocol {
         switch router {
         case .serviceDetails:
             navigateToServiceDetails()
+        case .packageDetails:
+            navigateToPackageDetails()
         case .servicesSearch:
             navigateToServicesSearch()
         default:
@@ -35,6 +37,9 @@ class HomeRouter: HomeRouterProtocol {
     }
     private func navigateToServiceDetails() {
         viewController?.navigationController?.pushViewController(ServiceDetailsRouter.assembleModule(), animated: true)
+    }
+    private func navigateToPackageDetails() {
+        viewController?.navigationController?.pushViewController(PackageDetailsRouter.assembleModule(), animated: true)
     }
     private func navigateToServicesSearch() {
         viewController?.navigationController?.pushViewController(ServicesSearchRouter.assembleModule(), animated: true)

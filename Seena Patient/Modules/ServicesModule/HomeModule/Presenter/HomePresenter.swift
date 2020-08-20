@@ -33,7 +33,12 @@ class HomePresenter: HomePresenterProtocol {
         cell.setCategoryName("Dental")
     }
     func serviceSelected(atIndex index: Int, andSection section: Int) {
-        router?.go(to: .serviceDetails)
+        switch section {
+        case -1:
+            router?.go(to: .packageDetails)
+        default:
+            router?.go(to: .serviceDetails)
+        }
     }
     func numberOfServices(atRow row: Int) -> Int {
         return 5
