@@ -22,11 +22,11 @@ class APIService<T> where T: TargetType {
         let stubClosure = isLive ? MoyaProvider<T>.neverStub : MoyaProvider<T>.immediatelyStub
         provider = MoyaProvider<T>(endpointClosure: endpointClosure,
                                    stubClosure: stubClosure,
-                                   session: Session.default)
+                                   session: Session.default, plugins: [NetworkLoggerPlugin()])
         provider.session.sessionConfiguration.timeoutIntervalForRequest = 20
         provider.session.sessionConfiguration.timeoutIntervalForResource = 20
     }
-    func request<C: Codable>(target: T, objType: C.Type, completionHandler:  @escaping (_ result: Result<C, Error>) -> Void) {
+    func request<C: Codable>(target: T, objType: C.Type, completionHandler:  @escaping (_ result: Result<Codable, Error>) -> Void) {
         provider.request(target) { (result) in
             switch result {
             case .success(let response):

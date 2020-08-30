@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NotificationsHomeVC">
+            <connections>
+                <outlet property="notificationTableView" destination="TKC-iJ-NUr" id="exo-aq-Ex6"/>
+                <outlet property="notificationsKeywordLabel" destination="Sdf-NM-7Tg" id="rlT-y0-t5C"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notifications" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sdf-NM-7Tg">
+                    <rect key="frame" x="20" y="59" width="374" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TKC-iJ-NUr">
+                    <rect key="frame" x="0.0" y="99.5" width="414" height="742.5"/>
+                    <color key="backgroundColor" red="0.97254901959999995" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="0.97254901959999995" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="TKC-iJ-NUr" secondAttribute="bottom" constant="20" id="6nS-MI-dS3"/>
+                <constraint firstItem="Sdf-NM-7Tg" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="15" id="HaI-cd-UA4"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="TKC-iJ-NUr" secondAttribute="trailing" id="Lid-V2-jaF"/>
+                <constraint firstItem="Sdf-NM-7Tg" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="Vva-RY-hjO"/>
+                <constraint firstItem="TKC-iJ-NUr" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="dFV-Ql-R78"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Sdf-NM-7Tg" secondAttribute="trailing" constant="20" id="p8X-Wz-knN"/>
+                <constraint firstItem="TKC-iJ-NUr" firstAttribute="top" secondItem="Sdf-NM-7Tg" secondAttribute="bottom" constant="20" id="wNZ-6u-YcO"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="141" y="125"/>
+        </view>
+    </objects>
+</document>

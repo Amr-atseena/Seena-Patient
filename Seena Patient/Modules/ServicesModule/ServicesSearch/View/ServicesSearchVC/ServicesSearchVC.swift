@@ -7,15 +7,14 @@
 //
 
 import UIKit
-
+import SkeletonView
+import UIScrollView_InfiniteScroll
 class ServicesSearchVC: UIViewController, ServicesSearchViewProtocol {
     // MARK: - Outlets
     @IBOutlet private var resultsKeyordLabel: UILabel!
     @IBOutlet private var searchTextFiled: UITextField!
-    @IBOutlet private var noResultsView: UIView!
-    @IBOutlet private var noResultsHeaderKeywordLabel: UILabel!
-    @IBOutlet private var noResultsbodyKeywordLabel: UILabel!
-    @IBOutlet private var servicesResultsTableView: UITableView!
+    @IBOutlet private var noResultsView: EmptyStateView!
+    @IBOutlet private var servicesResultsCollectionView: UICollectionView!
     // MARK: - Attributes
     var presenter: ServicesSearchPresenterProtocol!
     // MARK: - Init
@@ -43,27 +42,39 @@ class ServicesSearchVC: UIViewController, ServicesSearchViewProtocol {
         searchTextFiled.tintColor = DesignSystem.Colors.primaryText.color
         searchTextFiled.font = DesignSystem.Typography.title2.font
         searchTextFiled.becomeFirstResponder()
-        // noResultsHeaderKeyword Label
-        noResultsHeaderKeywordLabel.text = presenter.localization.noResultsHeaderKeyword
-        noResultsHeaderKeywordLabel.textColor = DesignSystem.Colors.primaryText.color
-        noResultsHeaderKeywordLabel.font = DesignSystem.Typography.title2.font
-        // noResultsbodyKeyword Label
-        noResultsbodyKeywordLabel.text = presenter.localization.noResultsbodyKeyword
-        noResultsbodyKeywordLabel.textColor = DesignSystem.Colors.primaryText.color
-        noResultsbodyKeywordLabel.font = DesignSystem.Typography.title2.font
     }
     func setupServicesTableView() {
-        servicesResultsTableView.delegate = self
-        servicesResultsTableView.dataSource = self
-        servicesResultsTableView.register(cellWithClass: ServiceResultCell.self)
+        servicesResultsCollectionView.delegate = self
+        servicesResultsCollectionView.dataSource = self
+        servicesResultsCollectionView.register(cellWithClass: ServiceResultCell.self)
+        servicesResultsCollectionView.register(cellWithClass: ServiceResultSkeltonCell.self)
+    }
+    func setupInifityScrolling() {
+        servicesResultsCollectionView.addInfiniteScroll { [weak self] (collectionView) in
+            guard let self = self else { return }
+            collectionView.performBatchUpdates({ () -> Void in
+               // update collection view
+                self.presenter.fetchServicesList(forKeyword: self.searchTextFiled.text ?? "")
+           }, completion: { (_) in
+               // finish infinite scroll animations
+               collectionView.finishInfiniteScroll()
+           })
+        }
     }
     func reloadServicesTableView() {
-        servicesResultsTableView.reloadData()
+        servicesResultsCollectionView.reloadData()
     }
     func showSkelton() {
+        servicesResultsCollectionView.showAnimatedGradientSkeleton()
+    }
+    func showNoDataView() {
+        noResultsView.isHidden = false
+    }
+    func hideNoDataView() {
         noResultsView.isHidden = true
     }
     func hideSkelton() {
+        servicesResultsCollectionView.hideSkeleton()
     }
     // MARK: - Actions
     @IBAction private func didTapBackButton(_ sender: UIButton) {
@@ -77,16 +88,46 @@ class ServicesSearchVC: UIViewController, ServicesSearchViewProtocol {
          debugPrint(ServicesSearchVC.className + "Release from Momery")
     }
 }
-// MARK: - ServicesResults TableView DataSource
-extension ServicesSearchVC: UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+// MARK: - ServicesResults CollectionView DataSource
+extension ServicesSearchVC: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return presenter.numberOfService
     }
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withClass: ServiceResultCell.self, for: indexPath)
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withClass: ServiceResultCell.self, for: indexPath)
+        presenter.config(servicesSearchCell: cell, atIndex: indexPath.item)
         return cell
     }
 }
-// MARK: - ServicesResults TableView Delegate
-extension ServicesSearchVC: UITableViewDelegate {
+// MARK: - ServicesResults CollectionView Delegate
+extension ServicesSearchVC: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        presenter.servicesCollectionView(selectedAtIndex: indexPath.item)
+    }
+}
+// MARK: - ServicesResults CollectionView FlowLayout
+extension ServicesSearchVC: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+            let width = (collectionView.frame.size.width  - 45) / 2
+            let height: CGFloat = 130
+            return CGSize(width: width, height: height)
+    }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return  5.0
+    }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 10.0
+    }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
+    }
+}
+// MARK: - Selekton View Implementation
+extension ServicesSearchVC: SkeletonCollectionViewDataSource {
+    func collectionSkeletonView(_ skeletonView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 10
+    }
+    func collectionSkeletonView(_ skeletonView: UICollectionView, cellIdentifierForItemAt indexPath: IndexPath) -> ReusableCellIdentifier {
+        return ServiceResultSkeltonCell.className
+    }
 }

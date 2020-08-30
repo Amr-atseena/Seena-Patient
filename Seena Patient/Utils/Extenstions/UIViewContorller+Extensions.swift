@@ -16,7 +16,7 @@ extension UIViewController {
             let navBarAppearance = UINavigationBarAppearance()
             navBarAppearance.configureWithOpaqueBackground()
             navBarAppearance.largeTitleTextAttributes = [.foregroundColor: titleColor, .font: DesignSystem.Typography.heading.font]
-            navBarAppearance.titleTextAttributes = [.foregroundColor: titleColor, .font: DesignSystem.Typography.subHeading.font]
+            navBarAppearance.titleTextAttributes = [.foregroundColor: titleColor, .font: DesignSystem.Typography.subHeading2.font]
             navBarAppearance.backgroundColor = backgoundColor
             navBarAppearance.shadowColor = nil
             navigationController?.navigationBar.standardAppearance = navBarAppearance

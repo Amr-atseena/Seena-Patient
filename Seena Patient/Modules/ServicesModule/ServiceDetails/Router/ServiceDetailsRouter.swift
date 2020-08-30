@@ -12,11 +12,11 @@ class ServiceDetailsRouter: ServiceDetailsRouterProtocol {
     // MARK: - Attributes
     weak var viewController: UIViewController?
     // MARK: - Assemble
-    static func assembleModule() -> UIViewController {
+    static func assembleModule(withService service: Service) -> UIViewController {
         let view = ServiceDetailsVC()
         let interactor = ServiceDetailsInteractor()
         let router = ServiceDetailsRouter()
-        let presenter = ServiceDetailsPresenter(view: view, interactor: interactor, router: router)
+        let presenter = ServiceDetailsPresenter(view: view, interactor: interactor, router: router, service: service)
         view.presenter = presenter
         interactor.presenter = presenter
         router.viewController = view

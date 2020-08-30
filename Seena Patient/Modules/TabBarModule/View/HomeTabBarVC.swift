@@ -38,7 +38,7 @@ class HomeTabBarVC: UITabBarController {
         return home
     }
     private func clinicsModule() -> UIViewController {
-        let clinics = UINavigationController(rootViewController: UIViewController())
+        let clinics = UINavigationController(rootViewController: ClinicsHomeRouter.assembleModule())
         clinics.tabBarItem = UITabBarItem(title: localization.clinics, image: #imageLiteral(resourceName: "Clinics"), tag: 1)
         return clinics
     }
@@ -48,12 +48,12 @@ class HomeTabBarVC: UITabBarController {
         return pay
     }
     private func notificationsModule() -> UIViewController {
-        let notifications = UINavigationController(rootViewController: UIViewController())
+        let notifications = UINavigationController(rootViewController: NotificationsHomeRouter.assembleModule())
         notifications.tabBarItem = UITabBarItem(title: localization.notifications, image: #imageLiteral(resourceName: "Notifications"), tag: 3)
         return notifications
     }
     private func profileModule() -> UIViewController {
-        let profile = UINavigationController(rootViewController: UIViewController())
+        let profile = UINavigationController(rootViewController: ProfileRouter.assembleModule())
         profile.tabBarItem = UITabBarItem(title: localization.profile, image: #imageLiteral(resourceName: "Profile"), tag: 4)
         return profile
     }

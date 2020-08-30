@@ -13,8 +13,8 @@
                 <outlet property="packageDetailsLabel" destination="gCf-FK-Bad" id="SQ2-mu-3be"/>
                 <outlet property="packageImage" destination="IjX-Bz-sv4" id="coR-so-fHS"/>
                 <outlet property="packageNameLabel" destination="oGM-aI-Ud3" id="c9T-qO-o8t"/>
+                <outlet property="packagePriceLabel" destination="ukc-By-zgD" id="Kq1-b0-iHg"/>
                 <outlet property="priceKeywordLabel" destination="tke-Vy-yUQ" id="xCM-Pg-WQr"/>
-                <outlet property="priceLabel" destination="ukc-By-zgD" id="Kq1-b0-iHg"/>
                 <outlet property="servicesCollectionView" destination="F8y-Ly-TjA" id="urC-J4-H1v"/>
                 <outlet property="servicesInpackageKeywordLabel" destination="5kz-Ni-Eqr" id="vYm-9J-maO"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>

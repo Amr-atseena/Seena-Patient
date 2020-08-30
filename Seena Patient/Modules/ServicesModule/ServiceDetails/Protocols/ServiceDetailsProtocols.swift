@@ -17,7 +17,7 @@ enum ServiceDetailsRoute {
 protocol ServiceDetailsRouterProtocol: class {
     var viewController: UIViewController? { get set }
     func go(to router: ServiceDetailsRoute)
-    static func assembleModule() -> UIViewController
+    static func assembleModule(withService service: Service) -> UIViewController
 }
 // MARK: - ServiceDetails Interactor
 protocol ServiceDetailsInputInteractorProtocol: class {
@@ -46,4 +46,5 @@ protocol ServiceDetailsViewProtocol: class {
     func setupNavBar()
     func setupUI()
     func setupClinicsCollectionView()
+    func updateUI(withService service: ServiceViewModel)
 }

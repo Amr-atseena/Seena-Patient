@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ClinicsHomeVC">
+            <connections>
+                <outlet property="callClinicButton" destination="pAh-1h-JXJ" id="1Cz-uB-QDE"/>
+                <outlet property="clinicOfWeakAddressLabel" destination="8N7-QD-XYz" id="iSU-4L-82L"/>
+                <outlet property="clinicOfWeekCategoryLabel" destination="Vgc-Uo-vHE" id="Xjm-JB-10x"/>
+                <outlet property="clinicOfWeekKeywordLabel" destination="q7N-d4-Okm" id="L8R-eR-AAd"/>
+                <outlet property="clinicOfWeekNameLabel" destination="ENK-EB-ikS" id="1bZ-e6-vEL"/>
+                <outlet property="clinicsKeywordLabel" destination="cRt-NF-LFn" id="9xG-hI-cpk"/>
+                <outlet property="clinicsTableView" destination="ZNc-cM-j9N" id="Vyo-I2-w2S"/>
+                <outlet property="searchTextField" destination="ma3-As-zxv" id="ibx-hf-arS"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="RZi-ts-HE3">
+                    <rect key="frame" x="20" y="64" width="374" height="331"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="B6C-2E-Mak">
+                            <rect key="frame" x="0.0" y="0.0" width="374" height="80.5"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clinics" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cRt-NF-LFn">
+                                    <rect key="frame" x="0.0" y="0.0" width="374" height="20.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iy2-DX-ZIY" customClass="AnimatableView" customModule="IBAnimatable">
+                                    <rect key="frame" x="0.0" y="40.5" width="374" height="40"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qMU-6O-hP8">
+                                            <rect key="frame" x="10" y="5" width="354" height="30"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" id="ma3-As-zxv">
+                                                    <rect key="frame" x="0.0" y="0.0" width="334" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                                <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aPe-ij-iZV">
+                                                    <rect key="frame" x="334" y="0.0" width="20" height="30"/>
+                                                    <state key="normal" image="search"/>
+                                                </button>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="40" id="RM0-ch-H6p"/>
+                                        <constraint firstItem="qMU-6O-hP8" firstAttribute="leading" secondItem="iy2-DX-ZIY" secondAttribute="leading" constant="10" id="cHC-a1-IJe"/>
+                                        <constraint firstItem="qMU-6O-hP8" firstAttribute="top" secondItem="iy2-DX-ZIY" secondAttribute="top" constant="5" id="dtp-kw-524"/>
+                                        <constraint firstAttribute="trailing" secondItem="qMU-6O-hP8" secondAttribute="trailing" constant="10" id="kim-Lb-lyT"/>
+                                        <constraint firstAttribute="bottom" secondItem="qMU-6O-hP8" secondAttribute="bottom" constant="5" id="ptN-T8-BNK"/>
+                                    </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="12"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                            <color key="value" red="0.50980392159999999" green="0.50980392159999999" blue="0.50980392159999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                            <real key="value" value="5"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                            <real key="value" value="0.29999999999999999"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="point" keyPath="shadowOffset">
+                                            <point key="value" x="0.0" y="0.0"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                            </subviews>
+                        </stackView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clinic of the week" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q7N-d4-Okm">
+                            <rect key="frame" x="0.0" y="95.5" width="374" height="20.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fzd-jE-t61">
+                            <rect key="frame" x="0.0" y="131" width="374" height="200"/>
+                            <subviews>
+                                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q7b-bo-vMQ" customClass="AnimatableView" customModule="IBAnimatable">
+                                    <rect key="frame" x="0.0" y="0.0" width="374" height="200"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" verticalHuggingPriority="1000" image="Injectable-Dermal-Filler-1" translatesAutoresizingMaskIntoConstraints="NO" id="5JV-iP-FAq" customClass="AnimatableImageView" customModule="IBAnimatable">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="200"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="8"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </imageView>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    <constraints>
+                                        <constraint firstItem="5JV-iP-FAq" firstAttribute="top" secondItem="Q7b-bo-vMQ" secondAttribute="top" id="5sY-3k-6Ap"/>
+                                        <constraint firstItem="5JV-iP-FAq" firstAttribute="leading" secondItem="Q7b-bo-vMQ" secondAttribute="leading" id="NDR-UA-ok6"/>
+                                        <constraint firstAttribute="trailing" secondItem="5JV-iP-FAq" secondAttribute="trailing" id="Osu-5G-7Lz"/>
+                                        <constraint firstAttribute="trailing" secondItem="5JV-iP-FAq" secondAttribute="trailing" id="PWr-7p-YWw"/>
+                                        <constraint firstItem="5JV-iP-FAq" firstAttribute="leading" secondItem="Q7b-bo-vMQ" secondAttribute="leading" id="voa-tF-mSb"/>
+                                        <constraint firstAttribute="bottom" secondItem="5JV-iP-FAq" secondAttribute="bottom" id="wJb-1v-grr"/>
+                                    </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="8"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                            <color key="value" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                            <real key="value" value="5"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                            <real key="value" value="0.29999999999999999"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="point" keyPath="shadowOffset">
+                                            <point key="value" x="0.0" y="0.0"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1GO-IG-Ate" customClass="AnimatableView" customModule="IBAnimatable">
+                                    <rect key="frame" x="0.0" y="0.0" width="374" height="200"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="z5H-PC-CGz">
+                                            <rect key="frame" x="20" y="20" width="255" height="41"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dental Clinic" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ENK-EB-ikS">
+                                                    <rect key="frame" x="0.0" y="0.0" width="255" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="21 Nagati serag street - Nasr City" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8N7-QD-XYz">
+                                                    <rect key="frame" x="0.0" y="20.5" width="255" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yvl-mQ-hFg">
+                                            <rect key="frame" x="20" y="155" width="334" height="30"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dentist" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vgc-Uo-vHE">
+                                                    <rect key="frame" x="0.0" y="0.0" width="234" height="30"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pAh-1h-JXJ" customClass="AnimatableButton" customModule="IBAnimatable">
+                                                    <rect key="frame" x="234" y="0.0" width="100" height="30"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="100" id="9Qs-tC-CEz"/>
+                                                        <constraint firstAttribute="height" constant="30" id="PMS-4C-NtW"/>
+                                                    </constraints>
+                                                    <state key="normal" title="Call"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="15"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="didTapCallButton:" destination="-1" eventType="touchUpInside" id="JFY-bx-HZf"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="0.28000000000000003" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                    <constraints>
+                                        <constraint firstItem="z5H-PC-CGz" firstAttribute="leading" secondItem="1GO-IG-Ate" secondAttribute="leading" constant="20" id="DBG-hh-5oU"/>
+                                        <constraint firstAttribute="trailing" secondItem="yvl-mQ-hFg" secondAttribute="trailing" constant="20" id="aqw-8b-rKC"/>
+                                        <constraint firstItem="z5H-PC-CGz" firstAttribute="top" secondItem="1GO-IG-Ate" secondAttribute="top" constant="20" id="iag-JC-ouj"/>
+                                        <constraint firstAttribute="bottom" secondItem="yvl-mQ-hFg" secondAttribute="bottom" constant="15" id="oMZ-GW-LXT"/>
+                                        <constraint firstItem="yvl-mQ-hFg" firstAttribute="leading" secondItem="1GO-IG-Ate" secondAttribute="leading" constant="20" id="uR9-7U-oqS"/>
+                                        <constraint firstAttribute="height" constant="200" id="wJR-qb-IOY"/>
+                                    </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="8"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <constraints>
+                                <constraint firstItem="Q7b-bo-vMQ" firstAttribute="leading" secondItem="fzd-jE-t61" secondAttribute="leading" id="3HK-PF-69H"/>
+                                <constraint firstItem="1GO-IG-Ate" firstAttribute="leading" secondItem="Q7b-bo-vMQ" secondAttribute="leading" id="DaA-oA-Tm2"/>
+                                <constraint firstAttribute="bottom" secondItem="Q7b-bo-vMQ" secondAttribute="bottom" id="WPU-fe-cE3"/>
+                                <constraint firstAttribute="trailing" secondItem="Q7b-bo-vMQ" secondAttribute="trailing" id="WtQ-Yp-90V"/>
+                                <constraint firstItem="1GO-IG-Ate" firstAttribute="trailing" secondItem="Q7b-bo-vMQ" secondAttribute="trailing" id="aFL-Yu-WEL"/>
+                                <constraint firstItem="Q7b-bo-vMQ" firstAttribute="top" secondItem="fzd-jE-t61" secondAttribute="top" id="fiU-I2-uJy"/>
+                                <constraint firstItem="1GO-IG-Ate" firstAttribute="bottom" secondItem="Q7b-bo-vMQ" secondAttribute="bottom" id="hoh-Lb-Ddz"/>
+                                <constraint firstItem="1GO-IG-Ate" firstAttribute="top" secondItem="Q7b-bo-vMQ" secondAttribute="top" id="rfN-Vk-v04"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                </stackView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ZNc-cM-j9N">
+                    <rect key="frame" x="0.0" y="410" width="414" height="432"/>
+                    <color key="backgroundColor" red="0.97254901959999995" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xpC-Qg-4Bk">
+                    <rect key="frame" x="20" y="104.5" width="374" height="40"/>
+                    <connections>
+                        <action selector="didTapSearchButton:" destination="-1" eventType="touchUpInside" id="HkP-7G-w2S"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yCz-pc-MW6">
+                    <rect key="frame" x="20" y="195" width="374" height="200"/>
+                    <connections>
+                        <action selector="didTapClinicOfWeekButton:" destination="-1" eventType="touchUpInside" id="oIE-YT-qSO"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.97254901960784312" green="0.97647058823529409" blue="0.97647058823529409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="RZi-ts-HE3" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="CVZ-bP-acf"/>
+                <constraint firstItem="yCz-pc-MW6" firstAttribute="top" secondItem="1GO-IG-Ate" secondAttribute="top" id="Crx-ww-hj0"/>
+                <constraint firstItem="xpC-Qg-4Bk" firstAttribute="trailing" secondItem="iy2-DX-ZIY" secondAttribute="trailing" id="Gqh-Wf-NoO"/>
+                <constraint firstItem="RZi-ts-HE3" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="HhJ-rv-nTj"/>
+                <constraint firstItem="yCz-pc-MW6" firstAttribute="bottom" secondItem="1GO-IG-Ate" secondAttribute="bottom" id="ThX-pz-CYe"/>
+                <constraint firstItem="yCz-pc-MW6" firstAttribute="leading" secondItem="1GO-IG-Ate" secondAttribute="leading" id="bEj-kt-ITA"/>
+                <constraint firstItem="xpC-Qg-4Bk" firstAttribute="top" secondItem="iy2-DX-ZIY" secondAttribute="top" id="dcN-y8-l2b"/>
+                <constraint firstItem="yCz-pc-MW6" firstAttribute="trailing" secondItem="1GO-IG-Ate" secondAttribute="trailing" id="k7c-fE-F9l"/>
+                <constraint firstItem="ZNc-cM-j9N" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="nPp-3D-RRj"/>
+                <constraint firstItem="xpC-Qg-4Bk" firstAttribute="leading" secondItem="iy2-DX-ZIY" secondAttribute="leading" id="nqt-DX-IBh"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ZNc-cM-j9N" secondAttribute="trailing" id="pXL-cN-8MF"/>
+                <constraint firstItem="ZNc-cM-j9N" firstAttribute="top" secondItem="RZi-ts-HE3" secondAttribute="bottom" constant="15" id="rmb-5w-HeP"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="RZi-ts-HE3" secondAttribute="trailing" constant="20" id="sNs-5U-cCf"/>
+                <constraint firstItem="xpC-Qg-4Bk" firstAttribute="bottom" secondItem="iy2-DX-ZIY" secondAttribute="bottom" id="wIb-h6-7ds"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="ZNc-cM-j9N" secondAttribute="bottom" constant="20" id="wJG-Qm-gz1"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="141" y="125"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Injectable-Dermal-Filler-1" width="100" height="100"/>
+        <image name="search" width="20" height="20"/>
+    </resources>
+</document>

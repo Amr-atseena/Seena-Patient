@@ -26,6 +26,8 @@ extension DesignSystem {
         case primaryNavBarBackground
         case secondaryNavBarBackground
         case primaryNavBarText
+        case payStart
+        case payEnd
         var color: UIColor {
             return UIColor(named: self.rawValue)!
         }

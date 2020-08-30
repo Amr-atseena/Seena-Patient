@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="101" id="KGk-i7-Jjw" customClass="ClinicCell" customModule="Seena" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="336" height="101"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="336" height="101"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WJ0-A4-2O8" customClass="AnimatableView" customModule="IBAnimatable">
+                        <rect key="frame" x="20" y="5" width="296" height="91"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="QV2-iJ-adD">
+                                <rect key="frame" x="5" y="5" width="281" height="81"/>
+                                <subviews>
+                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x8J-Hv-Xu6" customClass="AnimatableView" customModule="IBAnimatable">
+                                        <rect key="frame" x="0.0" y="15.5" width="50" height="50"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" verticalHuggingPriority="1000" image="clinic" translatesAutoresizingMaskIntoConstraints="NO" id="Lb5-uz-Sm6" customClass="AnimatableImageView" customModule="IBAnimatable">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="JHg-5b-Wd0"/>
+                                                    <constraint firstAttribute="width" secondItem="Lb5-uz-Sm6" secondAttribute="height" multiplier="1:1" id="Uha-ei-0Lz"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="8"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstItem="Lb5-uz-Sm6" firstAttribute="leading" secondItem="x8J-Hv-Xu6" secondAttribute="leading" id="5Kb-5D-qxW"/>
+                                            <constraint firstAttribute="trailing" secondItem="Lb5-uz-Sm6" secondAttribute="trailing" id="ATP-Sy-lwA"/>
+                                            <constraint firstItem="Lb5-uz-Sm6" firstAttribute="leading" secondItem="x8J-Hv-Xu6" secondAttribute="leading" id="Cci-y6-SKe"/>
+                                            <constraint firstAttribute="trailing" secondItem="Lb5-uz-Sm6" secondAttribute="trailing" id="iT8-UY-JAS"/>
+                                            <constraint firstItem="Lb5-uz-Sm6" firstAttribute="top" secondItem="x8J-Hv-Xu6" secondAttribute="top" id="v1s-2P-xyg"/>
+                                            <constraint firstAttribute="bottom" secondItem="Lb5-uz-Sm6" secondAttribute="bottom" id="xfm-rU-SJD"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="8"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                <real key="value" value="1.5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                <real key="value" value="0.25"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="point" keyPath="shadowOffset">
+                                                <point key="value" x="0.0" y="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="unf-DY-lqj">
+                                        <rect key="frame" x="60" y="17.5" width="146" height="46"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dental Clinic" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ffM-42-Xgj">
+                                                <rect key="frame" x="0.0" y="0.0" width="146" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="21 Nagati Serga - Nasr City" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sfg-bH-BdM">
+                                                <rect key="frame" x="0.0" y="25.5" width="146" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GvY-Kg-a2l" customClass="AnimatableButton" customModule="IBAnimatable">
+                                        <rect key="frame" x="216" y="25.5" width="65" height="30"/>
+                                        <color key="backgroundColor" name="primaryActionBackground"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="65" id="0SN-Hq-bbz"/>
+                                            <constraint firstAttribute="height" constant="30" id="IOb-pq-mIJ"/>
+                                        </constraints>
+                                        <state key="normal" title="Call">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="didTapCallButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="iMI-6P-oGx"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="QV2-iJ-adD" firstAttribute="top" secondItem="WJ0-A4-2O8" secondAttribute="top" constant="5" id="UTK-ZP-hP7"/>
+                            <constraint firstAttribute="trailing" secondItem="QV2-iJ-adD" secondAttribute="trailing" constant="10" id="Xz9-wn-4OB"/>
+                            <constraint firstItem="QV2-iJ-adD" firstAttribute="leading" secondItem="WJ0-A4-2O8" secondAttribute="leading" constant="5" id="ZEb-pG-tC4"/>
+                            <constraint firstAttribute="bottom" secondItem="QV2-iJ-adD" secondAttribute="bottom" constant="5" id="ozF-h9-KFs"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="8"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                <real key="value" value="2"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                <real key="value" value="0.25"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="point" keyPath="shadowOffset">
+                                <point key="value" x="0.0" y="0.0"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="WJ0-A4-2O8" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="H0A-oX-NOk"/>
+                    <constraint firstAttribute="trailing" secondItem="WJ0-A4-2O8" secondAttribute="trailing" constant="20" id="KbS-Oe-ato"/>
+                    <constraint firstItem="WJ0-A4-2O8" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="Qge-d2-aeS"/>
+                    <constraint firstAttribute="bottom" secondItem="WJ0-A4-2O8" secondAttribute="bottom" constant="5" id="Wu3-aQ-HE0"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="callButton" destination="GvY-Kg-a2l" id="iem-eK-0Ot"/>
+                <outlet property="clinicAddressLabel" destination="sfg-bH-BdM" id="3QP-mp-ZCY"/>
+                <outlet property="clinicNameLabel" destination="ffM-42-Xgj" id="A1z-e7-xC2"/>
+            </connections>
+            <point key="canvasLocation" x="149.27536231884059" y="119.53125"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="clinic" width="100" height="100"/>
+        <namedColor name="primaryActionBackground">
+            <color red="0.85900002717971802" green="0.078000001609325409" blue="0.078000001609325409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

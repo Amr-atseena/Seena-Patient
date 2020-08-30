@@ -14,8 +14,8 @@ class PackageDetailsVC: UIViewController, PackageDetailsViewProtocol {
     @IBOutlet var packageNameLabel: UILabel!
     @IBOutlet var packageDetailsLabel: UILabel!
     @IBOutlet var priceKeywordLabel: UILabel!
+    @IBOutlet var packagePriceLabel: UILabel!
     @IBOutlet var servicesInpackageKeywordLabel: UILabel!
-    @IBOutlet var priceLabel: UILabel!
     @IBOutlet var servicesCollectionView: UICollectionView!
     // MARK: - Attributes
     var presenter: PackageDetailsPresenterProtocol!
@@ -39,26 +39,32 @@ class PackageDetailsVC: UIViewController, PackageDetailsViewProtocol {
     func setupUI() {
         // service name label
         packageNameLabel.textColor = DesignSystem.Colors.secondaryText.color
-        packageNameLabel.font = DesignSystem.Typography.subHeading.font
+        packageNameLabel.font = DesignSystem.Typography.subHeading2.font
         // service Details label
         packageDetailsLabel.textColor = DesignSystem.Colors.secondaryText.color
         packageDetailsLabel.font = DesignSystem.Typography.title3.font
         // range price keyword label
         priceKeywordLabel.text = presenter.localization.price
         priceKeywordLabel.textColor = DesignSystem.Colors.secondaryText.color
-        priceKeywordLabel.font = DesignSystem.Typography.subHeading.font
+        priceKeywordLabel.font = DesignSystem.Typography.subHeading2.font
         // range price label
-        priceLabel.textColor = DesignSystem.Colors.secondaryText.color
-        priceLabel.font = DesignSystem.Typography.title2.font
+        packagePriceLabel.textColor = DesignSystem.Colors.secondaryText.color
+        packagePriceLabel.font = DesignSystem.Typography.title2.font
         // cilnics providing service label
         servicesInpackageKeywordLabel.text = presenter.localization.servicsInPackage
         servicesInpackageKeywordLabel.textColor = DesignSystem.Colors.secondaryText.color
-        servicesInpackageKeywordLabel.font = DesignSystem.Typography.subHeading.font
+        servicesInpackageKeywordLabel.font = DesignSystem.Typography.subHeading2.font
     }
     func setupServicesCollectionView() {
         servicesCollectionView.delegate = self
         servicesCollectionView.dataSource = self
         servicesCollectionView.register(cellWithClass: ServiceCell.self)
+    }
+    func updateUI(withPackage package: PackageViewModel) {
+        packageNameLabel.text = package.name
+        packageDetailsLabel.text = package.details
+        packagePriceLabel.text = presenter.localization.egp + " " + package.price + " " + presenter.localization.monthly
+        packageImage.kf.setImage(with: URL(string: package.image))
     }
     // MARK: - Actions
     @IBAction private func didTapShareButton(_ sender: UIButton) {
@@ -79,6 +85,7 @@ extension PackageDetailsVC: UICollectionViewDataSource {
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withClass: ServiceCell.self, for: indexPath)
+        presenter.config(serviceCell: cell, atIndex: indexPath.row)
         return cell
     }
 }

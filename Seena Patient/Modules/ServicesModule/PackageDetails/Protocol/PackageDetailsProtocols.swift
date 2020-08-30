@@ -17,7 +17,7 @@ protocol PackageDetailsRouterProtocol {
     // Presenter -> Router
     var viewController: UIViewController? { get set }
     func go(to router: PackageDetailsRoute)
-    static func assembleModule() -> UIViewController
+    static func assembleModule(withPackage package: Package) -> UIViewController
 }
 // MARK: - PackageDetails Interactor
 protocol PackageDetailsInputInteractorProtocol: class {
@@ -37,6 +37,7 @@ protocol PackageDetailsPresenterProtocol: class {
     func viewDidLoad()
     func shareButtonTapped()
     func backButtonTapped()
+    func config(serviceCell cell: ServiceCellView, atIndex index: Int)
     var numberOfServices: Int { get }
 }
 // MARK: - PackageDetails View
@@ -46,4 +47,5 @@ protocol PackageDetailsViewProtocol: class {
     func setupNavBar()
     func setupUI()
     func setupServicesCollectionView()
+    func updateUI(withPackage package: PackageViewModel)
 }

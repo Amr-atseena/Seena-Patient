@@ -12,11 +12,11 @@ class PackageDetailsRouter: PackageDetailsRouterProtocol {
     // MARK: - Attributes
     weak var viewController: UIViewController?
     // MARK: - Assemble
-    static func assembleModule() -> UIViewController {
+    static func assembleModule(withPackage package: Package) -> UIViewController {
         let router = PackageDetailsRouter()
         let interactor = PackageDetailsInteractor()
         let view = PackageDetailsVC()
-        let presenter = PackageDetailsPresenter(view: view, interactor: interactor, router: router)
+        let presenter = PackageDetailsPresenter(view: view, interactor: interactor, router: router, package: package)
         router.viewController = view
         interactor.presenter = presenter
         view.presenter = presenter

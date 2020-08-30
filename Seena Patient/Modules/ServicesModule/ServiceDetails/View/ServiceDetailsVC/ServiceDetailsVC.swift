@@ -39,26 +39,32 @@ class ServiceDetailsVC: UIViewController, ServiceDetailsViewProtocol {
     func setupUI() {
         // service name label
         serviceNameLabel.textColor = DesignSystem.Colors.secondaryText.color
-        serviceNameLabel.font = DesignSystem.Typography.subHeading.font
+        serviceNameLabel.font = DesignSystem.Typography.subHeading2.font
         // service Details label
         serviceDetailsLabel.textColor = DesignSystem.Colors.secondaryText.color
         serviceDetailsLabel.font = DesignSystem.Typography.title3.font
         // range price keyword label
         rangePriceKeywordLabel.text = presenter.localization.priceRange
         rangePriceKeywordLabel.textColor = DesignSystem.Colors.secondaryText.color
-        rangePriceKeywordLabel.font = DesignSystem.Typography.subHeading.font
+        rangePriceKeywordLabel.font = DesignSystem.Typography.subHeading2.font
         // range price label
         rangePriceLabel.textColor = DesignSystem.Colors.secondaryText.color
         rangePriceLabel.font = DesignSystem.Typography.title2.font
         // cilnics providing service label
         clinicsProvidingServiceKeywordLabel.text = presenter.localization.clinicsProvidingService
         clinicsProvidingServiceKeywordLabel.textColor = DesignSystem.Colors.secondaryText.color
-        clinicsProvidingServiceKeywordLabel.font = DesignSystem.Typography.subHeading.font
+        clinicsProvidingServiceKeywordLabel.font = DesignSystem.Typography.subHeading2.font
     }
     func setupClinicsCollectionView() {
         clinicsCollectionView.delegate = self
         clinicsCollectionView.dataSource = self
         clinicsCollectionView.register(cellWithClass: ServiceClinicCell.self)
+    }
+    func updateUI(withService service: ServiceViewModel) {
+        self.serviceNameLabel.text = service.serviceName
+        self.serviceImage.kf.setImage(with: URL(string: service.serviceImage))
+        self.serviceDetailsLabel.text = service.seriveDetails
+        self.rangePriceLabel.text = service.servicePrice
     }
     // MARK: - Actions
     @IBAction private func didTapShareButton(_ sender: UIButton) {

@@ -18,7 +18,7 @@ public enum Environment: String {
     }
     // MARK: - Domain
     var serverMainDomain: String {
-        return "ojoplatform.com"
+        return "157.230.96.195"
     }
 
     var apiDomain: String {
@@ -31,6 +31,6 @@ public enum Environment: String {
     }
     // MARK: - URL
     var baseURL: String {
-        return "https://\(apiDomain)"
+        return "http://\(apiDomain)"
     }
 }

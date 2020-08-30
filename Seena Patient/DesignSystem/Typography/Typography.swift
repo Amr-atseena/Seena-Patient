@@ -12,7 +12,10 @@ extension DesignSystem {
     enum Typography {
         case largeTitle
         case heading
-        case subHeading
+        case subHeading1
+        case subHeading2
+        case subHeading3
+        case subHeading4
         case title1
         case title2
         case title3
@@ -22,8 +25,14 @@ extension DesignSystem {
                 return CustomFontDiscriptor(font: .bold, size: 38, style: .largeTitle)
             case .heading:
                 return CustomFontDiscriptor(font: .bold, size: 30, style: .headline)
-            case .subHeading:
+            case .subHeading1:
+                return CustomFontDiscriptor(font: .semiBold, size: 28, style: .subheadline)
+            case .subHeading2:
                 return CustomFontDiscriptor(font: .semiBold, size: 24, style: .subheadline)
+            case .subHeading3:
+                return CustomFontDiscriptor(font: .semiBold, size: 20, style: .subheadline)
+            case .subHeading4:
+                return CustomFontDiscriptor(font: .semiBold, size: 16, style: .subheadline)
             case .title1:
                 return CustomFontDiscriptor(font: .medium, size: 28, style: .title1)
             case .title2:

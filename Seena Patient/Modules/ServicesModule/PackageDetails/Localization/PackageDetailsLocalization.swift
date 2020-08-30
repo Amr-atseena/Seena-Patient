@@ -16,4 +16,10 @@ struct PackageDetailsLocalization {
     var servicsInPackage: String {
         return "Services in Package".localized
     }
+    var egp: String {
+        return "EGP".localized
+    }
+    var monthly: String {
+        return "Monthly".localized
+    }
 }
