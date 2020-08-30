@@ -7,7 +7,7 @@
 //
 
 import UIKit
-@IBDesignable
+
 class CustomizedTabBar: UITabBar {
     // MARK: - Attibutes
     @objc public var centerButtonActionHandler: () -> Void = {}
@@ -16,9 +16,12 @@ class CustomizedTabBar: UITabBar {
     private let localization = TabBarLocalization()
     private lazy var centerButton: UIButton = {
         let centerButton = UIButton(frame: CGRect(x: (self.bounds.width / 2)-(centerButtonHeight/2), y: -40, width: centerButtonHeight, height: centerButtonHeight))
+        centerButton.applyGradient(colours: [DesignSystem.Colors.payStart.color, DesignSystem.Colors.payEnd.color])
         centerButton.backgroundColor = DesignSystem.Colors.primaryActionBackground.color
         centerButton.layer.cornerRadius = centerButton.frame.size.width / 2.0
+        centerButton.clipsToBounds = true
         centerButton.setTitle(localization.pay, for: .normal)
+        centerButton.titleLabel?.font = DesignSystem.Typography.subHeading3.font
         centerButton.addTarget(self, action: #selector(self.centerButtonAction), for: .touchUpInside)
         return centerButton
     }()

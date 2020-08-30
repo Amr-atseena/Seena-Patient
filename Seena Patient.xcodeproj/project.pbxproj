@@ -8,6 +8,85 @@
 
 /* Begin PBXBuildFile section */
 		2323E64FD27D63A6AF60C1F6 /* Pods_Seena_Patient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A829CAD199C8BC7D0018D428 /* Pods_Seena_Patient.framework */; };
+		88104B7D24F2E0F300DB5ED9 /* BaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88104B7C24F2E0F300DB5ED9 /* BaseResponse.swift */; };
+		88104B7F24F2E14E00DB5ED9 /* ServerResonse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88104B7E24F2E14E00DB5ED9 /* ServerResonse.swift */; };
+		88104B8124F2E39100DB5ED9 /* HomeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88104B8024F2E39100DB5ED9 /* HomeResponse.swift */; };
+		88104B8324F2E3AF00DB5ED9 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88104B8224F2E3AF00DB5ED9 /* Package.swift */; };
+		88104B8524F2E3BA00DB5ED9 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88104B8424F2E3BA00DB5ED9 /* Service.swift */; };
+		88104B8724F2E3F700DB5ED9 /* Speciality.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88104B8624F2E3F700DB5ED9 /* Speciality.swift */; };
+		88104B8A24F2E4DB00DB5ED9 /* ServicesEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88104B8924F2E4DB00DB5ED9 /* ServicesEndPoint.swift */; };
+		88104B8C24F2E9D200DB5ED9 /* ServicesRemoteSerivce.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88104B8B24F2E9D200DB5ED9 /* ServicesRemoteSerivce.swift */; };
+		88104B8E24F2EA8300DB5ED9 /* ServicesRemoteServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88104B8D24F2EA8300DB5ED9 /* ServicesRemoteServiceProtocol.swift */; };
+		88104B9124F2FD3600DB5ED9 /* PackageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88104B9024F2FD3600DB5ED9 /* PackageViewModel.swift */; };
+		88104B9324F3023B00DB5ED9 /* ServiceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88104B9224F3023B00DB5ED9 /* ServiceViewModel.swift */; };
+		88120B5F24EF07BE004A2381 /* ClinicsHomeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88120B5824EF07BE004A2381 /* ClinicsHomeVC.xib */; };
+		88120B6024EF07BE004A2381 /* ClinicsHomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88120B5924EF07BE004A2381 /* ClinicsHomePresenter.swift */; };
+		88120B6124EF07BE004A2381 /* ClinicsHomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88120B5A24EF07BE004A2381 /* ClinicsHomeRouter.swift */; };
+		88120B6224EF07BE004A2381 /* ClinicsHomeProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88120B5B24EF07BE004A2381 /* ClinicsHomeProtocols.swift */; };
+		88120B6324EF07BE004A2381 /* ClinicsHomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88120B5C24EF07BE004A2381 /* ClinicsHomeInteractor.swift */; };
+		88120B6424EF07BE004A2381 /* ClinicsHomeLocalization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88120B5D24EF07BE004A2381 /* ClinicsHomeLocalization.swift */; };
+		88120B6524EF07BE004A2381 /* ClinicsHomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88120B5E24EF07BE004A2381 /* ClinicsHomeVC.swift */; };
+		88120B7024EF1CC3004A2381 /* ClinicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88120B6E24EF1CC3004A2381 /* ClinicCell.swift */; };
+		88120B7124EF1CC3004A2381 /* ClinicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88120B6F24EF1CC3004A2381 /* ClinicCell.xib */; };
+		88120B7A24EF2C66004A2381 /* ClinicDetailsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88120B7324EF2C66004A2381 /* ClinicDetailsVC.xib */; };
+		88120B7B24EF2C66004A2381 /* ClinicDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88120B7424EF2C66004A2381 /* ClinicDetailsPresenter.swift */; };
+		88120B7C24EF2C66004A2381 /* ClinicDetailsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88120B7524EF2C66004A2381 /* ClinicDetailsRouter.swift */; };
+		88120B7D24EF2C66004A2381 /* ClinicDetailsProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88120B7624EF2C66004A2381 /* ClinicDetailsProtocols.swift */; };
+		88120B7E24EF2C66004A2381 /* ClinicDetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88120B7724EF2C66004A2381 /* ClinicDetailsInteractor.swift */; };
+		88120B7F24EF2C66004A2381 /* ClinicDetailsLocalization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88120B7824EF2C66004A2381 /* ClinicDetailsLocalization.swift */; };
+		88120B8024EF2C66004A2381 /* ClinicDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88120B7924EF2C66004A2381 /* ClinicDetailsVC.swift */; };
+		8827E94E24F5A226009C64FB /* EmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8827E94D24F5A226009C64FB /* EmptyStateView.swift */; };
+		8827E95024F5A264009C64FB /* EmptyStateView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8827E94F24F5A264009C64FB /* EmptyStateView.xib */; };
+		8827E95324F5A8F2009C64FB /* ServicesListParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8827E95224F5A8F2009C64FB /* ServicesListParameters.swift */; };
+		883D941724F44392004A3F86 /* SpectialitySkeltonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883D941524F44392004A3F86 /* SpectialitySkeltonCell.swift */; };
+		883D941824F44392004A3F86 /* SpectialitySkeltonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 883D941624F44392004A3F86 /* SpectialitySkeltonCell.xib */; };
+		883D941C24F474CA004A3F86 /* PackageSkeltonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883D941A24F474CA004A3F86 /* PackageSkeltonCell.swift */; };
+		883D941D24F474CA004A3F86 /* PackageSkeltonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 883D941B24F474CA004A3F86 /* PackageSkeltonCell.xib */; };
+		88ED03F224EFA5CF00BBCEF6 /* GalleryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88ED03F024EFA5CE00BBCEF6 /* GalleryCell.swift */; };
+		88ED03F324EFA5CF00BBCEF6 /* GalleryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88ED03F124EFA5CE00BBCEF6 /* GalleryCell.xib */; };
+		88ED03FB24EFC7B300BBCEF6 /* ClinicsSectionHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88ED03F924EFC7B200BBCEF6 /* ClinicsSectionHeaderCell.swift */; };
+		88ED03FC24EFC7B300BBCEF6 /* ClinicsSectionHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88ED03FA24EFC7B200BBCEF6 /* ClinicsSectionHeaderCell.xib */; };
+		88ED040524EFCD9A00BBCEF6 /* ClinicsSearchVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88ED03FE24EFCD9A00BBCEF6 /* ClinicsSearchVC.xib */; };
+		88ED040624EFCD9A00BBCEF6 /* ClinicsSearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88ED03FF24EFCD9A00BBCEF6 /* ClinicsSearchPresenter.swift */; };
+		88ED040724EFCD9A00BBCEF6 /* ClinicsSearchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88ED040024EFCD9A00BBCEF6 /* ClinicsSearchRouter.swift */; };
+		88ED040824EFCD9A00BBCEF6 /* ClinicsSearchProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88ED040124EFCD9A00BBCEF6 /* ClinicsSearchProtocols.swift */; };
+		88ED040924EFCD9A00BBCEF6 /* ClinicsSearchInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88ED040224EFCD9A00BBCEF6 /* ClinicsSearchInteractor.swift */; };
+		88ED040A24EFCD9A00BBCEF6 /* ClinicsSearchLocalization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88ED040324EFCD9A00BBCEF6 /* ClinicsSearchLocalization.swift */; };
+		88ED040B24EFCD9A00BBCEF6 /* ClinicsSearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88ED040424EFCD9A00BBCEF6 /* ClinicsSearchVC.swift */; };
+		88ED041C24EFFD9100BBCEF6 /* NotificationsHomeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88ED041524EFFD9100BBCEF6 /* NotificationsHomeVC.xib */; };
+		88ED041D24EFFD9100BBCEF6 /* NotificationsHomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88ED041624EFFD9100BBCEF6 /* NotificationsHomePresenter.swift */; };
+		88ED041E24EFFD9100BBCEF6 /* NotificationsHomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88ED041724EFFD9100BBCEF6 /* NotificationsHomeRouter.swift */; };
+		88ED041F24EFFD9100BBCEF6 /* NotificationsHomeProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88ED041824EFFD9100BBCEF6 /* NotificationsHomeProtocols.swift */; };
+		88ED042024EFFD9100BBCEF6 /* NotificationsHomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88ED041924EFFD9100BBCEF6 /* NotificationsHomeInteractor.swift */; };
+		88ED042124EFFD9100BBCEF6 /* NotificationsHomeLocalization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88ED041A24EFFD9100BBCEF6 /* NotificationsHomeLocalization.swift */; };
+		88ED042224EFFD9100BBCEF6 /* NotificationsHomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88ED041B24EFFD9100BBCEF6 /* NotificationsHomeVC.swift */; };
+		88ED042D24F0042600BBCEF6 /* NotificationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88ED042B24F0042600BBCEF6 /* NotificationCell.swift */; };
+		88ED042E24F0042600BBCEF6 /* NotificationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88ED042C24F0042600BBCEF6 /* NotificationCell.xib */; };
+		88EDA11A24FADA0D00460B4D /* ServiceResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EDA11824FADA0D00460B4D /* ServiceResultCell.swift */; };
+		88EDA11B24FADA0D00460B4D /* ServiceResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88EDA11924FADA0D00460B4D /* ServiceResultCell.xib */; };
+		88EDA11F24FADD9B00460B4D /* ServiceResultSkeltonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EDA11D24FADD9B00460B4D /* ServiceResultSkeltonCell.swift */; };
+		88EDA12024FADD9B00460B4D /* ServiceResultSkeltonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88EDA11E24FADD9B00460B4D /* ServiceResultSkeltonCell.xib */; };
+		88EDA12924FAE41200460B4D /* ProfileVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88EDA12224FAE41200460B4D /* ProfileVC.xib */; };
+		88EDA12A24FAE41200460B4D /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EDA12324FAE41200460B4D /* ProfilePresenter.swift */; };
+		88EDA12B24FAE41200460B4D /* ProfileRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EDA12424FAE41200460B4D /* ProfileRouter.swift */; };
+		88EDA12C24FAE41200460B4D /* ProfileProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EDA12524FAE41200460B4D /* ProfileProtocols.swift */; };
+		88EDA12D24FAE41200460B4D /* ProfileInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EDA12624FAE41200460B4D /* ProfileInteractor.swift */; };
+		88EDA12E24FAE41200460B4D /* ProfileLocalization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EDA12724FAE41200460B4D /* ProfileLocalization.swift */; };
+		88EDA12F24FAE41200460B4D /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EDA12824FAE41200460B4D /* ProfileVC.swift */; };
+		88F706C024EE6804005C2ADB /* PackageDetailsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88F706B924EE6804005C2ADB /* PackageDetailsVC.xib */; };
+		88F706C124EE6804005C2ADB /* PackageDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F706BA24EE6804005C2ADB /* PackageDetailsPresenter.swift */; };
+		88F706C224EE6804005C2ADB /* PackageDetailsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F706BB24EE6804005C2ADB /* PackageDetailsRouter.swift */; };
+		88F706C324EE6804005C2ADB /* PackageDetailsProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F706BC24EE6804005C2ADB /* PackageDetailsProtocols.swift */; };
+		88F706C424EE6804005C2ADB /* PackageDetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F706BD24EE6804005C2ADB /* PackageDetailsInteractor.swift */; };
+		88F706C524EE6804005C2ADB /* PackageDetailsLocalization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F706BE24EE6804005C2ADB /* PackageDetailsLocalization.swift */; };
+		88F706C624EE6804005C2ADB /* PackageDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F706BF24EE6804005C2ADB /* PackageDetailsVC.swift */; };
+		8C81545024EB21CA00CA30E7 /* ServicesSearchVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C81544824EB21CA00CA30E7 /* ServicesSearchVC.xib */; };
+		8C81545224EB21CA00CA30E7 /* ServicesSearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C81544A24EB21CA00CA30E7 /* ServicesSearchPresenter.swift */; };
+		8C81545324EB21CA00CA30E7 /* ServicesSearchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C81544B24EB21CA00CA30E7 /* ServicesSearchRouter.swift */; };
+		8C81545424EB21CA00CA30E7 /* ServicesSearchProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C81544C24EB21CA00CA30E7 /* ServicesSearchProtocols.swift */; };
+		8C81545524EB21CA00CA30E7 /* ServicesSearchInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C81544D24EB21CA00CA30E7 /* ServicesSearchInteractor.swift */; };
+		8C81545624EB21CA00CA30E7 /* ServicesSearchLocalization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C81544E24EB21CA00CA30E7 /* ServicesSearchLocalization.swift */; };
+		8C81545724EB21CA00CA30E7 /* ServicesSearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C81544F24EB21CA00CA30E7 /* ServicesSearchVC.swift */; };
 		8C8CB3C224E6B815009679E5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8CB3C124E6B815009679E5 /* AppDelegate.swift */; };
 		8C8CB3CB24E6B817009679E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C8CB3CA24E6B817009679E5 /* Assets.xcassets */; };
 		8C8CB3CE24E6B817009679E5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C8CB3CC24E6B817009679E5 /* LaunchScreen.storyboard */; };
@@ -35,10 +114,118 @@
 		8CAB097124E7CEA700D38CDD /* TabBarLocalization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAB097024E7CEA700D38CDD /* TabBarLocalization.swift */; };
 		8CAB097524E7DDED00D38CDD /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAB097424E7DDED00D38CDD /* UIView+Extensions.swift */; };
 		8CAB097924E7E6CB00D38CDD /* UIViewContorller+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAB097824E7E6CA00D38CDD /* UIViewContorller+Extensions.swift */; };
+		8CAB098124E7E8C200D38CDD /* HomeProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAB098024E7E8C200D38CDD /* HomeProtocols.swift */; };
+		8CAB098324E7E9A900D38CDD /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAB098224E7E9A900D38CDD /* HomeRouter.swift */; };
+		8CAB098524E7F22000D38CDD /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAB098424E7F22000D38CDD /* HomeInteractor.swift */; };
+		8CAB098724E7F25900D38CDD /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAB098624E7F25900D38CDD /* HomePresenter.swift */; };
+		8CAB098A24E7F2F400D38CDD /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAB098824E7F2F400D38CDD /* HomeVC.swift */; };
+		8CAB098B24E7F2F400D38CDD /* HomeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CAB098924E7F2F400D38CDD /* HomeVC.xib */; };
+		8CAB098E24E7F55800D38CDD /* HomeLocalization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAB098D24E7F55800D38CDD /* HomeLocalization.swift */; };
+		8CAB099224E806C100D38CDD /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAB099124E806C100D38CDD /* Font.swift */; };
+		8CAB099B24E808A700D38CDD /* Tajawal-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8CAB099424E808A700D38CDD /* Tajawal-ExtraBold.ttf */; };
+		8CAB099D24E808A700D38CDD /* Tajawal-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8CAB099624E808A700D38CDD /* Tajawal-Bold.ttf */; };
+		8CAB099F24E808A700D38CDD /* Tajawal-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8CAB099824E808A700D38CDD /* Tajawal-Regular.ttf */; };
+		8CAB09A024E808A700D38CDD /* Tajawal-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8CAB099924E808A700D38CDD /* Tajawal-Medium.ttf */; };
+		8CAB09A324E80BC600D38CDD /* CustomFontDiscriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAB09A224E80BC600D38CDD /* CustomFontDiscriptor.swift */; };
+		8CAB09A524E80C2700D38CDD /* Typography.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAB09A424E80C2700D38CDD /* Typography.swift */; };
+		8CAB09AB24E8274200D38CDD /* SpectialityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAB09A924E8274200D38CDD /* SpectialityCell.swift */; };
+		8CAB09AC24E8274200D38CDD /* SpectialityCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CAB09AA24E8274200D38CDD /* SpectialityCell.xib */; };
+		8CAB09B024E8357E00D38CDD /* ServiceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAB09AE24E8357E00D38CDD /* ServiceCell.swift */; };
+		8CAB09B124E8357E00D38CDD /* ServiceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CAB09AF24E8357E00D38CDD /* ServiceCell.xib */; };
+		8CAB09B424E84C6800D38CDD /* PackageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAB09B224E84C6800D38CDD /* PackageCell.swift */; };
+		8CAB09B524E84C6800D38CDD /* PackageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CAB09B324E84C6800D38CDD /* PackageCell.xib */; };
+		8CEC77F924E9BB2A000CED1F /* ServiceDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEC77F724E9BB2A000CED1F /* ServiceDetailsVC.swift */; };
+		8CEC77FA24E9BB2A000CED1F /* ServiceDetailsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CEC77F824E9BB2A000CED1F /* ServiceDetailsVC.xib */; };
+		8CEC77FD24E9BC5C000CED1F /* ServiceDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEC77FC24E9BC5C000CED1F /* ServiceDetailsPresenter.swift */; };
+		8CEC780024E9BCED000CED1F /* ServiceDetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEC77FF24E9BCED000CED1F /* ServiceDetailsInteractor.swift */; };
+		8CEC780324E9BD68000CED1F /* ServiceDetailsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEC780224E9BD68000CED1F /* ServiceDetailsRouter.swift */; };
+		8CEC780624E9CB58000CED1F /* ServiceDetailsProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEC780524E9CB58000CED1F /* ServiceDetailsProtocols.swift */; };
+		8CEC780924E9CC2B000CED1F /* ServiceDetailsLocalizaition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEC780824E9CC2B000CED1F /* ServiceDetailsLocalizaition.swift */; };
+		8CEC780E24E9DDDB000CED1F /* ServiceClinicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEC780C24E9DDDB000CED1F /* ServiceClinicCell.swift */; };
+		8CEC780F24E9DDDB000CED1F /* ServiceClinicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CEC780D24E9DDDB000CED1F /* ServiceClinicCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		8C8CB3BE24E6B815009679E5 /* Seena Patient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Seena Patient.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		88104B7C24F2E0F300DB5ED9 /* BaseResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseResponse.swift; sourceTree = "<group>"; };
+		88104B7E24F2E14E00DB5ED9 /* ServerResonse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerResonse.swift; sourceTree = "<group>"; };
+		88104B8024F2E39100DB5ED9 /* HomeResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeResponse.swift; sourceTree = "<group>"; };
+		88104B8224F2E3AF00DB5ED9 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		88104B8424F2E3BA00DB5ED9 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		88104B8624F2E3F700DB5ED9 /* Speciality.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Speciality.swift; sourceTree = "<group>"; };
+		88104B8924F2E4DB00DB5ED9 /* ServicesEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesEndPoint.swift; sourceTree = "<group>"; };
+		88104B8B24F2E9D200DB5ED9 /* ServicesRemoteSerivce.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesRemoteSerivce.swift; sourceTree = "<group>"; };
+		88104B8D24F2EA8300DB5ED9 /* ServicesRemoteServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesRemoteServiceProtocol.swift; sourceTree = "<group>"; };
+		88104B9024F2FD3600DB5ED9 /* PackageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageViewModel.swift; sourceTree = "<group>"; };
+		88104B9224F3023B00DB5ED9 /* ServiceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceViewModel.swift; sourceTree = "<group>"; };
+		88120B5824EF07BE004A2381 /* ClinicsHomeVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ClinicsHomeVC.xib; sourceTree = "<group>"; };
+		88120B5924EF07BE004A2381 /* ClinicsHomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicsHomePresenter.swift; sourceTree = "<group>"; };
+		88120B5A24EF07BE004A2381 /* ClinicsHomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicsHomeRouter.swift; sourceTree = "<group>"; };
+		88120B5B24EF07BE004A2381 /* ClinicsHomeProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicsHomeProtocols.swift; sourceTree = "<group>"; };
+		88120B5C24EF07BE004A2381 /* ClinicsHomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicsHomeInteractor.swift; sourceTree = "<group>"; };
+		88120B5D24EF07BE004A2381 /* ClinicsHomeLocalization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicsHomeLocalization.swift; sourceTree = "<group>"; };
+		88120B5E24EF07BE004A2381 /* ClinicsHomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicsHomeVC.swift; sourceTree = "<group>"; };
+		88120B6E24EF1CC3004A2381 /* ClinicCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicCell.swift; sourceTree = "<group>"; };
+		88120B6F24EF1CC3004A2381 /* ClinicCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ClinicCell.xib; sourceTree = "<group>"; };
+		88120B7324EF2C66004A2381 /* ClinicDetailsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ClinicDetailsVC.xib; sourceTree = "<group>"; };
+		88120B7424EF2C66004A2381 /* ClinicDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicDetailsPresenter.swift; sourceTree = "<group>"; };
+		88120B7524EF2C66004A2381 /* ClinicDetailsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicDetailsRouter.swift; sourceTree = "<group>"; };
+		88120B7624EF2C66004A2381 /* ClinicDetailsProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicDetailsProtocols.swift; sourceTree = "<group>"; };
+		88120B7724EF2C66004A2381 /* ClinicDetailsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicDetailsInteractor.swift; sourceTree = "<group>"; };
+		88120B7824EF2C66004A2381 /* ClinicDetailsLocalization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicDetailsLocalization.swift; sourceTree = "<group>"; };
+		88120B7924EF2C66004A2381 /* ClinicDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicDetailsVC.swift; sourceTree = "<group>"; };
+		8827E94D24F5A226009C64FB /* EmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStateView.swift; sourceTree = "<group>"; };
+		8827E94F24F5A264009C64FB /* EmptyStateView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyStateView.xib; sourceTree = "<group>"; };
+		8827E95224F5A8F2009C64FB /* ServicesListParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesListParameters.swift; sourceTree = "<group>"; };
+		883D941524F44392004A3F86 /* SpectialitySkeltonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpectialitySkeltonCell.swift; sourceTree = "<group>"; };
+		883D941624F44392004A3F86 /* SpectialitySkeltonCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SpectialitySkeltonCell.xib; sourceTree = "<group>"; };
+		883D941A24F474CA004A3F86 /* PackageSkeltonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageSkeltonCell.swift; sourceTree = "<group>"; };
+		883D941B24F474CA004A3F86 /* PackageSkeltonCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PackageSkeltonCell.xib; sourceTree = "<group>"; };
+		88ED03F024EFA5CE00BBCEF6 /* GalleryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryCell.swift; sourceTree = "<group>"; };
+		88ED03F124EFA5CE00BBCEF6 /* GalleryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GalleryCell.xib; sourceTree = "<group>"; };
+		88ED03F924EFC7B200BBCEF6 /* ClinicsSectionHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicsSectionHeaderCell.swift; sourceTree = "<group>"; };
+		88ED03FA24EFC7B200BBCEF6 /* ClinicsSectionHeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ClinicsSectionHeaderCell.xib; sourceTree = "<group>"; };
+		88ED03FE24EFCD9A00BBCEF6 /* ClinicsSearchVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ClinicsSearchVC.xib; sourceTree = "<group>"; };
+		88ED03FF24EFCD9A00BBCEF6 /* ClinicsSearchPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicsSearchPresenter.swift; sourceTree = "<group>"; };
+		88ED040024EFCD9A00BBCEF6 /* ClinicsSearchRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicsSearchRouter.swift; sourceTree = "<group>"; };
+		88ED040124EFCD9A00BBCEF6 /* ClinicsSearchProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicsSearchProtocols.swift; sourceTree = "<group>"; };
+		88ED040224EFCD9A00BBCEF6 /* ClinicsSearchInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicsSearchInteractor.swift; sourceTree = "<group>"; };
+		88ED040324EFCD9A00BBCEF6 /* ClinicsSearchLocalization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicsSearchLocalization.swift; sourceTree = "<group>"; };
+		88ED040424EFCD9A00BBCEF6 /* ClinicsSearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicsSearchVC.swift; sourceTree = "<group>"; };
+		88ED041524EFFD9100BBCEF6 /* NotificationsHomeVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotificationsHomeVC.xib; sourceTree = "<group>"; };
+		88ED041624EFFD9100BBCEF6 /* NotificationsHomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsHomePresenter.swift; sourceTree = "<group>"; };
+		88ED041724EFFD9100BBCEF6 /* NotificationsHomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsHomeRouter.swift; sourceTree = "<group>"; };
+		88ED041824EFFD9100BBCEF6 /* NotificationsHomeProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsHomeProtocols.swift; sourceTree = "<group>"; };
+		88ED041924EFFD9100BBCEF6 /* NotificationsHomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsHomeInteractor.swift; sourceTree = "<group>"; };
+		88ED041A24EFFD9100BBCEF6 /* NotificationsHomeLocalization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsHomeLocalization.swift; sourceTree = "<group>"; };
+		88ED041B24EFFD9100BBCEF6 /* NotificationsHomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsHomeVC.swift; sourceTree = "<group>"; };
+		88ED042B24F0042600BBCEF6 /* NotificationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCell.swift; sourceTree = "<group>"; };
+		88ED042C24F0042600BBCEF6 /* NotificationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotificationCell.xib; sourceTree = "<group>"; };
+		88EDA11824FADA0D00460B4D /* ServiceResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceResultCell.swift; sourceTree = "<group>"; };
+		88EDA11924FADA0D00460B4D /* ServiceResultCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServiceResultCell.xib; sourceTree = "<group>"; };
+		88EDA11D24FADD9B00460B4D /* ServiceResultSkeltonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceResultSkeltonCell.swift; sourceTree = "<group>"; };
+		88EDA11E24FADD9B00460B4D /* ServiceResultSkeltonCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServiceResultSkeltonCell.xib; sourceTree = "<group>"; };
+		88EDA12224FAE41200460B4D /* ProfileVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileVC.xib; sourceTree = "<group>"; };
+		88EDA12324FAE41200460B4D /* ProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePresenter.swift; sourceTree = "<group>"; };
+		88EDA12424FAE41200460B4D /* ProfileRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRouter.swift; sourceTree = "<group>"; };
+		88EDA12524FAE41200460B4D /* ProfileProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileProtocols.swift; sourceTree = "<group>"; };
+		88EDA12624FAE41200460B4D /* ProfileInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInteractor.swift; sourceTree = "<group>"; };
+		88EDA12724FAE41200460B4D /* ProfileLocalization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileLocalization.swift; sourceTree = "<group>"; };
+		88EDA12824FAE41200460B4D /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
+		88F706B924EE6804005C2ADB /* PackageDetailsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PackageDetailsVC.xib; sourceTree = "<group>"; };
+		88F706BA24EE6804005C2ADB /* PackageDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageDetailsPresenter.swift; sourceTree = "<group>"; };
+		88F706BB24EE6804005C2ADB /* PackageDetailsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageDetailsRouter.swift; sourceTree = "<group>"; };
+		88F706BC24EE6804005C2ADB /* PackageDetailsProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageDetailsProtocols.swift; sourceTree = "<group>"; };
+		88F706BD24EE6804005C2ADB /* PackageDetailsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageDetailsInteractor.swift; sourceTree = "<group>"; };
+		88F706BE24EE6804005C2ADB /* PackageDetailsLocalization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageDetailsLocalization.swift; sourceTree = "<group>"; };
+		88F706BF24EE6804005C2ADB /* PackageDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageDetailsVC.swift; sourceTree = "<group>"; };
+		8C81544824EB21CA00CA30E7 /* ServicesSearchVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServicesSearchVC.xib; sourceTree = "<group>"; };
+		8C81544A24EB21CA00CA30E7 /* ServicesSearchPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesSearchPresenter.swift; sourceTree = "<group>"; };
+		8C81544B24EB21CA00CA30E7 /* ServicesSearchRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesSearchRouter.swift; sourceTree = "<group>"; };
+		8C81544C24EB21CA00CA30E7 /* ServicesSearchProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesSearchProtocols.swift; sourceTree = "<group>"; };
+		8C81544D24EB21CA00CA30E7 /* ServicesSearchInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesSearchInteractor.swift; sourceTree = "<group>"; };
+		8C81544E24EB21CA00CA30E7 /* ServicesSearchLocalization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesSearchLocalization.swift; sourceTree = "<group>"; };
+		8C81544F24EB21CA00CA30E7 /* ServicesSearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesSearchVC.swift; sourceTree = "<group>"; };
+		8C8CB3BE24E6B815009679E5 /* Seena.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Seena.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C8CB3C124E6B815009679E5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8C8CB3CA24E6B817009679E5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8C8CB3CD24E6B817009679E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -67,6 +254,35 @@
 		8CAB097024E7CEA700D38CDD /* TabBarLocalization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarLocalization.swift; sourceTree = "<group>"; };
 		8CAB097424E7DDED00D38CDD /* UIView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		8CAB097824E7E6CA00D38CDD /* UIViewContorller+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewContorller+Extensions.swift"; sourceTree = "<group>"; };
+		8CAB098024E7E8C200D38CDD /* HomeProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeProtocols.swift; sourceTree = "<group>"; };
+		8CAB098224E7E9A900D38CDD /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
+		8CAB098424E7F22000D38CDD /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
+		8CAB098624E7F25900D38CDD /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		8CAB098824E7F2F400D38CDD /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		8CAB098924E7F2F400D38CDD /* HomeVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeVC.xib; sourceTree = "<group>"; };
+		8CAB098D24E7F55800D38CDD /* HomeLocalization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeLocalization.swift; sourceTree = "<group>"; };
+		8CAB099124E806C100D38CDD /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
+		8CAB099424E808A700D38CDD /* Tajawal-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tajawal-ExtraBold.ttf"; sourceTree = "<group>"; };
+		8CAB099624E808A700D38CDD /* Tajawal-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tajawal-Bold.ttf"; sourceTree = "<group>"; };
+		8CAB099824E808A700D38CDD /* Tajawal-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tajawal-Regular.ttf"; sourceTree = "<group>"; };
+		8CAB099924E808A700D38CDD /* Tajawal-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tajawal-Medium.ttf"; sourceTree = "<group>"; };
+		8CAB09A224E80BC600D38CDD /* CustomFontDiscriptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFontDiscriptor.swift; sourceTree = "<group>"; };
+		8CAB09A424E80C2700D38CDD /* Typography.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typography.swift; sourceTree = "<group>"; };
+		8CAB09A924E8274200D38CDD /* SpectialityCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpectialityCell.swift; sourceTree = "<group>"; };
+		8CAB09AA24E8274200D38CDD /* SpectialityCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SpectialityCell.xib; sourceTree = "<group>"; };
+		8CAB09AE24E8357E00D38CDD /* ServiceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceCell.swift; sourceTree = "<group>"; };
+		8CAB09AF24E8357E00D38CDD /* ServiceCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServiceCell.xib; sourceTree = "<group>"; };
+		8CAB09B224E84C6800D38CDD /* PackageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageCell.swift; sourceTree = "<group>"; };
+		8CAB09B324E84C6800D38CDD /* PackageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PackageCell.xib; sourceTree = "<group>"; };
+		8CEC77F724E9BB2A000CED1F /* ServiceDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceDetailsVC.swift; sourceTree = "<group>"; };
+		8CEC77F824E9BB2A000CED1F /* ServiceDetailsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServiceDetailsVC.xib; sourceTree = "<group>"; };
+		8CEC77FC24E9BC5C000CED1F /* ServiceDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceDetailsPresenter.swift; sourceTree = "<group>"; };
+		8CEC77FF24E9BCED000CED1F /* ServiceDetailsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceDetailsInteractor.swift; sourceTree = "<group>"; };
+		8CEC780224E9BD68000CED1F /* ServiceDetailsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceDetailsRouter.swift; sourceTree = "<group>"; };
+		8CEC780524E9CB58000CED1F /* ServiceDetailsProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceDetailsProtocols.swift; sourceTree = "<group>"; };
+		8CEC780824E9CC2B000CED1F /* ServiceDetailsLocalizaition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceDetailsLocalizaition.swift; sourceTree = "<group>"; };
+		8CEC780C24E9DDDB000CED1F /* ServiceClinicCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceClinicCell.swift; sourceTree = "<group>"; };
+		8CEC780D24E9DDDB000CED1F /* ServiceClinicCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServiceClinicCell.xib; sourceTree = "<group>"; };
 		A829CAD199C8BC7D0018D428 /* Pods_Seena_Patient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Seena_Patient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE9E485092256443C69FE26D /* Pods-Seena Patient.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Seena Patient.release.xcconfig"; path = "Target Support Files/Pods-Seena Patient/Pods-Seena Patient.release.xcconfig"; sourceTree = "<group>"; };
 		E338E54FF4A9A0DE828B1EE8 /* Pods-Seena Patient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Seena Patient.debug.xcconfig"; path = "Target Support Files/Pods-Seena Patient/Pods-Seena Patient.debug.xcconfig"; sourceTree = "<group>"; };
@@ -93,6 +309,599 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		88104B8824F2E44000DB5ED9 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				88104B8D24F2EA8300DB5ED9 /* ServicesRemoteServiceProtocol.swift */,
+				88104B8924F2E4DB00DB5ED9 /* ServicesEndPoint.swift */,
+				88104B8B24F2E9D200DB5ED9 /* ServicesRemoteSerivce.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		88104B8F24F2FD2600DB5ED9 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				88104B9024F2FD3600DB5ED9 /* PackageViewModel.swift */,
+				88104B9224F3023B00DB5ED9 /* ServiceViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		88120B5724EF0795004A2381 /* ClinicsHome */ = {
+			isa = PBXGroup;
+			children = (
+				88120B6C24EF09DF004A2381 /* Localization */,
+				88120B6A24EF09C0004A2381 /* Protocol */,
+				88120B6924EF09BA004A2381 /* Router */,
+				88120B6B24EF09D2004A2381 /* Interactor */,
+				88120B6824EF09A9004A2381 /* Presenter */,
+				88120B6624EF0992004A2381 /* View */,
+			);
+			path = ClinicsHome;
+			sourceTree = "<group>";
+		};
+		88120B6624EF0992004A2381 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				88ED03F824EFAC7900BBCEF6 /* ClinicsSectionHeaderCell */,
+				88120B6D24EF1CA3004A2381 /* ClinicCell */,
+				88120B6724EF099B004A2381 /* ClinicsHomeVC */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		88120B6724EF099B004A2381 /* ClinicsHomeVC */ = {
+			isa = PBXGroup;
+			children = (
+				88120B5E24EF07BE004A2381 /* ClinicsHomeVC.swift */,
+				88120B5824EF07BE004A2381 /* ClinicsHomeVC.xib */,
+			);
+			path = ClinicsHomeVC;
+			sourceTree = "<group>";
+		};
+		88120B6824EF09A9004A2381 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				88120B5924EF07BE004A2381 /* ClinicsHomePresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		88120B6924EF09BA004A2381 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				88120B5A24EF07BE004A2381 /* ClinicsHomeRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		88120B6A24EF09C0004A2381 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				88120B5B24EF07BE004A2381 /* ClinicsHomeProtocols.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		88120B6B24EF09D2004A2381 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				88120B5C24EF07BE004A2381 /* ClinicsHomeInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		88120B6C24EF09DF004A2381 /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				88120B5D24EF07BE004A2381 /* ClinicsHomeLocalization.swift */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
+		88120B6D24EF1CA3004A2381 /* ClinicCell */ = {
+			isa = PBXGroup;
+			children = (
+				88120B6E24EF1CC3004A2381 /* ClinicCell.swift */,
+				88120B6F24EF1CC3004A2381 /* ClinicCell.xib */,
+			);
+			path = ClinicCell;
+			sourceTree = "<group>";
+		};
+		88120B7224EF2C4E004A2381 /* ClinicDetails */ = {
+			isa = PBXGroup;
+			children = (
+				88ED03EE24EF9C1D00BBCEF6 /* Localization */,
+				88ED03EC24EF9C0500BBCEF6 /* Protocol */,
+				88ED03EA24EF9BE900BBCEF6 /* Router */,
+				88ED03ED24EF9C1100BBCEF6 /* Interactor */,
+				88ED03EB24EF9BF800BBCEF6 /* Presenter */,
+				88ED03E824EF9BB800BBCEF6 /* view */,
+			);
+			path = ClinicDetails;
+			sourceTree = "<group>";
+		};
+		8827E94C24F5A1DB009C64FB /* EmptyStateView */ = {
+			isa = PBXGroup;
+			children = (
+				8827E94D24F5A226009C64FB /* EmptyStateView.swift */,
+				8827E94F24F5A264009C64FB /* EmptyStateView.xib */,
+			);
+			path = EmptyStateView;
+			sourceTree = "<group>";
+		};
+		8827E95124F5A8C7009C64FB /* RequestParameters */ = {
+			isa = PBXGroup;
+			children = (
+				8827E95224F5A8F2009C64FB /* ServicesListParameters.swift */,
+			);
+			path = RequestParameters;
+			sourceTree = "<group>";
+		};
+		8827E95424F5CA2E009C64FB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		883D941424F43B9B004A3F86 /* SpectialitySkeltonCell */ = {
+			isa = PBXGroup;
+			children = (
+				883D941524F44392004A3F86 /* SpectialitySkeltonCell.swift */,
+				883D941624F44392004A3F86 /* SpectialitySkeltonCell.xib */,
+			);
+			path = SpectialitySkeltonCell;
+			sourceTree = "<group>";
+		};
+		883D941924F474A1004A3F86 /* PackageSkeltonCell */ = {
+			isa = PBXGroup;
+			children = (
+				883D941A24F474CA004A3F86 /* PackageSkeltonCell.swift */,
+				883D941B24F474CA004A3F86 /* PackageSkeltonCell.xib */,
+			);
+			path = PackageSkeltonCell;
+			sourceTree = "<group>";
+		};
+		88ED03E824EF9BB800BBCEF6 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				88ED03EF24EFA5AE00BBCEF6 /* GalleryCell */,
+				88ED03E924EF9BCE00BBCEF6 /* ClnicDetailsVC */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		88ED03E924EF9BCE00BBCEF6 /* ClnicDetailsVC */ = {
+			isa = PBXGroup;
+			children = (
+				88120B7924EF2C66004A2381 /* ClinicDetailsVC.swift */,
+				88120B7324EF2C66004A2381 /* ClinicDetailsVC.xib */,
+			);
+			path = ClnicDetailsVC;
+			sourceTree = "<group>";
+		};
+		88ED03EA24EF9BE900BBCEF6 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				88120B7524EF2C66004A2381 /* ClinicDetailsRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		88ED03EB24EF9BF800BBCEF6 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				88120B7424EF2C66004A2381 /* ClinicDetailsPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		88ED03EC24EF9C0500BBCEF6 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				88120B7624EF2C66004A2381 /* ClinicDetailsProtocols.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		88ED03ED24EF9C1100BBCEF6 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				88120B7724EF2C66004A2381 /* ClinicDetailsInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		88ED03EE24EF9C1D00BBCEF6 /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				88120B7824EF2C66004A2381 /* ClinicDetailsLocalization.swift */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
+		88ED03EF24EFA5AE00BBCEF6 /* GalleryCell */ = {
+			isa = PBXGroup;
+			children = (
+				88ED03F024EFA5CE00BBCEF6 /* GalleryCell.swift */,
+				88ED03F124EFA5CE00BBCEF6 /* GalleryCell.xib */,
+			);
+			path = GalleryCell;
+			sourceTree = "<group>";
+		};
+		88ED03F824EFAC7900BBCEF6 /* ClinicsSectionHeaderCell */ = {
+			isa = PBXGroup;
+			children = (
+				88ED03F924EFC7B200BBCEF6 /* ClinicsSectionHeaderCell.swift */,
+				88ED03FA24EFC7B200BBCEF6 /* ClinicsSectionHeaderCell.xib */,
+			);
+			path = ClinicsSectionHeaderCell;
+			sourceTree = "<group>";
+		};
+		88ED03FD24EFCD7A00BBCEF6 /* ClinicsSearch */ = {
+			isa = PBXGroup;
+			children = (
+				88ED041124EFF0AC00BBCEF6 /* Locolization */,
+				88ED041024EFF09A00BBCEF6 /* Protocol */,
+				88ED040F24EFF08A00BBCEF6 /* Router */,
+				88ED040E24EFF07E00BBCEF6 /* Interactor */,
+				88ED040D24EFF06B00BBCEF6 /* Presenter */,
+				88ED041224EFF0BD00BBCEF6 /* View */,
+			);
+			path = ClinicsSearch;
+			sourceTree = "<group>";
+		};
+		88ED040C24EFF04C00BBCEF6 /* ClinicsSearchVC */ = {
+			isa = PBXGroup;
+			children = (
+				88ED040424EFCD9A00BBCEF6 /* ClinicsSearchVC.swift */,
+				88ED03FE24EFCD9A00BBCEF6 /* ClinicsSearchVC.xib */,
+			);
+			path = ClinicsSearchVC;
+			sourceTree = "<group>";
+		};
+		88ED040D24EFF06B00BBCEF6 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				88ED03FF24EFCD9A00BBCEF6 /* ClinicsSearchPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		88ED040E24EFF07E00BBCEF6 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				88ED040224EFCD9A00BBCEF6 /* ClinicsSearchInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		88ED040F24EFF08A00BBCEF6 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				88ED040024EFCD9A00BBCEF6 /* ClinicsSearchRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		88ED041024EFF09A00BBCEF6 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				88ED040124EFCD9A00BBCEF6 /* ClinicsSearchProtocols.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		88ED041124EFF0AC00BBCEF6 /* Locolization */ = {
+			isa = PBXGroup;
+			children = (
+				88ED040324EFCD9A00BBCEF6 /* ClinicsSearchLocalization.swift */,
+			);
+			path = Locolization;
+			sourceTree = "<group>";
+		};
+		88ED041224EFF0BD00BBCEF6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				88ED040C24EFF04C00BBCEF6 /* ClinicsSearchVC */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		88ED041324EFFD6300BBCEF6 /* NotificationsModule */ = {
+			isa = PBXGroup;
+			children = (
+				88ED041424EFFD7800BBCEF6 /* NotficationsHome */,
+			);
+			path = NotificationsModule;
+			sourceTree = "<group>";
+		};
+		88ED041424EFFD7800BBCEF6 /* NotficationsHome */ = {
+			isa = PBXGroup;
+			children = (
+				88ED042924EFFE5900BBCEF6 /* Localization */,
+				88ED042824EFFE4A00BBCEF6 /* Protocol */,
+				88ED042724EFFE4100BBCEF6 /* Router */,
+				88ED042624EFFE3300BBCEF6 /* Interactor */,
+				88ED042524EFFE2100BBCEF6 /* Presenter */,
+				88ED042324EFFE0A00BBCEF6 /* View */,
+			);
+			path = NotficationsHome;
+			sourceTree = "<group>";
+		};
+		88ED042324EFFE0A00BBCEF6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				88ED042A24F0040900BBCEF6 /* NotificationCell */,
+				88ED042424EFFE1300BBCEF6 /* NotificationsHomeVC */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		88ED042424EFFE1300BBCEF6 /* NotificationsHomeVC */ = {
+			isa = PBXGroup;
+			children = (
+				88ED041B24EFFD9100BBCEF6 /* NotificationsHomeVC.swift */,
+				88ED041524EFFD9100BBCEF6 /* NotificationsHomeVC.xib */,
+			);
+			path = NotificationsHomeVC;
+			sourceTree = "<group>";
+		};
+		88ED042524EFFE2100BBCEF6 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				88ED041624EFFD9100BBCEF6 /* NotificationsHomePresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		88ED042624EFFE3300BBCEF6 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				88ED041924EFFD9100BBCEF6 /* NotificationsHomeInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		88ED042724EFFE4100BBCEF6 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				88ED041724EFFD9100BBCEF6 /* NotificationsHomeRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		88ED042824EFFE4A00BBCEF6 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				88ED041824EFFD9100BBCEF6 /* NotificationsHomeProtocols.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		88ED042924EFFE5900BBCEF6 /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				88ED041A24EFFD9100BBCEF6 /* NotificationsHomeLocalization.swift */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
+		88ED042A24F0040900BBCEF6 /* NotificationCell */ = {
+			isa = PBXGroup;
+			children = (
+				88ED042B24F0042600BBCEF6 /* NotificationCell.swift */,
+				88ED042C24F0042600BBCEF6 /* NotificationCell.xib */,
+			);
+			path = NotificationCell;
+			sourceTree = "<group>";
+		};
+		88EDA11C24FADD6B00460B4D /* ServiceResultSkeltonCell */ = {
+			isa = PBXGroup;
+			children = (
+				88EDA11D24FADD9B00460B4D /* ServiceResultSkeltonCell.swift */,
+				88EDA11E24FADD9B00460B4D /* ServiceResultSkeltonCell.xib */,
+			);
+			path = ServiceResultSkeltonCell;
+			sourceTree = "<group>";
+		};
+		88EDA12124FAE3F000460B4D /* ProfileModule */ = {
+			isa = PBXGroup;
+			children = (
+				88EDA13024FAE41700460B4D /* Profile */,
+			);
+			path = ProfileModule;
+			sourceTree = "<group>";
+		};
+		88EDA13024FAE41700460B4D /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				88EDA12224FAE41200460B4D /* ProfileVC.xib */,
+				88EDA12324FAE41200460B4D /* ProfilePresenter.swift */,
+				88EDA12424FAE41200460B4D /* ProfileRouter.swift */,
+				88EDA12524FAE41200460B4D /* ProfileProtocols.swift */,
+				88EDA12624FAE41200460B4D /* ProfileInteractor.swift */,
+				88EDA12724FAE41200460B4D /* ProfileLocalization.swift */,
+				88EDA12824FAE41200460B4D /* ProfileVC.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		88F706B824EE67E0005C2ADB /* PackageDetails */ = {
+			isa = PBXGroup;
+			children = (
+				88F706C824EE683F005C2ADB /* Localization */,
+				88F706CA24EE6867005C2ADB /* Protocol */,
+				88F706CB24EE687E005C2ADB /* Router */,
+				88F706C924EE684A005C2ADB /* Interactor */,
+				88F706CC24EE688C005C2ADB /* Presenter */,
+				88F706C724EE6837005C2ADB /* View */,
+			);
+			path = PackageDetails;
+			sourceTree = "<group>";
+		};
+		88F706C724EE6837005C2ADB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				88F706CD24EE691E005C2ADB /* PackageDetailsVC */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		88F706C824EE683F005C2ADB /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				88F706BE24EE6804005C2ADB /* PackageDetailsLocalization.swift */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
+		88F706C924EE684A005C2ADB /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				88F706BD24EE6804005C2ADB /* PackageDetailsInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		88F706CA24EE6867005C2ADB /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				88F706BC24EE6804005C2ADB /* PackageDetailsProtocols.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		88F706CB24EE687E005C2ADB /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				88F706BB24EE6804005C2ADB /* PackageDetailsRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		88F706CC24EE688C005C2ADB /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				88F706BA24EE6804005C2ADB /* PackageDetailsPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		88F706CD24EE691E005C2ADB /* PackageDetailsVC */ = {
+			isa = PBXGroup;
+			children = (
+				88F706BF24EE6804005C2ADB /* PackageDetailsVC.swift */,
+				88F706B924EE6804005C2ADB /* PackageDetailsVC.xib */,
+			);
+			path = PackageDetailsVC;
+			sourceTree = "<group>";
+		};
+		8C81544724EB21AC00CA30E7 /* ServicesSearch */ = {
+			isa = PBXGroup;
+			children = (
+				8827E95424F5CA2E009C64FB /* ViewModel */,
+				8C81545924EB221B00CA30E7 /* Localization */,
+				8C81545D24EB225300CA30E7 /* Protocols */,
+				8C81545B24EB223900CA30E7 /* Router */,
+				8C81545A24EB222600CA30E7 /* Interactor */,
+				8C81545C24EB224400CA30E7 /* Presenter */,
+				8C81545824EB221400CA30E7 /* View */,
+			);
+			path = ServicesSearch;
+			sourceTree = "<group>";
+		};
+		8C81545824EB221400CA30E7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				88EDA11C24FADD6B00460B4D /* ServiceResultSkeltonCell */,
+				8C81545F24EB326200CA30E7 /* ServiceResultCell */,
+				8C81545E24EB325000CA30E7 /* ServicesSearchVC */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8C81545924EB221B00CA30E7 /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				8C81544E24EB21CA00CA30E7 /* ServicesSearchLocalization.swift */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
+		8C81545A24EB222600CA30E7 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				8C81544D24EB21CA00CA30E7 /* ServicesSearchInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		8C81545B24EB223900CA30E7 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				8C81544B24EB21CA00CA30E7 /* ServicesSearchRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		8C81545C24EB224400CA30E7 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				8C81544A24EB21CA00CA30E7 /* ServicesSearchPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		8C81545D24EB225300CA30E7 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				8C81544C24EB21CA00CA30E7 /* ServicesSearchProtocols.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		8C81545E24EB325000CA30E7 /* ServicesSearchVC */ = {
+			isa = PBXGroup;
+			children = (
+				8C81544F24EB21CA00CA30E7 /* ServicesSearchVC.swift */,
+				8C81544824EB21CA00CA30E7 /* ServicesSearchVC.xib */,
+			);
+			path = ServicesSearchVC;
+			sourceTree = "<group>";
+		};
+		8C81545F24EB326200CA30E7 /* ServiceResultCell */ = {
+			isa = PBXGroup;
+			children = (
+				88EDA11824FADA0D00460B4D /* ServiceResultCell.swift */,
+				88EDA11924FADA0D00460B4D /* ServiceResultCell.xib */,
+			);
+			path = ServiceResultCell;
+			sourceTree = "<group>";
+		};
+		8C843EBB24EA993B0055475E /* ClinicsModule */ = {
+			isa = PBXGroup;
+			children = (
+				88120B5724EF0795004A2381 /* ClinicsHome */,
+				88120B7224EF2C4E004A2381 /* ClinicDetails */,
+				88ED03FD24EFCD7A00BBCEF6 /* ClinicsSearch */,
+			);
+			path = ClinicsModule;
+			sourceTree = "<group>";
+		};
+		8C843EBC24EA99500055475E /* ServicesModule */ = {
+			isa = PBXGroup;
+			children = (
+				8CAB097A24E7E87500D38CDD /* Home */,
+				8CEC77F524E9B7B2000CED1F /* ServiceDetails */,
+				88F706B824EE67E0005C2ADB /* PackageDetails */,
+				8C81544724EB21AC00CA30E7 /* ServicesSearch */,
+			);
+			path = ServicesModule;
+			sourceTree = "<group>";
+		};
 		8C8CB3B524E6B815009679E5 = {
 			isa = PBXGroup;
 			children = (
@@ -106,7 +915,7 @@
 		8C8CB3BF24E6B815009679E5 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8C8CB3BE24E6B815009679E5 /* Seena Patient.app */,
+				8C8CB3BE24E6B815009679E5 /* Seena.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -131,6 +940,10 @@
 				8C8CB3DD24E6BAB2009679E5 /* RootModule */,
 				8C8CB3E224E6C671009679E5 /* SplashModule */,
 				8C8CB41B24E6F974009679E5 /* TabBarModule */,
+				8C843EBC24EA99500055475E /* ServicesModule */,
+				8C843EBB24EA993B0055475E /* ClinicsModule */,
+				88ED041324EFFD6300BBCEF6 /* NotificationsModule */,
+				88EDA12124FAE3F000460B4D /* ProfileModule */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -140,8 +953,8 @@
 			children = (
 				8C8CB3F424E6CF23009679E5 /* Environment */,
 				8C8CB3F124E6CF23009679E5 /* GenaricAPIServices */,
-				8C8CB3F724E6CF23009679E5 /* RemoteServices */,
 				8C8CB3F024E6CF23009679E5 /* LocalServices */,
+				8C8CB3F724E6CF23009679E5 /* RemoteServices */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -166,6 +979,7 @@
 		8C8CB3DA24E6BA50009679E5 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				8CAB099324E808A700D38CDD /* Tajewal Font */,
 				8C8CB3DC24E6BA69009679E5 /* StoryBoards */,
 				8C8CB3DB24E6BA5D009679E5 /* Images */,
 			);
@@ -268,6 +1082,7 @@
 		8C8CB3F724E6CF23009679E5 /* RemoteServices */ = {
 			isa = PBXGroup;
 			children = (
+				88104B8824F2E44000DB5ED9 /* Services */,
 			);
 			path = RemoteServices;
 			sourceTree = "<group>";
@@ -316,6 +1131,7 @@
 		8C8CB41224E6EBEC009679E5 /* CustomUI */ = {
 			isa = PBXGroup;
 			children = (
+				8827E94C24F5A1DB009C64FB /* EmptyStateView */,
 				8C8CB41324E6EBFD009679E5 /* CustomizedTabBar.swift */,
 			);
 			path = CustomUI;
@@ -333,6 +1149,13 @@
 		8C8CB41E24E712FA009679E5 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				8827E95124F5A8C7009C64FB /* RequestParameters */,
+				88104B7C24F2E0F300DB5ED9 /* BaseResponse.swift */,
+				88104B7E24F2E14E00DB5ED9 /* ServerResonse.swift */,
+				88104B8024F2E39100DB5ED9 /* HomeResponse.swift */,
+				88104B8224F2E3AF00DB5ED9 /* Package.swift */,
+				88104B8624F2E3F700DB5ED9 /* Speciality.swift */,
+				88104B8424F2E3BA00DB5ED9 /* Service.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -341,7 +1164,8 @@
 			isa = PBXGroup;
 			children = (
 				8C8CB42024E71353009679E5 /* DesignSystem.swift */,
-				8C8CB42224E71369009679E5 /* Colors.swift */,
+				8CAB099024E806A400D38CDD /* Typography */,
+				8CAB098F24E8069C00D38CDD /* Colors */,
 			);
 			path = DesignSystem;
 			sourceTree = "<group>";
@@ -360,6 +1184,219 @@
 				8C8CB41C24E6F999009679E5 /* HomeTabBarVC.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		8CAB097A24E7E87500D38CDD /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				88104B8F24F2FD2600DB5ED9 /* ViewModel */,
+				8CAB098C24E7F54200D38CDD /* Localization */,
+				8CAB097F24E7E8A700D38CDD /* Protocols */,
+				8CAB097E24E7E8A000D38CDD /* Router */,
+				8CAB097D24E7E89A00D38CDD /* Interactor */,
+				8CAB097C24E7E89000D38CDD /* Presenter */,
+				8CAB097B24E7E88900D38CDD /* View */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		8CAB097B24E7E88900D38CDD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				883D941924F474A1004A3F86 /* PackageSkeltonCell */,
+				883D941424F43B9B004A3F86 /* SpectialitySkeltonCell */,
+				8CAB09AD24E8356000D38CDD /* ServiceCell */,
+				8CAB09A824E8271C00D38CDD /* SpectialityCell */,
+				8CAB09A724E826B700D38CDD /* PackageCell */,
+				8CAB09A624E826AB00D38CDD /* HomeVC */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8CAB097C24E7E89000D38CDD /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				8CAB098624E7F25900D38CDD /* HomePresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		8CAB097D24E7E89A00D38CDD /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				8CAB098424E7F22000D38CDD /* HomeInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		8CAB097E24E7E8A000D38CDD /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				8CAB098224E7E9A900D38CDD /* HomeRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		8CAB097F24E7E8A700D38CDD /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				8CAB098024E7E8C200D38CDD /* HomeProtocols.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		8CAB098C24E7F54200D38CDD /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				8CAB098D24E7F55800D38CDD /* HomeLocalization.swift */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
+		8CAB098F24E8069C00D38CDD /* Colors */ = {
+			isa = PBXGroup;
+			children = (
+				8C8CB42224E71369009679E5 /* Colors.swift */,
+			);
+			path = Colors;
+			sourceTree = "<group>";
+		};
+		8CAB099024E806A400D38CDD /* Typography */ = {
+			isa = PBXGroup;
+			children = (
+				8CAB099124E806C100D38CDD /* Font.swift */,
+				8CAB09A224E80BC600D38CDD /* CustomFontDiscriptor.swift */,
+				8CAB09A424E80C2700D38CDD /* Typography.swift */,
+			);
+			path = Typography;
+			sourceTree = "<group>";
+		};
+		8CAB099324E808A700D38CDD /* Tajewal Font */ = {
+			isa = PBXGroup;
+			children = (
+				8CAB099424E808A700D38CDD /* Tajawal-ExtraBold.ttf */,
+				8CAB099624E808A700D38CDD /* Tajawal-Bold.ttf */,
+				8CAB099824E808A700D38CDD /* Tajawal-Regular.ttf */,
+				8CAB099924E808A700D38CDD /* Tajawal-Medium.ttf */,
+			);
+			name = "Tajewal Font";
+			path = "../../../Slaughter Model/Slaughter Model/Resouces/Tajewal Font";
+			sourceTree = "<group>";
+		};
+		8CAB09A624E826AB00D38CDD /* HomeVC */ = {
+			isa = PBXGroup;
+			children = (
+				8CAB098824E7F2F400D38CDD /* HomeVC.swift */,
+				8CAB098924E7F2F400D38CDD /* HomeVC.xib */,
+			);
+			path = HomeVC;
+			sourceTree = "<group>";
+		};
+		8CAB09A724E826B700D38CDD /* PackageCell */ = {
+			isa = PBXGroup;
+			children = (
+				8CAB09B224E84C6800D38CDD /* PackageCell.swift */,
+				8CAB09B324E84C6800D38CDD /* PackageCell.xib */,
+			);
+			path = PackageCell;
+			sourceTree = "<group>";
+		};
+		8CAB09A824E8271C00D38CDD /* SpectialityCell */ = {
+			isa = PBXGroup;
+			children = (
+				8CAB09A924E8274200D38CDD /* SpectialityCell.swift */,
+				8CAB09AA24E8274200D38CDD /* SpectialityCell.xib */,
+			);
+			path = SpectialityCell;
+			sourceTree = "<group>";
+		};
+		8CAB09AD24E8356000D38CDD /* ServiceCell */ = {
+			isa = PBXGroup;
+			children = (
+				8CAB09AE24E8357E00D38CDD /* ServiceCell.swift */,
+				8CAB09AF24E8357E00D38CDD /* ServiceCell.xib */,
+			);
+			path = ServiceCell;
+			sourceTree = "<group>";
+		};
+		8CEC77F524E9B7B2000CED1F /* ServiceDetails */ = {
+			isa = PBXGroup;
+			children = (
+				8CEC780724E9CC08000CED1F /* Locolization */,
+				8CEC780424E9CB2B000CED1F /* Protocols */,
+				8CEC780124E9BD38000CED1F /* Router */,
+				8CEC77FE24E9BCD9000CED1F /* Interactor */,
+				8CEC77FB24E9BC46000CED1F /* Presenter */,
+				8CEC77F624E9BB13000CED1F /* View */,
+			);
+			path = ServiceDetails;
+			sourceTree = "<group>";
+		};
+		8CEC77F624E9BB13000CED1F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8CEC780B24E9DD5B000CED1F /* ServiceClinicCell */,
+				8CEC780A24E9DC85000CED1F /* ServiceDetailsVC */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8CEC77FB24E9BC46000CED1F /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				8CEC77FC24E9BC5C000CED1F /* ServiceDetailsPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		8CEC77FE24E9BCD9000CED1F /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				8CEC77FF24E9BCED000CED1F /* ServiceDetailsInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		8CEC780124E9BD38000CED1F /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				8CEC780224E9BD68000CED1F /* ServiceDetailsRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		8CEC780424E9CB2B000CED1F /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				8CEC780524E9CB58000CED1F /* ServiceDetailsProtocols.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		8CEC780724E9CC08000CED1F /* Locolization */ = {
+			isa = PBXGroup;
+			children = (
+				8CEC780824E9CC2B000CED1F /* ServiceDetailsLocalizaition.swift */,
+			);
+			path = Locolization;
+			sourceTree = "<group>";
+		};
+		8CEC780A24E9DC85000CED1F /* ServiceDetailsVC */ = {
+			isa = PBXGroup;
+			children = (
+				8CEC77F724E9BB2A000CED1F /* ServiceDetailsVC.swift */,
+				8CEC77F824E9BB2A000CED1F /* ServiceDetailsVC.xib */,
+			);
+			path = ServiceDetailsVC;
+			sourceTree = "<group>";
+		};
+		8CEC780B24E9DD5B000CED1F /* ServiceClinicCell */ = {
+			isa = PBXGroup;
+			children = (
+				8CEC780C24E9DDDB000CED1F /* ServiceClinicCell.swift */,
+				8CEC780D24E9DDDB000CED1F /* ServiceClinicCell.xib */,
+			);
+			path = ServiceClinicCell;
 			sourceTree = "<group>";
 		};
 		E8CA0B891E95ACDF7CCD0B36 /* Frameworks */ = {
@@ -390,7 +1427,7 @@
 			);
 			name = "Seena Patient";
 			productName = "Seena Patient";
-			productReference = 8C8CB3BE24E6B815009679E5 /* Seena Patient.app */;
+			productReference = 8C8CB3BE24E6B815009679E5 /* Seena.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -431,9 +1468,35 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88ED03F324EFA5CF00BBCEF6 /* GalleryCell.xib in Resources */,
+				88EDA12024FADD9B00460B4D /* ServiceResultSkeltonCell.xib in Resources */,
+				88F706C024EE6804005C2ADB /* PackageDetailsVC.xib in Resources */,
 				8C8CB40424E6D3B3009679E5 /* SplashVC.xib in Resources */,
+				8CEC77FA24E9BB2A000CED1F /* ServiceDetailsVC.xib in Resources */,
+				88ED040524EFCD9A00BBCEF6 /* ClinicsSearchVC.xib in Resources */,
+				88120B7A24EF2C66004A2381 /* ClinicDetailsVC.xib in Resources */,
+				8CAB09B524E84C6800D38CDD /* PackageCell.xib in Resources */,
+				8CEC780F24E9DDDB000CED1F /* ServiceClinicCell.xib in Resources */,
+				88EDA12924FAE41200460B4D /* ProfileVC.xib in Resources */,
+				883D941824F44392004A3F86 /* SpectialitySkeltonCell.xib in Resources */,
+				8827E95024F5A264009C64FB /* EmptyStateView.xib in Resources */,
+				8C81545024EB21CA00CA30E7 /* ServicesSearchVC.xib in Resources */,
+				8CAB09B124E8357E00D38CDD /* ServiceCell.xib in Resources */,
+				8CAB098B24E7F2F400D38CDD /* HomeVC.xib in Resources */,
+				88120B7124EF1CC3004A2381 /* ClinicCell.xib in Resources */,
+				88ED041C24EFFD9100BBCEF6 /* NotificationsHomeVC.xib in Resources */,
+				883D941D24F474CA004A3F86 /* PackageSkeltonCell.xib in Resources */,
 				8C8CB3CE24E6B817009679E5 /* LaunchScreen.storyboard in Resources */,
+				8CAB099B24E808A700D38CDD /* Tajawal-ExtraBold.ttf in Resources */,
+				88ED03FC24EFC7B300BBCEF6 /* ClinicsSectionHeaderCell.xib in Resources */,
+				8CAB099D24E808A700D38CDD /* Tajawal-Bold.ttf in Resources */,
+				88120B5F24EF07BE004A2381 /* ClinicsHomeVC.xib in Resources */,
+				8CAB099F24E808A700D38CDD /* Tajawal-Regular.ttf in Resources */,
+				88ED042E24F0042600BBCEF6 /* NotificationCell.xib in Resources */,
 				8C8CB3CB24E6B817009679E5 /* Assets.xcassets in Resources */,
+				8CAB09AC24E8274200D38CDD /* SpectialityCell.xib in Resources */,
+				88EDA11B24FADA0D00460B4D /* ServiceResultCell.xib in Resources */,
+				8CAB09A024E808A700D38CDD /* Tajawal-Medium.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -504,30 +1567,112 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88F706C224EE6804005C2ADB /* PackageDetailsRouter.swift in Sources */,
+				88ED040824EFCD9A00BBCEF6 /* ClinicsSearchProtocols.swift in Sources */,
 				8C8CB3EC24E6CA46009679E5 /* UITableView+Extensions.swift in Sources */,
+				88120B6024EF07BE004A2381 /* ClinicsHomePresenter.swift in Sources */,
+				8CEC780924E9CC2B000CED1F /* ServiceDetailsLocalizaition.swift in Sources */,
+				88ED041F24EFFD9100BBCEF6 /* NotificationsHomeProtocols.swift in Sources */,
+				88104B8124F2E39100DB5ED9 /* HomeResponse.swift in Sources */,
+				88ED041D24EFFD9100BBCEF6 /* NotificationsHomePresenter.swift in Sources */,
+				88104B8E24F2EA8300DB5ED9 /* ServicesRemoteServiceProtocol.swift in Sources */,
+				88120B6124EF07BE004A2381 /* ClinicsHomeRouter.swift in Sources */,
 				8C8CB3E024E6C3F7009679E5 /* RootRouter.swift in Sources */,
+				88120B7B24EF2C66004A2381 /* ClinicDetailsPresenter.swift in Sources */,
+				88120B6324EF07BE004A2381 /* ClinicsHomeInteractor.swift in Sources */,
 				8C8CB3EE24E6CA46009679E5 /* NSObject+Extensions.swift in Sources */,
 				8C8CB3C224E6B815009679E5 /* AppDelegate.swift in Sources */,
+				88120B6424EF07BE004A2381 /* ClinicsHomeLocalization.swift in Sources */,
+				88F706C124EE6804005C2ADB /* PackageDetailsPresenter.swift in Sources */,
 				8C8CB40624E6DA9B009679E5 /* SplashProtocols.swift in Sources */,
+				883D941C24F474CA004A3F86 /* PackageSkeltonCell.swift in Sources */,
+				8C81545224EB21CA00CA30E7 /* ServicesSearchPresenter.swift in Sources */,
+				88EDA12C24FAE41200460B4D /* ProfileProtocols.swift in Sources */,
+				88EDA12A24FAE41200460B4D /* ProfilePresenter.swift in Sources */,
+				88120B8024EF2C66004A2381 /* ClinicDetailsVC.swift in Sources */,
+				88104B8324F2E3AF00DB5ED9 /* Package.swift in Sources */,
 				8C8CB3EA24E6CA46009679E5 /* UICollectionView+Extensions.swift in Sources */,
+				88EDA12B24FAE41200460B4D /* ProfileRouter.swift in Sources */,
+				88120B6524EF07BE004A2381 /* ClinicsHomeVC.swift in Sources */,
+				8CAB098524E7F22000D38CDD /* HomeInteractor.swift in Sources */,
+				88104B8724F2E3F700DB5ED9 /* Speciality.swift in Sources */,
+				88120B6224EF07BE004A2381 /* ClinicsHomeProtocols.swift in Sources */,
+				8CEC77F924E9BB2A000CED1F /* ServiceDetailsVC.swift in Sources */,
+				8CAB098724E7F25900D38CDD /* HomePresenter.swift in Sources */,
+				88EDA11F24FADD9B00460B4D /* ServiceResultSkeltonCell.swift in Sources */,
+				88104B7D24F2E0F300DB5ED9 /* BaseResponse.swift in Sources */,
+				88ED041E24EFFD9100BBCEF6 /* NotificationsHomeRouter.swift in Sources */,
 				8C8CB3ED24E6CA46009679E5 /* String+Extensions.swift in Sources */,
 				8C8CB41424E6EBFD009679E5 /* CustomizedTabBar.swift in Sources */,
+				88EDA11A24FADA0D00460B4D /* ServiceResultCell.swift in Sources */,
+				8CAB09A324E80BC600D38CDD /* CustomFontDiscriptor.swift in Sources */,
 				8C8CB40F24E6E53A009679E5 /* SplashInteractor.swift in Sources */,
+				88104B9124F2FD3600DB5ED9 /* PackageViewModel.swift in Sources */,
+				8C81545624EB21CA00CA30E7 /* ServicesSearchLocalization.swift in Sources */,
 				8C8CB3EF24E6CA46009679E5 /* UIApplication+Extensions.swift in Sources */,
 				8C8CB42324E71369009679E5 /* Colors.swift in Sources */,
 				8C8CB3FE24E6CF23009679E5 /* EnvironmentProtocol.swift in Sources */,
 				8CAB097924E7E6CB00D38CDD /* UIViewContorller+Extensions.swift in Sources */,
+				8CEC780E24E9DDDB000CED1F /* ServiceClinicCell.swift in Sources */,
 				8C8CB40324E6D3B3009679E5 /* SplashVC.swift in Sources */,
+				88120B7024EF1CC3004A2381 /* ClinicCell.swift in Sources */,
+				88ED040624EFCD9A00BBCEF6 /* ClinicsSearchPresenter.swift in Sources */,
+				88ED042224EFFD9100BBCEF6 /* NotificationsHomeVC.swift in Sources */,
+				8CAB09B024E8357E00D38CDD /* ServiceCell.swift in Sources */,
+				8CAB09AB24E8274200D38CDD /* SpectialityCell.swift in Sources */,
+				88104B9324F3023B00DB5ED9 /* ServiceViewModel.swift in Sources */,
+				88104B7F24F2E14E00DB5ED9 /* ServerResonse.swift in Sources */,
+				88ED03F224EFA5CF00BBCEF6 /* GalleryCell.swift in Sources */,
 				8CAB097524E7DDED00D38CDD /* UIView+Extensions.swift in Sources */,
+				88F706C524EE6804005C2ADB /* PackageDetailsLocalization.swift in Sources */,
+				88EDA12F24FAE41200460B4D /* ProfileVC.swift in Sources */,
+				8CEC780324E9BD68000CED1F /* ServiceDetailsRouter.swift in Sources */,
+				8CEC780024E9BCED000CED1F /* ServiceDetailsInteractor.swift in Sources */,
 				8C8CB41124E6E651009679E5 /* SplashPresenter.swift in Sources */,
+				8CAB098124E7E8C200D38CDD /* HomeProtocols.swift in Sources */,
+				88EDA12D24FAE41200460B4D /* ProfileInteractor.swift in Sources */,
+				88ED03FB24EFC7B300BBCEF6 /* ClinicsSectionHeaderCell.swift in Sources */,
+				8C81545724EB21CA00CA30E7 /* ServicesSearchVC.swift in Sources */,
+				8CAB098E24E7F55800D38CDD /* HomeLocalization.swift in Sources */,
+				88F706C424EE6804005C2ADB /* PackageDetailsInteractor.swift in Sources */,
+				88F706C624EE6804005C2ADB /* PackageDetailsVC.swift in Sources */,
+				88104B8C24F2E9D200DB5ED9 /* ServicesRemoteSerivce.swift in Sources */,
+				88ED040A24EFCD9A00BBCEF6 /* ClinicsSearchLocalization.swift in Sources */,
+				88ED040924EFCD9A00BBCEF6 /* ClinicsSearchInteractor.swift in Sources */,
+				8C81545424EB21CA00CA30E7 /* ServicesSearchProtocols.swift in Sources */,
+				883D941724F44392004A3F86 /* SpectialitySkeltonCell.swift in Sources */,
 				8C8CB41D24E6F999009679E5 /* HomeTabBarVC.swift in Sources */,
 				8C8CB40D24E6E283009679E5 /* SplashRouter.swift in Sources */,
+				88ED042124EFFD9100BBCEF6 /* NotificationsHomeLocalization.swift in Sources */,
+				88104B8524F2E3BA00DB5ED9 /* Service.swift in Sources */,
+				88ED040724EFCD9A00BBCEF6 /* ClinicsSearchRouter.swift in Sources */,
+				88F706C324EE6804005C2ADB /* PackageDetailsProtocols.swift in Sources */,
+				88120B7E24EF2C66004A2381 /* ClinicDetailsInteractor.swift in Sources */,
+				8CAB098324E7E9A900D38CDD /* HomeRouter.swift in Sources */,
+				8827E94E24F5A226009C64FB /* EmptyStateView.swift in Sources */,
+				88120B7F24EF2C66004A2381 /* ClinicDetailsLocalization.swift in Sources */,
+				8CEC77FD24E9BC5C000CED1F /* ServiceDetailsPresenter.swift in Sources */,
 				8CAB097124E7CEA700D38CDD /* TabBarLocalization.swift in Sources */,
+				8C81545524EB21CA00CA30E7 /* ServicesSearchInteractor.swift in Sources */,
+				88ED042D24F0042600BBCEF6 /* NotificationCell.swift in Sources */,
+				88120B7C24EF2C66004A2381 /* ClinicDetailsRouter.swift in Sources */,
+				88104B8A24F2E4DB00DB5ED9 /* ServicesEndPoint.swift in Sources */,
+				88120B7D24EF2C66004A2381 /* ClinicDetailsProtocols.swift in Sources */,
+				8827E95324F5A8F2009C64FB /* ServicesListParameters.swift in Sources */,
+				8CAB099224E806C100D38CDD /* Font.swift in Sources */,
+				8CAB098A24E7F2F400D38CDD /* HomeVC.swift in Sources */,
 				8C8CB3FD24E6CF23009679E5 /* Environment.swift in Sources */,
+				88ED040B24EFCD9A00BBCEF6 /* ClinicsSearchVC.swift in Sources */,
 				8C8CB42124E71353009679E5 /* DesignSystem.swift in Sources */,
 				8C8CB3FB24E6CF23009679E5 /* APIService.swift in Sources */,
+				8CAB09B424E84C6800D38CDD /* PackageCell.swift in Sources */,
+				88ED042024EFFD9100BBCEF6 /* NotificationsHomeInteractor.swift in Sources */,
 				8C8CB3EB24E6CA46009679E5 /* UINavigationController+Extensions.swift in Sources */,
+				8CAB09A524E80C2700D38CDD /* Typography.swift in Sources */,
+				88EDA12E24FAE41200460B4D /* ProfileLocalization.swift in Sources */,
 				8C8CB3FC24E6CF23009679E5 /* RemoteServiceType.swift in Sources */,
+				8C81545324EB21CA00CA30E7 /* ServicesSearchRouter.swift in Sources */,
+				8CEC780624E9CB58000CED1F /* ServiceDetailsProtocols.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -672,8 +1817,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.RKAnjel.Seena-Patient";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.RKAnjel.Seena-Patients";
+				PRODUCT_NAME = Seena;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -692,8 +1837,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.RKAnjel.Seena-Patient";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.RKAnjel.Seena-Patients";
+				PRODUCT_NAME = Seena;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
