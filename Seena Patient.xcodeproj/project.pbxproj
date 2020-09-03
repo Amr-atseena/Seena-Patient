@@ -42,6 +42,8 @@
 		883D941824F44392004A3F86 /* SpectialitySkeltonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 883D941624F44392004A3F86 /* SpectialitySkeltonCell.xib */; };
 		883D941C24F474CA004A3F86 /* PackageSkeltonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883D941A24F474CA004A3F86 /* PackageSkeltonCell.swift */; };
 		883D941D24F474CA004A3F86 /* PackageSkeltonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 883D941B24F474CA004A3F86 /* PackageSkeltonCell.xib */; };
+		8885BB0F250150C5000D7BD5 /* Clinic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8885BB0E250150C5000D7BD5 /* Clinic.swift */; };
+		8885BB11250150F3000D7BD5 /* Gallery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8885BB10250150F3000D7BD5 /* Gallery.swift */; };
 		88A772DA24FC434400228FF2 /* SeenaUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A772D924FC434400228FF2 /* SeenaUnitTests.swift */; };
 		88ED03F224EFA5CF00BBCEF6 /* GalleryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88ED03F024EFA5CE00BBCEF6 /* GalleryCell.swift */; };
 		88ED03F324EFA5CF00BBCEF6 /* GalleryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88ED03F124EFA5CE00BBCEF6 /* GalleryCell.xib */; };
@@ -191,6 +193,8 @@
 		883D941624F44392004A3F86 /* SpectialitySkeltonCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SpectialitySkeltonCell.xib; sourceTree = "<group>"; };
 		883D941A24F474CA004A3F86 /* PackageSkeltonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageSkeltonCell.swift; sourceTree = "<group>"; };
 		883D941B24F474CA004A3F86 /* PackageSkeltonCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PackageSkeltonCell.xib; sourceTree = "<group>"; };
+		8885BB0E250150C5000D7BD5 /* Clinic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clinic.swift; sourceTree = "<group>"; };
+		8885BB10250150F3000D7BD5 /* Gallery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gallery.swift; sourceTree = "<group>"; };
 		88A772D724FC434400228FF2 /* SeenaUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SeenaUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		88A772D924FC434400228FF2 /* SeenaUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeenaUnitTests.swift; sourceTree = "<group>"; };
 		88A772DB24FC434400228FF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -1188,6 +1192,8 @@
 				88104B8224F2E3AF00DB5ED9 /* Package.swift */,
 				88104B8624F2E3F700DB5ED9 /* Speciality.swift */,
 				88104B8424F2E3BA00DB5ED9 /* Service.swift */,
+				8885BB0E250150C5000D7BD5 /* Clinic.swift */,
+				8885BB10250150F3000D7BD5 /* Gallery.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -1697,9 +1703,11 @@
 				88F706C524EE6804005C2ADB /* PackageDetailsLocalization.swift in Sources */,
 				88EDA12F24FAE41200460B4D /* ProfileVC.swift in Sources */,
 				8CEC780324E9BD68000CED1F /* ServiceDetailsRouter.swift in Sources */,
+				8885BB0F250150C5000D7BD5 /* Clinic.swift in Sources */,
 				8CEC780024E9BCED000CED1F /* ServiceDetailsInteractor.swift in Sources */,
 				8C8CB41124E6E651009679E5 /* SplashPresenter.swift in Sources */,
 				8CAB098124E7E8C200D38CDD /* HomeProtocols.swift in Sources */,
+				8885BB11250150F3000D7BD5 /* Gallery.swift in Sources */,
 				88EDA12D24FAE41200460B4D /* ProfileInteractor.swift in Sources */,
 				88ED03FB24EFC7B300BBCEF6 /* ClinicsSectionHeaderCell.swift in Sources */,
 				8C81545724EB21CA00CA30E7 /* ServicesSearchVC.swift in Sources */,

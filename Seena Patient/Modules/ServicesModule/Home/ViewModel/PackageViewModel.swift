@@ -21,4 +21,3 @@ struct PackageViewModel {
         self.price = String(package.price)
     }
 }
-
