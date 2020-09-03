@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import SkeletonView
 class ServiceDetailsVC: UIViewController, ServiceDetailsViewProtocol {
     // MARK: - Outlets
     @IBOutlet var serviceImage: UIImageView!
@@ -59,12 +59,22 @@ class ServiceDetailsVC: UIViewController, ServiceDetailsViewProtocol {
         clinicsCollectionView.delegate = self
         clinicsCollectionView.dataSource = self
         clinicsCollectionView.register(cellWithClass: ServiceClinicCell.self)
+        clinicsCollectionView.register(cellWithClass: ServiceResultSkeltonCell.self)
     }
     func updateUI(withService service: ServiceViewModel) {
         self.serviceNameLabel.text = service.serviceName
         self.serviceImage.kf.setImage(with: URL(string: service.serviceImage))
         self.serviceDetailsLabel.text = service.seriveDetails
         self.rangePriceLabel.text = service.servicePrice
+    }
+    func reloadClinics() {
+        self.clinicsCollectionView.reloadData()
+    }
+    func showSkelton() {
+        self.clinicsCollectionView.showSkeleton()
+    }
+    func hideSkelton() {
+        self.clinicsCollectionView.hideSkeleton()
     }
     // MARK: - Actions
     @IBAction private func didTapShareButton(_ sender: UIButton) {
@@ -86,12 +96,14 @@ extension ServiceDetailsVC: UICollectionViewDataSource {
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withClass: ServiceClinicCell.self, for: indexPath)
+        presenter.config(clinicCell: cell, atIndex: indexPath.item)
         return cell
     }
 }
 // MARK: - clinicsCollectionView Delegate Implementation
 extension ServiceDetailsVC: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        presenter.didSelectClinic(atIndex: indexPath.item)
     }
 }
 
@@ -109,6 +121,14 @@ extension ServiceDetailsVC: UICollectionViewDelegateFlowLayout {
         return 10.0
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
+        return UIEdgeInsets(top: 0, left: 15, bottom: 0, right: 15)
+    }
+}
+extension ServiceDetailsVC: SkeletonCollectionViewDataSource {
+    func collectionSkeletonView(_ skeletonView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 4
+    }
+    func collectionSkeletonView(_ skeletonView: UICollectionView, cellIdentifierForItemAt indexPath: IndexPath) -> ReusableCellIdentifier {
+        return ServiceResultSkeltonCell.className
     }
 }

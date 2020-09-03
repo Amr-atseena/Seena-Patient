@@ -8,8 +8,8 @@
 
 import Foundation
 
-protocol ServicesRemoteServiceProtocol {
+protocol ServicesRemoteDataManagerProtocol {
     func fetchServicesHome(completionHandler:  @escaping (_ result: Result<Codable, Error>) -> Void)
     func fetchServicesList(parms: ServicesListParameters, completionHandler:  @escaping (_ result: Result<Codable, Error>) -> Void)
-    func fetchServicesDetails(forServiceId serviceId: Int, completionHandler:  @escaping (_ result: Result<Codable, Error>) -> Void)
+    func retriveServicesDetails(atServiceId serviceId: Int, completionHandler:  @escaping (_ result: Result<Codable, Error>) -> Void)
 }

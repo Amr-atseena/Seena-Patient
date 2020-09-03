@@ -11,9 +11,9 @@ import Foundation
 class ServicesSearchInteractor: ServicesSearchInputInteractorProtocol {
     // MARK: - Attributes
     weak var presenter: ServicesSearchOutputInteractorProtocol?
-    var remoteDataServices: ServicesRemoteService?
+    var remoteDataServices: ServicesRemoteDataManager?
     // MARK: - Init
-    init(remoteDataServices: ServicesRemoteService) {
+    init(remoteDataServices: ServicesRemoteDataManager) {
         self.remoteDataServices = remoteDataServices
     }
     // MARK: - Methods

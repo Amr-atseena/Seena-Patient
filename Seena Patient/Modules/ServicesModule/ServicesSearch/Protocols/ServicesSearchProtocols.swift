@@ -22,7 +22,7 @@ protocol ServicesSearchRouterProtocol {
 // MARK: - ServicesSearch Interactor
 protocol ServicesSearchInputInteractorProtocol: class {
     var presenter: ServicesSearchOutputInteractorProtocol? { get set }
-    var remoteDataServices: ServicesRemoteService? { get set }
+    var remoteDataServices: ServicesRemoteDataManager? { get set }
     // Presenter -> Interactor
     func fetchServicesList(forKeyword keyword: String, atPage page: Int)
 }

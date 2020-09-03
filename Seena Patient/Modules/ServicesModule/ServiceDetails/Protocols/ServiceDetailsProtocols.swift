@@ -11,7 +11,7 @@ import UIKit
 
 // MARK: - ServiceDetails Router
 enum ServiceDetailsRoute {
-    case clincDetails
+    case clincDetails(clinic: Clinic)
     case home
 }
 protocol ServiceDetailsRouterProtocol: class {
@@ -23,9 +23,12 @@ protocol ServiceDetailsRouterProtocol: class {
 protocol ServiceDetailsInputInteractorProtocol: class {
     var presenter: ServiceDetailsOutputInteractorProtocol? { get set }
     // Presenter -> Interactor
+    func retriveServiceDetails(atServiceId serviceId: Int)
 }
 protocol ServiceDetailsOutputInteractorProtocol: class {
     // Interactor -> Presenter
+    func onRetriveDataSuccess(withService service: Service)
+    func onRetriveDataFail()
 }
 // MARK: - ServiceDetails Presenter
 protocol ServiceDetailsPresenterProtocol: class {
@@ -37,6 +40,8 @@ protocol ServiceDetailsPresenterProtocol: class {
     func viewDidLoad()
     func shareButtonTapped()
     func backButtonTapped()
+    func config(clinicCell cell: ClinicCellView, atIndex index: Int)
+    func didSelectClinic(atIndex index: Int)
     var numberOfClinics: Int { get }
 }
 // MARK: - ServiceDetails View
@@ -47,4 +52,11 @@ protocol ServiceDetailsViewProtocol: class {
     func setupUI()
     func setupClinicsCollectionView()
     func updateUI(withService service: ServiceViewModel)
+    func reloadClinics()
+    func showSkelton()
+    func hideSkelton()
+}
+// MARK: - ClinicCell View
+protocol ClinicCellView {
+    func setClinic(_ clinic: ClinicViewModel)
 }

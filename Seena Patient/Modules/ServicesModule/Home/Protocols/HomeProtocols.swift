@@ -24,7 +24,7 @@ protocol HomeRouterProtocol: class {
 // MARK: - Home Interactor
 protocol HomeInputInteractorProtocol: class {
     var presenter: HomeOutputInteractorProtocol? { get set }
-    var remoteDataServices: ServicesRemoteService? { get set }
+    var remoteDataServices: ServicesRemoteDataManager? { get set }
     // Presenter -> Interactor
     func fetchHomeServices()
 }

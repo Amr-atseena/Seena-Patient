@@ -14,7 +14,7 @@ class ServicesSearchRouter: ServicesSearchRouterProtocol {
     // MARK: - Assemble
     static func assembleModule() -> UIViewController {
         let router = ServicesSearchRouter()
-        let remoteServices = ServicesRemoteService()
+        let remoteServices = ServicesRemoteDataManager()
         let interactor = ServicesSearchInteractor(remoteDataServices: remoteServices)
         let view = ServicesSearchVC()
         let presenter = ServicesSearchPresenter(view: view, interactor: interactor, router: router)
