@@ -17,7 +17,7 @@ protocol ClinicDetailsRouterProtocol {
     // Presenter -> Router
     var viewController: UIViewController? { get set }
     func go(to router: ClinicDetailsRoute)
-    static func assembleModule() -> UIViewController
+    static func assembleModule(withClinic clinic: Clinic) -> UIViewController
 }
 // MARK: - ClinicDetails Interactor
 protocol ClinicDetailsInputInteractorProtocol: class {
@@ -39,6 +39,8 @@ protocol ClinicDetailsPresenterProtocol: class {
     func backButtonTapped()
     func galleryCollectionView(selectedAtIndex index: Int)
     func serviesCollectionView(selectedAtIndex index: Int)
+    func config(serviceCell cell: ServiceCellView, atIndex index: Int)
+    func config(galleryCell cell: ServiceCellView, atIndex index: Int)
     var numberOfImages: Int { get }
     var numberOfServices: Int { get }
 }
@@ -49,4 +51,7 @@ protocol ClinicDetailsViewProtocol: class {
     func setupUI()
     func setupGalleryCollectionView()
     func setupServicesCollectionView()
+    func updateUI(withClinic clinic: ClinicViewModel)
+    func reloadGallery()
+    func reloadServices()
 }

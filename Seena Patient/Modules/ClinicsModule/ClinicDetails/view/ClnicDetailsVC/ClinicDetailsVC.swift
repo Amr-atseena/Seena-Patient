@@ -65,6 +65,17 @@ class ClinicDetailsVC: UIViewController, ClinicDetailsViewProtocol {
         servicesCollectionView.dataSource = self
         servicesCollectionView.register(cellWithClass: ServiceCell.self)
     }
+    func updateUI(withClinic clinic: ClinicViewModel) {
+        clinicNameLabel.text = clinic.name
+        clinicImage.kf.setImage(with: URL(string: clinic.image))
+        clinicAddressLabel.text = clinic.address
+    }
+    func reloadGallery() {
+        imageGalleryCollectionView.reloadData()
+    }
+    func reloadServices() {
+        servicesCollectionView.reloadData()
+    }
     // MARK: - Actions
     @IBAction private func didTapCallButton(_ sender: UIButton) {
         presenter.callButtonTapped()

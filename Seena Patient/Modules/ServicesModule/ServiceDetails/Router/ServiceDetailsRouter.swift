@@ -33,6 +33,6 @@ class ServiceDetailsRouter: ServiceDetailsRouterProtocol {
         }
     }
     private func navigateToClinicDetails(_ clinic: Clinic) {
-        viewController?.navigationController?.pushViewController(ClinicDetailsRouter.assembleModule(), animated: true)
+        viewController?.navigationController?.pushViewController(ClinicDetailsRouter.assembleModule(withClinic: clinic), animated: true)
     }
 }

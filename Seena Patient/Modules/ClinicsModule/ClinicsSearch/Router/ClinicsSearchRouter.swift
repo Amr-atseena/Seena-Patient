@@ -35,6 +35,6 @@ class ClinicsSearchRouter: ClinicsSearchRouterProtocol {
         viewController?.navigationController?.popViewController(animated: true)
     }
     private func naviagateToClinics() {
-        viewController?.navigationController?.pushViewController(ClinicDetailsRouter.assembleModule(), animated: true)
+        viewController?.navigationController?.pushViewController(ClinicDetailsRouter.assembleModule(withClinic: Clinic(id: 0, image: "", phone: "", name: "", address: "", gallery: [], services: [])), animated: true)
     }
 }

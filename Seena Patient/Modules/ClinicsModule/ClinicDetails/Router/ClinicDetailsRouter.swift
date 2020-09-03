@@ -12,11 +12,11 @@ class ClinicDetailsRouter: ClinicDetailsRouterProtocol {
     // MARK: - Attributes
     weak var viewController: UIViewController?
     // MARK: - Assemble
-    static func assembleModule() -> UIViewController {
+    static func assembleModule(withClinic clinic: Clinic) -> UIViewController {
         let router = ClinicDetailsRouter()
         let interactor = ClinicDetailsInteractor()
         let view = ClinicDetailsVC()
-        let presenter = ClinicDetailsPresenter(view: view, interactor: interactor, router: router)
+        let presenter = ClinicDetailsPresenter(view: view, interactor: interactor, router: router, clinic: clinic)
         router.viewController = view
         interactor.presenter = presenter
         view.presenter = presenter
