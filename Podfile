@@ -12,12 +12,12 @@ target 'Seena Patient' do
   pod 'IBAnimatable'
   pod 'Moya'
   pod 'IQKeyboardManagerSwift'
+  pod 'MOLH'
   pod 'Kingfisher', '~> 5.0'
   pod 'UIScrollView-InfiniteScroll', '~> 1.0.0'
   pod 'Firebase/Analytics'
   pod 'Firebase/Crashlytics'
   pod "SkeletonView"
-  pod 'MOLH'
 end
 
 post_install do |installer|

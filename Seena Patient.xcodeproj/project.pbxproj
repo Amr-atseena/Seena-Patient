@@ -42,6 +42,7 @@
 		883D941824F44392004A3F86 /* SpectialitySkeltonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 883D941624F44392004A3F86 /* SpectialitySkeltonCell.xib */; };
 		883D941C24F474CA004A3F86 /* PackageSkeltonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883D941A24F474CA004A3F86 /* PackageSkeltonCell.swift */; };
 		883D941D24F474CA004A3F86 /* PackageSkeltonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 883D941B24F474CA004A3F86 /* PackageSkeltonCell.xib */; };
+		88A772DA24FC434400228FF2 /* SeenaUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A772D924FC434400228FF2 /* SeenaUnitTests.swift */; };
 		88ED03F224EFA5CF00BBCEF6 /* GalleryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88ED03F024EFA5CE00BBCEF6 /* GalleryCell.swift */; };
 		88ED03F324EFA5CF00BBCEF6 /* GalleryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88ED03F124EFA5CE00BBCEF6 /* GalleryCell.xib */; };
 		88ED03FB24EFC7B300BBCEF6 /* ClinicsSectionHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88ED03F924EFC7B200BBCEF6 /* ClinicsSectionHeaderCell.swift */; };
@@ -145,6 +146,16 @@
 		8CEC780F24E9DDDB000CED1F /* ServiceClinicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CEC780D24E9DDDB000CED1F /* ServiceClinicCell.xib */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		88A772DC24FC434400228FF2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8C8CB3B624E6B815009679E5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8C8CB3BD24E6B815009679E5;
+			remoteInfo = "Seena Patient";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		88104B7C24F2E0F300DB5ED9 /* BaseResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseResponse.swift; sourceTree = "<group>"; };
 		88104B7E24F2E14E00DB5ED9 /* ServerResonse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerResonse.swift; sourceTree = "<group>"; };
@@ -180,6 +191,9 @@
 		883D941624F44392004A3F86 /* SpectialitySkeltonCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SpectialitySkeltonCell.xib; sourceTree = "<group>"; };
 		883D941A24F474CA004A3F86 /* PackageSkeltonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageSkeltonCell.swift; sourceTree = "<group>"; };
 		883D941B24F474CA004A3F86 /* PackageSkeltonCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PackageSkeltonCell.xib; sourceTree = "<group>"; };
+		88A772D724FC434400228FF2 /* SeenaUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SeenaUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		88A772D924FC434400228FF2 /* SeenaUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeenaUnitTests.swift; sourceTree = "<group>"; };
+		88A772DB24FC434400228FF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		88ED03F024EFA5CE00BBCEF6 /* GalleryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryCell.swift; sourceTree = "<group>"; };
 		88ED03F124EFA5CE00BBCEF6 /* GalleryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GalleryCell.xib; sourceTree = "<group>"; };
 		88ED03F924EFC7B200BBCEF6 /* ClinicsSectionHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicsSectionHeaderCell.swift; sourceTree = "<group>"; };
@@ -289,6 +303,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		88A772D424FC434400228FF2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8C8CB3BB24E6B815009679E5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -462,6 +483,15 @@
 				883D941B24F474CA004A3F86 /* PackageSkeltonCell.xib */,
 			);
 			path = PackageSkeltonCell;
+			sourceTree = "<group>";
+		};
+		88A772D824FC434400228FF2 /* SeenaUnitTests */ = {
+			isa = PBXGroup;
+			children = (
+				88A772D924FC434400228FF2 /* SeenaUnitTests.swift */,
+				88A772DB24FC434400228FF2 /* Info.plist */,
+			);
+			path = SeenaUnitTests;
 			sourceTree = "<group>";
 		};
 		88ED03E824EF9BB800BBCEF6 /* view */ = {
@@ -906,6 +936,7 @@
 			isa = PBXGroup;
 			children = (
 				8C8CB3C024E6B815009679E5 /* Seena Patient */,
+				88A772D824FC434400228FF2 /* SeenaUnitTests */,
 				8C8CB3BF24E6B815009679E5 /* Products */,
 				3288411462DA13A346952D9E /* Pods */,
 				E8CA0B891E95ACDF7CCD0B36 /* Frameworks */,
@@ -916,6 +947,7 @@
 			isa = PBXGroup;
 			children = (
 				8C8CB3BE24E6B815009679E5 /* Seena.app */,
+				88A772D724FC434400228FF2 /* SeenaUnitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1410,6 +1442,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		88A772D624FC434400228FF2 /* SeenaUnitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 88A772DE24FC434400228FF2 /* Build configuration list for PBXNativeTarget "SeenaUnitTests" */;
+			buildPhases = (
+				88A772D324FC434400228FF2 /* Sources */,
+				88A772D424FC434400228FF2 /* Frameworks */,
+				88A772D524FC434400228FF2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				88A772DD24FC434400228FF2 /* PBXTargetDependency */,
+			);
+			name = SeenaUnitTests;
+			productName = SeenaUnitTests;
+			productReference = 88A772D724FC434400228FF2 /* SeenaUnitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		8C8CB3BD24E6B815009679E5 /* Seena Patient */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8C8CB3D224E6B817009679E5 /* Build configuration list for PBXNativeTarget "Seena Patient" */;
@@ -1436,10 +1486,14 @@
 		8C8CB3B624E6B815009679E5 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1150;
+				LastSwiftUpdateCheck = 1160;
 				LastUpgradeCheck = 1150;
 				ORGANIZATIONNAME = RKAnjel;
 				TargetAttributes = {
+					88A772D624FC434400228FF2 = {
+						CreatedOnToolsVersion = 11.6;
+						TestTargetID = 8C8CB3BD24E6B815009679E5;
+					};
 					8C8CB3BD24E6B815009679E5 = {
 						CreatedOnToolsVersion = 11.5;
 					};
@@ -1459,11 +1513,19 @@
 			projectRoot = "";
 			targets = (
 				8C8CB3BD24E6B815009679E5 /* Seena Patient */,
+				88A772D624FC434400228FF2 /* SeenaUnitTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		88A772D524FC434400228FF2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8C8CB3BC24E6B815009679E5 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1563,6 +1625,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		88A772D324FC434400228FF2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				88A772DA24FC434400228FF2 /* SeenaUnitTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8C8CB3BA24E6B815009679E5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1678,6 +1748,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		88A772DD24FC434400228FF2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8C8CB3BD24E6B815009679E5 /* Seena Patient */;
+			targetProxy = 88A772DC24FC434400228FF2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		8C8CB3CC24E6B817009679E5 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -1690,6 +1768,48 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		88A772DF24FC434400228FF2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LL84DY2BWT;
+				INFOPLIST_FILE = SeenaUnitTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.RkAnjel.SeenaUnitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Seena.app/Seena";
+			};
+			name = Debug;
+		};
+		88A772E024FC434400228FF2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LL84DY2BWT;
+				INFOPLIST_FILE = SeenaUnitTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.RkAnjel.SeenaUnitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Seena.app/Seena";
+			};
+			name = Release;
+		};
 		8C8CB3D024E6B817009679E5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1847,6 +1967,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		88A772DE24FC434400228FF2 /* Build configuration list for PBXNativeTarget "SeenaUnitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				88A772DF24FC434400228FF2 /* Debug */,
+				88A772E024FC434400228FF2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		8C8CB3B924E6B815009679E5 /* Build configuration list for PBXProject "Seena Patient" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

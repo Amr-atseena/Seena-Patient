@@ -28,6 +28,26 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "88A772C824FC428B00228FF2"
+               BuildableName = "SeenaTests.xctest"
+               BlueprintName = "SeenaTests"
+               ReferencedContainer = "container:Seena Patient.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "88A772D624FC434400228FF2"
+               BuildableName = "SeenaUnitTests.xctest"
+               BlueprintName = "SeenaUnitTests"
+               ReferencedContainer = "container:Seena Patient.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
