@@ -58,6 +58,8 @@ protocol ClinicDetailsViewProtocol: class {
     func updateUI(withClinic clinic: ClinicViewModel)
     func reloadGallery()
     func reloadServices()
+    func showSkelton()
+    func hideSkeleton()
 }
 // MARK: - GalleryCell View
 protocol GalleryCellProtocol: class {

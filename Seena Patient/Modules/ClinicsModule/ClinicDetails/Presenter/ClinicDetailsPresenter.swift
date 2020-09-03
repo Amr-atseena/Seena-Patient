@@ -52,6 +52,7 @@ class ClinicDetailsPresenter: ClinicDetailsPresenterProtocol {
         view?.setupGalleryCollectionView()
         view?.setupServicesCollectionView()
         view?.updateUI(withClinic: ClinicViewModel(clinic: clinic))
+        view?.showSkelton()
         interactor?.retriveClinicDetails(atClinicId: clinic.id)
     }
     func callButtonTapped() {
@@ -78,7 +79,9 @@ class ClinicDetailsPresenter: ClinicDetailsPresenterProtocol {
 extension ClinicDetailsPresenter: ClinicDetailsOutputInteractorProtocol {
     func onRetriveClinicSuccess(_ clinic: Clinic) {
         self.clinic = clinic
+        view?.hideSkeleton()
     }
     func onRetriveDataFail() {
+        view?.hideSkeleton()
     }
 }

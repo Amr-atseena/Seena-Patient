@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import SkeletonView
 class ClinicDetailsVC: UIViewController, ClinicDetailsViewProtocol {
     // MARK: - Outlets
     @IBOutlet private var clinicImage: UIImageView!
@@ -59,11 +59,13 @@ class ClinicDetailsVC: UIViewController, ClinicDetailsViewProtocol {
         imageGalleryCollectionView.dataSource = self
         imageGalleryCollectionView.delegate = self
         imageGalleryCollectionView.register(cellWithClass: GalleryCell.self)
+        imageGalleryCollectionView.register(cellWithClass: ServiceResultSkeltonCell.self)
     }
     func setupServicesCollectionView() {
         servicesCollectionView.delegate = self
         servicesCollectionView.dataSource = self
         servicesCollectionView.register(cellWithClass: ServiceCell.self)
+        servicesCollectionView.register(cellWithClass: ServiceResultSkeltonCell.self)
     }
     func updateUI(withClinic clinic: ClinicViewModel) {
         clinicNameLabel.text = clinic.name
@@ -75,6 +77,14 @@ class ClinicDetailsVC: UIViewController, ClinicDetailsViewProtocol {
     }
     func reloadServices() {
         servicesCollectionView.reloadData()
+    }
+    func showSkelton() {
+        self.servicesCollectionView.showGradientSkeleton()
+        self.imageGalleryCollectionView.showGradientSkeleton()
+    }
+    func hideSkeleton() {
+        self.servicesCollectionView.hideSkeleton()
+        self.imageGalleryCollectionView.hideSkeleton()
     }
     // MARK: - Actions
     @IBAction private func didTapCallButton(_ sender: UIButton) {
@@ -135,5 +145,14 @@ extension ClinicDetailsVC: UICollectionViewDelegateFlowLayout {
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
+    }
+}
+// MARK: -  SkeletonCollectionView DataSource Implementation
+extension ClinicDetailsVC: SkeletonCollectionViewDataSource {
+    func collectionSkeletonView(_ skeletonView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 4
+    }
+    func collectionSkeletonView(_ skeletonView: UICollectionView, cellIdentifierForItemAt indexPath: IndexPath) -> ReusableCellIdentifier {
+        return ServiceResultSkeltonCell.className
     }
 }
