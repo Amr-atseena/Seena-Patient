@@ -15,7 +15,9 @@ class SplashRouter: SplashRouterProtocol {
     // MARK: - Assemble
     static func assembleModule() -> UIViewController {
         let view = SplashVC()
-        let interactor = SplashInteractor()
+        let localDataManager = SplashLocalDataManager()
+        let remoteDataManager = SplashRemoteDataManager()
+        let interactor = SplashInteractor(localDataManager: localDataManager, remoteDataManager: remoteDataManager)
         let router = SplashRouter()
         let presenter = SplashPresenter(view: view, interactor: interactor, router: router)
         interactor.presenter = presenter

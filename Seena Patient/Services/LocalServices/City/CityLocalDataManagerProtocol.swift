@@ -1,5 +1,5 @@
 //
-//  CityLocalDataManager.swift
+//  CityLocalDataManagerProtocol.swift
 //  Seena Patient
 //
 //  Created by Ahmed Zaki on 03/09/2020.
@@ -7,8 +7,11 @@
 //
 
 import Foundation
-
-class CityLocalDataManager: CityLocalDataManagerProtocol {
+protocol CityLocalDataManagerProtocol: class {
+    func save(cities: [City])
+    func retriveCities() -> [City]
+}
+extension CityLocalDataManagerProtocol {
     func save(cities: [City]) {
         let data = try? JSONEncoder().encode(cities)
         UserDefaults.standard.set(data, forKey: "CITY")

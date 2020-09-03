@@ -21,10 +21,15 @@ protocol SplashRouterProtocol: class {
 // MARK: - Splash Interactor
 protocol SplashInputInteractorProtocol: class {
     var presenter: SplashOutputInteractorProtocol? { get set }
+    var localDataManager: SplashLocalDataManagerProtocol { get set }
+    var remoteDataManager: SplashRemoteDataManagerProtocol { get set }
     // Presenter -> Interactor
+    func retriveMetaData()
 }
 protocol SplashOutputInteractorProtocol: class {
     // Interactor -> Presenter
+    func onRetriveMetaDataSuccess()
+    func onRetriveDataFail()
 }
 // MARK: - Splash Presenter
 protocol SplashPresenterProtocol: class {

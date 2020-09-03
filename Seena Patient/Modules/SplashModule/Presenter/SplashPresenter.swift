@@ -30,4 +30,8 @@ class SplashPresenter: SplashPresenterProtocol {
 }
 // MARK: - SpalshOutputInteractorProtocol Extenstion
 extension SplashPresenter: SplashOutputInteractorProtocol {
+    func onRetriveMetaDataSuccess() {
+    }
+    func onRetriveDataFail() {
+    }
 }
