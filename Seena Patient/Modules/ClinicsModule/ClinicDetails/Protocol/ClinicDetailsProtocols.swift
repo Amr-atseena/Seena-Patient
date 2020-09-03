@@ -12,6 +12,7 @@ import UIKit
 enum ClinicDetailsRoute {
     case clinicHome
     case serviceDetails
+    case call(number: String)
 }
 protocol ClinicDetailsRouterProtocol {
     // Presenter -> Router

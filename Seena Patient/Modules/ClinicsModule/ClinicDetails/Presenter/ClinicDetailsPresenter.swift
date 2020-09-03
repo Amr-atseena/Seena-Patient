@@ -56,6 +56,7 @@ class ClinicDetailsPresenter: ClinicDetailsPresenterProtocol {
         interactor?.retriveClinicDetails(atClinicId: clinic.id)
     }
     func callButtonTapped() {
+        router?.go(to: .call(number: clinic.phone))
     }
     func backButtonTapped() {
         router?.go(to: .clinicHome)

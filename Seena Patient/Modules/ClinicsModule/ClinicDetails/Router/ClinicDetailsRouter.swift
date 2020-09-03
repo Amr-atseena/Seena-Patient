@@ -30,6 +30,8 @@ class ClinicDetailsRouter: ClinicDetailsRouterProtocol {
             navigateToHome()
         case .serviceDetails:
             navigateToServiesDetails(withService: Service(seriveId: 0, image: "", name: "", specialityID: 0, serviceDescription: "", priceMin: 0, priceMax: 0, clinics: []))
+        case .call(let number):
+            makeCall(toNumber: number)
         }
     }
     private func navigateToHome() {
@@ -37,5 +39,11 @@ class ClinicDetailsRouter: ClinicDetailsRouterProtocol {
     }
     private func navigateToServiesDetails(withService service: Service) {
         viewController?.navigationController?.pushViewController(ServiceDetailsRouter.assembleModule(withService: service), animated: true)
+    }
+    private func makeCall(toNumber number: String) {
+        guard let numberURL =  URL(string: "tel://\(number)") else {
+            return
+        }
+        UIApplication.shared.open(numberURL)
     }
 }
