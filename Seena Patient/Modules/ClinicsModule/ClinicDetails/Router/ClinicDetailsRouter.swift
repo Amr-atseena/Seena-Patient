@@ -14,7 +14,8 @@ class ClinicDetailsRouter: ClinicDetailsRouterProtocol {
     // MARK: - Assemble
     static func assembleModule(withClinic clinic: Clinic) -> UIViewController {
         let router = ClinicDetailsRouter()
-        let interactor = ClinicDetailsInteractor()
+        let remoteDataManager = ClinicsRomoteDataManager()
+        let interactor = ClinicDetailsInteractor(remoteDataManager: remoteDataManager)
         let view = ClinicDetailsVC()
         let presenter = ClinicDetailsPresenter(view: view, interactor: interactor, router: router, clinic: clinic)
         router.viewController = view

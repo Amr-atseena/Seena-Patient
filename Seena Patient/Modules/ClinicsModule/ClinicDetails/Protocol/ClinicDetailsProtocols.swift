@@ -21,11 +21,15 @@ protocol ClinicDetailsRouterProtocol {
 }
 // MARK: - ClinicDetails Interactor
 protocol ClinicDetailsInputInteractorProtocol: class {
+    var remoteDataManager: ClinicsRemoteDataManangerProtocol { get set }
     var presenter: ClinicDetailsOutputInteractorProtocol? { get set }
     // Presenter -> Interactor
+    func retriveClinicDetails(atClinicId clinicId: Int)
 }
 protocol ClinicDetailsOutputInteractorProtocol: class {
     // Interactor -> Presenter
+    func onRetriveClinicSuccess(_ clinic: Clinic)
+    func onRetriveDataFail()
 }
 // MARK: - ClinicDetails Preseneter
 protocol ClinicDetailsPresenterProtocol: class {

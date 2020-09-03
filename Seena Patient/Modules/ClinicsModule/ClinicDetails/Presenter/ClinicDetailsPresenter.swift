@@ -71,4 +71,8 @@ class ClinicDetailsPresenter: ClinicDetailsPresenterProtocol {
 }
 // MARK: - ClinicDetailsOutputInteractorProtocol Implementation
 extension ClinicDetailsPresenter: ClinicDetailsOutputInteractorProtocol {
+    func onRetriveClinicSuccess(_ clinic: Clinic) {
+    }
+    func onRetriveDataFail() {
+    }
 }

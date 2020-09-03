@@ -45,6 +45,9 @@
 		8885BB0F250150C5000D7BD5 /* Clinic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8885BB0E250150C5000D7BD5 /* Clinic.swift */; };
 		8885BB11250150F3000D7BD5 /* Gallery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8885BB10250150F3000D7BD5 /* Gallery.swift */; };
 		8885BB1425015D56000D7BD5 /* ClinicViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8885BB1325015D56000D7BD5 /* ClinicViewModel.swift */; };
+		8885BB172501743B000D7BD5 /* ClinicsRemoteDataManangerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8885BB162501743B000D7BD5 /* ClinicsRemoteDataManangerProtocol.swift */; };
+		8885BB1925017485000D7BD5 /* ClinicsEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8885BB1825017485000D7BD5 /* ClinicsEndPoint.swift */; };
+		8885BB1B2501760F000D7BD5 /* ClinicsRomoteDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8885BB1A2501760F000D7BD5 /* ClinicsRomoteDataManager.swift */; };
 		88A772DA24FC434400228FF2 /* SeenaUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A772D924FC434400228FF2 /* SeenaUnitTests.swift */; };
 		88ED03F224EFA5CF00BBCEF6 /* GalleryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88ED03F024EFA5CE00BBCEF6 /* GalleryCell.swift */; };
 		88ED03F324EFA5CF00BBCEF6 /* GalleryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88ED03F124EFA5CE00BBCEF6 /* GalleryCell.xib */; };
@@ -197,6 +200,9 @@
 		8885BB0E250150C5000D7BD5 /* Clinic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clinic.swift; sourceTree = "<group>"; };
 		8885BB10250150F3000D7BD5 /* Gallery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gallery.swift; sourceTree = "<group>"; };
 		8885BB1325015D56000D7BD5 /* ClinicViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicViewModel.swift; sourceTree = "<group>"; };
+		8885BB162501743B000D7BD5 /* ClinicsRemoteDataManangerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicsRemoteDataManangerProtocol.swift; sourceTree = "<group>"; };
+		8885BB1825017485000D7BD5 /* ClinicsEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicsEndPoint.swift; sourceTree = "<group>"; };
+		8885BB1A2501760F000D7BD5 /* ClinicsRomoteDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicsRomoteDataManager.swift; sourceTree = "<group>"; };
 		88A772D724FC434400228FF2 /* SeenaUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SeenaUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		88A772D924FC434400228FF2 /* SeenaUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeenaUnitTests.swift; sourceTree = "<group>"; };
 		88A772DB24FC434400228FF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -497,6 +503,16 @@
 				8885BB1325015D56000D7BD5 /* ClinicViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		8885BB1525017411000D7BD5 /* Clinics */ = {
+			isa = PBXGroup;
+			children = (
+				8885BB162501743B000D7BD5 /* ClinicsRemoteDataManangerProtocol.swift */,
+				8885BB1825017485000D7BD5 /* ClinicsEndPoint.swift */,
+				8885BB1A2501760F000D7BD5 /* ClinicsRomoteDataManager.swift */,
+			);
+			path = Clinics;
 			sourceTree = "<group>";
 		};
 		88A772D824FC434400228FF2 /* SeenaUnitTests */ = {
@@ -1129,6 +1145,7 @@
 			isa = PBXGroup;
 			children = (
 				88104B8824F2E44000DB5ED9 /* Services */,
+				8885BB1525017411000D7BD5 /* Clinics */,
 			);
 			path = RemoteServices;
 			sourceTree = "<group>";
@@ -1679,6 +1696,7 @@
 				88EDA12A24FAE41200460B4D /* ProfilePresenter.swift in Sources */,
 				88120B8024EF2C66004A2381 /* ClinicDetailsVC.swift in Sources */,
 				88104B8324F2E3AF00DB5ED9 /* Package.swift in Sources */,
+				8885BB1B2501760F000D7BD5 /* ClinicsRomoteDataManager.swift in Sources */,
 				8C8CB3EA24E6CA46009679E5 /* UICollectionView+Extensions.swift in Sources */,
 				88EDA12B24FAE41200460B4D /* ProfileRouter.swift in Sources */,
 				88120B6524EF07BE004A2381 /* ClinicsHomeVC.swift in Sources */,
@@ -1709,6 +1727,7 @@
 				8CAB09B024E8357E00D38CDD /* ServiceCell.swift in Sources */,
 				8CAB09AB24E8274200D38CDD /* SpectialityCell.swift in Sources */,
 				88104B9324F3023B00DB5ED9 /* ServiceViewModel.swift in Sources */,
+				8885BB1925017485000D7BD5 /* ClinicsEndPoint.swift in Sources */,
 				88104B7F24F2E14E00DB5ED9 /* ServerResonse.swift in Sources */,
 				88ED03F224EFA5CF00BBCEF6 /* GalleryCell.swift in Sources */,
 				8CAB097524E7DDED00D38CDD /* UIView+Extensions.swift in Sources */,
@@ -1748,6 +1767,7 @@
 				88120B7C24EF2C66004A2381 /* ClinicDetailsRouter.swift in Sources */,
 				88104B8A24F2E4DB00DB5ED9 /* ServicesEndPoint.swift in Sources */,
 				88120B7D24EF2C66004A2381 /* ClinicDetailsProtocols.swift in Sources */,
+				8885BB172501743B000D7BD5 /* ClinicsRemoteDataManangerProtocol.swift in Sources */,
 				8827E95324F5A8F2009C64FB /* ServicesListParameters.swift in Sources */,
 				8CAB099224E806C100D38CDD /* Font.swift in Sources */,
 				8CAB098A24E7F2F400D38CDD /* HomeVC.swift in Sources */,
