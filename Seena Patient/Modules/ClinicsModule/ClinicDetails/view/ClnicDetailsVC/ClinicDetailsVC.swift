@@ -147,7 +147,7 @@ extension ClinicDetailsVC: UICollectionViewDelegateFlowLayout {
         return UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
     }
 }
-// MARK: -  SkeletonCollectionView DataSource Implementation
+// MARK: - SkeletonCollectionView DataSource Implementation
 extension ClinicDetailsVC: SkeletonCollectionViewDataSource {
     func collectionSkeletonView(_ skeletonView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 4

@@ -49,6 +49,12 @@
 		8885BB1925017485000D7BD5 /* ClinicsEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8885BB1825017485000D7BD5 /* ClinicsEndPoint.swift */; };
 		8885BB1B2501760F000D7BD5 /* ClinicsRomoteDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8885BB1A2501760F000D7BD5 /* ClinicsRomoteDataManager.swift */; };
 		8885BB1E25017AE3000D7BD5 /* GalleryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8885BB1D25017AE3000D7BD5 /* GalleryViewModel.swift */; };
+		8885BB21250194D4000D7BD5 /* CityLocalDataManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8885BB20250194D4000D7BD5 /* CityLocalDataManagerProtocol.swift */; };
+		8885BB2325019548000D7BD5 /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8885BB2225019548000D7BD5 /* City.swift */; };
+		8885BB252501961A000D7BD5 /* CityLocalDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8885BB242501961A000D7BD5 /* CityLocalDataManager.swift */; };
+		8885BB28250197A4000D7BD5 /* SplashRemoteDataManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8885BB27250197A4000D7BD5 /* SplashRemoteDataManagerProtocol.swift */; };
+		8885BB2A2501987D000D7BD5 /* SplashEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8885BB292501987D000D7BD5 /* SplashEndPoint.swift */; };
+		8885BB2C25019925000D7BD5 /* SplashRemoteDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8885BB2B25019925000D7BD5 /* SplashRemoteDataManager.swift */; };
 		88A772DA24FC434400228FF2 /* SeenaUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A772D924FC434400228FF2 /* SeenaUnitTests.swift */; };
 		88ED03F224EFA5CF00BBCEF6 /* GalleryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88ED03F024EFA5CE00BBCEF6 /* GalleryCell.swift */; };
 		88ED03F324EFA5CF00BBCEF6 /* GalleryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88ED03F124EFA5CE00BBCEF6 /* GalleryCell.xib */; };
@@ -205,6 +211,12 @@
 		8885BB1825017485000D7BD5 /* ClinicsEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicsEndPoint.swift; sourceTree = "<group>"; };
 		8885BB1A2501760F000D7BD5 /* ClinicsRomoteDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicsRomoteDataManager.swift; sourceTree = "<group>"; };
 		8885BB1D25017AE3000D7BD5 /* GalleryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewModel.swift; sourceTree = "<group>"; };
+		8885BB20250194D4000D7BD5 /* CityLocalDataManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityLocalDataManagerProtocol.swift; sourceTree = "<group>"; };
+		8885BB2225019548000D7BD5 /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
+		8885BB242501961A000D7BD5 /* CityLocalDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityLocalDataManager.swift; sourceTree = "<group>"; };
+		8885BB27250197A4000D7BD5 /* SplashRemoteDataManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashRemoteDataManagerProtocol.swift; sourceTree = "<group>"; };
+		8885BB292501987D000D7BD5 /* SplashEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashEndPoint.swift; sourceTree = "<group>"; };
+		8885BB2B25019925000D7BD5 /* SplashRemoteDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashRemoteDataManager.swift; sourceTree = "<group>"; };
 		88A772D724FC434400228FF2 /* SeenaUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SeenaUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		88A772D924FC434400228FF2 /* SeenaUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeenaUnitTests.swift; sourceTree = "<group>"; };
 		88A772DB24FC434400228FF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -524,6 +536,25 @@
 				8885BB1D25017AE3000D7BD5 /* GalleryViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		8885BB1F2501942D000D7BD5 /* Spalsh */ = {
+			isa = PBXGroup;
+			children = (
+				8885BB20250194D4000D7BD5 /* CityLocalDataManagerProtocol.swift */,
+				8885BB242501961A000D7BD5 /* CityLocalDataManager.swift */,
+			);
+			path = Spalsh;
+			sourceTree = "<group>";
+		};
+		8885BB2625019777000D7BD5 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				8885BB27250197A4000D7BD5 /* SplashRemoteDataManagerProtocol.swift */,
+				8885BB292501987D000D7BD5 /* SplashEndPoint.swift */,
+				8885BB2B25019925000D7BD5 /* SplashRemoteDataManager.swift */,
+			);
+			path = Splash;
 			sourceTree = "<group>";
 		};
 		88A772D824FC434400228FF2 /* SeenaUnitTests */ = {
@@ -1130,6 +1161,7 @@
 		8C8CB3F024E6CF23009679E5 /* LocalServices */ = {
 			isa = PBXGroup;
 			children = (
+				8885BB1F2501942D000D7BD5 /* Spalsh */,
 			);
 			path = LocalServices;
 			sourceTree = "<group>";
@@ -1155,6 +1187,7 @@
 		8C8CB3F724E6CF23009679E5 /* RemoteServices */ = {
 			isa = PBXGroup;
 			children = (
+				8885BB2625019777000D7BD5 /* Splash */,
 				88104B8824F2E44000DB5ED9 /* Services */,
 				8885BB1525017411000D7BD5 /* Clinics */,
 			);
@@ -1232,6 +1265,7 @@
 				88104B8424F2E3BA00DB5ED9 /* Service.swift */,
 				8885BB0E250150C5000D7BD5 /* Clinic.swift */,
 				8885BB10250150F3000D7BD5 /* Gallery.swift */,
+				8885BB2225019548000D7BD5 /* City.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -1708,6 +1742,7 @@
 				88120B8024EF2C66004A2381 /* ClinicDetailsVC.swift in Sources */,
 				88104B8324F2E3AF00DB5ED9 /* Package.swift in Sources */,
 				8885BB1B2501760F000D7BD5 /* ClinicsRomoteDataManager.swift in Sources */,
+				8885BB252501961A000D7BD5 /* CityLocalDataManager.swift in Sources */,
 				8C8CB3EA24E6CA46009679E5 /* UICollectionView+Extensions.swift in Sources */,
 				88EDA12B24FAE41200460B4D /* ProfileRouter.swift in Sources */,
 				88120B6524EF07BE004A2381 /* ClinicsHomeVC.swift in Sources */,
@@ -1723,11 +1758,13 @@
 				8C8CB41424E6EBFD009679E5 /* CustomizedTabBar.swift in Sources */,
 				88EDA11A24FADA0D00460B4D /* ServiceResultCell.swift in Sources */,
 				8CAB09A324E80BC600D38CDD /* CustomFontDiscriptor.swift in Sources */,
+				8885BB2C25019925000D7BD5 /* SplashRemoteDataManager.swift in Sources */,
 				8C8CB40F24E6E53A009679E5 /* SplashInteractor.swift in Sources */,
 				88104B9124F2FD3600DB5ED9 /* PackageViewModel.swift in Sources */,
 				8C81545624EB21CA00CA30E7 /* ServicesSearchLocalization.swift in Sources */,
 				8C8CB3EF24E6CA46009679E5 /* UIApplication+Extensions.swift in Sources */,
 				8C8CB42324E71369009679E5 /* Colors.swift in Sources */,
+				8885BB2A2501987D000D7BD5 /* SplashEndPoint.swift in Sources */,
 				8C8CB3FE24E6CF23009679E5 /* EnvironmentProtocol.swift in Sources */,
 				8CAB097924E7E6CB00D38CDD /* UIViewContorller+Extensions.swift in Sources */,
 				8CEC780E24E9DDDB000CED1F /* ServiceClinicCell.swift in Sources */,
@@ -1748,6 +1785,7 @@
 				8885BB0F250150C5000D7BD5 /* Clinic.swift in Sources */,
 				8CEC780024E9BCED000CED1F /* ServiceDetailsInteractor.swift in Sources */,
 				8C8CB41124E6E651009679E5 /* SplashPresenter.swift in Sources */,
+				8885BB21250194D4000D7BD5 /* CityLocalDataManagerProtocol.swift in Sources */,
 				8CAB098124E7E8C200D38CDD /* HomeProtocols.swift in Sources */,
 				8885BB11250150F3000D7BD5 /* Gallery.swift in Sources */,
 				88EDA12D24FAE41200460B4D /* ProfileInteractor.swift in Sources */,
@@ -1777,6 +1815,7 @@
 				8C81545524EB21CA00CA30E7 /* ServicesSearchInteractor.swift in Sources */,
 				88ED042D24F0042600BBCEF6 /* NotificationCell.swift in Sources */,
 				88120B7C24EF2C66004A2381 /* ClinicDetailsRouter.swift in Sources */,
+				8885BB2325019548000D7BD5 /* City.swift in Sources */,
 				88104B8A24F2E4DB00DB5ED9 /* ServicesEndPoint.swift in Sources */,
 				88120B7D24EF2C66004A2381 /* ClinicDetailsProtocols.swift in Sources */,
 				8885BB172501743B000D7BD5 /* ClinicsRemoteDataManangerProtocol.swift in Sources */,
@@ -1784,6 +1823,7 @@
 				8CAB099224E806C100D38CDD /* Font.swift in Sources */,
 				8CAB098A24E7F2F400D38CDD /* HomeVC.swift in Sources */,
 				8C8CB3FD24E6CF23009679E5 /* Environment.swift in Sources */,
+				8885BB28250197A4000D7BD5 /* SplashRemoteDataManagerProtocol.swift in Sources */,
 				88ED040B24EFCD9A00BBCEF6 /* ClinicsSearchVC.swift in Sources */,
 				8C8CB42124E71353009679E5 /* DesignSystem.swift in Sources */,
 				8C8CB3FB24E6CF23009679E5 /* APIService.swift in Sources */,
