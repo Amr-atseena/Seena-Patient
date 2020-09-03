@@ -43,8 +43,8 @@ protocol ClinicDetailsPresenterProtocol: class {
     func backButtonTapped()
     func galleryCollectionView(selectedAtIndex index: Int)
     func serviesCollectionView(selectedAtIndex index: Int)
-    func config(serviceCell cell: ServiceCellView, atIndex index: Int)
-    func config(galleryCell cell: ServiceCellView, atIndex index: Int)
+    func config(serviceCell cell: ServiceCellProtocol, atIndex index: Int)
+    func config(galleryCell cell: GalleryCellProtocol, atIndex index: Int)
     var numberOfImages: Int { get }
     var numberOfServices: Int { get }
 }
@@ -58,4 +58,8 @@ protocol ClinicDetailsViewProtocol: class {
     func updateUI(withClinic clinic: ClinicViewModel)
     func reloadGallery()
     func reloadServices()
+}
+// MARK: - GalleryCell View
+protocol GalleryCellProtocol: class {
+    func set(gallery: GalleryViewModel)
 }

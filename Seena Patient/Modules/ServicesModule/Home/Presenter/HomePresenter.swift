@@ -48,7 +48,7 @@ class HomePresenter: HomePresenterProtocol {
     func configure(spectialityCell cell: SpecialityCellView, atIndex index: Int) {
         cell.setSpecialityName(specialities[index].speciality)
     }
-    func configure(serviceCell cell: ServiceCellView, atIndex index: Int, andSection section: Int) {
+    func configure(serviceCell cell: ServiceCellProtocol, atIndex index: Int, andSection section: Int) {
         let service = specialities[section].services[index]
         cell.setService(ServiceViewModel(service: service))
     }

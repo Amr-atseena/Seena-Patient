@@ -100,9 +100,11 @@ extension ClinicDetailsVC: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if collectionView == imageGalleryCollectionView {
             let cell = collectionView.dequeueReusableCell(withClass: GalleryCell.self, for: indexPath)
+            presenter.config(galleryCell: cell, atIndex: indexPath.item)
             return cell
         } else {
             let cell = collectionView.dequeueReusableCell(withClass: ServiceCell.self, for: indexPath)
+            presenter.config(serviceCell: cell, atIndex: indexPath.item)
             return cell
         }
     }

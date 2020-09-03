@@ -78,6 +78,9 @@
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="105" height="107"/>
+            <connections>
+                <outlet property="clinicWorkImage" destination="0VD-dt-oTj" id="ugz-IK-v0F"/>
+            </connections>
             <point key="canvasLocation" x="177.536231884058" y="119.53125"/>
         </collectionViewCell>
     </objects>

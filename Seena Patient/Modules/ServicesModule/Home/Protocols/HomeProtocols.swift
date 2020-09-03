@@ -44,7 +44,7 @@ protocol HomePresenterProtocol: class {
     func serachButtonTapped()
     func configure(spectialityCell cell: SpecialityCellView, atIndex index: Int )
     func configure(packageCell cell: PackageCellView, atIndex index: Int )
-    func configure(serviceCell cell: ServiceCellView, atIndex index: Int, andSection section: Int)
+    func configure(serviceCell cell: ServiceCellProtocol, atIndex index: Int, andSection section: Int)
     func serviceSelected(atIndex index: Int, andSection section: Int)
     func numberOfServices(atRow row: Int) -> Int
     var numberOfCategories: Int { get }
@@ -71,6 +71,6 @@ protocol PackageCellView {
     func setPackage(_ package: PackageViewModel)
 }
 // MARK: - Service Cell View
-protocol ServiceCellView {
+protocol ServiceCellProtocol {
     func setService(_ service: ServiceViewModel)
 }

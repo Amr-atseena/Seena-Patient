@@ -48,6 +48,7 @@
 		8885BB172501743B000D7BD5 /* ClinicsRemoteDataManangerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8885BB162501743B000D7BD5 /* ClinicsRemoteDataManangerProtocol.swift */; };
 		8885BB1925017485000D7BD5 /* ClinicsEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8885BB1825017485000D7BD5 /* ClinicsEndPoint.swift */; };
 		8885BB1B2501760F000D7BD5 /* ClinicsRomoteDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8885BB1A2501760F000D7BD5 /* ClinicsRomoteDataManager.swift */; };
+		8885BB1E25017AE3000D7BD5 /* GalleryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8885BB1D25017AE3000D7BD5 /* GalleryViewModel.swift */; };
 		88A772DA24FC434400228FF2 /* SeenaUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A772D924FC434400228FF2 /* SeenaUnitTests.swift */; };
 		88ED03F224EFA5CF00BBCEF6 /* GalleryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88ED03F024EFA5CE00BBCEF6 /* GalleryCell.swift */; };
 		88ED03F324EFA5CF00BBCEF6 /* GalleryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88ED03F124EFA5CE00BBCEF6 /* GalleryCell.xib */; };
@@ -203,6 +204,7 @@
 		8885BB162501743B000D7BD5 /* ClinicsRemoteDataManangerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicsRemoteDataManangerProtocol.swift; sourceTree = "<group>"; };
 		8885BB1825017485000D7BD5 /* ClinicsEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicsEndPoint.swift; sourceTree = "<group>"; };
 		8885BB1A2501760F000D7BD5 /* ClinicsRomoteDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicsRomoteDataManager.swift; sourceTree = "<group>"; };
+		8885BB1D25017AE3000D7BD5 /* GalleryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewModel.swift; sourceTree = "<group>"; };
 		88A772D724FC434400228FF2 /* SeenaUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SeenaUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		88A772D924FC434400228FF2 /* SeenaUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeenaUnitTests.swift; sourceTree = "<group>"; };
 		88A772DB24FC434400228FF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -445,6 +447,7 @@
 		88120B7224EF2C4E004A2381 /* ClinicDetails */ = {
 			isa = PBXGroup;
 			children = (
+				8885BB1C25017AC0000D7BD5 /* ViewModel */,
 				88ED03EE24EF9C1D00BBCEF6 /* Localization */,
 				88ED03EC24EF9C0500BBCEF6 /* Protocol */,
 				88ED03EA24EF9BE900BBCEF6 /* Router */,
@@ -513,6 +516,14 @@
 				8885BB1A2501760F000D7BD5 /* ClinicsRomoteDataManager.swift */,
 			);
 			path = Clinics;
+			sourceTree = "<group>";
+		};
+		8885BB1C25017AC0000D7BD5 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				8885BB1D25017AE3000D7BD5 /* GalleryViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		88A772D824FC434400228FF2 /* SeenaUnitTests */ = {
@@ -1754,6 +1765,7 @@
 				8C8CB40D24E6E283009679E5 /* SplashRouter.swift in Sources */,
 				88ED042124EFFD9100BBCEF6 /* NotificationsHomeLocalization.swift in Sources */,
 				88104B8524F2E3BA00DB5ED9 /* Service.swift in Sources */,
+				8885BB1E25017AE3000D7BD5 /* GalleryViewModel.swift in Sources */,
 				88ED040724EFCD9A00BBCEF6 /* ClinicsSearchRouter.swift in Sources */,
 				88F706C324EE6804005C2ADB /* PackageDetailsProtocols.swift in Sources */,
 				88120B7E24EF2C66004A2381 /* ClinicDetailsInteractor.swift in Sources */,

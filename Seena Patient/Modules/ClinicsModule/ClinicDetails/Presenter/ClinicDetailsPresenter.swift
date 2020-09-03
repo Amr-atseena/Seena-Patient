@@ -52,6 +52,7 @@ class ClinicDetailsPresenter: ClinicDetailsPresenterProtocol {
         view?.setupGalleryCollectionView()
         view?.setupServicesCollectionView()
         view?.updateUI(withClinic: ClinicViewModel(clinic: clinic))
+        interactor?.retriveClinicDetails(atClinicId: clinic.id)
     }
     func callButtonTapped() {
     }
@@ -64,14 +65,19 @@ class ClinicDetailsPresenter: ClinicDetailsPresenterProtocol {
     func serviesCollectionView(selectedAtIndex index: Int) {
         router?.go(to: .serviceDetails)
     }
-    func config(serviceCell cell: ServiceCellView, atIndex index: Int) {
+    func config(serviceCell cell: ServiceCellProtocol, atIndex index: Int) {
+        let service = services[index]
+        cell.setService(ServiceViewModel(service: service))
     }
-    func config(galleryCell cell: ServiceCellView, atIndex index: Int) {
+    func config(galleryCell cell: GalleryCellProtocol, atIndex index: Int) {
+        let image = gallery[index]
+        cell.set(gallery: GalleryViewModel(gallery: image))
     }
 }
 // MARK: - ClinicDetailsOutputInteractorProtocol Implementation
 extension ClinicDetailsPresenter: ClinicDetailsOutputInteractorProtocol {
     func onRetriveClinicSuccess(_ clinic: Clinic) {
+        self.clinic = clinic
     }
     func onRetriveDataFail() {
     }

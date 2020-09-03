@@ -36,7 +36,7 @@ class PackageDetailsPresenter: PackageDetailsPresenterProtocol {
     func backButtonTapped() {
         router?.go(to: .home)
     }
-    func config(serviceCell cell: ServiceCellView, atIndex index: Int) {
+    func config(serviceCell cell: ServiceCellProtocol, atIndex index: Int) {
         let service = services[index]
         cell.setService(ServiceViewModel(service: service))
     }
