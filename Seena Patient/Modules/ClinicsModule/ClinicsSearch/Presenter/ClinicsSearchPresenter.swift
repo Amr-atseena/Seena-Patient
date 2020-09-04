@@ -14,9 +14,19 @@ class ClinicsSearchPresenter: ClinicsSearchPresenterProtocol {
     var interactor: ClinicsSearchInputInteractorProtocol?
     var router: ClinicsSearchRouterProtocol?
     let localization = ClinicsSearchLocalization()
-    private var cities = [City]() {
+    private var selectedCityIndex = 0
+    private lazy var optionsAdapter: OptionsAdapter = {
+        return OptionsAdapter(presenter: self)
+        }()
+    private var options = [OptionViewModel]() {
         didSet {
             view?.reloadOptions()
+        }
+    }
+    private var cities = [City]() {
+        didSet {
+            cities.insert(City(id: 0, name: "All"), at: 0)
+            options = cities.map { OptionViewModel(name: $0.name) }
         }
     }
     // MARK: - Init
@@ -29,6 +39,8 @@ class ClinicsSearchPresenter: ClinicsSearchPresenterProtocol {
     func viewDidLoad() {
         view?.setupUI()
         view?.setupClinicsTableView()
+        view?.setupOptionsCollectionView(withOptionsAdapter: optionsAdapter)
+        interactor?.retriveCities()
     }
     func backButtonTapped() {
         router?.go(to: .home)
@@ -47,5 +59,20 @@ class ClinicsSearchPresenter: ClinicsSearchPresenterProtocol {
 extension ClinicsSearchPresenter: ClinicsSearchOutputInteractorProtocol {
     func onRetriveCities(_ cities: [City]) {
         self.cities = cities
+        options[0].isSelected = true
+    }
+}
+// MARK: - OptionAdapterProtocol Impelementation
+extension ClinicsSearchPresenter: OptionsAdapterProtocol {
+    func cnofig(optionCell cell: OptionCellProtocol, atIndex index: Int) {
+        cell.set(option: options[index])
+    }
+    func optionCell(selectedAtIndex index: Int) {
+        selectedCityIndex = index
+        options = options.map {OptionViewModel(name: $0.name)}
+        options[index].isSelected = true
+    }
+    var numberOfOptions: Int {
+        return cities.count
     }
 }

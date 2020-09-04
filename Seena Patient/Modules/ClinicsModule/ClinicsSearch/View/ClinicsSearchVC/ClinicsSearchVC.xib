@@ -101,25 +101,25 @@
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
                         </view>
-                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="DQT-jp-xa2">
-                            <rect key="frame" x="0.0" y="166" width="414" height="70"/>
+                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="DQT-jp-xa2">
+                            <rect key="frame" x="0.0" y="166" width="414" height="50"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="70" id="1lh-om-mQv"/>
+                                <constraint firstAttribute="height" constant="50" id="1lh-om-mQv"/>
                             </constraints>
-                            <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="JDi-Ue-hFQ">
+                            <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="JDi-Ue-hFQ">
                                 <size key="itemSize" width="128" height="128"/>
                                 <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                 <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <inset key="sectionInset" minX="20" minY="0.0" maxX="20" maxY="0.0"/>
                             </collectionViewFlowLayout>
                         </collectionView>
                         <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" keyboardDismissMode="onDrag" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="KwU-3G-FP8">
-                            <rect key="frame" x="0.0" y="251" width="414" height="645"/>
+                            <rect key="frame" x="0.0" y="231" width="414" height="665"/>
                             <color key="backgroundColor" red="0.97254901959999995" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </tableView>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p58-8f-KNK">
-                            <rect key="frame" x="0.0" y="251" width="414" height="645"/>
+                            <rect key="frame" x="0.0" y="231" width="414" height="665"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="aJo-Lu-49q">
                                     <rect key="frame" x="143" y="174.5" width="128.5" height="135"/>
@@ -154,14 +154,15 @@
                     </subviews>
                     <color key="backgroundColor" red="0.97254901959999995" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
+                        <constraint firstItem="p58-8f-KNK" firstAttribute="width" secondItem="KwU-3G-FP8" secondAttribute="width" id="00R-aY-wf4"/>
                         <constraint firstItem="NlZ-V6-iiV" firstAttribute="top" secondItem="XxY-ng-Zav" secondAttribute="top" constant="40" id="0rZ-h8-HS0"/>
                         <constraint firstItem="NlZ-V6-iiV" firstAttribute="leading" secondItem="XxY-ng-Zav" secondAttribute="leading" constant="15" id="AyZ-iV-dxJ"/>
-                        <constraint firstItem="p58-8f-KNK" firstAttribute="leading" secondItem="KwU-3G-FP8" secondAttribute="leading" id="Ex3-UJ-XdZ"/>
+                        <constraint firstItem="p58-8f-KNK" firstAttribute="height" secondItem="KwU-3G-FP8" secondAttribute="height" id="EmQ-k3-TcK"/>
+                        <constraint firstItem="p58-8f-KNK" firstAttribute="centerY" secondItem="KwU-3G-FP8" secondAttribute="centerY" id="FX2-DG-HR8"/>
                         <constraint firstItem="Cni-Of-2Sc" firstAttribute="top" secondItem="yMG-9D-3sQ" secondAttribute="bottom" constant="30" id="MvZ-On-mRI"/>
                         <constraint firstItem="KwU-3G-FP8" firstAttribute="leading" secondItem="XxY-ng-Zav" secondAttribute="leading" id="Ned-B7-c9k"/>
-                        <constraint firstItem="p58-8f-KNK" firstAttribute="bottom" secondItem="KwU-3G-FP8" secondAttribute="bottom" id="P3Y-2L-2Iy"/>
+                        <constraint firstItem="p58-8f-KNK" firstAttribute="centerX" secondItem="KwU-3G-FP8" secondAttribute="centerX" id="Q7u-G7-cKo"/>
                         <constraint firstItem="DQT-jp-xa2" firstAttribute="top" secondItem="Cni-Of-2Sc" secondAttribute="bottom" constant="15" id="SRh-z3-YDN"/>
-                        <constraint firstItem="p58-8f-KNK" firstAttribute="top" secondItem="KwU-3G-FP8" secondAttribute="top" id="Vyt-NL-L2U"/>
                         <constraint firstAttribute="trailing" secondItem="KwU-3G-FP8" secondAttribute="trailing" id="YRw-lq-aMQ"/>
                         <constraint firstAttribute="bottom" secondItem="KwU-3G-FP8" secondAttribute="bottom" id="fRC-MH-cRc"/>
                         <constraint firstItem="Cni-Of-2Sc" firstAttribute="leading" secondItem="XxY-ng-Zav" secondAttribute="leading" constant="20" id="h3K-5O-LqT"/>
@@ -169,7 +170,6 @@
                         <constraint firstAttribute="trailing" secondItem="DQT-jp-xa2" secondAttribute="trailing" id="rOE-Nl-6vH"/>
                         <constraint firstItem="KwU-3G-FP8" firstAttribute="top" secondItem="DQT-jp-xa2" secondAttribute="bottom" constant="15" id="sgf-g2-kwA"/>
                         <constraint firstItem="DQT-jp-xa2" firstAttribute="leading" secondItem="XxY-ng-Zav" secondAttribute="leading" id="vgK-ya-Z0g"/>
-                        <constraint firstItem="p58-8f-KNK" firstAttribute="trailing" secondItem="KwU-3G-FP8" secondAttribute="trailing" id="wA5-BJ-A87"/>
                     </constraints>
                 </view>
             </subviews>

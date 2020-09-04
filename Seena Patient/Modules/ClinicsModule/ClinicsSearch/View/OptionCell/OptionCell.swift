@@ -14,18 +14,20 @@ class OptionCell: UICollectionViewCell {
     override var isSelected: Bool {
         didSet {
             if isSelected {
-                holderView.backgroundColor = DesignSystem.Colors.payStart.color
+                holderView.backgroundColor = DesignSystem.Colors.primarySelectedActionBackground.color
                 holderView.layer.borderWidth = 0
+                optionNameLabel.textColor = DesignSystem.Colors.headingText.color
             } else {
                 holderView.backgroundColor = DesignSystem.Colors.headingText.color
-                holderView.layer.borderWidth = 2
+                holderView.layer.borderWidth = 1
+                optionNameLabel.textColor = DesignSystem.Colors.primaryText.color
             }
         }
     }
     override func awakeFromNib() {
         super.awakeFromNib()
         // optionName Label
-        optionNameLabel.font = DesignSystem.Typography.subHeading3.font
+        optionNameLabel.font = DesignSystem.Typography.title2.font
     }
 }
 // MARK: - OptionCellProtocol Implementation

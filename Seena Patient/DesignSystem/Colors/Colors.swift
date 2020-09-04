@@ -28,6 +28,7 @@ extension DesignSystem {
         case primaryNavBarText
         case payStart
         case payEnd
+        case primarySelectedActionBackground
         var color: UIColor {
             return UIColor(named: self.rawValue)!
         }

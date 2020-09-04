@@ -19,10 +19,10 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GZf-8C-cxn" customClass="AnimatableView" customModule="IBAnimatable">
-                        <rect key="frame" x="5" y="5" width="134" height="50"/>
+                        <rect key="frame" x="5" y="5" width="134" height="40"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O5q-Jz-3C1">
-                                <rect key="frame" x="5" y="0.0" width="124" height="50"/>
+                                <rect key="frame" x="10" y="0.0" width="114" height="40"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" name="primaryText"/>
                                 <nil key="highlightedColor"/>
@@ -30,11 +30,11 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="O5q-Jz-3C1" firstAttribute="leading" secondItem="GZf-8C-cxn" secondAttribute="leading" constant="5" id="2lZ-EM-6Jn"/>
+                            <constraint firstItem="O5q-Jz-3C1" firstAttribute="leading" secondItem="GZf-8C-cxn" secondAttribute="leading" constant="10" id="2lZ-EM-6Jn"/>
                             <constraint firstAttribute="bottom" secondItem="O5q-Jz-3C1" secondAttribute="bottom" id="KlG-iw-sBJ"/>
                             <constraint firstItem="O5q-Jz-3C1" firstAttribute="top" secondItem="GZf-8C-cxn" secondAttribute="top" id="RoL-nF-lNb"/>
-                            <constraint firstAttribute="height" constant="50" id="YW1-FO-NWH"/>
-                            <constraint firstAttribute="trailing" secondItem="O5q-Jz-3C1" secondAttribute="trailing" constant="5" id="xa4-S3-K6W"/>
+                            <constraint firstAttribute="height" constant="40" id="YW1-FO-NWH"/>
+                            <constraint firstAttribute="trailing" secondItem="O5q-Jz-3C1" secondAttribute="trailing" constant="10" id="xa4-S3-K6W"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -44,7 +44,7 @@
                                 <color key="value" name="primaryBorder"/>
                             </userDefinedRuntimeAttribute>
                             <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                <real key="value" value="2"/>
+                                <real key="value" value="1"/>
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </view>

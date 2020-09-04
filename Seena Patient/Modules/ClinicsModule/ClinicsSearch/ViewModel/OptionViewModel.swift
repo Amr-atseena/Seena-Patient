@@ -9,5 +9,5 @@
 import Foundation
 struct OptionViewModel {
     private(set) var name: String
-    private(set) var isSelected: Bool = false
+    var isSelected: Bool = false
 }
