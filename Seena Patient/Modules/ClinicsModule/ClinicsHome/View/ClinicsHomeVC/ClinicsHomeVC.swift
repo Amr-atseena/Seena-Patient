@@ -83,9 +83,19 @@ class ClinicsHomeVC: UIViewController, ClinicsHomeViewProtocol {
         clinicsTableView.reloadData()
     }
     func showSkeleton() {
+        clinicOfWeekImage.showAnimatedGradientSkeleton()
+        clinicOfWeekNameLabel.showAnimatedGradientSkeleton()
+        clinicOfWeakAddressLabel.showAnimatedGradientSkeleton()
+        clinicOfWeekCategoryLabel.showAnimatedGradientSkeleton()
+        callClinicButton.showAnimatedGradientSkeleton()
         clinicsTableView.showAnimatedGradientSkeleton()
     }
     func hideSkeleton() {
+        callClinicButton.hideSkeleton()
+        clinicOfWeekCategoryLabel.hideSkeleton()
+        clinicOfWeakAddressLabel.hideSkeleton()
+        clinicOfWeekNameLabel.hideSkeleton()
+        clinicOfWeekImage.hideSkeleton()
         clinicsTableView.hideSkeleton()
     }
     // MARK: - Actions
@@ -140,7 +150,7 @@ extension ClinicsHomeVC: UITableViewDelegate {
     }
 }
 // MARK: - SkeletonTableViewDataSource Implementaion
-extension ClinicsHomeVC: SkeletonTableViewDataSource {
+extension ClinicsHomeVC: SkeletonTableViewDataSource, SkeletonTableViewDelegate {
     func collectionSkeletonView(_ skeletonView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 5
     }
