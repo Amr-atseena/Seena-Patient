@@ -49,7 +49,7 @@ class HomePresenter: HomePresenterProtocol {
         cell.setSpecialityName(specialities[index].speciality)
     }
     func configure(serviceCell cell: ServiceCellProtocol, atIndex index: Int, andSection section: Int) {
-        let service = specialities[section].services[index]
+        let service = specialities[section].services?[index]
         cell.setService(ServiceViewModel(service: service))
     }
     func serviceSelected(atIndex index: Int, andSection section: Int) {
@@ -58,7 +58,7 @@ class HomePresenter: HomePresenterProtocol {
             let package = packages[index]
             router?.go(to: .packageDetails(package))
         default:
-            let service = specialities[section].services[index]
+            guard let service = specialities[section].services?[index] else {return}
             router?.go(to: .serviceDetails(service))
         }
     }
@@ -66,7 +66,7 @@ class HomePresenter: HomePresenterProtocol {
         if specialities.isEmpty {
             return 0
         } else {
-            return specialities[row].services.count
+            return specialities[row].services?.count ?? 0
         }
     }
     var numberOfCategories: Int {

@@ -10,6 +10,7 @@ import Foundation
 import Moya
 
 enum ClinicsEndPoint {
+    case home
     case clinicDetails(clinicId: Int)
     case clinicList(parms: ClinicsListParameters)
 }
@@ -20,6 +21,8 @@ extension ClinicsEndPoint: TargetType, EnvironmentProtocol {
     }
     var path: String {
         switch self {
+        case .home:
+            return "clinic"
         case .clinicDetails(let clinicId):
             return "clinic/\(clinicId)/"
         case .clinicList:
@@ -28,6 +31,8 @@ extension ClinicsEndPoint: TargetType, EnvironmentProtocol {
     }
     var method: Moya.Method {
         switch self {
+        case .home:
+            return .get
         case .clinicDetails:
             return .get
         case .clinicList:
@@ -39,6 +44,8 @@ extension ClinicsEndPoint: TargetType, EnvironmentProtocol {
     }
     var task: Task {
         switch self {
+        case .home:
+            return .requestPlain
         case .clinicDetails:
             return .requestPlain
         case .clinicList(let parms):

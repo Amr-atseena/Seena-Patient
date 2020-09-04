@@ -14,4 +14,7 @@ class ClinicsRomoteDataManager: APIService<ClinicsEndPoint>, ClinicsRemoteDataMa
     func retriveClinicDetails(atClinicId clinicId: Int, completionHandler: @escaping (Result<Codable, Error>) -> Void) {
         request(target: .clinicDetails(clinicId: clinicId), objType: BaseResponse<Clinic>.self, completionHandler: completionHandler)
     }
+    func retriveClinicsHome(completionHandler: @escaping (Result<Codable, Error>) -> Void) {
+        request(target: .home, objType: BaseResponse<ClinicsHomeResponse>.self, completionHandler: completionHandler)
+    }
 }

@@ -27,7 +27,7 @@ class ClinicsHomePresenter: ClinicsHomePresenterProtocol {
         view?.setupClinicsTableView()
     }
     func searchButtonTapped() {
-        let speciality = Speciality(id: 0, image: "", speciality: "", services: [])
+        let speciality = Speciality(id: 0, image: "", speciality: "", services: [], clinics: [])
         router?.go(to: .clincsSearch(speciality: speciality))
     }
     func clinicOfWeekButtonTapped() {
@@ -48,4 +48,10 @@ class ClinicsHomePresenter: ClinicsHomePresenterProtocol {
 }
 // MARK: - ClinicsHomeOutputInteractorProtocol Implementation
 extension ClinicsHomePresenter: ClinicsHomeOutputInteractorProtocol {
+    func onRetriveClinicsHomeSuccess(specialities: [Speciality], clinicOfTheWeek: Clinic) {
+    
+    }
+    func onRetriveClincsHomeFail() {
+    }
+    
 }

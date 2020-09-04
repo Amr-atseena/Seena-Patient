@@ -14,7 +14,8 @@ class ClinicsHomeRouter: ClinicsHomeRouterProtocol {
     // MARK: - Assemble
     static func assembleModule() -> UIViewController {
         let router = ClinicsHomeRouter()
-        let interactor = ClinicsHomeInteractor()
+        let remoteDataManager = ClinicsRomoteDataManager()
+        let interactor = ClinicsHomeInteractor(remoteDataManager: remoteDataManager)
         let view = ClinicsHomeVC()
         let presenter = ClinicsHomePresenter(view: view, interactor: interactor, router: router)
         router.viewController = view

@@ -22,10 +22,14 @@ protocol ClinicsHomeRouterProtocol {
 // MARK: - ClinicsHome Interactor
 protocol ClinicsHomeInputInteractorProtocol: class {
     var presenter: ClinicsHomeOutputInteractorProtocol? { get set }
+    var remoteDataManager: ClinicsRemoteDataManangerProtocol { get set }
     // Presenter -> Interactor
+    func retriveClinicsHome()
 }
 protocol ClinicsHomeOutputInteractorProtocol: class {
     // Interactor -> Presenter
+    func onRetriveClinicsHomeSuccess(specialities: [Speciality],clinicOfTheWeek: Clinic)
+    func onRetriveClincsHomeFail()
 }
 // MARK: - ClinicsHome Preseneter
 protocol ClinicsHomePresenterProtocol: class {

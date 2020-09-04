@@ -10,4 +10,5 @@ import Foundation
 protocol ClinicsRemoteDataManangerProtocol {
    func retriveClinicsList(parms: ClinicsListParameters, completionHandler:  @escaping (_ result: Result<Codable, Error>) -> Void)
     func retriveClinicDetails(atClinicId clinicId: Int, completionHandler:  @escaping (_ result: Result<Codable, Error>) -> Void)
+    func retriveClinicsHome(completionHandler:  @escaping (_ result: Result<Codable, Error>) -> Void)
 }
