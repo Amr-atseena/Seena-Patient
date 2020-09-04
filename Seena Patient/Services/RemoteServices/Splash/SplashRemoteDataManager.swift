@@ -9,6 +9,6 @@
 import Foundation
 class SplashRemoteDataManager: APIService<SplashEndPoint>, SplashRemoteDataManagerProtocol {
     func retriveMetaData(completionHandler: @escaping ((Result<Codable, Error>) -> Void)) {
-        request(target: .splash, objType: BaseResponse<[City]>.self, completionHandler: completionHandler)
+        request(target: .splash, objType: BaseResponse<SplashResponse>.self, completionHandler: completionHandler)
     }
 }

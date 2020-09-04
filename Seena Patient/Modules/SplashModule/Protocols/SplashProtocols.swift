@@ -29,7 +29,7 @@ protocol SplashInputInteractorProtocol: class {
 protocol SplashOutputInteractorProtocol: class {
     // Interactor -> Presenter
     func onRetriveMetaDataSuccess()
-    func onRetriveDataFail()
+    func onRetriveDataFail(_ error: String)
 }
 // MARK: - Splash Presenter
 protocol SplashPresenterProtocol: class {

@@ -22,16 +22,16 @@ class SplashPresenter: SplashPresenterProtocol {
     // MARK: - Methods
     func viewDidLoad() {
         view?.showLoadingIndictor()
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-            self.view?.hideLoadingIndictor()
-            self.router?.go(to: .tabBar)
-        }
+        interactor?.retriveMetaData()
     }
 }
 // MARK: - SpalshOutputInteractorProtocol Extenstion
 extension SplashPresenter: SplashOutputInteractorProtocol {
     func onRetriveMetaDataSuccess() {
+        view?.hideLoadingIndictor()
+        router?.go(to: .tabBar)
     }
-    func onRetriveDataFail() {
+    func onRetriveDataFail(_ error: String) {
+        view?.hideLoadingIndictor()
     }
 }

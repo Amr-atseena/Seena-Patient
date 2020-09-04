@@ -42,6 +42,7 @@
 		883D941824F44392004A3F86 /* SpectialitySkeltonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 883D941624F44392004A3F86 /* SpectialitySkeltonCell.xib */; };
 		883D941C24F474CA004A3F86 /* PackageSkeltonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883D941A24F474CA004A3F86 /* PackageSkeltonCell.swift */; };
 		883D941D24F474CA004A3F86 /* PackageSkeltonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 883D941B24F474CA004A3F86 /* PackageSkeltonCell.xib */; };
+		887C630B25021CE800C69E2A /* SplashResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887C630A25021CE800C69E2A /* SplashResponse.swift */; };
 		8885BB0F250150C5000D7BD5 /* Clinic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8885BB0E250150C5000D7BD5 /* Clinic.swift */; };
 		8885BB11250150F3000D7BD5 /* Gallery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8885BB10250150F3000D7BD5 /* Gallery.swift */; };
 		8885BB1425015D56000D7BD5 /* ClinicViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8885BB1325015D56000D7BD5 /* ClinicViewModel.swift */; };
@@ -205,6 +206,7 @@
 		883D941624F44392004A3F86 /* SpectialitySkeltonCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SpectialitySkeltonCell.xib; sourceTree = "<group>"; };
 		883D941A24F474CA004A3F86 /* PackageSkeltonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageSkeltonCell.swift; sourceTree = "<group>"; };
 		883D941B24F474CA004A3F86 /* PackageSkeltonCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PackageSkeltonCell.xib; sourceTree = "<group>"; };
+		887C630A25021CE800C69E2A /* SplashResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashResponse.swift; sourceTree = "<group>"; };
 		8885BB0E250150C5000D7BD5 /* Clinic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clinic.swift; sourceTree = "<group>"; };
 		8885BB10250150F3000D7BD5 /* Gallery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gallery.swift; sourceTree = "<group>"; };
 		8885BB1325015D56000D7BD5 /* ClinicViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicViewModel.swift; sourceTree = "<group>"; };
@@ -1271,6 +1273,7 @@
 				88104B7C24F2E0F300DB5ED9 /* BaseResponse.swift */,
 				88104B7E24F2E14E00DB5ED9 /* ServerResonse.swift */,
 				88104B8024F2E39100DB5ED9 /* HomeResponse.swift */,
+				887C630A25021CE800C69E2A /* SplashResponse.swift */,
 				88104B8224F2E3AF00DB5ED9 /* Package.swift */,
 				88104B8624F2E3F700DB5ED9 /* Speciality.swift */,
 				88104B8424F2E3BA00DB5ED9 /* Service.swift */,
@@ -1821,6 +1824,7 @@
 				8CAB098324E7E9A900D38CDD /* HomeRouter.swift in Sources */,
 				8827E94E24F5A226009C64FB /* EmptyStateView.swift in Sources */,
 				88120B7F24EF2C66004A2381 /* ClinicDetailsLocalization.swift in Sources */,
+				887C630B25021CE800C69E2A /* SplashResponse.swift in Sources */,
 				8CEC77FD24E9BC5C000CED1F /* ServiceDetailsPresenter.swift in Sources */,
 				8885BB2F25019CE0000D7BD5 /* SplashLocalDataServiceProtocol.swift in Sources */,
 				8CAB097124E7CEA700D38CDD /* TabBarLocalization.swift in Sources */,
