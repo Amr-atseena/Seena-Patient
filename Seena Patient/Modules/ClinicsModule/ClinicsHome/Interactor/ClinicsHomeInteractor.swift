@@ -31,7 +31,7 @@ class ClinicsHomeInteractor: ClinicsHomeInputInteractorProtocol {
                     self.presenter?.onRetriveClincsHomeFail()
                     return
                 }
-                self.presenter?.onRetriveClinicsHomeSuccess(specialities: specialities,clinicOfTheWeek: clinicOfTheWeek)
+                self.presenter?.onRetriveClinicsHomeSuccess(specialities: specialities, clinicOfTheWeek: clinicOfTheWeek)
             }
         }
     }

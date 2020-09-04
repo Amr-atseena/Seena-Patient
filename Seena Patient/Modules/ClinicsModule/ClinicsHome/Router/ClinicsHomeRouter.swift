@@ -26,16 +26,24 @@ class ClinicsHomeRouter: ClinicsHomeRouterProtocol {
     // MARK: - Routing
     func go(to router: ClinicsHomeRoute) {
         switch router {
-        case .clinicDetails:
-            navigateToClinicDetails()
+        case .clinicDetails(let clinic):
+            navigateToClinicDetails(withClinic: clinic)
         case .clincsSearch(let speciality):
             navigateToClinicsSearch(withSpeciality: speciality)
+        case .call(let number):
+            makeCall(toNumber: number)
         }
     }
     private func navigateToClinicsSearch(withSpeciality speciality: Speciality) {
         viewController?.navigationController?.pushViewController(ClinicsSearchRouter.assembleModule(withSpeciality: speciality), animated: true)
     }
-    private func navigateToClinicDetails() {
-        viewController?.navigationController?.pushViewController(ClinicDetailsRouter.assembleModule(withClinic: Clinic(id: 0, image: "", phone: "", name: "", address: "", gallery: [], services: [])), animated: true)
+    private func navigateToClinicDetails(withClinic clinic: Clinic) {
+        viewController?.navigationController?.pushViewController(ClinicDetailsRouter.assembleModule(withClinic: clinic), animated: true)
+    }
+    private func makeCall(toNumber number: String) {
+        guard let numberURL =  URL(string: "tel://\(number)") else {
+            return
+        }
+        UIApplication.shared.open(numberURL)
     }
 }
