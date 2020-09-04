@@ -27,12 +27,12 @@ class ClinicsHomeRouter: ClinicsHomeRouterProtocol {
         switch router {
         case .clinicDetails:
             navigateToClinicDetails()
-        case .clincsSearch:
-           navigateToClinicsSearch()
+        case .clincsSearch(let speciality):
+            navigateToClinicsSearch(withSpeciality: speciality)
         }
     }
-    private func navigateToClinicsSearch() {
-        viewController?.navigationController?.pushViewController(ClinicsSearchRouter.assembleModule(), animated: true)
+    private func navigateToClinicsSearch(withSpeciality speciality: Speciality) {
+        viewController?.navigationController?.pushViewController(ClinicsSearchRouter.assembleModule(withSpeciality: speciality), animated: true)
     }
     private func navigateToClinicDetails() {
         viewController?.navigationController?.pushViewController(ClinicDetailsRouter.assembleModule(withClinic: Clinic(id: 0, image: "", phone: "", name: "", address: "", gallery: [], services: [])), animated: true)

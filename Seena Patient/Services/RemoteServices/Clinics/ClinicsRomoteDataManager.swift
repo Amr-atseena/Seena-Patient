@@ -8,6 +8,9 @@
 
 import Foundation
 class ClinicsRomoteDataManager: APIService<ClinicsEndPoint>, ClinicsRemoteDataManangerProtocol {
+    func retriveClinicsList(parms: ClinicsListParameters, completionHandler: @escaping (Result<Codable, Error>) -> Void) {
+        request(target: .clinicList(parms: parms), objType: BaseResponse<[Clinic]>.self, completionHandler: completionHandler)
+    }
     func retriveClinicDetails(atClinicId clinicId: Int, completionHandler: @escaping (Result<Codable, Error>) -> Void) {
         request(target: .clinicDetails(clinicId: clinicId), objType: BaseResponse<Clinic>.self, completionHandler: completionHandler)
     }

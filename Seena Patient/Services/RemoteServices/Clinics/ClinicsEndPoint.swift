@@ -11,6 +11,7 @@ import Moya
 
 enum ClinicsEndPoint {
     case clinicDetails(clinicId: Int)
+    case clinicList(parms: ClinicsListParameters)
 }
 // MARK: - TargetType Protocol Implementation
 extension ClinicsEndPoint: TargetType, EnvironmentProtocol {
@@ -19,13 +20,17 @@ extension ClinicsEndPoint: TargetType, EnvironmentProtocol {
     }
     var path: String {
         switch self {
-        case .clinicDetails(let clinicId) :
+        case .clinicDetails(let clinicId):
             return "clinic/\(clinicId)/"
+        case .clinicList:
+            return "clinic/all"
         }
     }
     var method: Moya.Method {
         switch self {
         case .clinicDetails:
+            return .get
+        case .clinicList:
             return .get
         }
     }
@@ -36,6 +41,14 @@ extension ClinicsEndPoint: TargetType, EnvironmentProtocol {
         switch self {
         case .clinicDetails:
             return .requestPlain
+        case .clinicList(let parms):
+            let parms: [String: Any] = [
+                "offset": parms.offset,
+                "limit": parms.limit,
+                "search": parms.search,
+                "cityId": parms.cityId,
+                "specialityId": parms.specialityId]
+            return .requestParameters(parameters: parms, encoding: URLEncoding.queryString)
         }
     }
     var headers: [String: String]? {

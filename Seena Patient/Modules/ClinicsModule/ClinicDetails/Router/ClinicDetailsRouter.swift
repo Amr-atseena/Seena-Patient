@@ -28,8 +28,8 @@ class ClinicDetailsRouter: ClinicDetailsRouterProtocol {
         switch router {
         case .clinicHome:
             navigateToHome()
-        case .serviceDetails:
-            navigateToServiesDetails(withService: Service(seriveId: 0, image: "", name: "", specialityID: 0, serviceDescription: "", priceMin: 0, priceMax: 0, clinics: []))
+        case .serviceDetails(let service):
+            navigateToServiesDetails(withService: service)
         case .call(let number):
             makeCall(toNumber: number)
         }

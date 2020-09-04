@@ -21,7 +21,7 @@ class ServiceClinicCell: UICollectionViewCell {
     }
 }
 // MARK: - ClinicCellView Protocol Implementation
-extension ServiceClinicCell: ClinicCellView {
+extension ServiceClinicCell: ClinicCellProtocol {
     func setClinic(_ clinic: ClinicViewModel) {
         clinicNameLabel.text = clinic.name
         clinicImage.kf.setImage(with: URL(string: clinic.image))

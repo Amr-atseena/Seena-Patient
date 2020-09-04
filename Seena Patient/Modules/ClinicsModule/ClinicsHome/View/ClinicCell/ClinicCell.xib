@@ -145,6 +145,7 @@
             <connections>
                 <outlet property="callButton" destination="GvY-Kg-a2l" id="iem-eK-0Ot"/>
                 <outlet property="clinicAddressLabel" destination="sfg-bH-BdM" id="3QP-mp-ZCY"/>
+                <outlet property="clinicImage" destination="Lb5-uz-Sm6" id="vtR-li-lA8"/>
                 <outlet property="clinicNameLabel" destination="ffM-42-Xgj" id="A1z-e7-xC2"/>
             </connections>
             <point key="canvasLocation" x="149.27536231884059" y="119.53125"/>

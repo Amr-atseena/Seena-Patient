@@ -11,7 +11,7 @@ import UIKit
 // MARK: - ClinicsHome Router
 enum ClinicsHomeRoute {
     case clinicDetails
-    case clincsSearch
+    case clincsSearch(speciality: Speciality)
 }
 protocol ClinicsHomeRouterProtocol {
     // Presenter -> Router

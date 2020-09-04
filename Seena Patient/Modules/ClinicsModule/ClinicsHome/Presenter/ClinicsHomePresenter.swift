@@ -27,13 +27,14 @@ class ClinicsHomePresenter: ClinicsHomePresenterProtocol {
         view?.setupClinicsTableView()
     }
     func searchButtonTapped() {
-        router?.go(to: .clincsSearch)
+        let speciality = Speciality(id: 0, image: "", speciality: "", services: [])
+        router?.go(to: .clincsSearch(speciality: speciality))
     }
     func clinicOfWeekButtonTapped() {
         router?.go(to: .clinicDetails)
     }
     func callButtonTapped() {
-        router?.go(to: .clincsSearch)
+      //  router?.go(to: .clincsSearch)
     }
     func clinicTableView(selectedAtIndex index: Int, andSection section: Int) {
         router?.go(to: .clinicDetails)

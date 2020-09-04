@@ -65,7 +65,8 @@ class ClinicDetailsPresenter: ClinicDetailsPresenterProtocol {
       //  router?.go(to: .)
     }
     func serviesCollectionView(selectedAtIndex index: Int) {
-        router?.go(to: .serviceDetails)
+        let service = services[index]
+        router?.go(to: .serviceDetails(service: service))
     }
     func config(serviceCell cell: ServiceCellProtocol, atIndex index: Int) {
         let service = services[index]

@@ -43,7 +43,7 @@ class ServiceDetailsPresenter: ServiceDetailsPresenterProtocol {
     func backButtonTapped() {
         router?.go(to: .home)
     }
-    func config(clinicCell cell: ClinicCellView, atIndex index: Int) {
+    func config(clinicCell cell: ClinicCellProtocol, atIndex index: Int) {
         let clinic = service.clinics?[index]
         cell.setClinic(ClinicViewModel(clinic: clinic))
     }

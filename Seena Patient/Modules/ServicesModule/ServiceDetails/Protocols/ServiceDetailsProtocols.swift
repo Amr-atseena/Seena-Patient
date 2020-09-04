@@ -40,7 +40,7 @@ protocol ServiceDetailsPresenterProtocol: class {
     func viewDidLoad()
     func shareButtonTapped()
     func backButtonTapped()
-    func config(clinicCell cell: ClinicCellView, atIndex index: Int)
+    func config(clinicCell cell: ClinicCellProtocol, atIndex index: Int)
     func didSelectClinic(atIndex index: Int)
     var numberOfClinics: Int { get }
 }
@@ -57,6 +57,6 @@ protocol ServiceDetailsViewProtocol: class {
     func hideSkelton()
 }
 // MARK: - ClinicCell View
-protocol ClinicCellView {
+protocol ClinicCellProtocol {
     func setClinic(_ clinic: ClinicViewModel)
 }

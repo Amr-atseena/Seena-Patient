@@ -12,9 +12,7 @@
             <connections>
                 <outlet property="citiesCollectionView" destination="DQT-jp-xa2" id="ohk-iU-Hzc"/>
                 <outlet property="clinicsResultsTableView" destination="KwU-3G-FP8" id="hU5-VX-sUs"/>
-                <outlet property="noResultsHeaderKeywordLabel" destination="mpJ-OB-3yE" id="qEZ-QL-Bp8"/>
                 <outlet property="noResultsView" destination="p58-8f-KNK" id="eAA-z3-X28"/>
-                <outlet property="noResultsbodyKeywordLabel" destination="907-NQ-Bl3" id="gSS-e0-FIV"/>
                 <outlet property="resultsKeyordLabel" destination="zxb-4o-uAS" id="rhD-ln-a2q"/>
                 <outlet property="searchTextFiled" destination="BS4-mK-Jcg" id="zWv-k3-3I7"/>
                 <outlet property="spicialityLabel" destination="R0S-0h-xHt" id="3At-HE-dpW"/>
@@ -117,38 +115,12 @@
                         <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" keyboardDismissMode="onDrag" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="KwU-3G-FP8">
                             <rect key="frame" x="0.0" y="231" width="414" height="665"/>
                             <color key="backgroundColor" red="0.97254901959999995" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                            </userDefinedRuntimeAttributes>
                         </tableView>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p58-8f-KNK">
+                        <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p58-8f-KNK" customClass="EmptyStateView" customModule="Seena" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="231" width="414" height="665"/>
-                            <subviews>
-                                <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="aJo-Lu-49q">
-                                    <rect key="frame" x="143" y="174.5" width="128.5" height="135"/>
-                                    <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="noResults" translatesAutoresizingMaskIntoConstraints="NO" id="xPd-24-NcO">
-                                            <rect key="frame" x="0.0" y="0.0" width="128.5" height="80"/>
-                                        </imageView>
-                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="d5P-FJ-hhu">
-                                            <rect key="frame" x="0.0" y="90" width="128.5" height="45"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mpJ-OB-3yE">
-                                                    <rect key="frame" x="0.0" y="0.0" width="128.5" height="20.5"/>
-                                                    <string key="text">We tried looking; 
-</string>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="found nothing!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="907-NQ-Bl3">
-                                                    <rect key="frame" x="0.0" y="24.5" width="128.5" height="20.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </stackView>
-                                    </subviews>
-                                </stackView>
-                            </subviews>
                             <color key="backgroundColor" red="0.97254901959999995" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </view>
                     </subviews>
@@ -171,6 +143,9 @@
                         <constraint firstItem="KwU-3G-FP8" firstAttribute="top" secondItem="DQT-jp-xa2" secondAttribute="bottom" constant="15" id="sgf-g2-kwA"/>
                         <constraint firstItem="DQT-jp-xa2" firstAttribute="leading" secondItem="XxY-ng-Zav" secondAttribute="leading" id="vgK-ya-Z0g"/>
                     </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                    </userDefinedRuntimeAttributes>
                 </view>
             </subviews>
             <color key="backgroundColor" red="0.97254901959999995" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -183,12 +158,14 @@
                 <constraint firstItem="XxY-ng-Zav" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="sDl-hd-O6V"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+            </userDefinedRuntimeAttributes>
             <point key="canvasLocation" x="141" y="125"/>
         </view>
     </objects>
     <resources>
         <image name="back" width="25" height="25"/>
-        <image name="noResults" width="80" height="80"/>
         <image name="search" width="20" height="20"/>
     </resources>
 </document>
