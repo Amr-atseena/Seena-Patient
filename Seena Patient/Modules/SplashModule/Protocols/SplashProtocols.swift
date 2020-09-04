@@ -12,6 +12,7 @@ import UIKit
 // MARK: - Splash Router
 enum SplashRoute {
     case tabBar
+    case alert(alertEntity: AlertEntity)
 }
 protocol SplashRouterProtocol: class {
     var viewController: UIViewController? { get set }
@@ -38,6 +39,7 @@ protocol SplashPresenterProtocol: class {
     var view: SplashViewProtocol? { get set }
     // View -> Presenter
     func viewDidLoad()
+    func retriveMetaData()
 }
 // MARK: - Splash View
 protocol SplashViewProtocol: class {

@@ -43,6 +43,7 @@
 		883D941C24F474CA004A3F86 /* PackageSkeltonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883D941A24F474CA004A3F86 /* PackageSkeltonCell.swift */; };
 		883D941D24F474CA004A3F86 /* PackageSkeltonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 883D941B24F474CA004A3F86 /* PackageSkeltonCell.xib */; };
 		887C630B25021CE800C69E2A /* SplashResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887C630A25021CE800C69E2A /* SplashResponse.swift */; };
+		887C630D250225C200C69E2A /* AlertEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887C630C250225C200C69E2A /* AlertEntity.swift */; };
 		8885BB0F250150C5000D7BD5 /* Clinic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8885BB0E250150C5000D7BD5 /* Clinic.swift */; };
 		8885BB11250150F3000D7BD5 /* Gallery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8885BB10250150F3000D7BD5 /* Gallery.swift */; };
 		8885BB1425015D56000D7BD5 /* ClinicViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8885BB1325015D56000D7BD5 /* ClinicViewModel.swift */; };
@@ -207,6 +208,7 @@
 		883D941A24F474CA004A3F86 /* PackageSkeltonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageSkeltonCell.swift; sourceTree = "<group>"; };
 		883D941B24F474CA004A3F86 /* PackageSkeltonCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PackageSkeltonCell.xib; sourceTree = "<group>"; };
 		887C630A25021CE800C69E2A /* SplashResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashResponse.swift; sourceTree = "<group>"; };
+		887C630C250225C200C69E2A /* AlertEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertEntity.swift; sourceTree = "<group>"; };
 		8885BB0E250150C5000D7BD5 /* Clinic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clinic.swift; sourceTree = "<group>"; };
 		8885BB10250150F3000D7BD5 /* Gallery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gallery.swift; sourceTree = "<group>"; };
 		8885BB1325015D56000D7BD5 /* ClinicViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicViewModel.swift; sourceTree = "<group>"; };
@@ -1280,6 +1282,7 @@
 				8885BB0E250150C5000D7BD5 /* Clinic.swift */,
 				8885BB10250150F3000D7BD5 /* Gallery.swift */,
 				8885BB2225019548000D7BD5 /* City.swift */,
+				887C630C250225C200C69E2A /* AlertEntity.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -1767,6 +1770,7 @@
 				88EDA11F24FADD9B00460B4D /* ServiceResultSkeltonCell.swift in Sources */,
 				88104B7D24F2E0F300DB5ED9 /* BaseResponse.swift in Sources */,
 				88ED041E24EFFD9100BBCEF6 /* NotificationsHomeRouter.swift in Sources */,
+				887C630D250225C200C69E2A /* AlertEntity.swift in Sources */,
 				8C8CB3ED24E6CA46009679E5 /* String+Extensions.swift in Sources */,
 				8C8CB41424E6EBFD009679E5 /* CustomizedTabBar.swift in Sources */,
 				88EDA11A24FADA0D00460B4D /* ServiceResultCell.swift in Sources */,

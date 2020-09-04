@@ -21,6 +21,9 @@ class SplashPresenter: SplashPresenterProtocol {
     }
     // MARK: - Methods
     func viewDidLoad() {
+        retriveMetaData()
+    }
+    func retriveMetaData() {
         view?.showLoadingIndictor()
         interactor?.retriveMetaData()
     }
@@ -33,5 +36,6 @@ extension SplashPresenter: SplashOutputInteractorProtocol {
     }
     func onRetriveDataFail(_ error: String) {
         view?.hideLoadingIndictor()
+        router?.go(to: .alert(alertEntity: AlertEntity(title: "Error", message: error)))
     }
 }
