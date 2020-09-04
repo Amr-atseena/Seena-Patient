@@ -14,7 +14,8 @@ class ClinicsSearchRouter: ClinicsSearchRouterProtocol {
     // MARK: - Assemble
     static func assembleModule() -> UIViewController {
         let router = ClinicsSearchRouter()
-        let interactor = ClinicsSearchInteractor()
+        let localDataManager = ClinicsSearchLocalDataManager()
+        let interactor = ClinicsSearchInteractor(localDataManager: localDataManager)
         let view = ClinicsSearchVC()
         let presenter = ClinicsSearchPresenter(view: view, interactor: interactor, router: router)
         router.viewController = view

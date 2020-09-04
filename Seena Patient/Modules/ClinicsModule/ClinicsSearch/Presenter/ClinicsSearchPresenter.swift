@@ -14,6 +14,11 @@ class ClinicsSearchPresenter: ClinicsSearchPresenterProtocol {
     var interactor: ClinicsSearchInputInteractorProtocol?
     var router: ClinicsSearchRouterProtocol?
     let localization = ClinicsSearchLocalization()
+    private var cities = [City]() {
+        didSet {
+            view?.reloadOptions()
+        }
+    }
     // MARK: - Init
     init(view: ClinicsSearchViewProtocol?, interactor: ClinicsSearchInputInteractorProtocol, router: ClinicsSearchRouterProtocol ) {
         self.view = view
@@ -40,4 +45,7 @@ class ClinicsSearchPresenter: ClinicsSearchPresenterProtocol {
 }
 // MARK: - ClinicsSearchOutputInteractorProtocol Implementation
 extension ClinicsSearchPresenter: ClinicsSearchOutputInteractorProtocol {
+    func onRetriveCities(_ cities: [City]) {
+        self.cities = cities
+    }
 }

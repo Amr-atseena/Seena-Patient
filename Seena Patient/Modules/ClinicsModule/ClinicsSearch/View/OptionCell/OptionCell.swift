@@ -33,5 +33,5 @@ extension OptionCell: OptionCellProtocol {
     func set(option: OptionViewModel) {
         optionNameLabel.text = option.name
         isSelected = option.isSelected
-    }    
+    }
 }

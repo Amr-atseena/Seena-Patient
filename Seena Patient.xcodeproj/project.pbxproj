@@ -48,6 +48,8 @@
 		887C63142502341D00C69E2A /* OptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887C63122502341D00C69E2A /* OptionCell.swift */; };
 		887C63152502341D00C69E2A /* OptionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 887C63132502341D00C69E2A /* OptionCell.xib */; };
 		887C6318250237F300C69E2A /* OptionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887C6317250237F300C69E2A /* OptionViewModel.swift */; };
+		887C631B25023AB700C69E2A /* ClinicsSearchLocolDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887C631A25023AB700C69E2A /* ClinicsSearchLocolDataManager.swift */; };
+		887C631D25023B3E00C69E2A /* ClinicsSearchLocolDataManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887C631C25023B3E00C69E2A /* ClinicsSearchLocolDataManagerProtocol.swift */; };
 		8885BB0F250150C5000D7BD5 /* Clinic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8885BB0E250150C5000D7BD5 /* Clinic.swift */; };
 		8885BB11250150F3000D7BD5 /* Gallery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8885BB10250150F3000D7BD5 /* Gallery.swift */; };
 		8885BB1425015D56000D7BD5 /* ClinicViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8885BB1325015D56000D7BD5 /* ClinicViewModel.swift */; };
@@ -217,6 +219,8 @@
 		887C63122502341D00C69E2A /* OptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionCell.swift; sourceTree = "<group>"; };
 		887C63132502341D00C69E2A /* OptionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OptionCell.xib; sourceTree = "<group>"; };
 		887C6317250237F300C69E2A /* OptionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionViewModel.swift; sourceTree = "<group>"; };
+		887C631A25023AB700C69E2A /* ClinicsSearchLocolDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicsSearchLocolDataManager.swift; sourceTree = "<group>"; };
+		887C631C25023B3E00C69E2A /* ClinicsSearchLocolDataManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicsSearchLocolDataManagerProtocol.swift; sourceTree = "<group>"; };
 		8885BB0E250150C5000D7BD5 /* Clinic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clinic.swift; sourceTree = "<group>"; };
 		8885BB10250150F3000D7BD5 /* Gallery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gallery.swift; sourceTree = "<group>"; };
 		8885BB1325015D56000D7BD5 /* ClinicViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicViewModel.swift; sourceTree = "<group>"; };
@@ -549,6 +553,15 @@
 				887C6317250237F300C69E2A /* OptionViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		887C631925023A9600C69E2A /* ClinicsSearch */ = {
+			isa = PBXGroup;
+			children = (
+				887C631A25023AB700C69E2A /* ClinicsSearchLocolDataManager.swift */,
+				887C631C25023B3E00C69E2A /* ClinicsSearchLocolDataManagerProtocol.swift */,
+			);
+			path = ClinicsSearch;
 			sourceTree = "<group>";
 		};
 		8885BB1225015D49000D7BD5 /* ViewModel */ = {
@@ -1211,6 +1224,7 @@
 		8C8CB3F024E6CF23009679E5 /* LocalServices */ = {
 			isa = PBXGroup;
 			children = (
+				887C631925023A9600C69E2A /* ClinicsSearch */,
 				8885BB2D25019C60000D7BD5 /* City */,
 				8885BB1F2501942D000D7BD5 /* Spalsh */,
 			);
@@ -1828,6 +1842,7 @@
 				88120B7024EF1CC3004A2381 /* ClinicCell.swift in Sources */,
 				88ED040624EFCD9A00BBCEF6 /* ClinicsSearchPresenter.swift in Sources */,
 				88ED042224EFFD9100BBCEF6 /* NotificationsHomeVC.swift in Sources */,
+				887C631D25023B3E00C69E2A /* ClinicsSearchLocolDataManagerProtocol.swift in Sources */,
 				8CAB09B024E8357E00D38CDD /* ServiceCell.swift in Sources */,
 				8CAB09AB24E8274200D38CDD /* SpectialityCell.swift in Sources */,
 				88104B9324F3023B00DB5ED9 /* ServiceViewModel.swift in Sources */,
@@ -1868,6 +1883,7 @@
 				8827E94E24F5A226009C64FB /* EmptyStateView.swift in Sources */,
 				88120B7F24EF2C66004A2381 /* ClinicDetailsLocalization.swift in Sources */,
 				887C630B25021CE800C69E2A /* SplashResponse.swift in Sources */,
+				887C631B25023AB700C69E2A /* ClinicsSearchLocolDataManager.swift in Sources */,
 				8CEC77FD24E9BC5C000CED1F /* ServiceDetailsPresenter.swift in Sources */,
 				8885BB2F25019CE0000D7BD5 /* SplashLocalDataServiceProtocol.swift in Sources */,
 				887C63102502324F00C69E2A /* OptionsAdapter.swift in Sources */,

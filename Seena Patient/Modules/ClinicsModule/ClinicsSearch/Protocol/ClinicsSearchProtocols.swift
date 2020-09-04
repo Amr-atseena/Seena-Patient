@@ -22,10 +22,13 @@ protocol ClinicsSearchRouterProtocol {
 // MARK: - ClinicsSearch Interactor
 protocol ClinicsSearchInputInteractorProtocol: class {
     var presenter: ClinicsSearchOutputInteractorProtocol? { get set }
+    var localDataManager: ClinicsSearchLocalDataManagerProtocol { get set }
     // Presenter -> Interactor
+    func retriveCities()
 }
 protocol ClinicsSearchOutputInteractorProtocol: class {
     // Interactor -> Presenter
+    func onRetriveCities(_ cities: [City])
 }
 // MARK: - ClinicsSearch Preseneter
 protocol ClinicsSearchPresenterProtocol: class {

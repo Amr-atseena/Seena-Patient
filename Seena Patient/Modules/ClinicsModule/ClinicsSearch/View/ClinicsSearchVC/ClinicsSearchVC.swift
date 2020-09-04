@@ -71,6 +71,9 @@ class ClinicsSearchVC: UIViewController, ClinicsSearchViewProtocol {
     func reloadClinicsTableView() {
         clinicsResultsTableView.reloadData()
     }
+    func reloadOptions() {
+        citiesCollectionView.reloadData()
+    }
     func showSkelton() {
         noResultsView.isHidden = true
     }
