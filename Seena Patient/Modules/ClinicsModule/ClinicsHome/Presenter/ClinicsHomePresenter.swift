@@ -48,7 +48,9 @@ class ClinicsHomePresenter: ClinicsHomePresenterProtocol {
         router?.go(to: .call(number: clinicOfTheWeek.phone))
     }
     func config(headerCell cell: ClinicsSectionHeaderCellProtocol, atSection section: Int) {
-        cell.setSpeciality(name: specialities[section].speciality)
+        if !specialities.isEmpty {
+            cell.setSpeciality(name: specialities[section].speciality)
+        }
     }
     func config(ClinicCell cell: ClinicCellProtocol, atIndex index: Int, andSection section: Int) {
         let clinic = specialities[section].clinics?[index]

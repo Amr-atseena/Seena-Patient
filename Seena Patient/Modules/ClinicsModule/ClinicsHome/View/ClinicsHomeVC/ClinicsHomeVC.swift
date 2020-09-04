@@ -71,6 +71,7 @@ class ClinicsHomeVC: UIViewController, ClinicsHomeViewProtocol {
         clinicsTableView.dataSource = self
         clinicsTableView.register(cellWithClass: ClinicCell.self)
         clinicsTableView.register(cellWithClass: ClinicsSectionHeaderCell.self)
+        clinicsTableView.register(cellWithClass: ClinicSkeletonCell.self)
     }
     func setClinicOfTheWeek(_ clinic: ClinicViewModel) {
         clinicOfWeekNameLabel.text = clinic.name
@@ -135,6 +136,18 @@ extension ClinicsHomeVC: UITableViewDelegate {
         return header
     }
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 35
+        return 38
+    }
+}
+// MARK: - SkeletonTableViewDataSource Implementaion
+extension ClinicsHomeVC: SkeletonTableViewDataSource {
+    func collectionSkeletonView(_ skeletonView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 5
+    }
+    func collectionSkeletonView(_ skeletonView: UITableView, cellIdentifierForRowAt indexPath: IndexPath) -> ReusableCellIdentifier {
+        return ClinicSkeletonCell.className
+    }
+    func numSections(in collectionSkeletonView: UITableView) -> Int {
+        return 1
     }
 }
