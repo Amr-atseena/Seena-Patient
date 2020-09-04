@@ -11,11 +11,13 @@ import UIKit
 class ClinicsSearchVC: UIViewController, ClinicsSearchViewProtocol {
     // MARK: - Outlets
     @IBOutlet private var resultsKeyordLabel: UILabel!
+    @IBOutlet private var spicialityLabel: UILabel!
     @IBOutlet private var searchTextFiled: UITextField!
     @IBOutlet private var noResultsView: UIView!
     @IBOutlet private var noResultsHeaderKeywordLabel: UILabel!
     @IBOutlet private var noResultsbodyKeywordLabel: UILabel!
     @IBOutlet private var clinicsResultsTableView: UITableView!
+    @IBOutlet private var citiesCollectionView: UICollectionView!
     // MARK: - Attributes
     var presenter: ClinicsSearchPresenterProtocol!
     // MARK: - Init
@@ -34,6 +36,9 @@ class ClinicsSearchVC: UIViewController, ClinicsSearchViewProtocol {
     // MARK: - Methods
     // MARK: - Methods
     func setupUI() {
+        // spiciality Label
+        spicialityLabel.textColor = DesignSystem.Colors.secondaryText.color
+        spicialityLabel.font = DesignSystem.Typography.title3.font
         // results keyword Label
         resultsKeyordLabel.text = presenter.localization.results
         resultsKeyordLabel.textColor = DesignSystem.Colors.secondaryText.color
@@ -57,6 +62,11 @@ class ClinicsSearchVC: UIViewController, ClinicsSearchViewProtocol {
         clinicsResultsTableView.delegate = self
         clinicsResultsTableView.dataSource = self
         clinicsResultsTableView.register(cellWithClass: ClinicCell.self)
+    }
+    func setupOptionsCollectionView(withOptionsAdapter optionsAdapter: OptionsAdapter) {
+        citiesCollectionView.dataSource = optionsAdapter
+        citiesCollectionView.delegate = optionsAdapter
+        citiesCollectionView.register(cellWithClass: OptionCell.self)
     }
     func reloadClinicsTableView() {
         clinicsResultsTableView.reloadData()

@@ -44,9 +44,21 @@ protocol ClinicsSearchPresenterProtocol: class {
 protocol ClinicsSearchViewProtocol: class {
     var presenter: ClinicsSearchPresenterProtocol! { get set }
     // Presenter -> View
-        func setupUI()
-        func setupClinicsTableView()
-        func reloadClinicsTableView()
-        func showSkelton()
-        func hideSkelton()
+    func setupUI()
+    func setupClinicsTableView()
+    func setupOptionsCollectionView(withOptionsAdapter optionsAdapter: OptionsAdapter)
+    func reloadOptions()
+    func reloadClinicsTableView()
+    func showSkelton()
+    func hideSkelton()
+}
+// MARK: - OptionsAdapter
+protocol OptionsAdapterProtocol: class {
+    func cnofig(optionCell cell: OptionCellProtocol, atIndex index: Int)
+    func optionCell(selectedAtIndex index: Int)
+    var numberOfOptions: Int { get }
+}
+// MARK: - OptionCell Protocol
+protocol OptionCellProtocol {
+    func set(option: OptionViewModel)
 }
