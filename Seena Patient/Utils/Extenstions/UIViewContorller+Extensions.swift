@@ -34,16 +34,16 @@ extension UIViewController {
             navigationItem.title = title
         }
     }
-    func showAlertController(title: String, message: String,actions: [UIAlertAction]) {
+    func showAlertController(title: String, message: String, actions: [UIAlertAction]) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         if actions.isEmpty {
             let okAction = UIAlertAction(title: NSLocalizedString("OK", comment: ""), style: .default, handler: nil)
             alert.addAction(okAction)
-        }else {
+        } else {
             for action in actions {
                 alert.addAction(action)
             }
         }
-        self.present(alert,animated: true)
+        self.present(alert, animated: true)
     }
 }

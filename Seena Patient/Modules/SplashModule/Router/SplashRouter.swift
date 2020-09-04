@@ -38,12 +38,12 @@ class SplashRouter: SplashRouterProtocol {
         let tabBar = HomeTabBarVC()
         viewController?.present(tabBar, animated: true)
     }
-    private func showAlert(alertEntity: AlertEntity){
+    private func showAlert(alertEntity: AlertEntity) {
         guard let splash = viewController as? SplashViewProtocol else { return}
         let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
         let retryAction = UIAlertAction(title: "Retry", style: .default) {  (_) in
             splash.presenter.retriveMetaData()
         }
-        viewController?.showAlertController(title: alertEntity.title, message: alertEntity.message, actions: [okAction,retryAction])
+        viewController?.showAlertController(title: alertEntity.title, message: alertEntity.message, actions: [okAction, retryAction])
     }
 }
