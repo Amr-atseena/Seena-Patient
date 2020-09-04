@@ -107,23 +107,13 @@
                                                 <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
                                             </userDefinedRuntimeAttributes>
                                         </imageView>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yCz-pc-MW6">
-                                            <rect key="frame" x="0.0" y="0.0" width="374" height="200"/>
-                                            <connections>
-                                                <action selector="didTapClinicOfWeekButton:" destination="-1" eventType="touchUpInside" id="oIE-YT-qSO"/>
-                                            </connections>
-                                        </button>
                                     </subviews>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                     <constraints>
                                         <constraint firstItem="5JV-iP-FAq" firstAttribute="top" secondItem="Q7b-bo-vMQ" secondAttribute="top" id="5sY-3k-6Ap"/>
-                                        <constraint firstItem="yCz-pc-MW6" firstAttribute="top" secondItem="Q7b-bo-vMQ" secondAttribute="top" id="Jrm-Yp-JKY"/>
                                         <constraint firstItem="5JV-iP-FAq" firstAttribute="leading" secondItem="Q7b-bo-vMQ" secondAttribute="leading" id="NDR-UA-ok6"/>
                                         <constraint firstAttribute="trailing" secondItem="5JV-iP-FAq" secondAttribute="trailing" id="Osu-5G-7Lz"/>
                                         <constraint firstAttribute="trailing" secondItem="5JV-iP-FAq" secondAttribute="trailing" id="PWr-7p-YWw"/>
-                                        <constraint firstAttribute="bottom" secondItem="yCz-pc-MW6" secondAttribute="bottom" id="WjT-73-iuR"/>
-                                        <constraint firstAttribute="trailing" secondItem="yCz-pc-MW6" secondAttribute="trailing" id="X9z-bI-tX4"/>
-                                        <constraint firstItem="yCz-pc-MW6" firstAttribute="leading" secondItem="Q7b-bo-vMQ" secondAttribute="leading" id="bmP-P8-Daa"/>
                                         <constraint firstItem="5JV-iP-FAq" firstAttribute="leading" secondItem="Q7b-bo-vMQ" secondAttribute="leading" id="voa-tF-mSb"/>
                                         <constraint firstAttribute="bottom" secondItem="5JV-iP-FAq" secondAttribute="bottom" id="wJb-1v-grr"/>
                                     </constraints>
@@ -181,6 +171,12 @@
                                                 <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
                                             </userDefinedRuntimeAttributes>
                                         </stackView>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yCz-pc-MW6">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="200"/>
+                                            <connections>
+                                                <action selector="didTapClinicOfWeekButton:" destination="-1" eventType="touchUpInside" id="oIE-YT-qSO"/>
+                                            </connections>
+                                        </button>
                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="yvl-mQ-hFg">
                                             <rect key="frame" x="20" y="155" width="334" height="30"/>
                                             <subviews>
@@ -225,12 +221,20 @@
                                     </subviews>
                                     <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="0.28000000000000003" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                     <constraints>
+                                        <constraint firstItem="yCz-pc-MW6" firstAttribute="top" secondItem="1GO-IG-Ate" secondAttribute="top" id="8pG-VE-oSi"/>
                                         <constraint firstItem="z5H-PC-CGz" firstAttribute="leading" secondItem="1GO-IG-Ate" secondAttribute="leading" constant="20" id="DBG-hh-5oU"/>
+                                        <constraint firstItem="yCz-pc-MW6" firstAttribute="leading" secondItem="1GO-IG-Ate" secondAttribute="leading" id="I1T-BK-oL7"/>
+                                        <constraint firstAttribute="bottom" secondItem="yCz-pc-MW6" secondAttribute="bottom" id="TM9-xG-D1y"/>
+                                        <constraint firstAttribute="trailing" secondItem="yCz-pc-MW6" secondAttribute="trailing" id="UMT-kH-N2F"/>
+                                        <constraint firstItem="yCz-pc-MW6" firstAttribute="top" secondItem="1GO-IG-Ate" secondAttribute="top" id="Vms-7F-re3"/>
                                         <constraint firstAttribute="trailing" secondItem="yvl-mQ-hFg" secondAttribute="trailing" constant="20" id="aqw-8b-rKC"/>
                                         <constraint firstItem="z5H-PC-CGz" firstAttribute="top" secondItem="1GO-IG-Ate" secondAttribute="top" constant="20" id="iag-JC-ouj"/>
+                                        <constraint firstAttribute="bottom" secondItem="yCz-pc-MW6" secondAttribute="bottom" id="kqy-Al-pY6"/>
                                         <constraint firstAttribute="bottom" secondItem="yvl-mQ-hFg" secondAttribute="bottom" constant="15" id="oMZ-GW-LXT"/>
                                         <constraint firstItem="yvl-mQ-hFg" firstAttribute="leading" secondItem="1GO-IG-Ate" secondAttribute="leading" constant="20" id="uR9-7U-oqS"/>
                                         <constraint firstAttribute="height" constant="200" id="wJR-qb-IOY"/>
+                                        <constraint firstItem="yCz-pc-MW6" firstAttribute="leading" secondItem="1GO-IG-Ate" secondAttribute="leading" id="yQL-hl-nwj"/>
+                                        <constraint firstAttribute="trailing" secondItem="yCz-pc-MW6" secondAttribute="trailing" id="zR1-jW-5RR"/>
                                     </constraints>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
