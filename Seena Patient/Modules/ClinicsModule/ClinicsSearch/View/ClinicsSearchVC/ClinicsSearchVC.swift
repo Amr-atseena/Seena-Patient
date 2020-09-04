@@ -7,15 +7,16 @@
 //
 
 import UIKit
-
+import UIScrollView_InfiniteScroll
+import SkeletonView
 class ClinicsSearchVC: UIViewController, ClinicsSearchViewProtocol {
     // MARK: - Outlets
     @IBOutlet private var resultsKeyordLabel: UILabel!
+    @IBOutlet private var spicialityLabel: UILabel!
     @IBOutlet private var searchTextFiled: UITextField!
     @IBOutlet private var noResultsView: UIView!
-    @IBOutlet private var noResultsHeaderKeywordLabel: UILabel!
-    @IBOutlet private var noResultsbodyKeywordLabel: UILabel!
     @IBOutlet private var clinicsResultsTableView: UITableView!
+    @IBOutlet private var citiesCollectionView: UICollectionView!
     // MARK: - Attributes
     var presenter: ClinicsSearchPresenterProtocol!
     // MARK: - Init
@@ -34,6 +35,9 @@ class ClinicsSearchVC: UIViewController, ClinicsSearchViewProtocol {
     // MARK: - Methods
     // MARK: - Methods
     func setupUI() {
+        // spiciality Label
+        spicialityLabel.textColor = DesignSystem.Colors.secondaryText.color
+        spicialityLabel.font = DesignSystem.Typography.title3.font
         // results keyword Label
         resultsKeyordLabel.text = presenter.localization.results
         resultsKeyordLabel.textColor = DesignSystem.Colors.secondaryText.color
@@ -43,28 +47,45 @@ class ClinicsSearchVC: UIViewController, ClinicsSearchViewProtocol {
         searchTextFiled.textColor = DesignSystem.Colors.primaryText.color
         searchTextFiled.tintColor = DesignSystem.Colors.primaryText.color
         searchTextFiled.font = DesignSystem.Typography.title2.font
-        searchTextFiled.becomeFirstResponder()
-        // noResultsHeaderKeyword Label
-        noResultsHeaderKeywordLabel.text = presenter.localization.noResultsHeaderKeyword
-        noResultsHeaderKeywordLabel.textColor = DesignSystem.Colors.primaryText.color
-        noResultsHeaderKeywordLabel.font = DesignSystem.Typography.title2.font
-        // noResultsbodyKeyword Label
-        noResultsbodyKeywordLabel.text = presenter.localization.noResultsbodyKeyword
-        noResultsbodyKeywordLabel.textColor = DesignSystem.Colors.primaryText.color
-        noResultsbodyKeywordLabel.font = DesignSystem.Typography.title2.font
+    }
+    func setupInfintyScrolling() {
+        self.clinicsResultsTableView.addInfiniteScroll { [weak self] (tableview) in
+            guard let self = self else {return}
+            self.presenter.retriveClinicsList()
+            tableview.finishInfiniteScroll()
+        }
+    }
+    func setSpeciality(name: String) {
+        self.spicialityLabel.text = name
     }
     func setupClinicsTableView() {
         clinicsResultsTableView.delegate = self
         clinicsResultsTableView.dataSource = self
         clinicsResultsTableView.register(cellWithClass: ClinicCell.self)
+        clinicsResultsTableView.register(cellWithClass: ClinicSkeletonCell.self)
+    }
+    func setupOptionsCollectionView(withOptionsAdapter optionsAdapter: OptionsAdapter) {
+        citiesCollectionView.dataSource = optionsAdapter
+        citiesCollectionView.delegate = optionsAdapter
+        citiesCollectionView.register(cellWithClass: OptionCell.self)
     }
     func reloadClinicsTableView() {
         clinicsResultsTableView.reloadData()
     }
+    func reloadOptions() {
+        citiesCollectionView.reloadData()
+    }
     func showSkelton() {
-        noResultsView.isHidden = true
+        clinicsResultsTableView.showAnimatedGradientSkeleton()
     }
     func hideSkelton() {
+        clinicsResultsTableView.hideSkeleton()
+    }
+    func showNoDataView() {
+        self.noResultsView.isHidden = false
+    }
+    func hideNoDataView() {
+        self.noResultsView.isHidden = true
     }
     // MARK: - Actions
     @IBAction private func didTapBackButton(_ sender: UIButton) {
@@ -86,6 +107,11 @@ extension ClinicsSearchVC: UITableViewDataSource {
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withClass: ClinicCell.self, for: indexPath)
+        presenter.config(ClinicCell: cell, atIndex: indexPath.row)
+        cell.callButtonTapped = { [weak self] in
+            guard let self = self else { return }
+            self.presenter.callButtonTapped(atIndex: indexPath.row)
+        }
         return cell
     }
 }
@@ -93,5 +119,14 @@ extension ClinicsSearchVC: UITableViewDataSource {
 extension ClinicsSearchVC: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         presenter.clinicsResultsTableView(selectedAtIndex: indexPath.row)
+    }
+}
+// MARK: - ClinicsSearch Skeleton DataSource Implementation
+extension ClinicsSearchVC: SkeletonTableViewDataSource {
+    func collectionSkeletonView(_ skeletonView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 10
+    }
+    func collectionSkeletonView(_ skeletonView: UITableView, cellIdentifierForRowAt indexPath: IndexPath) -> ReusableCellIdentifier {
+        return ClinicSkeletonCell.className
     }
 }

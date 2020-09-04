@@ -11,9 +11,9 @@ import Foundation
 class HomeInteractor: HomeInputInteractorProtocol {
     // MARK: - Attributes
     weak var presenter: HomeOutputInteractorProtocol?
-    var remoteDataServices: ServicesRemoteService?
+    var remoteDataServices: ServicesRemoteDataManager?
     // MARK: - Init
-    init(remoteServices: ServicesRemoteService) {
+    init(remoteServices: ServicesRemoteDataManager) {
         self.remoteDataServices = remoteServices
     }
     // MARK: - Methods

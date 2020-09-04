@@ -12,11 +12,12 @@ class ClinicDetailsRouter: ClinicDetailsRouterProtocol {
     // MARK: - Attributes
     weak var viewController: UIViewController?
     // MARK: - Assemble
-    static func assembleModule() -> UIViewController {
+    static func assembleModule(withClinic clinic: Clinic) -> UIViewController {
         let router = ClinicDetailsRouter()
-        let interactor = ClinicDetailsInteractor()
+        let remoteDataManager = ClinicsRomoteDataManager()
+        let interactor = ClinicDetailsInteractor(remoteDataManager: remoteDataManager)
         let view = ClinicDetailsVC()
-        let presenter = ClinicDetailsPresenter(view: view, interactor: interactor, router: router)
+        let presenter = ClinicDetailsPresenter(view: view, interactor: interactor, router: router, clinic: clinic)
         router.viewController = view
         interactor.presenter = presenter
         view.presenter = presenter
@@ -27,8 +28,10 @@ class ClinicDetailsRouter: ClinicDetailsRouterProtocol {
         switch router {
         case .clinicHome:
             navigateToHome()
-        case .serviceDetails:
-            navigateToServiesDetails(withService: Service(seriveId: 0, image: "", name: "", specialityID: 0, serviceDescription: "", priceMin: 0, priceMax: 0, clinics: []))
+        case .serviceDetails(let service):
+            navigateToServiesDetails(withService: service)
+        case .call(let number):
+            makeCall(toNumber: number)
         }
     }
     private func navigateToHome() {
@@ -36,5 +39,11 @@ class ClinicDetailsRouter: ClinicDetailsRouterProtocol {
     }
     private func navigateToServiesDetails(withService service: Service) {
         viewController?.navigationController?.pushViewController(ServiceDetailsRouter.assembleModule(withService: service), animated: true)
+    }
+    private func makeCall(toNumber number: String) {
+        guard let numberURL =  URL(string: "tel://\(number)") else {
+            return
+        }
+        UIApplication.shared.open(numberURL)
     }
 }

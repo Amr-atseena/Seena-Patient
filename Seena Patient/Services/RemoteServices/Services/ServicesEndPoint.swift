@@ -26,7 +26,7 @@ extension ServicesEndPoint: TargetType, EnvironmentProtocol {
         case .servicesList:
             return "services"
         case .serviceDetails(let serviceId):
-            return "services\\\(serviceId)"
+            return "services/\(serviceId)/"
         }
     }
     var method: Moya.Method {

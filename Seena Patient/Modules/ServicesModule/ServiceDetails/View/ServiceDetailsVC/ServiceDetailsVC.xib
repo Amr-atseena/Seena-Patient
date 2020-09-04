@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -32,19 +32,19 @@
                             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7DN-eN-4uE">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="1158.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="1117"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="VN4-hu-elP">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="1138.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="1097"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="opc-Hr-tF9" userLabel="ContainerView">
-                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="400"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="358.5"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" image="prp" translatesAutoresizingMaskIntoConstraints="NO" id="sne-nv-REL">
-                                                            <rect key="frame" x="0.0" y="242" width="414" height="158"/>
+                                                            <rect key="frame" x="0.0" y="-1" width="414" height="359.5"/>
                                                         </imageView>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IMB-dE-Wqo">
-                                                            <rect key="frame" x="15" y="297" width="35" height="35"/>
+                                                            <rect key="frame" x="15" y="54" width="25" height="25"/>
                                                             <state key="normal" image="back"/>
                                                             <connections>
                                                                 <action selector="didTapBackButton:" destination="-1" eventType="touchUpInside" id="fwD-p5-SaD"/>
@@ -58,11 +58,10 @@
                                                         <constraint firstAttribute="bottom" secondItem="sne-nv-REL" secondAttribute="bottom" id="XXp-6H-mSc"/>
                                                         <constraint firstItem="IMB-dE-Wqo" firstAttribute="top" secondItem="sne-nv-REL" secondAttribute="top" constant="55" id="l68-ba-OB7"/>
                                                         <constraint firstItem="sne-nv-REL" firstAttribute="leading" secondItem="opc-Hr-tF9" secondAttribute="leading" id="wvL-g7-ZkB"/>
-                                                        <constraint firstAttribute="height" constant="400" id="y8e-un-X0K"/>
                                                     </constraints>
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e3K-JO-De8" userLabel="ContentView">
-                                                    <rect key="frame" x="0.0" y="407" width="414" height="731.5"/>
+                                                    <rect key="frame" x="0.0" y="365.5" width="414" height="731.5"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="GZk-eM-DeO">
                                                             <rect key="frame" x="20" y="20" width="374" height="536.5"/>
@@ -134,6 +133,9 @@
                                                                 <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                                                 <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                             </collectionViewFlowLayout>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                                            </userDefinedRuntimeAttributes>
                                                         </collectionView>
                                                     </subviews>
                                                     <color key="backgroundColor" red="0.97254901959999995" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -146,6 +148,9 @@
                                                         <constraint firstAttribute="trailing" secondItem="GZk-eM-DeO" secondAttribute="trailing" constant="20" id="iCS-xR-4ga"/>
                                                         <constraint firstAttribute="bottom" secondItem="XlG-e7-iYM" secondAttribute="bottom" constant="20" id="oDC-JG-3z5"/>
                                                     </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                                    </userDefinedRuntimeAttributes>
                                                 </view>
                                             </subviews>
                                         </stackView>
@@ -175,6 +180,9 @@
                         <constraint firstItem="OYQ-oc-LHu" firstAttribute="width" secondItem="qev-Fo-Nc6" secondAttribute="width" id="xSH-Rk-Yim"/>
                         <constraint firstItem="7DN-eN-4uE" firstAttribute="width" secondItem="qev-Fo-Nc6" secondAttribute="width" id="yR8-5q-w7w"/>
                     </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                    </userDefinedRuntimeAttributes>
                 </view>
             </subviews>
             <color key="backgroundColor" red="0.97254901959999995" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -184,13 +192,17 @@
                 <constraint firstItem="qev-Fo-Nc6" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="hDI-av-J4G"/>
                 <constraint firstAttribute="trailing" secondItem="qev-Fo-Nc6" secondAttribute="trailing" id="mrD-C2-W47"/>
                 <constraint firstItem="qev-Fo-Nc6" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="n8b-yy-rwN"/>
+                <constraint firstItem="opc-Hr-tF9" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.4" id="oJm-mN-uZd"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+            </userDefinedRuntimeAttributes>
             <point key="canvasLocation" x="139" y="103"/>
         </view>
     </objects>
     <resources>
-        <image name="back" width="35" height="35"/>
+        <image name="back" width="25" height="25"/>
         <image name="prp" width="375.5" height="387.5"/>
         <image name="share" width="25" height="25"/>
     </resources>

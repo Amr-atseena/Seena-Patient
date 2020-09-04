@@ -9,14 +9,24 @@
 import UIKit
 
 class ClinicsSectionHeaderCell: UITableViewCell {
-    @IBOutlet private var categoryNameLabel: UILabel!
+    @IBOutlet private var specialityNameLabel: UILabel!
     @IBOutlet private var seeAllButton: UIButton!
+    var seeAllButtonTapped: (() -> Void)?
     override func awakeFromNib() {
         super.awakeFromNib()
         // categoryName Label
-        categoryNameLabel.textColor = DesignSystem.Colors.secondaryText.color
-        categoryNameLabel.font = DesignSystem.Typography.subHeading2.font
+        specialityNameLabel.textColor = DesignSystem.Colors.secondaryText.color
+        specialityNameLabel.font = DesignSystem.Typography.subHeading2.font
         // seeAll Button
         seeAllButton.setTitleColor(DesignSystem.Colors.primaryActionBackground.color, for: .normal)
-        seeAllButton.titleLabel?.font = DesignSystem.Typography.subHeading4.font    }
+        seeAllButton.titleLabel?.font = DesignSystem.Typography.subHeading4.font
+    }
+    @IBAction private func didTappSeeAllButton(_ sender: UIButton) {
+        seeAllButtonTapped?()
+    }
+}
+extension ClinicsSectionHeaderCell: ClinicsSectionHeaderCellProtocol {
+    func setSpeciality(name: String) {
+        specialityNameLabel.text = name
+    }
 }

@@ -14,6 +14,12 @@ class ClinicsHomePresenter: ClinicsHomePresenterProtocol {
     var interactor: ClinicsHomeInputInteractorProtocol?
     var router: ClinicsHomeRouterProtocol?
     let localization = ClinicsHomeLocalization()
+    private var specialities = [Speciality]() {
+        didSet {
+            view?.reloadClinics()
+        }
+    }
+    private var clinicOfTheWeek: Clinic!
     // MARK: - Init
     init(view: ClinicsHomeViewProtocol?, interactor: ClinicsHomeInputInteractorProtocol, router: ClinicsHomeRouterProtocol ) {
         self.view = view
@@ -25,26 +31,58 @@ class ClinicsHomePresenter: ClinicsHomePresenterProtocol {
         view?.setupUI()
         view?.setupNavBar(withTitle: "")
         view?.setupClinicsTableView()
+        retiveClinicHome()
+    }
+    func retiveClinicHome() {
+        view?.showSkeleton()
+        interactor?.retriveClinicsHome()
     }
     func searchButtonTapped() {
-        router?.go(to: .clincsSearch)
+        let speciality = Speciality(id: 0, speciality: "", services: [], clinics: [])
+        router?.go(to: .clincsSearch(speciality: speciality))
     }
     func clinicOfWeekButtonTapped() {
-        router?.go(to: .clinicDetails)
+        router?.go(to: .clinicDetails(clinic: clinicOfTheWeek))
     }
     func callButtonTapped() {
-        router?.go(to: .clincsSearch)
+        router?.go(to: .call(number: clinicOfTheWeek.phone))
+    }
+    func config(headerCell cell: ClinicsSectionHeaderCellProtocol, atSection section: Int) {
+        if !specialities.isEmpty {
+            cell.setSpeciality(name: specialities[section].speciality)
+        }
+    }
+    func config(ClinicCell cell: ClinicCellProtocol, atIndex index: Int, andSection section: Int) {
+        let clinic = specialities[section].clinics?[index]
+        cell.setClinic(ClinicViewModel(clinic: clinic))
     }
     func clinicTableView(selectedAtIndex index: Int, andSection section: Int) {
-        router?.go(to: .clinicDetails)
+        guard let clinic = specialities[section].clinics?[index] else { return }
+        router?.go(to: .clinicDetails(clinic: clinic))
+    }
+    func callButtonTapped(atSection section: Int, andIndex index: Int) {
+        guard let clinic = specialities[section].clinics?[index] else { return }
+        router?.go(to: .call(number: clinic.phone))
+    }
+    func seeAllButtonTapped(atSection section: Int) {
+        router?.go(to: .clincsSearch(speciality: specialities[section]))
     }
     func numberOfClincs(inSection section: Int) -> Int {
-        return 3
+        return specialities[section].clinics?.count ?? 0
     }
     var numberOfSections: Int {
-        return 3
+        return specialities.count
     }
 }
 // MARK: - ClinicsHomeOutputInteractorProtocol Implementation
 extension ClinicsHomePresenter: ClinicsHomeOutputInteractorProtocol {
+    func onRetriveClinicsHomeSuccess(specialities: [Speciality], clinicOfTheWeek: Clinic) {
+        view?.hideSkeleton()
+        self.specialities = specialities
+        self.clinicOfTheWeek = clinicOfTheWeek
+        view?.setClinicOfTheWeek(ClinicViewModel(clinic: clinicOfTheWeek))
+    }
+    func onRetriveClincsHomeFail() {
+        view?.hideSkeleton()
+    }
 }

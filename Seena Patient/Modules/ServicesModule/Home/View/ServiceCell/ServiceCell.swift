@@ -18,7 +18,7 @@ class ServiceCell: UICollectionViewCell {
     }
 }
 // MARK: - Implementation Of ServiceCellView Protocol
-extension ServiceCell: ServiceCellView {
+extension ServiceCell: ServiceCellProtocol {
     func setService(_ service: ServiceViewModel) {
         serviceNameLabel.text = service.serviceName
         serviceImage.kf.setImage(with: URL(string: service.serviceImage))

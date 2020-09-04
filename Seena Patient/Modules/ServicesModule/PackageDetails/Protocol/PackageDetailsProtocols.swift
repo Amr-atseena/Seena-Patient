@@ -37,7 +37,7 @@ protocol PackageDetailsPresenterProtocol: class {
     func viewDidLoad()
     func shareButtonTapped()
     func backButtonTapped()
-    func config(serviceCell cell: ServiceCellView, atIndex index: Int)
+    func config(serviceCell cell: ServiceCellProtocol, atIndex index: Int)
     var numberOfServices: Int { get }
 }
 // MARK: - PackageDetails View

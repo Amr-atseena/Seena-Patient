@@ -13,8 +13,9 @@ class ServiceDetailsRouter: ServiceDetailsRouterProtocol {
     weak var viewController: UIViewController?
     // MARK: - Assemble
     static func assembleModule(withService service: Service) -> UIViewController {
+        let remoteDataManager = ServicesRemoteDataManager()
+        let interactor = ServiceDetailsInteractor(remoteDataManager: remoteDataManager)
         let view = ServiceDetailsVC()
-        let interactor = ServiceDetailsInteractor()
         let router = ServiceDetailsRouter()
         let presenter = ServiceDetailsPresenter(view: view, interactor: interactor, router: router, service: service)
         view.presenter = presenter
@@ -27,8 +28,11 @@ class ServiceDetailsRouter: ServiceDetailsRouterProtocol {
         switch router {
         case .home:
             viewController?.navigationController?.popViewController(animated: true)
-        default:
-            print("")
+        case .clincDetails(let clinic):
+            navigateToClinicDetails(clinic)
         }
+    }
+    private func navigateToClinicDetails(_ clinic: Clinic) {
+        viewController?.navigationController?.pushViewController(ClinicDetailsRouter.assembleModule(withClinic: clinic), animated: true)
     }
 }

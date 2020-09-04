@@ -7,14 +7,14 @@
 //
 
 import Foundation
-class ServicesRemoteService: APIService<ServicesEndPoint>, ServicesRemoteServiceProtocol {
+class ServicesRemoteDataManager: APIService<ServicesEndPoint>, ServicesRemoteDataManagerProtocol {
     func fetchServicesList(parms: ServicesListParameters, completionHandler: @escaping (Result<Codable, Error>) -> Void) {
         request(target: .servicesList(parms: parms), objType: BaseResponse<[Service]>.self, completionHandler: completionHandler)
     }
     func fetchServicesHome(completionHandler: @escaping (Result<Codable, Error>) -> Void) {
         request(target: .home, objType: BaseResponse<HomeResponse>.self, completionHandler: completionHandler)
     }
-    func fetchServicesDetails(forServiceId serviceId: Int, completionHandler: @escaping (Result<Codable, Error>) -> Void) {
+    func retriveServicesDetails(atServiceId serviceId: Int, completionHandler: @escaping (Result<Codable, Error>) -> Void) {
         request(target: .serviceDetails(serviceId: serviceId), objType: BaseResponse<Service>.self, completionHandler: completionHandler)
     }
 }

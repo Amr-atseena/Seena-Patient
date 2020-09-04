@@ -15,7 +15,7 @@ struct Service: Codable {
     let specialityID: Int?
     let serviceDescription: String?
     let priceMin, priceMax: Int?
-    let clinics: [String]?
+    let clinics: [Clinic]?
 
     enum CodingKeys: String, CodingKey {
         case seriveId = "id"
@@ -24,6 +24,6 @@ struct Service: Codable {
         case serviceDescription = "description"
         case priceMin = "price_min"
         case priceMax = "price_max"
-        case clinics 
+        case clinics
     }
 }

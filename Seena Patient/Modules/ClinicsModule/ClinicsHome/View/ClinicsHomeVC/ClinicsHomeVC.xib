@@ -13,6 +13,7 @@
                 <outlet property="callClinicButton" destination="pAh-1h-JXJ" id="1Cz-uB-QDE"/>
                 <outlet property="clinicOfWeakAddressLabel" destination="8N7-QD-XYz" id="iSU-4L-82L"/>
                 <outlet property="clinicOfWeekCategoryLabel" destination="Vgc-Uo-vHE" id="Xjm-JB-10x"/>
+                <outlet property="clinicOfWeekImage" destination="5JV-iP-FAq" id="fWu-y2-1mH"/>
                 <outlet property="clinicOfWeekKeywordLabel" destination="q7N-d4-Okm" id="L8R-eR-AAd"/>
                 <outlet property="clinicOfWeekNameLabel" destination="ENK-EB-ikS" id="1bZ-e6-vEL"/>
                 <outlet property="clinicsKeywordLabel" destination="cRt-NF-LFn" id="9xG-hI-cpk"/>
@@ -103,6 +104,7 @@
                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                     <real key="value" value="8"/>
                                                 </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
                                             </userDefinedRuntimeAttributes>
                                         </imageView>
                                     </subviews>
@@ -131,6 +133,7 @@
                                         <userDefinedRuntimeAttribute type="point" keyPath="shadowOffset">
                                             <point key="value" x="0.0" y="0.0"/>
                                         </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
                                     </userDefinedRuntimeAttributes>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1GO-IG-Ate" customClass="AnimatableView" customModule="IBAnimatable">
@@ -144,23 +147,50 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="skeletonCornerRadius">
+                                                            <real key="value" value="10"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="21 Nagati serag street - Nasr City" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8N7-QD-XYz">
                                                     <rect key="frame" x="0.0" y="20.5" width="255" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="skeletonCornerRadius">
+                                                            <real key="value" value="10"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
                                                 </label>
                                             </subviews>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                            </userDefinedRuntimeAttributes>
                                         </stackView>
-                                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yvl-mQ-hFg">
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yCz-pc-MW6">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="200"/>
+                                            <connections>
+                                                <action selector="didTapClinicOfWeekButton:" destination="-1" eventType="touchUpInside" id="oIE-YT-qSO"/>
+                                            </connections>
+                                        </button>
+                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="yvl-mQ-hFg">
                                             <rect key="frame" x="20" y="155" width="334" height="30"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dentist" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vgc-Uo-vHE">
-                                                    <rect key="frame" x="0.0" y="0.0" width="234" height="30"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="214" height="30"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="skeletonCornerRadius">
+                                                            <real key="value" value="10"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pAh-1h-JXJ" customClass="AnimatableButton" customModule="IBAnimatable">
                                                     <rect key="frame" x="234" y="0.0" width="100" height="30"/>
@@ -174,27 +204,43 @@
                                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                             <real key="value" value="15"/>
                                                         </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="skeletonCornerRadius">
+                                                            <real key="value" value="15"/>
+                                                        </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                     <connections>
                                                         <action selector="didTapCallButton:" destination="-1" eventType="touchUpInside" id="JFY-bx-HZf"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                            </userDefinedRuntimeAttributes>
                                         </stackView>
                                     </subviews>
                                     <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="0.28000000000000003" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                     <constraints>
+                                        <constraint firstItem="yCz-pc-MW6" firstAttribute="top" secondItem="1GO-IG-Ate" secondAttribute="top" id="8pG-VE-oSi"/>
                                         <constraint firstItem="z5H-PC-CGz" firstAttribute="leading" secondItem="1GO-IG-Ate" secondAttribute="leading" constant="20" id="DBG-hh-5oU"/>
+                                        <constraint firstItem="yCz-pc-MW6" firstAttribute="leading" secondItem="1GO-IG-Ate" secondAttribute="leading" id="I1T-BK-oL7"/>
+                                        <constraint firstAttribute="bottom" secondItem="yCz-pc-MW6" secondAttribute="bottom" id="TM9-xG-D1y"/>
+                                        <constraint firstAttribute="trailing" secondItem="yCz-pc-MW6" secondAttribute="trailing" id="UMT-kH-N2F"/>
+                                        <constraint firstItem="yCz-pc-MW6" firstAttribute="top" secondItem="1GO-IG-Ate" secondAttribute="top" id="Vms-7F-re3"/>
                                         <constraint firstAttribute="trailing" secondItem="yvl-mQ-hFg" secondAttribute="trailing" constant="20" id="aqw-8b-rKC"/>
                                         <constraint firstItem="z5H-PC-CGz" firstAttribute="top" secondItem="1GO-IG-Ate" secondAttribute="top" constant="20" id="iag-JC-ouj"/>
+                                        <constraint firstAttribute="bottom" secondItem="yCz-pc-MW6" secondAttribute="bottom" id="kqy-Al-pY6"/>
                                         <constraint firstAttribute="bottom" secondItem="yvl-mQ-hFg" secondAttribute="bottom" constant="15" id="oMZ-GW-LXT"/>
                                         <constraint firstItem="yvl-mQ-hFg" firstAttribute="leading" secondItem="1GO-IG-Ate" secondAttribute="leading" constant="20" id="uR9-7U-oqS"/>
                                         <constraint firstAttribute="height" constant="200" id="wJR-qb-IOY"/>
+                                        <constraint firstItem="yCz-pc-MW6" firstAttribute="leading" secondItem="1GO-IG-Ate" secondAttribute="leading" id="yQL-hl-nwj"/>
+                                        <constraint firstAttribute="trailing" secondItem="yCz-pc-MW6" secondAttribute="trailing" id="zR1-jW-5RR"/>
                                     </constraints>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                             <real key="value" value="8"/>
                                         </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
                                     </userDefinedRuntimeAttributes>
                                 </view>
                             </subviews>
@@ -209,12 +255,21 @@
                                 <constraint firstItem="1GO-IG-Ate" firstAttribute="bottom" secondItem="Q7b-bo-vMQ" secondAttribute="bottom" id="hoh-Lb-Ddz"/>
                                 <constraint firstItem="1GO-IG-Ate" firstAttribute="top" secondItem="Q7b-bo-vMQ" secondAttribute="top" id="rfN-Vk-v04"/>
                             </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                            </userDefinedRuntimeAttributes>
                         </view>
                     </subviews>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                    </userDefinedRuntimeAttributes>
                 </stackView>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ZNc-cM-j9N">
                     <rect key="frame" x="0.0" y="410" width="414" height="432"/>
                     <color key="backgroundColor" red="0.97254901959999995" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                    </userDefinedRuntimeAttributes>
                 </tableView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xpC-Qg-4Bk">
                     <rect key="frame" x="20" y="104.5" width="374" height="40"/>
@@ -222,23 +277,13 @@
                         <action selector="didTapSearchButton:" destination="-1" eventType="touchUpInside" id="HkP-7G-w2S"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yCz-pc-MW6">
-                    <rect key="frame" x="20" y="195" width="374" height="200"/>
-                    <connections>
-                        <action selector="didTapClinicOfWeekButton:" destination="-1" eventType="touchUpInside" id="oIE-YT-qSO"/>
-                    </connections>
-                </button>
             </subviews>
             <color key="backgroundColor" red="0.97254901960784312" green="0.97647058823529409" blue="0.97647058823529409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="RZi-ts-HE3" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="CVZ-bP-acf"/>
-                <constraint firstItem="yCz-pc-MW6" firstAttribute="top" secondItem="1GO-IG-Ate" secondAttribute="top" id="Crx-ww-hj0"/>
                 <constraint firstItem="xpC-Qg-4Bk" firstAttribute="trailing" secondItem="iy2-DX-ZIY" secondAttribute="trailing" id="Gqh-Wf-NoO"/>
                 <constraint firstItem="RZi-ts-HE3" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="HhJ-rv-nTj"/>
-                <constraint firstItem="yCz-pc-MW6" firstAttribute="bottom" secondItem="1GO-IG-Ate" secondAttribute="bottom" id="ThX-pz-CYe"/>
-                <constraint firstItem="yCz-pc-MW6" firstAttribute="leading" secondItem="1GO-IG-Ate" secondAttribute="leading" id="bEj-kt-ITA"/>
                 <constraint firstItem="xpC-Qg-4Bk" firstAttribute="top" secondItem="iy2-DX-ZIY" secondAttribute="top" id="dcN-y8-l2b"/>
-                <constraint firstItem="yCz-pc-MW6" firstAttribute="trailing" secondItem="1GO-IG-Ate" secondAttribute="trailing" id="k7c-fE-F9l"/>
                 <constraint firstItem="ZNc-cM-j9N" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="nPp-3D-RRj"/>
                 <constraint firstItem="xpC-Qg-4Bk" firstAttribute="leading" secondItem="iy2-DX-ZIY" secondAttribute="leading" id="nqt-DX-IBh"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ZNc-cM-j9N" secondAttribute="trailing" id="pXL-cN-8MF"/>
@@ -248,6 +293,9 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="ZNc-cM-j9N" secondAttribute="bottom" constant="20" id="wJG-Qm-gz1"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+            </userDefinedRuntimeAttributes>
             <point key="canvasLocation" x="141" y="125"/>
         </view>
     </objects>

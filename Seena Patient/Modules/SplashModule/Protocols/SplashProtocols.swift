@@ -12,6 +12,7 @@ import UIKit
 // MARK: - Splash Router
 enum SplashRoute {
     case tabBar
+    case alert(alertEntity: AlertEntity)
 }
 protocol SplashRouterProtocol: class {
     var viewController: UIViewController? { get set }
@@ -21,10 +22,15 @@ protocol SplashRouterProtocol: class {
 // MARK: - Splash Interactor
 protocol SplashInputInteractorProtocol: class {
     var presenter: SplashOutputInteractorProtocol? { get set }
+    var localDataManager: SplashLocalDataManagerProtocol { get set }
+    var remoteDataManager: SplashRemoteDataManagerProtocol { get set }
     // Presenter -> Interactor
+    func retriveMetaData()
 }
 protocol SplashOutputInteractorProtocol: class {
     // Interactor -> Presenter
+    func onRetriveMetaDataSuccess()
+    func onRetriveDataFail(_ error: String)
 }
 // MARK: - Splash Presenter
 protocol SplashPresenterProtocol: class {
@@ -33,6 +39,7 @@ protocol SplashPresenterProtocol: class {
     var view: SplashViewProtocol? { get set }
     // View -> Presenter
     func viewDidLoad()
+    func retriveMetaData()
 }
 // MARK: - Splash View
 protocol SplashViewProtocol: class {

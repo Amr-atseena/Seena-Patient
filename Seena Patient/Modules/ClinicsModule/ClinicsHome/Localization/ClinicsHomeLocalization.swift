@@ -14,7 +14,7 @@ struct ClinicsHomeLocalization {
         return "Clinics".localized
     }
     var clinicOfWeek: String {
-        return "Clinic Of Weak".localized
+        return "Clinic Of The Weak".localized
     }
     var searchPlaceholder: String {
         return "Search by Clinic".localized

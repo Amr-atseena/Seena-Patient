@@ -11,7 +11,9 @@ import UIKit
 class ClinicCell: UITableViewCell {
     @IBOutlet private var clinicNameLabel: UILabel!
     @IBOutlet private var clinicAddressLabel: UILabel!
+    @IBOutlet private var clinicImage: UIImageView!
     @IBOutlet private var callButton: UIButton!
+    var callButtonTapped: (() -> Void)?
     override func awakeFromNib() {
         super.awakeFromNib()
         // clinicName Label
@@ -24,5 +26,14 @@ class ClinicCell: UITableViewCell {
         callButton.titleLabel?.font = DesignSystem.Typography.subHeading4.font
     }
     @IBAction private func didTapCallButton(_ sender: UIButton) {
+        callButtonTapped?()
+    }
+}
+// MARK: - ClinicCell Protocol Implementation
+extension ClinicCell: ClinicCellProtocol {
+    func setClinic(_ clinic: ClinicViewModel) {
+        clinicNameLabel.text = clinic.name
+        clinicAddressLabel.text = clinic.address
+        clinicImage.kf.setImage(with: URL(string: clinic.image))
     }
 }

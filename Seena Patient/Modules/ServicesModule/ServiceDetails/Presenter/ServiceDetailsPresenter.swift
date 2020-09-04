@@ -14,9 +14,16 @@ class ServiceDetailsPresenter: ServiceDetailsPresenterProtocol {
     var interactor: ServiceDetailsInputInteractorProtocol?
     weak var view: ServiceDetailsViewProtocol?
     let localization = ServiceDetailsLocalizaition()
-    let service: Service
+    private var service: Service {
+        didSet {
+            view?.reloadClinics()
+        }
+    }
     // MARK: - Init
-    init(view: ServiceDetailsViewProtocol, interactor: ServiceDetailsInputInteractorProtocol, router: ServiceDetailsRouterProtocol, service: Service) {
+    init(view: ServiceDetailsViewProtocol,
+         interactor: ServiceDetailsInputInteractorProtocol,
+         router: ServiceDetailsRouterProtocol,
+         service: Service) {
         self.view = view
         self.interactor = interactor
         self.router = router
@@ -28,16 +35,33 @@ class ServiceDetailsPresenter: ServiceDetailsPresenterProtocol {
         view?.setupUI()
         view?.setupClinicsCollectionView()
         view?.updateUI(withService: ServiceViewModel(service: service))
+        view?.showSkelton()
+        interactor?.retriveServiceDetails(atServiceId: service.seriveId)
     }
     func shareButtonTapped() {
     }
     func backButtonTapped() {
         router?.go(to: .home)
     }
+    func config(clinicCell cell: ClinicCellProtocol, atIndex index: Int) {
+        let clinic = service.clinics?[index]
+        cell.setClinic(ClinicViewModel(clinic: clinic))
+    }
+    func didSelectClinic(atIndex index: Int) {
+        guard let clinic = service.clinics?[index] else {return}
+        router?.go(to: .clincDetails(clinic: clinic))
+    }
     var numberOfClinics: Int {
-        return 10
+        return service.clinics?.count ?? 0
     }
 }
 // MARK: - ServiceDetailsOutputInteractorProtocol Implementation
 extension ServiceDetailsPresenter: ServiceDetailsOutputInteractorProtocol {
+    func onRetriveDataSuccess(withService service: Service) {
+        self.service = service
+        view?.hideSkelton()
+    }
+    func onRetriveDataFail() {
+        view?.hideSkelton()
+    }
 }

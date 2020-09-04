@@ -10,7 +10,8 @@ import Foundation
 // MARK: - Speciality
 struct Speciality: Codable {
     let id: Int
-    let image: String
+//    let image: String
     let speciality: String
-    let services: [Service]
+    let services: [Service]?
+    let clinics: [Clinic]?
 }

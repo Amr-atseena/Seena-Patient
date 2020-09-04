@@ -26,20 +26,20 @@
                     <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OHl-7y-rFg">
-                            <rect key="frame" x="15" y="45" width="25" height="25"/>
+                            <rect key="frame" x="15" y="40" width="25" height="25"/>
                             <state key="normal" image="back"/>
                             <connections>
                                 <action selector="didTapBackButton:" destination="-1" eventType="touchUpInside" id="42k-iQ-XfM"/>
                             </connections>
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ALt-nx-SN6">
-                            <rect key="frame" x="186" y="45" width="42" height="20.5"/>
+                            <rect key="frame" x="186" y="40" width="42" height="20.5"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K1g-Hd-x8Z" customClass="AnimatableView" customModule="IBAnimatable">
-                            <rect key="frame" x="20" y="95.5" width="374" height="40"/>
+                            <rect key="frame" x="20" y="90.5" width="374" height="40"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v2I-rr-Dv8">
                                     <rect key="frame" x="10" y="5" width="354" height="30"/>
@@ -87,7 +87,7 @@
                             </userDefinedRuntimeAttributes>
                         </view>
                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="onDrag" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="9Gn-q1-91A">
-                            <rect key="frame" x="0.0" y="150.5" width="414" height="745.5"/>
+                            <rect key="frame" x="0.0" y="145.5" width="414" height="750.5"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="wPc-5d-bFX">
                                 <size key="itemSize" width="128" height="128"/>
@@ -110,12 +110,12 @@
                         <constraint firstAttribute="trailing" secondItem="9Gn-q1-91A" secondAttribute="trailing" id="8GE-kH-tw8"/>
                         <constraint firstItem="ALt-nx-SN6" firstAttribute="centerX" secondItem="PV2-cD-6ZZ" secondAttribute="centerX" id="9gU-nv-FYZ"/>
                         <constraint firstItem="K1g-Hd-x8Z" firstAttribute="leading" secondItem="PV2-cD-6ZZ" secondAttribute="leading" constant="20" id="Bqo-Uf-W60"/>
-                        <constraint firstItem="OHl-7y-rFg" firstAttribute="top" secondItem="PV2-cD-6ZZ" secondAttribute="top" constant="45" id="Dr0-oa-kuy"/>
+                        <constraint firstItem="OHl-7y-rFg" firstAttribute="top" secondItem="PV2-cD-6ZZ" secondAttribute="top" constant="40" id="Dr0-oa-kuy"/>
                         <constraint firstAttribute="trailing" secondItem="K1g-Hd-x8Z" secondAttribute="trailing" constant="20" id="c1z-v9-men"/>
                         <constraint firstItem="K1g-Hd-x8Z" firstAttribute="top" secondItem="ALt-nx-SN6" secondAttribute="bottom" constant="30" id="gm5-5J-NRx"/>
                         <constraint firstAttribute="bottom" secondItem="9Gn-q1-91A" secondAttribute="bottom" id="hGT-Wj-zhK"/>
                         <constraint firstItem="9Gn-q1-91A" firstAttribute="leading" secondItem="PV2-cD-6ZZ" secondAttribute="leading" id="nOC-SJ-kye"/>
-                        <constraint firstItem="ALt-nx-SN6" firstAttribute="top" secondItem="PV2-cD-6ZZ" secondAttribute="top" constant="45" id="qN6-3h-6Jb"/>
+                        <constraint firstItem="ALt-nx-SN6" firstAttribute="top" secondItem="PV2-cD-6ZZ" secondAttribute="top" constant="40" id="qN6-3h-6Jb"/>
                         <constraint firstItem="OHl-7y-rFg" firstAttribute="leading" secondItem="PV2-cD-6ZZ" secondAttribute="leading" constant="15" id="t1F-0B-bfV"/>
                         <constraint firstItem="9Gn-q1-91A" firstAttribute="top" secondItem="K1g-Hd-x8Z" secondAttribute="bottom" constant="15" id="vjX-RV-2ny"/>
                     </constraints>

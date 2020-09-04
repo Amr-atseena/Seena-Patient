@@ -14,10 +14,10 @@ struct ServiceViewModel {
     let seriveDetails: String
     let servicePrice: String
     // MARK: - Init
-    init(service: Service) {
-        self.serviceName = service.name
-        self.serviceImage = service.image
-        self.seriveDetails = service.serviceDescription ?? ""
-        self.servicePrice = String(describing: service.priceMin ?? 0) + " - " + String(describing: service.priceMax ?? 0)
+    init(service: Service?) {
+        self.serviceName = service?.name ?? ""
+        self.serviceImage = service?.image ?? ""
+        self.seriveDetails = service?.serviceDescription ?? ""
+        self.servicePrice = String(describing: service?.priceMin ?? 0) + " - " + String(describing: service?.priceMax ?? 0)
     }
 }

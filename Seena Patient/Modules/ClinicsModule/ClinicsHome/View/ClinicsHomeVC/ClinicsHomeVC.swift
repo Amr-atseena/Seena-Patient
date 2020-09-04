@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import SkeletonView
 class ClinicsHomeVC: UIViewController, ClinicsHomeViewProtocol {
     // MARK: - Outlets
     @IBOutlet private var clinicsKeywordLabel: UILabel!
@@ -16,6 +16,7 @@ class ClinicsHomeVC: UIViewController, ClinicsHomeViewProtocol {
     @IBOutlet private var clinicOfWeekNameLabel: UILabel!
     @IBOutlet private var clinicOfWeakAddressLabel: UILabel!
     @IBOutlet private var clinicOfWeekCategoryLabel: UILabel!
+    @IBOutlet private var clinicOfWeekImage: UIImageView!
     @IBOutlet private var callClinicButton: UIButton!
     @IBOutlet private var clinicsTableView: UITableView!
     // MARK: - Attributes
@@ -70,6 +71,32 @@ class ClinicsHomeVC: UIViewController, ClinicsHomeViewProtocol {
         clinicsTableView.dataSource = self
         clinicsTableView.register(cellWithClass: ClinicCell.self)
         clinicsTableView.register(cellWithClass: ClinicsSectionHeaderCell.self)
+        clinicsTableView.register(cellWithClass: ClinicSkeletonCell.self)
+    }
+    func setClinicOfTheWeek(_ clinic: ClinicViewModel) {
+        clinicOfWeekNameLabel.text = clinic.name
+        clinicOfWeakAddressLabel.text = clinic.address
+        clinicOfWeekImage.kf.setImage(with: URL(string: clinic.image))
+        clinicOfWeekCategoryLabel.text = ""
+    }
+    func reloadClinics() {
+        clinicsTableView.reloadData()
+    }
+    func showSkeleton() {
+        clinicOfWeekImage.showAnimatedGradientSkeleton()
+        clinicOfWeekNameLabel.showAnimatedGradientSkeleton()
+        clinicOfWeakAddressLabel.showAnimatedGradientSkeleton()
+        clinicOfWeekCategoryLabel.showAnimatedGradientSkeleton()
+        callClinicButton.showAnimatedGradientSkeleton()
+        clinicsTableView.showAnimatedGradientSkeleton()
+    }
+    func hideSkeleton() {
+        callClinicButton.hideSkeleton()
+        clinicOfWeekCategoryLabel.hideSkeleton()
+        clinicOfWeakAddressLabel.hideSkeleton()
+        clinicOfWeekNameLabel.hideSkeleton()
+        clinicOfWeekImage.hideSkeleton()
+        clinicsTableView.hideSkeleton()
     }
     // MARK: - Actions
     @IBAction private func didTapCallButton(_ sender: UIButton) {
@@ -96,6 +123,11 @@ extension ClinicsHomeVC: UITableViewDataSource {
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withClass: ClinicCell.self, for: indexPath)
+        presenter.config(ClinicCell: cell, atIndex: indexPath.row, andSection: indexPath.section)
+        cell.callButtonTapped = { [weak self] in
+            guard let self = self else {return}
+            self.presenter.callButtonTapped(atSection: indexPath.section, andIndex: indexPath.row)
+        }
         return cell
     }
 }
@@ -106,9 +138,26 @@ extension ClinicsHomeVC: UITableViewDelegate {
     }
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let header = tableView.dequeueReusableCell(withClass: ClinicsSectionHeaderCell.self, for: IndexPath(item: 0, section: section))
+        presenter.config(headerCell: header, atSection: section)
+        header.seeAllButtonTapped = { [weak self] in
+            guard let self = self else { return }
+            self.presenter.seeAllButtonTapped(atSection: section)
+        }
         return header
     }
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 35
+        return 38
+    }
+}
+// MARK: - SkeletonTableViewDataSource Implementaion
+extension ClinicsHomeVC: SkeletonTableViewDataSource, SkeletonTableViewDelegate {
+    func collectionSkeletonView(_ skeletonView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 5
+    }
+    func collectionSkeletonView(_ skeletonView: UITableView, cellIdentifierForRowAt indexPath: IndexPath) -> ReusableCellIdentifier {
+        return ClinicSkeletonCell.className
+    }
+    func numSections(in collectionSkeletonView: UITableView) -> Int {
+        return 1
     }
 }

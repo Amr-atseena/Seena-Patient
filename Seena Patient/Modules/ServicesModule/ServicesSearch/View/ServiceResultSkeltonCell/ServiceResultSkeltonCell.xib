@@ -29,32 +29,13 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label Label " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gSf-Oz-fSC">
-                                <rect key="frame" x="10" y="53" width="92" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="skeletonCornerRadius">
-                                        <real key="value" value="0.0"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="linesCornerRadius">
-                                        <integer key="value" value="20"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="EVt-vO-3y8" secondAttribute="trailing" id="2dV-1H-7IN"/>
                             <constraint firstItem="EVt-vO-3y8" firstAttribute="leading" secondItem="0be-pV-lrm" secondAttribute="leading" id="3Wd-A5-11a"/>
-                            <constraint firstItem="gSf-Oz-fSC" firstAttribute="leading" secondItem="0be-pV-lrm" secondAttribute="leading" constant="10" id="7qs-gg-sze"/>
                             <constraint firstItem="EVt-vO-3y8" firstAttribute="top" secondItem="0be-pV-lrm" secondAttribute="top" id="Fkj-9O-vKi"/>
                             <constraint firstAttribute="bottom" secondItem="EVt-vO-3y8" secondAttribute="bottom" id="LLC-1c-7H4"/>
-                            <constraint firstItem="EVt-vO-3y8" firstAttribute="leading" secondItem="0be-pV-lrm" secondAttribute="leading" id="MOJ-fi-hDg"/>
-                            <constraint firstAttribute="trailing" secondItem="EVt-vO-3y8" secondAttribute="trailing" id="gLE-jG-Lc7"/>
-                            <constraint firstAttribute="bottom" secondItem="gSf-Oz-fSC" secondAttribute="bottom" constant="20" id="kpg-iA-HV1"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">

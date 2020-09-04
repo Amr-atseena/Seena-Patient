@@ -29,6 +29,9 @@
                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q9h-0t-h3d">
                                 <rect key="frame" x="233" y="0.0" width="47" height="34"/>
                                 <state key="normal" title="See All"/>
+                                <connections>
+                                    <action selector="didTappSeeAllButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="oIV-uK-JvT"/>
+                                </connections>
                             </button>
                         </subviews>
                     </stackView>
@@ -43,8 +46,8 @@
             <color key="backgroundColor" red="0.97254901959999995" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="categoryNameLabel" destination="yxZ-Mg-c5S" id="Dnv-cr-hvs"/>
                 <outlet property="seeAllButton" destination="Q9h-0t-h3d" id="ChH-4t-jXt"/>
+                <outlet property="specialityNameLabel" destination="yxZ-Mg-c5S" id="Dnv-cr-hvs"/>
             </connections>
             <point key="canvasLocation" x="139" y="101"/>
         </tableViewCell>
