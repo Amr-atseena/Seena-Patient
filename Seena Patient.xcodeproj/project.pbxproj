@@ -76,6 +76,7 @@
 		88E0C71F2505676C001A1B3B /* PayHomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E0C7182505676C001A1B3B /* PayHomeInteractor.swift */; };
 		88E0C7202505676C001A1B3B /* PayHomeLocalization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E0C7192505676C001A1B3B /* PayHomeLocalization.swift */; };
 		88E0C7212505676C001A1B3B /* PayHomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E0C71A2505676C001A1B3B /* PayHomeVC.swift */; };
+		88E0C72A25056A02001A1B3B /* MKMagneticProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E0C72925056A02001A1B3B /* MKMagneticProgress.swift */; };
 		88ED03F224EFA5CF00BBCEF6 /* GalleryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88ED03F024EFA5CE00BBCEF6 /* GalleryCell.swift */; };
 		88ED03F324EFA5CF00BBCEF6 /* GalleryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88ED03F124EFA5CE00BBCEF6 /* GalleryCell.xib */; };
 		88ED03FB24EFC7B300BBCEF6 /* ClinicsSectionHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88ED03F924EFC7B200BBCEF6 /* ClinicsSectionHeaderCell.swift */; };
@@ -260,6 +261,7 @@
 		88E0C7182505676C001A1B3B /* PayHomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayHomeInteractor.swift; sourceTree = "<group>"; };
 		88E0C7192505676C001A1B3B /* PayHomeLocalization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayHomeLocalization.swift; sourceTree = "<group>"; };
 		88E0C71A2505676C001A1B3B /* PayHomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayHomeVC.swift; sourceTree = "<group>"; };
+		88E0C72925056A02001A1B3B /* MKMagneticProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MKMagneticProgress.swift; sourceTree = "<group>"; };
 		88ED03F024EFA5CE00BBCEF6 /* GalleryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryCell.swift; sourceTree = "<group>"; };
 		88ED03F124EFA5CE00BBCEF6 /* GalleryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GalleryCell.xib; sourceTree = "<group>"; };
 		88ED03F924EFC7B200BBCEF6 /* ClinicsSectionHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicsSectionHeaderCell.swift; sourceTree = "<group>"; };
@@ -1417,6 +1419,7 @@
 			children = (
 				8827E94C24F5A1DB009C64FB /* EmptyStateView */,
 				8C8CB41324E6EBFD009679E5 /* CustomizedTabBar.swift */,
+				88E0C72925056A02001A1B3B /* MKMagneticProgress.swift */,
 			);
 			path = CustomUI;
 			sourceTree = "<group>";
@@ -2032,6 +2035,7 @@
 				8C8CB3EB24E6CA46009679E5 /* UINavigationController+Extensions.swift in Sources */,
 				8CAB09A524E80C2700D38CDD /* Typography.swift in Sources */,
 				88EDA12E24FAE41200460B4D /* ProfileLocalization.swift in Sources */,
+				88E0C72A25056A02001A1B3B /* MKMagneticProgress.swift in Sources */,
 				8C8CB3FC24E6CF23009679E5 /* RemoteServiceType.swift in Sources */,
 				8C81545324EB21CA00CA30E7 /* ServicesSearchRouter.swift in Sources */,
 				8CEC780624E9CB58000CED1F /* ServiceDetailsProtocols.swift in Sources */,

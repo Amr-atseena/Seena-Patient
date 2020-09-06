@@ -24,6 +24,7 @@ class PayHomeVC: UIViewController, PayHomeViewProtocol {
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter.viewDidLoad()
+        self.navigationController?.navigationBar.isHidden = true
     }
     // MARK: - Methods
     // MARK: - Actions
