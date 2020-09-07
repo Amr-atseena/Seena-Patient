@@ -10,6 +10,15 @@ import UIKit
 
 class PayHomeVC: UIViewController, PayHomeViewProtocol {
     // MARK: - Outlets
+    @IBOutlet private var yourBalanceKeywordLabel: UILabel!
+    @IBOutlet private var youPayKeywordLabel: UILabel!
+    @IBOutlet private var amountPayedLabel: UILabel!
+    @IBOutlet private var dueAmountLabel: UILabel!
+    @IBOutlet private var paymentsDueKeywordLabel: UILabel!
+    @IBOutlet private var payLabel: UILabel!
+    @IBOutlet private var calculatorLabel: UILabel!
+    @IBOutlet private var paymentsDueTableView: UITableView!
+    @IBOutlet private var progressView: MKMagneticProgress!
     // MARK: - Attributes
     var presenter: PayHomePresenterProtocol!
     // MARK: - Init
@@ -24,12 +33,62 @@ class PayHomeVC: UIViewController, PayHomeViewProtocol {
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter.viewDidLoad()
-        self.navigationController?.navigationBar.isHidden = true
     }
     // MARK: - Methods
+    func setupNavBar() {
+        self.navigationController?.navigationBar.isHidden = true
+    }
+    func setupUI() {
+        // yourBalanceKeyword Label
+        yourBalanceKeywordLabel.text = presenter.localization.yourBalance
+        yourBalanceKeywordLabel.font = DesignSystem.Typography.heading.font
+        // youPayKeyword Label
+        youPayKeywordLabel.text = presenter.localization.youPaid
+            youPayKeywordLabel.font =  DesignSystem.Typography.subHeading4.font
+        // amountPayed Label
+        amountPayedLabel.font = DesignSystem.Typography.subHeading2.font
+        // dueAmount Label
+        dueAmountLabel.font = DesignSystem.Typography.subHeading4.font
+        // pay Label
+        payLabel.font = DesignSystem.Typography.subHeading3.font
+        payLabel.text = presenter.localization.pay
+        // calculate Label
+        calculatorLabel.font = DesignSystem.Typography.subHeading3.font
+        calculatorLabel.text = presenter.localization.calculate
+        // paymentsDueKeyword Label
+        paymentsDueKeywordLabel.font = DesignSystem.Typography.subHeading2.font
+        paymentsDueKeywordLabel.text = presenter.localization.paymentsDue
+    }
+    func setupPaymentsDueTableView() {
+        paymentsDueTableView.dataSource = self
+        paymentsDueTableView.delegate = self
+        paymentsDueTableView.register(cellWithClass: DueCell.self)
+    }
+    func realodDue() {
+        paymentsDueTableView.reloadData()
+    }
     // MARK: - Actions
+    @IBAction private func didTapPayButton(_ sender: UIButton) {
+        presenter.payButtonTapped()
+    }
+    @IBAction private func didTapCalculateButton(_ sender: UIButton) {
+        presenter.calculateButtonTapped()
+    }
     // MARK: - DeInit
     deinit {
          debugPrint(PayHomeVC.className + " Release from Momery")
     }
+}
+// MARK: - tableView DataSource Impelementations
+extension PayHomeVC: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return presenter.numberOfDue
+    }
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withClass: DueCell.self, for: indexPath)
+        return cell
+    }
+}
+// MARK: - tableView Delegate Impelementations
+extension PayHomeVC: UITableViewDelegate {
 }

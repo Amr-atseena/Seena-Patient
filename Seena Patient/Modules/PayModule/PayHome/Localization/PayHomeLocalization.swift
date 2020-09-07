@@ -10,4 +10,19 @@ import Foundation
 
 struct PayHomeLocalization {
     // MARK: - Attributes
+    var yourBalance: String {
+        return "Your Balance"
+    }
+    var youPaid: String {
+        return "You paid"
+    }
+    var pay: String {
+        return "Pay"
+    }
+    var calculate: String {
+        return "Calculate"
+    }
+    var paymentsDue: String {
+        return "Payments Due"
+    }
 }

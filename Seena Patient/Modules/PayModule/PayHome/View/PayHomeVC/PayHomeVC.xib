@@ -11,7 +11,16 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PayHomeVC">
             <connections>
+                <outlet property="amountPayedLabel" destination="wTj-u8-hPs" id="3Wa-o5-TRf"/>
+                <outlet property="calculatorLabel" destination="qhM-17-oYP" id="43e-Mw-bsB"/>
+                <outlet property="dueAmountLabel" destination="lKS-CI-ZZM" id="wZA-kB-PkY"/>
+                <outlet property="payLabel" destination="Rlo-uG-PD9" id="W2k-rs-BRR"/>
+                <outlet property="paymentsDueKeywordLabel" destination="Zia-VY-44m" id="byO-oE-n7b"/>
+                <outlet property="paymentsDueTableView" destination="p0h-37-Zio" id="yAv-HK-OlM"/>
+                <outlet property="progressView" destination="0d7-W4-1DF" id="Nh5-8O-JeM"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="youPayKeywordLabel" destination="UcN-bw-QIG" id="l6v-Gm-hw2"/>
+                <outlet property="yourBalanceKeywordLabel" destination="MHR-Lg-W0J" id="KQf-19-YNc"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -139,10 +148,10 @@
                     <rect key="frame" x="20" y="384.66666666666674" width="374" height="447.33333333333326"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="1wE-VT-i31">
-                            <rect key="frame" x="0.0" y="0.0" width="374" height="255.33333333333334"/>
+                            <rect key="frame" x="0.0" y="0.0" width="374" height="270.33333333333331"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UTr-SS-6mY" customClass="AnimatableView" customModule="IBAnimatable">
-                                    <rect key="frame" x="0.0" y="102.66666666666663" width="172" height="50"/>
+                                    <rect key="frame" x="0.0" y="110.33333333333331" width="172" height="50"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="J0m-VC-UJB">
                                             <rect key="frame" x="20" y="10" width="132" height="30"/>
@@ -174,7 +183,7 @@
                                     </userDefinedRuntimeAttributes>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZwS-fx-vlS" customClass="AnimatableView" customModule="IBAnimatable">
-                                    <rect key="frame" x="202" y="102.66666666666663" width="172" height="50"/>
+                                    <rect key="frame" x="202" y="110.33333333333331" width="172" height="50"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="zqv-WH-yuD">
                                             <rect key="frame" x="20" y="10" width="132" height="30"/>
@@ -207,32 +216,57 @@
                                 </view>
                             </subviews>
                         </stackView>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Payments due" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zia-VY-44m">
-                            <rect key="frame" x="0.0" y="275.33333333333331" width="374" height="24"/>
-                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                            <color key="textColor" name="secondaryText"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="p0h-37-Zio">
-                            <rect key="frame" x="0.0" y="319.33333333333331" width="374" height="128"/>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        </tableView>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="7Rr-Z6-RTA">
+                            <rect key="frame" x="0.0" y="290.33333333333331" width="374" height="157"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Payments due" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zia-VY-44m">
+                                    <rect key="frame" x="0.0" y="0.0" width="374" height="24"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                    <color key="textColor" name="secondaryText"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="p0h-37-Zio">
+                                    <rect key="frame" x="0.0" y="29" width="374" height="128"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                </tableView>
+                            </subviews>
+                        </stackView>
                     </subviews>
                 </stackView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9P0-Pz-8zS">
+                    <rect key="frame" x="20" y="495" width="172" height="50"/>
+                    <connections>
+                        <action selector="didTapPayButton:" destination="-1" eventType="touchUpInside" id="s36-9E-ltk"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oKj-OA-3El">
+                    <rect key="frame" x="222" y="495" width="172" height="50"/>
+                    <connections>
+                        <action selector="didTapCalculateButton:" destination="-1" eventType="touchUpInside" id="v2T-vX-f6W"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="TdC-6e-0WS" firstAttribute="top" secondItem="Df9-04-0Dy" secondAttribute="bottom" constant="20" id="1TI-3z-xy5"/>
+                <constraint firstItem="oKj-OA-3El" firstAttribute="trailing" secondItem="ZwS-fx-vlS" secondAttribute="trailing" id="2GI-Ql-nAH"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="TdC-6e-0WS" secondAttribute="bottom" constant="30" id="2uZ-Bq-OXt"/>
                 <constraint firstItem="rtt-tq-ZNX" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="2zW-cm-PAR"/>
                 <constraint firstItem="rtt-tq-ZNX" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.35" id="8MN-4g-xNS"/>
+                <constraint firstItem="oKj-OA-3El" firstAttribute="leading" secondItem="ZwS-fx-vlS" secondAttribute="leading" id="ABW-6U-7sy"/>
                 <constraint firstItem="TdC-6e-0WS" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" constant="-20" id="B5u-0D-th4"/>
+                <constraint firstItem="9P0-Pz-8zS" firstAttribute="top" secondItem="UTr-SS-6mY" secondAttribute="top" id="EBZ-T9-w6B"/>
                 <constraint firstItem="rtt-tq-ZNX" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="EPa-m5-Uba"/>
+                <constraint firstItem="9P0-Pz-8zS" firstAttribute="bottom" secondItem="UTr-SS-6mY" secondAttribute="bottom" id="FMe-Wb-Jug"/>
                 <constraint firstItem="Df9-04-0Dy" firstAttribute="top" secondItem="MHR-Lg-W0J" secondAttribute="bottom" constant="20" id="Glw-85-8XN"/>
                 <constraint firstItem="TdC-6e-0WS" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="Jtz-oM-hED"/>
+                <constraint firstItem="oKj-OA-3El" firstAttribute="bottom" secondItem="ZwS-fx-vlS" secondAttribute="bottom" id="RdD-1c-d0m"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="rtt-tq-ZNX" secondAttribute="trailing" id="Ug4-ki-RKa"/>
+                <constraint firstItem="oKj-OA-3El" firstAttribute="top" secondItem="ZwS-fx-vlS" secondAttribute="top" id="XgI-qA-bjK"/>
                 <constraint firstItem="Df9-04-0Dy" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.9" id="hwt-io-bR0"/>
+                <constraint firstItem="9P0-Pz-8zS" firstAttribute="trailing" secondItem="UTr-SS-6mY" secondAttribute="trailing" id="l5M-ol-x94"/>
                 <constraint firstItem="Df9-04-0Dy" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="qQX-9V-xJP"/>
+                <constraint firstItem="9P0-Pz-8zS" firstAttribute="leading" secondItem="UTr-SS-6mY" secondAttribute="leading" id="weq-oH-krj"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="141" y="125"/>

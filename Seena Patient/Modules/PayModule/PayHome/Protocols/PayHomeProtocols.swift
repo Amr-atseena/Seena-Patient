@@ -33,9 +33,16 @@ protocol PayHomePresenterProtocol: class {
     var localization: PayHomeLocalization { get }
     // view -> Presenter
     func viewDidLoad()
+    func payButtonTapped()
+    func calculateButtonTapped()
+    var numberOfDue: Int { get }
 }
 // MARK: - PayHome View
 protocol PayHomeViewProtocol: class {
     var presenter: PayHomePresenterProtocol! { get set }
     // Presenter -> View
+    func setupNavBar()
+    func setupUI()
+    func setupPaymentsDueTableView()
+    func realodDue()
 }

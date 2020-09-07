@@ -14,6 +14,9 @@ class PayHomePresenter: PayHomePresenterProtocol {
     var interactor: PayHomeInputInteractorProtocol?
     var router: PayHomeRouterProtocol?
     let localization = PayHomeLocalization()
+    var numberOfDue: Int {
+        return 10
+    }
     // MARK: - Init
     init(view: PayHomeViewProtocol?, interactor: PayHomeInputInteractorProtocol, router: PayHomeRouterProtocol ) {
         self.view = view
@@ -22,6 +25,13 @@ class PayHomePresenter: PayHomePresenterProtocol {
     }
     // MARK: - Methods
     func viewDidLoad() {
+        view?.setupNavBar()
+        view?.setupUI()
+        view?.setupPaymentsDueTableView()
+    }
+    func payButtonTapped() {
+    }
+    func calculateButtonTapped() {
     }
 }
 // MARK: - PayHomeOutputInteractorProtocol Implementation

@@ -69,6 +69,8 @@
 		8885BB2F25019CE0000D7BD5 /* SplashLocalDataServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8885BB2E25019CE0000D7BD5 /* SplashLocalDataServiceProtocol.swift */; };
 		8885BB3125019CF4000D7BD5 /* SplashLocalDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8885BB3025019CF4000D7BD5 /* SplashLocalDataManager.swift */; };
 		88A772DA24FC434400228FF2 /* SeenaUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A772D924FC434400228FF2 /* SeenaUnitTests.swift */; };
+		88BE60AA2506BE6900EB2F03 /* DueCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BE60A82506BE6900EB2F03 /* DueCell.swift */; };
+		88BE60AB2506BE6900EB2F03 /* DueCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88BE60A92506BE6900EB2F03 /* DueCell.xib */; };
 		88E0C71B2505676C001A1B3B /* PayHomeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88E0C7142505676C001A1B3B /* PayHomeVC.xib */; };
 		88E0C71C2505676C001A1B3B /* PayHomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E0C7152505676C001A1B3B /* PayHomePresenter.swift */; };
 		88E0C71D2505676C001A1B3B /* PayHomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E0C7162505676C001A1B3B /* PayHomeRouter.swift */; };
@@ -254,6 +256,8 @@
 		88A772D724FC434400228FF2 /* SeenaUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SeenaUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		88A772D924FC434400228FF2 /* SeenaUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeenaUnitTests.swift; sourceTree = "<group>"; };
 		88A772DB24FC434400228FF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		88BE60A82506BE6900EB2F03 /* DueCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DueCell.swift; sourceTree = "<group>"; };
+		88BE60A92506BE6900EB2F03 /* DueCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DueCell.xib; sourceTree = "<group>"; };
 		88E0C7142505676C001A1B3B /* PayHomeVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PayHomeVC.xib; sourceTree = "<group>"; };
 		88E0C7152505676C001A1B3B /* PayHomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayHomePresenter.swift; sourceTree = "<group>"; };
 		88E0C7162505676C001A1B3B /* PayHomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayHomeRouter.swift; sourceTree = "<group>"; };
@@ -661,6 +665,15 @@
 			path = SeenaUnitTests;
 			sourceTree = "<group>";
 		};
+		88BE60A72506BE3E00EB2F03 /* DueCell */ = {
+			isa = PBXGroup;
+			children = (
+				88BE60A82506BE6900EB2F03 /* DueCell.swift */,
+				88BE60A92506BE6900EB2F03 /* DueCell.xib */,
+			);
+			path = DueCell;
+			sourceTree = "<group>";
+		};
 		88E0C712250566D3001A1B3B /* PayModule */ = {
 			isa = PBXGroup;
 			children = (
@@ -693,6 +706,7 @@
 		88E0C72325056783001A1B3B /* View */ = {
 			isa = PBXGroup;
 			children = (
+				88BE60A72506BE3E00EB2F03 /* DueCell */,
 				88E0C728250567CF001A1B3B /* PayHomeVC */,
 			);
 			path = View;
@@ -1805,6 +1819,7 @@
 				88E0C71B2505676C001A1B3B /* PayHomeVC.xib in Resources */,
 				88EDA12924FAE41200460B4D /* ProfileVC.xib in Resources */,
 				883D941824F44392004A3F86 /* SpectialitySkeltonCell.xib in Resources */,
+				88BE60AB2506BE6900EB2F03 /* DueCell.xib in Resources */,
 				8827E95024F5A264009C64FB /* EmptyStateView.xib in Resources */,
 				8C81545024EB21CA00CA30E7 /* ServicesSearchVC.xib in Resources */,
 				8CAB09B124E8357E00D38CDD /* ServiceCell.xib in Resources */,
@@ -1944,6 +1959,7 @@
 				88104B7D24F2E0F300DB5ED9 /* BaseResponse.swift in Sources */,
 				88ED041E24EFFD9100BBCEF6 /* NotificationsHomeRouter.swift in Sources */,
 				887C630D250225C200C69E2A /* AlertEntity.swift in Sources */,
+				88BE60AA2506BE6900EB2F03 /* DueCell.swift in Sources */,
 				8C8CB3ED24E6CA46009679E5 /* String+Extensions.swift in Sources */,
 				8C8CB41424E6EBFD009679E5 /* CustomizedTabBar.swift in Sources */,
 				88EDA11A24FADA0D00460B4D /* ServiceResultCell.swift in Sources */,
