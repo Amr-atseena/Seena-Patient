@@ -33,9 +33,20 @@ protocol PaymentChannelPresenterProtocol: class {
     var localization: PaymentChannelLocalization { get }
     // view -> Presenter
     func viewDidLoad()
+    func config(paymentCell cell: PaymentMethodCellProtocol, atIndex index: Int)
+    func option(selectedAtIndex index: Int)
+    var numberOfPaymentMethods: Int { get }
 }
 // MARK: - PaymentChannel View
 protocol PaymentChannelViewProtocol: class {
     var presenter: PaymentChannelPresenterProtocol! { get set }
     // Presenter -> View
+    func setupNavBar()
+    func setupUI()
+    func setupPaymentMethodsTableView()
+    func reloadPaymentMethods()
+}
+// MARK: - PaymentChannel View
+protocol PaymentMethodCellProtocol: class {
+    func setMethod(option: OptionViewModel)
 }

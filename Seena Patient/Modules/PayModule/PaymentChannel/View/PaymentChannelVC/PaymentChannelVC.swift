@@ -10,6 +10,9 @@ import UIKit
 
 class PaymentChannelVC: UIViewController, PaymentChannelViewProtocol {
     // MARK: - Outlets
+    @IBOutlet private var paymentChannelKeywordLabel: UILabel!
+    @IBOutlet private var paymentMethodsTableView: UITableView!
+    @IBOutlet var containerView: UIView!
     // MARK: - Attributes
     var presenter: PaymentChannelPresenterProtocol!
     // MARK: - Init
@@ -26,9 +29,42 @@ class PaymentChannelVC: UIViewController, PaymentChannelViewProtocol {
         presenter.viewDidLoad()
     }
     // MARK: - Methods
+    func setupNavBar() {
+        navigationController?.navigationBar.isHidden = true
+    }
+    func setupUI() {
+        // paymentChannelKeyword Label
+        paymentChannelKeywordLabel.text = presenter.localization.paymentChannel
+        paymentChannelKeywordLabel.font = DesignSystem.Typography.heading.font
+    }
+    func setupPaymentMethodsTableView() {
+        paymentMethodsTableView.delegate = self
+        paymentMethodsTableView.dataSource = self
+        paymentMethodsTableView.register(cellWithClass: PaymentMethodCell.self)
+    }
+    func reloadPaymentMethods() {
+        paymentMethodsTableView.reloadData()
+    }
     // MARK: - Actions
     // MARK: - DeInit
     deinit {
          debugPrint(PaymentChannelVC.className + "Release from Momery")
+    }
+}
+// MARK: - tableView DataSource Impelementations
+extension PaymentChannelVC: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 4
+    }
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withClass: PaymentMethodCell.self, for: indexPath)
+        presenter.config(paymentCell: cell, atIndex: indexPath.row)
+        return cell
+    }
+}
+// MARK: - tableView Delegate Impelementations
+extension PaymentChannelVC: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        presenter.option(selectedAtIndex: indexPath.row)
     }
 }

@@ -10,4 +10,19 @@ import Foundation
 
 struct PaymentChannelLocalization {
     // MARK: - Attributes
+    var paymentChannel: String {
+        return "Payment Channel".localized
+    }
+    var seenaPay: String {
+        return "Seena Pay".localized
+    }
+    var atm: String {
+        return "ATM".localized
+    }
+    var onlinePay: String {
+        return "Online Payment".localized
+    }
+    var vodafoneCash: String {
+        return "Vodafone Cash".localized
+    }
 }

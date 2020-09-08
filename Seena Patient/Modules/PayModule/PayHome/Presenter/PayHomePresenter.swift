@@ -30,6 +30,7 @@ class PayHomePresenter: PayHomePresenterProtocol {
         view?.setupPaymentsDueTableView()
     }
     func payButtonTapped() {
+        router?.go(to: .paymentChannel)
     }
     func calculateButtonTapped() {
     }

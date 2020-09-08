@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 // MARK: - PayHome Router
 enum PayHomeRoute {
+    case paymentChannel
 }
 protocol PayHomeRouterProtocol {
     // Presenter -> Router

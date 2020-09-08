@@ -24,5 +24,12 @@ class PayHomeRouter: PayHomeRouterProtocol {
     }
     // MARK: - Routing
     func go(to router: PayHomeRoute) {
+        switch router {
+        case .paymentChannel:
+            navigateToPaymentChannel()
+        }
+    }
+    private func navigateToPaymentChannel() {
+        viewController?.navigationController?.pushViewController(PaymentChannelRouter.assembleModule(), animated: true)
     }
 }

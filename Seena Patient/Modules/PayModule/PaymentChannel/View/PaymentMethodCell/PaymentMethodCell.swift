@@ -9,13 +9,29 @@
 import UIKit
 
 class PaymentMethodCell: UITableViewCell {
+    @IBOutlet private var methodNameLabel: UILabel!
+    @IBOutlet private var holderView: UIView!
+    override var isSelected: Bool {
+        didSet {
+            if isSelected {
+                holderView.backgroundColor = DesignSystem.Colors.primaryActionBackground.color
+                methodNameLabel.textColor = DesignSystem.Colors.headingText.color
+            } else {
+                holderView.backgroundColor = DesignSystem.Colors.secondroyActionBackground.color
+                methodNameLabel.textColor = DesignSystem.Colors.secondaryText.color
+            }
+        }
+    }
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        // methodName Label
+        methodNameLabel.font = DesignSystem.Typography.subHeading3.font
     }
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+}
+// MARK: - PaymentMethodCellProtocol implementation
+extension PaymentMethodCell: PaymentMethodCellProtocol {
+    func setMethod(option: OptionViewModel) {
+        methodNameLabel.text = option.name
+        isSelected = option.isSelected
     }
 }

@@ -14,6 +14,10 @@ class PaymentChannelPresenter: PaymentChannelPresenterProtocol {
     var interactor: PaymentChannelInputInteractorProtocol?
     var router: PaymentChannelRouterProtocol?
     let localization = PaymentChannelLocalization()
+    private var paymentMethods = [OptionViewModel]()
+    var numberOfPaymentMethods: Int {
+        return paymentMethods.count
+    }
     // MARK: - Init
     init(view: PaymentChannelViewProtocol?, interactor: PaymentChannelInputInteractorProtocol, router: PaymentChannelRouterProtocol ) {
         self.view = view
@@ -22,6 +26,22 @@ class PaymentChannelPresenter: PaymentChannelPresenterProtocol {
     }
     // MARK: - Methods
     func viewDidLoad() {
+        view?.setupNavBar()
+        view?.setupUI()
+        view?.setupPaymentMethodsTableView()
+        paymentMethods = [OptionViewModel(name: localization.seenaPay),
+                          OptionViewModel(name: localization.atm),
+                          OptionViewModel(name: localization.onlinePay),
+                          OptionViewModel(name: localization.vodafoneCash)]
+    }
+    func config(paymentCell cell: PaymentMethodCellProtocol, atIndex index: Int) {
+        let option = paymentMethods[index]
+        cell.setMethod(option: option)
+    }
+    func option(selectedAtIndex index: Int) {
+        paymentMethods = paymentMethods.map { OptionViewModel(name: $0.name, isSelected: false)}
+        paymentMethods[index].isSelected = true
+        view?.reloadPaymentMethods()
     }
 }
 // MARK: - PaymentChannelOutputInteractorProtocol Implementation
