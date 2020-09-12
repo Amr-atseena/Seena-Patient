@@ -22,6 +22,13 @@ class SignInPresenter: SignInPresenterProtocol {
     }
     // MARK: - Methods
     func viewDidLoad() {
+        view?.setupUI()
+    }
+    func signInButtonTapped(withPhone phone: String?, andPassword password: String?) {
+    }
+    func signUpButtonTapped() {
+    }
+    func forgotPasswordTapped() {
     }
 }
 // MARK: - SignInOutputInteractorProtocol Implementation

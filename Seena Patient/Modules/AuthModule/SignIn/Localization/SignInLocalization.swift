@@ -10,4 +10,25 @@ import Foundation
 
 struct SignInLocalization {
     // MARK: - Attributes
+    var welcome: String {
+        return "Welcome".localized
+    }
+    var signIn: String {
+        return "Sign In".localized
+    }
+    var signUp: String {
+        return "Sign Up".localized
+    }
+    var doNotHaveAccount: String {
+        return "Don't have account?".localized
+    }
+    var forgotPassword: String {
+        return "Forgot Password?".localized
+    }
+    var password: String {
+        return "Password".localized
+    }
+    var phone: String {
+        return "Phone".localized
+    }
 }

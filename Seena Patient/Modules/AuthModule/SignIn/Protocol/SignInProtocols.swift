@@ -10,6 +10,9 @@ import Foundation
 import UIKit
 // MARK: - SignIn Router
 enum SignInRoute {
+    case signUp
+    case forgotPassword
+    case profile
 }
 protocol SignInRouterProtocol {
     // Presenter -> Router
@@ -33,9 +36,15 @@ protocol SignInPresenterProtocol: class {
     var localization: SignInLocalization { get }
     // view -> Presenter
     func viewDidLoad()
+    func signInButtonTapped(withPhone phone: String?, andPassword password: String?)
+    func signUpButtonTapped()
+    func forgotPasswordTapped()
 }
 // MARK: - SignIn View
 protocol SignInViewProtocol: class {
     var presenter: SignInPresenterProtocol! { get set }
     // Presenter -> View
+    func setupUI()
+    func showLoadingIndictor()
+    func hideLoadingIndictor()
 }
