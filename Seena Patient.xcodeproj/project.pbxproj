@@ -129,6 +129,13 @@
 		88EDA12E24FAE41200460B4D /* ProfileLocalization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EDA12724FAE41200460B4D /* ProfileLocalization.swift */; };
 		88EDA12F24FAE41200460B4D /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EDA12824FAE41200460B4D /* ProfileVC.swift */; };
 		88F67586250CBBA700D19822 /* PayOptionLocalization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F67585250CBBA700D19822 /* PayOptionLocalization.swift */; };
+		88F67591250D2B8F00D19822 /* SignInVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88F6758A250D2B8F00D19822 /* SignInVC.xib */; };
+		88F67592250D2B8F00D19822 /* SignInPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F6758B250D2B8F00D19822 /* SignInPresenter.swift */; };
+		88F67593250D2B8F00D19822 /* SignInRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F6758C250D2B8F00D19822 /* SignInRouter.swift */; };
+		88F67594250D2B8F00D19822 /* SignInProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F6758D250D2B8F00D19822 /* SignInProtocols.swift */; };
+		88F67595250D2B8F00D19822 /* SignInInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F6758E250D2B8F00D19822 /* SignInInteractor.swift */; };
+		88F67596250D2B8F00D19822 /* SignInLocalization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F6758F250D2B8F00D19822 /* SignInLocalization.swift */; };
+		88F67597250D2B8F00D19822 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F67590250D2B8F00D19822 /* SignInVC.swift */; };
 		88F706C024EE6804005C2ADB /* PackageDetailsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88F706B924EE6804005C2ADB /* PackageDetailsVC.xib */; };
 		88F706C124EE6804005C2ADB /* PackageDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F706BA24EE6804005C2ADB /* PackageDetailsPresenter.swift */; };
 		88F706C224EE6804005C2ADB /* PackageDetailsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F706BB24EE6804005C2ADB /* PackageDetailsRouter.swift */; };
@@ -335,6 +342,13 @@
 		88EDA12724FAE41200460B4D /* ProfileLocalization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileLocalization.swift; sourceTree = "<group>"; };
 		88EDA12824FAE41200460B4D /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		88F67585250CBBA700D19822 /* PayOptionLocalization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayOptionLocalization.swift; sourceTree = "<group>"; };
+		88F6758A250D2B8F00D19822 /* SignInVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignInVC.xib; sourceTree = "<group>"; };
+		88F6758B250D2B8F00D19822 /* SignInPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInPresenter.swift; sourceTree = "<group>"; };
+		88F6758C250D2B8F00D19822 /* SignInRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInRouter.swift; sourceTree = "<group>"; };
+		88F6758D250D2B8F00D19822 /* SignInProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInProtocols.swift; sourceTree = "<group>"; };
+		88F6758E250D2B8F00D19822 /* SignInInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInInteractor.swift; sourceTree = "<group>"; };
+		88F6758F250D2B8F00D19822 /* SignInLocalization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInLocalization.swift; sourceTree = "<group>"; };
+		88F67590250D2B8F00D19822 /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
 		88F706B924EE6804005C2ADB /* PackageDetailsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PackageDetailsVC.xib; sourceTree = "<group>"; };
 		88F706BA24EE6804005C2ADB /* PackageDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageDetailsPresenter.swift; sourceTree = "<group>"; };
 		88F706BB24EE6804005C2ADB /* PackageDetailsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageDetailsRouter.swift; sourceTree = "<group>"; };
@@ -1230,6 +1244,84 @@
 			path = "Payment Options";
 			sourceTree = "<group>";
 		};
+		88F67589250D2AB300D19822 /* AuthModule */ = {
+			isa = PBXGroup;
+			children = (
+				88F67598250D2B9300D19822 /* SignIn */,
+			);
+			path = AuthModule;
+			sourceTree = "<group>";
+		};
+		88F67598250D2B9300D19822 /* SignIn */ = {
+			isa = PBXGroup;
+			children = (
+				88F6759F250D2BF500D19822 /* Localization */,
+				88F6759D250D2BD100D19822 /* Protocol */,
+				88F6759C250D2BC800D19822 /* Router */,
+				88F6759E250D2BDD00D19822 /* Interactor */,
+				88F6759B250D2BBD00D19822 /* Presenter */,
+				88F67599250D2BA700D19822 /* View */,
+			);
+			path = SignIn;
+			sourceTree = "<group>";
+		};
+		88F67599250D2BA700D19822 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				88F6759A250D2BAF00D19822 /* SignInVC */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		88F6759A250D2BAF00D19822 /* SignInVC */ = {
+			isa = PBXGroup;
+			children = (
+				88F67590250D2B8F00D19822 /* SignInVC.swift */,
+				88F6758A250D2B8F00D19822 /* SignInVC.xib */,
+			);
+			path = SignInVC;
+			sourceTree = "<group>";
+		};
+		88F6759B250D2BBD00D19822 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				88F6758B250D2B8F00D19822 /* SignInPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		88F6759C250D2BC800D19822 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				88F6758C250D2B8F00D19822 /* SignInRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		88F6759D250D2BD100D19822 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				88F6758D250D2B8F00D19822 /* SignInProtocols.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		88F6759E250D2BDD00D19822 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				88F6758E250D2B8F00D19822 /* SignInInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		88F6759F250D2BF500D19822 /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				88F6758F250D2B8F00D19822 /* SignInLocalization.swift */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
 		88F706B824EE67E0005C2ADB /* PackageDetails */ = {
 			isa = PBXGroup;
 			children = (
@@ -1441,6 +1533,7 @@
 			isa = PBXGroup;
 			children = (
 				8C8CB3DD24E6BAB2009679E5 /* RootModule */,
+				88F67589250D2AB300D19822 /* AuthModule */,
 				8C8CB3E224E6C671009679E5 /* SplashModule */,
 				8C8CB41B24E6F974009679E5 /* TabBarModule */,
 				8C843EBC24EA99500055475E /* ServicesModule */,
@@ -2019,6 +2112,7 @@
 				88EDA12024FADD9B00460B4D /* ServiceResultSkeltonCell.xib in Resources */,
 				887C63152502341D00C69E2A /* OptionCell.xib in Resources */,
 				88F706C024EE6804005C2ADB /* PackageDetailsVC.xib in Resources */,
+				88F67591250D2B8F00D19822 /* SignInVC.xib in Resources */,
 				8C8CB40424E6D3B3009679E5 /* SplashVC.xib in Resources */,
 				8CEC77FA24E9BB2A000CED1F /* ServiceDetailsVC.xib in Resources */,
 				88ED040524EFCD9A00BBCEF6 /* ClinicsSearchVC.xib in Resources */,
@@ -2150,6 +2244,7 @@
 				8885BB1425015D56000D7BD5 /* ClinicViewModel.swift in Sources */,
 				88120B7B24EF2C66004A2381 /* ClinicDetailsPresenter.swift in Sources */,
 				88120B6324EF07BE004A2381 /* ClinicsHomeInteractor.swift in Sources */,
+				88F67597250D2B8F00D19822 /* SignInVC.swift in Sources */,
 				8C8CB3EE24E6CA46009679E5 /* NSObject+Extensions.swift in Sources */,
 				8C8CB3C224E6B815009679E5 /* AppDelegate.swift in Sources */,
 				88120B6424EF07BE004A2381 /* ClinicsHomeLocalization.swift in Sources */,
@@ -2176,12 +2271,15 @@
 				88E0C71C2505676C001A1B3B /* PayHomePresenter.swift in Sources */,
 				88EDA11F24FADD9B00460B4D /* ServiceResultSkeltonCell.swift in Sources */,
 				88104B7D24F2E0F300DB5ED9 /* BaseResponse.swift in Sources */,
+				88F67596250D2B8F00D19822 /* SignInLocalization.swift in Sources */,
 				88ED041E24EFFD9100BBCEF6 /* NotificationsHomeRouter.swift in Sources */,
 				887C630D250225C200C69E2A /* AlertEntity.swift in Sources */,
 				88BE60AA2506BE6900EB2F03 /* DueCell.swift in Sources */,
 				8C8CB3ED24E6CA46009679E5 /* String+Extensions.swift in Sources */,
 				8C8CB41424E6EBFD009679E5 /* CustomizedTabBar.swift in Sources */,
+				88F67593250D2B8F00D19822 /* SignInRouter.swift in Sources */,
 				88EDA11A24FADA0D00460B4D /* ServiceResultCell.swift in Sources */,
+				88F67594250D2B8F00D19822 /* SignInProtocols.swift in Sources */,
 				8CAB09A324E80BC600D38CDD /* CustomFontDiscriptor.swift in Sources */,
 				8885BB2C25019925000D7BD5 /* SplashRemoteDataManager.swift in Sources */,
 				8C8CB40F24E6E53A009679E5 /* SplashInteractor.swift in Sources */,
@@ -2232,6 +2330,7 @@
 				88ED040924EFCD9A00BBCEF6 /* ClinicsSearchInteractor.swift in Sources */,
 				8C81545424EB21CA00CA30E7 /* ServicesSearchProtocols.swift in Sources */,
 				883D941724F44392004A3F86 /* SpectialitySkeltonCell.swift in Sources */,
+				88F67592250D2B8F00D19822 /* SignInPresenter.swift in Sources */,
 				8C8CB41D24E6F999009679E5 /* HomeTabBarVC.swift in Sources */,
 				8C8CB40D24E6E283009679E5 /* SplashRouter.swift in Sources */,
 				88ED042124EFFD9100BBCEF6 /* NotificationsHomeLocalization.swift in Sources */,
@@ -2255,6 +2354,7 @@
 				8CAB097124E7CEA700D38CDD /* TabBarLocalization.swift in Sources */,
 				8C81545524EB21CA00CA30E7 /* ServicesSearchInteractor.swift in Sources */,
 				88ED042D24F0042600BBCEF6 /* NotificationCell.swift in Sources */,
+				88F67595250D2B8F00D19822 /* SignInInteractor.swift in Sources */,
 				88120B7C24EF2C66004A2381 /* ClinicDetailsRouter.swift in Sources */,
 				887C631F2502557D00C69E2A /* ClinicsListParameters.swift in Sources */,
 				8803D1E425081EAA004A6A46 /* ATMPayInteractor.swift in Sources */,
