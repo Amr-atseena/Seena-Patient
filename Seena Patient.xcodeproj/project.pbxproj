@@ -817,7 +817,7 @@
 		88E0C712250566D3001A1B3B /* PayModule */ = {
 			isa = PBXGroup;
 			children = (
-				8803D1D825081E56004A6A46 /* ATMPay */,
+				88F67587250D251400D19822 /* Payment Options */,
 				88E0C713250566E5001A1B3B /* PayHome */,
 				88BE60AC2506CA0200EB2F03 /* PaymentChannel */,
 			);
@@ -1220,6 +1220,14 @@
 				8803D1DA25081EAA004A6A46 /* ATMPayPresenter.swift */,
 			);
 			path = Presenter;
+			sourceTree = "<group>";
+		};
+		88F67587250D251400D19822 /* Payment Options */ = {
+			isa = PBXGroup;
+			children = (
+				8803D1D825081E56004A6A46 /* ATMPay */,
+			);
+			path = "Payment Options";
 			sourceTree = "<group>";
 		};
 		88F706B824EE67E0005C2ADB /* PackageDetails */ = {

@@ -46,8 +46,7 @@ extension DesignSystem {
                 return UIFont.preferredFont(forTextStyle: fontDiscriptor.style)
             }
             let fontMatrics = UIFontMetrics(forTextStyle: fontDiscriptor.style)
-            return fontMatrics.scaledFont(for:
-                font)
+            return fontMatrics.scaledFont(for: font)
         }
     }
 }
