@@ -136,6 +136,9 @@
 		88F67595250D2B8F00D19822 /* SignInInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F6758E250D2B8F00D19822 /* SignInInteractor.swift */; };
 		88F67596250D2B8F00D19822 /* SignInLocalization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F6758F250D2B8F00D19822 /* SignInLocalization.swift */; };
 		88F67597250D2B8F00D19822 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F67590250D2B8F00D19822 /* SignInVC.swift */; };
+		88F675A1250D56A700D19822 /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F675A0250D56A700D19822 /* LoginResponse.swift */; };
+		88F675A3250D56BB00D19822 /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F675A2250D56BA00D19822 /* Status.swift */; };
+		88F675A5250D56CA00D19822 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F675A4250D56CA00D19822 /* User.swift */; };
 		88F706C024EE6804005C2ADB /* PackageDetailsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88F706B924EE6804005C2ADB /* PackageDetailsVC.xib */; };
 		88F706C124EE6804005C2ADB /* PackageDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F706BA24EE6804005C2ADB /* PackageDetailsPresenter.swift */; };
 		88F706C224EE6804005C2ADB /* PackageDetailsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F706BB24EE6804005C2ADB /* PackageDetailsRouter.swift */; };
@@ -349,6 +352,9 @@
 		88F6758E250D2B8F00D19822 /* SignInInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInInteractor.swift; sourceTree = "<group>"; };
 		88F6758F250D2B8F00D19822 /* SignInLocalization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInLocalization.swift; sourceTree = "<group>"; };
 		88F67590250D2B8F00D19822 /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
+		88F675A0250D56A700D19822 /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
+		88F675A2250D56BA00D19822 /* Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
+		88F675A4250D56CA00D19822 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		88F706B924EE6804005C2ADB /* PackageDetailsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PackageDetailsVC.xib; sourceTree = "<group>"; };
 		88F706BA24EE6804005C2ADB /* PackageDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageDetailsPresenter.swift; sourceTree = "<group>"; };
 		88F706BB24EE6804005C2ADB /* PackageDetailsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageDetailsRouter.swift; sourceTree = "<group>"; };
@@ -1765,6 +1771,9 @@
 				8885BB10250150F3000D7BD5 /* Gallery.swift */,
 				8885BB2225019548000D7BD5 /* City.swift */,
 				887C630C250225C200C69E2A /* AlertEntity.swift */,
+				88F675A0250D56A700D19822 /* LoginResponse.swift */,
+				88F675A2250D56BA00D19822 /* Status.swift */,
+				88F675A4250D56CA00D19822 /* User.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -2278,6 +2287,7 @@
 				8C8CB3ED24E6CA46009679E5 /* String+Extensions.swift in Sources */,
 				8C8CB41424E6EBFD009679E5 /* CustomizedTabBar.swift in Sources */,
 				88F67593250D2B8F00D19822 /* SignInRouter.swift in Sources */,
+				88F675A1250D56A700D19822 /* LoginResponse.swift in Sources */,
 				88EDA11A24FADA0D00460B4D /* ServiceResultCell.swift in Sources */,
 				88F67594250D2B8F00D19822 /* SignInProtocols.swift in Sources */,
 				8CAB09A324E80BC600D38CDD /* CustomFontDiscriptor.swift in Sources */,
@@ -2309,6 +2319,7 @@
 				88BE60B72506CA2500EB2F03 /* PaymentChannelProtocols.swift in Sources */,
 				88104B7F24F2E14E00DB5ED9 /* ServerResonse.swift in Sources */,
 				88ED03F224EFA5CF00BBCEF6 /* GalleryCell.swift in Sources */,
+				88F675A3250D56BB00D19822 /* Status.swift in Sources */,
 				8CAB097524E7DDED00D38CDD /* UIView+Extensions.swift in Sources */,
 				88F706C524EE6804005C2ADB /* PackageDetailsLocalization.swift in Sources */,
 				88EDA12F24FAE41200460B4D /* ProfileVC.swift in Sources */,
@@ -2362,6 +2373,7 @@
 				88104B8A24F2E4DB00DB5ED9 /* ServicesEndPoint.swift in Sources */,
 				88120B7D24EF2C66004A2381 /* ClinicDetailsProtocols.swift in Sources */,
 				8885BB172501743B000D7BD5 /* ClinicsRemoteDataManangerProtocol.swift in Sources */,
+				88F675A5250D56CA00D19822 /* User.swift in Sources */,
 				8827E95324F5A8F2009C64FB /* ServicesListParameters.swift in Sources */,
 				8CAB099224E806C100D38CDD /* Font.swift in Sources */,
 				8CAB098A24E7F2F400D38CDD /* HomeVC.swift in Sources */,
