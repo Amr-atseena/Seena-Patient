@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -11,23 +12,23 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="PayOptionCell" customModule="Seena" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="280" height="100"/>
+            <rect key="frame" x="0.0" y="0.0" width="535" height="90"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="280" height="100"/>
+                <rect key="frame" x="0.0" y="0.0" width="535" height="90"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1x3-Ah-ci4" customClass="AnimatableView" customModule="IBAnimatable">
-                        <rect key="frame" x="5" y="5" width="270" height="90"/>
+                        <rect key="frame" x="5" y="5" width="525" height="80"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="JeD-dg-bsh">
-                                <rect key="frame" x="10" y="10" width="250" height="70"/>
+                                <rect key="frame" x="10" y="10" width="505" height="60"/>
                                 <subviews>
                                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tp5-N9-Bui" customClass="AnimatableView" customModule="IBAnimatable">
-                                        <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" verticalHuggingPriority="1000" image="CIBCommon" translatesAutoresizingMaskIntoConstraints="NO" id="CIS-2M-TUP" customClass="AnimatableImageView" customModule="IBAnimatable">
-                                                <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="CIS-2M-TUP" secondAttribute="height" multiplier="1:1" id="cBE-ZD-2d4"/>
                                                 </constraints>
@@ -66,30 +67,35 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="yhT-4s-cvY">
-                                        <rect key="frame" x="80" y="12" width="170" height="46"/>
+                                        <rect key="frame" x="70" y="7" width="435" height="46"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Account number:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LTX-rd-yPB">
-                                                <rect key="frame" x="0.0" y="0.0" width="170" height="20.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="435" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" name="secondaryText"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="183739390329482" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nj4-5c-sgC">
-                                                <rect key="frame" x="0.0" y="25.5" width="170" height="20.5"/>
+                                                <rect key="frame" x="0.0" y="25.5" width="435" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" name="unSelectedTabBar"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="check" translatesAutoresizingMaskIntoConstraints="NO" id="QqV-wX-zUs">
+                                <rect key="frame" x="485" y="20" width="20" height="20"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="QqV-wX-zUs" firstAttribute="top" secondItem="1x3-Ah-ci4" secondAttribute="top" constant="20" id="GHx-86-DCQ"/>
                             <constraint firstItem="JeD-dg-bsh" firstAttribute="leading" secondItem="1x3-Ah-ci4" secondAttribute="leading" constant="10" id="J4D-Be-MFC"/>
                             <constraint firstAttribute="trailing" secondItem="JeD-dg-bsh" secondAttribute="trailing" constant="10" id="P2r-dh-UNR"/>
                             <constraint firstAttribute="bottom" secondItem="JeD-dg-bsh" secondAttribute="bottom" constant="10" id="WrV-Yk-7OR"/>
+                            <constraint firstAttribute="trailing" secondItem="QqV-wX-zUs" secondAttribute="trailing" constant="20" id="apg-6s-i1f"/>
                             <constraint firstItem="JeD-dg-bsh" firstAttribute="top" secondItem="1x3-Ah-ci4" secondAttribute="top" constant="10" id="mQN-O4-7LU"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
@@ -119,11 +125,24 @@
                 <constraint firstItem="1x3-Ah-ci4" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="V9B-EC-6pY"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
-            <size key="customSize" width="280" height="126"/>
-            <point key="canvasLocation" x="54" y="109"/>
+            <size key="customSize" width="535" height="116"/>
+            <connections>
+                <outlet property="accountNumberKeywordLabel" destination="LTX-rd-yPB" id="n8V-jz-YOT"/>
+                <outlet property="accountNumberLabel" destination="nj4-5c-sgC" id="yet-Vu-vtj"/>
+                <outlet property="bankImage" destination="CIS-2M-TUP" id="pMn-bD-6PC"/>
+                <outlet property="checkImage" destination="QqV-wX-zUs" id="opH-Hn-M1K"/>
+            </connections>
+            <point key="canvasLocation" x="238.40579710144928" y="105.13392857142857"/>
         </collectionViewCell>
     </objects>
     <resources>
         <image name="CIBCommon" width="84" height="87"/>
+        <image name="check" width="20" height="20"/>
+        <namedColor name="secondaryText">
+            <color red="0.016000000759959221" green="0.17299999296665192" blue="0.36100000143051147" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="unSelectedTabBar">
+            <color red="0.46700000762939453" green="0.52499997615814209" blue="0.62000000476837158" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>

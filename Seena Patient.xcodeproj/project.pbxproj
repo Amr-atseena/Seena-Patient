@@ -128,6 +128,7 @@
 		88EDA12D24FAE41200460B4D /* ProfileInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EDA12624FAE41200460B4D /* ProfileInteractor.swift */; };
 		88EDA12E24FAE41200460B4D /* ProfileLocalization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EDA12724FAE41200460B4D /* ProfileLocalization.swift */; };
 		88EDA12F24FAE41200460B4D /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EDA12824FAE41200460B4D /* ProfileVC.swift */; };
+		88F67586250CBBA700D19822 /* PayOptionLocalization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F67585250CBBA700D19822 /* PayOptionLocalization.swift */; };
 		88F706C024EE6804005C2ADB /* PackageDetailsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88F706B924EE6804005C2ADB /* PackageDetailsVC.xib */; };
 		88F706C124EE6804005C2ADB /* PackageDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F706BA24EE6804005C2ADB /* PackageDetailsPresenter.swift */; };
 		88F706C224EE6804005C2ADB /* PackageDetailsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F706BB24EE6804005C2ADB /* PackageDetailsRouter.swift */; };
@@ -333,6 +334,7 @@
 		88EDA12624FAE41200460B4D /* ProfileInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInteractor.swift; sourceTree = "<group>"; };
 		88EDA12724FAE41200460B4D /* ProfileLocalization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileLocalization.swift; sourceTree = "<group>"; };
 		88EDA12824FAE41200460B4D /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
+		88F67585250CBBA700D19822 /* PayOptionLocalization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayOptionLocalization.swift; sourceTree = "<group>"; };
 		88F706B924EE6804005C2ADB /* PackageDetailsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PackageDetailsVC.xib; sourceTree = "<group>"; };
 		88F706BA24EE6804005C2ADB /* PackageDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageDetailsPresenter.swift; sourceTree = "<group>"; };
 		88F706BB24EE6804005C2ADB /* PackageDetailsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageDetailsRouter.swift; sourceTree = "<group>"; };
@@ -441,14 +443,12 @@
 		8803D1D825081E56004A6A46 /* ATMPay */ = {
 			isa = PBXGroup;
 			children = (
-				8803D1E72508237C004A6A46 /* PayOptionCell */,
-				8803D1D925081EAA004A6A46 /* ATMPayVC.xib */,
-				8803D1DA25081EAA004A6A46 /* ATMPayPresenter.swift */,
-				8803D1DB25081EAA004A6A46 /* ATMPayRouter.swift */,
-				8803D1DC25081EAA004A6A46 /* ATMPayProtocols.swift */,
-				8803D1DD25081EAA004A6A46 /* ATMPayInteractor.swift */,
-				8803D1DE25081EAA004A6A46 /* ATMPayLocalization.swift */,
-				8803D1DF25081EAA004A6A46 /* ATMPayVC.swift */,
+				88F67580250CB5EF00D19822 /* Localization */,
+				88F67581250CB5FD00D19822 /* Protocol */,
+				88F67582250CB60900D19822 /* Router */,
+				88F67583250CB61500D19822 /* Interactor */,
+				88F67584250CB61F00D19822 /* Presenter */,
+				88F6757F250CB5A700D19822 /* View */,
 			);
 			path = ATMPay;
 			sourceTree = "<group>";
@@ -1161,6 +1161,65 @@
 				88EDA12824FAE41200460B4D /* ProfileVC.swift */,
 			);
 			path = Profile;
+			sourceTree = "<group>";
+		};
+		88F6757E250CB59A00D19822 /* ATMPayVC */ = {
+			isa = PBXGroup;
+			children = (
+				8803D1D925081EAA004A6A46 /* ATMPayVC.xib */,
+				8803D1DF25081EAA004A6A46 /* ATMPayVC.swift */,
+			);
+			path = ATMPayVC;
+			sourceTree = "<group>";
+		};
+		88F6757F250CB5A700D19822 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8803D1E72508237C004A6A46 /* PayOptionCell */,
+				88F6757E250CB59A00D19822 /* ATMPayVC */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		88F67580250CB5EF00D19822 /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				8803D1DE25081EAA004A6A46 /* ATMPayLocalization.swift */,
+				88F67585250CBBA700D19822 /* PayOptionLocalization.swift */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
+		88F67581250CB5FD00D19822 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				8803D1DC25081EAA004A6A46 /* ATMPayProtocols.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		88F67582250CB60900D19822 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				8803D1DB25081EAA004A6A46 /* ATMPayRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		88F67583250CB61500D19822 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				8803D1DD25081EAA004A6A46 /* ATMPayInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		88F67584250CB61F00D19822 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				8803D1DA25081EAA004A6A46 /* ATMPayPresenter.swift */,
+			);
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 		88F706B824EE67E0005C2ADB /* PackageDetails */ = {
@@ -2069,6 +2128,7 @@
 				8C8CB3EC24E6CA46009679E5 /* UITableView+Extensions.swift in Sources */,
 				88120B6024EF07BE004A2381 /* ClinicsHomePresenter.swift in Sources */,
 				8CEC780924E9CC2B000CED1F /* ServiceDetailsLocalizaition.swift in Sources */,
+				88F67586250CBBA700D19822 /* PayOptionLocalization.swift in Sources */,
 				88ED041F24EFFD9100BBCEF6 /* NotificationsHomeProtocols.swift in Sources */,
 				88BE60B92506CA2500EB2F03 /* PaymentChannelLocalization.swift in Sources */,
 				88104B8124F2E39100DB5ED9 /* HomeResponse.swift in Sources */,

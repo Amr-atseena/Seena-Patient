@@ -11,6 +11,8 @@ import UIKit
 class ATMPayVC: UIViewController, ATMPayViewProtocol {
     // MARK: - Outlets
     @IBOutlet private var accountsCollectionView: UICollectionView!
+    @IBOutlet private var nextButton: UIButton!
+    @IBOutlet private var messageLabel: UILabel!
     // MARK: - Attributes
     var presenter: ATMPayPresenterProtocol!
     // MARK: - Init
@@ -25,31 +27,56 @@ class ATMPayVC: UIViewController, ATMPayViewProtocol {
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter.viewDidLoad()
+    }
+    // MARK: - Methods
+    func setupUI() {
+        // next Button
+        nextButton.setTitle(presenter.localization.next, for: .normal)
+        nextButton.titleLabel?.font = DesignSystem.Typography.subHeading3.font
+        // next Button
+        messageLabel.text = presenter.localization.payMessage
+        messageLabel.font = DesignSystem.Typography.title2.font
+    }
+    func setupBankAccountsCollectionView() {
         self.accountsCollectionView.delegate = self
         self.accountsCollectionView.dataSource = self
         accountsCollectionView.register(cellWithClass: PayOptionCell.self)
     }
-    // MARK: - Methods
+    func enableNextButton() {
+        nextButton.backgroundColor = DesignSystem.Colors.primaryActionBackground.color
+        nextButton.isUserInteractionEnabled = true
+    }
     // MARK: - Actions
+    @IBAction private func didNextButtonTapped(_ sender: UIButton) {
+        presenter.nextButtonTapped()
+    }
     // MARK: - DeInit
     deinit {
-         debugPrint(ATMPayVC.className + "Release from Momery")
+        debugPrint(ATMPayVC.className + "Release from Momery")
     }
 }
 // MARK: - ClinicsCollectionView DataSoucrce Implementation
 extension ATMPayVC: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 4
+        return presenter.numberOfAccounts
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withClass: PayOptionCell.self, for: indexPath)
-
+        presenter.config(payCell: cell, atIndex: indexPath.item)
         return cell
     }
 }
 // MARK: - clinicsCollectionView Delegate Implementation
 extension ATMPayVC: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        presenter.payOption(selectedAtIndex: indexPath.item)
+        let cell = collectionView.cellForItem(at: indexPath)
+        cell?.isSelected = true
+    }
+    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        presenter.payOption(deSelectedAtIndex: indexPath.item)
+        let cell = collectionView.cellForItem(at: indexPath)
+        cell?.isSelected = false
     }
 }
 

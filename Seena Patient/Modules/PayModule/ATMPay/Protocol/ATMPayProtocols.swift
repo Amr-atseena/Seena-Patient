@@ -33,9 +33,20 @@ protocol ATMPayPresenterProtocol: class {
     var localization: ATMPayLocalization { get }
     // view -> Presenter
     func viewDidLoad()
+    func config(payCell cell: PayOPtionCellProtocol, atIndex index: Int)
+    func payOption(selectedAtIndex index: Int)
+    func payOption(deSelectedAtIndex index: Int)
+    func nextButtonTapped()
+    var numberOfAccounts: Int { get }
 }
 // MARK: - ATMPay View
 protocol ATMPayViewProtocol: class {
     var presenter: ATMPayPresenterProtocol! { get set }
     // Presenter -> View
+    func setupBankAccountsCollectionView()
+    func setupUI()
+    func enableNextButton()
+}
+// MARK: - PayOPtionCellProtocol
+protocol PayOPtionCellProtocol: class {
 }

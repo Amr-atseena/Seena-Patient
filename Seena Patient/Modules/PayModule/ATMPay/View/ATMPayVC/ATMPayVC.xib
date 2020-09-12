@@ -11,6 +11,8 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ATMPayVC">
             <connections>
                 <outlet property="accountsCollectionView" destination="I50-es-7sK" id="CcG-Co-Ml6"/>
+                <outlet property="messageLabel" destination="JqK-XH-3hz" id="sUh-aI-pEs"/>
+                <outlet property="nextButton" destination="iMf-R8-gW1" id="Zas-HR-5Pq"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -43,7 +45,7 @@
                         </collectionView>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iMf-R8-gW1" customClass="AnimatableButton" customModule="IBAnimatable">
                             <rect key="frame" x="20" y="209" width="374" height="50"/>
-                            <color key="backgroundColor" name="primaryActionBackground"/>
+                            <color key="backgroundColor" name="primaryBorder"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="50" id="zow-SJ-hDb"/>
                             </constraints>
@@ -55,6 +57,9 @@
                                     <real key="value" value="8"/>
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="didNextButtonTapped:" destination="-1" eventType="touchUpInside" id="MNL-Cf-Evy"/>
+                            </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -84,11 +89,11 @@
         </view>
     </objects>
     <resources>
-        <namedColor name="primaryActionBackground">
-            <color red="0.85900002717971802" green="0.078000001609325409" blue="0.078000001609325409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
         <namedColor name="primaryActionText">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="primaryBorder">
+            <color red="0.43900001049041748" green="0.43900001049041748" blue="0.43900001049041748" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="secondaryText">
             <color red="0.016000000759959221" green="0.17299999296665192" blue="0.36100000143051147" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
