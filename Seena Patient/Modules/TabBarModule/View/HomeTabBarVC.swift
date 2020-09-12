@@ -34,7 +34,7 @@ class HomeTabBarVC: UITabBarController {
     }
     private func homeModule() -> UIViewController {
         let home = UINavigationController(rootViewController: HomeRouter.assembleModule())
-        home.tabBarItem = UITabBarItem(title: localization.home, image: #imageLiteral(resourceName: "Home"), tag: 0)
+        home.tabBarItem = UITabBarItem(title: localization.home, image: #imageLiteral(resourceName: "home"), tag: 0)
         return home
     }
     private func clinicsModule() -> UIViewController {
@@ -43,7 +43,7 @@ class HomeTabBarVC: UITabBarController {
         return clinics
     }
     private func payModule() -> UIViewController {
-        let pay = UINavigationController(rootViewController: UIViewController())
+        let pay = UINavigationController(rootViewController: PayHomeRouter.assembleModule())
         pay.tabBarItem = UITabBarItem()
         return pay
     }
