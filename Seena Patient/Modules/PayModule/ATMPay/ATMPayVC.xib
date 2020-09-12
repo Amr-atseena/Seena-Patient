@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ATMPayVC">
+            <connections>
+                <outlet property="accountsCollectionView" destination="I50-es-7sK" id="CcG-Co-Ml6"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="269"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uos-kx-BVC">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="269"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please deposit your payment in any of the following bank accounts; select the bank you chose then click next" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JqK-XH-3hz">
+                            <rect key="frame" x="20" y="5" width="374" height="61"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" name="secondaryText"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="I50-es-7sK">
+                            <rect key="frame" x="0.0" y="76" width="414" height="100"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="100" id="bZf-th-IK6"/>
+                            </constraints>
+                            <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="RNX-c7-EZs">
+                                <size key="itemSize" width="128" height="128"/>
+                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            </collectionViewFlowLayout>
+                        </collectionView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iMf-R8-gW1" customClass="AnimatableButton" customModule="IBAnimatable">
+                            <rect key="frame" x="20" y="209" width="374" height="50"/>
+                            <color key="backgroundColor" name="primaryActionBackground"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="zow-SJ-hDb"/>
+                            </constraints>
+                            <state key="normal" title="Next">
+                                <color key="titleColor" name="primaryActionText"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="8"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="JqK-XH-3hz" firstAttribute="top" secondItem="uos-kx-BVC" secondAttribute="top" constant="5" id="3q9-DL-0BW"/>
+                        <constraint firstAttribute="trailing" secondItem="JqK-XH-3hz" secondAttribute="trailing" constant="20" id="8o9-A7-uPo"/>
+                        <constraint firstAttribute="trailing" secondItem="I50-es-7sK" secondAttribute="trailing" id="IQd-q7-Vah"/>
+                        <constraint firstItem="I50-es-7sK" firstAttribute="top" secondItem="JqK-XH-3hz" secondAttribute="bottom" constant="10" id="JWU-bx-7r0"/>
+                        <constraint firstItem="JqK-XH-3hz" firstAttribute="leading" secondItem="uos-kx-BVC" secondAttribute="leading" constant="20" id="KyE-g1-LfK"/>
+                        <constraint firstAttribute="bottom" secondItem="iMf-R8-gW1" secondAttribute="bottom" constant="10" id="RD7-3H-1oR"/>
+                        <constraint firstItem="iMf-R8-gW1" firstAttribute="top" relation="greaterThanOrEqual" secondItem="I50-es-7sK" secondAttribute="bottom" constant="10" id="Wfi-mZ-Amu"/>
+                        <constraint firstItem="I50-es-7sK" firstAttribute="leading" secondItem="uos-kx-BVC" secondAttribute="leading" id="udc-9P-utL"/>
+                        <constraint firstAttribute="trailing" secondItem="iMf-R8-gW1" secondAttribute="trailing" constant="20" id="vop-ga-1px"/>
+                        <constraint firstItem="iMf-R8-gW1" firstAttribute="leading" secondItem="uos-kx-BVC" secondAttribute="leading" constant="20" id="xh3-zn-qAB"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="uos-kx-BVC" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="1je-RF-MqF"/>
+                <constraint firstItem="uos-kx-BVC" firstAttribute="trailing" secondItem="i5M-Pr-FkT" secondAttribute="trailing" id="Kpe-81-zZU"/>
+                <constraint firstAttribute="bottom" secondItem="uos-kx-BVC" secondAttribute="bottom" id="SUB-Tz-OA5"/>
+                <constraint firstItem="uos-kx-BVC" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="ame-Kt-dtW"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="131.8840579710145" y="-289.62053571428572"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="primaryActionBackground">
+            <color red="0.85900002717971802" green="0.078000001609325409" blue="0.078000001609325409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="primaryActionText">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="secondaryText">
+            <color red="0.016000000759959221" green="0.17299999296665192" blue="0.36100000143051147" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

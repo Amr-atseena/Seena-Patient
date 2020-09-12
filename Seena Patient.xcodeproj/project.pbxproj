@@ -8,6 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		2323E64FD27D63A6AF60C1F6 /* Pods_Seena_Patient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A829CAD199C8BC7D0018D428 /* Pods_Seena_Patient.framework */; };
+		8803D1E025081EAA004A6A46 /* ATMPayVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8803D1D925081EAA004A6A46 /* ATMPayVC.xib */; };
+		8803D1E125081EAA004A6A46 /* ATMPayPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8803D1DA25081EAA004A6A46 /* ATMPayPresenter.swift */; };
+		8803D1E225081EAA004A6A46 /* ATMPayRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8803D1DB25081EAA004A6A46 /* ATMPayRouter.swift */; };
+		8803D1E325081EAA004A6A46 /* ATMPayProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8803D1DC25081EAA004A6A46 /* ATMPayProtocols.swift */; };
+		8803D1E425081EAA004A6A46 /* ATMPayInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8803D1DD25081EAA004A6A46 /* ATMPayInteractor.swift */; };
+		8803D1E525081EAA004A6A46 /* ATMPayLocalization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8803D1DE25081EAA004A6A46 /* ATMPayLocalization.swift */; };
+		8803D1E625081EAA004A6A46 /* ATMPayVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8803D1DF25081EAA004A6A46 /* ATMPayVC.swift */; };
+		8803D1F025082532004A6A46 /* PayOptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8803D1EE25082532004A6A46 /* PayOptionCell.swift */; };
+		8803D1F125082532004A6A46 /* PayOptionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8803D1EF25082532004A6A46 /* PayOptionCell.xib */; };
 		88104B7D24F2E0F300DB5ED9 /* BaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88104B7C24F2E0F300DB5ED9 /* BaseResponse.swift */; };
 		88104B7F24F2E14E00DB5ED9 /* ServerResonse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88104B7E24F2E14E00DB5ED9 /* ServerResonse.swift */; };
 		88104B8124F2E39100DB5ED9 /* HomeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88104B8024F2E39100DB5ED9 /* HomeResponse.swift */; };
@@ -202,6 +211,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8803D1D925081EAA004A6A46 /* ATMPayVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ATMPayVC.xib; sourceTree = "<group>"; };
+		8803D1DA25081EAA004A6A46 /* ATMPayPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATMPayPresenter.swift; sourceTree = "<group>"; };
+		8803D1DB25081EAA004A6A46 /* ATMPayRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATMPayRouter.swift; sourceTree = "<group>"; };
+		8803D1DC25081EAA004A6A46 /* ATMPayProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATMPayProtocols.swift; sourceTree = "<group>"; };
+		8803D1DD25081EAA004A6A46 /* ATMPayInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATMPayInteractor.swift; sourceTree = "<group>"; };
+		8803D1DE25081EAA004A6A46 /* ATMPayLocalization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATMPayLocalization.swift; sourceTree = "<group>"; };
+		8803D1DF25081EAA004A6A46 /* ATMPayVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATMPayVC.swift; sourceTree = "<group>"; };
+		8803D1EE25082532004A6A46 /* PayOptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayOptionCell.swift; sourceTree = "<group>"; };
+		8803D1EF25082532004A6A46 /* PayOptionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PayOptionCell.xib; sourceTree = "<group>"; };
 		88104B7C24F2E0F300DB5ED9 /* BaseResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseResponse.swift; sourceTree = "<group>"; };
 		88104B7E24F2E14E00DB5ED9 /* ServerResonse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerResonse.swift; sourceTree = "<group>"; };
 		88104B8024F2E39100DB5ED9 /* HomeResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeResponse.swift; sourceTree = "<group>"; };
@@ -418,6 +436,30 @@
 				CE9E485092256443C69FE26D /* Pods-Seena Patient.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		8803D1D825081E56004A6A46 /* ATMPay */ = {
+			isa = PBXGroup;
+			children = (
+				8803D1E72508237C004A6A46 /* PayOptionCell */,
+				8803D1D925081EAA004A6A46 /* ATMPayVC.xib */,
+				8803D1DA25081EAA004A6A46 /* ATMPayPresenter.swift */,
+				8803D1DB25081EAA004A6A46 /* ATMPayRouter.swift */,
+				8803D1DC25081EAA004A6A46 /* ATMPayProtocols.swift */,
+				8803D1DD25081EAA004A6A46 /* ATMPayInteractor.swift */,
+				8803D1DE25081EAA004A6A46 /* ATMPayLocalization.swift */,
+				8803D1DF25081EAA004A6A46 /* ATMPayVC.swift */,
+			);
+			path = ATMPay;
+			sourceTree = "<group>";
+		};
+		8803D1E72508237C004A6A46 /* PayOptionCell */ = {
+			isa = PBXGroup;
+			children = (
+				8803D1EE25082532004A6A46 /* PayOptionCell.swift */,
+				8803D1EF25082532004A6A46 /* PayOptionCell.xib */,
+			);
+			path = PayOptionCell;
 			sourceTree = "<group>";
 		};
 		88104B8824F2E44000DB5ED9 /* Services */ = {
@@ -775,6 +817,7 @@
 		88E0C712250566D3001A1B3B /* PayModule */ = {
 			isa = PBXGroup;
 			children = (
+				8803D1D825081E56004A6A46 /* ATMPay */,
 				88E0C713250566E5001A1B3B /* PayHome */,
 				88BE60AC2506CA0200EB2F03 /* PaymentChannel */,
 			);
@@ -1934,7 +1977,9 @@
 				8CAB099D24E808A700D38CDD /* Tajawal-Bold.ttf in Resources */,
 				88120B5F24EF07BE004A2381 /* ClinicsHomeVC.xib in Resources */,
 				887C63242502683700C69E2A /* ClinicSkeletonCell.xib in Resources */,
+				8803D1F125082532004A6A46 /* PayOptionCell.xib in Resources */,
 				8CAB099F24E808A700D38CDD /* Tajawal-Regular.ttf in Resources */,
+				8803D1E025081EAA004A6A46 /* ATMPayVC.xib in Resources */,
 				88ED042E24F0042600BBCEF6 /* NotificationCell.xib in Resources */,
 				8C8CB3CB24E6B817009679E5 /* Assets.xcassets in Resources */,
 				8CAB09AC24E8274200D38CDD /* SpectialityCell.xib in Resources */,
@@ -2027,9 +2072,11 @@
 				88ED041F24EFFD9100BBCEF6 /* NotificationsHomeProtocols.swift in Sources */,
 				88BE60B92506CA2500EB2F03 /* PaymentChannelLocalization.swift in Sources */,
 				88104B8124F2E39100DB5ED9 /* HomeResponse.swift in Sources */,
+				8803D1F025082532004A6A46 /* PayOptionCell.swift in Sources */,
 				88ED041D24EFFD9100BBCEF6 /* NotificationsHomePresenter.swift in Sources */,
 				88104B8E24F2EA8300DB5ED9 /* ServicesRemoteDataManagerProtocol.swift in Sources */,
 				88BE60B62506CA2500EB2F03 /* PaymentChannelRouter.swift in Sources */,
+				8803D1E625081EAA004A6A46 /* ATMPayVC.swift in Sources */,
 				88120B6124EF07BE004A2381 /* ClinicsHomeRouter.swift in Sources */,
 				8C8CB3E024E6C3F7009679E5 /* RootRouter.swift in Sources */,
 				8885BB1425015D56000D7BD5 /* ClinicViewModel.swift in Sources */,
@@ -2076,6 +2123,7 @@
 				8C8CB3EF24E6CA46009679E5 /* UIApplication+Extensions.swift in Sources */,
 				8C8CB42324E71369009679E5 /* Colors.swift in Sources */,
 				8885BB2A2501987D000D7BD5 /* SplashEndPoint.swift in Sources */,
+				8803D1E125081EAA004A6A46 /* ATMPayPresenter.swift in Sources */,
 				8885BB3125019CF4000D7BD5 /* SplashLocalDataManager.swift in Sources */,
 				8C8CB3FE24E6CF23009679E5 /* EnvironmentProtocol.swift in Sources */,
 				8CAB097924E7E6CB00D38CDD /* UIViewContorller+Extensions.swift in Sources */,
@@ -2133,6 +2181,7 @@
 				887C630B25021CE800C69E2A /* SplashResponse.swift in Sources */,
 				887C631B25023AB700C69E2A /* ClinicsSearchLocolDataManager.swift in Sources */,
 				8CEC77FD24E9BC5C000CED1F /* ServiceDetailsPresenter.swift in Sources */,
+				8803D1E525081EAA004A6A46 /* ATMPayLocalization.swift in Sources */,
 				8885BB2F25019CE0000D7BD5 /* SplashLocalDataServiceProtocol.swift in Sources */,
 				887C63102502324F00C69E2A /* OptionsAdapter.swift in Sources */,
 				8CAB097124E7CEA700D38CDD /* TabBarLocalization.swift in Sources */,
@@ -2140,6 +2189,7 @@
 				88ED042D24F0042600BBCEF6 /* NotificationCell.swift in Sources */,
 				88120B7C24EF2C66004A2381 /* ClinicDetailsRouter.swift in Sources */,
 				887C631F2502557D00C69E2A /* ClinicsListParameters.swift in Sources */,
+				8803D1E425081EAA004A6A46 /* ATMPayInteractor.swift in Sources */,
 				8885BB2325019548000D7BD5 /* City.swift in Sources */,
 				88104B8A24F2E4DB00DB5ED9 /* ServicesEndPoint.swift in Sources */,
 				88120B7D24EF2C66004A2381 /* ClinicDetailsProtocols.swift in Sources */,
@@ -2150,9 +2200,11 @@
 				8C8CB3FD24E6CF23009679E5 /* Environment.swift in Sources */,
 				8885BB28250197A4000D7BD5 /* SplashRemoteDataManagerProtocol.swift in Sources */,
 				88BE60C52506CD8E00EB2F03 /* PaymentMethodCell.swift in Sources */,
+				8803D1E325081EAA004A6A46 /* ATMPayProtocols.swift in Sources */,
 				88ED040B24EFCD9A00BBCEF6 /* ClinicsSearchVC.swift in Sources */,
 				8C8CB42124E71353009679E5 /* DesignSystem.swift in Sources */,
 				8C8CB3FB24E6CF23009679E5 /* APIService.swift in Sources */,
+				8803D1E225081EAA004A6A46 /* ATMPayRouter.swift in Sources */,
 				8CAB09B424E84C6800D38CDD /* PackageCell.swift in Sources */,
 				88ED042024EFFD9100BBCEF6 /* NotificationsHomeInteractor.swift in Sources */,
 				8C8CB3EB24E6CA46009679E5 /* UINavigationController+Extensions.swift in Sources */,
