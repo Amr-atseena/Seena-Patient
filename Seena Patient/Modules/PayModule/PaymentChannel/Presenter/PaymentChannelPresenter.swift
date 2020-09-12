@@ -38,6 +38,9 @@ class PaymentChannelPresenter: PaymentChannelPresenterProtocol {
         let option = paymentMethods[index]
         cell.setMethod(option: option)
     }
+    func backButtonTapped() {
+        router?.go(to: .payHome)
+    }
     func option(selectedAtIndex index: Int) {
         paymentMethods = paymentMethods.map { OptionViewModel(name: $0.name, isSelected: false)}
         paymentMethods[index].isSelected = true

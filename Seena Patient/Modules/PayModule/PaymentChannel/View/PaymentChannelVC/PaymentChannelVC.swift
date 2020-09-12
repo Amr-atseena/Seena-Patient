@@ -46,9 +46,12 @@ class PaymentChannelVC: UIViewController, PaymentChannelViewProtocol {
         paymentMethodsTableView.reloadData()
     }
     // MARK: - Actions
+    @IBAction private func didBackButtonTapped(_ sender: UIButton) {
+        presenter.backButtonTapped()
+    }
     // MARK: - DeInit
     deinit {
-         debugPrint(PaymentChannelVC.className + "Release from Momery")
+         debugPrint(PaymentChannelVC.className + " Release from Momery")
     }
 }
 // MARK: - tableView DataSource Impelementations

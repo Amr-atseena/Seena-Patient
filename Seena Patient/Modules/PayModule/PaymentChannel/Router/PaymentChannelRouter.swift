@@ -27,14 +27,27 @@ class PaymentChannelRouter: PaymentChannelRouterProtocol {
         switch router {
         case .atm:
             navigateToATM()
+        case .payHome:
+            navigateToPayHome()
         }
     }
+    private func navigateToPayHome() {
+        viewController?.navigationController?.popViewController(animated: true)
+    }
     private func navigateToATM() {
+        removeChildsVC()
         guard let parent = viewController as? PaymentChannelVC else { return }
         let child = ATMPayRouter.assembleModule()
         parent.containerView.addSubview(child.view)
         child.view.frame = parent.containerView.bounds
         parent.addChild(child)
         child.didMove(toParent: parent)
+    }
+    private func removeChildsVC() {
+        viewController?.children.forEach {
+            $0.willMove(toParent: nil)
+            $0.view.removeFromSuperview()
+            $0.removeFromParent()
+        }
     }
 }

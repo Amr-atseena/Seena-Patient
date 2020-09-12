@@ -11,6 +11,7 @@ import UIKit
 // MARK: - PaymentChannel Router
 enum PaymentChannelRoute {
     case atm
+    case payHome
 }
 protocol PaymentChannelRouterProtocol {
     // Presenter -> Router
@@ -36,6 +37,7 @@ protocol PaymentChannelPresenterProtocol: class {
     func viewDidLoad()
     func config(paymentCell cell: PaymentMethodCellProtocol, atIndex index: Int)
     func option(selectedAtIndex index: Int)
+    func backButtonTapped()
     var numberOfPaymentMethods: Int { get }
 }
 // MARK: - PaymentChannel View

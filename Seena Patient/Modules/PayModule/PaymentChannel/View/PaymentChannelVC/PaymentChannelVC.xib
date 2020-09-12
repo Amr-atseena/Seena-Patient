@@ -28,17 +28,29 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fXW-T5-DgW" customClass="AnimatableView" customModule="IBAnimatable">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="313.66666666666669"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose channel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L1H-ob-3sd">
-                                    <rect key="frame" x="15.000000000000007" y="45" width="123.66666666666669" height="20.666666666666671"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                    <color key="textColor" name="PrimaryNavBarText"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="QHd-VB-eoK">
+                                    <rect key="frame" x="19.999999999999993" y="50" width="123.33333333333331" height="52.333333333333343"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4sv-Vh-u4R">
+                                            <rect key="frame" x="0.0" y="0.0" width="123.33333333333333" height="22"/>
+                                            <state key="normal" image="back-1"/>
+                                            <connections>
+                                                <action selector="didBackButtonTapped:" destination="-1" eventType="touchUpInside" id="y0a-kE-eUs"/>
+                                            </connections>
+                                        </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose channel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L1H-ob-3sd">
+                                            <rect key="frame" x="0.0" y="32" width="123.33333333333333" height="20.333333333333329"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" name="PrimaryNavBarText"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </stackView>
                             </subviews>
                             <color key="backgroundColor" name="primaryNavBarBackground"/>
                             <constraints>
-                                <constraint firstItem="L1H-ob-3sd" firstAttribute="top" secondItem="fXW-T5-DgW" secondAttribute="top" constant="45" id="By5-zy-S69"/>
-                                <constraint firstItem="L1H-ob-3sd" firstAttribute="leading" secondItem="fXW-T5-DgW" secondAttribute="leading" constant="15" id="USI-yY-8xV"/>
+                                <constraint firstItem="QHd-VB-eoK" firstAttribute="leading" secondItem="fXW-T5-DgW" secondAttribute="leading" constant="20" id="TBY-1W-Yoi"/>
+                                <constraint firstItem="QHd-VB-eoK" firstAttribute="top" secondItem="fXW-T5-DgW" secondAttribute="top" constant="50" id="ZPz-iu-q0R"/>
                             </constraints>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -48,10 +60,10 @@
                             </userDefinedRuntimeAttributes>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iw0-dF-ROD" customClass="AnimatableView" customModule="IBAnimatable">
-                            <rect key="frame" x="20" y="85.666666666666657" width="374" height="336.66666666666674"/>
+                            <rect key="frame" x="20" y="112.33333333333334" width="374" height="336.66666666666663"/>
                             <subviews>
                                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="dG6-9Z-fiZ">
-                                    <rect key="frame" x="18.666666666666657" y="16.666666666666657" width="336.66666666666674" height="303"/>
+                                    <rect key="frame" x="18.666666666666657" y="16.666666666666686" width="336.66666666666674" height="303"/>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 </tableView>
                             </subviews>
@@ -82,7 +94,7 @@
                             </userDefinedRuntimeAttributes>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J6n-g1-c9N">
-                            <rect key="frame" x="0.0" y="427.33333333333326" width="414" height="434.66666666666674"/>
+                            <rect key="frame" x="0.0" y="454" width="414" height="408"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </view>
                     </subviews>
@@ -90,9 +102,9 @@
                     <constraints>
                         <constraint firstItem="fXW-T5-DgW" firstAttribute="top" secondItem="BFc-mV-8aV" secondAttribute="top" id="1SO-B9-hbr"/>
                         <constraint firstAttribute="trailing" secondItem="J6n-g1-c9N" secondAttribute="trailing" id="8TD-nn-X5L"/>
+                        <constraint firstItem="iw0-dF-ROD" firstAttribute="top" secondItem="QHd-VB-eoK" secondAttribute="bottom" constant="10" id="Fkz-9S-jyy"/>
                         <constraint firstAttribute="trailing" secondItem="iw0-dF-ROD" secondAttribute="trailing" constant="20" id="Hc5-8r-ZJs"/>
                         <constraint firstItem="fXW-T5-DgW" firstAttribute="leading" secondItem="BFc-mV-8aV" secondAttribute="leading" id="OiX-j7-GPn"/>
-                        <constraint firstItem="iw0-dF-ROD" firstAttribute="top" secondItem="L1H-ob-3sd" secondAttribute="bottom" constant="20" id="ZBj-ek-1lp"/>
                         <constraint firstItem="J6n-g1-c9N" firstAttribute="top" secondItem="iw0-dF-ROD" secondAttribute="bottom" constant="5" id="dUr-Bs-LaS"/>
                         <constraint firstAttribute="bottom" secondItem="J6n-g1-c9N" secondAttribute="bottom" id="fXN-Ef-g9d"/>
                         <constraint firstItem="iw0-dF-ROD" firstAttribute="leading" secondItem="BFc-mV-8aV" secondAttribute="leading" constant="20" id="gZb-bO-gVE"/>
@@ -114,6 +126,7 @@
         </view>
     </objects>
     <resources>
+        <image name="back-1" width="22" height="14"/>
         <namedColor name="PrimaryNavBarText">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
