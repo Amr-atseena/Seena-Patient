@@ -139,6 +139,10 @@
 		88F675A1250D56A700D19822 /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F675A0250D56A700D19822 /* LoginResponse.swift */; };
 		88F675A3250D56BB00D19822 /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F675A2250D56BA00D19822 /* Status.swift */; };
 		88F675A5250D56CA00D19822 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F675A4250D56CA00D19822 /* User.swift */; };
+		88F675A8250D5D4F00D19822 /* AuthenticationRemoteDataManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F675A7250D5D4F00D19822 /* AuthenticationRemoteDataManagerProtocol.swift */; };
+		88F675AA250D5E7E00D19822 /* AuthenticationEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F675A9250D5E7E00D19822 /* AuthenticationEndPoint.swift */; };
+		88F675AC250D5F6F00D19822 /* LoginRequestParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F675AB250D5F6F00D19822 /* LoginRequestParameters.swift */; };
+		88F675AE250D612800D19822 /* AuthenticationRemoteDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F675AD250D612800D19822 /* AuthenticationRemoteDataManager.swift */; };
 		88F706C024EE6804005C2ADB /* PackageDetailsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88F706B924EE6804005C2ADB /* PackageDetailsVC.xib */; };
 		88F706C124EE6804005C2ADB /* PackageDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F706BA24EE6804005C2ADB /* PackageDetailsPresenter.swift */; };
 		88F706C224EE6804005C2ADB /* PackageDetailsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F706BB24EE6804005C2ADB /* PackageDetailsRouter.swift */; };
@@ -355,6 +359,10 @@
 		88F675A0250D56A700D19822 /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
 		88F675A2250D56BA00D19822 /* Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
 		88F675A4250D56CA00D19822 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		88F675A7250D5D4F00D19822 /* AuthenticationRemoteDataManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationRemoteDataManagerProtocol.swift; sourceTree = "<group>"; };
+		88F675A9250D5E7E00D19822 /* AuthenticationEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationEndPoint.swift; sourceTree = "<group>"; };
+		88F675AB250D5F6F00D19822 /* LoginRequestParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequestParameters.swift; sourceTree = "<group>"; };
+		88F675AD250D612800D19822 /* AuthenticationRemoteDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationRemoteDataManager.swift; sourceTree = "<group>"; };
 		88F706B924EE6804005C2ADB /* PackageDetailsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PackageDetailsVC.xib; sourceTree = "<group>"; };
 		88F706BA24EE6804005C2ADB /* PackageDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageDetailsPresenter.swift; sourceTree = "<group>"; };
 		88F706BB24EE6804005C2ADB /* PackageDetailsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageDetailsRouter.swift; sourceTree = "<group>"; };
@@ -611,6 +619,7 @@
 			children = (
 				8827E95224F5A8F2009C64FB /* ServicesListParameters.swift */,
 				887C631E2502557D00C69E2A /* ClinicsListParameters.swift */,
+				88F675AB250D5F6F00D19822 /* LoginRequestParameters.swift */,
 			);
 			path = RequestParameters;
 			sourceTree = "<group>";
@@ -1328,6 +1337,16 @@
 			path = Localization;
 			sourceTree = "<group>";
 		};
+		88F675A6250D5D1F00D19822 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				88F675A7250D5D4F00D19822 /* AuthenticationRemoteDataManagerProtocol.swift */,
+				88F675AD250D612800D19822 /* AuthenticationRemoteDataManager.swift */,
+				88F675A9250D5E7E00D19822 /* AuthenticationEndPoint.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
 		88F706B824EE67E0005C2ADB /* PackageDetails */ = {
 			isa = PBXGroup;
 			children = (
@@ -1688,6 +1707,7 @@
 		8C8CB3F724E6CF23009679E5 /* RemoteServices */ = {
 			isa = PBXGroup;
 			children = (
+				88F675A6250D5D1F00D19822 /* Auth */,
 				8885BB2625019777000D7BD5 /* Splash */,
 				88104B8824F2E44000DB5ED9 /* Services */,
 				8885BB1525017411000D7BD5 /* Clinics */,
@@ -2303,6 +2323,7 @@
 				8885BB3125019CF4000D7BD5 /* SplashLocalDataManager.swift in Sources */,
 				8C8CB3FE24E6CF23009679E5 /* EnvironmentProtocol.swift in Sources */,
 				8CAB097924E7E6CB00D38CDD /* UIViewContorller+Extensions.swift in Sources */,
+				88F675AC250D5F6F00D19822 /* LoginRequestParameters.swift in Sources */,
 				88BE60B52506CA2500EB2F03 /* PaymentChannelPresenter.swift in Sources */,
 				88E0C71F2505676C001A1B3B /* PayHomeInteractor.swift in Sources */,
 				887C6326250277B200C69E2A /* ClinicsHomeResponse.swift in Sources */,
@@ -2323,6 +2344,7 @@
 				8CAB097524E7DDED00D38CDD /* UIView+Extensions.swift in Sources */,
 				88F706C524EE6804005C2ADB /* PackageDetailsLocalization.swift in Sources */,
 				88EDA12F24FAE41200460B4D /* ProfileVC.swift in Sources */,
+				88F675AE250D612800D19822 /* AuthenticationRemoteDataManager.swift in Sources */,
 				8CEC780324E9BD68000CED1F /* ServiceDetailsRouter.swift in Sources */,
 				8885BB0F250150C5000D7BD5 /* Clinic.swift in Sources */,
 				8CEC780024E9BCED000CED1F /* ServiceDetailsInteractor.swift in Sources */,
@@ -2369,6 +2391,7 @@
 				88120B7C24EF2C66004A2381 /* ClinicDetailsRouter.swift in Sources */,
 				887C631F2502557D00C69E2A /* ClinicsListParameters.swift in Sources */,
 				8803D1E425081EAA004A6A46 /* ATMPayInteractor.swift in Sources */,
+				88F675AA250D5E7E00D19822 /* AuthenticationEndPoint.swift in Sources */,
 				8885BB2325019548000D7BD5 /* City.swift in Sources */,
 				88104B8A24F2E4DB00DB5ED9 /* ServicesEndPoint.swift in Sources */,
 				88120B7D24EF2C66004A2381 /* ClinicDetailsProtocols.swift in Sources */,
@@ -2377,6 +2400,7 @@
 				8827E95324F5A8F2009C64FB /* ServicesListParameters.swift in Sources */,
 				8CAB099224E806C100D38CDD /* Font.swift in Sources */,
 				8CAB098A24E7F2F400D38CDD /* HomeVC.swift in Sources */,
+				88F675A8250D5D4F00D19822 /* AuthenticationRemoteDataManagerProtocol.swift in Sources */,
 				8C8CB3FD24E6CF23009679E5 /* Environment.swift in Sources */,
 				8885BB28250197A4000D7BD5 /* SplashRemoteDataManagerProtocol.swift in Sources */,
 				88BE60C52506CD8E00EB2F03 /* PaymentMethodCell.swift in Sources */,

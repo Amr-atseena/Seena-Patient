@@ -25,12 +25,24 @@ class SignInPresenter: SignInPresenterProtocol {
         view?.setupUI()
     }
     func signInButtonTapped(withPhone phone: String?, andPassword password: String?) {
+        view?.showLoadingIndictor()
+        interactor?.login(withPhone: phone ?? "", andPassword: password ?? "")
     }
     func signUpButtonTapped() {
+        router?.go(to: .signUp)
     }
     func forgotPasswordTapped() {
+        router?.go(to: .forgotPassword)
     }
 }
 // MARK: - SignInOutputInteractorProtocol Implementation
 extension SignInPresenter: SignInOutputInteractorProtocol {
+    func onLoginSuccess() {
+        view?.hideLoadingIndictor()
+        router?.go(to: .profile)
+    }
+    func onLoginFail(withMessage message: String) {
+        view?.hideLoadingIndictor()
+        router?.go(to: .alert(AlertEntity(title: "Error", message: message)))
+    }
 }

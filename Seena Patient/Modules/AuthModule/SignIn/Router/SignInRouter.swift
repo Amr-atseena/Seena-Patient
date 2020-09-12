@@ -14,7 +14,8 @@ class SignInRouter: SignInRouterProtocol {
     // MARK: - Assemble
     static func assembleModule() -> UIViewController {
         let router = SignInRouter()
-        let interactor = SignInInteractor()
+        let remoteDataManager = AuthenticationRemoteDataManager()
+        let interactor = SignInInteractor(remoteDataManager: remoteDataManager)
         let view = SignInVC()
         let presenter = SignInPresenter(view: view, interactor: interactor, router: router)
         router.viewController = view
@@ -24,5 +25,22 @@ class SignInRouter: SignInRouterProtocol {
     }
     // MARK: - Routing
     func go(to router: SignInRoute) {
+        switch router {
+        case .signUp:
+            print("sign up")
+        case .forgotPassword:
+            print(" forgotPassword ")
+        case .profile:
+            navigateToProfile()
+        case .alert(let alertEntity):
+            showAlert(alertEntity: alertEntity)
+        }
+    }
+    private func navigateToProfile() {
+        viewController?.navigationController?.setViewControllers([ProfileRouter.assembleModule()], animated: true)
+    }
+    private func showAlert(alertEntity: AlertEntity) {
+        let okAction = UIAlertAction(title: "OK", style: .default)
+        viewController?.showAlertController(title: alertEntity.title, message: alertEntity.message, actions: [okAction])
     }
 }

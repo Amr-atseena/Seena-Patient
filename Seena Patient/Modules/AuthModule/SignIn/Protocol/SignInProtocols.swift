@@ -13,6 +13,7 @@ enum SignInRoute {
     case signUp
     case forgotPassword
     case profile
+    case alert(AlertEntity)
 }
 protocol SignInRouterProtocol {
     // Presenter -> Router
@@ -23,10 +24,14 @@ protocol SignInRouterProtocol {
 // MARK: - SignIn Interactor
 protocol SignInInputInteractorProtocol: class {
     var presenter: SignInOutputInteractorProtocol? { get set }
+    var remoteDataManager: AuthenticationRemoteDataManagerProtocol { get set }
     // Presenter -> Interactor
+    func login(withPhone phone: String, andPassword password: String)
 }
 protocol SignInOutputInteractorProtocol: class {
     // Interactor -> Presenter
+    func onLoginSuccess()
+    func onLoginFail(withMessage message: String)
 }
 // MARK: - SignIn Preseneter
 protocol SignInPresenterProtocol: class {

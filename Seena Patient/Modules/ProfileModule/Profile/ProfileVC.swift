@@ -28,7 +28,7 @@ class ProfileVC: UIViewController, ProfileViewProtocol {
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.navigationController?.setViewControllers ([SignInRouter.assembleModule()], animated: false)
+        self.navigationController?.setViewControllers([SignInRouter.assembleModule()], animated: false)
     }
     // MARK: - Methods
     // MARK: - Actions
