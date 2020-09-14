@@ -41,11 +41,14 @@ class SignInInteractor: SignInInputInteractorProtocol {
                 guard let user = response.response?.user,
                     let status = response.response?.status,
                     response.serverResonse.code == 200 else {
-                    self.presenter?.onLoginFail(withMessage: response.serverResonse.desc)
-                    return
+                        self.presenter?.onLoginFail(withMessage: response.serverResonse.desc)
+                        return
                 }
-                self.localDataManager.save(user: user)
-                self.localDataManager.save(token: response.serverResonse.token)
+                if status.financialProof && status.idType &&
+                    status.profilePicture && status.residenceProof {
+                    self.localDataManager.save(user: user)
+                    self.localDataManager.save(token: response.serverResonse.token)
+                }
                 self.presenter?.onLoginSuccess(withStatus: status)
             }
         }
