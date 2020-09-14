@@ -25,12 +25,13 @@ protocol SignInRouterProtocol {
 protocol SignInInputInteractorProtocol: class {
     var presenter: SignInOutputInteractorProtocol? { get set }
     var remoteDataManager: AuthenticationRemoteDataManagerProtocol { get set }
+    var localDataManager: AuthenticationLocalDataManagerProtocol { get set}
     // Presenter -> Interactor
     func login(withPhone phone: String, andPassword password: String)
 }
 protocol SignInOutputInteractorProtocol: class {
     // Interactor -> Presenter
-    func onLoginSuccess()
+    func onLoginSuccess(withStatus status: Status)
     func onLoginFail(withMessage message: String)
 }
 // MARK: - SignIn Preseneter

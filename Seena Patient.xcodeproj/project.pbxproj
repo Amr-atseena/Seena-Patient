@@ -47,6 +47,10 @@
 		8827E94E24F5A226009C64FB /* EmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8827E94D24F5A226009C64FB /* EmptyStateView.swift */; };
 		8827E95024F5A264009C64FB /* EmptyStateView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8827E94F24F5A264009C64FB /* EmptyStateView.xib */; };
 		8827E95324F5A8F2009C64FB /* ServicesListParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8827E95224F5A8F2009C64FB /* ServicesListParameters.swift */; };
+		882DE795250FECC500B1F4F7 /* UserLocalDataManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882DE794250FECC500B1F4F7 /* UserLocalDataManagerProtocol.swift */; };
+		882DE798250FEE5000B1F4F7 /* AuthenticationLocalDataManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882DE797250FEE5000B1F4F7 /* AuthenticationLocalDataManagerProtocol.swift */; };
+		882DE79A250FEE6C00B1F4F7 /* AuthenticationLocalDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882DE799250FEE6C00B1F4F7 /* AuthenticationLocalDataManager.swift */; };
+		882DE79C250FFBA300B1F4F7 /* TokenLocalDataManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882DE79B250FFBA300B1F4F7 /* TokenLocalDataManagerProtocol.swift */; };
 		883D941724F44392004A3F86 /* SpectialitySkeltonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883D941524F44392004A3F86 /* SpectialitySkeltonCell.swift */; };
 		883D941824F44392004A3F86 /* SpectialitySkeltonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 883D941624F44392004A3F86 /* SpectialitySkeltonCell.xib */; };
 		883D941C24F474CA004A3F86 /* PackageSkeltonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883D941A24F474CA004A3F86 /* PackageSkeltonCell.swift */; };
@@ -265,6 +269,10 @@
 		8827E94D24F5A226009C64FB /* EmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStateView.swift; sourceTree = "<group>"; };
 		8827E94F24F5A264009C64FB /* EmptyStateView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyStateView.xib; sourceTree = "<group>"; };
 		8827E95224F5A8F2009C64FB /* ServicesListParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesListParameters.swift; sourceTree = "<group>"; };
+		882DE794250FECC500B1F4F7 /* UserLocalDataManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLocalDataManagerProtocol.swift; sourceTree = "<group>"; };
+		882DE797250FEE5000B1F4F7 /* AuthenticationLocalDataManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationLocalDataManagerProtocol.swift; sourceTree = "<group>"; };
+		882DE799250FEE6C00B1F4F7 /* AuthenticationLocalDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationLocalDataManager.swift; sourceTree = "<group>"; };
+		882DE79B250FFBA300B1F4F7 /* TokenLocalDataManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenLocalDataManagerProtocol.swift; sourceTree = "<group>"; };
 		883D941524F44392004A3F86 /* SpectialitySkeltonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpectialitySkeltonCell.swift; sourceTree = "<group>"; };
 		883D941624F44392004A3F86 /* SpectialitySkeltonCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SpectialitySkeltonCell.xib; sourceTree = "<group>"; };
 		883D941A24F474CA004A3F86 /* PackageSkeltonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageSkeltonCell.swift; sourceTree = "<group>"; };
@@ -629,6 +637,24 @@
 			children = (
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		882DE793250FEC9F00B1F4F7 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				882DE794250FECC500B1F4F7 /* UserLocalDataManagerProtocol.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		882DE796250FEE2E00B1F4F7 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				882DE797250FEE5000B1F4F7 /* AuthenticationLocalDataManagerProtocol.swift */,
+				882DE799250FEE6C00B1F4F7 /* AuthenticationLocalDataManager.swift */,
+				882DE79B250FFBA300B1F4F7 /* TokenLocalDataManagerProtocol.swift */,
+			);
+			path = Auth;
 			sourceTree = "<group>";
 		};
 		883D941424F43B9B004A3F86 /* SpectialitySkeltonCell */ = {
@@ -1679,6 +1705,8 @@
 		8C8CB3F024E6CF23009679E5 /* LocalServices */ = {
 			isa = PBXGroup;
 			children = (
+				882DE796250FEE2E00B1F4F7 /* Auth */,
+				882DE793250FEC9F00B1F4F7 /* User */,
 				887C631925023A9600C69E2A /* ClinicsSearch */,
 				8885BB2D25019C60000D7BD5 /* City */,
 				8885BB1F2501942D000D7BD5 /* Spalsh */,
@@ -2286,7 +2314,9 @@
 				88120B8024EF2C66004A2381 /* ClinicDetailsVC.swift in Sources */,
 				88104B8324F2E3AF00DB5ED9 /* Package.swift in Sources */,
 				88E0C71E2505676C001A1B3B /* PayHomeProtocols.swift in Sources */,
+				882DE798250FEE5000B1F4F7 /* AuthenticationLocalDataManagerProtocol.swift in Sources */,
 				8885BB1B2501760F000D7BD5 /* ClinicsRomoteDataManager.swift in Sources */,
+				882DE79C250FFBA300B1F4F7 /* TokenLocalDataManagerProtocol.swift in Sources */,
 				887C6318250237F300C69E2A /* OptionViewModel.swift in Sources */,
 				8C8CB3EA24E6CA46009679E5 /* UICollectionView+Extensions.swift in Sources */,
 				88EDA12B24FAE41200460B4D /* ProfileRouter.swift in Sources */,
@@ -2326,6 +2356,7 @@
 				88F675AC250D5F6F00D19822 /* LoginRequestParameters.swift in Sources */,
 				88BE60B52506CA2500EB2F03 /* PaymentChannelPresenter.swift in Sources */,
 				88E0C71F2505676C001A1B3B /* PayHomeInteractor.swift in Sources */,
+				882DE79A250FEE6C00B1F4F7 /* AuthenticationLocalDataManager.swift in Sources */,
 				887C6326250277B200C69E2A /* ClinicsHomeResponse.swift in Sources */,
 				8CEC780E24E9DDDB000CED1F /* ServiceClinicCell.swift in Sources */,
 				8C8CB40324E6D3B3009679E5 /* SplashVC.swift in Sources */,
@@ -2416,6 +2447,7 @@
 				88EDA12E24FAE41200460B4D /* ProfileLocalization.swift in Sources */,
 				88E0C72A25056A02001A1B3B /* MKMagneticProgress.swift in Sources */,
 				8C8CB3FC24E6CF23009679E5 /* RemoteServiceType.swift in Sources */,
+				882DE795250FECC500B1F4F7 /* UserLocalDataManagerProtocol.swift in Sources */,
 				8C81545324EB21CA00CA30E7 /* ServicesSearchRouter.swift in Sources */,
 				8CEC780624E9CB58000CED1F /* ServiceDetailsProtocols.swift in Sources */,
 				88BE60B82506CA2500EB2F03 /* PaymentChannelInteractor.swift in Sources */,

@@ -37,7 +37,7 @@ class SignInPresenter: SignInPresenterProtocol {
 }
 // MARK: - SignInOutputInteractorProtocol Implementation
 extension SignInPresenter: SignInOutputInteractorProtocol {
-    func onLoginSuccess() {
+    func onLoginSuccess(withStatus status: Status) {
         view?.hideLoadingIndictor()
         router?.go(to: .profile)
     }

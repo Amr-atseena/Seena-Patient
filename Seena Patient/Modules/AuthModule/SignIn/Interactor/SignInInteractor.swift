@@ -12,8 +12,11 @@ class SignInInteractor: SignInInputInteractorProtocol {
     // MARK: - Attributes
     weak var presenter: SignInOutputInteractorProtocol?
     var remoteDataManager: AuthenticationRemoteDataManagerProtocol
-    init(remoteDataManager: AuthenticationRemoteDataManagerProtocol) {
+    var localDataManager: AuthenticationLocalDataManagerProtocol
+    init(localDataManager: AuthenticationLocalDataManagerProtocol,
+         remoteDataManager: AuthenticationRemoteDataManagerProtocol) {
         self.remoteDataManager = remoteDataManager
+        self.localDataManager = localDataManager
     }
     // MARK: - Methods
     func login(withPhone phone: String, andPassword password: String) {
@@ -35,11 +38,15 @@ class SignInInteractor: SignInInputInteractorProtocol {
                 guard let response = response as? BaseResponse<LoginResponse> else {
                     return
                 }
-                guard let user = response.response?.user, response.serverResonse.code == 200 else {
+                guard let user = response.response?.user,
+                    let status = response.response?.status,
+                    response.serverResonse.code == 200 else {
                     self.presenter?.onLoginFail(withMessage: response.serverResonse.desc)
                     return
                 }
-                self.presenter?.onLoginSuccess()
+                self.localDataManager.save(user: user)
+                self.localDataManager.save(token: response.serverResonse.token)
+                self.presenter?.onLoginSuccess(withStatus: status)
             }
         }
     }

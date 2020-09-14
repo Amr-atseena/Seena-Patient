@@ -15,7 +15,8 @@ class SignInRouter: SignInRouterProtocol {
     static func assembleModule() -> UIViewController {
         let router = SignInRouter()
         let remoteDataManager = AuthenticationRemoteDataManager()
-        let interactor = SignInInteractor(remoteDataManager: remoteDataManager)
+        let localDataManager = AuthenticationLocalDataManager()
+        let interactor = SignInInteractor(localDataManager: localDataManager, remoteDataManager: remoteDataManager)
         let view = SignInVC()
         let presenter = SignInPresenter(view: view, interactor: interactor, router: router)
         router.viewController = view
