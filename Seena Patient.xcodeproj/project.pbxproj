@@ -657,6 +657,13 @@
 			path = Auth;
 			sourceTree = "<group>";
 		};
+		882DE79F250FFF7300B1F4F7 /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
 		883D941424F43B9B004A3F86 /* SpectialitySkeltonCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -1288,6 +1295,7 @@
 		88F67589250D2AB300D19822 /* AuthModule */ = {
 			isa = PBXGroup;
 			children = (
+				882DE79F250FFF7300B1F4F7 /* SignUp */,
 				88F67598250D2B9300D19822 /* SignIn */,
 			);
 			path = AuthModule;
@@ -1809,9 +1817,10 @@
 				8827E95124F5A8C7009C64FB /* RequestParameters */,
 				88104B7C24F2E0F300DB5ED9 /* BaseResponse.swift */,
 				88104B7E24F2E14E00DB5ED9 /* ServerResonse.swift */,
-				88104B8024F2E39100DB5ED9 /* HomeResponse.swift */,
-				887C6325250277B200C69E2A /* ClinicsHomeResponse.swift */,
 				887C630A25021CE800C69E2A /* SplashResponse.swift */,
+				88104B8024F2E39100DB5ED9 /* HomeResponse.swift */,
+				88F675A0250D56A700D19822 /* LoginResponse.swift */,
+				887C6325250277B200C69E2A /* ClinicsHomeResponse.swift */,
 				88104B8224F2E3AF00DB5ED9 /* Package.swift */,
 				88104B8624F2E3F700DB5ED9 /* Speciality.swift */,
 				88104B8424F2E3BA00DB5ED9 /* Service.swift */,
@@ -1819,7 +1828,6 @@
 				8885BB10250150F3000D7BD5 /* Gallery.swift */,
 				8885BB2225019548000D7BD5 /* City.swift */,
 				887C630C250225C200C69E2A /* AlertEntity.swift */,
-				88F675A0250D56A700D19822 /* LoginResponse.swift */,
 				88F675A2250D56BA00D19822 /* Status.swift */,
 				88F675A4250D56CA00D19822 /* User.swift */,
 			);

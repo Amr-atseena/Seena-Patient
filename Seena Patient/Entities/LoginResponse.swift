@@ -9,6 +9,6 @@
 import Foundation
 // MARK: - LoginResponse
 struct LoginResponse: Codable {
-    let user: User
-    let status: Status
+    let user: User?
+    let status: Status?
 }

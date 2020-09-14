@@ -39,7 +39,12 @@ class SignInPresenter: SignInPresenterProtocol {
 extension SignInPresenter: SignInOutputInteractorProtocol {
     func onLoginSuccess(withStatus status: Status) {
         view?.hideLoadingIndictor()
-        router?.go(to: .profile)
+        if status.financialProof && status.idType &&
+            status.profilePicture && status.residenceProof {
+               router?.go(to: .profile)
+        } else {
+            router?.go(to: .signUp)
+        }
     }
     func onLoginFail(withMessage message: String) {
         view?.hideLoadingIndictor()
