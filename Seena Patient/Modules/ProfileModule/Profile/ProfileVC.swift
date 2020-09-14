@@ -26,6 +26,10 @@ class ProfileVC: UIViewController, ProfileViewProtocol {
         presenter.viewDidLoad()
         navigationController?.navigationBar.isHidden = true
     }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.setViewControllers([SignInRouter.assembleModule()], animated: false)
+    }
     // MARK: - Methods
     // MARK: - Actions
     // MARK: - DeInit

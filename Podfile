@@ -18,6 +18,7 @@ target 'Seena Patient' do
   pod 'Firebase/Analytics'
   pod 'Firebase/Crashlytics'
   pod "SkeletonView"
+  pod 'SkyFloatingLabelTextField', '~> 3.0'
 end
 
 post_install do |installer|
