@@ -41,7 +41,9 @@ class SignInRouter: SignInRouterProtocol {
         viewController?.navigationController?.setViewControllers([ProfileRouter.assembleModule()], animated: true)
     }
     private func navigateToSignUp() {
+        viewController?.hidesBottomBarWhenPushed = true
         viewController?.navigationController?.pushViewController(SignUpRouter.assembleModule(), animated: true)
+        viewController?.hidesBottomBarWhenPushed = false
     }
     private func showAlert(alertEntity: AlertEntity) {
         let okAction = UIAlertAction(title: "OK", style: .default)

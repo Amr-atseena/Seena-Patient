@@ -24,5 +24,12 @@ class SignUpRouter: SignUpRouterProtocol {
     }
     // MARK: - Routing
     func go(to router: SignUpRoute) {
+        switch router {
+        case .signIn:
+            navigateToSignIn()
+        }
+    }
+    private func navigateToSignIn() {
+        viewController?.navigationController?.popViewController(animated: true)
     }
 }

@@ -22,6 +22,10 @@ class SignUpPresenter: SignUpPresenterProtocol {
     }
     // MARK: - Methods
     func viewDidLoad() {
+        view?.setupUI()
+    }
+    func backButtonTapped() {
+        router?.go(to: .signIn)
     }
 }
 // MARK: - SignUpOutputInteractorProtocol Implementation

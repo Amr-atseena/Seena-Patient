@@ -10,6 +10,17 @@ import UIKit
 
 class SignUpVC: UIViewController, SignUpViewProtocol {
     // MARK: - Outlets
+    @IBOutlet private var phoneTextField: UITextField!
+    @IBOutlet private var firstNameTextFiled: UITextField!
+    @IBOutlet private var lastNameTextFiled: UITextField!
+    @IBOutlet private var passwordTextField: UITextField!
+    @IBOutlet private var confirmPasswordTextField: UITextField!
+    @IBOutlet private var birthdateTextFiled: UITextField!
+    @IBOutlet private var idTypeTextFiled: UITextField!
+    @IBOutlet private var financialProofTypeTextField: UITextField!
+    @IBOutlet private var residentProofTypeTextFiled: UITextField!
+    @IBOutlet private var loadingIndictor: UIActivityIndicatorView!
+    @IBOutlet private var finishButton: UIButton!
     // MARK: - Attributes
     var presenter: SignUpPresenterProtocol!
     // MARK: - Init
@@ -26,9 +37,38 @@ class SignUpVC: UIViewController, SignUpViewProtocol {
         presenter.viewDidLoad()
     }
     // MARK: - Methods
+    func setupUI() {
+        // phone TextField
+        phoneTextField.placeholder = presenter.localization.phone
+        // firstName TextField
+        firstNameTextFiled.placeholder = presenter.localization.firstName
+        // lastName TextField
+        lastNameTextFiled.placeholder = presenter.localization.lastName
+        // password TextField
+        passwordTextField.placeholder = presenter.localization.password
+        // confirmPassword TextField
+        confirmPasswordTextField.placeholder = presenter.localization.confirmPassword
+        // birthdate TextField
+        birthdateTextFiled.placeholder = presenter.localization.birthdate
+        // idType TextField
+        idTypeTextFiled.placeholder = presenter.localization.idType
+        // financialProofType TextField
+        financialProofTypeTextField.placeholder = presenter.localization.financialProofType
+        // ReresidentProofType TextField
+        residentProofTypeTextFiled.placeholder = presenter.localization.residenceProofType
+        finishButton.setTitle(presenter.localization.finish, for: .normal)
+        finishButton.titleLabel?.font = DesignSystem.Typography.subHeading3.font
+    }
     // MARK: - Actions
+    @IBAction private func didTapFinishButton(_ sender: UIButton) {
+    }
+    @IBAction private func didTapBackButton(_ sender: UIButton) {
+        presenter.backButtonTapped()
+    }
+    @IBAction private func didTapOptionsButton(_ sender: UIButton) {
+    }
     // MARK: - DeInit
     deinit {
-         debugPrint(SignUpVC.className + "Release from Momery")
+        debugPrint(SignUpVC.className + "Release from Momery")
     }
 }

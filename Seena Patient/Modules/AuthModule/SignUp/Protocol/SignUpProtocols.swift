@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 // MARK: - SignUp Router
 enum SignUpRoute {
+    case signIn
 }
 protocol SignUpRouterProtocol {
     // Presenter -> Router
@@ -33,9 +34,11 @@ protocol SignUpPresenterProtocol: class {
     var localization: SignUpLocalization { get }
     // view -> Presenter
     func viewDidLoad()
+    func backButtonTapped()
 }
 // MARK: - SignUp View
 protocol SignUpViewProtocol: class {
     var presenter: SignUpPresenterProtocol! { get set }
     // Presenter -> View
+    func setupUI()
 }
