@@ -47,6 +47,9 @@
 		8827E94E24F5A226009C64FB /* EmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8827E94D24F5A226009C64FB /* EmptyStateView.swift */; };
 		8827E95024F5A264009C64FB /* EmptyStateView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8827E94F24F5A264009C64FB /* EmptyStateView.xib */; };
 		8827E95324F5A8F2009C64FB /* ServicesListParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8827E95224F5A8F2009C64FB /* ServicesListParameters.swift */; };
+		8829891325129BE2004C5AB6 /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8829891225129BE2004C5AB6 /* Document.swift */; };
+		8829891525129D04004C5AB6 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8829891425129D04004C5AB6 /* Account.swift */; };
+		8829891725129DA0004C5AB6 /* Vodafone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8829891625129DA0004C5AB6 /* Vodafone.swift */; };
 		882DE795250FECC500B1F4F7 /* UserLocalDataManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882DE794250FECC500B1F4F7 /* UserLocalDataManagerProtocol.swift */; };
 		882DE798250FEE5000B1F4F7 /* AuthenticationLocalDataManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882DE797250FEE5000B1F4F7 /* AuthenticationLocalDataManagerProtocol.swift */; };
 		882DE79A250FEE6C00B1F4F7 /* AuthenticationLocalDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882DE799250FEE6C00B1F4F7 /* AuthenticationLocalDataManager.swift */; };
@@ -276,6 +279,9 @@
 		8827E94D24F5A226009C64FB /* EmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStateView.swift; sourceTree = "<group>"; };
 		8827E94F24F5A264009C64FB /* EmptyStateView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyStateView.xib; sourceTree = "<group>"; };
 		8827E95224F5A8F2009C64FB /* ServicesListParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesListParameters.swift; sourceTree = "<group>"; };
+		8829891225129BE2004C5AB6 /* Document.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Document.swift; sourceTree = "<group>"; };
+		8829891425129D04004C5AB6 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
+		8829891625129DA0004C5AB6 /* Vodafone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vodafone.swift; sourceTree = "<group>"; };
 		882DE794250FECC500B1F4F7 /* UserLocalDataManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLocalDataManagerProtocol.swift; sourceTree = "<group>"; };
 		882DE797250FEE5000B1F4F7 /* AuthenticationLocalDataManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationLocalDataManagerProtocol.swift; sourceTree = "<group>"; };
 		882DE799250FEE6C00B1F4F7 /* AuthenticationLocalDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationLocalDataManager.swift; sourceTree = "<group>"; };
@@ -651,6 +657,19 @@
 			children = (
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		8829891125129BA6004C5AB6 /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				887C6325250277B200C69E2A /* ClinicsHomeResponse.swift */,
+				88104B7C24F2E0F300DB5ED9 /* BaseResponse.swift */,
+				88104B7E24F2E14E00DB5ED9 /* ServerResonse.swift */,
+				887C630A25021CE800C69E2A /* SplashResponse.swift */,
+				88104B8024F2E39100DB5ED9 /* HomeResponse.swift */,
+				88F675A0250D56A700D19822 /* LoginResponse.swift */,
+			);
+			path = Response;
 			sourceTree = "<group>";
 		};
 		882DE793250FEC9F00B1F4F7 /* User */ = {
@@ -1892,12 +1911,7 @@
 			isa = PBXGroup;
 			children = (
 				8827E95124F5A8C7009C64FB /* RequestParameters */,
-				88104B7C24F2E0F300DB5ED9 /* BaseResponse.swift */,
-				88104B7E24F2E14E00DB5ED9 /* ServerResonse.swift */,
-				887C630A25021CE800C69E2A /* SplashResponse.swift */,
-				88104B8024F2E39100DB5ED9 /* HomeResponse.swift */,
-				88F675A0250D56A700D19822 /* LoginResponse.swift */,
-				887C6325250277B200C69E2A /* ClinicsHomeResponse.swift */,
+				8829891125129BA6004C5AB6 /* Response */,
 				88104B8224F2E3AF00DB5ED9 /* Package.swift */,
 				88104B8624F2E3F700DB5ED9 /* Speciality.swift */,
 				88104B8424F2E3BA00DB5ED9 /* Service.swift */,
@@ -1907,6 +1921,9 @@
 				887C630C250225C200C69E2A /* AlertEntity.swift */,
 				88F675A2250D56BA00D19822 /* Status.swift */,
 				88F675A4250D56CA00D19822 /* User.swift */,
+				8829891225129BE2004C5AB6 /* Document.swift */,
+				8829891425129D04004C5AB6 /* Account.swift */,
+				8829891625129DA0004C5AB6 /* Vodafone.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -2407,6 +2424,7 @@
 				8C8CB3EA24E6CA46009679E5 /* UICollectionView+Extensions.swift in Sources */,
 				88EDA12B24FAE41200460B4D /* ProfileRouter.swift in Sources */,
 				88120B6524EF07BE004A2381 /* ClinicsHomeVC.swift in Sources */,
+				8829891325129BE2004C5AB6 /* Document.swift in Sources */,
 				8CAB098524E7F22000D38CDD /* HomeInteractor.swift in Sources */,
 				88104B8724F2E3F700DB5ED9 /* Speciality.swift in Sources */,
 				88120B6224EF07BE004A2381 /* ClinicsHomeProtocols.swift in Sources */,
@@ -2477,6 +2495,7 @@
 				88EDA12D24FAE41200460B4D /* ProfileInteractor.swift in Sources */,
 				88ED03FB24EFC7B300BBCEF6 /* ClinicsSectionHeaderCell.swift in Sources */,
 				8C81545724EB21CA00CA30E7 /* ServicesSearchVC.swift in Sources */,
+				8829891725129DA0004C5AB6 /* Vodafone.swift in Sources */,
 				8CAB098E24E7F55800D38CDD /* HomeLocalization.swift in Sources */,
 				88F706C424EE6804005C2ADB /* PackageDetailsInteractor.swift in Sources */,
 				88F706C624EE6804005C2ADB /* PackageDetailsVC.swift in Sources */,
@@ -2535,6 +2554,7 @@
 				88ED042024EFFD9100BBCEF6 /* NotificationsHomeInteractor.swift in Sources */,
 				8C8CB3EB24E6CA46009679E5 /* UINavigationController+Extensions.swift in Sources */,
 				8CAB09A524E80C2700D38CDD /* Typography.swift in Sources */,
+				8829891525129D04004C5AB6 /* Account.swift in Sources */,
 				882DE7AD2510005900B1F4F7 /* SignUpVC.swift in Sources */,
 				88EDA12E24FAE41200460B4D /* ProfileLocalization.swift in Sources */,
 				88E0C72A25056A02001A1B3B /* MKMagneticProgress.swift in Sources */,
