@@ -17,10 +17,51 @@ class SignUpPresenter: SignUpPresenterProtocol {
     private var idTypes = [Document]()
     private var residenceProof = [Document]()
     private var financialProof = [Document]()
-    private var selectedIdType = -1
-    private var selectedResidenceProof = -1
-    private var selectedFinancialProof = -1
-    private var selctedDate = ""
+    private var selectedIdType = -1 {
+        didSet {
+            validatePramaters()
+        }
+    }
+    private var selectedResidenceProof = -1 {
+        didSet {
+            validatePramaters()
+        }
+    }
+    private var selectedFinancialProof = -1 {
+        didSet {
+            validatePramaters()
+        }
+    }
+    private var selectedDate = "" {
+        didSet {
+            validatePramaters()
+        }
+    }
+    private var phoneNumber = "" {
+        didSet {
+            validatePramaters()
+        }
+    }
+    private var firstName = "" {
+        didSet {
+            validatePramaters()
+        }
+    }
+    private var lastName = "" {
+        didSet {
+            validatePramaters()
+        }
+    }
+    private var password = "" {
+        didSet {
+            validatePramaters()
+        }
+    }
+    private var confirmPassword = "" {
+        didSet {
+            validatePramaters()
+        }
+    }
     // MARK: - Init
     init(view: SignUpViewProtocol?, interactor: SignUpInputInteractorProtocol, router: SignUpRouterProtocol ) {
         self.view = view
@@ -72,11 +113,38 @@ class SignUpPresenter: SignUpPresenterProtocol {
             debugPrint(index)
         }
     }
+    func textChange(_ text: String?, atIndex index: Int) {
+        switch index {
+        case 0:
+            phoneNumber = text ?? ""
+        case 1:
+            firstName = text ?? ""
+        case 2:
+            lastName = text ?? ""
+        case 3:
+            password = text ?? ""
+        case 4:
+            confirmPassword = text ?? ""
+        default:
+            debugPrint(index)
+        }
+    }
     func dateSelected(_ date: Date) {
         let dateFormater = DateFormatter()
-        dateFormater.dateFormat = "yyyy-mm-dd"
-        selctedDate = dateFormater.string(from: date)
-        view?.setBirthDate(selctedDate)
+        dateFormater.dateFormat = "yyyy-MM-dd"
+        selectedDate = dateFormater.string(from: date)
+        view?.setBirthDate(selectedDate)
+    }
+    func validatePramaters() {
+        guard !phoneNumber.isEmpty && !firstName.isEmpty &&
+              !lastName.isEmpty    && !confirmPassword.isEmpty &&
+              selectedIdType != -1 && selectedResidenceProof != -1 &&
+                selectedFinancialProof != -1 && !selectedDate.isEmpty
+        else {
+            view?.disableFinishButton()
+            return
+        }
+        view?.enableFinishButton()
     }
 }
 // MARK: - SignUpOutputInteractorProtocol Implementation

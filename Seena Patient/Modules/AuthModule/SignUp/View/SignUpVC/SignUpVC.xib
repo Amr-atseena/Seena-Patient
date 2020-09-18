@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -93,8 +94,11 @@
                                                                     <color key="value" name="secondaryActionText"/>
                                                                 </userDefinedRuntimeAttribute>
                                                             </userDefinedRuntimeAttributes>
+                                                            <connections>
+                                                                <action selector="didTextFiledValueChange:" destination="-1" eventType="editingChanged" id="dLy-X8-m52"/>
+                                                            </connections>
                                                         </textField>
-                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Frist Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="g0d-lB-DZQ" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
+                                                        <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Frist Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="g0d-lB-DZQ" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
                                                             <rect key="frame" x="0.0" y="60" width="374" height="40"/>
                                                             <color key="tintColor" name="secondaryActionText"/>
                                                             <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="16"/>
@@ -132,8 +136,11 @@
                                                                     <color key="value" name="secondaryActionText"/>
                                                                 </userDefinedRuntimeAttribute>
                                                             </userDefinedRuntimeAttributes>
+                                                            <connections>
+                                                                <action selector="didTextFiledValueChange:" destination="-1" eventType="editingChanged" id="W03-Zf-NQT"/>
+                                                            </connections>
                                                         </textField>
-                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WdM-DH-sAW" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
+                                                        <textField opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WdM-DH-sAW" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
                                                             <rect key="frame" x="0.0" y="120" width="374" height="40"/>
                                                             <color key="tintColor" name="secondaryActionText"/>
                                                             <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="16"/>
@@ -171,8 +178,11 @@
                                                                     <color key="value" name="secondaryActionText"/>
                                                                 </userDefinedRuntimeAttribute>
                                                             </userDefinedRuntimeAttributes>
+                                                            <connections>
+                                                                <action selector="didTextFiledValueChange:" destination="-1" eventType="editingChanged" id="yNp-ce-PT6"/>
+                                                            </connections>
                                                         </textField>
-                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ufJ-t2-xbw" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
+                                                        <textField opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ufJ-t2-xbw" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
                                                             <rect key="frame" x="0.0" y="180" width="374" height="40"/>
                                                             <color key="tintColor" name="secondaryActionText"/>
                                                             <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="16"/>
@@ -200,8 +210,11 @@
                                                                     <integer key="value" value="3"/>
                                                                 </userDefinedRuntimeAttribute>
                                                             </userDefinedRuntimeAttributes>
+                                                            <connections>
+                                                                <action selector="didTextFiledValueChange:" destination="-1" eventType="editingChanged" id="aWY-hZ-mL7"/>
+                                                            </connections>
                                                         </textField>
-                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="h3M-8M-7mB" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
+                                                        <textField opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="h3M-8M-7mB" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
                                                             <rect key="frame" x="0.0" y="240" width="374" height="40"/>
                                                             <color key="tintColor" name="secondaryActionText"/>
                                                             <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="16"/>
@@ -229,6 +242,9 @@
                                                                     <integer key="value" value="3"/>
                                                                 </userDefinedRuntimeAttribute>
                                                             </userDefinedRuntimeAttributes>
+                                                            <connections>
+                                                                <action selector="didTextFiledValueChange:" destination="-1" eventType="editingChanged" id="yot-Ij-7GC"/>
+                                                            </connections>
                                                         </textField>
                                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Birthdate" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iTA-5E-MgD" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
                                                             <rect key="frame" x="0.0" y="300" width="374" height="40"/>
@@ -394,7 +410,7 @@
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="phase1" translatesAutoresizingMaskIntoConstraints="NO" id="zyW-yI-vXr">
                                                             <rect key="frame" x="0.0" y="0.0" width="374" height="10"/>
                                                         </imageView>
-                                                        <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nit-BA-3M2" customClass="AnimatableButton" customModule="IBAnimatable">
+                                                        <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nit-BA-3M2" customClass="AnimatableButton" customModule="IBAnimatable">
                                                             <rect key="frame" x="0.0" y="30" width="374" height="50"/>
                                                             <color key="backgroundColor" name="primaryBorder"/>
                                                             <constraints>
@@ -417,7 +433,7 @@
                                             </subviews>
                                         </stackView>
                                     </subviews>
-                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     <constraints>
                                         <constraint firstItem="dEy-Ob-M01" firstAttribute="leading" secondItem="7lp-b3-ENs" secondAttribute="leading" constant="20" id="gIE-cw-0vX"/>
                                         <constraint firstItem="dEy-Ob-M01" firstAttribute="top" secondItem="7lp-b3-ENs" secondAttribute="top" constant="20" id="jCe-ud-wXe"/>
@@ -480,7 +496,7 @@
                             </constraints>
                         </scrollView>
                     </subviews>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
                         <constraint firstItem="otW-to-9wX" firstAttribute="width" secondItem="gel-VZ-tCV" secondAttribute="width" id="4of-LX-uye"/>
                         <constraint firstItem="otW-to-9wX" firstAttribute="height" secondItem="gel-VZ-tCV" secondAttribute="height" id="KwZ-yS-4cO"/>
@@ -490,6 +506,7 @@
                     </constraints>
                 </view>
             </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="gel-VZ-tCV" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="2Pi-6j-I8C"/>
@@ -499,10 +516,41 @@
                 <constraint firstItem="gel-VZ-tCV" firstAttribute="top" secondItem="9gi-uD-5zY" secondAttribute="bottom" constant="10" id="pup-VK-5eX"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="gel-VZ-tCV" secondAttribute="bottom" id="vMo-yu-3FJ"/>
             </constraints>
-            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="140.57971014492756" y="124.55357142857142"/>
         </view>
     </objects>
+    <designables>
+        <designable name="2d6-0l-0Xs">
+            <size key="intrinsicContentSize" width="374" height="44.369671875000002"/>
+        </designable>
+        <designable name="5ge-ad-AYc">
+            <size key="intrinsicContentSize" width="374" height="44.369671875000002"/>
+        </designable>
+        <designable name="FEp-aY-USG">
+            <size key="intrinsicContentSize" width="374" height="44.369671875000002"/>
+        </designable>
+        <designable name="Nit-BA-3M2">
+            <size key="intrinsicContentSize" width="41" height="30"/>
+        </designable>
+        <designable name="WdM-DH-sAW">
+            <size key="intrinsicContentSize" width="374" height="44.369671875000002"/>
+        </designable>
+        <designable name="Y2x-cq-fBs">
+            <size key="intrinsicContentSize" width="374" height="44.369671875000002"/>
+        </designable>
+        <designable name="g0d-lB-DZQ">
+            <size key="intrinsicContentSize" width="374" height="44.369671875000002"/>
+        </designable>
+        <designable name="h3M-8M-7mB">
+            <size key="intrinsicContentSize" width="374" height="44.369671875000002"/>
+        </designable>
+        <designable name="iTA-5E-MgD">
+            <size key="intrinsicContentSize" width="374" height="44.369671875000002"/>
+        </designable>
+        <designable name="ufJ-t2-xbw">
+            <size key="intrinsicContentSize" width="374" height="44.369671875000002"/>
+        </designable>
+    </designables>
     <resources>
         <image name="back-1" width="22" height="14"/>
         <image name="phase1" width="70" height="10"/>
@@ -521,5 +569,8 @@
         <namedColor name="secondaryActionText">
             <color red="0.0" green="0.41200000047683716" blue="0.51399999856948853" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

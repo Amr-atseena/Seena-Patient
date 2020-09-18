@@ -71,6 +71,14 @@ class SignUpVC: UIViewController, SignUpViewProtocol {
     func setBirthDate(_ date: String) {
         birthdateTextFiled.text = date
     }
+    func enableFinishButton() {
+        finishButton.isUserInteractionEnabled = true
+        finishButton.backgroundColor  = DesignSystem.Colors.primaryActionBackground.color
+    }
+    func disableFinishButton() {
+        finishButton.isUserInteractionEnabled = false
+        finishButton.backgroundColor  = DesignSystem.Colors.primaryBorder.color
+    }
     // MARK: - Actions
     @IBAction private func didTapFinishButton(_ sender: UIButton) {
     }
@@ -79,6 +87,9 @@ class SignUpVC: UIViewController, SignUpViewProtocol {
     }
     @IBAction private func didTapOptionsButton(_ sender: UIButton) {
         presenter.optionsButtonTapped(withIndex: sender.tag)
+    }
+    @IBAction private func didTextFiledValueChange(_ sender: UITextField) {
+        presenter.textChange(sender.text, atIndex: sender.tag)
     }
     // MARK: - DeInit
     deinit {

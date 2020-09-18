@@ -47,6 +47,8 @@ protocol SignUpPresenterProtocol: class {
     func optionsButtonTapped(withIndex index: Int)
     func optionSelected(atIndex index: Int, forOption option: Int)
     func dateSelected(_ date: Date)
+    func textChange(_ text: String?, atIndex index: Int)
+    func validatePramaters()
 }
 // MARK: - SignUp View
 protocol SignUpViewProtocol: class {
@@ -57,4 +59,6 @@ protocol SignUpViewProtocol: class {
     func setFinancialProof(_ proof: String)
     func setResidenceProof(_ proof: String)
     func setBirthDate(_ date: String)
+    func enableFinishButton()
+    func disableFinishButton()
 }
