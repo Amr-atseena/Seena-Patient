@@ -79,8 +79,15 @@ class SignUpVC: UIViewController, SignUpViewProtocol {
         finishButton.isUserInteractionEnabled = false
         finishButton.backgroundColor  = DesignSystem.Colors.primaryBorder.color
     }
+    func showLoadingIndictor() {
+        loadingIndictor.startAnimating()
+    }
+    func hideLoadingIndicor() {
+        loadingIndictor.stopAnimating()
+    }
     // MARK: - Actions
     @IBAction private func didTapFinishButton(_ sender: UIButton) {
+        presenter.finishButtonTapped()
     }
     @IBAction private func didTapBackButton(_ sender: UIButton) {
         presenter.backButtonTapped()

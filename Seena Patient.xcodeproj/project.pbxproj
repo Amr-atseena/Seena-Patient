@@ -109,6 +109,7 @@
 		88BE60BA2506CA2500EB2F03 /* PaymentChannelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BE60B32506CA2500EB2F03 /* PaymentChannelVC.swift */; };
 		88BE60C52506CD8E00EB2F03 /* PaymentMethodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BE60C32506CD8E00EB2F03 /* PaymentMethodCell.swift */; };
 		88BE60C62506CD8E00EB2F03 /* PaymentMethodCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88BE60C42506CD8E00EB2F03 /* PaymentMethodCell.xib */; };
+		88D291182514FEFE008738A5 /* SignUpRequestParamaters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D291172514FEFE008738A5 /* SignUpRequestParamaters.swift */; };
 		88E0C71B2505676C001A1B3B /* PayHomeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88E0C7142505676C001A1B3B /* PayHomeVC.xib */; };
 		88E0C71C2505676C001A1B3B /* PayHomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E0C7152505676C001A1B3B /* PayHomePresenter.swift */; };
 		88E0C71D2505676C001A1B3B /* PayHomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E0C7162505676C001A1B3B /* PayHomeRouter.swift */; };
@@ -349,6 +350,7 @@
 		88BE60B32506CA2500EB2F03 /* PaymentChannelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentChannelVC.swift; sourceTree = "<group>"; };
 		88BE60C32506CD8E00EB2F03 /* PaymentMethodCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentMethodCell.swift; sourceTree = "<group>"; };
 		88BE60C42506CD8E00EB2F03 /* PaymentMethodCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PaymentMethodCell.xib; sourceTree = "<group>"; };
+		88D291172514FEFE008738A5 /* SignUpRequestParamaters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpRequestParamaters.swift; sourceTree = "<group>"; };
 		88E0C7142505676C001A1B3B /* PayHomeVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PayHomeVC.xib; sourceTree = "<group>"; };
 		88E0C7152505676C001A1B3B /* PayHomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayHomePresenter.swift; sourceTree = "<group>"; };
 		88E0C7162505676C001A1B3B /* PayHomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayHomeRouter.swift; sourceTree = "<group>"; };
@@ -660,6 +662,7 @@
 				8827E95224F5A8F2009C64FB /* ServicesListParameters.swift */,
 				887C631E2502557D00C69E2A /* ClinicsListParameters.swift */,
 				88F675AB250D5F6F00D19822 /* LoginRequestParameters.swift */,
+				88D291172514FEFE008738A5 /* SignUpRequestParamaters.swift */,
 			);
 			path = RequestParameters;
 			sourceTree = "<group>";
@@ -2583,6 +2586,7 @@
 				88F675A8250D5D4F00D19822 /* AuthenticationRemoteDataManagerProtocol.swift in Sources */,
 				8C8CB3FD24E6CF23009679E5 /* Environment.swift in Sources */,
 				8885BB28250197A4000D7BD5 /* SplashRemoteDataManagerProtocol.swift in Sources */,
+				88D291182514FEFE008738A5 /* SignUpRequestParamaters.swift in Sources */,
 				88BE60C52506CD8E00EB2F03 /* PaymentMethodCell.swift in Sources */,
 				8803D1E325081EAA004A6A46 /* ATMPayProtocols.swift in Sources */,
 				88ED040B24EFCD9A00BBCEF6 /* ClinicsSearchVC.swift in Sources */,

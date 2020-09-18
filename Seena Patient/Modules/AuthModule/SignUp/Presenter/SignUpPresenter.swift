@@ -146,6 +146,10 @@ class SignUpPresenter: SignUpPresenterProtocol {
         }
         view?.enableFinishButton()
     }
+    func finishButtonTapped() {
+        view?.showLoadingIndictor()
+        interactor?.signUp(withParam: SignUpRequestParamaters(phone: phoneNumber, firstName: firstName, lastName: lastName, password: password, confirmPassword: confirmPassword, birthdate: selectedDate, idType: selectedIdType, financialProof: selectedFinancialProof, residenceProof: selectedResidenceProof))
+    }
 }
 // MARK: - SignUpOutputInteractorProtocol Implementation
 extension SignUpPresenter: SignUpOutputInteractorProtocol {
@@ -157,5 +161,13 @@ extension SignUpPresenter: SignUpOutputInteractorProtocol {
     }
     func onRetriveFinancialProof(_ financialProof: [Document]) {
         self.financialProof = financialProof
+    }
+    func onSignUpSuccess() {
+        view?.hideLoadingIndicor()
+        router?.go(to: .uploadDocuments)
+    }
+    func onSignUpFail(withError error: String) {
+        view?.hideLoadingIndicor()
+        router?.go(to: .alert(alertEntity: AlertEntity(title: "Error", message: error)))
     }
 }

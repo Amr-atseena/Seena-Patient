@@ -10,6 +10,7 @@ import Foundation
 import Moya
 enum AuthenticationEndPoint {
     case login(LoginRequestParameters)
+    case signUp(SignUpRequestParamaters)
 }
 
 // MARK: - TargetType Protocol Implementation
@@ -21,6 +22,8 @@ extension AuthenticationEndPoint: TargetType, EnvironmentProtocol {
         switch self {
         case .login:
             return "auth/login"
+        case .signUp:
+            return "auth/register"
         }
     }
     var method: Moya.Method {
@@ -32,6 +35,8 @@ extension AuthenticationEndPoint: TargetType, EnvironmentProtocol {
     var task: Task {
         switch self {
         case .login(let params):
+            return .requestJSONEncodable(params)
+        case .signUp(let params):
             return .requestJSONEncodable(params)
         }
     }

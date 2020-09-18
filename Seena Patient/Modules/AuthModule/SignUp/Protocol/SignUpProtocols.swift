@@ -13,6 +13,8 @@ enum SignUpRoute {
     case signIn
     case datePiker
     case optionPicker(options: [String], index: Int)
+    case alert(alertEntity: AlertEntity)
+    case uploadDocuments
 }
 protocol SignUpRouterProtocol {
     // Presenter -> Router
@@ -24,16 +26,20 @@ protocol SignUpRouterProtocol {
 protocol SignUpInputInteractorProtocol: class {
     var presenter: SignUpOutputInteractorProtocol? { get set }
     var localDataManager: SignUpLocalDataManagerProtocol { get set }
+    var remoteDataManager: AuthenticationRemoteDataManagerProtocol { get set }
     // Presenter -> Interactor
     func retriveIdTypes()
     func retriveResidenceProof()
     func retriveFinancialProof()
+    func signUp(withParam param: SignUpRequestParamaters)
 }
 protocol SignUpOutputInteractorProtocol: class {
     // Interactor -> Presenter
     func onRetriveIdTypes(_ idTypes: [Document])
     func onRetriveResidenceProof(_ residenceProof: [Document])
     func onRetriveFinancialProof(_ financialProof: [Document])
+    func onSignUpSuccess()
+    func onSignUpFail(withError error: String)
 }
 // MARK: - SignUp Preseneter
 protocol SignUpPresenterProtocol: class {
@@ -49,6 +55,7 @@ protocol SignUpPresenterProtocol: class {
     func dateSelected(_ date: Date)
     func textChange(_ text: String?, atIndex index: Int)
     func validatePramaters()
+    func finishButtonTapped()
 }
 // MARK: - SignUp View
 protocol SignUpViewProtocol: class {
@@ -61,4 +68,6 @@ protocol SignUpViewProtocol: class {
     func setBirthDate(_ date: String)
     func enableFinishButton()
     func disableFinishButton()
+    func showLoadingIndictor()
+    func hideLoadingIndicor()
 }

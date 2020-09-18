@@ -11,4 +11,7 @@ class AuthenticationRemoteDataManager: APIService<AuthenticationEndPoint>, Authe
     func retriveLoginData(params: LoginRequestParameters, complationHandler: @escaping ((Result<Codable, Error>) -> Void)) {
         request(target: .login(params), objType: BaseResponse<LoginResponse>.self, completionHandler: complationHandler)
     }
+    func retriveSignUpData(params: SignUpRequestParamaters, complationHandler: @escaping ((Result<Codable, Error>) -> Void)) {
+        request(target: .signUp(params), objType: BaseResponse<LoginResponse>.self, completionHandler: complationHandler)
+    }
 }

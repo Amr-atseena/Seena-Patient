@@ -7,5 +7,5 @@
 //
 
 import Foundation
-protocol SignUpLocalDataManagerProtocol: DocumentsLocalDataManagerProtocol {
+protocol SignUpLocalDataManagerProtocol: DocumentsLocalDataManagerProtocol, AuthenticationLocalDataManagerProtocol {
 }

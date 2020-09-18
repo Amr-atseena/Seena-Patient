@@ -15,7 +15,8 @@ class SignUpRouter: SignUpRouterProtocol {
     static func assembleModule() -> UIViewController {
         let router = SignUpRouter()
         let localDataManager = SignUpLocalDataManager()
-        let interactor = SignUpInteractor(localDataManager: localDataManager)
+        let remoteDataManager = AuthenticationRemoteDataManager()
+        let interactor = SignUpInteractor(localDataManager: localDataManager,remoteDataManager: remoteDataManager)
         let view = SignUpVC()
         let presenter = SignUpPresenter(view: view, interactor: interactor, router: router)
         router.viewController = view
@@ -28,10 +29,14 @@ class SignUpRouter: SignUpRouterProtocol {
         switch router {
         case .signIn:
             navigateToSignIn()
+        case .uploadDocuments:
+            print("uplaod")
         case .datePiker:
             showDatePicker()
         case .optionPicker(let options, let index):
             showOptionsPicker(options: options, index: index)
+        case .alert(let alertEntity):
+            showAlert(alertEntity: alertEntity)
         }
     }
     private func navigateToSignIn() {
@@ -63,5 +68,9 @@ class SignUpRouter: SignUpRouterProtocol {
         }
         alert.addAction(doneAlert)
         viewController?.present(alert, animated: true)
+    }
+    private func showAlert(alertEntity: AlertEntity) {
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        viewController?.showAlertController(title: alertEntity.title, message: alertEntity.message, actions: [okAction])
     }
 }
