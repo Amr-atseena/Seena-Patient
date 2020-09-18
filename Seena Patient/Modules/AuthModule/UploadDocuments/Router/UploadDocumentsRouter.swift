@@ -9,7 +9,6 @@
 import Foundation
 import UIKit
 class UploadDocumentsRouter: UploadDocumentsRouterProtocol {
-
     
     // MARK: - Attributes
     weak var viewController: UIViewController?
@@ -18,7 +17,7 @@ class UploadDocumentsRouter: UploadDocumentsRouterProtocol {
         let router = UploadDocumentsRouter()
         let interactor = UploadDocumentsInteractor()
         let view = UploadDocumentsVC()
-        let presenter = UploadDocumentsPresenter(view: view, interactor: interactor, router: router,status: status)
+        let presenter = UploadDocumentsPresenter(view: view, interactor: interactor, router: router, status: status)
         router.viewController = view
         interactor.presenter = presenter
         view.presenter = presenter
@@ -26,5 +25,22 @@ class UploadDocumentsRouter: UploadDocumentsRouterProtocol {
     }
     // MARK: - Routing
     func go(to router: UploadDocumentsRoute) {
+        switch router {
+        case .back:
+            navigateToback()
+        case .upload(let index):
+            navigateToUpload(withDocumentTypeIndex: index)
+        case .finishSignUp:
+            navigateToFinishSignUp()
+        }
+    }
+    private func navigateToback() {
+        viewController?.navigationController?.popViewController(animated: true)
+    }
+    private func navigateToFinishSignUp() {
+        
+    }
+    private func navigateToUpload(withDocumentTypeIndex index: Int) {
+        
     }
 }

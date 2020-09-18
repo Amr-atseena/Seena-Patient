@@ -10,6 +10,9 @@ import Foundation
 import UIKit
 // MARK: - UploadDocuments Router
 enum UploadDocumentsRoute {
+    case back
+    case upload(doucmentTypeIndex: Int)
+    case finishSignUp
 }
 protocol UploadDocumentsRouterProtocol {
     // Presenter -> Router
@@ -33,9 +36,26 @@ protocol UploadDocumentsPresenterProtocol: class {
     var localization: UploadDocumentsLocalization { get }
     // view -> Presenter
     func viewDidLoad()
+    func viewWillAppear()
+    func config(documentTypeCell cell: DocumentTypeCellProtocol, atIndex index: Int)
+    func documentType(selectedAtIndex index: Int)
+    func backButtonTapped()
+    func finishButtonTapped()
+    func validateStatus()
+    var numberOfDocumentsType: Int { get }
 }
 // MARK: - UploadDocuments View
 protocol UploadDocumentsViewProtocol: class {
     var presenter: UploadDocumentsPresenterProtocol! { get set }
     // Presenter -> View
+    func setupUI()
+    func setupDocumentTypeTableView()
+    func reloadDocumentsType()
+    func enableFinishButton()
+    func disableFinisButton()
+}
+
+// MARK: - DocumentTypeCellProtocol
+protocol DocumentTypeCellProtocol: class {
+    func setDocumentType(_ type: DocomentTypeViewModel)
 }

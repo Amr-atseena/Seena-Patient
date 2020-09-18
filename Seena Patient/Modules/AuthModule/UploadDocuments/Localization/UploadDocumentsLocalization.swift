@@ -10,4 +10,13 @@ import Foundation
 
 struct UploadDocumentsLocalization {
     // MARK: - Attributes
+    var uploadRequireDoc: String {
+        return "Upload required documents".localized
+    }
+    var  multipleFilesIfNeeded: String {
+        return "multiple files if needed".localized
+    }
+    var finish: String {
+        return "Finish".localized
+    }
 }
