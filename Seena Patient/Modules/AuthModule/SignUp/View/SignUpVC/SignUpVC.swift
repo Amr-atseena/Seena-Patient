@@ -59,6 +59,18 @@ class SignUpVC: UIViewController, SignUpViewProtocol {
         finishButton.setTitle(presenter.localization.finish, for: .normal)
         finishButton.titleLabel?.font = DesignSystem.Typography.subHeading3.font
     }
+    func setIdType(_ type: String) {
+        idTypeTextFiled.text = type
+    }
+    func setFinancialProof(_ proof: String) {
+        financialProofTypeTextField.text = proof
+    }
+    func setResidenceProof(_ proof: String) {
+        residentProofTypeTextFiled.text = proof
+    }
+    func setBirthDate(_ date: String) {
+        birthdateTextFiled.text = date
+    }
     // MARK: - Actions
     @IBAction private func didTapFinishButton(_ sender: UIButton) {
     }
@@ -66,6 +78,7 @@ class SignUpVC: UIViewController, SignUpViewProtocol {
         presenter.backButtonTapped()
     }
     @IBAction private func didTapOptionsButton(_ sender: UIButton) {
+        presenter.optionsButtonTapped(withIndex: sender.tag)
     }
     // MARK: - DeInit
     deinit {

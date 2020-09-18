@@ -50,6 +50,12 @@
 		8829891325129BE2004C5AB6 /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8829891225129BE2004C5AB6 /* Document.swift */; };
 		8829891525129D04004C5AB6 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8829891425129D04004C5AB6 /* Account.swift */; };
 		8829891725129DA0004C5AB6 /* Vodafone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8829891625129DA0004C5AB6 /* Vodafone.swift */; };
+		8829891A2512A0C7004C5AB6 /* DocumentsLocalDataManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882989192512A0C7004C5AB6 /* DocumentsLocalDataManagerProtocol.swift */; };
+		8829891C2512A301004C5AB6 /* DocumentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8829891B2512A301004C5AB6 /* DocumentType.swift */; };
+		8829891F2512A624004C5AB6 /* SignUpLocalDataManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8829891E2512A624004C5AB6 /* SignUpLocalDataManagerProtocol.swift */; };
+		882989212512A645004C5AB6 /* SignUpLocalDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882989202512A645004C5AB6 /* SignUpLocalDataManager.swift */; };
+		882989242512AAFE004C5AB6 /* UIDatePicker+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882989222512AAFE004C5AB6 /* UIDatePicker+Extension.swift */; };
+		882989252512AAFE004C5AB6 /* UIAlertController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882989232512AAFE004C5AB6 /* UIAlertController+Extension.swift */; };
 		882DE795250FECC500B1F4F7 /* UserLocalDataManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882DE794250FECC500B1F4F7 /* UserLocalDataManagerProtocol.swift */; };
 		882DE798250FEE5000B1F4F7 /* AuthenticationLocalDataManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882DE797250FEE5000B1F4F7 /* AuthenticationLocalDataManagerProtocol.swift */; };
 		882DE79A250FEE6C00B1F4F7 /* AuthenticationLocalDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882DE799250FEE6C00B1F4F7 /* AuthenticationLocalDataManager.swift */; };
@@ -282,6 +288,12 @@
 		8829891225129BE2004C5AB6 /* Document.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Document.swift; sourceTree = "<group>"; };
 		8829891425129D04004C5AB6 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		8829891625129DA0004C5AB6 /* Vodafone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vodafone.swift; sourceTree = "<group>"; };
+		882989192512A0C7004C5AB6 /* DocumentsLocalDataManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentsLocalDataManagerProtocol.swift; sourceTree = "<group>"; };
+		8829891B2512A301004C5AB6 /* DocumentType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentType.swift; sourceTree = "<group>"; };
+		8829891E2512A624004C5AB6 /* SignUpLocalDataManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpLocalDataManagerProtocol.swift; sourceTree = "<group>"; };
+		882989202512A645004C5AB6 /* SignUpLocalDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpLocalDataManager.swift; sourceTree = "<group>"; };
+		882989222512AAFE004C5AB6 /* UIDatePicker+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIDatePicker+Extension.swift"; sourceTree = "<group>"; };
+		882989232512AAFE004C5AB6 /* UIAlertController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIAlertController+Extension.swift"; sourceTree = "<group>"; };
 		882DE794250FECC500B1F4F7 /* UserLocalDataManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLocalDataManagerProtocol.swift; sourceTree = "<group>"; };
 		882DE797250FEE5000B1F4F7 /* AuthenticationLocalDataManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationLocalDataManagerProtocol.swift; sourceTree = "<group>"; };
 		882DE799250FEE6C00B1F4F7 /* AuthenticationLocalDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationLocalDataManager.swift; sourceTree = "<group>"; };
@@ -670,6 +682,23 @@
 				88F675A0250D56A700D19822 /* LoginResponse.swift */,
 			);
 			path = Response;
+			sourceTree = "<group>";
+		};
+		882989182512A0A4004C5AB6 /* Documents */ = {
+			isa = PBXGroup;
+			children = (
+				882989192512A0C7004C5AB6 /* DocumentsLocalDataManagerProtocol.swift */,
+			);
+			path = Documents;
+			sourceTree = "<group>";
+		};
+		8829891D2512A5FB004C5AB6 /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				8829891E2512A624004C5AB6 /* SignUpLocalDataManagerProtocol.swift */,
+				882989202512A645004C5AB6 /* SignUpLocalDataManager.swift */,
+			);
+			path = SignUp;
 			sourceTree = "<group>";
 		};
 		882DE793250FEC9F00B1F4F7 /* User */ = {
@@ -1799,6 +1828,8 @@
 				8C8CB3E724E6CA45009679E5 /* String+Extensions.swift */,
 				8C8CB3E924E6CA46009679E5 /* UIApplication+Extensions.swift */,
 				8C8CB3E424E6CA45009679E5 /* UICollectionView+Extensions.swift */,
+				882989232512AAFE004C5AB6 /* UIAlertController+Extension.swift */,
+				882989222512AAFE004C5AB6 /* UIDatePicker+Extension.swift */,
 				8C8CB3E524E6CA45009679E5 /* UINavigationController+Extensions.swift */,
 				8C8CB3E624E6CA45009679E5 /* UITableView+Extensions.swift */,
 				8CAB097424E7DDED00D38CDD /* UIView+Extensions.swift */,
@@ -1809,6 +1840,8 @@
 		8C8CB3F024E6CF23009679E5 /* LocalServices */ = {
 			isa = PBXGroup;
 			children = (
+				8829891D2512A5FB004C5AB6 /* SignUp */,
+				882989182512A0A4004C5AB6 /* Documents */,
 				882DE796250FEE2E00B1F4F7 /* Auth */,
 				882DE793250FEC9F00B1F4F7 /* User */,
 				887C631925023A9600C69E2A /* ClinicsSearch */,
@@ -1924,6 +1957,7 @@
 				8829891225129BE2004C5AB6 /* Document.swift */,
 				8829891425129D04004C5AB6 /* Account.swift */,
 				8829891625129DA0004C5AB6 /* Vodafone.swift */,
+				8829891B2512A301004C5AB6 /* DocumentType.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -2457,6 +2491,7 @@
 				8C8CB42324E71369009679E5 /* Colors.swift in Sources */,
 				8885BB2A2501987D000D7BD5 /* SplashEndPoint.swift in Sources */,
 				8803D1E125081EAA004A6A46 /* ATMPayPresenter.swift in Sources */,
+				882989242512AAFE004C5AB6 /* UIDatePicker+Extension.swift in Sources */,
 				8885BB3125019CF4000D7BD5 /* SplashLocalDataManager.swift in Sources */,
 				8C8CB3FE24E6CF23009679E5 /* EnvironmentProtocol.swift in Sources */,
 				8CAB097924E7E6CB00D38CDD /* UIViewContorller+Extensions.swift in Sources */,
@@ -2464,6 +2499,7 @@
 				88BE60B52506CA2500EB2F03 /* PaymentChannelPresenter.swift in Sources */,
 				88E0C71F2505676C001A1B3B /* PayHomeInteractor.swift in Sources */,
 				882DE79A250FEE6C00B1F4F7 /* AuthenticationLocalDataManager.swift in Sources */,
+				882989252512AAFE004C5AB6 /* UIAlertController+Extension.swift in Sources */,
 				887C6326250277B200C69E2A /* ClinicsHomeResponse.swift in Sources */,
 				8CEC780E24E9DDDB000CED1F /* ServiceClinicCell.swift in Sources */,
 				8C8CB40324E6D3B3009679E5 /* SplashVC.swift in Sources */,
@@ -2473,6 +2509,7 @@
 				887C631D25023B3E00C69E2A /* ClinicsSearchLocolDataManagerProtocol.swift in Sources */,
 				8CAB09B024E8357E00D38CDD /* ServiceCell.swift in Sources */,
 				8CAB09AB24E8274200D38CDD /* SpectialityCell.swift in Sources */,
+				882989212512A645004C5AB6 /* SignUpLocalDataManager.swift in Sources */,
 				88104B9324F3023B00DB5ED9 /* ServiceViewModel.swift in Sources */,
 				8885BB1925017485000D7BD5 /* ClinicsEndPoint.swift in Sources */,
 				882DE7A92510005900B1F4F7 /* SignUpRouter.swift in Sources */,
@@ -2521,10 +2558,12 @@
 				88120B7F24EF2C66004A2381 /* ClinicDetailsLocalization.swift in Sources */,
 				887C630B25021CE800C69E2A /* SplashResponse.swift in Sources */,
 				887C631B25023AB700C69E2A /* ClinicsSearchLocolDataManager.swift in Sources */,
+				8829891F2512A624004C5AB6 /* SignUpLocalDataManagerProtocol.swift in Sources */,
 				8CEC77FD24E9BC5C000CED1F /* ServiceDetailsPresenter.swift in Sources */,
 				8803D1E525081EAA004A6A46 /* ATMPayLocalization.swift in Sources */,
 				8885BB2F25019CE0000D7BD5 /* SplashLocalDataServiceProtocol.swift in Sources */,
 				887C63102502324F00C69E2A /* OptionsAdapter.swift in Sources */,
+				8829891C2512A301004C5AB6 /* DocumentType.swift in Sources */,
 				8CAB097124E7CEA700D38CDD /* TabBarLocalization.swift in Sources */,
 				8C81545524EB21CA00CA30E7 /* ServicesSearchInteractor.swift in Sources */,
 				88ED042D24F0042600BBCEF6 /* NotificationCell.swift in Sources */,
@@ -2550,6 +2589,7 @@
 				8C8CB42124E71353009679E5 /* DesignSystem.swift in Sources */,
 				8C8CB3FB24E6CF23009679E5 /* APIService.swift in Sources */,
 				8803D1E225081EAA004A6A46 /* ATMPayRouter.swift in Sources */,
+				8829891A2512A0C7004C5AB6 /* DocumentsLocalDataManagerProtocol.swift in Sources */,
 				8CAB09B424E84C6800D38CDD /* PackageCell.swift in Sources */,
 				88ED042024EFFD9100BBCEF6 /* NotificationsHomeInteractor.swift in Sources */,
 				8C8CB3EB24E6CA46009679E5 /* UINavigationController+Extensions.swift in Sources */,
@@ -2680,7 +2720,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -2734,7 +2774,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
