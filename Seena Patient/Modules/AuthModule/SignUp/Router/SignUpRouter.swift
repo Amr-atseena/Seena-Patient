@@ -29,8 +29,8 @@ class SignUpRouter: SignUpRouterProtocol {
         switch router {
         case .signIn:
             navigateToSignIn()
-        case .uploadDocuments:
-            print("uplaod")
+        case .uploadDocuments(let status):
+            navigateToUploadDocumets(withStatus: status)
         case .datePiker:
             showDatePicker()
         case .optionPicker(let options, let index):
@@ -68,6 +68,10 @@ class SignUpRouter: SignUpRouterProtocol {
         }
         alert.addAction(doneAlert)
         viewController?.present(alert, animated: true)
+    }
+    private func navigateToUploadDocumets(withStatus status: Status) {
+        let uploadDocuments = UploadDocumentsRouter.assembleModule(withStatus: status)
+        viewController?.navigationController?.pushViewController(uploadDocuments, animated: true)
     }
     private func showAlert(alertEntity: AlertEntity) {
         let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)

@@ -29,6 +29,8 @@ class SignInRouter: SignInRouterProtocol {
         switch router {
         case .signUp:
             navigateToSignUp()
+        case .uploadDocuments(let status):
+            navigateToUploadDocumets(withStatus: status)
         case .forgotPassword:
             print(" forgotPassword ")
         case .profile:
@@ -43,6 +45,12 @@ class SignInRouter: SignInRouterProtocol {
     private func navigateToSignUp() {
         viewController?.hidesBottomBarWhenPushed = true
         viewController?.navigationController?.pushViewController(SignUpRouter.assembleModule(), animated: true)
+        viewController?.hidesBottomBarWhenPushed = false
+    }
+    private func navigateToUploadDocumets(withStatus status: Status) {
+        let uploadDocuments = UploadDocumentsRouter.assembleModule(withStatus: status)
+        viewController?.hidesBottomBarWhenPushed = true
+        viewController?.navigationController?.pushViewController(uploadDocuments, animated: true)
         viewController?.hidesBottomBarWhenPushed = false
     }
     private func showAlert(alertEntity: AlertEntity) {

@@ -13,6 +13,7 @@ enum SignInRoute {
     case signUp
     case forgotPassword
     case profile
+    case uploadDocuments(Status)
     case alert(AlertEntity)
 }
 protocol SignInRouterProtocol {

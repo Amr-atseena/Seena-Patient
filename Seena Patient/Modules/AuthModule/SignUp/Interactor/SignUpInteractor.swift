@@ -52,13 +52,14 @@ class SignUpInteractor: SignUpInputInteractorProtocol {
                     return
                 }
                 guard let user = response.response?.user,
+                      let status = response.response?.status,
                     response.serverResonse.code == 200 else {
                     self.presenter?.onSignUpFail(withError: response.serverResonse.desc)
                         return
                 }
                 self.localDataManager.save(user: user)
                 self.localDataManager.save(token: response.serverResonse.token)
-                self.presenter?.onSignUpSuccess()
+                self.presenter?.onSignUpSuccess(withStatus: status)
             }
         }
     }

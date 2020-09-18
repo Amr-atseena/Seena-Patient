@@ -110,6 +110,16 @@
 		88BE60C52506CD8E00EB2F03 /* PaymentMethodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BE60C32506CD8E00EB2F03 /* PaymentMethodCell.swift */; };
 		88BE60C62506CD8E00EB2F03 /* PaymentMethodCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88BE60C42506CD8E00EB2F03 /* PaymentMethodCell.xib */; };
 		88D291182514FEFE008738A5 /* SignUpRequestParamaters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D291172514FEFE008738A5 /* SignUpRequestParamaters.swift */; };
+		88D291252515153D008738A5 /* UploadDocumentsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88D2911E2515153D008738A5 /* UploadDocumentsVC.xib */; };
+		88D291262515153D008738A5 /* UploadDocumentsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D2911F2515153D008738A5 /* UploadDocumentsPresenter.swift */; };
+		88D291272515153D008738A5 /* UploadDocumentsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D291202515153D008738A5 /* UploadDocumentsRouter.swift */; };
+		88D291282515153D008738A5 /* UploadDocumentsProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D291212515153D008738A5 /* UploadDocumentsProtocols.swift */; };
+		88D291292515153D008738A5 /* UploadDocumentsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D291222515153D008738A5 /* UploadDocumentsInteractor.swift */; };
+		88D2912A2515153D008738A5 /* UploadDocumentsLocalization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D291232515153D008738A5 /* UploadDocumentsLocalization.swift */; };
+		88D2912B2515153D008738A5 /* UploadDocumentsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D291242515153D008738A5 /* UploadDocumentsVC.swift */; };
+		88D2914925152233008738A5 /* DocumentTypeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D2914725152233008738A5 /* DocumentTypeCell.swift */; };
+		88D2914A25152233008738A5 /* DocumentTypeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88D2914825152233008738A5 /* DocumentTypeCell.xib */; };
+		88D2914F25152AB5008738A5 /* DocomentTypeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D2914E25152AB5008738A5 /* DocomentTypeViewModel.swift */; };
 		88E0C71B2505676C001A1B3B /* PayHomeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88E0C7142505676C001A1B3B /* PayHomeVC.xib */; };
 		88E0C71C2505676C001A1B3B /* PayHomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E0C7152505676C001A1B3B /* PayHomePresenter.swift */; };
 		88E0C71D2505676C001A1B3B /* PayHomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E0C7162505676C001A1B3B /* PayHomeRouter.swift */; };
@@ -351,6 +361,16 @@
 		88BE60C32506CD8E00EB2F03 /* PaymentMethodCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentMethodCell.swift; sourceTree = "<group>"; };
 		88BE60C42506CD8E00EB2F03 /* PaymentMethodCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PaymentMethodCell.xib; sourceTree = "<group>"; };
 		88D291172514FEFE008738A5 /* SignUpRequestParamaters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpRequestParamaters.swift; sourceTree = "<group>"; };
+		88D2911E2515153D008738A5 /* UploadDocumentsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UploadDocumentsVC.xib; sourceTree = "<group>"; };
+		88D2911F2515153D008738A5 /* UploadDocumentsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadDocumentsPresenter.swift; sourceTree = "<group>"; };
+		88D291202515153D008738A5 /* UploadDocumentsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadDocumentsRouter.swift; sourceTree = "<group>"; };
+		88D291212515153D008738A5 /* UploadDocumentsProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadDocumentsProtocols.swift; sourceTree = "<group>"; };
+		88D291222515153D008738A5 /* UploadDocumentsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadDocumentsInteractor.swift; sourceTree = "<group>"; };
+		88D291232515153D008738A5 /* UploadDocumentsLocalization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadDocumentsLocalization.swift; sourceTree = "<group>"; };
+		88D291242515153D008738A5 /* UploadDocumentsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadDocumentsVC.swift; sourceTree = "<group>"; };
+		88D2914725152233008738A5 /* DocumentTypeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentTypeCell.swift; sourceTree = "<group>"; };
+		88D2914825152233008738A5 /* DocumentTypeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DocumentTypeCell.xib; sourceTree = "<group>"; };
+		88D2914E25152AB5008738A5 /* DocomentTypeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocomentTypeViewModel.swift; sourceTree = "<group>"; };
 		88E0C7142505676C001A1B3B /* PayHomeVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PayHomeVC.xib; sourceTree = "<group>"; };
 		88E0C7152505676C001A1B3B /* PayHomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayHomePresenter.swift; sourceTree = "<group>"; };
 		88E0C7162505676C001A1B3B /* PayHomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayHomeRouter.swift; sourceTree = "<group>"; };
@@ -1004,6 +1024,95 @@
 			path = PaymentMethodCell;
 			sourceTree = "<group>";
 		};
+		88D2911D251514BA008738A5 /* UploadDocuments */ = {
+			isa = PBXGroup;
+			children = (
+				88D2914D25152A99008738A5 /* ViewModel */,
+				88D2913525151593008738A5 /* Localization */,
+				88D2913C251515AF008738A5 /* Protocol */,
+				88D2913F251515B8008738A5 /* Router */,
+				88D29139251515A6008738A5 /* Interactor */,
+				88D291362515159E008738A5 /* Presenter */,
+				88D2913225151586008738A5 /* View */,
+			);
+			path = UploadDocuments;
+			sourceTree = "<group>";
+		};
+		88D291302515156D008738A5 /* UploadDocumentsVC */ = {
+			isa = PBXGroup;
+			children = (
+				88D291242515153D008738A5 /* UploadDocumentsVC.swift */,
+				88D2911E2515153D008738A5 /* UploadDocumentsVC.xib */,
+			);
+			path = UploadDocumentsVC;
+			sourceTree = "<group>";
+		};
+		88D2913225151586008738A5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				88D291462515220A008738A5 /* UploadOptionCell */,
+				88D291302515156D008738A5 /* UploadDocumentsVC */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		88D2913525151593008738A5 /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				88D291232515153D008738A5 /* UploadDocumentsLocalization.swift */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
+		88D291362515159E008738A5 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				88D2911F2515153D008738A5 /* UploadDocumentsPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		88D29139251515A6008738A5 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				88D291222515153D008738A5 /* UploadDocumentsInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		88D2913C251515AF008738A5 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				88D291212515153D008738A5 /* UploadDocumentsProtocols.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		88D2913F251515B8008738A5 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				88D291202515153D008738A5 /* UploadDocumentsRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		88D291462515220A008738A5 /* UploadOptionCell */ = {
+			isa = PBXGroup;
+			children = (
+				88D2914725152233008738A5 /* DocumentTypeCell.swift */,
+				88D2914825152233008738A5 /* DocumentTypeCell.xib */,
+			);
+			path = UploadOptionCell;
+			sourceTree = "<group>";
+		};
+		88D2914D25152A99008738A5 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				88D2914E25152AB5008738A5 /* DocomentTypeViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		88E0C712250566D3001A1B3B /* PayModule */ = {
 			isa = PBXGroup;
 			children = (
@@ -1425,6 +1534,7 @@
 			children = (
 				882DE79F250FFF7300B1F4F7 /* SignUp */,
 				88F67598250D2B9300D19822 /* SignIn */,
+				88D2911D251514BA008738A5 /* UploadDocuments */,
 			);
 			path = AuthModule;
 			sourceTree = "<group>";
@@ -2310,6 +2420,7 @@
 				88F706C024EE6804005C2ADB /* PackageDetailsVC.xib in Resources */,
 				88F67591250D2B8F00D19822 /* SignInVC.xib in Resources */,
 				8C8CB40424E6D3B3009679E5 /* SplashVC.xib in Resources */,
+				88D2914A25152233008738A5 /* DocumentTypeCell.xib in Resources */,
 				8CEC77FA24E9BB2A000CED1F /* ServiceDetailsVC.xib in Resources */,
 				88ED040524EFCD9A00BBCEF6 /* ClinicsSearchVC.xib in Resources */,
 				88120B7A24EF2C66004A2381 /* ClinicDetailsVC.xib in Resources */,
@@ -2334,6 +2445,7 @@
 				8CAB099D24E808A700D38CDD /* Tajawal-Bold.ttf in Resources */,
 				88120B5F24EF07BE004A2381 /* ClinicsHomeVC.xib in Resources */,
 				887C63242502683700C69E2A /* ClinicSkeletonCell.xib in Resources */,
+				88D291252515153D008738A5 /* UploadDocumentsVC.xib in Resources */,
 				8803D1F125082532004A6A46 /* PayOptionCell.xib in Resources */,
 				8CAB099F24E808A700D38CDD /* Tajawal-Regular.ttf in Resources */,
 				8803D1E025081EAA004A6A46 /* ATMPayVC.xib in Resources */,
@@ -2427,6 +2539,7 @@
 				8C8CB3EC24E6CA46009679E5 /* UITableView+Extensions.swift in Sources */,
 				88120B6024EF07BE004A2381 /* ClinicsHomePresenter.swift in Sources */,
 				8CEC780924E9CC2B000CED1F /* ServiceDetailsLocalizaition.swift in Sources */,
+				88D291282515153D008738A5 /* UploadDocumentsProtocols.swift in Sources */,
 				88F67586250CBBA700D19822 /* PayOptionLocalization.swift in Sources */,
 				88ED041F24EFFD9100BBCEF6 /* NotificationsHomeProtocols.swift in Sources */,
 				88BE60B92506CA2500EB2F03 /* PaymentChannelLocalization.swift in Sources */,
@@ -2448,12 +2561,14 @@
 				88F706C124EE6804005C2ADB /* PackageDetailsPresenter.swift in Sources */,
 				8C8CB40624E6DA9B009679E5 /* SplashProtocols.swift in Sources */,
 				883D941C24F474CA004A3F86 /* PackageSkeltonCell.swift in Sources */,
+				88D2914925152233008738A5 /* DocumentTypeCell.swift in Sources */,
 				8C81545224EB21CA00CA30E7 /* ServicesSearchPresenter.swift in Sources */,
 				88EDA12C24FAE41200460B4D /* ProfileProtocols.swift in Sources */,
 				88EDA12A24FAE41200460B4D /* ProfilePresenter.swift in Sources */,
 				88120B8024EF2C66004A2381 /* ClinicDetailsVC.swift in Sources */,
 				88104B8324F2E3AF00DB5ED9 /* Package.swift in Sources */,
 				88E0C71E2505676C001A1B3B /* PayHomeProtocols.swift in Sources */,
+				88D2912B2515153D008738A5 /* UploadDocumentsVC.swift in Sources */,
 				882DE798250FEE5000B1F4F7 /* AuthenticationLocalDataManagerProtocol.swift in Sources */,
 				8885BB1B2501760F000D7BD5 /* ClinicsRomoteDataManager.swift in Sources */,
 				882DE79C250FFBA300B1F4F7 /* TokenLocalDataManagerProtocol.swift in Sources */,
@@ -2471,6 +2586,7 @@
 				88E0C71C2505676C001A1B3B /* PayHomePresenter.swift in Sources */,
 				882DE7AC2510005900B1F4F7 /* SignUpLocalization.swift in Sources */,
 				88EDA11F24FADD9B00460B4D /* ServiceResultSkeltonCell.swift in Sources */,
+				88D2914F25152AB5008738A5 /* DocomentTypeViewModel.swift in Sources */,
 				88104B7D24F2E0F300DB5ED9 /* BaseResponse.swift in Sources */,
 				88F67596250D2B8F00D19822 /* SignInLocalization.swift in Sources */,
 				88ED041E24EFFD9100BBCEF6 /* NotificationsHomeRouter.swift in Sources */,
@@ -2490,6 +2606,7 @@
 				882DE7A82510005900B1F4F7 /* SignUpPresenter.swift in Sources */,
 				88104B9124F2FD3600DB5ED9 /* PackageViewModel.swift in Sources */,
 				8C81545624EB21CA00CA30E7 /* ServicesSearchLocalization.swift in Sources */,
+				88D291292515153D008738A5 /* UploadDocumentsInteractor.swift in Sources */,
 				8C8CB3EF24E6CA46009679E5 /* UIApplication+Extensions.swift in Sources */,
 				8C8CB42324E71369009679E5 /* Colors.swift in Sources */,
 				8885BB2A2501987D000D7BD5 /* SplashEndPoint.swift in Sources */,
@@ -2497,6 +2614,7 @@
 				882989242512AAFE004C5AB6 /* UIDatePicker+Extension.swift in Sources */,
 				8885BB3125019CF4000D7BD5 /* SplashLocalDataManager.swift in Sources */,
 				8C8CB3FE24E6CF23009679E5 /* EnvironmentProtocol.swift in Sources */,
+				88D2912A2515153D008738A5 /* UploadDocumentsLocalization.swift in Sources */,
 				8CAB097924E7E6CB00D38CDD /* UIViewContorller+Extensions.swift in Sources */,
 				88F675AC250D5F6F00D19822 /* LoginRequestParameters.swift in Sources */,
 				88BE60B52506CA2500EB2F03 /* PaymentChannelPresenter.swift in Sources */,
@@ -2553,11 +2671,13 @@
 				88ED040724EFCD9A00BBCEF6 /* ClinicsSearchRouter.swift in Sources */,
 				88F706C324EE6804005C2ADB /* PackageDetailsProtocols.swift in Sources */,
 				88120B7E24EF2C66004A2381 /* ClinicDetailsInteractor.swift in Sources */,
+				88D291262515153D008738A5 /* UploadDocumentsPresenter.swift in Sources */,
 				887C63142502341D00C69E2A /* OptionCell.swift in Sources */,
 				887C63232502683700C69E2A /* ClinicSkeletonCell.swift in Sources */,
 				88E0C7212505676C001A1B3B /* PayHomeVC.swift in Sources */,
 				8CAB098324E7E9A900D38CDD /* HomeRouter.swift in Sources */,
 				8827E94E24F5A226009C64FB /* EmptyStateView.swift in Sources */,
+				88D291272515153D008738A5 /* UploadDocumentsRouter.swift in Sources */,
 				88120B7F24EF2C66004A2381 /* ClinicDetailsLocalization.swift in Sources */,
 				887C630B25021CE800C69E2A /* SplashResponse.swift in Sources */,
 				887C631B25023AB700C69E2A /* ClinicsSearchLocolDataManager.swift in Sources */,
