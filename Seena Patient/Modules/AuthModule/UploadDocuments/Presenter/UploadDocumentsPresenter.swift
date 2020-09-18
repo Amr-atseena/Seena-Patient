@@ -15,7 +15,8 @@ class UploadDocumentsPresenter: UploadDocumentsPresenterProtocol {
     var router: UploadDocumentsRouterProtocol?
     let localization = UploadDocumentsLocalization()
     // MARK: - Init
-    init(view: UploadDocumentsViewProtocol?, interactor: UploadDocumentsInputInteractorProtocol, router: UploadDocumentsRouterProtocol ) {
+    init(view: UploadDocumentsViewProtocol?, interactor: UploadDocumentsInputInteractorProtocol, router: UploadDocumentsRouterProtocol,
+         status: Status) {
         self.view = view
         self.interactor = interactor
         self.router = router

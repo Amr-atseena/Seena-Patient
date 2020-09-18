@@ -9,14 +9,16 @@
 import Foundation
 import UIKit
 class UploadDocumentsRouter: UploadDocumentsRouterProtocol {
+
+    
     // MARK: - Attributes
     weak var viewController: UIViewController?
     // MARK: - Assemble
-    static func assembleModule() -> UIViewController {
+    static func assembleModule(withStatus status: Status) -> UIViewController {
         let router = UploadDocumentsRouter()
         let interactor = UploadDocumentsInteractor()
         let view = UploadDocumentsVC()
-        let presenter = UploadDocumentsPresenter(view: view, interactor: interactor, router: router)
+        let presenter = UploadDocumentsPresenter(view: view, interactor: interactor, router: router,status: status)
         router.viewController = view
         interactor.presenter = presenter
         view.presenter = presenter

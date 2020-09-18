@@ -15,7 +15,7 @@ protocol UploadDocumentsRouterProtocol {
     // Presenter -> Router
     var viewController: UIViewController? { get set }
     func go(to router: UploadDocumentsRoute)
-    static func assembleModule() -> UIViewController
+    static func assembleModule(withStatus status: Status) -> UIViewController
 }
 // MARK: - UploadDocuments Interactor
 protocol UploadDocumentsInputInteractorProtocol: class {

@@ -14,7 +14,7 @@ enum SignUpRoute {
     case datePiker
     case optionPicker(options: [String], index: Int)
     case alert(alertEntity: AlertEntity)
-    case uploadDocuments
+    case uploadDocuments(Status)
 }
 protocol SignUpRouterProtocol {
     // Presenter -> Router
@@ -38,7 +38,7 @@ protocol SignUpOutputInteractorProtocol: class {
     func onRetriveIdTypes(_ idTypes: [Document])
     func onRetriveResidenceProof(_ residenceProof: [Document])
     func onRetriveFinancialProof(_ financialProof: [Document])
-    func onSignUpSuccess()
+    func onSignUpSuccess(withStatus status: Status)
     func onSignUpFail(withError error: String)
 }
 // MARK: - SignUp Preseneter

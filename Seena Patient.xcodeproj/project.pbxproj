@@ -1507,9 +1507,9 @@
 		88F67589250D2AB300D19822 /* AuthModule */ = {
 			isa = PBXGroup;
 			children = (
-				88D2911D251514BA008738A5 /* UploadDocuments */,
 				882DE79F250FFF7300B1F4F7 /* SignUp */,
 				88F67598250D2B9300D19822 /* SignIn */,
+				88D2911D251514BA008738A5 /* UploadDocuments */,
 			);
 			path = AuthModule;
 			sourceTree = "<group>";

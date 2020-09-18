@@ -162,9 +162,9 @@ extension SignUpPresenter: SignUpOutputInteractorProtocol {
     func onRetriveFinancialProof(_ financialProof: [Document]) {
         self.financialProof = financialProof
     }
-    func onSignUpSuccess() {
+    func onSignUpSuccess(withStatus status: Status) {
         view?.hideLoadingIndicor()
-        router?.go(to: .uploadDocuments)
+        router?.go(to: .uploadDocuments(status))
     }
     func onSignUpFail(withError error: String) {
         view?.hideLoadingIndicor()
