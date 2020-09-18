@@ -28,7 +28,7 @@ class SignInRouter: SignInRouterProtocol {
     func go(to router: SignInRoute) {
         switch router {
         case .signUp:
-            print("sign up")
+            navigateToSignUp()
         case .forgotPassword:
             print(" forgotPassword ")
         case .profile:
@@ -39,6 +39,11 @@ class SignInRouter: SignInRouterProtocol {
     }
     private func navigateToProfile() {
         viewController?.navigationController?.setViewControllers([ProfileRouter.assembleModule()], animated: true)
+    }
+    private func navigateToSignUp() {
+        viewController?.hidesBottomBarWhenPushed = true
+        viewController?.navigationController?.pushViewController(SignUpRouter.assembleModule(), animated: true)
+        viewController?.hidesBottomBarWhenPushed = false
     }
     private func showAlert(alertEntity: AlertEntity) {
         let okAction = UIAlertAction(title: "OK", style: .default)

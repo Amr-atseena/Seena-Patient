@@ -28,11 +28,18 @@ class SplashInteractor: SplashInputInteractorProtocol {
                 guard let response = response as? BaseResponse<SplashResponse> else {
                     return
                 }
-                guard let cities = response.response?.cities, response.serverResonse.code == 200 else {
+                guard let cities = response.response?.cities,
+                    let idTypes = response.response?.idTypes,
+                    let financial = response.response?.financialProof,
+                    let residence = response.response?.residenceProof,
+                    response.serverResonse.code == 200 else {
                     self.presenter?.onRetriveDataFail(response.serverResonse.desc)
                     return
                 }
                 self.localDataManager.save(cities: cities)
+                self.localDataManager.save(documents: idTypes, forKey: .id)
+                self.localDataManager.save(documents: financial, forKey: .financial)
+                self.localDataManager.save(documents: residence, forKey: .residence)
                 self.presenter?.onRetriveMetaDataSuccess()
             }
         }

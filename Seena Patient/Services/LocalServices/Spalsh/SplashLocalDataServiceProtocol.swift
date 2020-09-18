@@ -7,5 +7,5 @@
 //
 
 import Foundation
-protocol SplashLocalDataManagerProtocol: CityLocalDataManagerProtocol {
+protocol SplashLocalDataManagerProtocol: CityLocalDataManagerProtocol, DocumentsLocalDataManagerProtocol {
 }

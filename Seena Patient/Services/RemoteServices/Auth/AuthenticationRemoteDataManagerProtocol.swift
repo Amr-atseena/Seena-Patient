@@ -10,4 +10,5 @@ import Foundation
 
 protocol AuthenticationRemoteDataManagerProtocol: class {
     func retriveLoginData(params: LoginRequestParameters, complationHandler: @escaping ((_ result: Result<Codable, Error>) -> Void))
+    func retriveSignUpData(params: SignUpRequestParamaters, complationHandler: @escaping ((_ result: Result<Codable, Error>) -> Void))
 }
