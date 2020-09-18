@@ -38,9 +38,9 @@ class UploadDocumentsRouter: UploadDocumentsRouterProtocol {
         viewController?.navigationController?.popViewController(animated: true)
     }
     private func navigateToFinishSignUp() {
-        
     }
     private func navigateToUpload(withDocumentTypeIndex index: Int) {
-        
+        let uploadVC = UploadRouter.assembleModule()
+        viewController?.navigationController?.pushViewController(uploadVC, animated: true)
     }
 }

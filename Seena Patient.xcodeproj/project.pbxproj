@@ -120,6 +120,13 @@
 		88D2914925152233008738A5 /* DocumentTypeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D2914725152233008738A5 /* DocumentTypeCell.swift */; };
 		88D2914A25152233008738A5 /* DocumentTypeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88D2914825152233008738A5 /* DocumentTypeCell.xib */; };
 		88D2914F25152AB5008738A5 /* DocomentTypeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D2914E25152AB5008738A5 /* DocomentTypeViewModel.swift */; };
+		88D29162251549DD008738A5 /* UploadVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88D2915B251549DD008738A5 /* UploadVC.xib */; };
+		88D29163251549DD008738A5 /* UploadPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D2915C251549DD008738A5 /* UploadPresenter.swift */; };
+		88D29164251549DD008738A5 /* UploadRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D2915D251549DD008738A5 /* UploadRouter.swift */; };
+		88D29165251549DD008738A5 /* UploadProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D2915E251549DD008738A5 /* UploadProtocols.swift */; };
+		88D29166251549DD008738A5 /* UploadInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D2915F251549DD008738A5 /* UploadInteractor.swift */; };
+		88D29167251549DD008738A5 /* UploadLocalization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D29160251549DD008738A5 /* UploadLocalization.swift */; };
+		88D29168251549DD008738A5 /* UploadVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D29161251549DD008738A5 /* UploadVC.swift */; };
 		88E0C71B2505676C001A1B3B /* PayHomeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88E0C7142505676C001A1B3B /* PayHomeVC.xib */; };
 		88E0C71C2505676C001A1B3B /* PayHomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E0C7152505676C001A1B3B /* PayHomePresenter.swift */; };
 		88E0C71D2505676C001A1B3B /* PayHomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E0C7162505676C001A1B3B /* PayHomeRouter.swift */; };
@@ -371,6 +378,13 @@
 		88D2914725152233008738A5 /* DocumentTypeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentTypeCell.swift; sourceTree = "<group>"; };
 		88D2914825152233008738A5 /* DocumentTypeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DocumentTypeCell.xib; sourceTree = "<group>"; };
 		88D2914E25152AB5008738A5 /* DocomentTypeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocomentTypeViewModel.swift; sourceTree = "<group>"; };
+		88D2915B251549DD008738A5 /* UploadVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UploadVC.xib; sourceTree = "<group>"; };
+		88D2915C251549DD008738A5 /* UploadPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadPresenter.swift; sourceTree = "<group>"; };
+		88D2915D251549DD008738A5 /* UploadRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadRouter.swift; sourceTree = "<group>"; };
+		88D2915E251549DD008738A5 /* UploadProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadProtocols.swift; sourceTree = "<group>"; };
+		88D2915F251549DD008738A5 /* UploadInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadInteractor.swift; sourceTree = "<group>"; };
+		88D29160251549DD008738A5 /* UploadLocalization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadLocalization.swift; sourceTree = "<group>"; };
+		88D29161251549DD008738A5 /* UploadVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadVC.swift; sourceTree = "<group>"; };
 		88E0C7142505676C001A1B3B /* PayHomeVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PayHomeVC.xib; sourceTree = "<group>"; };
 		88E0C7152505676C001A1B3B /* PayHomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayHomePresenter.swift; sourceTree = "<group>"; };
 		88E0C7162505676C001A1B3B /* PayHomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayHomeRouter.swift; sourceTree = "<group>"; };
@@ -1113,6 +1127,20 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		88D2915A251549CF008738A5 /* Upload */ = {
+			isa = PBXGroup;
+			children = (
+				88D2915B251549DD008738A5 /* UploadVC.xib */,
+				88D2915C251549DD008738A5 /* UploadPresenter.swift */,
+				88D2915D251549DD008738A5 /* UploadRouter.swift */,
+				88D2915E251549DD008738A5 /* UploadProtocols.swift */,
+				88D2915F251549DD008738A5 /* UploadInteractor.swift */,
+				88D29160251549DD008738A5 /* UploadLocalization.swift */,
+				88D29161251549DD008738A5 /* UploadVC.swift */,
+			);
+			path = Upload;
+			sourceTree = "<group>";
+		};
 		88E0C712250566D3001A1B3B /* PayModule */ = {
 			isa = PBXGroup;
 			children = (
@@ -1532,6 +1560,7 @@
 		88F67589250D2AB300D19822 /* AuthModule */ = {
 			isa = PBXGroup;
 			children = (
+				88D2915A251549CF008738A5 /* Upload */,
 				882DE79F250FFF7300B1F4F7 /* SignUp */,
 				88F67598250D2B9300D19822 /* SignIn */,
 				88D2911D251514BA008738A5 /* UploadDocuments */,
@@ -2437,6 +2466,7 @@
 				88120B7124EF1CC3004A2381 /* ClinicCell.xib in Resources */,
 				88ED041C24EFFD9100BBCEF6 /* NotificationsHomeVC.xib in Resources */,
 				883D941D24F474CA004A3F86 /* PackageSkeltonCell.xib in Resources */,
+				88D29162251549DD008738A5 /* UploadVC.xib in Resources */,
 				8C8CB3CE24E6B817009679E5 /* LaunchScreen.storyboard in Resources */,
 				8CAB099B24E808A700D38CDD /* Tajawal-ExtraBold.ttf in Resources */,
 				88BE60C62506CD8E00EB2F03 /* PaymentMethodCell.xib in Resources */,
@@ -2600,6 +2630,7 @@
 				882DE7AB2510005900B1F4F7 /* SignUpInteractor.swift in Sources */,
 				88F67594250D2B8F00D19822 /* SignInProtocols.swift in Sources */,
 				8CAB09A324E80BC600D38CDD /* CustomFontDiscriptor.swift in Sources */,
+				88D29165251549DD008738A5 /* UploadProtocols.swift in Sources */,
 				8885BB2C25019925000D7BD5 /* SplashRemoteDataManager.swift in Sources */,
 				8C8CB40F24E6E53A009679E5 /* SplashInteractor.swift in Sources */,
 				88E0C7202505676C001A1B3B /* PayHomeLocalization.swift in Sources */,
@@ -2659,9 +2690,11 @@
 				88F706C624EE6804005C2ADB /* PackageDetailsVC.swift in Sources */,
 				88104B8C24F2E9D200DB5ED9 /* ServicesRemoteDataManager.swift in Sources */,
 				88ED040A24EFCD9A00BBCEF6 /* ClinicsSearchLocalization.swift in Sources */,
+				88D29166251549DD008738A5 /* UploadInteractor.swift in Sources */,
 				88ED040924EFCD9A00BBCEF6 /* ClinicsSearchInteractor.swift in Sources */,
 				8C81545424EB21CA00CA30E7 /* ServicesSearchProtocols.swift in Sources */,
 				883D941724F44392004A3F86 /* SpectialitySkeltonCell.swift in Sources */,
+				88D29163251549DD008738A5 /* UploadPresenter.swift in Sources */,
 				88F67592250D2B8F00D19822 /* SignInPresenter.swift in Sources */,
 				8C8CB41D24E6F999009679E5 /* HomeTabBarVC.swift in Sources */,
 				8C8CB40D24E6E283009679E5 /* SplashRouter.swift in Sources */,
@@ -2673,6 +2706,7 @@
 				88120B7E24EF2C66004A2381 /* ClinicDetailsInteractor.swift in Sources */,
 				88D291262515153D008738A5 /* UploadDocumentsPresenter.swift in Sources */,
 				887C63142502341D00C69E2A /* OptionCell.swift in Sources */,
+				88D29168251549DD008738A5 /* UploadVC.swift in Sources */,
 				887C63232502683700C69E2A /* ClinicSkeletonCell.swift in Sources */,
 				88E0C7212505676C001A1B3B /* PayHomeVC.swift in Sources */,
 				8CAB098324E7E9A900D38CDD /* HomeRouter.swift in Sources */,
@@ -2707,9 +2741,11 @@
 				8C8CB3FD24E6CF23009679E5 /* Environment.swift in Sources */,
 				8885BB28250197A4000D7BD5 /* SplashRemoteDataManagerProtocol.swift in Sources */,
 				88D291182514FEFE008738A5 /* SignUpRequestParamaters.swift in Sources */,
+				88D29164251549DD008738A5 /* UploadRouter.swift in Sources */,
 				88BE60C52506CD8E00EB2F03 /* PaymentMethodCell.swift in Sources */,
 				8803D1E325081EAA004A6A46 /* ATMPayProtocols.swift in Sources */,
 				88ED040B24EFCD9A00BBCEF6 /* ClinicsSearchVC.swift in Sources */,
+				88D29167251549DD008738A5 /* UploadLocalization.swift in Sources */,
 				8C8CB42124E71353009679E5 /* DesignSystem.swift in Sources */,
 				8C8CB3FB24E6CF23009679E5 /* APIService.swift in Sources */,
 				8803D1E225081EAA004A6A46 /* ATMPayRouter.swift in Sources */,
