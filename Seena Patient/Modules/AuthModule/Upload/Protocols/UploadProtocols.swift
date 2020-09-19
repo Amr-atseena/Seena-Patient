@@ -10,21 +10,27 @@ import Foundation
 import UIKit
 // MARK: - Upload Router
 enum UploadRoute {
-    case back
+    case back(Status?)
+    case alert(AlertEntity)
 }
 protocol UploadRouterProtocol {
     // Presenter -> Router
     var viewController: UIViewController? { get set }
     func go(to router: UploadRoute)
-    static func assembleModule() -> UIViewController
+    static func assembleModule(withDocumentsType type: Int) -> UIViewController
 }
 // MARK: - Upload Interactor
 protocol UploadInputInteractorProtocol: class {
     var presenter: UploadOutputInteractorProtocol? { get set }
+    var localDataManager: UploadLocalDataManagerProtocol { get set }
+    var remoteDataManager: AuthenticationRemoteDataManager { get set }
     // Presenter -> Interactor
+    func upload(images: [Data], forType type: Int)
 }
 protocol UploadOutputInteractorProtocol: class {
     // Interactor -> Presenter
+    func onUploadImagesSuccess(withStatus status: Status)
+    func onUploadImagesFail(withError error: String)
 }
 // MARK: - Upload Preseneter
 protocol UploadPresenterProtocol: class {

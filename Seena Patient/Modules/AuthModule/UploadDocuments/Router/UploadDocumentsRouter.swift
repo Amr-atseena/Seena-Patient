@@ -9,7 +9,6 @@
 import Foundation
 import UIKit
 class UploadDocumentsRouter: UploadDocumentsRouterProtocol {
-    
     // MARK: - Attributes
     weak var viewController: UIViewController?
     // MARK: - Assemble
@@ -40,7 +39,13 @@ class UploadDocumentsRouter: UploadDocumentsRouterProtocol {
     private func navigateToFinishSignUp() {
     }
     private func navigateToUpload(withDocumentTypeIndex index: Int) {
-        let uploadVC = UploadRouter.assembleModule()
+        guard let uploadDoc = viewController as? UploadDocumentsViewProtocol else {
+            return
+        }
+        let uploadVC = UploadRouter.assembleModule(withDocumentsType: index)
+        UploadRouter.reloadStatus = { (status) in
+            uploadDoc.presenter.updateStatus(status)
+        }
         viewController?.navigationController?.pushViewController(uploadVC, animated: true)
     }
 }

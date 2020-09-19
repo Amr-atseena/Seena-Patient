@@ -47,8 +47,8 @@ class SignInInteractor: SignInInputInteractorProtocol {
                 if status.financialProof && status.idType &&
                     status.profilePicture && status.residenceProof {
                     self.localDataManager.save(user: user)
-                    self.localDataManager.save(token: response.serverResonse.token)
                 }
+                self.localDataManager.save(token: response.serverResonse.token)
                 self.presenter?.onLoginSuccess(withStatus: status)
             }
         }

@@ -11,7 +11,7 @@ protocol TokenLocalDataManagerProtocol: class {
     func save(token: String)
     func retriveToken() -> String
 }
-extension UserLocalDataManagerProtocol {
+extension TokenLocalDataManagerProtocol {
     func save(token: String) {
         UserDefaults.standard.set(token, forKey: "TOKEN")
     }

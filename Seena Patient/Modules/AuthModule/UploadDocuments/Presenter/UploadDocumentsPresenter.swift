@@ -43,7 +43,6 @@ class UploadDocumentsPresenter: UploadDocumentsPresenterProtocol {
         view?.setupDocumentTypeTableView()
     }
     func viewWillAppear() {
-        view?.reloadDocumentsType()
     }
     func config(documentTypeCell cell: DocumentTypeCellProtocol, atIndex index: Int) {
         cell.setDocumentType(documetsType[index])
@@ -87,6 +86,16 @@ class UploadDocumentsPresenter: UploadDocumentsPresenterProtocol {
             return
         }
         view?.enableFinishButton()
+    }
+    func updateStatus(_ status: Status) {
+        self.status = status
+        documetsType = [
+            DocomentTypeViewModel(name: "ID", isUploaded: status.idType),
+            DocomentTypeViewModel(name: "Financial", isUploaded: status.financialProof),
+            DocomentTypeViewModel(name: "Residence", isUploaded: status.residenceProof),
+            DocomentTypeViewModel(name: "Profile picture", isUploaded: status.profilePicture)
+        ]
+        view?.reloadDocumentsType()
     }
 }
 // MARK: - UploadDocumentsOutputInteractorProtocol Implementation

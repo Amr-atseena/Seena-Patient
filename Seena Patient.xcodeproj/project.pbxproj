@@ -100,6 +100,9 @@
 		88A772DA24FC434400228FF2 /* SeenaUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A772D924FC434400228FF2 /* SeenaUnitTests.swift */; };
 		88BD393E25160BB9004D149B /* UploadImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BD393C25160BB9004D149B /* UploadImageCell.swift */; };
 		88BD393F25160BB9004D149B /* UploadImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88BD393D25160BB9004D149B /* UploadImageCell.xib */; };
+		88BD394325161DB8004D149B /* UploadLocalDataManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BD394225161DB8004D149B /* UploadLocalDataManagerProtocol.swift */; };
+		88BD394C25161DE6004D149B /* UploadLocalDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BD394B25161DE6004D149B /* UploadLocalDataManager.swift */; };
+		88BD395025161FF3004D149B /* UploadRequestParamaters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BD394F25161FF3004D149B /* UploadRequestParamaters.swift */; };
 		88BE60AA2506BE6900EB2F03 /* DueCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BE60A82506BE6900EB2F03 /* DueCell.swift */; };
 		88BE60AB2506BE6900EB2F03 /* DueCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88BE60A92506BE6900EB2F03 /* DueCell.xib */; };
 		88BE60B42506CA2500EB2F03 /* PaymentChannelVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88BE60AD2506CA2500EB2F03 /* PaymentChannelVC.xib */; };
@@ -361,6 +364,9 @@
 		88A772DB24FC434400228FF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		88BD393C25160BB9004D149B /* UploadImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadImageCell.swift; sourceTree = "<group>"; };
 		88BD393D25160BB9004D149B /* UploadImageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UploadImageCell.xib; sourceTree = "<group>"; };
+		88BD394225161DB8004D149B /* UploadLocalDataManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadLocalDataManagerProtocol.swift; sourceTree = "<group>"; };
+		88BD394B25161DE6004D149B /* UploadLocalDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadLocalDataManager.swift; sourceTree = "<group>"; };
+		88BD394F25161FF3004D149B /* UploadRequestParamaters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadRequestParamaters.swift; sourceTree = "<group>"; };
 		88BE60A82506BE6900EB2F03 /* DueCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DueCell.swift; sourceTree = "<group>"; };
 		88BE60A92506BE6900EB2F03 /* DueCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DueCell.xib; sourceTree = "<group>"; };
 		88BE60AD2506CA2500EB2F03 /* PaymentChannelVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PaymentChannelVC.xib; sourceTree = "<group>"; };
@@ -703,6 +709,7 @@
 				887C631E2502557D00C69E2A /* ClinicsListParameters.swift */,
 				88F675AB250D5F6F00D19822 /* LoginRequestParameters.swift */,
 				88D291172514FEFE008738A5 /* SignUpRequestParamaters.swift */,
+				88BD394F25161FF3004D149B /* UploadRequestParamaters.swift */,
 			);
 			path = RequestParameters;
 			sourceTree = "<group>";
@@ -1020,6 +1027,15 @@
 				88BD393D25160BB9004D149B /* UploadImageCell.xib */,
 			);
 			path = UploadImageCell;
+			sourceTree = "<group>";
+		};
+		88BD394625161DBE004D149B /* Upload */ = {
+			isa = PBXGroup;
+			children = (
+				88BD394225161DB8004D149B /* UploadLocalDataManagerProtocol.swift */,
+				88BD394B25161DE6004D149B /* UploadLocalDataManager.swift */,
+			);
+			path = Upload;
 			sourceTree = "<group>";
 		};
 		88BE60A72506BE3E00EB2F03 /* DueCell */ = {
@@ -2062,6 +2078,7 @@
 				887C631925023A9600C69E2A /* ClinicsSearch */,
 				8885BB2D25019C60000D7BD5 /* City */,
 				8885BB1F2501942D000D7BD5 /* Spalsh */,
+				88BD394625161DBE004D149B /* Upload */,
 			);
 			path = LocalServices;
 			sourceTree = "<group>";
@@ -2720,6 +2737,7 @@
 				882989242512AAFE004C5AB6 /* UIDatePicker+Extension.swift in Sources */,
 				8885BB3125019CF4000D7BD5 /* SplashLocalDataManager.swift in Sources */,
 				8C8CB3FE24E6CF23009679E5 /* EnvironmentProtocol.swift in Sources */,
+				88BD394325161DB8004D149B /* UploadLocalDataManagerProtocol.swift in Sources */,
 				88D2912A2515153D008738A5 /* UploadDocumentsLocalization.swift in Sources */,
 				8CAB097924E7E6CB00D38CDD /* UIViewContorller+Extensions.swift in Sources */,
 				88F675AC250D5F6F00D19822 /* LoginRequestParameters.swift in Sources */,
@@ -2728,6 +2746,7 @@
 				882DE79A250FEE6C00B1F4F7 /* AuthenticationLocalDataManager.swift in Sources */,
 				882989252512AAFE004C5AB6 /* UIAlertController+Extension.swift in Sources */,
 				887C6326250277B200C69E2A /* ClinicsHomeResponse.swift in Sources */,
+				88BD394C25161DE6004D149B /* UploadLocalDataManager.swift in Sources */,
 				8CEC780E24E9DDDB000CED1F /* ServiceClinicCell.swift in Sources */,
 				8C8CB40324E6D3B3009679E5 /* SplashVC.swift in Sources */,
 				88120B7024EF1CC3004A2381 /* ClinicCell.swift in Sources */,
@@ -2832,6 +2851,7 @@
 				8CAB09A524E80C2700D38CDD /* Typography.swift in Sources */,
 				8829891525129D04004C5AB6 /* Account.swift in Sources */,
 				882DE7AD2510005900B1F4F7 /* SignUpVC.swift in Sources */,
+				88BD395025161FF3004D149B /* UploadRequestParamaters.swift in Sources */,
 				88EDA12E24FAE41200460B4D /* ProfileLocalization.swift in Sources */,
 				88E0C72A25056A02001A1B3B /* MKMagneticProgress.swift in Sources */,
 				8C8CB3FC24E6CF23009679E5 /* RemoteServiceType.swift in Sources */,

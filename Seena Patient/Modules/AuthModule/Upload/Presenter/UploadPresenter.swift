@@ -14,6 +14,7 @@ class UploadPresenter: UploadPresenterProtocol {
     var interactor: UploadInputInteractorProtocol?
     var router: UploadRouterProtocol?
     let localization = UploadLocalization()
+    private let documentType: Int
     var selectedImages = [Data]() {
         didSet {
             view?.reoladImages()
@@ -28,10 +29,14 @@ class UploadPresenter: UploadPresenterProtocol {
         return selectedImages.count
     }
     // MARK: - Init
-    init(view: UploadViewProtocol?, interactor: UploadInputInteractorProtocol, router: UploadRouterProtocol ) {
+    init(view: UploadViewProtocol?,
+         interactor: UploadInputInteractorProtocol,
+         router: UploadRouterProtocol,
+         documentType: Int) {
         self.view = view
         self.interactor = interactor
         self.router = router
+        self.documentType = documentType
     }
     // MARK: - Methods
     func viewDidLoad() {
@@ -39,13 +44,14 @@ class UploadPresenter: UploadPresenterProtocol {
         view?.setupImagesCollectionView()
     }
     func backButtonTapped() {
-        router?.go(to: .back)
+        router?.go(to: .back(nil))
     }
     func uploadButtonTapped() {
         view?.openImagePicker()
     }
     func finishButtonTapped() {
         view?.showLoadingIndictor()
+        interactor?.upload(images: selectedImages, forType: documentType)
     }
     func imageSelected(_ image: Data?) {
         guard let selectedImage = image  else {
@@ -63,4 +69,12 @@ class UploadPresenter: UploadPresenterProtocol {
 }
 // MARK: - UploadOutputInteractorProtocol Implementation
 extension UploadPresenter: UploadOutputInteractorProtocol {
+    func onUploadImagesSuccess(withStatus status: Status) {
+        view?.hideLoadingIndictor()
+        router?.go(to: .back(status))
+    }
+    func onUploadImagesFail(withError error: String) {
+        view?.hideLoadingIndictor()
+        router?.go(to: .alert(AlertEntity(title: "Error", message: error)))
+    }
 }
