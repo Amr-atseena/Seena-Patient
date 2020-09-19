@@ -98,6 +98,8 @@
 		8885BB2F25019CE0000D7BD5 /* SplashLocalDataServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8885BB2E25019CE0000D7BD5 /* SplashLocalDataServiceProtocol.swift */; };
 		8885BB3125019CF4000D7BD5 /* SplashLocalDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8885BB3025019CF4000D7BD5 /* SplashLocalDataManager.swift */; };
 		88A772DA24FC434400228FF2 /* SeenaUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A772D924FC434400228FF2 /* SeenaUnitTests.swift */; };
+		88BD393E25160BB9004D149B /* UploadImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BD393C25160BB9004D149B /* UploadImageCell.swift */; };
+		88BD393F25160BB9004D149B /* UploadImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88BD393D25160BB9004D149B /* UploadImageCell.xib */; };
 		88BE60AA2506BE6900EB2F03 /* DueCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BE60A82506BE6900EB2F03 /* DueCell.swift */; };
 		88BE60AB2506BE6900EB2F03 /* DueCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88BE60A92506BE6900EB2F03 /* DueCell.xib */; };
 		88BE60B42506CA2500EB2F03 /* PaymentChannelVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88BE60AD2506CA2500EB2F03 /* PaymentChannelVC.xib */; };
@@ -357,6 +359,8 @@
 		88A772D724FC434400228FF2 /* SeenaUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SeenaUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		88A772D924FC434400228FF2 /* SeenaUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeenaUnitTests.swift; sourceTree = "<group>"; };
 		88A772DB24FC434400228FF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		88BD393C25160BB9004D149B /* UploadImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadImageCell.swift; sourceTree = "<group>"; };
+		88BD393D25160BB9004D149B /* UploadImageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UploadImageCell.xib; sourceTree = "<group>"; };
 		88BE60A82506BE6900EB2F03 /* DueCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DueCell.swift; sourceTree = "<group>"; };
 		88BE60A92506BE6900EB2F03 /* DueCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DueCell.xib; sourceTree = "<group>"; };
 		88BE60AD2506CA2500EB2F03 /* PaymentChannelVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PaymentChannelVC.xib; sourceTree = "<group>"; };
@@ -963,6 +967,7 @@
 		88BD39272515FEEF004D149B /* View */ = {
 			isa = PBXGroup;
 			children = (
+				88BD393B25160B93004D149B /* UploadImageCell */,
 				88BD39262515FEE1004D149B /* UploadVC */,
 			);
 			path = View;
@@ -1006,6 +1011,15 @@
 				88D2915F251549DD008738A5 /* UploadInteractor.swift */,
 			);
 			path = Interactor;
+			sourceTree = "<group>";
+		};
+		88BD393B25160B93004D149B /* UploadImageCell */ = {
+			isa = PBXGroup;
+			children = (
+				88BD393C25160BB9004D149B /* UploadImageCell.swift */,
+				88BD393D25160BB9004D149B /* UploadImageCell.xib */,
+			);
+			path = UploadImageCell;
 			sourceTree = "<group>";
 		};
 		88BE60A72506BE3E00EB2F03 /* DueCell */ = {
@@ -2544,6 +2558,7 @@
 				882DE7A72510005900B1F4F7 /* SignUpVC.xib in Resources */,
 				88EDA11B24FADA0D00460B4D /* ServiceResultCell.xib in Resources */,
 				8CAB09A024E808A700D38CDD /* Tajawal-Medium.ttf in Resources */,
+				88BD393F25160BB9004D149B /* UploadImageCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2628,6 +2643,7 @@
 				8C8CB3EC24E6CA46009679E5 /* UITableView+Extensions.swift in Sources */,
 				88120B6024EF07BE004A2381 /* ClinicsHomePresenter.swift in Sources */,
 				8CEC780924E9CC2B000CED1F /* ServiceDetailsLocalizaition.swift in Sources */,
+				88BD393E25160BB9004D149B /* UploadImageCell.swift in Sources */,
 				88D291282515153D008738A5 /* UploadDocumentsProtocols.swift in Sources */,
 				88F67586250CBBA700D19822 /* PayOptionLocalization.swift in Sources */,
 				88ED041F24EFFD9100BBCEF6 /* NotificationsHomeProtocols.swift in Sources */,

@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 // MARK: - Upload Router
 enum UploadRoute {
+    case back
 }
 protocol UploadRouterProtocol {
     // Presenter -> Router
@@ -33,9 +34,28 @@ protocol UploadPresenterProtocol: class {
     var localization: UploadLocalization { get }
     // view -> Presenter
     func viewDidLoad()
+    func backButtonTapped()
+    func uploadButtonTapped()
+    func finishButtonTapped()
+    func imageSelected(_ image: Data?)
+    func config(UploadImageCell cell: UploadImageCellProtocol, atIndex index: Int)
+    func deleteImageButtonTapped(atIndex index: Int)
+    var numberOfImages: Int { get }
 }
 // MARK: - Upload View
 protocol UploadViewProtocol: class {
     var presenter: UploadPresenterProtocol! { get set }
     // Presenter -> View
+    func setupUI()
+    func setupImagesCollectionView()
+    func openImagePicker()
+    func showLoadingIndictor()
+    func hideLoadingIndictor()
+    func enableFinishButton()
+    func disableFinishButton()
+    func reoladImages()
+}
+// MARK: - UploadImageCell Protocol
+protocol  UploadImageCellProtocol {
+    func setImage(_ image: Data)
 }

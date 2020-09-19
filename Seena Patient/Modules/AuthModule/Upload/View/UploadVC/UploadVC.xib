@@ -12,6 +12,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UploadVC">
             <connections>
+                <outlet property="finishButton" destination="TeZ-rh-IkP" id="HyP-cn-AWv"/>
+                <outlet property="imagesCollectionView" destination="GGw-xR-mXS" id="leD-fs-7Qb"/>
+                <outlet property="loadingIndictor" destination="aGZ-b7-NCS" id="b94-VR-8Xx"/>
+                <outlet property="uploadButton" destination="deA-PZ-MYG" id="tMK-R8-483"/>
+                <outlet property="uploadKeywordLabel" destination="SEG-re-HKc" id="SaR-VJ-3hE"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -23,6 +28,9 @@
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sf5-eK-XN6">
                     <rect key="frame" x="20" y="54" width="22" height="22"/>
                     <state key="normal" image="back-1"/>
+                    <connections>
+                        <action selector="didTapBackButton:" destination="-1" eventType="touchUpInside" id="pJy-gv-OUN"/>
+                    </connections>
                 </button>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AIT-bm-Pej">
                     <rect key="frame" x="20" y="86" width="374" height="756"/>
@@ -115,6 +123,9 @@
                                                             <real key="value" value="8"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="didTapFinishButton:" destination="-1" eventType="touchUpInside" id="lfn-5Y-dcf"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                         </stackView>
@@ -138,6 +149,10 @@
                         <constraint firstAttribute="bottom" secondItem="1ah-Dq-PTA" secondAttribute="bottom" id="oN8-cl-bmz"/>
                     </constraints>
                 </view>
+                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="aGZ-b7-NCS">
+                    <rect key="frame" x="322" y="798.5" width="37" height="37"/>
+                    <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </activityIndicatorView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -148,6 +163,8 @@
                 <constraint firstItem="sf5-eK-XN6" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="b3Z-Im-Vsv"/>
                 <constraint firstItem="sf5-eK-XN6" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="dNR-aV-VxD"/>
                 <constraint firstItem="AIT-bm-Pej" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="hLc-g6-SM0"/>
+                <constraint firstItem="aGZ-b7-NCS" firstAttribute="trailing" secondItem="TeZ-rh-IkP" secondAttribute="trailing" constant="-15" id="vpZ-TB-oSN"/>
+                <constraint firstItem="aGZ-b7-NCS" firstAttribute="centerY" secondItem="TeZ-rh-IkP" secondAttribute="centerY" id="y3F-Fx-fXo"/>
             </constraints>
             <point key="canvasLocation" x="141" y="125"/>
         </view>

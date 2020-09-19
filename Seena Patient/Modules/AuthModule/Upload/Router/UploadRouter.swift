@@ -24,5 +24,12 @@ class UploadRouter: UploadRouterProtocol {
     }
     // MARK: - Routing
     func go(to router: UploadRoute) {
+        switch router {
+        case .back:
+            navigateUploadDocuments()
+        }
+    }
+    private func navigateUploadDocuments(withStatus status: Status? = nil) {
+        viewController?.navigationController?.popViewController(animated: true)
     }
 }
