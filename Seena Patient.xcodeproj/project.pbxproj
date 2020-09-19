@@ -127,6 +127,7 @@
 		88D29166251549DD008738A5 /* UploadInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D2915F251549DD008738A5 /* UploadInteractor.swift */; };
 		88D29167251549DD008738A5 /* UploadLocalization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D29160251549DD008738A5 /* UploadLocalization.swift */; };
 		88D29168251549DD008738A5 /* UploadVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D29161251549DD008738A5 /* UploadVC.swift */; };
+		88D2918C251550FE008738A5 /* UIImagePicker+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D2918B251550FE008738A5 /* UIImagePicker+Extension.swift */; };
 		88E0C71B2505676C001A1B3B /* PayHomeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88E0C7142505676C001A1B3B /* PayHomeVC.xib */; };
 		88E0C71C2505676C001A1B3B /* PayHomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E0C7152505676C001A1B3B /* PayHomePresenter.swift */; };
 		88E0C71D2505676C001A1B3B /* PayHomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E0C7162505676C001A1B3B /* PayHomeRouter.swift */; };
@@ -385,6 +386,7 @@
 		88D2915F251549DD008738A5 /* UploadInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadInteractor.swift; sourceTree = "<group>"; };
 		88D29160251549DD008738A5 /* UploadLocalization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadLocalization.swift; sourceTree = "<group>"; };
 		88D29161251549DD008738A5 /* UploadVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadVC.swift; sourceTree = "<group>"; };
+		88D2918B251550FE008738A5 /* UIImagePicker+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImagePicker+Extension.swift"; sourceTree = "<group>"; };
 		88E0C7142505676C001A1B3B /* PayHomeVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PayHomeVC.xib; sourceTree = "<group>"; };
 		88E0C7152505676C001A1B3B /* PayHomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayHomePresenter.swift; sourceTree = "<group>"; };
 		88E0C7162505676C001A1B3B /* PayHomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayHomeRouter.swift; sourceTree = "<group>"; };
@@ -949,6 +951,63 @@
 			path = SeenaUnitTests;
 			sourceTree = "<group>";
 		};
+		88BD39262515FEE1004D149B /* UploadVC */ = {
+			isa = PBXGroup;
+			children = (
+				88D29161251549DD008738A5 /* UploadVC.swift */,
+				88D2915B251549DD008738A5 /* UploadVC.xib */,
+			);
+			path = UploadVC;
+			sourceTree = "<group>";
+		};
+		88BD39272515FEEF004D149B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				88BD39262515FEE1004D149B /* UploadVC */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		88BD39282515FEF7004D149B /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				88D2915C251549DD008738A5 /* UploadPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		88BD39292515FF08004D149B /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				88D29160251549DD008738A5 /* UploadLocalization.swift */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
+		88BD392C2515FF13004D149B /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				88D2915E251549DD008738A5 /* UploadProtocols.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		88BD39312515FF1F004D149B /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				88D2915D251549DD008738A5 /* UploadRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		88BD39342515FF26004D149B /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				88D2915F251549DD008738A5 /* UploadInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
 		88BE60A72506BE3E00EB2F03 /* DueCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -1130,13 +1189,12 @@
 		88D2915A251549CF008738A5 /* Upload */ = {
 			isa = PBXGroup;
 			children = (
-				88D2915B251549DD008738A5 /* UploadVC.xib */,
-				88D2915C251549DD008738A5 /* UploadPresenter.swift */,
-				88D2915D251549DD008738A5 /* UploadRouter.swift */,
-				88D2915E251549DD008738A5 /* UploadProtocols.swift */,
-				88D2915F251549DD008738A5 /* UploadInteractor.swift */,
-				88D29160251549DD008738A5 /* UploadLocalization.swift */,
-				88D29161251549DD008738A5 /* UploadVC.swift */,
+				88BD39292515FF08004D149B /* Localization */,
+				88BD392C2515FF13004D149B /* Protocols */,
+				88BD39312515FF1F004D149B /* Router */,
+				88BD39342515FF26004D149B /* Interactor */,
+				88BD39282515FEF7004D149B /* Presenter */,
+				88BD39272515FEEF004D149B /* View */,
 			);
 			path = Upload;
 			sourceTree = "<group>";
@@ -1560,10 +1618,10 @@
 		88F67589250D2AB300D19822 /* AuthModule */ = {
 			isa = PBXGroup;
 			children = (
-				88D2915A251549CF008738A5 /* Upload */,
 				882DE79F250FFF7300B1F4F7 /* SignUp */,
 				88F67598250D2B9300D19822 /* SignIn */,
 				88D2911D251514BA008738A5 /* UploadDocuments */,
+				88D2915A251549CF008738A5 /* Upload */,
 			);
 			path = AuthModule;
 			sourceTree = "<group>";
@@ -1975,6 +2033,7 @@
 				8C8CB3E524E6CA45009679E5 /* UINavigationController+Extensions.swift */,
 				8C8CB3E624E6CA45009679E5 /* UITableView+Extensions.swift */,
 				8CAB097424E7DDED00D38CDD /* UIView+Extensions.swift */,
+				88D2918B251550FE008738A5 /* UIImagePicker+Extension.swift */,
 			);
 			path = Extenstions;
 			sourceTree = "<group>";
@@ -2674,6 +2733,7 @@
 				88EDA12F24FAE41200460B4D /* ProfileVC.swift in Sources */,
 				882DE7AA2510005900B1F4F7 /* SignUpProtocols.swift in Sources */,
 				88F675AE250D612800D19822 /* AuthenticationRemoteDataManager.swift in Sources */,
+				88D2918C251550FE008738A5 /* UIImagePicker+Extension.swift in Sources */,
 				8CEC780324E9BD68000CED1F /* ServiceDetailsRouter.swift in Sources */,
 				8885BB0F250150C5000D7BD5 /* Clinic.swift in Sources */,
 				8CEC780024E9BCED000CED1F /* ServiceDetailsInteractor.swift in Sources */,

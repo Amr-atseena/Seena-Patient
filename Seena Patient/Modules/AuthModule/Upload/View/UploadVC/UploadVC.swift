@@ -12,6 +12,9 @@ class UploadVC: UIViewController, UploadViewProtocol {
     // MARK: - Outlets
     // MARK: - Attributes
     var presenter: UploadPresenterProtocol!
+    private lazy var imagePicker: ImagePicker = {
+        return ImagePicker(presentationController: self, delegate: self)
+    }()
     // MARK: - Init
     init() {
         super.init(nibName: UploadVC.className, bundle: nil)
@@ -27,8 +30,16 @@ class UploadVC: UIViewController, UploadViewProtocol {
     }
     // MARK: - Methods
     // MARK: - Actions
+    @IBAction func didTapUploadButton(_ sender: UIButton) {
+        imagePicker.present(from: sender)
+    }
     // MARK: - DeInit
     deinit {
          debugPrint(UploadVC.className + "Release from Momery")
+    }
+}
+
+extension UploadVC: ImagePickerDelegate {
+    func didSelect(image: UIImage?) {
     }
 }
