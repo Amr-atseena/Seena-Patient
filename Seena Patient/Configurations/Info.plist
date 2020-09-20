@@ -71,5 +71,9 @@
 			</dict>
 		</dict>
 	</dict>
+    <key>NSPhotoLibraryUsageDescription</key>
+    <string>Seena need library access to upload images</string>
+    <key>NSCameraUsageDescription</key>
+    <string>Seena need camera access to upload images</string>
 </dict>
 </plist>

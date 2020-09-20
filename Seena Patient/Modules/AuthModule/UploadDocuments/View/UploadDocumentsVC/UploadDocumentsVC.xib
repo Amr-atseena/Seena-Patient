@@ -27,6 +27,9 @@
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Vf-x2-0t8">
                     <rect key="frame" x="20" y="54" width="22" height="339"/>
                     <state key="normal" image="back-1"/>
+                    <connections>
+                        <action selector="didTapBackButton:" destination="-1" eventType="touchUpInside" id="ypq-km-TbS"/>
+                    </connections>
                 </button>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gq6-hG-Jfv">
                     <rect key="frame" x="20" y="403" width="374" height="439"/>
@@ -86,6 +89,9 @@
                                                             <real key="value" value="8"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="didTapFinishButton:" destination="-1" eventType="touchUpInside" id="sWO-2q-AZn"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                         </stackView>

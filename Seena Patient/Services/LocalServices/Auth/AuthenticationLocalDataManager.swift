@@ -7,5 +7,5 @@
 //
 
 import Foundation
-class AuthenticationLocalDataManager: AuthenticationLocalDataManagerProtocol, TokenLocalDataManagerProtocol {
+class AuthenticationLocalDataManager: AuthenticationLocalDataManagerProtocol {
 }

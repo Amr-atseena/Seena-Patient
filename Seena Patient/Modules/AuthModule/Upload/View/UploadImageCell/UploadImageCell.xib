@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="UploadImageCell" customModule="Seena" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="143" height="104"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="143" height="104"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yLP-KE-RYZ" customClass="AnimatableView" customModule="IBAnimatable">
+                        <rect key="frame" x="5" y="20" width="118" height="79"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" verticalHuggingPriority="1000" image="Injectable-Dermal-Filler-1" translatesAutoresizingMaskIntoConstraints="NO" id="2xY-mk-C3X" customClass="AnimatableImageView" customModule="IBAnimatable">
+                                <rect key="frame" x="0.0" y="0.0" width="118" height="79"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="2xY-mk-C3X" firstAttribute="leading" secondItem="yLP-KE-RYZ" secondAttribute="leading" id="65E-6b-HWC"/>
+                            <constraint firstAttribute="bottom" secondItem="2xY-mk-C3X" secondAttribute="bottom" id="neN-Ln-SCO"/>
+                            <constraint firstItem="2xY-mk-C3X" firstAttribute="top" secondItem="yLP-KE-RYZ" secondAttribute="top" id="tgC-uX-PfE"/>
+                            <constraint firstAttribute="trailing" secondItem="2xY-mk-C3X" secondAttribute="trailing" id="uBS-qr-irU"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="8"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                <color key="value" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                <real key="value" value="2.5"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                <real key="value" value="0.29999999999999999"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="point" keyPath="shadowOffset">
+                                <point key="value" x="0.0" y="0.0"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                            <userDefinedRuntimeAttribute type="number" keyPath="skeletonCornerRadius">
+                                <real key="value" value="8"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                <color key="value" name="primaryBorder"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                <real key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RgG-Ms-jZz">
+                        <rect key="frame" x="103" y="10" width="30" height="30"/>
+                        <state key="normal" image="dismiss"/>
+                        <connections>
+                            <action selector="didTapDeleteButton:" destination="gTV-IL-0wX" eventType="touchUpInside" id="5PN-qA-qvM"/>
+                        </connections>
+                    </button>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="yLP-KE-RYZ" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="20" id="5v5-ul-7so"/>
+                <constraint firstItem="yLP-KE-RYZ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="KfO-bz-lOC"/>
+                <constraint firstItem="RgG-Ms-jZz" firstAttribute="trailing" secondItem="yLP-KE-RYZ" secondAttribute="trailing" constant="10" id="ocf-u0-ulj"/>
+                <constraint firstAttribute="bottom" secondItem="yLP-KE-RYZ" secondAttribute="bottom" constant="5" id="uey-jw-g4X"/>
+                <constraint firstAttribute="trailing" secondItem="yLP-KE-RYZ" secondAttribute="trailing" constant="20" id="vK2-CV-hSh"/>
+                <constraint firstItem="RgG-Ms-jZz" firstAttribute="top" secondItem="yLP-KE-RYZ" secondAttribute="top" constant="-10" id="zrA-RV-gIi"/>
+            </constraints>
+            <size key="customSize" width="143" height="104"/>
+            <connections>
+                <outlet property="uploadImage" destination="2xY-mk-C3X" id="i2x-G7-Ezr"/>
+            </connections>
+            <point key="canvasLocation" x="54.347826086956523" y="85.044642857142847"/>
+        </collectionViewCell>
+    </objects>
+    <designables>
+        <designable name="2xY-mk-C3X">
+            <size key="intrinsicContentSize" width="100" height="100"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="Injectable-Dermal-Filler-1" width="100" height="100"/>
+        <image name="dismiss" width="30" height="30"/>
+        <namedColor name="primaryBorder">
+            <color red="0.43900001049041748" green="0.43900001049041748" blue="0.43900001049041748" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

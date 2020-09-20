@@ -42,6 +42,7 @@ protocol UploadDocumentsPresenterProtocol: class {
     func backButtonTapped()
     func finishButtonTapped()
     func validateStatus()
+    func updateStatus(_ status: Status)
     var numberOfDocumentsType: Int { get }
 }
 // MARK: - UploadDocuments View

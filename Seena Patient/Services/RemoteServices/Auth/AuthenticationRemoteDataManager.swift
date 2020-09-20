@@ -8,6 +8,9 @@
 
 import Foundation
 class AuthenticationRemoteDataManager: APIService<AuthenticationEndPoint>, AuthenticationRemoteDataManagerProtocol {
+    func upload(params: UploadRequestParamaters, complationHandler: @escaping ((Result<Codable, Error>) -> Void)) {
+        request(target: .upload(params), objType: BaseResponse<LoginResponse>.self, completionHandler: complationHandler)
+    }
     func retriveLoginData(params: LoginRequestParameters, complationHandler: @escaping ((Result<Codable, Error>) -> Void)) {
         request(target: .login(params), objType: BaseResponse<LoginResponse>.self, completionHandler: complationHandler)
     }

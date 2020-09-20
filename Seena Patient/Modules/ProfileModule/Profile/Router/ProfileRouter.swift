@@ -14,7 +14,8 @@ class ProfileRouter: ProfileRouterProtocol {
     // MARK: - Assemble
     static func assembleModule() -> UIViewController {
         let router = ProfileRouter()
-        let interactor = ProfileInteractor()
+        let localDataManager = ProfileLocalDataManager()
+        let interactor = ProfileInteractor(localDataManager: localDataManager)
         let view = ProfileVC()
         let presenter = ProfilePresenter(view: view, interactor: interactor, router: router)
         router.viewController = view
@@ -24,5 +25,13 @@ class ProfileRouter: ProfileRouterProtocol {
     }
     // MARK: - Routing
     func go(to router: ProfileRoute) {
+        switch router {
+        case .signIn :
+            navigateToSignIn()
+        }
+    }
+    private func navigateToSignIn() {
+        let signIn = SignInRouter.assembleModule()
+        viewController?.navigationController?.setViewControllers([signIn], animated: false)
     }
 }
