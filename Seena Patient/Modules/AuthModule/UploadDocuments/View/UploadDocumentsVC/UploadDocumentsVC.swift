@@ -58,6 +58,12 @@ class UploadDocumentsVC: UIViewController, UploadDocumentsViewProtocol {
         finishButton.backgroundColor = DesignSystem.Colors.primaryBorder.color
     }
     // MARK: - Actions
+    @IBAction private func didTapBackButton(_ sender: UIButton) {
+        presenter.backButtonTapped()
+    }
+    @IBAction private func didTapFinishButton(_ sender: UIButton) {
+        presenter.finishButtonTapped()
+    }
     // MARK: - DeInit
     deinit {
          debugPrint(UploadDocumentsVC.className + "Release from Momery")

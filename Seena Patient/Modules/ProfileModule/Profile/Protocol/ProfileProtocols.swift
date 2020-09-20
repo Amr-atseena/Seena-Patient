@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 // MARK: - Profile Router
 enum ProfileRoute {
+    case signIn
 }
 protocol ProfileRouterProtocol {
     // Presenter -> Router
@@ -20,10 +21,13 @@ protocol ProfileRouterProtocol {
 // MARK: - Profile Interactor
 protocol ProfileInputInteractorProtocol: class {
     var presenter: ProfileOutputInteractorProtocol? { get set }
+    var localDataManager: ProfileLocalDataManagerProtocol { get set }
     // Presenter -> Interactor
+    func retriveUser()
 }
 protocol ProfileOutputInteractorProtocol: class {
     // Interactor -> Presenter
+    func onRetriveUser(_ user: User?)
 }
 // MARK: - Profile Preseneter
 protocol ProfilePresenterProtocol: class {
@@ -33,9 +37,12 @@ protocol ProfilePresenterProtocol: class {
     var localization: ProfileLocalization { get }
     // view -> Presenter
     func viewDidLoad()
+    func viewWillAppear()
 }
 // MARK: - Profile View
 protocol ProfileViewProtocol: class {
     var presenter: ProfilePresenterProtocol! { get set }
     // Presenter -> View
+    func setupUI()
+    func updateProfile(userName: String, image: String)
 }

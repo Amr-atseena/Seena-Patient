@@ -22,8 +22,20 @@ class ProfilePresenter: ProfilePresenterProtocol {
     }
     // MARK: - Methods
     func viewDidLoad() {
+        view?.setupUI()
+    }
+    func viewWillAppear() {
+        interactor?.retriveUser()
     }
 }
 // MARK: - ProfileOutputInteractorProtocol Implementation
 extension ProfilePresenter: ProfileOutputInteractorProtocol {
+    func onRetriveUser(_ user: User?) {
+        guard let currentUser = user else {
+            router?.go(to: .signIn)
+            return
+        }
+        let username = currentUser.firstName + " " + currentUser.lastName
+        view?.updateProfile(userName: username, image: currentUser.image)
+    }
 }

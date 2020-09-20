@@ -34,10 +34,10 @@ class UploadDocumentsPresenter: UploadDocumentsPresenterProtocol {
     // MARK: - Methods
     func viewDidLoad() {
         documetsType = [
+            DocomentTypeViewModel(name: "Profile picture", isUploaded: status.profilePicture),
             DocomentTypeViewModel(name: "ID", isUploaded: status.idType),
             DocomentTypeViewModel(name: "Financial", isUploaded: status.financialProof),
-            DocomentTypeViewModel(name: "Residence", isUploaded: status.residenceProof),
-            DocomentTypeViewModel(name: "Profile picture", isUploaded: status.profilePicture)
+            DocomentTypeViewModel(name: "Residence", isUploaded: status.residenceProof)
         ]
         view?.setupUI()
         view?.setupDocumentTypeTableView()
@@ -50,22 +50,22 @@ class UploadDocumentsPresenter: UploadDocumentsPresenterProtocol {
     func documentType(selectedAtIndex index: Int) {
         switch index {
         case 0:
-            guard status.idType else {
+            guard status.profilePicture else {
                 router?.go(to: .upload(doucmentTypeIndex: index))
                 return
             }
         case 1:
-            guard status.financialProof else {
+            guard status.idType else {
                 router?.go(to: .upload(doucmentTypeIndex: index))
                 return
             }
         case 2:
-            guard status.residenceProof else {
+            guard status.financialProof else {
                 router?.go(to: .upload(doucmentTypeIndex: index))
                 return
             }
         case 3:
-            guard status.profilePicture else {
+            guard status.residenceProof else {
                 router?.go(to: .upload(doucmentTypeIndex: index))
                 return
             }
@@ -90,10 +90,10 @@ class UploadDocumentsPresenter: UploadDocumentsPresenterProtocol {
     func updateStatus(_ status: Status) {
         self.status = status
         documetsType = [
+            DocomentTypeViewModel(name: "Profile picture", isUploaded: status.profilePicture),
             DocomentTypeViewModel(name: "ID", isUploaded: status.idType),
             DocomentTypeViewModel(name: "Financial", isUploaded: status.financialProof),
-            DocomentTypeViewModel(name: "Residence", isUploaded: status.residenceProof),
-            DocomentTypeViewModel(name: "Profile picture", isUploaded: status.profilePicture)
+            DocomentTypeViewModel(name: "Residence", isUploaded: status.residenceProof)
         ]
         view?.reloadDocumentsType()
     }

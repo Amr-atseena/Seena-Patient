@@ -18,8 +18,8 @@ extension UserLocalDataManagerProtocol {
         UserDefaults.standard.set(data, forKey: "USER")
     }
     func retriveUser() -> User? {
-        let data = UserDefaults.standard.data(forKey: "USER")!
-        let user = try? JSONDecoder().decode(User.self, from: data)
+        let data = UserDefaults.standard.data(forKey: "USER")
+        let user = try? JSONDecoder().decode(User.self, from: data ?? Data())
         return user
     }
 }

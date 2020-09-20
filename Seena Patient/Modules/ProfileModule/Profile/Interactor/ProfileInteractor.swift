@@ -11,5 +11,13 @@ import Foundation
 class ProfileInteractor: ProfileInputInteractorProtocol {
     // MARK: - Attributes
     weak var presenter: ProfileOutputInteractorProtocol?
+    var localDataManager: ProfileLocalDataManagerProtocol
+    // MARK: - Init
+    init(localDataManager: ProfileLocalDataManagerProtocol) {
+        self.localDataManager = localDataManager
+    }
     // MARK: - Methods
+    func retriveUser() {
+        presenter?.onRetriveUser(localDataManager.retriveUser())
+    }
 }

@@ -97,6 +97,11 @@
 		8885BB2C25019925000D7BD5 /* SplashRemoteDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8885BB2B25019925000D7BD5 /* SplashRemoteDataManager.swift */; };
 		8885BB2F25019CE0000D7BD5 /* SplashLocalDataServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8885BB2E25019CE0000D7BD5 /* SplashLocalDataServiceProtocol.swift */; };
 		8885BB3125019CF4000D7BD5 /* SplashLocalDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8885BB3025019CF4000D7BD5 /* SplashLocalDataManager.swift */; };
+		88A06F562517C4F900D8F7A3 /* ProfileLocalDataManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A06F552517C4F900D8F7A3 /* ProfileLocalDataManagerProtocol.swift */; };
+		88A06F5C2517C51700D8F7A3 /* ProfileLocalDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A06F5B2517C51700D8F7A3 /* ProfileLocalDataManager.swift */; };
+		88A06F622517D52900D8F7A3 /* FinishSignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A06F602517D52900D8F7A3 /* FinishSignUpVC.swift */; };
+		88A06F632517D52900D8F7A3 /* FinishSignUpVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88A06F612517D52900D8F7A3 /* FinishSignUpVC.xib */; };
+		88A06F672517D8E200D8F7A3 /* FinishSignUpLocalization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A06F662517D8E200D8F7A3 /* FinishSignUpLocalization.swift */; };
 		88A772DA24FC434400228FF2 /* SeenaUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A772D924FC434400228FF2 /* SeenaUnitTests.swift */; };
 		88BD393E25160BB9004D149B /* UploadImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BD393C25160BB9004D149B /* UploadImageCell.swift */; };
 		88BD393F25160BB9004D149B /* UploadImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88BD393D25160BB9004D149B /* UploadImageCell.xib */; };
@@ -359,6 +364,11 @@
 		8885BB2B25019925000D7BD5 /* SplashRemoteDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashRemoteDataManager.swift; sourceTree = "<group>"; };
 		8885BB2E25019CE0000D7BD5 /* SplashLocalDataServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashLocalDataServiceProtocol.swift; sourceTree = "<group>"; };
 		8885BB3025019CF4000D7BD5 /* SplashLocalDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashLocalDataManager.swift; sourceTree = "<group>"; };
+		88A06F552517C4F900D8F7A3 /* ProfileLocalDataManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileLocalDataManagerProtocol.swift; sourceTree = "<group>"; };
+		88A06F5B2517C51700D8F7A3 /* ProfileLocalDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileLocalDataManager.swift; sourceTree = "<group>"; };
+		88A06F602517D52900D8F7A3 /* FinishSignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishSignUpVC.swift; sourceTree = "<group>"; };
+		88A06F612517D52900D8F7A3 /* FinishSignUpVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FinishSignUpVC.xib; sourceTree = "<group>"; };
+		88A06F662517D8E200D8F7A3 /* FinishSignUpLocalization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishSignUpLocalization.swift; sourceTree = "<group>"; };
 		88A772D724FC434400228FF2 /* SeenaUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SeenaUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		88A772D924FC434400228FF2 /* SeenaUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeenaUnitTests.swift; sourceTree = "<group>"; };
 		88A772DB24FC434400228FF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -951,6 +961,106 @@
 				8885BB20250194D4000D7BD5 /* CityLocalDataManagerProtocol.swift */,
 			);
 			path = City;
+			sourceTree = "<group>";
+		};
+		88A06F542517C4DD00D8F7A3 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				88A06F552517C4F900D8F7A3 /* ProfileLocalDataManagerProtocol.swift */,
+				88A06F5B2517C51700D8F7A3 /* ProfileLocalDataManager.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		88A06F5F2517D50000D8F7A3 /* FinishSignUp */ = {
+			isa = PBXGroup;
+			children = (
+				88A06F6A2517D9DC00D8F7A3 /* Localization */,
+				88A06F6F2517DA2E00D8F7A3 /* View */,
+			);
+			path = FinishSignUp;
+			sourceTree = "<group>";
+		};
+		88A06F6A2517D9DC00D8F7A3 /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				88A06F602517D52900D8F7A3 /* FinishSignUpVC.swift */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
+		88A06F6E2517DA2300D8F7A3 /* FinishVC */ = {
+			isa = PBXGroup;
+			children = (
+				88A06F612517D52900D8F7A3 /* FinishSignUpVC.xib */,
+				88A06F662517D8E200D8F7A3 /* FinishSignUpLocalization.swift */,
+			);
+			path = FinishVC;
+			sourceTree = "<group>";
+		};
+		88A06F6F2517DA2E00D8F7A3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				88A06F6E2517DA2300D8F7A3 /* FinishVC */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		88A06F722517DA8F00D8F7A3 /* ProfileVC */ = {
+			isa = PBXGroup;
+			children = (
+				88EDA12824FAE41200460B4D /* ProfileVC.swift */,
+				88EDA12224FAE41200460B4D /* ProfileVC.xib */,
+			);
+			path = ProfileVC;
+			sourceTree = "<group>";
+		};
+		88A06F732517DA9600D8F7A3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				88A06F722517DA8F00D8F7A3 /* ProfileVC */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		88A06F762517DA9C00D8F7A3 /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				88EDA12724FAE41200460B4D /* ProfileLocalization.swift */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
+		88A06F7B2517DAA500D8F7A3 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				88EDA12624FAE41200460B4D /* ProfileInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		88A06F802517DAAC00D8F7A3 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				88EDA12524FAE41200460B4D /* ProfileProtocols.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		88A06F832517DAB400D8F7A3 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				88EDA12424FAE41200460B4D /* ProfileRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		88A06F882517DABA00D8F7A3 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				88EDA12324FAE41200460B4D /* ProfilePresenter.swift */,
+			);
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 		88A772D824FC434400228FF2 /* SeenaUnitTests */ = {
@@ -1567,13 +1677,12 @@
 		88EDA13024FAE41700460B4D /* Profile */ = {
 			isa = PBXGroup;
 			children = (
-				88EDA12224FAE41200460B4D /* ProfileVC.xib */,
-				88EDA12324FAE41200460B4D /* ProfilePresenter.swift */,
-				88EDA12424FAE41200460B4D /* ProfileRouter.swift */,
-				88EDA12524FAE41200460B4D /* ProfileProtocols.swift */,
-				88EDA12624FAE41200460B4D /* ProfileInteractor.swift */,
-				88EDA12724FAE41200460B4D /* ProfileLocalization.swift */,
-				88EDA12824FAE41200460B4D /* ProfileVC.swift */,
+				88A06F762517DA9C00D8F7A3 /* Localization */,
+				88A06F802517DAAC00D8F7A3 /* Protocol */,
+				88A06F832517DAB400D8F7A3 /* Router */,
+				88A06F7B2517DAA500D8F7A3 /* Interactor */,
+				88A06F882517DABA00D8F7A3 /* Presenter */,
+				88A06F732517DA9600D8F7A3 /* View */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -1652,6 +1761,7 @@
 				88F67598250D2B9300D19822 /* SignIn */,
 				88D2911D251514BA008738A5 /* UploadDocuments */,
 				88D2915A251549CF008738A5 /* Upload */,
+				88A06F5F2517D50000D8F7A3 /* FinishSignUp */,
 			);
 			path = AuthModule;
 			sourceTree = "<group>";
@@ -2071,6 +2181,7 @@
 		8C8CB3F024E6CF23009679E5 /* LocalServices */ = {
 			isa = PBXGroup;
 			children = (
+				88A06F542517C4DD00D8F7A3 /* Profile */,
 				8829891D2512A5FB004C5AB6 /* SignUp */,
 				882989182512A0A4004C5AB6 /* Documents */,
 				882DE796250FEE2E00B1F4F7 /* Auth */,
@@ -2548,6 +2659,7 @@
 				88E0C71B2505676C001A1B3B /* PayHomeVC.xib in Resources */,
 				88EDA12924FAE41200460B4D /* ProfileVC.xib in Resources */,
 				883D941824F44392004A3F86 /* SpectialitySkeltonCell.xib in Resources */,
+				88A06F632517D52900D8F7A3 /* FinishSignUpVC.xib in Resources */,
 				88BE60AB2506BE6900EB2F03 /* DueCell.xib in Resources */,
 				8827E95024F5A264009C64FB /* EmptyStateView.xib in Resources */,
 				8C81545024EB21CA00CA30E7 /* ServicesSearchVC.xib in Resources */,
@@ -2757,6 +2869,7 @@
 				8CAB09AB24E8274200D38CDD /* SpectialityCell.swift in Sources */,
 				882989212512A645004C5AB6 /* SignUpLocalDataManager.swift in Sources */,
 				88104B9324F3023B00DB5ED9 /* ServiceViewModel.swift in Sources */,
+				88A06F672517D8E200D8F7A3 /* FinishSignUpLocalization.swift in Sources */,
 				8885BB1925017485000D7BD5 /* ClinicsEndPoint.swift in Sources */,
 				882DE7A92510005900B1F4F7 /* SignUpRouter.swift in Sources */,
 				88BE60B72506CA2500EB2F03 /* PaymentChannelProtocols.swift in Sources */,
@@ -2824,10 +2937,12 @@
 				887C631F2502557D00C69E2A /* ClinicsListParameters.swift in Sources */,
 				8803D1E425081EAA004A6A46 /* ATMPayInteractor.swift in Sources */,
 				88F675AA250D5E7E00D19822 /* AuthenticationEndPoint.swift in Sources */,
+				88A06F5C2517C51700D8F7A3 /* ProfileLocalDataManager.swift in Sources */,
 				8885BB2325019548000D7BD5 /* City.swift in Sources */,
 				88104B8A24F2E4DB00DB5ED9 /* ServicesEndPoint.swift in Sources */,
 				88120B7D24EF2C66004A2381 /* ClinicDetailsProtocols.swift in Sources */,
 				8885BB172501743B000D7BD5 /* ClinicsRemoteDataManangerProtocol.swift in Sources */,
+				88A06F622517D52900D8F7A3 /* FinishSignUpVC.swift in Sources */,
 				88F675A5250D56CA00D19822 /* User.swift in Sources */,
 				8827E95324F5A8F2009C64FB /* ServicesListParameters.swift in Sources */,
 				8CAB099224E806C100D38CDD /* Font.swift in Sources */,
@@ -2849,6 +2964,7 @@
 				88ED042024EFFD9100BBCEF6 /* NotificationsHomeInteractor.swift in Sources */,
 				8C8CB3EB24E6CA46009679E5 /* UINavigationController+Extensions.swift in Sources */,
 				8CAB09A524E80C2700D38CDD /* Typography.swift in Sources */,
+				88A06F562517C4F900D8F7A3 /* ProfileLocalDataManagerProtocol.swift in Sources */,
 				8829891525129D04004C5AB6 /* Account.swift in Sources */,
 				882DE7AD2510005900B1F4F7 /* SignUpVC.swift in Sources */,
 				88BD395025161FF3004D149B /* UploadRequestParamaters.swift in Sources */,

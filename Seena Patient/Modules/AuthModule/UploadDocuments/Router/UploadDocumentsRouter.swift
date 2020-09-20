@@ -37,6 +37,7 @@ class UploadDocumentsRouter: UploadDocumentsRouterProtocol {
         viewController?.navigationController?.popViewController(animated: true)
     }
     private func navigateToFinishSignUp() {
+        viewController?.navigationController?.setViewControllers([FinishSignUpVC()], animated: true)
     }
     private func navigateToUpload(withDocumentTypeIndex index: Int) {
         guard let uploadDoc = viewController as? UploadDocumentsViewProtocol else {
