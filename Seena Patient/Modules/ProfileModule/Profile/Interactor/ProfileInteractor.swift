@@ -20,4 +20,7 @@ class ProfileInteractor: ProfileInputInteractorProtocol {
     func retriveUser() {
         presenter?.onRetriveUser(localDataManager.retriveUser())
     }
+    func removeUser() {
+        localDataManager.removeUserData()
+    }
 }

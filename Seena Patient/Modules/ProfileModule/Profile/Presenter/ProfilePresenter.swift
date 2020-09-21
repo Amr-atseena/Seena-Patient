@@ -36,10 +36,14 @@ class ProfilePresenter: ProfilePresenterProtocol {
         case 2:
             router?.go(to: .share)
         case 3:
-            router?.go(to: .share)
+            router?.go(to: .alert(AlertEntity(title: "", message: "Do you want To log out")))
         default:
             print(index)
         }
+    }
+    func logOut() {
+        interactor?.removeUser()
+        router?.go(to: .signIn)
     }
 }
 // MARK: - ProfileOutputInteractorProtocol Implementation

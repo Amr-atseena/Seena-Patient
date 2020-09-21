@@ -34,6 +34,8 @@ class ProfileRouter: ProfileRouterProtocol {
             navigateToSettings()
         case .share:
             share()
+        case .alert(let alertEntity):
+            showAlert(alertEntity: alertEntity)
         }
     }
     private func navigateToSignIn() {
@@ -74,5 +76,13 @@ class ProfileRouter: ProfileRouterProtocol {
             UIActivity.ActivityType.postToFacebook
         ]
         viewController?.present(activityViewController, animated: true, completion: nil)
+    }
+    private func showAlert(alertEntity: AlertEntity) {
+        guard let profile = viewController as? ProfileViewProtocol else { return}
+        let cancelAction = UIAlertAction(title: "Cancel", style: .default, handler: nil)
+        let okAction = UIAlertAction(title: "Ok", style: .default) {  (_) in
+            profile.presenter.logOut()
+        }
+        viewController?.showAlertController(title: alertEntity.title, message: alertEntity.message, actions: [okAction, cancelAction])
     }
 }
