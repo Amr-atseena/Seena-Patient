@@ -24,5 +24,16 @@ class SettingsRouter: SettingsRouterProtocol {
     }
     // MARK: - Routing
     func go(to router: SettingsRoute) {
+        switch router {
+        case .back:
+            navigateBack()
+        case .alert(let alertEntity):
+            showAlert(alertEntity: alertEntity)
+        }
+    }
+    private func showAlert(alertEntity: AlertEntity) {
+    }
+    private func navigateBack() {
+        viewController?.navigationController?.popViewController(animated: true)
     }
 }

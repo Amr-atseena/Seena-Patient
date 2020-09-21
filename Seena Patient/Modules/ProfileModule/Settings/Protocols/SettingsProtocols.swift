@@ -10,6 +10,8 @@ import Foundation
 import UIKit
 // MARK: - Settings Router
 enum SettingsRoute {
+    case back
+    case alert(AlertEntity)
 }
 protocol SettingsRouterProtocol {
     // Presenter -> Router
@@ -33,9 +35,11 @@ protocol SettingsPresenterProtocol: class {
     var localization: SettingsLocalization { get }
     // view -> Presenter
     func viewDidLoad()
+    func backButtonTapped()
 }
 // MARK: - Settings View
 protocol SettingsViewProtocol: class {
     var presenter: SettingsPresenterProtocol! { get set }
     // Presenter -> View
+    func setupUI()
 }

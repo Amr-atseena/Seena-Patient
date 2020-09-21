@@ -45,8 +45,8 @@ class ProfileRouter: ProfileRouterProtocol {
         viewController?.navigationController?.pushViewController(transaction, animated: true)
     }
     private func navigateToSettings() {
-//        let transaction = TransactionsRouter.assembleModule()
-//        viewController?.navigationController?.pushViewController(transaction, animated: true)
+        let settings = SettingsRouter.assembleModule()
+        viewController?.navigationController?.pushViewController(settings, animated: true)
     }
     private func share() {
         // Setting description

@@ -10,4 +10,20 @@ import Foundation
 
 struct SettingsLocalization {
     // MARK: - Attributes
+    var settings: String {
+        return "Settings".localized
+    }
+    var pushNotifications: String {
+        return "Push Notifications".localized
+    }
+    var sendPaymentReminders: String {
+        return "Send Payment Reminders".localized
+    }
+    var language: String {
+        return "Language".localized
+    }
+    var rateApp: String {
+        return "Rate App".localized
+    }
+
 }

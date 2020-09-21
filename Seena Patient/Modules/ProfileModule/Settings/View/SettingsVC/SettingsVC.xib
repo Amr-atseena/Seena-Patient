@@ -12,6 +12,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SettingsVC">
             <connections>
+                <outlet property="languageKeywordLabel" destination="Gue-0O-W7K" id="5WI-xX-ZnW"/>
+                <outlet property="paymentReminderKeywordLabel" destination="eVp-ho-iqP" id="QGh-Xd-XoC"/>
+                <outlet property="pushNotificationsKeywordLabel" destination="bcS-BS-gSm" id="qS7-ww-0OT"/>
+                <outlet property="rateAppKeywordLabel" destination="NDc-0X-EKd" id="Ttp-Di-bBY"/>
+                <outlet property="settingsKeywordLabel" destination="vNM-fG-mxs" id="ayu-0b-QIA"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -26,6 +31,9 @@
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j7b-Qz-lRM">
                             <rect key="frame" x="20" y="0.0" width="22" height="22"/>
                             <state key="normal" image="back-1"/>
+                            <connections>
+                                <action selector="didTapBackButton:" destination="-1" eventType="touchUpInside" id="V2g-CK-HYn"/>
+                            </connections>
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vNM-fG-mxs">
                             <rect key="frame" x="20" y="30" width="374" height="20.5"/>

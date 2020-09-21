@@ -22,6 +22,10 @@ class SettingsPresenter: SettingsPresenterProtocol {
     }
     // MARK: - Methods
     func viewDidLoad() {
+        view?.setupUI()
+    }
+    func backButtonTapped() {
+        router?.go(to: .back)
     }
 }
 // MARK: - SettingsOutputInteractorProtocol Implementation
