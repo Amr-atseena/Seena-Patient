@@ -26,6 +26,9 @@ class TransactionsPresenter: TransactionsPresenterProtocol {
         view?.setupNavBar()
         view?.setupTransactionsTableView()
     }
+    func backButtonTapped() {
+        router?.go(to: .back)
+    }
 }
 // MARK: - TransactionsOutputInteractorProtocol Implementation
 extension TransactionsPresenter: TransactionsOutputInteractorProtocol {

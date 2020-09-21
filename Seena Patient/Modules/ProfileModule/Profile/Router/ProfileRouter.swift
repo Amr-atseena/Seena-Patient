@@ -26,12 +26,53 @@ class ProfileRouter: ProfileRouterProtocol {
     // MARK: - Routing
     func go(to router: ProfileRoute) {
         switch router {
-        case .signIn :
+        case .signIn:
             navigateToSignIn()
+        case .transactions:
+            navigateToTransactions()
+        case .settings:
+            navigateToSettings()
+        case .share:
+            share()
         }
     }
     private func navigateToSignIn() {
         let signIn = SignInRouter.assembleModule()
         viewController?.navigationController?.setViewControllers([signIn], animated: false)
+    }
+    private func navigateToTransactions() {
+        let transaction = TransactionsRouter.assembleModule()
+        viewController?.navigationController?.pushViewController(transaction, animated: true)
+    }
+    private func navigateToSettings() {
+//        let transaction = TransactionsRouter.assembleModule()
+//        viewController?.navigationController?.pushViewController(transaction, animated: true)
+    }
+    private func share() {
+        // Setting description
+        let firstActivityItem = "لتقسيط عمليات التجميل والأسنان والسمنة"
+        // Setting url
+        let secondActivityItem = URL(string: "https://ar.seenapay.com/")!
+        // If you want to use an image
+        let image  = #imageLiteral(resourceName: "Seena-Logo")
+        let activityViewController  = UIActivityViewController(
+            activityItems: [firstActivityItem, secondActivityItem, image], applicationActivities: nil)
+        // Pre-configuring activity items
+//        activityViewController.activityItemsConfiguration = [
+//        UIActivity.ActivityType.message
+//        ] as? UIActivityItemsConfigurationReading
+        // Anything you want to exclude
+        activityViewController.excludedActivityTypes = [
+            UIActivity.ActivityType.postToWeibo,
+            UIActivity.ActivityType.print,
+            UIActivity.ActivityType.assignToContact,
+            UIActivity.ActivityType.saveToCameraRoll,
+            UIActivity.ActivityType.addToReadingList,
+            UIActivity.ActivityType.postToFlickr,
+            UIActivity.ActivityType.postToVimeo,
+            UIActivity.ActivityType.postToTencentWeibo,
+            UIActivity.ActivityType.postToFacebook
+        ]
+        viewController?.present(activityViewController, animated: true, completion: nil)
     }
 }

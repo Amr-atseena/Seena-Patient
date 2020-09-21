@@ -62,6 +62,9 @@ class ProfileVC: UIViewController, ProfileViewProtocol {
         userImage.kf.setImage(with: URL(string: image))
     }
     // MARK: - Actions
+    @IBAction private func didTapOptionButton(_ sender: UIButton) {
+        presenter.optionButtonTapped(atIndex: sender.tag)
+    }
     // MARK: - DeInit
     deinit {
          debugPrint(ProfileVC.className + "Release from Momery")

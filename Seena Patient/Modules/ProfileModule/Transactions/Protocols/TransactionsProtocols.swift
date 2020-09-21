@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 // MARK: - Transactions Router
 enum TransactionsRoute {
+    case back
 }
 protocol TransactionsRouterProtocol {
     // Presenter -> Router
@@ -33,6 +34,7 @@ protocol TransactionsPresenterProtocol: class {
     var localization: TransactionsLocalization { get }
     // view -> Presenter
     func viewDidLoad()
+    func backButtonTapped()
 }
 // MARK: - Transactions View
 protocol TransactionsViewProtocol: class {

@@ -11,6 +11,9 @@ import UIKit
 // MARK: - Profile Router
 enum ProfileRoute {
     case signIn
+    case transactions
+    case settings
+    case share
 }
 protocol ProfileRouterProtocol {
     // Presenter -> Router
@@ -38,6 +41,7 @@ protocol ProfilePresenterProtocol: class {
     // view -> Presenter
     func viewDidLoad()
     func viewWillAppear()
+    func optionButtonTapped(atIndex index: Int)
 }
 // MARK: - Profile View
 protocol ProfileViewProtocol: class {

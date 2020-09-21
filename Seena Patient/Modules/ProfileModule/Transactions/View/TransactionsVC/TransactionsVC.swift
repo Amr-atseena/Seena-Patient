@@ -33,7 +33,7 @@ class TransactionsVC: UIViewController, TransactionsViewProtocol {
     }
     func setupUI() {
         // transactionsKeyword Label
-        transactionsKeywordLabel.text = presenter.localization.notifications
+        transactionsKeywordLabel.text = presenter.localization.transactions
         transactionsKeywordLabel.font = DesignSystem.Typography.heading.font
     }
     func setupTransactionsTableView() {
@@ -45,6 +45,9 @@ class TransactionsVC: UIViewController, TransactionsViewProtocol {
         transactionsTableView.reloadData()
     }
     // MARK: - Actions
+    @IBAction private func didTapBackButton(_ sender: UIButton) {
+        presenter.backButtonTapped()
+    }
     // MARK: - DeInit
     deinit {
          debugPrint(TransactionsVC.className + " Release from Momery")

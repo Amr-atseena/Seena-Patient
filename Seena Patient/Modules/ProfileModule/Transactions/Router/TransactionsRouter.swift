@@ -24,5 +24,12 @@ class TransactionsRouter: TransactionsRouterProtocol {
     }
     // MARK: - Routing
     func go(to router: TransactionsRoute) {
+        switch router {
+        case .back:
+            navigateToBack()
+        }
+    }
+    private func navigateToBack() {
+        viewController?.navigationController?.popViewController(animated: true)
     }
 }

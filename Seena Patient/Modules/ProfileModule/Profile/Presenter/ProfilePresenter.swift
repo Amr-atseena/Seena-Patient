@@ -27,6 +27,20 @@ class ProfilePresenter: ProfilePresenterProtocol {
     func viewWillAppear() {
         interactor?.retriveUser()
     }
+    func optionButtonTapped(atIndex index: Int) {
+        switch index {
+        case 0:
+            router?.go(to: .transactions)
+        case 1:
+            router?.go(to: .settings)
+        case 2:
+            router?.go(to: .share)
+        case 3:
+            router?.go(to: .share)
+        default:
+            print(index)
+        }
+    }
 }
 // MARK: - ProfileOutputInteractorProtocol Implementation
 extension ProfilePresenter: ProfileOutputInteractorProtocol {
