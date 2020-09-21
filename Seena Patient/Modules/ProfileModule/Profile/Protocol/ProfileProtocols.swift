@@ -11,6 +11,10 @@ import UIKit
 // MARK: - Profile Router
 enum ProfileRoute {
     case signIn
+    case transactions
+    case settings
+    case share
+    case alert(AlertEntity)
 }
 protocol ProfileRouterProtocol {
     // Presenter -> Router
@@ -24,6 +28,7 @@ protocol ProfileInputInteractorProtocol: class {
     var localDataManager: ProfileLocalDataManagerProtocol { get set }
     // Presenter -> Interactor
     func retriveUser()
+    func removeUser()
 }
 protocol ProfileOutputInteractorProtocol: class {
     // Interactor -> Presenter
@@ -38,6 +43,8 @@ protocol ProfilePresenterProtocol: class {
     // view -> Presenter
     func viewDidLoad()
     func viewWillAppear()
+    func optionButtonTapped(atIndex index: Int)
+    func logOut()
 }
 // MARK: - Profile View
 protocol ProfileViewProtocol: class {

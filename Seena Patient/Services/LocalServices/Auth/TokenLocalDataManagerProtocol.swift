@@ -10,6 +10,7 @@ import Foundation
 protocol TokenLocalDataManagerProtocol: class {
     func save(token: String)
     func retriveToken() -> String
+    func removeUserData()
 }
 extension TokenLocalDataManagerProtocol {
     func save(token: String) {
@@ -17,5 +18,11 @@ extension TokenLocalDataManagerProtocol {
     }
     func retriveToken() -> String {
         return UserDefaults.standard.string(forKey: "TOKEN") ?? ""
+    }
+    func removeUserData() {
+        UserDefaults.resetStandardUserDefaults()
+        let domain = Bundle.main.bundleIdentifier!
+        UserDefaults.standard.removePersistentDomain(forName: domain)
+        UserDefaults.standard.synchronize()
     }
 }
