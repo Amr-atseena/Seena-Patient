@@ -103,6 +103,13 @@
 		88A06F632517D52900D8F7A3 /* FinishSignUpVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88A06F612517D52900D8F7A3 /* FinishSignUpVC.xib */; };
 		88A06F672517D8E200D8F7A3 /* FinishSignUpLocalization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A06F662517D8E200D8F7A3 /* FinishSignUpLocalization.swift */; };
 		88A772DA24FC434400228FF2 /* SeenaUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A772D924FC434400228FF2 /* SeenaUnitTests.swift */; };
+		88B460A6251928E5002E798C /* TransactionsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88B4609F251928E5002E798C /* TransactionsVC.xib */; };
+		88B460A7251928E5002E798C /* TransactionsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B460A0251928E5002E798C /* TransactionsPresenter.swift */; };
+		88B460A8251928E5002E798C /* TransactionsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B460A1251928E5002E798C /* TransactionsRouter.swift */; };
+		88B460A9251928E5002E798C /* TransactionsProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B460A2251928E5002E798C /* TransactionsProtocols.swift */; };
+		88B460AA251928E5002E798C /* TransactionsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B460A3251928E5002E798C /* TransactionsInteractor.swift */; };
+		88B460AB251928E5002E798C /* TransactionsLocalization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B460A4251928E5002E798C /* TransactionsLocalization.swift */; };
+		88B460AC251928E5002E798C /* TransactionsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B460A5251928E5002E798C /* TransactionsVC.swift */; };
 		88BD393E25160BB9004D149B /* UploadImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BD393C25160BB9004D149B /* UploadImageCell.swift */; };
 		88BD393F25160BB9004D149B /* UploadImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88BD393D25160BB9004D149B /* UploadImageCell.xib */; };
 		88BD394325161DB8004D149B /* UploadLocalDataManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BD394225161DB8004D149B /* UploadLocalDataManagerProtocol.swift */; };
@@ -372,6 +379,13 @@
 		88A772D724FC434400228FF2 /* SeenaUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SeenaUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		88A772D924FC434400228FF2 /* SeenaUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeenaUnitTests.swift; sourceTree = "<group>"; };
 		88A772DB24FC434400228FF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		88B4609F251928E5002E798C /* TransactionsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransactionsVC.xib; sourceTree = "<group>"; };
+		88B460A0251928E5002E798C /* TransactionsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsPresenter.swift; sourceTree = "<group>"; };
+		88B460A1251928E5002E798C /* TransactionsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsRouter.swift; sourceTree = "<group>"; };
+		88B460A2251928E5002E798C /* TransactionsProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsProtocols.swift; sourceTree = "<group>"; };
+		88B460A3251928E5002E798C /* TransactionsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsInteractor.swift; sourceTree = "<group>"; };
+		88B460A4251928E5002E798C /* TransactionsLocalization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsLocalization.swift; sourceTree = "<group>"; };
+		88B460A5251928E5002E798C /* TransactionsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsVC.swift; sourceTree = "<group>"; };
 		88BD393C25160BB9004D149B /* UploadImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadImageCell.swift; sourceTree = "<group>"; };
 		88BD393D25160BB9004D149B /* UploadImageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UploadImageCell.xib; sourceTree = "<group>"; };
 		88BD394225161DB8004D149B /* UploadLocalDataManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadLocalDataManagerProtocol.swift; sourceTree = "<group>"; };
@@ -1072,6 +1086,76 @@
 			path = SeenaUnitTests;
 			sourceTree = "<group>";
 		};
+		88B4609E25192852002E798C /* Transactions */ = {
+			isa = PBXGroup;
+			children = (
+				88B460B325192919002E798C /* Localization */,
+				88B460B725192AD9002E798C /* Protocols */,
+				88B460B52519292F002E798C /* Router */,
+				88B460B825192AEC002E798C /* Interactor */,
+				88B460B425192928002E798C /* Presenter */,
+				88B460B22519290A002E798C /* View */,
+			);
+			path = Transactions;
+			sourceTree = "<group>";
+		};
+		88B460B1251928F7002E798C /* TransactionsVC */ = {
+			isa = PBXGroup;
+			children = (
+				88B460A5251928E5002E798C /* TransactionsVC.swift */,
+				88B4609F251928E5002E798C /* TransactionsVC.xib */,
+			);
+			path = TransactionsVC;
+			sourceTree = "<group>";
+		};
+		88B460B22519290A002E798C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				88B460B1251928F7002E798C /* TransactionsVC */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		88B460B325192919002E798C /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				88B460A4251928E5002E798C /* TransactionsLocalization.swift */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
+		88B460B425192928002E798C /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				88B460A0251928E5002E798C /* TransactionsPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		88B460B52519292F002E798C /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				88B460A1251928E5002E798C /* TransactionsRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		88B460B725192AD9002E798C /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				88B460A2251928E5002E798C /* TransactionsProtocols.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		88B460B825192AEC002E798C /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				88B460A3251928E5002E798C /* TransactionsInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
 		88BD39262515FEE1004D149B /* UploadVC */ = {
 			isa = PBXGroup;
 			children = (
@@ -1670,6 +1754,7 @@
 			isa = PBXGroup;
 			children = (
 				88EDA13024FAE41700460B4D /* Profile */,
+				88B4609E25192852002E798C /* Transactions */,
 			);
 			path = ProfileModule;
 			sourceTree = "<group>";
@@ -2688,6 +2773,7 @@
 				88EDA11B24FADA0D00460B4D /* ServiceResultCell.xib in Resources */,
 				8CAB09A024E808A700D38CDD /* Tajawal-Medium.ttf in Resources */,
 				88BD393F25160BB9004D149B /* UploadImageCell.xib in Resources */,
+				88B460A6251928E5002E798C /* TransactionsVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2767,6 +2853,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				88F706C224EE6804005C2ADB /* PackageDetailsRouter.swift in Sources */,
+				88B460AB251928E5002E798C /* TransactionsLocalization.swift in Sources */,
 				88BE60BA2506CA2500EB2F03 /* PaymentChannelVC.swift in Sources */,
 				88ED040824EFCD9A00BBCEF6 /* ClinicsSearchProtocols.swift in Sources */,
 				8C8CB3EC24E6CA46009679E5 /* UITableView+Extensions.swift in Sources */,
@@ -2819,6 +2906,7 @@
 				8CAB098724E7F25900D38CDD /* HomePresenter.swift in Sources */,
 				88E0C71C2505676C001A1B3B /* PayHomePresenter.swift in Sources */,
 				882DE7AC2510005900B1F4F7 /* SignUpLocalization.swift in Sources */,
+				88B460A7251928E5002E798C /* TransactionsPresenter.swift in Sources */,
 				88EDA11F24FADD9B00460B4D /* ServiceResultSkeltonCell.swift in Sources */,
 				88D2914F25152AB5008738A5 /* DocomentTypeViewModel.swift in Sources */,
 				88104B7D24F2E0F300DB5ED9 /* BaseResponse.swift in Sources */,
@@ -2895,6 +2983,7 @@
 				8829891725129DA0004C5AB6 /* Vodafone.swift in Sources */,
 				8CAB098E24E7F55800D38CDD /* HomeLocalization.swift in Sources */,
 				88F706C424EE6804005C2ADB /* PackageDetailsInteractor.swift in Sources */,
+				88B460AA251928E5002E798C /* TransactionsInteractor.swift in Sources */,
 				88F706C624EE6804005C2ADB /* PackageDetailsVC.swift in Sources */,
 				88104B8C24F2E9D200DB5ED9 /* ServicesRemoteDataManager.swift in Sources */,
 				88ED040A24EFCD9A00BBCEF6 /* ClinicsSearchLocalization.swift in Sources */,
@@ -2912,6 +3001,7 @@
 				88ED040724EFCD9A00BBCEF6 /* ClinicsSearchRouter.swift in Sources */,
 				88F706C324EE6804005C2ADB /* PackageDetailsProtocols.swift in Sources */,
 				88120B7E24EF2C66004A2381 /* ClinicDetailsInteractor.swift in Sources */,
+				88B460AC251928E5002E798C /* TransactionsVC.swift in Sources */,
 				88D291262515153D008738A5 /* UploadDocumentsPresenter.swift in Sources */,
 				887C63142502341D00C69E2A /* OptionCell.swift in Sources */,
 				88D29168251549DD008738A5 /* UploadVC.swift in Sources */,
@@ -2933,6 +3023,7 @@
 				8C81545524EB21CA00CA30E7 /* ServicesSearchInteractor.swift in Sources */,
 				88ED042D24F0042600BBCEF6 /* NotificationCell.swift in Sources */,
 				88F67595250D2B8F00D19822 /* SignInInteractor.swift in Sources */,
+				88B460A9251928E5002E798C /* TransactionsProtocols.swift in Sources */,
 				88120B7C24EF2C66004A2381 /* ClinicDetailsRouter.swift in Sources */,
 				887C631F2502557D00C69E2A /* ClinicsListParameters.swift in Sources */,
 				8803D1E425081EAA004A6A46 /* ATMPayInteractor.swift in Sources */,
@@ -2968,6 +3059,7 @@
 				8829891525129D04004C5AB6 /* Account.swift in Sources */,
 				882DE7AD2510005900B1F4F7 /* SignUpVC.swift in Sources */,
 				88BD395025161FF3004D149B /* UploadRequestParamaters.swift in Sources */,
+				88B460A8251928E5002E798C /* TransactionsRouter.swift in Sources */,
 				88EDA12E24FAE41200460B4D /* ProfileLocalization.swift in Sources */,
 				88E0C72A25056A02001A1B3B /* MKMagneticProgress.swift in Sources */,
 				8C8CB3FC24E6CF23009679E5 /* RemoteServiceType.swift in Sources */,
