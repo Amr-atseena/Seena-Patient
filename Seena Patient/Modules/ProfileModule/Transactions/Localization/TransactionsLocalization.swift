@@ -10,4 +10,7 @@ import Foundation
 
 struct TransactionsLocalization {
     // MARK: - Attributes
+    var notifications: String {
+        return "Notifications".localized
+    }
 }

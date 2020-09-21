@@ -38,4 +38,8 @@ protocol TransactionsPresenterProtocol: class {
 protocol TransactionsViewProtocol: class {
     var presenter: TransactionsPresenterProtocol! { get set }
     // Presenter -> View
+    func setupNavBar()
+    func setupUI()
+    func setupTransactionsTableView()
+    func reloadTransactions()
 }

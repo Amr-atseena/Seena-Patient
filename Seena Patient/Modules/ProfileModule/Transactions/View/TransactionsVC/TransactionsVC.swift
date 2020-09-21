@@ -10,6 +10,8 @@ import UIKit
 
 class TransactionsVC: UIViewController, TransactionsViewProtocol {
     // MARK: - Outlets
+    @IBOutlet private var transactionsKeywordLabel: UILabel!
+    @IBOutlet private var transactionsTableView: UITableView!
     // MARK: - Attributes
     var presenter: TransactionsPresenterProtocol!
     // MARK: - Init
@@ -26,9 +28,41 @@ class TransactionsVC: UIViewController, TransactionsViewProtocol {
         presenter.viewDidLoad()
     }
     // MARK: - Methods
+    func setupNavBar() {
+        self.navigationController?.navigationBar.isHidden = true
+    }
+    func setupUI() {
+        // transactionsKeyword Label
+        transactionsKeywordLabel.text = presenter.localization.notifications
+        transactionsKeywordLabel.font = DesignSystem.Typography.heading.font
+    }
+    func setupTransactionsTableView() {
+        transactionsTableView.delegate = self
+        transactionsTableView.dataSource = self
+        transactionsTableView.register(cellWithClass: TransactionCell.self)
+    }
+    func reloadTransactions() {
+        transactionsTableView.reloadData()
+    }
     // MARK: - Actions
     // MARK: - DeInit
     deinit {
          debugPrint(TransactionsVC.className + " Release from Momery")
+    }
+}
+// MARK: - TransactionsTableView DataSource Implementation
+extension TransactionsVC: UITableViewDataSource {
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 10
+    }
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withClass: TransactionCell.self, for: indexPath)
+        return cell
+    }
+}
+// MARK: - TransactionsTableView Delegate Implementation
+extension TransactionsVC: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     }
 }

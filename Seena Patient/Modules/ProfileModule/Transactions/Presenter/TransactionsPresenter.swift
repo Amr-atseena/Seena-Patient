@@ -22,6 +22,9 @@ class TransactionsPresenter: TransactionsPresenterProtocol {
     }
     // MARK: - Methods
     func viewDidLoad() {
+        view?.setupUI()
+        view?.setupNavBar()
+        view?.setupTransactionsTableView()
     }
 }
 // MARK: - TransactionsOutputInteractorProtocol Implementation
