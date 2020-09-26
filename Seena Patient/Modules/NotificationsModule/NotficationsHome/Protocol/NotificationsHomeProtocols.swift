@@ -38,6 +38,7 @@ protocol NotificationsHomePresenterProtocol: class {
     var localization: NotificationsHomeLocalization { get }
     // view -> Presenter
     func viewDidLoad()
+    func viewWillAppear()
     func retriveNotifications()
     func config(notificationCell cell: NotificationCellProtocol, atIndex index: Int)
     var numberOfNotifications: Int { get }

@@ -31,6 +31,9 @@ class NotificationsHomePresenter: NotificationsHomePresenterProtocol {
         view?.setupNavBar(withTitle: "")
         view?.setupNotificationsTableView()
         view?.setupInifityScrolling()
+    }
+    func viewWillAppear() {
+        page = 0
         retriveNotifications()
     }
     func retriveNotifications() {

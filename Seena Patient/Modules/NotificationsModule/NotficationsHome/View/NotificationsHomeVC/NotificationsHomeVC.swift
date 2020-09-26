@@ -13,6 +13,7 @@ class NotificationsHomeVC: UIViewController, NotificationsHomeViewProtocol {
     @IBOutlet private var notificationsKeywordLabel: UILabel!
     @IBOutlet private var notificationTableView: UITableView!
     @IBOutlet private var loadingIndictor: UIActivityIndicatorView!
+    @IBOutlet private var noDataView: UIView!
     // MARK: - Attributes
     var presenter: NotificationsHomePresenterProtocol!
     // MARK: - Init
@@ -27,6 +28,10 @@ class NotificationsHomeVC: UIViewController, NotificationsHomeViewProtocol {
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter.viewDidLoad()
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        presenter.viewWillAppear()
     }
     // MARK: - Methods
     func setupNavBar(withTitle title: String) {
@@ -60,8 +65,12 @@ class NotificationsHomeVC: UIViewController, NotificationsHomeViewProtocol {
         loadingIndictor.stopAnimating()
     }
     func showNoDataView() {
+        noDataView.isHidden = false
+        notificationTableView.isHidden = true
     }
     func hideNoDataView() {
+        noDataView.isHidden = true
+        notificationTableView.isHidden = false
     }
     // MARK: - Actions
     // MARK: - DeInit
