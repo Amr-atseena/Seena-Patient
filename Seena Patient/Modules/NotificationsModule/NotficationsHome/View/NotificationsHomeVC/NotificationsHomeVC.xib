@@ -4,12 +4,14 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NotificationsHomeVC">
             <connections>
+                <outlet property="loadingIndictor" destination="m0n-ZZ-OAz" id="7PH-qR-KyA"/>
                 <outlet property="notificationTableView" destination="TKC-iJ-NUr" id="exo-aq-Ex6"/>
                 <outlet property="notificationsKeywordLabel" destination="Sdf-NM-7Tg" id="rlT-y0-t5C"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -33,6 +35,10 @@
                             <rect key="frame" x="0.0" y="60.5" width="414" height="737.5"/>
                             <color key="backgroundColor" red="0.97254901959999995" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </tableView>
+                        <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="m0n-ZZ-OAz">
+                            <rect key="frame" x="188.5" y="390.5" width="37" height="37"/>
+                            <color key="color" name="primaryActionBackground"/>
+                        </activityIndicatorView>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
@@ -40,7 +46,9 @@
                         <constraint firstAttribute="trailing" secondItem="TKC-iJ-NUr" secondAttribute="trailing" id="66F-Iv-gyJ"/>
                         <constraint firstAttribute="bottom" secondItem="TKC-iJ-NUr" secondAttribute="bottom" constant="20" id="6KB-IR-dhh"/>
                         <constraint firstItem="TKC-iJ-NUr" firstAttribute="top" secondItem="Sdf-NM-7Tg" secondAttribute="bottom" constant="20" id="CyN-rf-VLR"/>
+                        <constraint firstItem="m0n-ZZ-OAz" firstAttribute="centerX" secondItem="tQH-B4-v4t" secondAttribute="centerX" id="HXZ-2D-EPm"/>
                         <constraint firstItem="TKC-iJ-NUr" firstAttribute="leading" secondItem="tQH-B4-v4t" secondAttribute="leading" id="Ktk-vZ-3BR"/>
+                        <constraint firstItem="m0n-ZZ-OAz" firstAttribute="centerY" secondItem="tQH-B4-v4t" secondAttribute="centerY" id="X0O-Nq-1fo"/>
                         <constraint firstItem="Sdf-NM-7Tg" firstAttribute="top" secondItem="tQH-B4-v4t" secondAttribute="top" constant="20" id="eyM-pR-2h4"/>
                         <constraint firstAttribute="trailing" secondItem="Sdf-NM-7Tg" secondAttribute="trailing" constant="20" id="shu-c0-adV"/>
                     </constraints>
@@ -57,4 +65,9 @@
             <point key="canvasLocation" x="141" y="125"/>
         </view>
     </objects>
+    <resources>
+        <namedColor name="primaryActionBackground">
+            <color red="0.85900002717971802" green="0.078000001609325409" blue="0.078000001609325409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>

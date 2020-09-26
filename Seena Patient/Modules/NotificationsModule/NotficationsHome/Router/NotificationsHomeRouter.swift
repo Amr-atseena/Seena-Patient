@@ -14,7 +14,9 @@ class NotificationsHomeRouter: NotificationsHomeRouterProtocol {
     // MARK: - Assemble
     static func assembleModule() -> UIViewController {
         let router = NotificationsHomeRouter()
-        let interactor = NotificationsHomeInteractor()
+        let remoteDataManager = NotificationsRemoteDataManager()
+        let localDataManager = NotificationLocalDataManager()
+        let interactor = NotificationsHomeInteractor(localDataManager: localDataManager, remoteDataManager: remoteDataManager)
         let view = NotificationsHomeVC()
         let presenter = NotificationsHomePresenter(view: view, interactor: interactor, router: router)
         router.viewController = view

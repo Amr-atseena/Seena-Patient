@@ -20,10 +20,15 @@ protocol NotificationsHomeRouterProtocol {
 // MARK: - NotificationsHome Interactor
 protocol NotificationsHomeInputInteractorProtocol: class {
     var presenter: NotificationsHomeOutputInteractorProtocol? { get set }
+    var localDataManager: NotificationLocalDataManagerProtocol { get set }
+    var remoteDataManager: NotificationsRemoteDataManagerProtocol { get set }
     // Presenter -> Interactor
+    func retiveNotificationsList(foPage page: Int)
 }
 protocol NotificationsHomeOutputInteractorProtocol: class {
     // Interactor -> Presenter
+    func onRetiveNotificationsListSuccess(notifications: [Notification])
+    func onRetriveNotificationListFail()
 }
 // MARK: - NotificationsHome Preseneter
 protocol NotificationsHomePresenterProtocol: class {
@@ -33,6 +38,9 @@ protocol NotificationsHomePresenterProtocol: class {
     var localization: NotificationsHomeLocalization { get }
     // view -> Presenter
     func viewDidLoad()
+    func retriveNotifications()
+    func config(notificationCell cell: NotificationCellProtocol, atIndex index: Int)
+    var numberOfNotifications: Int { get }
 }
 // MARK: - NotificationsHome View
 protocol NotificationsHomeViewProtocol: class {
@@ -41,5 +49,14 @@ protocol NotificationsHomeViewProtocol: class {
     func setupNavBar(withTitle title: String)
     func setupUI()
     func setupNotificationsTableView()
-    func reloadNotificationsTableView()
+    func setupInifityScrolling()
+    func reloadNotifications()
+    func showLoadingIndictor()
+    func hideLoadingIndictor()
+    func showNoDataView()
+    func hideNoDataView()
+}
+// MARK: - Notification Cell Protocol
+protocol NotificationCellProtocol: class {
+    func setNotification(_ notification: NotificationViewModel)
 }

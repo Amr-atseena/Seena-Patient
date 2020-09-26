@@ -21,3 +21,9 @@ class NotificationCell: UITableViewCell {
         notificationBodyLabel.font = DesignSystem.Typography.title3.font
     }
 }
+extension NotificationCell: NotificationCellProtocol {
+    func setNotification(_ notification: NotificationViewModel) {
+        notifcationTitleLabel.text = notification.title
+        notificationBodyLabel.text = notification.message
+    }
+}

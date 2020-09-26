@@ -12,6 +12,7 @@ class NotificationsHomeVC: UIViewController, NotificationsHomeViewProtocol {
     // MARK: - Outlets
     @IBOutlet private var notificationsKeywordLabel: UILabel!
     @IBOutlet private var notificationTableView: UITableView!
+    @IBOutlet private var loadingIndictor: UIActivityIndicatorView!
     // MARK: - Attributes
     var presenter: NotificationsHomePresenterProtocol!
     // MARK: - Init
@@ -42,8 +43,25 @@ class NotificationsHomeVC: UIViewController, NotificationsHomeViewProtocol {
         notificationTableView.dataSource = self
         notificationTableView.register(cellWithClass: NotificationCell.self)
     }
-    func reloadNotificationsTableView() {
+    func setupInifityScrolling() {
+        notificationTableView.addInfiniteScroll { [weak self] (tableview) in
+            guard let self = self else {return}
+            self.presenter.retriveNotifications()
+            tableview.finishInfiniteScroll()
+        }
+    }
+    func reloadNotifications() {
         notificationTableView.reloadData()
+    }
+    func showLoadingIndictor() {
+        loadingIndictor.startAnimating()
+    }
+    func hideLoadingIndictor() {
+        loadingIndictor.stopAnimating()
+    }
+    func showNoDataView() {
+    }
+    func hideNoDataView() {
     }
     // MARK: - Actions
     // MARK: - DeInit
@@ -55,10 +73,11 @@ class NotificationsHomeVC: UIViewController, NotificationsHomeViewProtocol {
 extension NotificationsHomeVC: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return presenter.numberOfNotifications
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withClass: NotificationCell.self, for: indexPath)
+        presenter.config(notificationCell: cell, atIndex: indexPath.row)
         return cell
     }
 }

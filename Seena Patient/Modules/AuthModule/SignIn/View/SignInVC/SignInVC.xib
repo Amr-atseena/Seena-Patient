@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -119,7 +120,7 @@
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </textField>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Xj-1U-KMX">
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Xj-1U-KMX">
                                                     <rect key="frame" x="0.0" y="159.99999999999997" width="374" height="50"/>
                                                     <state key="normal" title="Forgot password?">
                                                         <color key="titleColor" name="secondaryActionText"/>
@@ -137,19 +138,19 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign In" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ffe-0K-EXh">
-                                                            <rect key="frame" x="161" y="14.999999999999998" width="52" height="20.333333333333329"/>
+                                                            <rect key="frame" x="161.33333333333334" y="14.999999999999998" width="51.666666666666657" height="20.333333333333329"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <color key="textColor" name="primaryActionText"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tsN-CZ-KTk">
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tsN-CZ-KTk">
                                                             <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
                                                             <connections>
                                                                 <action selector="didSignInButtonTapped:" destination="-1" eventType="touchUpInside" id="lzj-jY-YZ1"/>
                                                             </connections>
                                                         </button>
                                                     </subviews>
-                                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     <constraints>
                                                         <constraint firstAttribute="trailing" secondItem="tsN-CZ-KTk" secondAttribute="trailing" id="27o-6K-aFB"/>
                                                         <constraint firstItem="ffe-0K-EXh" firstAttribute="centerY" secondItem="ifV-rQ-eu7" secondAttribute="centerY" id="Jpd-jn-1sz"/>
@@ -175,16 +176,16 @@
                                                     <rect key="frame" x="0.0" y="60" width="374" height="50"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="yDu-cG-AhQ">
-                                                            <rect key="frame" x="70" y="0.0" width="234" height="50"/>
+                                                            <rect key="frame" x="70.333333333333329" y="0.0" width="233.33333333333337" height="50"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don’t have a account?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dB5-is-Myc">
-                                                                    <rect key="frame" x="0.0" y="14.999999999999998" width="170" height="20.333333333333329"/>
+                                                                    <rect key="frame" x="0.0" y="14.999999999999998" width="169.33333333333334" height="20.333333333333329"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <color key="textColor" name="primaryBorder"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WHK-Nc-fF9">
-                                                                    <rect key="frame" x="180" y="10" width="54" height="30"/>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WHK-Nc-fF9">
+                                                                    <rect key="frame" x="179.33333333333337" y="10" width="54" height="30"/>
                                                                     <state key="normal" title="Sign Up">
                                                                         <color key="titleColor" name="secondaryText"/>
                                                                     </state>
@@ -232,6 +233,7 @@
                     <color key="color" name="secondroyActionBackground"/>
                 </activityIndicatorView>
             </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" name="headingText"/>
             <constraints>
                 <constraint firstItem="opX-GI-DRJ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="0sK-cZ-Cuh"/>
@@ -241,10 +243,17 @@
                 <constraint firstAttribute="bottom" secondItem="opX-GI-DRJ" secondAttribute="bottom" id="eJJ-JE-y0R"/>
                 <constraint firstItem="opX-GI-DRJ" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="kEl-kX-mgj"/>
             </constraints>
-            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="140.57971014492756" y="124.55357142857142"/>
         </view>
     </objects>
+    <designables>
+        <designable name="N0h-6L-kQC">
+            <size key="intrinsicContentSize" width="374" height="44.369671875000002"/>
+        </designable>
+        <designable name="iSk-AL-jMx">
+            <size key="intrinsicContentSize" width="374" height="44.369671875000002"/>
+        </designable>
+    </designables>
     <resources>
         <image name="editIndicator" width="20" height="20"/>
         <namedColor name="headingText">
@@ -274,5 +283,8 @@
         <namedColor name="secondroyActionBackground">
             <color red="0.875" green="0.90600001811981201" blue="0.96100002527236938" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

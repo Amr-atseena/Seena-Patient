@@ -67,6 +67,14 @@
 		882DE7AB2510005900B1F4F7 /* SignUpInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882DE7A42510005900B1F4F7 /* SignUpInteractor.swift */; };
 		882DE7AC2510005900B1F4F7 /* SignUpLocalization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882DE7A52510005900B1F4F7 /* SignUpLocalization.swift */; };
 		882DE7AD2510005900B1F4F7 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882DE7A62510005900B1F4F7 /* SignUpVC.swift */; };
+		88340EB7251A92DF0099EB06 /* NotificationLocalDataManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88340EB6251A92DF0099EB06 /* NotificationLocalDataManagerProtocol.swift */; };
+		88340EBB251A92FF0099EB06 /* NotificationLocalDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88340EBA251A92FF0099EB06 /* NotificationLocalDataManager.swift */; };
+		88340EC0251A936A0099EB06 /* NotificationsRemoteDataManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88340EBF251A936A0099EB06 /* NotificationsRemoteDataManagerProtocol.swift */; };
+		88340EC4251A93740099EB06 /* NotificationsRemoteDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88340EC3251A93740099EB06 /* NotificationsRemoteDataManager.swift */; };
+		88340EC8251A93940099EB06 /* NotificationEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88340EC7251A93940099EB06 /* NotificationEndPoint.swift */; };
+		88340ECC251A962B0099EB06 /* NotificationRequestParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88340ECB251A962B0099EB06 /* NotificationRequestParameters.swift */; };
+		88340ED0251A999C0099EB06 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88340ECF251A999C0099EB06 /* Notification.swift */; };
+		88340ED7251A9F5D0099EB06 /* NotificationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88340ED6251A9F5D0099EB06 /* NotificationViewModel.swift */; };
 		883D941724F44392004A3F86 /* SpectialitySkeltonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883D941524F44392004A3F86 /* SpectialitySkeltonCell.swift */; };
 		883D941824F44392004A3F86 /* SpectialitySkeltonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 883D941624F44392004A3F86 /* SpectialitySkeltonCell.xib */; };
 		883D941C24F474CA004A3F86 /* PackageSkeltonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883D941A24F474CA004A3F86 /* PackageSkeltonCell.swift */; };
@@ -350,6 +358,14 @@
 		882DE7A42510005900B1F4F7 /* SignUpInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpInteractor.swift; sourceTree = "<group>"; };
 		882DE7A52510005900B1F4F7 /* SignUpLocalization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpLocalization.swift; sourceTree = "<group>"; };
 		882DE7A62510005900B1F4F7 /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
+		88340EB6251A92DF0099EB06 /* NotificationLocalDataManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationLocalDataManagerProtocol.swift; sourceTree = "<group>"; };
+		88340EBA251A92FF0099EB06 /* NotificationLocalDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationLocalDataManager.swift; sourceTree = "<group>"; };
+		88340EBF251A936A0099EB06 /* NotificationsRemoteDataManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsRemoteDataManagerProtocol.swift; sourceTree = "<group>"; };
+		88340EC3251A93740099EB06 /* NotificationsRemoteDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsRemoteDataManager.swift; sourceTree = "<group>"; };
+		88340EC7251A93940099EB06 /* NotificationEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationEndPoint.swift; sourceTree = "<group>"; };
+		88340ECB251A962B0099EB06 /* NotificationRequestParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationRequestParameters.swift; sourceTree = "<group>"; };
+		88340ECF251A999C0099EB06 /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
+		88340ED6251A9F5D0099EB06 /* NotificationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewModel.swift; sourceTree = "<group>"; };
 		883D941524F44392004A3F86 /* SpectialitySkeltonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpectialitySkeltonCell.swift; sourceTree = "<group>"; };
 		883D941624F44392004A3F86 /* SpectialitySkeltonCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SpectialitySkeltonCell.xib; sourceTree = "<group>"; };
 		883D941A24F474CA004A3F86 /* PackageSkeltonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageSkeltonCell.swift; sourceTree = "<group>"; };
@@ -752,6 +768,7 @@
 				88F675AB250D5F6F00D19822 /* LoginRequestParameters.swift */,
 				88D291172514FEFE008738A5 /* SignUpRequestParamaters.swift */,
 				88BD394F25161FF3004D149B /* UploadRequestParamaters.swift */,
+				88340ECB251A962B0099EB06 /* NotificationRequestParameters.swift */,
 			);
 			path = RequestParameters;
 			sourceTree = "<group>";
@@ -879,6 +896,33 @@
 				882DE7A12510005900B1F4F7 /* SignUpPresenter.swift */,
 			);
 			path = Presenter;
+			sourceTree = "<group>";
+		};
+		88340EB5251A92AF0099EB06 /* Notification */ = {
+			isa = PBXGroup;
+			children = (
+				88340EB6251A92DF0099EB06 /* NotificationLocalDataManagerProtocol.swift */,
+				88340EBA251A92FF0099EB06 /* NotificationLocalDataManager.swift */,
+			);
+			path = Notification;
+			sourceTree = "<group>";
+		};
+		88340EBE251A933E0099EB06 /* Notification */ = {
+			isa = PBXGroup;
+			children = (
+				88340EBF251A936A0099EB06 /* NotificationsRemoteDataManagerProtocol.swift */,
+				88340EC3251A93740099EB06 /* NotificationsRemoteDataManager.swift */,
+				88340EC7251A93940099EB06 /* NotificationEndPoint.swift */,
+			);
+			path = Notification;
+			sourceTree = "<group>";
+		};
+		88340ED5251A9F460099EB06 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				88340ED6251A9F5D0099EB06 /* NotificationViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		883D941424F43B9B004A3F86 /* SpectialitySkeltonCell */ = {
@@ -1762,6 +1806,7 @@
 		88ED041424EFFD7800BBCEF6 /* NotficationsHome */ = {
 			isa = PBXGroup;
 			children = (
+				88340ED5251A9F460099EB06 /* ViewModel */,
 				88ED042924EFFE5900BBCEF6 /* Localization */,
 				88ED042824EFFE4A00BBCEF6 /* Protocol */,
 				88ED042724EFFE4100BBCEF6 /* Router */,
@@ -2365,6 +2410,7 @@
 		8C8CB3F024E6CF23009679E5 /* LocalServices */ = {
 			isa = PBXGroup;
 			children = (
+				88340EB5251A92AF0099EB06 /* Notification */,
 				88A06F542517C4DD00D8F7A3 /* Profile */,
 				8829891D2512A5FB004C5AB6 /* SignUp */,
 				882989182512A0A4004C5AB6 /* Documents */,
@@ -2399,6 +2445,7 @@
 		8C8CB3F724E6CF23009679E5 /* RemoteServices */ = {
 			isa = PBXGroup;
 			children = (
+				88340EBE251A933E0099EB06 /* Notification */,
 				88F675A6250D5D1F00D19822 /* Auth */,
 				8885BB2625019777000D7BD5 /* Splash */,
 				88104B8824F2E44000DB5ED9 /* Services */,
@@ -2473,6 +2520,7 @@
 				8827E95124F5A8C7009C64FB /* RequestParameters */,
 				8829891125129BA6004C5AB6 /* Response */,
 				88104B8224F2E3AF00DB5ED9 /* Package.swift */,
+				88340ECF251A999C0099EB06 /* Notification.swift */,
 				88104B8624F2E3F700DB5ED9 /* Speciality.swift */,
 				88104B8424F2E3BA00DB5ED9 /* Service.swift */,
 				8885BB0E250150C5000D7BD5 /* Clinic.swift */,
@@ -2959,10 +3007,12 @@
 				88ED040824EFCD9A00BBCEF6 /* ClinicsSearchProtocols.swift in Sources */,
 				8C8CB3EC24E6CA46009679E5 /* UITableView+Extensions.swift in Sources */,
 				88120B6024EF07BE004A2381 /* ClinicsHomePresenter.swift in Sources */,
+				88340ED0251A999C0099EB06 /* Notification.swift in Sources */,
 				8CEC780924E9CC2B000CED1F /* ServiceDetailsLocalizaition.swift in Sources */,
 				88BD393E25160BB9004D149B /* UploadImageCell.swift in Sources */,
 				88D291282515153D008738A5 /* UploadDocumentsProtocols.swift in Sources */,
 				88F67586250CBBA700D19822 /* PayOptionLocalization.swift in Sources */,
+				88340ED7251A9F5D0099EB06 /* NotificationViewModel.swift in Sources */,
 				88ED041F24EFFD9100BBCEF6 /* NotificationsHomeProtocols.swift in Sources */,
 				88BE60B92506CA2500EB2F03 /* PaymentChannelLocalization.swift in Sources */,
 				88104B8124F2E39100DB5ED9 /* HomeResponse.swift in Sources */,
@@ -2998,6 +3048,7 @@
 				8C8CB3EA24E6CA46009679E5 /* UICollectionView+Extensions.swift in Sources */,
 				88EDA12B24FAE41200460B4D /* ProfileRouter.swift in Sources */,
 				88120B6524EF07BE004A2381 /* ClinicsHomeVC.swift in Sources */,
+				88340EC8251A93940099EB06 /* NotificationEndPoint.swift in Sources */,
 				8829891325129BE2004C5AB6 /* Document.swift in Sources */,
 				8CAB098524E7F22000D38CDD /* HomeInteractor.swift in Sources */,
 				88104B8724F2E3F700DB5ED9 /* Speciality.swift in Sources */,
@@ -3054,6 +3105,7 @@
 				88BD394C25161DE6004D149B /* UploadLocalDataManager.swift in Sources */,
 				8CEC780E24E9DDDB000CED1F /* ServiceClinicCell.swift in Sources */,
 				8C8CB40324E6D3B3009679E5 /* SplashVC.swift in Sources */,
+				88340ECC251A962B0099EB06 /* NotificationRequestParameters.swift in Sources */,
 				88120B7024EF1CC3004A2381 /* ClinicCell.swift in Sources */,
 				88ED040624EFCD9A00BBCEF6 /* ClinicsSearchPresenter.swift in Sources */,
 				88ED042224EFFD9100BBCEF6 /* NotificationsHomeVC.swift in Sources */,
@@ -3091,6 +3143,7 @@
 				88F706C424EE6804005C2ADB /* PackageDetailsInteractor.swift in Sources */,
 				88B460AA251928E5002E798C /* TransactionsInteractor.swift in Sources */,
 				88F706C624EE6804005C2ADB /* PackageDetailsVC.swift in Sources */,
+				88340EB7251A92DF0099EB06 /* NotificationLocalDataManagerProtocol.swift in Sources */,
 				88104B8C24F2E9D200DB5ED9 /* ServicesRemoteDataManager.swift in Sources */,
 				88ED040A24EFCD9A00BBCEF6 /* ClinicsSearchLocalization.swift in Sources */,
 				88D29166251549DD008738A5 /* UploadInteractor.swift in Sources */,
@@ -3134,6 +3187,7 @@
 				887C631F2502557D00C69E2A /* ClinicsListParameters.swift in Sources */,
 				8803D1E425081EAA004A6A46 /* ATMPayInteractor.swift in Sources */,
 				88F675AA250D5E7E00D19822 /* AuthenticationEndPoint.swift in Sources */,
+				88340EC4251A93740099EB06 /* NotificationsRemoteDataManager.swift in Sources */,
 				88A06F5C2517C51700D8F7A3 /* ProfileLocalDataManager.swift in Sources */,
 				8885BB2325019548000D7BD5 /* City.swift in Sources */,
 				88104B8A24F2E4DB00DB5ED9 /* ServicesEndPoint.swift in Sources */,
@@ -3164,12 +3218,14 @@
 				8C8CB3EB24E6CA46009679E5 /* UINavigationController+Extensions.swift in Sources */,
 				8CAB09A524E80C2700D38CDD /* Typography.swift in Sources */,
 				88A06F562517C4F900D8F7A3 /* ProfileLocalDataManagerProtocol.swift in Sources */,
+				88340EBB251A92FF0099EB06 /* NotificationLocalDataManager.swift in Sources */,
 				8829891525129D04004C5AB6 /* Account.swift in Sources */,
 				882DE7AD2510005900B1F4F7 /* SignUpVC.swift in Sources */,
 				88BD395025161FF3004D149B /* UploadRequestParamaters.swift in Sources */,
 				88B460A8251928E5002E798C /* TransactionsRouter.swift in Sources */,
 				88EDA12E24FAE41200460B4D /* ProfileLocalization.swift in Sources */,
 				88E0C72A25056A02001A1B3B /* MKMagneticProgress.swift in Sources */,
+				88340EC0251A936A0099EB06 /* NotificationsRemoteDataManagerProtocol.swift in Sources */,
 				8C8CB3FC24E6CF23009679E5 /* RemoteServiceType.swift in Sources */,
 				882DE795250FECC500B1F4F7 /* UserLocalDataManagerProtocol.swift in Sources */,
 				8C81545324EB21CA00CA30E7 /* ServicesSearchRouter.swift in Sources */,
