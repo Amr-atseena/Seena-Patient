@@ -59,6 +59,8 @@ protocol ClinicDetailsViewProtocol: class {
     func updateUI(withClinic clinic: ClinicViewModel)
     func reloadGallery()
     func reloadServices()
+    func hideOurWork()
+    func showOurWork()
     func showSkelton()
     func hideSkeleton()
 }

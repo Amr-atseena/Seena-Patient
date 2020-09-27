@@ -10,6 +10,7 @@ import UIKit
 import SkeletonView
 class ClinicDetailsVC: UIViewController, ClinicDetailsViewProtocol {
     // MARK: - Outlets
+    @IBOutlet private var ourWorkView: UIView!
     @IBOutlet private var clinicImage: UIImageView!
     @IBOutlet private var clinicNameLabel: UILabel!
     @IBOutlet private var clinicAddressLabel: UILabel!
@@ -71,6 +72,14 @@ class ClinicDetailsVC: UIViewController, ClinicDetailsViewProtocol {
         clinicNameLabel.text = clinic.name
         clinicImage.kf.setImage(with: URL(string: clinic.image))
         clinicAddressLabel.text = clinic.address
+    }
+    func showOurWork() {
+        imageGalleryCollectionView.isHidden = false
+        ourWorkView.isHidden = false
+    }
+    func hideOurWork() {
+        imageGalleryCollectionView.isHidden = true
+        ourWorkView.isHidden = true
     }
     func reloadGallery() {
         imageGalleryCollectionView.reloadData()

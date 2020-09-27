@@ -18,6 +18,11 @@ class ClinicDetailsPresenter: ClinicDetailsPresenterProtocol {
         didSet {
             services = clinic.services ?? []
             gallery = clinic.gallery ?? []
+            if gallery.isEmpty {
+                view?.hideOurWork()
+            } else {
+                view?.showOurWork()
+            }
         }
     }
     private var services: [Service] = [] {
