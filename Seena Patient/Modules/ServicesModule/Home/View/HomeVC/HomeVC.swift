@@ -40,6 +40,10 @@ class HomeVC: UIViewController, HomeViewProtocol {
         super.viewDidLoad()
         presenter.viewDidLoad()
     }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        presenter.viewWillAppear()
+    }
     // MARK: - Methods
     func setupNavBar(withTitle title: String) {
         self.navigationController?.navigationBar.isHidden = true
@@ -72,6 +76,9 @@ class HomeVC: UIViewController, HomeViewProtocol {
         headerView.register(cellWithClass: PackageSkeltonCell.self)
         headerView.register(cellWithClass: PackageCell.self)
         specialitiesTableView.tableHeaderView = headerView
+    }
+    func setUsername(_ username: String) {
+        usernameLabel.text = username
     }
     func reloadCategoryTableView() {
         specialitiesTableView.reloadData()
@@ -152,11 +159,11 @@ extension HomeVC: UICollectionViewDelegate {
 extension HomeVC: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         if collectionView == headerView {
-            let width = (collectionView.frame.size.width  - 30) / 1.25
+            let width = (collectionView.frame.size.width  - 30) / 1.05
             let height = (collectionView.frame.size.height)
             return CGSize(width: width, height: height)
         } else {
-            let width = (collectionView.frame.size.width  - 30) / 3.25
+            let width = (collectionView.frame.size.width  - 30) / 2.1
             let height = (collectionView.frame.size.height)
             return CGSize(width: width, height: height)
         }

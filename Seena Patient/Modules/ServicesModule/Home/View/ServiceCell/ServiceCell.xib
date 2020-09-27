@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -33,7 +34,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </imageView>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="mZV-fQ-5ya" secondAttribute="trailing" id="5Cj-JF-bbY"/>
                                     <constraint firstItem="mZV-fQ-5ya" firstAttribute="top" secondItem="y7z-PC-U9g" secondAttribute="top" id="ajL-np-951"/>
@@ -60,8 +61,8 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Ma-W5-IHH">
-                                <rect key="frame" x="50" y="110" width="42" height="22"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="9Ma-W5-IHH">
+                                <rect key="frame" x="5" y="110" width="132" height="22"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -76,11 +77,12 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="y7z-PC-U9g" firstAttribute="top" secondItem="ays-xt-hps" secondAttribute="top" constant="5" id="4yd-sl-boq"/>
-                            <constraint firstItem="9Ma-W5-IHH" firstAttribute="centerX" secondItem="ays-xt-hps" secondAttribute="centerX" id="52P-wB-row"/>
                             <constraint firstItem="y7z-PC-U9g" firstAttribute="leading" secondItem="ays-xt-hps" secondAttribute="leading" constant="5" id="C7s-r0-AEW"/>
                             <constraint firstAttribute="trailing" secondItem="y7z-PC-U9g" secondAttribute="trailing" constant="5" id="Ysa-30-XnB"/>
+                            <constraint firstItem="9Ma-W5-IHH" firstAttribute="trailing" secondItem="y7z-PC-U9g" secondAttribute="trailing" id="d82-DK-H7R"/>
                             <constraint firstAttribute="bottom" secondItem="9Ma-W5-IHH" secondAttribute="bottom" constant="5" id="gF2-hz-lUB"/>
                             <constraint firstItem="9Ma-W5-IHH" firstAttribute="top" secondItem="y7z-PC-U9g" secondAttribute="bottom" constant="5" id="rLi-NU-m5N"/>
+                            <constraint firstItem="9Ma-W5-IHH" firstAttribute="leading" secondItem="y7z-PC-U9g" secondAttribute="leading" id="vgi-CX-7LR"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
@@ -88,13 +90,13 @@
                     </view>
                 </subviews>
             </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
                 <constraint firstItem="ays-xt-hps" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Woi-ei-EMU"/>
                 <constraint firstAttribute="trailing" secondItem="ays-xt-hps" secondAttribute="trailing" id="a9a-Mb-DBJ"/>
                 <constraint firstItem="ays-xt-hps" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="qll-xD-cMa"/>
                 <constraint firstAttribute="bottom" secondItem="ays-xt-hps" secondAttribute="bottom" id="sj1-Sw-IYp"/>
             </constraints>
-            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="142" height="137"/>
             <userDefinedRuntimeAttributes>
                 <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
@@ -106,7 +108,15 @@
             <point key="canvasLocation" x="202.89855072463769" y="126.89732142857142"/>
         </collectionViewCell>
     </objects>
+    <designables>
+        <designable name="mZV-fQ-5ya">
+            <size key="intrinsicContentSize" width="100" height="100"/>
+        </designable>
+    </designables>
     <resources>
         <image name="Injectable-Dermal-Filler-1" width="100" height="100"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

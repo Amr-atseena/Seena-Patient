@@ -25,13 +25,16 @@ protocol HomeRouterProtocol: class {
 protocol HomeInputInteractorProtocol: class {
     var presenter: HomeOutputInteractorProtocol? { get set }
     var remoteDataServices: ServicesRemoteDataManager? { get set }
+    var localDataManager: ServicesLocalDataManagerProtocol { get set }
     // Presenter -> Interactor
     func fetchHomeServices()
+    func retriveUser()
 }
 protocol HomeOutputInteractorProtocol: class {
     // Interactor -> Presenter
     func onRetriveDataSuccess(with homeServices: HomeResponse)
     func onRetriveDataFail()
+    func onRetriveUserSuccess(withUser user: User?)
 }
 // MARK: - Home Presenter
 protocol HomePresenterProtocol: class {
@@ -41,6 +44,7 @@ protocol HomePresenterProtocol: class {
     var localization: HomeLocalization { get set }
     // View -> Presenter
     func viewDidLoad()
+    func viewWillAppear()
     func serachButtonTapped()
     func configure(spectialityCell cell: SpecialityCellView, atIndex index: Int )
     func configure(packageCell cell: PackageCellView, atIndex index: Int )
@@ -57,6 +61,7 @@ protocol HomeViewProtocol: class {
     func setupNavBar(withTitle title: String)
     func setupUI()
     func setupTableView()
+    func setUsername(_ username: String)
     func reloadPackageCollectionView()
     func reloadCategoryTableView()
     func showSkeltonView()

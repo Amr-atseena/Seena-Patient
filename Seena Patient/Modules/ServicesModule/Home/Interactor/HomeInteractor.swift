@@ -12,11 +12,16 @@ class HomeInteractor: HomeInputInteractorProtocol {
     // MARK: - Attributes
     weak var presenter: HomeOutputInteractorProtocol?
     var remoteDataServices: ServicesRemoteDataManager?
+    var localDataManager: ServicesLocalDataManagerProtocol
     // MARK: - Init
-    init(remoteServices: ServicesRemoteDataManager) {
+    init(localDataManager: ServicesLocalDataManagerProtocol,remoteServices: ServicesRemoteDataManager) {
         self.remoteDataServices = remoteServices
+        self.localDataManager = localDataManager
     }
     // MARK: - Methods
+    func retriveUser() {
+        presenter?.onRetriveUserSuccess(withUser: localDataManager.retriveUser())
+    }
     func fetchHomeServices() {
         remoteDataServices?.fetchServicesHome(completionHandler: { [weak self] (results) in
             guard let self = self else { return }
