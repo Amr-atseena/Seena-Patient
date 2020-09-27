@@ -152,11 +152,11 @@ extension HomeVC: UICollectionViewDelegate {
 extension HomeVC: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         if collectionView == headerView {
-            let width = (collectionView.frame.size.width  - 30) / 1.25
+            let width = (collectionView.frame.size.width  - 30) / 1.05
             let height = (collectionView.frame.size.height)
             return CGSize(width: width, height: height)
         } else {
-            let width = (collectionView.frame.size.width  - 30) / 3.25
+            let width = (collectionView.frame.size.width  - 30) / 2.1
             let height = (collectionView.frame.size.height)
             return CGSize(width: width, height: height)
         }
