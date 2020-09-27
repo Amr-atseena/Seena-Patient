@@ -15,7 +15,8 @@ class HomeRouter: HomeRouterProtocol {
     static func assembleModule() -> UIViewController {
         let router = HomeRouter()
         let remoteDataServies = ServicesRemoteDataManager()
-        let interactor = HomeInteractor(remoteServices: remoteDataServies)
+        let localDataManager = ServicesLocalDataManager()
+        let interactor = HomeInteractor(localDataManager: localDataManager, remoteServices: remoteDataServies)
         let view = HomeVC()
         let presenter = HomePresenter(view: view, interactor: interactor, router: router)
         router.viewController = view

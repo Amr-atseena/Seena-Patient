@@ -225,6 +225,8 @@
 		88F706C424EE6804005C2ADB /* PackageDetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F706BD24EE6804005C2ADB /* PackageDetailsInteractor.swift */; };
 		88F706C524EE6804005C2ADB /* PackageDetailsLocalization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F706BE24EE6804005C2ADB /* PackageDetailsLocalization.swift */; };
 		88F706C624EE6804005C2ADB /* PackageDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F706BF24EE6804005C2ADB /* PackageDetailsVC.swift */; };
+		88F83BA825210E6D00C9295A /* ServicesLocalDataManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F83BA725210E6D00C9295A /* ServicesLocalDataManagerProtocol.swift */; };
+		88F83BAC25210E9100C9295A /* ServicesLocalDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F83BAB25210E9100C9295A /* ServicesLocalDataManager.swift */; };
 		8C81545024EB21CA00CA30E7 /* ServicesSearchVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C81544824EB21CA00CA30E7 /* ServicesSearchVC.xib */; };
 		8C81545224EB21CA00CA30E7 /* ServicesSearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C81544A24EB21CA00CA30E7 /* ServicesSearchPresenter.swift */; };
 		8C81545324EB21CA00CA30E7 /* ServicesSearchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C81544B24EB21CA00CA30E7 /* ServicesSearchRouter.swift */; };
@@ -520,6 +522,8 @@
 		88F706BD24EE6804005C2ADB /* PackageDetailsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageDetailsInteractor.swift; sourceTree = "<group>"; };
 		88F706BE24EE6804005C2ADB /* PackageDetailsLocalization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageDetailsLocalization.swift; sourceTree = "<group>"; };
 		88F706BF24EE6804005C2ADB /* PackageDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageDetailsVC.swift; sourceTree = "<group>"; };
+		88F83BA725210E6D00C9295A /* ServicesLocalDataManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesLocalDataManagerProtocol.swift; sourceTree = "<group>"; };
+		88F83BAB25210E9100C9295A /* ServicesLocalDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesLocalDataManager.swift; sourceTree = "<group>"; };
 		8C81544824EB21CA00CA30E7 /* ServicesSearchVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServicesSearchVC.xib; sourceTree = "<group>"; };
 		8C81544A24EB21CA00CA30E7 /* ServicesSearchPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesSearchPresenter.swift; sourceTree = "<group>"; };
 		8C81544B24EB21CA00CA30E7 /* ServicesSearchRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesSearchRouter.swift; sourceTree = "<group>"; };
@@ -2166,6 +2170,15 @@
 			path = PackageDetailsVC;
 			sourceTree = "<group>";
 		};
+		88F83BA625210E5700C9295A /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				88F83BA725210E6D00C9295A /* ServicesLocalDataManagerProtocol.swift */,
+				88F83BAB25210E9100C9295A /* ServicesLocalDataManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		8C81544724EB21AC00CA30E7 /* ServicesSearch */ = {
 			isa = PBXGroup;
 			children = (
@@ -2431,6 +2444,7 @@
 		8C8CB3F024E6CF23009679E5 /* LocalServices */ = {
 			isa = PBXGroup;
 			children = (
+				88F83BA625210E5700C9295A /* Services */,
 				881C9B26251F3DD400A481C0 /* Payment */,
 				88340EB5251A92AF0099EB06 /* Notification */,
 				88A06F542517C4DD00D8F7A3 /* Profile */,
@@ -3141,6 +3155,7 @@
 				8885BB1925017485000D7BD5 /* ClinicsEndPoint.swift in Sources */,
 				882DE7A92510005900B1F4F7 /* SignUpRouter.swift in Sources */,
 				88BE60B72506CA2500EB2F03 /* PaymentChannelProtocols.swift in Sources */,
+				88F83BA825210E6D00C9295A /* ServicesLocalDataManagerProtocol.swift in Sources */,
 				881C9B2C251F3FD600A481C0 /* PaymentLocalDataManager.swift in Sources */,
 				88104B7F24F2E14E00DB5ED9 /* ServerResonse.swift in Sources */,
 				88ED03F224EFA5CF00BBCEF6 /* GalleryCell.swift in Sources */,
@@ -3153,6 +3168,7 @@
 				88D2918C251550FE008738A5 /* UIImagePicker+Extension.swift in Sources */,
 				8CEC780324E9BD68000CED1F /* ServiceDetailsRouter.swift in Sources */,
 				8885BB0F250150C5000D7BD5 /* Clinic.swift in Sources */,
+				88F83BAC25210E9100C9295A /* ServicesLocalDataManager.swift in Sources */,
 				8CEC780024E9BCED000CED1F /* ServiceDetailsInteractor.swift in Sources */,
 				8C8CB41124E6E651009679E5 /* SplashPresenter.swift in Sources */,
 				8885BB21250194D4000D7BD5 /* CityLocalDataManagerProtocol.swift in Sources */,

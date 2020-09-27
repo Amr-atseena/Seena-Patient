@@ -38,6 +38,9 @@ class HomePresenter: HomePresenterProtocol {
         view?.showSkeltonView()
         interactor?.fetchHomeServices()
     }
+    func viewWillAppear() {
+        interactor?.retriveUser()
+    }
     func serachButtonTapped() {
         router?.go(to: .servicesSearch)
     }
@@ -78,6 +81,13 @@ class HomePresenter: HomePresenterProtocol {
 }
 // MARK: - HomeOutputInteractorProtocol Implementation
 extension HomePresenter: HomeOutputInteractorProtocol {
+    func onRetriveUserSuccess(withUser user: User?) {
+        guard let user = user else {
+            view?.setUsername(localization.guest)
+            return
+        }
+        view?.setUsername(user.firstName)
+    }
     func onRetriveDataSuccess(with homeServices: HomeResponse) {
         view?.hideSkeltonView()
         specialities = homeServices.specialities

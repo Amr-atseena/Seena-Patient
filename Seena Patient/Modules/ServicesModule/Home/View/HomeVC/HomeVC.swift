@@ -40,6 +40,10 @@ class HomeVC: UIViewController, HomeViewProtocol {
         super.viewDidLoad()
         presenter.viewDidLoad()
     }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        presenter.viewWillAppear()
+    }
     // MARK: - Methods
     func setupNavBar(withTitle title: String) {
         self.navigationController?.navigationBar.isHidden = true
@@ -72,6 +76,9 @@ class HomeVC: UIViewController, HomeViewProtocol {
         headerView.register(cellWithClass: PackageSkeltonCell.self)
         headerView.register(cellWithClass: PackageCell.self)
         specialitiesTableView.tableHeaderView = headerView
+    }
+    func setUsername(_ username: String) {
+        usernameLabel.text = username
     }
     func reloadCategoryTableView() {
         specialitiesTableView.reloadData()
