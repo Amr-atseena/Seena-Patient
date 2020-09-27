@@ -65,8 +65,8 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mwU-eh-0Mi" customClass="AnimatableView" customModule="IBAnimatable">
                         <rect key="frame" x="5" y="5" width="186" height="173"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label Label Label Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hyz-VW-Fg9">
-                                <rect key="frame" x="15" y="142" width="178.5" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label Label Label Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hyz-VW-Fg9">
+                                <rect key="frame" x="15" y="122" width="161" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -84,6 +84,7 @@
                         <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="0.28000000000000003" colorSpace="custom" customColorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="hyz-VW-Fg9" secondAttribute="bottom" constant="10" id="OYf-1V-BnS"/>
+                            <constraint firstAttribute="trailing" secondItem="hyz-VW-Fg9" secondAttribute="trailing" constant="10" id="YOI-yc-bvh"/>
                             <constraint firstItem="hyz-VW-Fg9" firstAttribute="leading" secondItem="mwU-eh-0Mi" secondAttribute="leading" constant="15" id="uAd-TE-0h1"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
