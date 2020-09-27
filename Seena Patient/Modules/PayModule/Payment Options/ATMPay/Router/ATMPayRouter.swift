@@ -12,11 +12,12 @@ class ATMPayRouter: ATMPayRouterProtocol {
     // MARK: - Attributes
     weak var viewController: UIViewController?
     // MARK: - Assemble
-    static func assembleModule() -> UIViewController {
+    static func assembleModule(withType type: Int) -> UIViewController {
         let router = ATMPayRouter()
-        let interactor = ATMPayInteractor()
+        let localDataManager = PaymentLocalDataManager()
+        let interactor = ATMPayInteractor(localDataManager: localDataManager)
         let view = ATMPayVC()
-        let presenter = ATMPayPresenter(view: view, interactor: interactor, router: router)
+        let presenter = ATMPayPresenter(view: view, interactor: interactor, router: router, type: type)
         router.viewController = view
         interactor.presenter = presenter
         view.presenter = presenter

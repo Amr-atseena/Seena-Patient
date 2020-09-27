@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -39,7 +40,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </imageView>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="CIS-2M-TUP" secondAttribute="trailing" id="3ma-QD-qDk"/>
                                             <constraint firstAttribute="trailing" secondItem="CIS-2M-TUP" secondAttribute="trailing" id="84V-c8-5vb"/>
@@ -89,7 +90,7 @@
                                 <rect key="frame" x="485" y="20" width="20" height="20"/>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="QqV-wX-zUs" firstAttribute="top" secondItem="1x3-Ah-ci4" secondAttribute="top" constant="20" id="GHx-86-DCQ"/>
                             <constraint firstItem="JeD-dg-bsh" firstAttribute="leading" secondItem="1x3-Ah-ci4" secondAttribute="leading" constant="10" id="J4D-Be-MFC"/>
@@ -118,13 +119,13 @@
                     </view>
                 </subviews>
             </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="1x3-Ah-ci4" secondAttribute="trailing" constant="5" id="2cO-1J-uFg"/>
                 <constraint firstItem="1x3-Ah-ci4" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="BFG-bC-N4v"/>
                 <constraint firstAttribute="bottom" secondItem="1x3-Ah-ci4" secondAttribute="bottom" constant="5" id="JSo-IV-g17"/>
                 <constraint firstItem="1x3-Ah-ci4" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="V9B-EC-6pY"/>
             </constraints>
-            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="535" height="116"/>
             <connections>
                 <outlet property="accountNumberKeywordLabel" destination="LTX-rd-yPB" id="n8V-jz-YOT"/>
@@ -135,6 +136,11 @@
             <point key="canvasLocation" x="238.40579710144928" y="105.13392857142857"/>
         </collectionViewCell>
     </objects>
+    <designables>
+        <designable name="CIS-2M-TUP">
+            <size key="intrinsicContentSize" width="84" height="87"/>
+        </designable>
+    </designables>
     <resources>
         <image name="CIBCommon" width="84" height="87"/>
         <image name="check" width="20" height="20"/>
@@ -144,5 +150,8 @@
         <namedColor name="unSelectedTabBar">
             <color red="0.46700000762939453" green="0.52499997615814209" blue="0.62000000476837158" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

@@ -32,6 +32,8 @@ class SplashInteractor: SplashInputInteractorProtocol {
                     let idTypes = response.response?.idTypes,
                     let financial = response.response?.financialProof,
                     let residence = response.response?.residenceProof,
+                    let bankAccount = response.response?.accounts,
+                    let vodafoneAccount = response.response?.vCash,
                     response.serverResonse.code == 200 else {
                     self.presenter?.onRetriveDataFail(response.serverResonse.desc)
                     return
@@ -40,6 +42,8 @@ class SplashInteractor: SplashInputInteractorProtocol {
                 self.localDataManager.save(documents: idTypes, forKey: .id)
                 self.localDataManager.save(documents: financial, forKey: .financial)
                 self.localDataManager.save(documents: residence, forKey: .residence)
+                self.localDataManager.save(bankAccount: bankAccount)
+                self.localDataManager.save(vodafoneAccount: vodafoneAccount)
                 self.presenter?.onRetriveMetaDataSuccess()
             }
         }

@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 // MARK: - PaymentChannel Router
 enum PaymentChannelRoute {
-    case atm
+    case atm(Int)
     case payHome
 }
 protocol PaymentChannelRouterProtocol {

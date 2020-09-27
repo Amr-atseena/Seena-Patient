@@ -11,5 +11,16 @@ import Foundation
 class ATMPayInteractor: ATMPayInputInteractorProtocol {
     // MARK: - Attributes
     weak var presenter: ATMPayOutputInteractorProtocol?
+    var localDataManager: PaymentLocalDataManagerProtocol
+    // MARK: - Init
+    init(localDataManager: PaymentLocalDataManagerProtocol) {
+        self.localDataManager = localDataManager
+    }
     // MARK: - Methods
+    func retriveBanksAccount() {
+        presenter?.onRetriveBanksAccountSuccess(localDataManager.retriveBackAccount())
+    }
+    func retriveVodafoneAccount() {
+        presenter?.onRetriveVodafoneAccountSuccess(localDataManager.retriveVodafoneAccount())
+    }
 }

@@ -46,13 +46,16 @@ class ATMPayVC: UIViewController, ATMPayViewProtocol {
         nextButton.backgroundColor = DesignSystem.Colors.primaryActionBackground.color
         nextButton.isUserInteractionEnabled = true
     }
+    func reloadAccounts() {
+        accountsCollectionView.reloadData()
+    }
     // MARK: - Actions
     @IBAction private func didNextButtonTapped(_ sender: UIButton) {
         presenter.nextButtonTapped()
     }
     // MARK: - DeInit
     deinit {
-        debugPrint(ATMPayVC.className + "Release from Momery")
+        debugPrint(ATMPayVC.className + " Release from Momery")
     }
 }
 // MARK: - ClinicsCollectionView DataSoucrce Implementation

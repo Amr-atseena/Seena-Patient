@@ -15,15 +15,20 @@ protocol ATMPayRouterProtocol {
     // Presenter -> Router
     var viewController: UIViewController? { get set }
     func go(to router: ATMPayRoute)
-    static func assembleModule() -> UIViewController
+    static func assembleModule(withType type: Int) -> UIViewController
 }
 // MARK: - ATMPay Interactor
 protocol ATMPayInputInteractorProtocol: class {
     var presenter: ATMPayOutputInteractorProtocol? { get set }
+    var localDataManager: PaymentLocalDataManagerProtocol { get set }
     // Presenter -> Interactor
+    func retriveBanksAccount()
+    func retriveVodafoneAccount()
 }
 protocol ATMPayOutputInteractorProtocol: class {
     // Interactor -> Presenter
+    func onRetriveBanksAccountSuccess(_ banksAccounts: [Account])
+    func onRetriveVodafoneAccountSuccess(_ vodafoneAccounts: [Vodafone])
 }
 // MARK: - ATMPay Preseneter
 protocol ATMPayPresenterProtocol: class {
@@ -46,7 +51,9 @@ protocol ATMPayViewProtocol: class {
     func setupBankAccountsCollectionView()
     func setupUI()
     func enableNextButton()
+    func reloadAccounts()
 }
 // MARK: - PayOPtionCellProtocol
 protocol PayOPtionCellProtocol: class {
+    func setAccount(_ account: AccountViewModel)
 }

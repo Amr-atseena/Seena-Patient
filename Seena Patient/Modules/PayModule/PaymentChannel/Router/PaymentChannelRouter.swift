@@ -25,8 +25,8 @@ class PaymentChannelRouter: PaymentChannelRouterProtocol {
     // MARK: - Routing
     func go(to router: PaymentChannelRoute) {
         switch router {
-        case .atm:
-            navigateToATM()
+        case .atm(let type):
+            navigateToATM(withType: type)
         case .payHome:
             navigateToPayHome()
         }
@@ -34,10 +34,10 @@ class PaymentChannelRouter: PaymentChannelRouterProtocol {
     private func navigateToPayHome() {
         viewController?.navigationController?.popViewController(animated: true)
     }
-    private func navigateToATM() {
+    private func navigateToATM(withType type: Int) {
         removeChildsVC()
         guard let parent = viewController as? PaymentChannelVC else { return }
-        let child = ATMPayRouter.assembleModule()
+        let child = ATMPayRouter.assembleModule(withType: type)
         parent.containerView.addSubview(child.view)
         child.view.frame = parent.containerView.bounds
         parent.addChild(child)

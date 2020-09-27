@@ -45,7 +45,7 @@ class PaymentChannelPresenter: PaymentChannelPresenterProtocol {
         paymentMethods = paymentMethods.map { OptionViewModel(name: $0.name, isSelected: false)}
         paymentMethods[index].isSelected = true
         view?.reloadPaymentMethods()
-        router?.go(to: .atm)
+        router?.go(to: .atm(index))
     }
 }
 // MARK: - PaymentChannelOutputInteractorProtocol Implementation

@@ -16,4 +16,10 @@ struct ATMPayLocalization {
     var payMessage: String {
         return "Please deposit your payment in any of the following bank accounts; select the bank you chose then click next".localized
     }
+    var accountsNumbers: String {
+        return "Account number:".localized
+    }
+    var phoneNumbers: String {
+        return "Phone number:".localized
+    }
 }
