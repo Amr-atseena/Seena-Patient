@@ -29,7 +29,7 @@ protocol ClinicsHomeInputInteractorProtocol: class {
 }
 protocol ClinicsHomeOutputInteractorProtocol: class {
     // Interactor -> Presenter
-    func onRetriveClinicsHomeSuccess(specialities: [Speciality], clinicOfTheWeek: Clinic)
+    func onRetriveClinicsHomeSuccess(specialities: [Speciality], clinicOfTheWeek: Clinic?)
     func onRetriveClincsHomeFail()
 }
 // MARK: - ClinicsHome Preseneter
@@ -59,6 +59,8 @@ protocol ClinicsHomeViewProtocol: class {
     func setupUI()
     func setupNavBar(withTitle title: String)
     func setupClinicsTableView()
+    func hideClinicOfTheWeek()
+    func showClinicOfThWeek()
     func setClinicOfTheWeek(_ clinic: ClinicViewModel)
     func reloadClinics()
     func showSkeleton()

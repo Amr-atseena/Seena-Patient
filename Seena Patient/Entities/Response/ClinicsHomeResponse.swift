@@ -9,6 +9,6 @@
 import Foundation
 // MARK: - ClinicsHomeResponse
 struct ClinicsHomeResponse: Codable {
-    let clinicOfWeek: Clinic
+    let clinicOfWeek: Clinic?
     let specialities: [Speciality]
 }
