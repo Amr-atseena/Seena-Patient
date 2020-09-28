@@ -31,5 +31,12 @@ extension OptionsAdapter: UICollectionViewDataSource {
 extension OptionsAdapter: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         presenter?.optionCell(selectedAtIndex: indexPath.item)
+        let cell = collectionView.cellForItem(at: indexPath)
+        cell?.isSelected = true
+    }
+    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        presenter?.optionCell(deSelectedAtIndex: indexPath.item)
+        let cell = collectionView.cellForItem(at: indexPath)
+        cell?.isSelected = false
     }
 }
