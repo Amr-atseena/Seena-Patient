@@ -41,10 +41,10 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="414" height="358.5"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" image="prp" translatesAutoresizingMaskIntoConstraints="NO" id="sne-nv-REL">
-                                                            <rect key="frame" x="0.0" y="-1" width="414" height="359.5"/>
+                                                            <rect key="frame" x="0.0" y="2" width="414" height="356.5"/>
                                                         </imageView>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IMB-dE-Wqo">
-                                                            <rect key="frame" x="15" y="54" width="25" height="25"/>
+                                                            <rect key="frame" x="15" y="57" width="25" height="25"/>
                                                             <state key="normal" image="back"/>
                                                             <connections>
                                                                 <action selector="didTapBackButton:" destination="-1" eventType="touchUpInside" id="fwD-p5-SaD"/>
