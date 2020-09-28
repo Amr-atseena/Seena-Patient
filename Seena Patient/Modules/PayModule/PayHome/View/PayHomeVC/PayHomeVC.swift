@@ -10,6 +10,8 @@ import UIKit
 
 class PayHomeVC: UIViewController, PayHomeViewProtocol {
     // MARK: - Outlets
+    @IBOutlet private var loadingIndictor: UIActivityIndicatorView!
+    @IBOutlet private var noDataView: UIView!
     @IBOutlet private var yourBalanceKeywordLabel: UILabel!
     @IBOutlet private var youPayKeywordLabel: UILabel!
     @IBOutlet private var amountPayedLabel: UILabel!
@@ -39,6 +41,7 @@ class PayHomeVC: UIViewController, PayHomeViewProtocol {
         self.navigationController?.navigationBar.isHidden = true
     }
     func setupUI() {
+        progressView.setProgress(progress: 0.5, animated: true)
         // yourBalanceKeyword Label
         yourBalanceKeywordLabel.text = presenter.localization.yourBalance
         yourBalanceKeywordLabel.font = DesignSystem.Typography.heading.font
@@ -64,8 +67,31 @@ class PayHomeVC: UIViewController, PayHomeViewProtocol {
         paymentsDueTableView.delegate = self
         paymentsDueTableView.register(cellWithClass: DueCell.self)
     }
+    func setPaymentProgress(totalAmount: String, paidAmount: String, ratio: Double) {
+        amountPayedLabel.text = paidAmount
+        dueAmountLabel.text = totalAmount
+        progressView.setProgress(progress: CGFloat(ratio), animated: true)
+    }
     func realodDue() {
         paymentsDueTableView.reloadData()
+    }
+    func showNoDataView() {
+        noDataView.isHidden = false
+    }
+    func hideNoDataView() {
+        noDataView.isHidden = true
+    }
+    func showPaymentDue() {
+        paymentsDueTableView.isHidden = false
+    }
+    func hidePaymentDue() {
+        paymentsDueTableView.isHidden = true
+    }
+    func showLoadingIndictor() {
+        loadingIndictor.startAnimating()
+    }
+    func hideLoadingIndictor() {
+        loadingIndictor.stopAnimating()
     }
     // MARK: - Actions
     @IBAction private func didTapPayButton(_ sender: UIButton) {

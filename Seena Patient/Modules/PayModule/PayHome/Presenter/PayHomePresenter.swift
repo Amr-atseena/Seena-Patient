@@ -29,6 +29,9 @@ class PayHomePresenter: PayHomePresenterProtocol {
         view?.setupUI()
         view?.setupPaymentsDueTableView()
     }
+    func viewWillAppear() {
+        view?.hidePaymentDue()
+    }
     func payButtonTapped() {
         router?.go(to: .paymentChannel)
     }

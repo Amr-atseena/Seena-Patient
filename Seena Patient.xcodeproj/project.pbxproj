@@ -1594,8 +1594,8 @@
 		88E0C712250566D3001A1B3B /* PayModule */ = {
 			isa = PBXGroup;
 			children = (
-				88F67587250D251400D19822 /* Payment Options */,
 				88E0C713250566E5001A1B3B /* PayHome */,
+				88F67587250D251400D19822 /* Payment Options */,
 				88BE60AC2506CA0200EB2F03 /* PaymentChannel */,
 			);
 			path = PayModule;

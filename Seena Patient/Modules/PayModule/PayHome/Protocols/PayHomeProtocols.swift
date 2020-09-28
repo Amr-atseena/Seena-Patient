@@ -34,6 +34,7 @@ protocol PayHomePresenterProtocol: class {
     var localization: PayHomeLocalization { get }
     // view -> Presenter
     func viewDidLoad()
+    func viewWillAppear()
     func payButtonTapped()
     func calculateButtonTapped()
     var numberOfDue: Int { get }
@@ -46,4 +47,11 @@ protocol PayHomeViewProtocol: class {
     func setupUI()
     func setupPaymentsDueTableView()
     func realodDue()
+    func setPaymentProgress(totalAmount: String, paidAmount: String, ratio: Double)
+    func hideNoDataView()
+    func showNoDataView()
+    func showPaymentDue()
+    func hidePaymentDue()
+    func hideLoadingIndictor()
+    func showLoadingIndictor()
 }
