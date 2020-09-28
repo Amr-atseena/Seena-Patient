@@ -76,11 +76,16 @@ class ClinicsHomePresenter: ClinicsHomePresenterProtocol {
 }
 // MARK: - ClinicsHomeOutputInteractorProtocol Implementation
 extension ClinicsHomePresenter: ClinicsHomeOutputInteractorProtocol {
-    func onRetriveClinicsHomeSuccess(specialities: [Speciality], clinicOfTheWeek: Clinic) {
+    func onRetriveClinicsHomeSuccess(specialities: [Speciality], clinicOfTheWeek: Clinic?) {
         view?.hideSkeleton()
         self.specialities = specialities
         self.clinicOfTheWeek = clinicOfTheWeek
-        view?.setClinicOfTheWeek(ClinicViewModel(clinic: clinicOfTheWeek))
+        guard let clinic = clinicOfTheWeek else {
+            view?.hideClinicOfTheWeek()
+            return
+        }
+        view?.showClinicOfThWeek()
+        view?.setClinicOfTheWeek(ClinicViewModel(clinic: clinic))
     }
     func onRetriveClincsHomeFail() {
         view?.hideSkeleton()

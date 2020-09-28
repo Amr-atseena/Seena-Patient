@@ -21,11 +21,7 @@ class ClinicsSearchPresenter: ClinicsSearchPresenterProtocol {
     private lazy var optionsAdapter: OptionsAdapter = {
         return OptionsAdapter(presenter: self)
         }()
-    private var options = [OptionViewModel]() {
-        didSet {
-            view?.reloadOptions()
-        }
-    }
+    private var options = [OptionViewModel]()
     private var cities = [City]() {
         didSet {
             cities.insert(City(id: 0, name: "All"), at: 0)
@@ -88,7 +84,7 @@ extension ClinicsSearchPresenter: ClinicsSearchOutputInteractorProtocol {
     func onRetriveCities(_ cities: [City]) {
         self.cities = cities
         if !options.isEmpty {
-            options[0].isSelected = true
+          //  options[0].isSelected = true
         }
     }
     func onRetriveClinicsListSuccess(_ clinics: [Clinic]) {
@@ -111,9 +107,11 @@ extension ClinicsSearchPresenter: OptionsAdapterProtocol {
     func cnofig(optionCell cell: OptionCellProtocol, atIndex index: Int) {
         cell.set(option: options[index])
     }
+    func optionCell(deSelectedAtIndex index: Int) {
+        options[index].isSelected = false
+    }
     func optionCell(selectedAtIndex index: Int) {
         selectedCityIndex = index
-        options = options.map {OptionViewModel(name: $0.name)}
         options[index].isSelected = true
         page = 0
         clinics.removeAll()

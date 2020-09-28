@@ -25,13 +25,12 @@ class ClinicsHomeInteractor: ClinicsHomeInputInteractorProtocol {
                 self.presenter?.onRetriveClincsHomeFail()
             case .success(let response):
                 guard let response = response as? BaseResponse<ClinicsHomeResponse>, response.serverResonse.code == 200,
-                    let specialities = response.response?.specialities,
-                    let clinicOfTheWeek = response.response?.clinicOfWeek
+                    let specialities = response.response?.specialities
                 else {
                     self.presenter?.onRetriveClincsHomeFail()
                     return
                 }
-                self.presenter?.onRetriveClinicsHomeSuccess(specialities: specialities, clinicOfTheWeek: clinicOfTheWeek)
+                self.presenter?.onRetriveClinicsHomeSuccess(specialities: specialities, clinicOfTheWeek: response.response?.clinicOfWeek)
             }
         }
     }

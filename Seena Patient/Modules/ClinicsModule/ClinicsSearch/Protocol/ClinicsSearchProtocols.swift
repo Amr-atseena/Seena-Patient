@@ -71,6 +71,7 @@ protocol ClinicsSearchViewProtocol: class {
 protocol OptionsAdapterProtocol: class {
     func cnofig(optionCell cell: OptionCellProtocol, atIndex index: Int)
     func optionCell(selectedAtIndex index: Int)
+    func optionCell(deSelectedAtIndex index: Int)
     var numberOfOptions: Int { get }
 }
 // MARK: - OptionCell Protocol

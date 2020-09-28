@@ -10,6 +10,7 @@ import UIKit
 import SkeletonView
 class ClinicsHomeVC: UIViewController, ClinicsHomeViewProtocol {
     // MARK: - Outlets
+    @IBOutlet private var clinicOfWeekView: UIView!
     @IBOutlet private var clinicsKeywordLabel: UILabel!
     @IBOutlet private var searchTextField: UITextField!
     @IBOutlet private var clinicOfWeekKeywordLabel: UILabel!
@@ -81,6 +82,14 @@ class ClinicsHomeVC: UIViewController, ClinicsHomeViewProtocol {
     }
     func reloadClinics() {
         clinicsTableView.reloadData()
+    }
+    func showClinicOfThWeek() {
+        clinicOfWeekKeywordLabel.isHidden = false
+        clinicOfWeekView.isHidden = false
+    }
+    func hideClinicOfTheWeek() {
+        clinicOfWeekKeywordLabel.isHidden = true
+        clinicOfWeekView.isHidden = true
     }
     func showSkeleton() {
         clinicOfWeekImage.showAnimatedGradientSkeleton()
