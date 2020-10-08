@@ -36,12 +36,15 @@ class PayHomeVC: UIViewController, PayHomeViewProtocol {
         super.viewDidLoad()
         presenter.viewDidLoad()
     }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        presenter.viewWillAppear()
+    }
     // MARK: - Methods
     func setupNavBar() {
         self.navigationController?.navigationBar.isHidden = true
     }
     func setupUI() {
-        progressView.setProgress(progress: 0.5, animated: true)
         // yourBalanceKeyword Label
         yourBalanceKeywordLabel.text = presenter.localization.yourBalance
         yourBalanceKeywordLabel.font = DesignSystem.Typography.heading.font

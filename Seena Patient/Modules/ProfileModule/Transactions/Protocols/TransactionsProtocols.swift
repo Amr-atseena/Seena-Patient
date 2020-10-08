@@ -21,10 +21,15 @@ protocol TransactionsRouterProtocol {
 // MARK: - Transactions Interactor
 protocol TransactionsInputInteractorProtocol: class {
     var presenter: TransactionsOutputInteractorProtocol? { get set }
+    var remoteDataManager: PaymentRemoteDataManagerProtocol { get set }
+    var localDataManager: TokenLocalDataManagerProtocol { get set }
     // Presenter -> Interactor
+    func retriveTransactions()
 }
 protocol TransactionsOutputInteractorProtocol: class {
     // Interactor -> Presenter
+    func onRetriveTransactionsSuccess()
+    func onRetriveTransactionsFail()
 }
 // MARK: - Transactions Preseneter
 protocol TransactionsPresenterProtocol: class {
@@ -44,4 +49,10 @@ protocol TransactionsViewProtocol: class {
     func setupUI()
     func setupTransactionsTableView()
     func reloadTransactions()
+    func showLoadingIndictor()
+    func hideLoadingIndictor()
+    func showNoDataView()
+    func hideNoDataView()
+    func showTransactions()
+    func hideTransactions()
 }

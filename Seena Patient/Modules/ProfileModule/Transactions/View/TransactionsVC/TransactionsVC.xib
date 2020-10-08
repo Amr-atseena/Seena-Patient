@@ -6,11 +6,14 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TransactionsVC">
             <connections>
+                <outlet property="loadingIndictor" destination="ffA-DM-7Sz" id="nH3-QR-Vc5"/>
+                <outlet property="noDataView" destination="8Vj-2A-pbi" id="6zR-hw-qc7"/>
                 <outlet property="transactionsKeywordLabel" destination="Wyb-EI-fJv" id="Fih-Eo-lJS"/>
                 <outlet property="transactionsTableView" destination="Ys2-d9-MZi" id="mVL-wQ-gLM"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -41,17 +44,31 @@
                             <rect key="frame" x="0.0" y="70.5" width="414" height="727.5"/>
                             <color key="backgroundColor" red="0.97254901960784312" green="0.97647058823529409" blue="0.97647058823529409" alpha="1" colorSpace="calibratedRGB"/>
                         </tableView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Vj-2A-pbi" customClass="EmptyStateView" customModule="Seena" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="70.5" width="414" height="727.5"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        </view>
+                        <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="ffA-DM-7Sz">
+                            <rect key="frame" x="188.5" y="390.5" width="37" height="37"/>
+                            <color key="color" name="primaryActionBackground"/>
+                        </activityIndicatorView>
                     </subviews>
                     <color key="backgroundColor" red="0.97254901960784312" green="0.97647058823529409" blue="0.97647058823529409" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="Wyb-EI-fJv" secondAttribute="trailing" constant="20" id="2s5-NJ-zZ5"/>
                         <constraint firstAttribute="trailing" secondItem="Ys2-d9-MZi" secondAttribute="trailing" id="Khh-LL-Lpq"/>
                         <constraint firstItem="6ZL-nV-qPQ" firstAttribute="leading" secondItem="5aQ-65-ohj" secondAttribute="leading" constant="20" id="MHH-nh-Lqj"/>
+                        <constraint firstItem="8Vj-2A-pbi" firstAttribute="leading" secondItem="Ys2-d9-MZi" secondAttribute="leading" id="MHz-ci-0fa"/>
+                        <constraint firstItem="8Vj-2A-pbi" firstAttribute="bottom" secondItem="Ys2-d9-MZi" secondAttribute="bottom" id="T52-Xh-OAg"/>
+                        <constraint firstItem="ffA-DM-7Sz" firstAttribute="centerX" secondItem="5aQ-65-ohj" secondAttribute="centerX" id="WfE-K1-ju2"/>
                         <constraint firstItem="Wyb-EI-fJv" firstAttribute="top" secondItem="5aQ-65-ohj" secondAttribute="top" constant="30" id="by7-fV-ZDS"/>
                         <constraint firstItem="6ZL-nV-qPQ" firstAttribute="top" secondItem="5aQ-65-ohj" secondAttribute="top" id="eW7-sT-eHA"/>
+                        <constraint firstItem="8Vj-2A-pbi" firstAttribute="top" secondItem="Ys2-d9-MZi" secondAttribute="top" id="hLT-6T-hGu"/>
                         <constraint firstItem="Wyb-EI-fJv" firstAttribute="leading" secondItem="5aQ-65-ohj" secondAttribute="leading" constant="20" id="iTd-Ou-MZl"/>
+                        <constraint firstItem="8Vj-2A-pbi" firstAttribute="trailing" secondItem="Ys2-d9-MZi" secondAttribute="trailing" id="jR0-VZ-7BV"/>
                         <constraint firstItem="Ys2-d9-MZi" firstAttribute="leading" secondItem="5aQ-65-ohj" secondAttribute="leading" id="oTO-Mu-kyk"/>
                         <constraint firstAttribute="bottom" secondItem="Ys2-d9-MZi" secondAttribute="bottom" constant="20" id="uso-c7-3P0"/>
+                        <constraint firstItem="ffA-DM-7Sz" firstAttribute="centerY" secondItem="5aQ-65-ohj" secondAttribute="centerY" id="yAe-j0-VWz"/>
                         <constraint firstItem="Ys2-d9-MZi" firstAttribute="top" secondItem="Wyb-EI-fJv" secondAttribute="bottom" constant="20" id="ydX-eH-8Q1"/>
                     </constraints>
                 </view>
@@ -69,8 +86,14 @@
     </objects>
     <resources>
         <image name="back-1" width="22" height="14"/>
+        <namedColor name="primaryActionBackground">
+            <color red="0.85900002717971802" green="0.078000001609325409" blue="0.078000001609325409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="secondaryText">
             <color red="0.016000000759959221" green="0.17299999296665192" blue="0.36100000143051147" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

@@ -12,4 +12,5 @@ protocol AuthenticationRemoteDataManagerProtocol: class {
     func retriveLoginData(params: LoginRequestParameters, complationHandler: @escaping ((_ result: Result<Codable, Error>) -> Void))
     func retriveSignUpData(params: SignUpRequestParamaters, complationHandler: @escaping ((_ result: Result<Codable, Error>) -> Void))
     func upload(params: UploadRequestParamaters, complationHandler: @escaping ((_ result: Result<Codable, Error>) -> Void))
+    func retriveApplicationStatus(token: String, complationHandler: @escaping ((Result<Codable, Error>) -> Void))
 }

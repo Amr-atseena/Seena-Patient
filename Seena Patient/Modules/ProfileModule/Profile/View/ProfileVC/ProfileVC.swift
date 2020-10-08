@@ -10,6 +10,9 @@ import UIKit
 
 class ProfileVC: UIViewController, ProfileViewProtocol {
     // MARK: - Outlets
+    @IBOutlet private var holderView: UIView!
+    @IBOutlet private var tagView: UIView!
+    @IBOutlet private var statusLabel: UILabel!
     @IBOutlet private var userImage: UIImageView!
     @IBOutlet private var profileKeywordLabel: UILabel!
     @IBOutlet private var userNameLabel: UILabel!
@@ -60,6 +63,17 @@ class ProfileVC: UIViewController, ProfileViewProtocol {
     func updateProfile(userName: String, image: String) {
         userNameLabel.text = userName
         userImage.kf.setImage(with: URL(string: image))
+    }
+    func setApplicationStatus(status: String, color: UIColor) {
+        statusLabel.text = status
+        holderView.isHidden = false
+        tagView.backgroundColor = color
+        UIView.animate(withDuration: 0.3) {
+            self.tagView.layoutIfNeeded()
+        }
+    }
+    func hideApplicationStatus() {
+        holderView.isHidden = true
     }
     // MARK: - Actions
     @IBAction private func didTapOptionButton(_ sender: UIButton) {

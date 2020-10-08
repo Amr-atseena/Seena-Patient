@@ -26,13 +26,17 @@ protocol ProfileRouterProtocol {
 protocol ProfileInputInteractorProtocol: class {
     var presenter: ProfileOutputInteractorProtocol? { get set }
     var localDataManager: ProfileLocalDataManagerProtocol { get set }
+    var remoteDataManager: AuthenticationRemoteDataManagerProtocol { get set }
     // Presenter -> Interactor
     func retriveUser()
     func removeUser()
+    func retriveApplicationStatus()
 }
 protocol ProfileOutputInteractorProtocol: class {
     // Interactor -> Presenter
     func onRetriveUser(_ user: User?)
+    func onRetrieApplicationStatusSuccess(_ status: String)
+    func onRetriveApplicationStatusFail()
 }
 // MARK: - Profile Preseneter
 protocol ProfilePresenterProtocol: class {
@@ -52,4 +56,6 @@ protocol ProfileViewProtocol: class {
     // Presenter -> View
     func setupUI()
     func updateProfile(userName: String, image: String)
+    func setApplicationStatus(status: String, color: UIColor)
+    func hideApplicationStatus()
 }

@@ -15,7 +15,8 @@ class ProfileRouter: ProfileRouterProtocol {
     static func assembleModule() -> UIViewController {
         let router = ProfileRouter()
         let localDataManager = ProfileLocalDataManager()
-        let interactor = ProfileInteractor(localDataManager: localDataManager)
+        let remoteDataManager = AuthenticationRemoteDataManager()
+        let interactor = ProfileInteractor(remoteDataManager: remoteDataManager, localDataManager: localDataManager)
         let view = ProfileVC()
         let presenter = ProfilePresenter(view: view, interactor: interactor, router: router)
         router.viewController = view

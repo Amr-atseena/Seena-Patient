@@ -12,9 +12,12 @@ class ProfileInteractor: ProfileInputInteractorProtocol {
     // MARK: - Attributes
     weak var presenter: ProfileOutputInteractorProtocol?
     var localDataManager: ProfileLocalDataManagerProtocol
+    var remoteDataManager: AuthenticationRemoteDataManagerProtocol
     // MARK: - Init
-    init(localDataManager: ProfileLocalDataManagerProtocol) {
+    init(remoteDataManager: AuthenticationRemoteDataManager,
+         localDataManager: ProfileLocalDataManagerProtocol) {
         self.localDataManager = localDataManager
+        self.remoteDataManager = remoteDataManager
     }
     // MARK: - Methods
     func retriveUser() {
@@ -22,5 +25,20 @@ class ProfileInteractor: ProfileInputInteractorProtocol {
     }
     func removeUser() {
         localDataManager.removeUserData()
+    }
+    func retriveApplicationStatus() {
+        remoteDataManager.retriveApplicationStatus(token: localDataManager.retriveToken()) { [weak self] (results) in
+            guard let self = self else {return}
+            switch results {
+            case .failure:
+                self.presenter?.onRetriveApplicationStatusFail()
+            case .success(let data):
+                guard let data = data as? BaseResponse<ApplicationStatusResponse>, data.serverResonse.code == 200, let status = data.response?.status else {
+                    self.presenter?.onRetriveApplicationStatusFail()
+                    return
+                }
+                self.presenter?.onRetrieApplicationStatusSuccess(status)
+            }
+        }
     }
 }

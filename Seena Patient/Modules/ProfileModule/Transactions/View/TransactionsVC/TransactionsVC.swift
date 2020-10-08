@@ -12,6 +12,9 @@ class TransactionsVC: UIViewController, TransactionsViewProtocol {
     // MARK: - Outlets
     @IBOutlet private var transactionsKeywordLabel: UILabel!
     @IBOutlet private var transactionsTableView: UITableView!
+    @IBOutlet private var noDataView: UIView!
+    @IBOutlet private var loadingIndictor: UIActivityIndicatorView!
+    
     // MARK: - Attributes
     var presenter: TransactionsPresenterProtocol!
     // MARK: - Init
@@ -40,6 +43,24 @@ class TransactionsVC: UIViewController, TransactionsViewProtocol {
         transactionsTableView.delegate = self
         transactionsTableView.dataSource = self
         transactionsTableView.register(cellWithClass: TransactionCell.self)
+    }
+    func showLoadingIndictor() {
+        loadingIndictor.startAnimating()
+    }
+    func hideLoadingIndictor() {
+        loadingIndictor.stopAnimating()
+    }
+    func showTransactions() {
+        transactionsTableView.isHidden = false
+    }
+    func hideTransactions() {
+        transactionsTableView.isHidden = true
+    }
+    func showNoDataView() {
+        noDataView.isHidden = false
+    }
+    func hideNoDataView() {
+        noDataView.isHidden = true
     }
     func reloadTransactions() {
         transactionsTableView.reloadData()

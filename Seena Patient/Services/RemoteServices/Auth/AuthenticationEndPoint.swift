@@ -12,6 +12,7 @@ enum AuthenticationEndPoint {
     case login(LoginRequestParameters)
     case signUp(SignUpRequestParamaters)
     case upload(UploadRequestParamaters)
+    case applicationStatus(String)
 }
 
 // MARK: - TargetType Protocol Implementation
@@ -27,10 +28,17 @@ extension AuthenticationEndPoint: TargetType, EnvironmentProtocol {
             return "auth/register"
         case .upload:
             return "auth/upload_files"
+        case .applicationStatus:
+            return "user/status"
         }
     }
     var method: Moya.Method {
-        return .post
+        switch self {
+        case .applicationStatus:
+            return .get
+        default:
+            return .post
+        }
     }
     var sampleData: Data {
         return Data()
@@ -43,16 +51,23 @@ extension AuthenticationEndPoint: TargetType, EnvironmentProtocol {
             return .requestJSONEncodable(params)
         case .upload(let params):
             return .uploadMultipart(params.multipartData)
+        case .applicationStatus:
+            return .requestPlain
         }
     }
     var headers: [String: String]? {
         switch self {
         case .upload(let params):
-            print(params.token)
             return [
                 "Accept-Encoding": "gzip, deflate, br",
                 "Accept-Language": "en",
                 "Authorization": "Bearer \(params.token)"
+            ]
+        case .applicationStatus(let token):
+            return [
+                "Accept-Encoding": "gzip, deflate, br",
+                "Accept-Language": "en",
+                "Authorization": "Bearer \(token)"
             ]
         default:
             return [

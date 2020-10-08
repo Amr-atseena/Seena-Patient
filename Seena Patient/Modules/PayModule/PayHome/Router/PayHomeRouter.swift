@@ -14,7 +14,9 @@ class PayHomeRouter: PayHomeRouterProtocol {
     // MARK: - Assemble
     static func assembleModule() -> UIViewController {
         let router = PayHomeRouter()
-        let interactor = PayHomeInteractor()
+        let localDataManager = PaymentLocalDataManager()
+        let remoteDataManager = PaymentRemoteDataManager()
+        let interactor = PayHomeInteractor(localDataManager: localDataManager, remoteDataManager: remoteDataManager)
         let view = PayHomeVC()
         let presenter = PayHomePresenter(view: view, interactor: interactor, router: router)
         router.viewController = view

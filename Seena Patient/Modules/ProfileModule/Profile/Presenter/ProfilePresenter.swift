@@ -55,5 +55,23 @@ extension ProfilePresenter: ProfileOutputInteractorProtocol {
         }
         let username = currentUser.firstName + " " + currentUser.lastName
         view?.updateProfile(userName: username, image: currentUser.image)
+        interactor?.retriveApplicationStatus()
+    }
+    func onRetrieApplicationStatusSuccess(_ status: String) {
+        switch status {
+        case "pending":
+            view?.setApplicationStatus(status: status, color: DesignSystem.Colors.pending.color)
+        case "activate":
+            view?.setApplicationStatus(status: status, color: DesignSystem.Colors.accept.color)
+        case "rejected":
+            view?.setApplicationStatus(status: status, color: DesignSystem.Colors.primaryActionBackground.color)
+        case "missing info":
+            view?.setApplicationStatus(status: status, color: DesignSystem.Colors.primaryActionBackground.color)
+        default:
+            view?.setApplicationStatus(status: status, color: DesignSystem.Colors.primaryActionBackground.color)
+        }
+    }
+    func onRetriveApplicationStatusFail() {
+        view?.hideApplicationStatus()
     }
 }

@@ -21,10 +21,17 @@ protocol PayHomeRouterProtocol {
 // MARK: - PayHome Interactor
 protocol PayHomeInputInteractorProtocol: class {
     var presenter: PayHomeOutputInteractorProtocol? { get set }
+    var localDataManager: PaymentLocalDataManagerProtocol { get set }
+    var remoteDataManager: PaymentRemoteDataManagerProtocol { get set }
     // Presenter -> Interactor
+    func retriveUser()
+    func retrivePaymentDue()
 }
 protocol PayHomeOutputInteractorProtocol: class {
     // Interactor -> Presenter
+    func onRetriveUserSuccess(_ user: User?)
+    func onRetrivePaymentSuccess(_ payment: PaymentHomeResponse)
+    func onRetrivePaymentFail()
 }
 // MARK: - PayHome Preseneter
 protocol PayHomePresenterProtocol: class {

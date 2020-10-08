@@ -17,6 +17,8 @@ extension DesignSystem {
         case primaryActionText
         case secondaryActionText
         case headingText
+        case pending
+        case accept
         case primaryActionBackground
         case secondroyActionBackground
         case selectedTabBar

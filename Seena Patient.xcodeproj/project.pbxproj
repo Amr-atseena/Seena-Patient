@@ -17,6 +17,7 @@
 		8803D1E625081EAA004A6A46 /* ATMPayVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8803D1DF25081EAA004A6A46 /* ATMPayVC.swift */; };
 		8803D1F025082532004A6A46 /* PayOptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8803D1EE25082532004A6A46 /* PayOptionCell.swift */; };
 		8803D1F125082532004A6A46 /* PayOptionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8803D1EF25082532004A6A46 /* PayOptionCell.xib */; };
+		8804F8532523BEC6005CF204 /* ApplicationStatusResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8804F8522523BEC6005CF204 /* ApplicationStatusResponse.swift */; };
 		88104B7D24F2E0F300DB5ED9 /* BaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88104B7C24F2E0F300DB5ED9 /* BaseResponse.swift */; };
 		88104B7F24F2E14E00DB5ED9 /* ServerResonse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88104B7E24F2E14E00DB5ED9 /* ServerResonse.swift */; };
 		88104B8124F2E39100DB5ED9 /* HomeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88104B8024F2E39100DB5ED9 /* HomeResponse.swift */; };
@@ -44,6 +45,7 @@
 		88120B7E24EF2C66004A2381 /* ClinicDetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88120B7724EF2C66004A2381 /* ClinicDetailsInteractor.swift */; };
 		88120B7F24EF2C66004A2381 /* ClinicDetailsLocalization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88120B7824EF2C66004A2381 /* ClinicDetailsLocalization.swift */; };
 		88120B8024EF2C66004A2381 /* ClinicDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88120B7924EF2C66004A2381 /* ClinicDetailsVC.swift */; };
+		88126AA6252F376200F99665 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 88126AA5252F376200F99665 /* GoogleService-Info.plist */; };
 		881C9B28251F3DF600A481C0 /* PaymentLocalDataManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881C9B27251F3DF600A481C0 /* PaymentLocalDataManagerProtocol.swift */; };
 		881C9B2C251F3FD600A481C0 /* PaymentLocalDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881C9B2B251F3FD600A481C0 /* PaymentLocalDataManager.swift */; };
 		881C9B31251F42F000A481C0 /* AccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881C9B30251F42F000A481C0 /* AccountViewModel.swift */; };
@@ -173,6 +175,10 @@
 		88E0C7202505676C001A1B3B /* PayHomeLocalization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E0C7192505676C001A1B3B /* PayHomeLocalization.swift */; };
 		88E0C7212505676C001A1B3B /* PayHomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E0C71A2505676C001A1B3B /* PayHomeVC.swift */; };
 		88E0C72A25056A02001A1B3B /* MKMagneticProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E0C72925056A02001A1B3B /* MKMagneticProgress.swift */; };
+		88E62826252274FF0015F7F6 /* PaymentHomeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E62825252274FF0015F7F6 /* PaymentHomeResponse.swift */; };
+		88E6282B252275530015F7F6 /* PaymentEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E6282A252275530015F7F6 /* PaymentEndPoint.swift */; };
+		88E62831252276890015F7F6 /* PaymentRemoteDataManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E62830252276890015F7F6 /* PaymentRemoteDataManagerProtocol.swift */; };
+		88E62835252276C60015F7F6 /* PaymentRemoteDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E62834252276C60015F7F6 /* PaymentRemoteDataManager.swift */; };
 		88ED03F224EFA5CF00BBCEF6 /* GalleryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88ED03F024EFA5CE00BBCEF6 /* GalleryCell.swift */; };
 		88ED03F324EFA5CF00BBCEF6 /* GalleryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88ED03F124EFA5CE00BBCEF6 /* GalleryCell.xib */; };
 		88ED03FB24EFC7B300BBCEF6 /* ClinicsSectionHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88ED03F924EFC7B200BBCEF6 /* ClinicsSectionHeaderCell.swift */; };
@@ -312,6 +318,7 @@
 		8803D1DF25081EAA004A6A46 /* ATMPayVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATMPayVC.swift; sourceTree = "<group>"; };
 		8803D1EE25082532004A6A46 /* PayOptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayOptionCell.swift; sourceTree = "<group>"; };
 		8803D1EF25082532004A6A46 /* PayOptionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PayOptionCell.xib; sourceTree = "<group>"; };
+		8804F8522523BEC6005CF204 /* ApplicationStatusResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationStatusResponse.swift; sourceTree = "<group>"; };
 		88104B7C24F2E0F300DB5ED9 /* BaseResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseResponse.swift; sourceTree = "<group>"; };
 		88104B7E24F2E14E00DB5ED9 /* ServerResonse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerResonse.swift; sourceTree = "<group>"; };
 		88104B8024F2E39100DB5ED9 /* HomeResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeResponse.swift; sourceTree = "<group>"; };
@@ -339,6 +346,7 @@
 		88120B7724EF2C66004A2381 /* ClinicDetailsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicDetailsInteractor.swift; sourceTree = "<group>"; };
 		88120B7824EF2C66004A2381 /* ClinicDetailsLocalization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicDetailsLocalization.swift; sourceTree = "<group>"; };
 		88120B7924EF2C66004A2381 /* ClinicDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicDetailsVC.swift; sourceTree = "<group>"; };
+		88126AA5252F376200F99665 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		881C9B27251F3DF600A481C0 /* PaymentLocalDataManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentLocalDataManagerProtocol.swift; sourceTree = "<group>"; };
 		881C9B2B251F3FD600A481C0 /* PaymentLocalDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentLocalDataManager.swift; sourceTree = "<group>"; };
 		881C9B30251F42F000A481C0 /* AccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewModel.swift; sourceTree = "<group>"; };
@@ -470,6 +478,10 @@
 		88E0C7192505676C001A1B3B /* PayHomeLocalization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayHomeLocalization.swift; sourceTree = "<group>"; };
 		88E0C71A2505676C001A1B3B /* PayHomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayHomeVC.swift; sourceTree = "<group>"; };
 		88E0C72925056A02001A1B3B /* MKMagneticProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MKMagneticProgress.swift; sourceTree = "<group>"; };
+		88E62825252274FF0015F7F6 /* PaymentHomeResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentHomeResponse.swift; sourceTree = "<group>"; };
+		88E6282A252275530015F7F6 /* PaymentEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentEndPoint.swift; sourceTree = "<group>"; };
+		88E62830252276890015F7F6 /* PaymentRemoteDataManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentRemoteDataManagerProtocol.swift; sourceTree = "<group>"; };
+		88E62834252276C60015F7F6 /* PaymentRemoteDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentRemoteDataManager.swift; sourceTree = "<group>"; };
 		88ED03F024EFA5CE00BBCEF6 /* GalleryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryCell.swift; sourceTree = "<group>"; };
 		88ED03F124EFA5CE00BBCEF6 /* GalleryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GalleryCell.xib; sourceTree = "<group>"; };
 		88ED03F924EFC7B200BBCEF6 /* ClinicsSectionHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicsSectionHeaderCell.swift; sourceTree = "<group>"; };
@@ -815,6 +827,8 @@
 				887C630A25021CE800C69E2A /* SplashResponse.swift */,
 				88104B8024F2E39100DB5ED9 /* HomeResponse.swift */,
 				88F675A0250D56A700D19822 /* LoginResponse.swift */,
+				88E62825252274FF0015F7F6 /* PaymentHomeResponse.swift */,
+				8804F8522523BEC6005CF204 /* ApplicationStatusResponse.swift */,
 			);
 			path = Response;
 			sourceTree = "<group>";
@@ -1672,6 +1686,16 @@
 			path = PayHomeVC;
 			sourceTree = "<group>";
 		};
+		88E62829252275460015F7F6 /* Payment */ = {
+			isa = PBXGroup;
+			children = (
+				88E6282A252275530015F7F6 /* PaymentEndPoint.swift */,
+				88E62830252276890015F7F6 /* PaymentRemoteDataManagerProtocol.swift */,
+				88E62834252276C60015F7F6 /* PaymentRemoteDataManager.swift */,
+			);
+			path = Payment;
+			sourceTree = "<group>";
+		};
 		88ED03E824EF9BB800BBCEF6 /* view */ = {
 			isa = PBXGroup;
 			children = (
@@ -2346,6 +2370,7 @@
 		8C8CB3D824E6BA2D009679E5 /* Configurations */ = {
 			isa = PBXGroup;
 			children = (
+				88126AA5252F376200F99665 /* GoogleService-Info.plist */,
 				8C8CB3CF24E6B817009679E5 /* Info.plist */,
 			);
 			path = Configurations;
@@ -2481,6 +2506,7 @@
 		8C8CB3F724E6CF23009679E5 /* RemoteServices */ = {
 			isa = PBXGroup;
 			children = (
+				88E62829252275460015F7F6 /* Payment */,
 				88340EBE251A933E0099EB06 /* Notification */,
 				88F675A6250D5D1F00D19822 /* Auth */,
 				8885BB2625019777000D7BD5 /* Splash */,
@@ -2953,6 +2979,7 @@
 				8803D1E025081EAA004A6A46 /* ATMPayVC.xib in Resources */,
 				88ED042E24F0042600BBCEF6 /* NotificationCell.xib in Resources */,
 				8C8CB3CB24E6B817009679E5 /* Assets.xcassets in Resources */,
+				88126AA6252F376200F99665 /* GoogleService-Info.plist in Resources */,
 				8CAB09AC24E8274200D38CDD /* SpectialityCell.xib in Resources */,
 				882DE7A72510005900B1F4F7 /* SignUpVC.xib in Resources */,
 				88EDA11B24FADA0D00460B4D /* ServiceResultCell.xib in Resources */,
@@ -3040,6 +3067,7 @@
 				88F706C224EE6804005C2ADB /* PackageDetailsRouter.swift in Sources */,
 				88B460AB251928E5002E798C /* TransactionsLocalization.swift in Sources */,
 				88BE60BA2506CA2500EB2F03 /* PaymentChannelVC.swift in Sources */,
+				88E6282B252275530015F7F6 /* PaymentEndPoint.swift in Sources */,
 				88ED040824EFCD9A00BBCEF6 /* ClinicsSearchProtocols.swift in Sources */,
 				8C8CB3EC24E6CA46009679E5 /* UITableView+Extensions.swift in Sources */,
 				88120B6024EF07BE004A2381 /* ClinicsHomePresenter.swift in Sources */,
@@ -3074,6 +3102,7 @@
 				88EDA12A24FAE41200460B4D /* ProfilePresenter.swift in Sources */,
 				88120B8024EF2C66004A2381 /* ClinicDetailsVC.swift in Sources */,
 				88104B8324F2E3AF00DB5ED9 /* Package.swift in Sources */,
+				8804F8532523BEC6005CF204 /* ApplicationStatusResponse.swift in Sources */,
 				88E0C71E2505676C001A1B3B /* PayHomeProtocols.swift in Sources */,
 				88D2912B2515153D008738A5 /* UploadDocumentsVC.swift in Sources */,
 				882DE798250FEE5000B1F4F7 /* AuthenticationLocalDataManagerProtocol.swift in Sources */,
@@ -3099,6 +3128,7 @@
 				88EDA11F24FADD9B00460B4D /* ServiceResultSkeltonCell.swift in Sources */,
 				88D2914F25152AB5008738A5 /* DocomentTypeViewModel.swift in Sources */,
 				88104B7D24F2E0F300DB5ED9 /* BaseResponse.swift in Sources */,
+				88E62831252276890015F7F6 /* PaymentRemoteDataManagerProtocol.swift in Sources */,
 				88F67596250D2B8F00D19822 /* SignInLocalization.swift in Sources */,
 				88ED041E24EFFD9100BBCEF6 /* NotificationsHomeRouter.swift in Sources */,
 				887C630D250225C200C69E2A /* AlertEntity.swift in Sources */,
@@ -3116,6 +3146,7 @@
 				88D29165251549DD008738A5 /* UploadProtocols.swift in Sources */,
 				8885BB2C25019925000D7BD5 /* SplashRemoteDataManager.swift in Sources */,
 				8C8CB40F24E6E53A009679E5 /* SplashInteractor.swift in Sources */,
+				88E62826252274FF0015F7F6 /* PaymentHomeResponse.swift in Sources */,
 				88E0C7202505676C001A1B3B /* PayHomeLocalization.swift in Sources */,
 				882DE7A82510005900B1F4F7 /* SignUpPresenter.swift in Sources */,
 				88104B9124F2FD3600DB5ED9 /* PackageViewModel.swift in Sources */,
@@ -3174,6 +3205,7 @@
 				8885BB21250194D4000D7BD5 /* CityLocalDataManagerProtocol.swift in Sources */,
 				8CAB098124E7E8C200D38CDD /* HomeProtocols.swift in Sources */,
 				8885BB11250150F3000D7BD5 /* Gallery.swift in Sources */,
+				88E62835252276C60015F7F6 /* PaymentRemoteDataManager.swift in Sources */,
 				88EDA12D24FAE41200460B4D /* ProfileInteractor.swift in Sources */,
 				88ED03FB24EFC7B300BBCEF6 /* ClinicsSectionHeaderCell.swift in Sources */,
 				88B460D225193BA5002E798C /* SettingsVC.swift in Sources */,

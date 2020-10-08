@@ -12,10 +12,13 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProfileVC">
             <connections>
+                <outlet property="holderView" destination="iyA-j9-gCq" id="jh9-Uh-eEb"/>
                 <outlet property="logOutKeywordLabel" destination="rvd-2f-ury" id="IQl-bV-ynf"/>
                 <outlet property="profileKeywordLabel" destination="BWD-oV-deY" id="2Wp-gD-FAL"/>
                 <outlet property="sendToFriendKeywordLabel" destination="dqG-cm-6fw" id="lc5-of-MfX"/>
                 <outlet property="settingsKeywordLabel" destination="9PL-6R-KjC" id="yMH-cT-D33"/>
+                <outlet property="statusLabel" destination="YyG-7O-QF5" id="5CB-ii-hTc"/>
+                <outlet property="tagView" destination="5re-3W-WpM" id="gmP-So-DFR"/>
                 <outlet property="transactionsKeywordLabel" destination="REo-CK-tv7" id="9Oo-h0-cj3"/>
                 <outlet property="userImage" destination="ohl-j8-aiN" id="s6G-bQ-1t7"/>
                 <outlet property="userNameLabel" destination="Kqy-Pq-Nee" id="VA9-QX-iDW"/>
@@ -79,12 +82,52 @@
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
                                 </view>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kqy-Pq-Nee">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kqy-Pq-Nee">
                                     <rect key="frame" x="0.0" y="225" width="275" height="20.5"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <color key="textColor" name="secondaryText"/>
                                     <nil key="highlightedColor"/>
                                 </label>
+                                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iyA-j9-gCq" customClass="AnimatableView" customModule="IBAnimatable">
+                                    <rect key="frame" x="0.0" y="245.5" width="275" height="25"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5re-3W-WpM" customClass="AnimatableView" customModule="IBAnimatable">
+                                            <rect key="frame" x="100" y="0.0" width="75.5" height="25"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YyG-7O-QF5">
+                                                    <rect key="frame" x="20" y="5" width="35.5" height="15"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" name="secondaryBackground"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" name="primaryActionBackground"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="25" id="Egn-yE-FVg"/>
+                                                <constraint firstAttribute="trailing" secondItem="YyG-7O-QF5" secondAttribute="trailing" constant="20" id="KFX-8Z-NGO"/>
+                                                <constraint firstAttribute="bottom" secondItem="YyG-7O-QF5" secondAttribute="bottom" constant="5" id="m2X-b1-HHb"/>
+                                                <constraint firstItem="YyG-7O-QF5" firstAttribute="leading" secondItem="5re-3W-WpM" secondAttribute="leading" constant="20" id="wff-25-YOe"/>
+                                                <constraint firstItem="YyG-7O-QF5" firstAttribute="top" secondItem="5re-3W-WpM" secondAttribute="top" constant="5" id="xxs-iA-blB"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="12.5"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="5re-3W-WpM" firstAttribute="top" secondItem="iyA-j9-gCq" secondAttribute="top" id="jN5-ps-5Oj"/>
+                                        <constraint firstItem="5re-3W-WpM" firstAttribute="centerX" secondItem="iyA-j9-gCq" secondAttribute="centerX" id="tU9-xZ-dED"/>
+                                        <constraint firstAttribute="bottom" secondItem="5re-3W-WpM" secondAttribute="bottom" id="zGr-Ou-aFD"/>
+                                    </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="12"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
                             </subviews>
                         </stackView>
                     </subviews>
@@ -551,6 +594,9 @@
         </namedColor>
         <namedColor name="primaryNavBarBackground">
             <color red="0.85900002717971802" green="0.078000001609325409" blue="0.078000001609325409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="secondaryBackground">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="secondaryText">
             <color red="0.016000000759959221" green="0.17299999296665192" blue="0.36100000143051147" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

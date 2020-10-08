@@ -25,6 +25,10 @@ class TransactionsPresenter: TransactionsPresenterProtocol {
         view?.setupUI()
         view?.setupNavBar()
         view?.setupTransactionsTableView()
+        view?.hideTransactions()
+        view?.hideNoDataView()
+        view?.showLoadingIndictor()
+        interactor?.retriveTransactions()
     }
     func backButtonTapped() {
         router?.go(to: .back)
@@ -32,4 +36,14 @@ class TransactionsPresenter: TransactionsPresenterProtocol {
 }
 // MARK: - TransactionsOutputInteractorProtocol Implementation
 extension TransactionsPresenter: TransactionsOutputInteractorProtocol {
+    func onRetriveTransactionsSuccess() {
+        view?.hideLoadingIndictor()
+        view?.hideTransactions()
+        view?.showNoDataView()
+    }
+    func onRetriveTransactionsFail() {
+        view?.hideLoadingIndictor()
+        view?.hideTransactions()
+        view?.showNoDataView()
+    }
 }

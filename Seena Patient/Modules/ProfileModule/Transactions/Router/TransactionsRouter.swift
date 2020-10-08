@@ -14,7 +14,9 @@ class TransactionsRouter: TransactionsRouterProtocol {
     // MARK: - Assemble
     static func assembleModule() -> UIViewController {
         let router = TransactionsRouter()
-        let interactor = TransactionsInteractor()
+        let localDataManager = ProfileLocalDataManager()
+        let remoteDataManager = PaymentRemoteDataManager()
+        let interactor = TransactionsInteractor(localDataManager: localDataManager, remoteDataManager: remoteDataManager)
         let view = TransactionsVC()
         let presenter = TransactionsPresenter(view: view, interactor: interactor, router: router)
         router.viewController = view
