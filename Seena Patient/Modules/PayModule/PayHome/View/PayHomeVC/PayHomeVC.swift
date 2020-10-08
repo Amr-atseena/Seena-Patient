@@ -115,9 +115,13 @@ extension PayHomeVC: UITableViewDataSource {
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withClass: DueCell.self, for: indexPath)
+        presenter.config(dueCell: cell, atIndex: indexPath.row)
         return cell
     }
 }
 // MARK: - tableView Delegate Impelementations
 extension PayHomeVC: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        presenter.dueCell(selectedAtIndex: indexPath.row)
+    }
 }

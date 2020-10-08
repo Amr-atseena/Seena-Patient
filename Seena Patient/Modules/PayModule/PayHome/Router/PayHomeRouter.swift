@@ -27,11 +27,11 @@ class PayHomeRouter: PayHomeRouterProtocol {
     // MARK: - Routing
     func go(to router: PayHomeRoute) {
         switch router {
-        case .paymentChannel:
-            navigateToPaymentChannel()
+        case .paymentChannel(let installment):
+            navigateToPaymentChannel(installment: installment)
         }
     }
-    private func navigateToPaymentChannel() {
+    private func navigateToPaymentChannel(installment: Installment) {
         viewController?.hidesBottomBarWhenPushed = true
         viewController?.navigationController?.pushViewController(PaymentChannelRouter.assembleModule(), animated: true)
         viewController?.hidesBottomBarWhenPushed = false

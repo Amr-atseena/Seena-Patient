@@ -34,9 +34,20 @@ class PayHomePresenter: PayHomePresenterProtocol {
         interactor?.retriveUser()
     }
     func payButtonTapped() {
-        router?.go(to: .paymentChannel)
+       // router?.go(to: .paymentChannel)
     }
     func calculateButtonTapped() {
+    }
+    func config(dueCell cell: DueCellProtocol, atIndex index: Int) {
+        guard let installment = payment?.installment[index] else {
+            return
+        }
+        let due = PaymentDueViewModel(installment: installment)
+        cell.setPaymentDue(due)
+    }
+    func dueCell(selectedAtIndex index: Int) {
+        guard let installment = payment?.installment[index] else { return }
+        router?.go(to: .paymentChannel(installment: installment))
     }
 }
 // MARK: - PayHomeOutputInteractorProtocol Implementation

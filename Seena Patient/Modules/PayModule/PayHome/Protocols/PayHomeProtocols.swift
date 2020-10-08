@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 // MARK: - PayHome Router
 enum PayHomeRoute {
-    case paymentChannel
+    case paymentChannel(installment: Installment)
 }
 protocol PayHomeRouterProtocol {
     // Presenter -> Router
@@ -44,6 +44,8 @@ protocol PayHomePresenterProtocol: class {
     func viewWillAppear()
     func payButtonTapped()
     func calculateButtonTapped()
+    func config(dueCell cell: DueCellProtocol, atIndex index: Int)
+    func dueCell(selectedAtIndex index: Int)
     var numberOfDue: Int { get }
 }
 // MARK: - PayHome View
@@ -61,4 +63,8 @@ protocol PayHomeViewProtocol: class {
     func hidePaymentDue()
     func hideLoadingIndictor()
     func showLoadingIndictor()
+}
+
+protocol DueCellProtocol {
+    func setPaymentDue(_ due: PaymentDueViewModel)
 }
