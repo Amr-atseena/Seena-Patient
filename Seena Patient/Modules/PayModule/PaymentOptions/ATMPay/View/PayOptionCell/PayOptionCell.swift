@@ -35,5 +35,5 @@ extension PayOptionCell: PayOPtionCellProtocol {
         accountNumberKeywordLabel.text = account.title
         accountNumberLabel.text = account.accountNumber
         bankImage.kf.setImage(with: URL(string: account.image))
-    }    
+    }
 }

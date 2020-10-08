@@ -15,7 +15,7 @@ protocol ATMPayRouterProtocol {
     // Presenter -> Router
     var viewController: UIViewController? { get set }
     func go(to router: ATMPayRoute)
-    static func assembleModule(withType type: Int) -> UIViewController
+    static func assembleModule(withType type: Int, andInstallment installment: Installment) -> UIViewController
 }
 // MARK: - ATMPay Interactor
 protocol ATMPayInputInteractorProtocol: class {

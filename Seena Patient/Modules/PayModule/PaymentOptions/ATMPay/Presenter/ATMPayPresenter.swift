@@ -14,6 +14,8 @@ class ATMPayPresenter: ATMPayPresenterProtocol {
     var interactor: ATMPayInputInteractorProtocol?
     var router: ATMPayRouterProtocol?
     let localization = ATMPayLocalization()
+    let installment: Installment
+    var selectAccountIndex = -1
     let type: Int
     private var isNextButtonEnable = false
     private var accounts = [AccountViewModel]() {
@@ -25,11 +27,12 @@ class ATMPayPresenter: ATMPayPresenterProtocol {
         return accounts.count
     }
     // MARK: - Init
-    init(view: ATMPayViewProtocol?, interactor: ATMPayInputInteractorProtocol, router: ATMPayRouterProtocol, type: Int) {
+    init(view: ATMPayViewProtocol?, interactor: ATMPayInputInteractorProtocol, router: ATMPayRouterProtocol, type: Int, installment: Installment) {
         self.view = view
         self.interactor = interactor
         self.router = router
         self.type = type
+        self.installment = installment
     }
     // MARK: - Methods
     func viewDidLoad() {
@@ -53,8 +56,11 @@ class ATMPayPresenter: ATMPayPresenterProtocol {
         }
     }
     func payOption(deSelectedAtIndex index: Int) {
+        selectAccountIndex = index
     }
     func nextButtonTapped() {
+        let account = accounts[selectAccountIndex]
+        let payment = Payment(installment: installment, paymentMethod: type, account: account)
     }
 }
 // MARK: - ATMPayOutputInteractorProtocol Implementation

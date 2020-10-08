@@ -10,14 +10,14 @@ import Foundation
 import UIKit
 // MARK: - PaymentChannel Router
 enum PaymentChannelRoute {
-    case atm(Int)
+    case atm(Int,Installment)
     case payHome
 }
 protocol PaymentChannelRouterProtocol {
     // Presenter -> Router
     var viewController: UIViewController? { get set }
     func go(to router: PaymentChannelRoute)
-    static func assembleModule() -> UIViewController
+    static func assembleModule(withInstallment installment: Installment) -> UIViewController
 }
 // MARK: - PaymentChannel Interactor
 protocol PaymentChannelInputInteractorProtocol: class {

@@ -12,11 +12,11 @@ class PaymentChannelRouter: PaymentChannelRouterProtocol {
     // MARK: - Attributes
     weak var viewController: UIViewController?
     // MARK: - Assemble
-    static func assembleModule() -> UIViewController {
+    static func assembleModule(withInstallment installment: Installment) -> UIViewController {
         let router = PaymentChannelRouter()
         let interactor = PaymentChannelInteractor()
         let view = PaymentChannelVC()
-        let presenter = PaymentChannelPresenter(view: view, interactor: interactor, router: router)
+        let presenter = PaymentChannelPresenter(view: view, interactor: interactor, router: router, installment: installment)
         router.viewController = view
         interactor.presenter = presenter
         view.presenter = presenter
@@ -25,8 +25,8 @@ class PaymentChannelRouter: PaymentChannelRouterProtocol {
     // MARK: - Routing
     func go(to router: PaymentChannelRoute) {
         switch router {
-        case .atm(let type):
-            navigateToATM(withType: type)
+        case .atm(let type, let installment):
+            navigateToATM(withType: type, andInstallment: installment)
         case .payHome:
             navigateToPayHome()
         }
@@ -34,10 +34,10 @@ class PaymentChannelRouter: PaymentChannelRouterProtocol {
     private func navigateToPayHome() {
         viewController?.navigationController?.popViewController(animated: true)
     }
-    private func navigateToATM(withType type: Int) {
+    private func navigateToATM(withType type: Int, andInstallment installment: Installment) {
         removeChildsVC()
         guard let parent = viewController as? PaymentChannelVC else { return }
-        let child = ATMPayRouter.assembleModule(withType: type)
+        let child = ATMPayRouter.assembleModule(withType: type, andInstallment: installment)
         parent.containerView.addSubview(child.view)
         child.view.frame = parent.containerView.bounds
         parent.addChild(child)

@@ -48,6 +48,7 @@
 		88126AA6252F376200F99665 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 88126AA5252F376200F99665 /* GoogleService-Info.plist */; };
 		88126AAC252F45B300F99665 /* Installment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88126AAB252F45B300F99665 /* Installment.swift */; };
 		88126AB1252F49C500F99665 /* PaymentDueViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88126AB0252F49C500F99665 /* PaymentDueViewModel.swift */; };
+		881868A1252F5E3F00C0B42D /* Payment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881868A0252F5E3F00C0B42D /* Payment.swift */; };
 		881C9B28251F3DF600A481C0 /* PaymentLocalDataManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881C9B27251F3DF600A481C0 /* PaymentLocalDataManagerProtocol.swift */; };
 		881C9B2C251F3FD600A481C0 /* PaymentLocalDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881C9B2B251F3FD600A481C0 /* PaymentLocalDataManager.swift */; };
 		881C9B31251F42F000A481C0 /* AccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881C9B30251F42F000A481C0 /* AccountViewModel.swift */; };
@@ -351,6 +352,7 @@
 		88126AA5252F376200F99665 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		88126AAB252F45B300F99665 /* Installment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Installment.swift; sourceTree = "<group>"; };
 		88126AB0252F49C500F99665 /* PaymentDueViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentDueViewModel.swift; sourceTree = "<group>"; };
+		881868A0252F5E3F00C0B42D /* Payment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Payment.swift; sourceTree = "<group>"; };
 		881C9B27251F3DF600A481C0 /* PaymentLocalDataManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentLocalDataManagerProtocol.swift; sourceTree = "<group>"; };
 		881C9B2B251F3FD600A481C0 /* PaymentLocalDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentLocalDataManager.swift; sourceTree = "<group>"; };
 		881C9B30251F42F000A481C0 /* AccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewModel.swift; sourceTree = "<group>"; };
@@ -1621,8 +1623,8 @@
 			isa = PBXGroup;
 			children = (
 				88E0C713250566E5001A1B3B /* PayHome */,
-				88F67587250D251400D19822 /* Payment Options */,
 				88BE60AC2506CA0200EB2F03 /* PaymentChannel */,
+				88F67587250D251400D19822 /* PaymentOptions */,
 			);
 			path = PayModule;
 			sourceTree = "<group>";
@@ -2037,12 +2039,12 @@
 			path = Presenter;
 			sourceTree = "<group>";
 		};
-		88F67587250D251400D19822 /* Payment Options */ = {
+		88F67587250D251400D19822 /* PaymentOptions */ = {
 			isa = PBXGroup;
 			children = (
 				8803D1D825081E56004A6A46 /* ATMPay */,
 			);
-			path = "Payment Options";
+			path = PaymentOptions;
 			sourceTree = "<group>";
 		};
 		88F67589250D2AB300D19822 /* AuthModule */ = {
@@ -2609,6 +2611,7 @@
 				8829891625129DA0004C5AB6 /* Vodafone.swift */,
 				8829891B2512A301004C5AB6 /* DocumentType.swift */,
 				88126AAB252F45B300F99665 /* Installment.swift */,
+				881868A0252F5E3F00C0B42D /* Payment.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -3092,6 +3095,7 @@
 				88340ED7251A9F5D0099EB06 /* NotificationViewModel.swift in Sources */,
 				88ED041F24EFFD9100BBCEF6 /* NotificationsHomeProtocols.swift in Sources */,
 				88BE60B92506CA2500EB2F03 /* PaymentChannelLocalization.swift in Sources */,
+				881868A1252F5E3F00C0B42D /* Payment.swift in Sources */,
 				88104B8124F2E39100DB5ED9 /* HomeResponse.swift in Sources */,
 				8803D1F025082532004A6A46 /* PayOptionCell.swift in Sources */,
 				88ED041D24EFFD9100BBCEF6 /* NotificationsHomePresenter.swift in Sources */,

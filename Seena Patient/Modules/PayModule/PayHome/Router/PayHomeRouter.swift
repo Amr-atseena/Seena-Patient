@@ -33,7 +33,7 @@ class PayHomeRouter: PayHomeRouterProtocol {
     }
     private func navigateToPaymentChannel(installment: Installment) {
         viewController?.hidesBottomBarWhenPushed = true
-        viewController?.navigationController?.pushViewController(PaymentChannelRouter.assembleModule(), animated: true)
+        viewController?.navigationController?.pushViewController(PaymentChannelRouter.assembleModule(withInstallment: installment), animated: true)
         viewController?.hidesBottomBarWhenPushed = false
 
     }

@@ -13,16 +13,19 @@ class PaymentChannelPresenter: PaymentChannelPresenterProtocol {
     weak var view: PaymentChannelViewProtocol?
     var interactor: PaymentChannelInputInteractorProtocol?
     var router: PaymentChannelRouterProtocol?
+    let installment: Installment
     let localization = PaymentChannelLocalization()
     private var paymentMethods = [OptionViewModel]()
     var numberOfPaymentMethods: Int {
         return paymentMethods.count
     }
     // MARK: - Init
-    init(view: PaymentChannelViewProtocol?, interactor: PaymentChannelInputInteractorProtocol, router: PaymentChannelRouterProtocol ) {
+    init(view: PaymentChannelViewProtocol?, interactor: PaymentChannelInputInteractorProtocol,
+         router: PaymentChannelRouterProtocol, installment: Installment ) {
         self.view = view
         self.interactor = interactor
         self.router = router
+        self.installment = installment
     }
     // MARK: - Methods
     func viewDidLoad() {
@@ -45,7 +48,7 @@ class PaymentChannelPresenter: PaymentChannelPresenterProtocol {
         paymentMethods = paymentMethods.map { OptionViewModel(name: $0.name, isSelected: false)}
         paymentMethods[index].isSelected = true
         view?.reloadPaymentMethods()
-        router?.go(to: .atm(index))
+        router?.go(to: .atm(index, installment))
     }
 }
 // MARK: - PaymentChannelOutputInteractorProtocol Implementation
