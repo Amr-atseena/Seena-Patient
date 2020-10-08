@@ -49,6 +49,13 @@
 		88126AAC252F45B300F99665 /* Installment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88126AAB252F45B300F99665 /* Installment.swift */; };
 		88126AB1252F49C500F99665 /* PaymentDueViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88126AB0252F49C500F99665 /* PaymentDueViewModel.swift */; };
 		881868A1252F5E3F00C0B42D /* Payment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881868A0252F5E3F00C0B42D /* Payment.swift */; };
+		881868AC252F6A8900C0B42D /* PayVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 881868A5252F6A8900C0B42D /* PayVC.xib */; };
+		881868AD252F6A8900C0B42D /* PayPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881868A6252F6A8900C0B42D /* PayPresenter.swift */; };
+		881868AE252F6A8900C0B42D /* PayRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881868A7252F6A8900C0B42D /* PayRouter.swift */; };
+		881868AF252F6A8900C0B42D /* PayProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881868A8252F6A8900C0B42D /* PayProtocols.swift */; };
+		881868B0252F6A8900C0B42D /* PayInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881868A9252F6A8900C0B42D /* PayInteractor.swift */; };
+		881868B1252F6A8900C0B42D /* PayLocalization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881868AA252F6A8900C0B42D /* PayLocalization.swift */; };
+		881868B2252F6A8900C0B42D /* PayVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881868AB252F6A8900C0B42D /* PayVC.swift */; };
 		881C9B28251F3DF600A481C0 /* PaymentLocalDataManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881C9B27251F3DF600A481C0 /* PaymentLocalDataManagerProtocol.swift */; };
 		881C9B2C251F3FD600A481C0 /* PaymentLocalDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881C9B2B251F3FD600A481C0 /* PaymentLocalDataManager.swift */; };
 		881C9B31251F42F000A481C0 /* AccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881C9B30251F42F000A481C0 /* AccountViewModel.swift */; };
@@ -353,6 +360,13 @@
 		88126AAB252F45B300F99665 /* Installment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Installment.swift; sourceTree = "<group>"; };
 		88126AB0252F49C500F99665 /* PaymentDueViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentDueViewModel.swift; sourceTree = "<group>"; };
 		881868A0252F5E3F00C0B42D /* Payment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Payment.swift; sourceTree = "<group>"; };
+		881868A5252F6A8900C0B42D /* PayVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PayVC.xib; sourceTree = "<group>"; };
+		881868A6252F6A8900C0B42D /* PayPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayPresenter.swift; sourceTree = "<group>"; };
+		881868A7252F6A8900C0B42D /* PayRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayRouter.swift; sourceTree = "<group>"; };
+		881868A8252F6A8900C0B42D /* PayProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayProtocols.swift; sourceTree = "<group>"; };
+		881868A9252F6A8900C0B42D /* PayInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayInteractor.swift; sourceTree = "<group>"; };
+		881868AA252F6A8900C0B42D /* PayLocalization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayLocalization.swift; sourceTree = "<group>"; };
+		881868AB252F6A8900C0B42D /* PayVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayVC.swift; sourceTree = "<group>"; };
 		881C9B27251F3DF600A481C0 /* PaymentLocalDataManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentLocalDataManagerProtocol.swift; sourceTree = "<group>"; };
 		881C9B2B251F3FD600A481C0 /* PaymentLocalDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentLocalDataManager.swift; sourceTree = "<group>"; };
 		881C9B30251F42F000A481C0 /* AccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewModel.swift; sourceTree = "<group>"; };
@@ -784,6 +798,20 @@
 				88126AB0252F49C500F99665 /* PaymentDueViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		881868A4252F69F700C0B42D /* Pay */ = {
+			isa = PBXGroup;
+			children = (
+				881868A5252F6A8900C0B42D /* PayVC.xib */,
+				881868A6252F6A8900C0B42D /* PayPresenter.swift */,
+				881868A7252F6A8900C0B42D /* PayRouter.swift */,
+				881868A8252F6A8900C0B42D /* PayProtocols.swift */,
+				881868A9252F6A8900C0B42D /* PayInteractor.swift */,
+				881868AA252F6A8900C0B42D /* PayLocalization.swift */,
+				881868AB252F6A8900C0B42D /* PayVC.swift */,
+			);
+			path = Pay;
 			sourceTree = "<group>";
 		};
 		881C9B26251F3DD400A481C0 /* Payment */ = {
@@ -1622,6 +1650,7 @@
 		88E0C712250566D3001A1B3B /* PayModule */ = {
 			isa = PBXGroup;
 			children = (
+				881868A4252F69F700C0B42D /* Pay */,
 				88E0C713250566E5001A1B3B /* PayHome */,
 				88BE60AC2506CA0200EB2F03 /* PaymentChannel */,
 				88F67587250D251400D19822 /* PaymentOptions */,
@@ -2981,6 +3010,7 @@
 				88120B7124EF1CC3004A2381 /* ClinicCell.xib in Resources */,
 				88ED041C24EFFD9100BBCEF6 /* NotificationsHomeVC.xib in Resources */,
 				883D941D24F474CA004A3F86 /* PackageSkeltonCell.xib in Resources */,
+				881868AC252F6A8900C0B42D /* PayVC.xib in Resources */,
 				88D29162251549DD008738A5 /* UploadVC.xib in Resources */,
 				8C8CB3CE24E6B817009679E5 /* LaunchScreen.storyboard in Resources */,
 				8CAB099B24E808A700D38CDD /* Tajawal-ExtraBold.ttf in Resources */,
@@ -3118,6 +3148,7 @@
 				8C81545224EB21CA00CA30E7 /* ServicesSearchPresenter.swift in Sources */,
 				88EDA12C24FAE41200460B4D /* ProfileProtocols.swift in Sources */,
 				88EDA12A24FAE41200460B4D /* ProfilePresenter.swift in Sources */,
+				881868B0252F6A8900C0B42D /* PayInteractor.swift in Sources */,
 				88120B8024EF2C66004A2381 /* ClinicDetailsVC.swift in Sources */,
 				88104B8324F2E3AF00DB5ED9 /* Package.swift in Sources */,
 				8804F8532523BEC6005CF204 /* ApplicationStatusResponse.swift in Sources */,
@@ -3183,7 +3214,9 @@
 				88D2912A2515153D008738A5 /* UploadDocumentsLocalization.swift in Sources */,
 				8CAB097924E7E6CB00D38CDD /* UIViewContorller+Extensions.swift in Sources */,
 				88F675AC250D5F6F00D19822 /* LoginRequestParameters.swift in Sources */,
+				881868B1252F6A8900C0B42D /* PayLocalization.swift in Sources */,
 				88BE60B52506CA2500EB2F03 /* PaymentChannelPresenter.swift in Sources */,
+				881868B2252F6A8900C0B42D /* PayVC.swift in Sources */,
 				88E0C71F2505676C001A1B3B /* PayHomeInteractor.swift in Sources */,
 				882DE79A250FEE6C00B1F4F7 /* AuthenticationLocalDataManager.swift in Sources */,
 				882989252512AAFE004C5AB6 /* UIAlertController+Extension.swift in Sources */,
@@ -3274,6 +3307,7 @@
 				88F67595250D2B8F00D19822 /* SignInInteractor.swift in Sources */,
 				88B460A9251928E5002E798C /* TransactionsProtocols.swift in Sources */,
 				88120B7C24EF2C66004A2381 /* ClinicDetailsRouter.swift in Sources */,
+				881868AD252F6A8900C0B42D /* PayPresenter.swift in Sources */,
 				887C631F2502557D00C69E2A /* ClinicsListParameters.swift in Sources */,
 				8803D1E425081EAA004A6A46 /* ATMPayInteractor.swift in Sources */,
 				88F675AA250D5E7E00D19822 /* AuthenticationEndPoint.swift in Sources */,
@@ -3308,6 +3342,7 @@
 				88ED042024EFFD9100BBCEF6 /* NotificationsHomeInteractor.swift in Sources */,
 				8C8CB3EB24E6CA46009679E5 /* UINavigationController+Extensions.swift in Sources */,
 				8CAB09A524E80C2700D38CDD /* Typography.swift in Sources */,
+				881868AF252F6A8900C0B42D /* PayProtocols.swift in Sources */,
 				88A06F562517C4F900D8F7A3 /* ProfileLocalDataManagerProtocol.swift in Sources */,
 				88340EBB251A92FF0099EB06 /* NotificationLocalDataManager.swift in Sources */,
 				8829891525129D04004C5AB6 /* Account.swift in Sources */,
@@ -3317,6 +3352,7 @@
 				88126AAC252F45B300F99665 /* Installment.swift in Sources */,
 				88EDA12E24FAE41200460B4D /* ProfileLocalization.swift in Sources */,
 				88E0C72A25056A02001A1B3B /* MKMagneticProgress.swift in Sources */,
+				881868AE252F6A8900C0B42D /* PayRouter.swift in Sources */,
 				88340EC0251A936A0099EB06 /* NotificationsRemoteDataManagerProtocol.swift in Sources */,
 				8C8CB3FC24E6CF23009679E5 /* RemoteServiceType.swift in Sources */,
 				882DE795250FECC500B1F4F7 /* UserLocalDataManagerProtocol.swift in Sources */,
