@@ -12,11 +12,11 @@ class PayRouter: PayRouterProtocol {
     // MARK: - Attributes
     weak var viewController: UIViewController?
     // MARK: - Assemble
-    static func assembleModule() -> UIViewController {
+    static func assembleModule(withPayment payment: Payment) -> UIViewController {
         let router = PayRouter()
         let interactor = PayInteractor()
         let view = PayVC()
-        let presenter = PayPresenter(view: view, interactor: interactor, router: router)
+        let presenter = PayPresenter(view: view, interactor: interactor, router: router, payment: payment)
         router.viewController = view
         interactor.presenter = presenter
         view.presenter = presenter
@@ -24,5 +24,12 @@ class PayRouter: PayRouterProtocol {
     }
     // MARK: - Routing
     func go(to router: PayRoute) {
+        switch router{
+        case .paymentChannel:
+            navigateToPaymentChannel()
+        }
+    }
+    private func navigateToPaymentChannel() {
+        viewController?.navigationController?.popViewController(animated: true)
     }
 }

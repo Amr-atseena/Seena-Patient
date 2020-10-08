@@ -25,5 +25,14 @@ class ATMPayRouter: ATMPayRouterProtocol {
     }
     // MARK: - Routing
     func go(to router: ATMPayRoute) {
+        switch router {
+        case .pay(let pay):
+            navigateToPay(payment: pay)
+        }
+    }
+    
+    private func navigateToPay(payment: Payment) {
+        let payVC = PayRouter.assembleModule(withPayment: payment)
+        viewController?.navigationController?.pushViewController(payVC, animated: true)
     }
 }

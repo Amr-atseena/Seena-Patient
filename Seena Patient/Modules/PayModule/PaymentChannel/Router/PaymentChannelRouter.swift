@@ -32,6 +32,7 @@ class PaymentChannelRouter: PaymentChannelRouterProtocol {
         }
     }
     private func navigateToPayHome() {
+        viewController?.tabBarController?.tabBar.isHidden = false
         viewController?.navigationController?.popViewController(animated: true)
     }
     private func navigateToATM(withType type: Int, andInstallment installment: Installment) {

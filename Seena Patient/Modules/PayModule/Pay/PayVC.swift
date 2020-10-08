@@ -10,6 +10,12 @@ import UIKit
 
 class PayVC: UIViewController, PayViewProtocol {
     // MARK: - Outlets
+    @IBOutlet private var paymentKeywordLabel: UILabel!
+    @IBOutlet private var bankImage: UIImageView!
+    @IBOutlet private var accountNumberKeywordLabel: UILabel!
+    @IBOutlet private var accountNumberLabel: UILabel!
+    @IBOutlet private var nextButton: UIButton!
+    @IBOutlet private var transactionIdTextFiled: UITextField!
     // MARK: - Attributes
     var presenter: PayPresenterProtocol!
     // MARK: - Init
@@ -26,7 +32,42 @@ class PayVC: UIViewController, PayViewProtocol {
         presenter.viewDidLoad()
     }
     // MARK: - Methods
+    func setupUI() {
+        // paymentKeyword Label
+        paymentKeywordLabel.text = presenter.localization.payment
+        paymentKeywordLabel.font = DesignSystem.Typography.heading.font
+        // accountNumberKeyword Label
+        accountNumberKeywordLabel.font = DesignSystem.Typography.subHeading3.font
+        // accountNumber Label
+        accountNumberLabel.font = DesignSystem.Typography.title3.font
+        nextButton.setTitle(presenter.localization.next, for: .normal)
+        nextButton.titleLabel?.font = DesignSystem.Typography.subHeading3.font
+        //  transactionId TextFiled
+        transactionIdTextFiled.placeholder = presenter.localization.receiptReference
+    }
+    func setAccount(image: String, accountName: String, accountNumber: String) {
+        bankImage.kf.setImage(with: URL(string: image))
+        accountNumberKeywordLabel.text = accountName
+        accountNumberLabel.text = accountNumber
+    }
+    func enableNextButton() {
+        nextButton.backgroundColor = DesignSystem.Colors.primaryActionBackground.color
+        nextButton.isUserInteractionEnabled = true
+    }
+    func disableNextButton() {
+        nextButton.backgroundColor = DesignSystem.Colors.primaryBorder.color
+        nextButton.isUserInteractionEnabled = false
+    }
     // MARK: - Actions
+    @IBAction private func didNextButtonTapped(_ sender: UIButton) {
+        presenter.nextButtonTapped(withTransactionId: transactionIdTextFiled.text)
+    }
+    @IBAction private func didBackButtonTapped(_ sender: UIButton) {
+        presenter.backButtonTapped()
+    }
+    @IBAction private func didTranactionTextFieldEditChange(_ sender: UITextField) {
+        presenter.transactionIdEditChange(transactionId: sender.text)
+    }
     // MARK: - DeInit
     deinit {
          debugPrint(PayVC.className + "Release from Momery")

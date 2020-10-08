@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 // MARK: - ATMPay Router
 enum ATMPayRoute {
+    case pay(Payment)
 }
 protocol ATMPayRouterProtocol {
     // Presenter -> Router

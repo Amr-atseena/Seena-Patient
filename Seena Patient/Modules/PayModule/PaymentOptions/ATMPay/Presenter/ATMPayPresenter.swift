@@ -54,13 +54,14 @@ class ATMPayPresenter: ATMPayPresenterProtocol {
             view?.enableNextButton()
             isNextButtonEnable = true
         }
+        selectAccountIndex = index
     }
     func payOption(deSelectedAtIndex index: Int) {
-        selectAccountIndex = index
     }
     func nextButtonTapped() {
         let account = accounts[selectAccountIndex]
         let payment = Payment(installment: installment, paymentMethod: type, account: account)
+        router?.go(to: .pay(payment))
     }
 }
 // MARK: - ATMPayOutputInteractorProtocol Implementation

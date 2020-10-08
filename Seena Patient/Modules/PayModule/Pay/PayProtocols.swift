@@ -10,12 +10,13 @@ import Foundation
 import UIKit
 // MARK: - Pay Router
 enum PayRoute {
+    case paymentChannel
 }
 protocol PayRouterProtocol {
     // Presenter -> Router
     var viewController: UIViewController? { get set }
     func go(to router: PayRoute)
-    static func assembleModule() -> UIViewController
+    static func assembleModule(withPayment payment: Payment) -> UIViewController
 }
 // MARK: - Pay Interactor
 protocol PayInputInteractorProtocol: class {
@@ -33,9 +34,16 @@ protocol PayPresenterProtocol: class {
     var localization: PayLocalization { get }
     // view -> Presenter
     func viewDidLoad()
+    func backButtonTapped()
+    func nextButtonTapped(withTransactionId transactionId: String?)
+    func transactionIdEditChange(transactionId: String?)
 }
 // MARK: - Pay View
 protocol PayViewProtocol: class {
     var presenter: PayPresenterProtocol! { get set }
     // Presenter -> View
+    func setupUI()
+    func setAccount(image: String, accountName:String, accountNumber: String)
+    func enableNextButton()
+    func disableNextButton()
 }

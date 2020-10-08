@@ -14,14 +14,37 @@ class PayPresenter: PayPresenterProtocol {
     var interactor: PayInputInteractorProtocol?
     var router: PayRouterProtocol?
     let localization = PayLocalization()
+    var payment: Payment
     // MARK: - Init
-    init(view: PayViewProtocol?, interactor: PayInputInteractorProtocol, router: PayRouterProtocol ) {
+    init(view: PayViewProtocol?, interactor: PayInputInteractorProtocol, router: PayRouterProtocol, payment: Payment ) {
         self.view = view
         self.interactor = interactor
         self.router = router
+        self.payment = payment
     }
     // MARK: - Methods
     func viewDidLoad() {
+        view?.setupUI()
+        view?.setAccount(image: payment.account.image, accountName: payment.account.title, accountNumber: payment.account.accountNumber)
+    }
+    func nextButtonTapped(withTransactionId transactionId: String?) {
+        guard let transaction = transactionId else {
+            return
+        }
+        payment.tansactionId = transaction
+    }
+    func backButtonTapped() {
+        router?.go(to: .paymentChannel)
+    }
+    func transactionIdEditChange(transactionId: String?) {
+        guard let transaction = transactionId else {
+            return
+        }
+        if transaction.isEmpty {
+            view?.disableNextButton()
+        } else {
+            view?.enableNextButton()
+        }
     }
 }
 // MARK: - PayOutputInteractorProtocol Implementation
