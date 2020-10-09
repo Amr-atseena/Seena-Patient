@@ -16,6 +16,7 @@ class PayVC: UIViewController, PayViewProtocol {
     @IBOutlet private var accountNumberLabel: UILabel!
     @IBOutlet private var nextButton: UIButton!
     @IBOutlet private var transactionIdTextFiled: UITextField!
+    @IBOutlet private var loadingIndicotor: UIActivityIndicatorView!
     // MARK: - Attributes
     var presenter: PayPresenterProtocol!
     // MARK: - Init
@@ -57,6 +58,12 @@ class PayVC: UIViewController, PayViewProtocol {
     func disableNextButton() {
         nextButton.backgroundColor = DesignSystem.Colors.primaryBorder.color
         nextButton.isUserInteractionEnabled = false
+    }
+    func showLoadingIndicotor() {
+        loadingIndicotor.startAnimating()
+    }
+    func hideLoadingIndictor() {
+        loadingIndicotor.stopAnimating()
     }
     // MARK: - Actions
     @IBAction private func didNextButtonTapped(_ sender: UIButton) {

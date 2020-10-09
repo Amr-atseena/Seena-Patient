@@ -68,12 +68,12 @@ class ATMPayPresenter: ATMPayPresenterProtocol {
 extension ATMPayPresenter: ATMPayOutputInteractorProtocol {
     func onRetriveBanksAccountSuccess(_ banksAccounts: [Account]) {
         accounts = banksAccounts.map {
-            AccountViewModel(title: localization.accountsNumbers, accountNumber: $0.number, image: $0.image)
+            AccountViewModel(id: $0.id, title: localization.accountsNumbers, accountNumber: $0.number, image: $0.image)
         }
     }
     func onRetriveVodafoneAccountSuccess(_ vodafoneAccounts: [Vodafone]) {
         accounts = vodafoneAccounts.map {
-            AccountViewModel(title: localization.phoneNumbers, accountNumber: $0.number, image: $0.image)
+            AccountViewModel(id: $0.id, title: localization.phoneNumbers, accountNumber: $0.number, image: $0.image)
         }
     }
 }

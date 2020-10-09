@@ -11,6 +11,7 @@ import UIKit
 // MARK: - Pay Router
 enum PayRoute {
     case paymentChannel
+    case alert(AlertEntity)
 }
 protocol PayRouterProtocol {
     // Presenter -> Router
@@ -21,10 +22,15 @@ protocol PayRouterProtocol {
 // MARK: - Pay Interactor
 protocol PayInputInteractorProtocol: class {
     var presenter: PayOutputInteractorProtocol? { get set }
+    var localDataManager: PaymentLocalDataManagerProtocol { get set }
+    var remoteDataManager: PaymentRemoteDataManagerProtocol { get set}
     // Presenter -> Interactor
+    func payInstallment(_ payemnt: Payment)
 }
 protocol PayOutputInteractorProtocol: class {
     // Interactor -> Presenter
+    func onRetriveDataSuccess()
+    func onRetriveDataFail(withError error: String)
 }
 // MARK: - Pay Preseneter
 protocol PayPresenterProtocol: class {
@@ -43,7 +49,9 @@ protocol PayViewProtocol: class {
     var presenter: PayPresenterProtocol! { get set }
     // Presenter -> View
     func setupUI()
-    func setAccount(image: String, accountName:String, accountNumber: String)
+    func setAccount(image: String, accountName: String, accountNumber: String)
     func enableNextButton()
     func disableNextButton()
+    func showLoadingIndicotor()
+    func hideLoadingIndictor()
 }

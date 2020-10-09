@@ -11,6 +11,7 @@ import Moya
 enum PaymentEndPoint {
     case paymentHome(String)
     case transactions(String)
+    case pay(String,Payment)
 }
 // MARK: - TargetType Protocol Implementation
 extension PaymentEndPoint: TargetType, EnvironmentProtocol {
@@ -23,10 +24,17 @@ extension PaymentEndPoint: TargetType, EnvironmentProtocol {
             return "payment/home"
         case .transactions:
             return "payment/transactions"
+        case .pay:
+            return "payment/pay"
         }
     }
     var method: Moya.Method {
-        return .get
+        switch self {
+        case .pay:
+            return .patch
+        default:
+            return .get
+        }
     }
     var sampleData: Data {
         return Data()
@@ -37,6 +45,13 @@ extension PaymentEndPoint: TargetType, EnvironmentProtocol {
             return .requestPlain
         case .transactions:
             return .requestPlain
+        case .pay(_, let payment):
+            let params = ["installment_id": payment.installment.installmentId,
+                          "payment_method": payment.paymentMethod,
+                          "transaction_id": payment.tansactionId,
+                          "id": payment.account.id
+            ] as [String: Any]
+            return .requestParameters(parameters: params, encoding: JSONEncoding.default)
         }
     }
     var headers: [String: String]? {
@@ -53,6 +68,12 @@ extension PaymentEndPoint: TargetType, EnvironmentProtocol {
             "Accept-Encoding": "gzip, deflate, br",
             "Accept-Language": "en"
         ]
+        case .pay(let token, _):
+            return [
+                "Authorization": "Bearer \(token)",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Accept-Language": "en"
+            ]
         }
     }
 }

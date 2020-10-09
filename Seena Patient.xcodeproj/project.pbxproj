@@ -62,6 +62,7 @@
 		8827E94E24F5A226009C64FB /* EmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8827E94D24F5A226009C64FB /* EmptyStateView.swift */; };
 		8827E95024F5A264009C64FB /* EmptyStateView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8827E94F24F5A264009C64FB /* EmptyStateView.xib */; };
 		8827E95324F5A8F2009C64FB /* ServicesListParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8827E95224F5A8F2009C64FB /* ServicesListParameters.swift */; };
+		88295E5925303C3800AFF5A3 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88295E5825303C3800AFF5A3 /* Response.swift */; };
 		8829891325129BE2004C5AB6 /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8829891225129BE2004C5AB6 /* Document.swift */; };
 		8829891525129D04004C5AB6 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8829891425129D04004C5AB6 /* Account.swift */; };
 		8829891725129DA0004C5AB6 /* Vodafone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8829891625129DA0004C5AB6 /* Vodafone.swift */; };
@@ -373,6 +374,7 @@
 		8827E94D24F5A226009C64FB /* EmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStateView.swift; sourceTree = "<group>"; };
 		8827E94F24F5A264009C64FB /* EmptyStateView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyStateView.xib; sourceTree = "<group>"; };
 		8827E95224F5A8F2009C64FB /* ServicesListParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesListParameters.swift; sourceTree = "<group>"; };
+		88295E5825303C3800AFF5A3 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 		8829891225129BE2004C5AB6 /* Document.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Document.swift; sourceTree = "<group>"; };
 		8829891425129D04004C5AB6 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		8829891625129DA0004C5AB6 /* Vodafone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vodafone.swift; sourceTree = "<group>"; };
@@ -863,14 +865,15 @@
 		8829891125129BA6004C5AB6 /* Response */ = {
 			isa = PBXGroup;
 			children = (
-				887C6325250277B200C69E2A /* ClinicsHomeResponse.swift */,
 				88104B7C24F2E0F300DB5ED9 /* BaseResponse.swift */,
+				887C6325250277B200C69E2A /* ClinicsHomeResponse.swift */,
 				88104B7E24F2E14E00DB5ED9 /* ServerResonse.swift */,
 				887C630A25021CE800C69E2A /* SplashResponse.swift */,
 				88104B8024F2E39100DB5ED9 /* HomeResponse.swift */,
 				88F675A0250D56A700D19822 /* LoginResponse.swift */,
 				88E62825252274FF0015F7F6 /* PaymentHomeResponse.swift */,
 				8804F8522523BEC6005CF204 /* ApplicationStatusResponse.swift */,
+				88295E5825303C3800AFF5A3 /* Response.swift */,
 			);
 			path = Response;
 			sourceTree = "<group>";
@@ -3145,6 +3148,7 @@
 				8C8CB40624E6DA9B009679E5 /* SplashProtocols.swift in Sources */,
 				883D941C24F474CA004A3F86 /* PackageSkeltonCell.swift in Sources */,
 				88D2914925152233008738A5 /* DocumentTypeCell.swift in Sources */,
+				88295E5925303C3800AFF5A3 /* Response.swift in Sources */,
 				8C81545224EB21CA00CA30E7 /* ServicesSearchPresenter.swift in Sources */,
 				88EDA12C24FAE41200460B4D /* ProfileProtocols.swift in Sources */,
 				88EDA12A24FAE41200460B4D /* ProfilePresenter.swift in Sources */,

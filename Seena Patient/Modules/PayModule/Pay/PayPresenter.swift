@@ -32,6 +32,8 @@ class PayPresenter: PayPresenterProtocol {
             return
         }
         payment.tansactionId = transaction
+        view?.showLoadingIndicotor()
+        interactor?.payInstallment(payment)
     }
     func backButtonTapped() {
         router?.go(to: .paymentChannel)
@@ -49,4 +51,11 @@ class PayPresenter: PayPresenterProtocol {
 }
 // MARK: - PayOutputInteractorProtocol Implementation
 extension PayPresenter: PayOutputInteractorProtocol {
+    func onRetriveDataSuccess() {
+        view?.hideLoadingIndictor()
+    }
+    func onRetriveDataFail(withError error: String) {
+        view?.hideLoadingIndictor()
+        router?.go(to: .alert(AlertEntity(title: "Error".localized, message: error)))
+    }
 }

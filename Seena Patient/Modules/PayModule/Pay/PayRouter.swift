@@ -14,7 +14,9 @@ class PayRouter: PayRouterProtocol {
     // MARK: - Assemble
     static func assembleModule(withPayment payment: Payment) -> UIViewController {
         let router = PayRouter()
-        let interactor = PayInteractor()
+        let localDataManager = PaymentLocalDataManager()
+        let remoteDataManager = PaymentRemoteDataManager()
+        let interactor = PayInteractor(localDataManager: localDataManager, remoteDataManager: remoteDataManager)
         let view = PayVC()
         let presenter = PayPresenter(view: view, interactor: interactor, router: router, payment: payment)
         router.viewController = view
@@ -24,12 +26,18 @@ class PayRouter: PayRouterProtocol {
     }
     // MARK: - Routing
     func go(to router: PayRoute) {
-        switch router{
+        switch router {
         case .paymentChannel:
             navigateToPaymentChannel()
+        case .alert(let alertEntity):
+        showAlert(alertEntity: alertEntity)
         }
     }
     private func navigateToPaymentChannel() {
         viewController?.navigationController?.popViewController(animated: true)
+    }
+    private func showAlert(alertEntity: AlertEntity) {
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        viewController?.showAlertController(title: alertEntity.title, message: alertEntity.message, actions: [okAction])
     }
 }

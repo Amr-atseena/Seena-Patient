@@ -15,6 +15,7 @@
                 <outlet property="accountNumberKeywordLabel" destination="FaT-bO-GTE" id="w8M-Os-T93"/>
                 <outlet property="accountNumberLabel" destination="Y84-pk-Wo2" id="Zfb-hO-0DP"/>
                 <outlet property="bankImage" destination="uyB-P6-iuB" id="tBd-lw-A3y"/>
+                <outlet property="loadingIndicotor" destination="NGS-NG-8dk" id="fhT-l8-q6C"/>
                 <outlet property="nextButton" destination="54O-iu-tCY" id="MEy-CV-Zag"/>
                 <outlet property="paymentKeywordLabel" destination="bXS-1P-z6R" id="yBs-dh-y8v"/>
                 <outlet property="transactionIdTextFiled" destination="PuH-5P-Fpl" id="TBE-dj-07g"/>
@@ -229,14 +230,19 @@
                                         <action selector="didNextButtonTapped:" destination="-1" eventType="touchUpInside" id="lff-da-wiP"/>
                                     </connections>
                                 </button>
+                                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="NGS-NG-8dk">
+                                    <rect key="frame" x="342" y="344.5" width="37" height="37"/>
+                                </activityIndicatorView>
                             </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstItem="sog-3H-cp3" firstAttribute="leading" secondItem="ayU-a9-Zzj" secondAttribute="leading" constant="20" id="6Zd-Pe-sEp"/>
                                 <constraint firstAttribute="bottom" secondItem="54O-iu-tCY" secondAttribute="bottom" constant="20" id="EiF-wu-5gl"/>
                                 <constraint firstAttribute="trailing" secondItem="sog-3H-cp3" secondAttribute="trailing" constant="20" id="KeU-Gd-UYY"/>
+                                <constraint firstItem="NGS-NG-8dk" firstAttribute="trailing" secondItem="54O-iu-tCY" secondAttribute="trailing" constant="-15" id="Kg3-zn-o7Z"/>
                                 <constraint firstAttribute="trailing" secondItem="54O-iu-tCY" secondAttribute="trailing" constant="20" id="Kzy-CC-duD"/>
                                 <constraint firstItem="sog-3H-cp3" firstAttribute="centerY" secondItem="ayU-a9-Zzj" secondAttribute="centerY" constant="-25" id="S91-l5-JuG"/>
+                                <constraint firstItem="NGS-NG-8dk" firstAttribute="centerY" secondItem="54O-iu-tCY" secondAttribute="centerY" id="hN8-Ej-yiJ"/>
                                 <constraint firstItem="54O-iu-tCY" firstAttribute="leading" secondItem="ayU-a9-Zzj" secondAttribute="leading" constant="20" id="jK2-UT-do2"/>
                             </constraints>
                         </view>
