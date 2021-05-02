@@ -11,6 +11,6 @@ import Foundation
 struct NotificationsHomeLocalization {
     // MARK: - Attributes
     var notifications: String {
-        return "Notifcations".localized
+        return "Notifications".localized
     }
 }

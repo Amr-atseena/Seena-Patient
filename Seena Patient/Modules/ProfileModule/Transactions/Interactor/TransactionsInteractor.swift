@@ -26,11 +26,11 @@ class TransactionsInteractor: TransactionsInputInteractorProtocol {
             case .failure:
                 self.presenter?.onRetriveTransactionsFail()
             case .success(let data):
-                guard let data = data as? ServerResonse, data.code == 200 else {
+                guard let data = data as? BaseResponse<[Transaction]>, data.serverResonse.code == 200, let transactions = data.response else {
                     self.presenter?.onRetriveTransactionsFail()
                     return
                 }
-                self.presenter?.onRetriveTransactionsSuccess()
+                self.presenter?.onRetriveTransactionsSuccess(withTransactions: transactions)
             }
         }
     }

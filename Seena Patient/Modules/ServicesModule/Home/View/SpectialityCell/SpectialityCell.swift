@@ -18,7 +18,17 @@ class SpectialityCell: UITableViewCell {
         spectialityNameLabel.textColor = DesignSystem.Colors.secondaryText.color
         spectialityNameLabel.font = DesignSystem.Typography.subHeading2.font
         servicesCollectionView.register(cellWithClass: ServiceCell.self)
+        
     }
+
+
+    var callBack : (()->())?
+
+    @IBAction func seeAll(_ sender: Any) {
+        callBack?()
+    }
+    
+
     func setCollectionViewDataSourceDelegate(dataSourceDelegate: UICollectionViewDataSource & UICollectionViewDelegate, forRow row: Int) {
         servicesCollectionView.delegate = dataSourceDelegate
         servicesCollectionView.dataSource = dataSourceDelegate
@@ -27,8 +37,20 @@ class SpectialityCell: UITableViewCell {
     }
 }
 // MARK: - Implementation of SpecitalityCellView Protocol
-extension SpectialityCell: SpecialityCellView {
+extension SpectialityCell: SpecialityCellView, ClinicCellProtocol {
+    func setClinic(_ clinic: ClinicViewModel) {
+//        spectialityNameLabel.text = clinic.name
+    }
+
     func setSpecialityName(_ specialityName: String) {
          spectialityNameLabel.text = specialityName
     }
 }
+
+//extension ClinicCell: ClinicCellProtocol {
+//    func setClinic(_ clinic: ClinicViewModel) {
+//        clinicNameLabel.text = clinic.name
+//        clinicAddressLabel.text = clinic.address
+//        clinicImage.kf.setImage(with: URL(string: clinic.image))
+//    }
+//}

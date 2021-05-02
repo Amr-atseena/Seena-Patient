@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -148,14 +148,24 @@
                                                 </label>
                                             </subviews>
                                         </stackView>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GIB-MA-fRw">
+                                            <rect key="frame" x="0.0" y="0.0" width="384" height="65"/>
+                                            <connections>
+                                                <action selector="didTapLanguageButton:" destination="-1" eventType="touchUpInside" id="2lt-22-4dX"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     <constraints>
                                         <constraint firstAttribute="trailing" secondItem="hxR-ts-YPL" secondAttribute="trailing" constant="20" id="4sg-Ib-eHA"/>
+                                        <constraint firstItem="GIB-MA-fRw" firstAttribute="leading" secondItem="sOm-yL-4W7" secondAttribute="leading" id="9rY-Qf-wrn"/>
                                         <constraint firstAttribute="bottom" secondItem="hxR-ts-YPL" secondAttribute="bottom" constant="5" id="Ths-1e-EDH"/>
                                         <constraint firstItem="hxR-ts-YPL" firstAttribute="leading" secondItem="sOm-yL-4W7" secondAttribute="leading" constant="20" id="Y8Y-QY-y1m"/>
                                         <constraint firstItem="hxR-ts-YPL" firstAttribute="top" secondItem="sOm-yL-4W7" secondAttribute="top" constant="5" id="cu4-mM-WCb"/>
                                         <constraint firstAttribute="height" constant="65" id="eVY-v1-1zh"/>
+                                        <constraint firstAttribute="trailing" secondItem="GIB-MA-fRw" secondAttribute="trailing" id="mDs-oO-vu3"/>
+                                        <constraint firstItem="GIB-MA-fRw" firstAttribute="top" secondItem="sOm-yL-4W7" secondAttribute="top" id="pfK-1D-c9S"/>
+                                        <constraint firstAttribute="bottom" secondItem="GIB-MA-fRw" secondAttribute="bottom" id="zTJ-y1-vFr"/>
                                     </constraints>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -189,14 +199,24 @@
                                                 </label>
                                             </subviews>
                                         </stackView>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mRj-0N-npO">
+                                            <rect key="frame" x="0.0" y="0.0" width="384" height="65"/>
+                                            <connections>
+                                                <action selector="didTapRateApp:" destination="-1" eventType="touchUpInside" id="Ekm-bN-6ak"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     <constraints>
+                                        <constraint firstItem="mRj-0N-npO" firstAttribute="leading" secondItem="hVy-u3-l5Z" secondAttribute="leading" id="6NQ-IS-0Oc"/>
                                         <constraint firstItem="gMa-aO-epp" firstAttribute="leading" secondItem="hVy-u3-l5Z" secondAttribute="leading" constant="20" id="KDo-FQ-iEZ"/>
                                         <constraint firstAttribute="height" constant="65" id="KK9-P4-fj8"/>
                                         <constraint firstAttribute="trailing" secondItem="gMa-aO-epp" secondAttribute="trailing" constant="20" id="OaI-t7-vAy"/>
+                                        <constraint firstItem="mRj-0N-npO" firstAttribute="top" secondItem="hVy-u3-l5Z" secondAttribute="top" id="Ycw-cO-qLd"/>
                                         <constraint firstAttribute="bottom" secondItem="gMa-aO-epp" secondAttribute="bottom" constant="5" id="d9P-N6-MHg"/>
+                                        <constraint firstAttribute="trailing" secondItem="mRj-0N-npO" secondAttribute="trailing" id="ioX-U0-vRT"/>
                                         <constraint firstItem="gMa-aO-epp" firstAttribute="top" secondItem="hVy-u3-l5Z" secondAttribute="top" constant="5" id="lFr-7e-G0c"/>
+                                        <constraint firstAttribute="bottom" secondItem="mRj-0N-npO" secondAttribute="bottom" id="lG2-en-PEs"/>
                                     </constraints>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">

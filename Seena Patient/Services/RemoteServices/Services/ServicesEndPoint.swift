@@ -8,6 +8,7 @@
 
 import Foundation
 import Moya
+import MOLH
 enum ServicesEndPoint {
     case home
     case servicesList(parms: ServicesListParameters)
@@ -59,7 +60,7 @@ extension ServicesEndPoint: TargetType, EnvironmentProtocol {
     var headers: [String: String]? {
         return [
             "Accept-Encoding": "gzip, deflate, br",
-            "Accept-Language": "en"
+            "Accept-Language": MOLHLanguage.currentAppleLanguage()
         ]
     }
 }

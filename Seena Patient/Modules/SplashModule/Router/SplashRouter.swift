@@ -13,13 +13,13 @@ class SplashRouter: SplashRouterProtocol {
     // MARK: - Attributes
     weak var viewController: UIViewController?
     // MARK: - Assemble
-    static func assembleModule() -> UIViewController {
+    static func assembleModule(serial: String, token: String) -> UIViewController {
         let view = SplashVC()
         let localDataManager = SplashLocalDataManager()
         let remoteDataManager = SplashRemoteDataManager()
         let interactor = SplashInteractor(localDataManager: localDataManager, remoteDataManager: remoteDataManager)
         let router = SplashRouter()
-        let presenter = SplashPresenter(view: view, interactor: interactor, router: router)
+        let presenter = SplashPresenter(view: view, interactor: interactor, router: router, serial: serial, token: token)
         interactor.presenter = presenter
         view.presenter = presenter
         router.viewController = view

@@ -29,10 +29,16 @@ class PayHomeRouter: PayHomeRouterProtocol {
         switch router {
         case .paymentChannel(let installment):
             navigateToPaymentChannel(installment: installment)
+        case .calculate:
+            navigateToCalculate()
         }
     }
     private func navigateToPaymentChannel(installment: Installment) {
         viewController?.tabBarController?.tabBar.isHidden = true
         viewController?.navigationController?.pushViewController(PaymentChannelRouter.assembleModule(withInstallment: installment), animated: true)
+    }
+    private func navigateToCalculate() {
+        viewController?.tabBarController?.tabBar.isHidden = true
+        viewController?.navigationController?.pushViewController(CalculatorRouter.assembleModule(), animated: true)
     }
 }

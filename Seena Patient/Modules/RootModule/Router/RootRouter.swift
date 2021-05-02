@@ -7,10 +7,12 @@
 //
 
 import UIKit
-
+import FirebaseMessaging
 class RootRouter {
     static func assembleModule(window: UIWindow?) {
-        window?.rootViewController  = SplashRouter.assembleModule()
+        let token = Messaging.messaging().fcmToken ?? ""
+        let serial = UIDevice.current.identifierForVendor?.uuidString ?? ""
+        window?.rootViewController  = SplashRouter.assembleModule(serial: serial, token: token)
         window?.makeKeyAndVisible()
     }
 }

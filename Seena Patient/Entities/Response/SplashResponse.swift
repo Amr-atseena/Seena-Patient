@@ -15,4 +15,6 @@ struct SplashResponse: Codable {
     let residenceProof: [Document]
     let accounts: [Account]
     let vCash: [Vodafone]
+    let plans: [Plan]
+    let isInReview: Bool
 }

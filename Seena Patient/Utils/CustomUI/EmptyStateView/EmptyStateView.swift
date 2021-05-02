@@ -36,11 +36,11 @@ class EmptyStateView: UIView {
     }
     private func setupView() {
         // noResultsHeaderKeyword Label
-     //   noResultsHeaderKeywordLabel.text = localization.noResultsHeaderKeyword
-        noResultsHeaderKeywordLabel.textColor = DesignSystem.Colors.primaryText.color
+        noResultsHeaderKeywordLabel.text = "We tried looking;".localized
+      noResultsHeaderKeywordLabel.textColor = DesignSystem.Colors.primaryText.color
         noResultsHeaderKeywordLabel.font = DesignSystem.Typography.title2.font
         // noResultsbodyKeyword Label
-       // noResultsbodyKeywordLabel.text = localization.noResultsbodyKeyword
+        noResultsbodyKeywordLabel.text =  "found nothing!".localized
         noResultsbodyKeywordLabel.textColor = DesignSystem.Colors.primaryText.color
         noResultsbodyKeywordLabel.font = DesignSystem.Typography.title2.font
     }

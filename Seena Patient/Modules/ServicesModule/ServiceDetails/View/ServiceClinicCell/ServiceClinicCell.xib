@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -32,7 +33,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </imageView>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="WaK-qS-7MO" firstAttribute="leading" secondItem="8kQ-mB-bOO" secondAttribute="leading" id="Cyw-w8-eKG"/>
                                     <constraint firstAttribute="trailing" secondItem="WaK-qS-7MO" secondAttribute="trailing" id="IRo-6u-RG0"/>
@@ -59,8 +60,8 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="boN-8D-p5e">
-                                <rect key="frame" x="37.5" y="110" width="42" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="boN-8D-p5e">
+                                <rect key="frame" x="0.0" y="110" width="117" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -69,22 +70,24 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="8kQ-mB-bOO" firstAttribute="leading" secondItem="pCv-t0-y0t" secondAttribute="leading" constant="5" id="CGg-SQ-V0X"/>
+                            <constraint firstItem="boN-8D-p5e" firstAttribute="leading" secondItem="pCv-t0-y0t" secondAttribute="leading" id="Hoy-Gb-BAU"/>
                             <constraint firstAttribute="bottom" secondItem="boN-8D-p5e" secondAttribute="bottom" constant="5" id="Iss-iu-lVo"/>
                             <constraint firstItem="8kQ-mB-bOO" firstAttribute="top" secondItem="pCv-t0-y0t" secondAttribute="top" constant="5" id="MdD-HC-f3D"/>
                             <constraint firstItem="boN-8D-p5e" firstAttribute="centerX" secondItem="pCv-t0-y0t" secondAttribute="centerX" id="N5h-2W-eU0"/>
                             <constraint firstItem="boN-8D-p5e" firstAttribute="top" secondItem="8kQ-mB-bOO" secondAttribute="bottom" constant="5" id="R68-dA-Dpm"/>
                             <constraint firstAttribute="trailing" secondItem="8kQ-mB-bOO" secondAttribute="trailing" constant="5" id="Xyx-Rz-2fT"/>
+                            <constraint firstAttribute="trailing" secondItem="boN-8D-p5e" secondAttribute="trailing" id="bQK-2t-WTs"/>
                         </constraints>
                     </view>
                 </subviews>
             </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="pCv-t0-y0t" secondAttribute="bottom" id="bO0-4y-ybu"/>
                 <constraint firstAttribute="trailing" secondItem="pCv-t0-y0t" secondAttribute="trailing" id="rff-Qo-7ZJ"/>
                 <constraint firstItem="pCv-t0-y0t" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="vqB-tv-HkW"/>
                 <constraint firstItem="pCv-t0-y0t" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="w8j-qc-FoO"/>
             </constraints>
-            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="117" height="145"/>
             <connections>
                 <outlet property="clinicImage" destination="WaK-qS-7MO" id="pdD-gr-Tga"/>
@@ -93,7 +96,15 @@
             <point key="canvasLocation" x="186.23188405797103" y="134.26339285714286"/>
         </collectionViewCell>
     </objects>
+    <designables>
+        <designable name="WaK-qS-7MO">
+            <size key="intrinsicContentSize" width="100" height="100"/>
+        </designable>
+    </designables>
     <resources>
         <image name="clinic" width="100" height="100"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

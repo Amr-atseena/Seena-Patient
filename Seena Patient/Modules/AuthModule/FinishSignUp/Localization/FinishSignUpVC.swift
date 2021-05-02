@@ -30,7 +30,10 @@ class FinishSignUpVC: UIViewController {
     }
     // MARK: - Actions
     @IBAction private func didTapFinishButton(_ sender: UIButton) {
-        navigationController?.setViewControllers([ProfileRouter.assembleModule()], animated: true)
+//        navigationController?.setViewControllers([ProfileRouter.assembleModule()], animated: true)
+        let tabBar = HomeTabBarVC()
+//        viewController?.present(tabBar, animated: true)
+        self.present(tabBar, animated: true, completion: nil)
     }
     // MARK: - Deinit
     deinit {

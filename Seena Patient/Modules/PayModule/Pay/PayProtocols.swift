@@ -12,6 +12,8 @@ import UIKit
 enum PayRoute {
     case paymentChannel
     case alert(AlertEntity)
+    case paymentSuccess(Payment)
+    case info
 }
 protocol PayRouterProtocol {
     // Presenter -> Router
@@ -43,6 +45,7 @@ protocol PayPresenterProtocol: class {
     func backButtonTapped()
     func nextButtonTapped(withTransactionId transactionId: String?)
     func transactionIdEditChange(transactionId: String?)
+    func infoButtonTapped()
 }
 // MARK: - Pay View
 protocol PayViewProtocol: class {

@@ -18,6 +18,6 @@ struct ServiceViewModel {
         self.serviceName = service?.name ?? ""
         self.serviceImage = service?.image ?? ""
         self.seriveDetails = service?.serviceDescription ?? ""
-        self.servicePrice = String(describing: service?.priceMin ?? 0) + " - " + String(describing: service?.priceMax ?? 0)
+        self.servicePrice = String(describing: service?.priceMin ?? 0) + " - " + String(describing: service?.priceMax ?? 0) + " " + "EGP".localized
     }
 }

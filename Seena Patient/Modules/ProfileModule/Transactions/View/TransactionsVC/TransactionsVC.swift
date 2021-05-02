@@ -14,7 +14,6 @@ class TransactionsVC: UIViewController, TransactionsViewProtocol {
     @IBOutlet private var transactionsTableView: UITableView!
     @IBOutlet private var noDataView: UIView!
     @IBOutlet private var loadingIndictor: UIActivityIndicatorView!
-    
     // MARK: - Attributes
     var presenter: TransactionsPresenterProtocol!
     // MARK: - Init
@@ -78,10 +77,11 @@ class TransactionsVC: UIViewController, TransactionsViewProtocol {
 extension TransactionsVC: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return presenter.numberOfTransactions
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withClass: TransactionCell.self, for: indexPath)
+        presenter.config(transactionCell: cell, atIndex: indexPath.item)
         return cell
     }
 }

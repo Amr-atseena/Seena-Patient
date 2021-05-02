@@ -38,7 +38,7 @@ class ClinicsHomePresenter: ClinicsHomePresenterProtocol {
         interactor?.retriveClinicsHome()
     }
     func searchButtonTapped() {
-        let speciality = Speciality(id: 0, speciality: "", services: [], clinics: [])
+        let speciality = Speciality(id: 0, image: "", speciality: "", services: [], clinics: [])
         router?.go(to: .clincsSearch(speciality: speciality))
     }
     func clinicOfWeekButtonTapped() {

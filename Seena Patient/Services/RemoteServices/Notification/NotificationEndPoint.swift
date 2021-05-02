@@ -8,6 +8,7 @@
 
 import Foundation
 import Moya
+import MOLH
 enum NotificationEndPoint {
     case notifications(NotificationRequestParameters)
 }
@@ -41,7 +42,7 @@ extension NotificationEndPoint: TargetType, EnvironmentProtocol {
         return [
             "Authorization": "Bearer \(params.token)",
             "Accept-Encoding": "gzip, deflate, br",
-            "Accept-Language": "en"
+            "Accept-Language": MOLHLanguage.currentAppleLanguage()
         ]
         }
     }

@@ -37,6 +37,7 @@ class PayHomePresenter: PayHomePresenterProtocol {
        // router?.go(to: .paymentChannel)
     }
     func calculateButtonTapped() {
+        router?.go(to: .calculate)
     }
     func config(dueCell cell: DueCellProtocol, atIndex index: Int) {
         guard let installment = payment?.installment[index] else {
@@ -56,9 +57,13 @@ extension PayHomePresenter: PayHomeOutputInteractorProtocol {
         guard let _ = user else {
             view?.showNoDataView()
             view?.hidePaymentDue()
-            view?.setPaymentProgress(totalAmount: "no Due Payement", paidAmount: "", ratio: 1)
+            view?.showGetYourSeenaView()
+            view?.hideProgressView()
+            view?.setPaymentProgress(totalAmount: "no Due Payement".localized, paidAmount: "", avaliableBalance: "", ratio: 0)
             return
         }
+        view?.hideGetYourSeenaView()
+        view?.showProgressView()
         view?.hideNoDataView()
         view?.hidePaymentDue()
         view?.showLoadingIndictor()
@@ -70,15 +75,17 @@ extension PayHomePresenter: PayHomeOutputInteractorProtocol {
         if payment.installment.isEmpty {
             view?.showNoDataView()
             view?.hidePaymentDue()
-            view?.setPaymentProgress(totalAmount: "no Due Payement", paidAmount: "", ratio: 1)
+            let avaliable = String(payment.walletCredit) + " " + "EGP".localized
+            view?.setPaymentProgress(totalAmount: "no Due Payement".localized, paidAmount: "", avaliableBalance: avaliable, ratio: 0)
         } else {
             view?.hideNoDataView()
             view?.showPaymentDue()
             view?.realodDue()
-            let paid = "EGP \(payment.paidCredit)"
-            let total = "of \(payment.dueCredit)"
-            let ratio = payment.paidCredit / payment.dueCredit
-            view?.setPaymentProgress(totalAmount: total, paidAmount: paid, ratio: Double(ratio))
+            let paid = "\(payment.paidCredit)" + " " + "EGP".localized
+            let total = "of".localized + " " + "\(payment.dueCredit + payment.paidCredit)" + " " + "EGP".localized
+            let ratio = Double(payment.paidCredit ) / Double(payment.dueCredit + payment.paidCredit)
+            let avaliable = String(payment.walletCredit) + " " + "EGP".localized
+            view?.setPaymentProgress(totalAmount: total, paidAmount: paid, avaliableBalance: avaliable, ratio: Double(ratio))
         }
     }
     func onRetrivePaymentFail() {

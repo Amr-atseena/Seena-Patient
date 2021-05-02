@@ -139,7 +139,7 @@ class SignUpPresenter: SignUpPresenterProtocol {
         guard !phoneNumber.isEmpty && !firstName.isEmpty &&
               !lastName.isEmpty    && !confirmPassword.isEmpty &&
               selectedIdType != -1 && selectedResidenceProof != -1 &&
-                selectedFinancialProof != -1 && !selectedDate.isEmpty
+                selectedFinancialProof != -1 
         else {
             view?.disableFinishButton()
             return

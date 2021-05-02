@@ -23,4 +23,9 @@ extension ServiceCell: ServiceCellProtocol {
         serviceNameLabel.text = service.serviceName
         serviceImage.kf.setImage(with: URL(string: service.serviceImage))
     }
+
+    func setSpeciality(_ title: String,_ image: String) {
+        serviceNameLabel.text = title
+        serviceImage.kf.setImage(with: URL(string: image))
+    }
 }

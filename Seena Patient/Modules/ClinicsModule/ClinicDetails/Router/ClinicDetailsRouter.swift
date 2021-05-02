@@ -32,7 +32,14 @@ class ClinicDetailsRouter: ClinicDetailsRouterProtocol {
             navigateToServiesDetails(withService: service)
         case .call(let number):
             makeCall(toNumber: number)
+        case let .gallery(image):
+            navigateToGalllery(image: image)
         }
+    }
+    private func navigateToGalllery(image: String) {
+        let galleryVC = GalleryVC(image: image)
+        galleryVC.modalPresentationStyle = .fullScreen
+        viewController?.present(galleryVC, animated: true, completion: nil)
     }
     private func navigateToHome() {
         viewController?.navigationController?.popViewController(animated: true)

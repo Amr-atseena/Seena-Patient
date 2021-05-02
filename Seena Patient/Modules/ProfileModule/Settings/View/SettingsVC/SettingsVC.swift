@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import StoreKit
 class SettingsVC: UIViewController, SettingsViewProtocol {
     // MARK: - Outlets
     @IBOutlet private var settingsKeywordLabel: UILabel!
@@ -51,6 +51,15 @@ class SettingsVC: UIViewController, SettingsViewProtocol {
     // MARK: - Actions
     @IBAction private func didTapBackButton(_ sender: UIButton) {
         presenter.backButtonTapped()
+    }
+    @IBAction private func didTapLanguageButton(_ sender: UIButton) {
+        guard let settingsUrl = URL(string: UIApplication.openSettingsURLString) else {
+            return
+        }
+        UIApplication.shared.open(settingsUrl)
+    }
+    @IBAction func didTapRateApp(_ sender: UIButton) {
+        SKStoreReviewController.requestReview()
     }
     // MARK: - DeInit
     deinit {

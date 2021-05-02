@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -13,8 +13,12 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PayHomeVC">
             <connections>
                 <outlet property="amountPayedLabel" destination="wTj-u8-hPs" id="3Wa-o5-TRf"/>
+                <outlet property="applyBtn" destination="ooF-qv-EoG" id="ZoV-Xm-Jvf"/>
+                <outlet property="availableBalanceKeywordLabel" destination="dmt-kB-UDy" id="KWX-fe-b4s"/>
+                <outlet property="availableBalanceLabel" destination="qKI-2p-Brg" id="Dqk-hf-Tf8"/>
                 <outlet property="calculatorLabel" destination="qhM-17-oYP" id="43e-Mw-bsB"/>
                 <outlet property="dueAmountLabel" destination="lKS-CI-ZZM" id="wZA-kB-PkY"/>
+                <outlet property="getYourSeenaView" destination="iXr-zB-LIW" id="ceC-Ty-YSF"/>
                 <outlet property="loadingIndictor" destination="emT-Qi-WZT" id="LWc-78-irI"/>
                 <outlet property="noDataView" destination="5hH-Vq-Ob3" id="3aR-nr-xwm"/>
                 <outlet property="payLabel" destination="Rlo-uG-PD9" id="W2k-rs-BRR"/>
@@ -145,6 +149,39 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Df9-04-0Dy" customClass="AnimatableView" customModule="IBAnimatable">
                     <rect key="frame" x="20.666666666666657" y="85.333333333333343" width="372.66666666666674" height="279.33333333333326"/>
                     <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iXr-zB-LIW">
+                            <rect key="frame" x="40" y="40.000000000000014" width="292.66666666666669" height="239.33333333333337"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GetYourSeena" translatesAutoresizingMaskIntoConstraints="NO" id="cbV-7J-psJ">
+                                    <rect key="frame" x="25.000000000000014" y="30.000000000000021" width="242.66666666666669" height="87.333333333333314"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="cbV-7J-psJ" secondAttribute="height" multiplier="242:87" id="K1X-kM-i1t"/>
+                                    </constraints>
+                                </imageView>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ooF-qv-EoG">
+                                    <rect key="frame" x="30.000000000000014" y="179.33333333333337" width="232.66666666666669" height="40"/>
+                                    <color key="backgroundColor" red="0.85882352939999995" green="0.078431372550000003" blue="0.078431372550000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="40" id="9r7-Y3-bHA"/>
+                                    </constraints>
+                                    <state key="normal" title="Apply">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="apply:" destination="-1" eventType="touchUpInside" id="p9e-VZ-BCj"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="ooF-qv-EoG" secondAttribute="trailing" constant="30" id="1Le-sq-GMo"/>
+                                <constraint firstItem="cbV-7J-psJ" firstAttribute="top" secondItem="iXr-zB-LIW" secondAttribute="top" constant="30" id="427-gc-Rsm"/>
+                                <constraint firstAttribute="bottom" secondItem="ooF-qv-EoG" secondAttribute="bottom" constant="20" id="F6F-5h-GuS"/>
+                                <constraint firstItem="cbV-7J-psJ" firstAttribute="leading" secondItem="iXr-zB-LIW" secondAttribute="leading" constant="25" id="bZa-WN-rZg"/>
+                                <constraint firstAttribute="trailing" secondItem="cbV-7J-psJ" secondAttribute="trailing" constant="25" id="qW2-S6-fHo"/>
+                                <constraint firstItem="ooF-qv-EoG" firstAttribute="leading" secondItem="iXr-zB-LIW" secondAttribute="leading" constant="30" id="xew-aM-qwf"/>
+                            </constraints>
+                        </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0d7-W4-1DF" customClass="MKMagneticProgress" customModule="Seena" customModuleProvider="target">
                             <rect key="frame" x="40" y="40.000000000000014" width="292.66666666666669" height="239.33333333333337"/>
                             <subviews>
@@ -152,7 +189,7 @@
                                     <rect key="frame" x="20.000000000000014" y="20.000000000000014" width="252.66666666666669" height="219.33333333333337"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="hoF-ui-c4d">
-                                            <rect key="frame" x="10" y="10" width="232.66666666666666" height="100"/>
+                                            <rect key="frame" x="10" y="10" width="232.66666666666666" height="150.66666666666666"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="card" translatesAutoresizingMaskIntoConstraints="NO" id="as7-go-WXW">
                                                     <rect key="frame" x="101.99999999999999" y="0.0" width="28.666666666666671" height="24"/>
@@ -171,6 +208,18 @@
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="of EGP 30,000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lKS-CI-ZZM">
                                                     <rect key="frame" x="60.999999999999986" y="79.666666666666657" width="111.00000000000001" height="20.333333333333329"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" name="primaryText"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Available Balance" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dmt-kB-UDy">
+                                                    <rect key="frame" x="50.333333333333329" y="104.99999999999997" width="132" height="20.333333333333329"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" name="primaryText"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="of EGP 30,000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qKI-2p-Brg">
+                                                    <rect key="frame" x="60.999999999999986" y="130.33333333333334" width="111.00000000000001" height="20.333333333333343"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" name="primaryText"/>
                                                     <nil key="highlightedColor"/>
@@ -213,10 +262,14 @@
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="0d7-W4-1DF" secondAttribute="trailing" constant="40" id="4Hh-8v-bBO"/>
+                        <constraint firstItem="iXr-zB-LIW" firstAttribute="leading" secondItem="Df9-04-0Dy" secondAttribute="leading" constant="40" id="5Fj-Nw-ZHs"/>
+                        <constraint firstAttribute="bottom" secondItem="iXr-zB-LIW" secondAttribute="bottom" id="ADt-VR-oUV"/>
                         <constraint firstAttribute="bottom" secondItem="0d7-W4-1DF" secondAttribute="bottom" id="Att-oa-TWX"/>
                         <constraint firstItem="0d7-W4-1DF" firstAttribute="top" secondItem="Df9-04-0Dy" secondAttribute="top" constant="40" id="BEw-Ow-zrl"/>
                         <constraint firstAttribute="width" secondItem="Df9-04-0Dy" secondAttribute="height" multiplier="1:0.75" id="DKC-JI-Xao"/>
+                        <constraint firstItem="iXr-zB-LIW" firstAttribute="top" secondItem="Df9-04-0Dy" secondAttribute="top" constant="40" id="Fof-RK-sDW"/>
                         <constraint firstItem="0d7-W4-1DF" firstAttribute="leading" secondItem="Df9-04-0Dy" secondAttribute="leading" constant="40" id="tLa-q9-Hl2"/>
+                        <constraint firstAttribute="trailing" secondItem="iXr-zB-LIW" secondAttribute="trailing" constant="40" id="zTN-Yf-Oev"/>
                     </constraints>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -310,10 +363,11 @@
                 <constraint firstItem="5hH-Vq-Ob3" firstAttribute="top" secondItem="p0h-37-Zio" secondAttribute="top" id="uJk-kB-xiB"/>
                 <constraint firstItem="9P0-Pz-8zS" firstAttribute="leading" secondItem="UTr-SS-6mY" secondAttribute="leading" id="weq-oH-krj"/>
             </constraints>
-            <point key="canvasLocation" x="141" y="125"/>
+            <point key="canvasLocation" x="140.57971014492756" y="124.55357142857142"/>
         </view>
     </objects>
     <resources>
+        <image name="GetYourSeena" width="248.66667175292969" height="88"/>
         <image name="calculator" width="20" height="22"/>
         <image name="card" width="28.666666030883789" height="24"/>
         <image name="credit-card" width="20" height="20"/>

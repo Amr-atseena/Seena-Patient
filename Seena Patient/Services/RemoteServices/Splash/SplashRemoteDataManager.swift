@@ -11,4 +11,7 @@ class SplashRemoteDataManager: APIService<SplashEndPoint>, SplashRemoteDataManag
     func retriveMetaData(completionHandler: @escaping ((Result<Codable, Error>) -> Void)) {
         request(target: .splash, objType: BaseResponse<SplashResponse>.self, completionHandler: completionHandler)
     }
+    func sendFCMToken(serial: String, token: String, auth: String, completionHandler: @escaping ((Result<Codable, Error>) -> Void)) {
+        request(target: .fcmToken(serial, token, auth), objType: BaseResponse<Response>.self, completionHandler: completionHandler)
+    }
 }

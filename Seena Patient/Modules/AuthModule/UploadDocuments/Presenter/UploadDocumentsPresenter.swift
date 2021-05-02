@@ -34,10 +34,10 @@ class UploadDocumentsPresenter: UploadDocumentsPresenterProtocol {
     // MARK: - Methods
     func viewDidLoad() {
         documetsType = [
-            DocomentTypeViewModel(name: "Profile picture", isUploaded: status.profilePicture),
-            DocomentTypeViewModel(name: "ID", isUploaded: status.idType),
-            DocomentTypeViewModel(name: "Financial", isUploaded: status.financialProof),
-            DocomentTypeViewModel(name: "Residence", isUploaded: status.residenceProof)
+            DocomentTypeViewModel(name: "Profile picture".localized, isUploaded: status.profilePicture),
+            DocomentTypeViewModel(name: "ID".localized, isUploaded: status.idType),
+            DocomentTypeViewModel(name: "Financial".localized, isUploaded: status.financialProof),
+            DocomentTypeViewModel(name: "Residence".localized, isUploaded: status.residenceProof)
         ]
         view?.setupUI()
         view?.setupDocumentTypeTableView()

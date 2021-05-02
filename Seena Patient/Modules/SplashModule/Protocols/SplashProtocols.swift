@@ -17,7 +17,7 @@ enum SplashRoute {
 protocol SplashRouterProtocol: class {
     var viewController: UIViewController? { get set }
     func go(to router: SplashRoute)
-    static func assembleModule() -> UIViewController
+    static func assembleModule(serial: String, token: String) -> UIViewController
 }
 // MARK: - Splash Interactor
 protocol SplashInputInteractorProtocol: class {
@@ -26,6 +26,7 @@ protocol SplashInputInteractorProtocol: class {
     var remoteDataManager: SplashRemoteDataManagerProtocol { get set }
     // Presenter -> Interactor
     func retriveMetaData()
+    func sendToken(serial: String, token: String)
 }
 protocol SplashOutputInteractorProtocol: class {
     // Interactor -> Presenter

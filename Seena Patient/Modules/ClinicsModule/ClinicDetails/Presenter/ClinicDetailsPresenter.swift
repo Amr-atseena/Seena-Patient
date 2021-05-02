@@ -67,7 +67,8 @@ class ClinicDetailsPresenter: ClinicDetailsPresenterProtocol {
         router?.go(to: .clinicHome)
     }
     func galleryCollectionView(selectedAtIndex index: Int) {
-      //  router?.go(to: .)
+        let image = gallery[index].image
+        router?.go(to: .gallery(image: image))
     }
     func serviesCollectionView(selectedAtIndex index: Int) {
         let service = services[index]

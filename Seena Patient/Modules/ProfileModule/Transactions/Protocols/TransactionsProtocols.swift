@@ -28,7 +28,7 @@ protocol TransactionsInputInteractorProtocol: class {
 }
 protocol TransactionsOutputInteractorProtocol: class {
     // Interactor -> Presenter
-    func onRetriveTransactionsSuccess()
+    func onRetriveTransactionsSuccess(withTransactions transactions: [Transaction])
     func onRetriveTransactionsFail()
 }
 // MARK: - Transactions Preseneter
@@ -40,6 +40,8 @@ protocol TransactionsPresenterProtocol: class {
     // view -> Presenter
     func viewDidLoad()
     func backButtonTapped()
+    func config(transactionCell cell: TransactionCellProtocol, atIndex index: Int)
+    var numberOfTransactions: Int { get }
 }
 // MARK: - Transactions View
 protocol TransactionsViewProtocol: class {
@@ -55,4 +57,8 @@ protocol TransactionsViewProtocol: class {
     func hideNoDataView()
     func showTransactions()
     func hideTransactions()
+}
+
+protocol TransactionCellProtocol {
+    func setTransaction(_ transaction: TransactionViewModel)
 }

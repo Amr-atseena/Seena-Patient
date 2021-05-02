@@ -18,7 +18,7 @@ struct PaymentDueViewModel {
     init(installment: Installment) {
         clinicName = installment.clinicName
         clinicPlaceHolder = installment.clinicName[0].uppercased()
-        amount = String(installment.amount) + " EGP"
+        amount = String(installment.amount) + " " + "EGP".localized
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "YYYY-MM-dd HH:mm:ss"
         let date = dateFormatter.date(from: installment.dueDate) ?? Date()

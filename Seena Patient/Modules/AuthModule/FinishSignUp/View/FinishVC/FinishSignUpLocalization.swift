@@ -11,10 +11,7 @@ import Foundation
 struct FinishSignUpLocalization {
     // MARK: - Attributes
     var thxMessage: String {
-        return """
-        Thanks for signing up;
-        we will shortly update you with the status of your application
-""".localized
+        return "thxMessage".localized
     }
     var finish: String {
         return "Finish".localized

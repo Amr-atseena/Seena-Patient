@@ -53,7 +53,7 @@ class ProfileRouter: ProfileRouterProtocol {
     }
     private func share() {
         // Setting description
-        let firstActivityItem = "لتقسيط عمليات التجميل والأسنان والسمنة"
+        let firstActivityItem = "سينا لتقسيط عمليات التجميل والأسنان والسمنة بدون فوائد، بدون مقدم وأقل عمولة في مصر"
         // Setting url
         let secondActivityItem = URL(string: "https://ar.seenapay.com/")!
         // If you want to use an image
@@ -72,16 +72,16 @@ class ProfileRouter: ProfileRouterProtocol {
             UIActivity.ActivityType.saveToCameraRoll,
             UIActivity.ActivityType.addToReadingList,
             UIActivity.ActivityType.postToFlickr,
-            UIActivity.ActivityType.postToVimeo,
+            UIActivity.ActivityType.postToTwitter,
             UIActivity.ActivityType.postToTencentWeibo,
-            UIActivity.ActivityType.postToFacebook
+            UIActivity.ActivityType.postToFacebook,
         ]
         viewController?.present(activityViewController, animated: true, completion: nil)
     }
     private func showAlert(alertEntity: AlertEntity) {
         guard let profile = viewController as? ProfileViewProtocol else { return}
-        let cancelAction = UIAlertAction(title: "Cancel", style: .default, handler: nil)
-        let okAction = UIAlertAction(title: "Ok", style: .default) {  (_) in
+        let cancelAction = UIAlertAction(title: "Cancel".localized, style: .default, handler: nil)
+        let okAction = UIAlertAction(title: "Ok".localized, style: .default) {  (_) in
             profile.presenter.logOut()
         }
         viewController?.showAlertController(title: alertEntity.title, message: alertEntity.message, actions: [okAction, cancelAction])

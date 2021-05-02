@@ -8,6 +8,7 @@
 
 import Foundation
 import Moya
+import MOLH
 enum AuthenticationEndPoint {
     case login(LoginRequestParameters)
     case signUp(SignUpRequestParamaters)
@@ -60,19 +61,19 @@ extension AuthenticationEndPoint: TargetType, EnvironmentProtocol {
         case .upload(let params):
             return [
                 "Accept-Encoding": "gzip, deflate, br",
-                "Accept-Language": "en",
+                "Accept-Language": MOLHLanguage.currentAppleLanguage(),
                 "Authorization": "Bearer \(params.token)"
             ]
         case .applicationStatus(let token):
             return [
                 "Accept-Encoding": "gzip, deflate, br",
-                "Accept-Language": "en",
+                "Accept-Language": MOLHLanguage.currentAppleLanguage(),
                 "Authorization": "Bearer \(token)"
             ]
         default:
             return [
                 "Accept-Encoding": "gzip, deflate, br",
-                "Accept-Language": "en"
+                "Accept-Language": MOLHLanguage.currentAppleLanguage()
             ]
         }
 

@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import MOLH
 class ClinicsSearchPresenter: ClinicsSearchPresenterProtocol {
     // MARK: - Attributes
     weak var view: ClinicsSearchViewProtocol?
@@ -24,8 +25,13 @@ class ClinicsSearchPresenter: ClinicsSearchPresenterProtocol {
     private var options = [OptionViewModel]()
     private var cities = [City]() {
         didSet {
-            cities.insert(City(id: 0, name: "All"), at: 0)
-            options = cities.map { OptionViewModel(name: $0.name) }
+            cities.insert(City(id: 0, name: "All".localized), at: 0)
+            if MOLHLanguage.isArabic() {
+                options = cities.map { OptionViewModel(name: $0.name) }
+                options.reverse()
+            } else {
+                options = cities.map { OptionViewModel(name: $0.name) }
+            }
         }
     }
     // MARK: - Init

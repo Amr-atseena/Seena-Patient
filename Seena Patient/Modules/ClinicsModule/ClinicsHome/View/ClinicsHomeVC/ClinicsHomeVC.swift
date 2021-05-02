@@ -10,17 +10,11 @@ import UIKit
 import SkeletonView
 class ClinicsHomeVC: UIViewController, ClinicsHomeViewProtocol {
     // MARK: - Outlets
-    @IBOutlet private var clinicOfWeekView: UIView!
     @IBOutlet private var clinicsKeywordLabel: UILabel!
     @IBOutlet private var searchTextField: UITextField!
-    @IBOutlet private var clinicOfWeekKeywordLabel: UILabel!
-    @IBOutlet private var clinicOfWeekNameLabel: UILabel!
-    @IBOutlet private var clinicOfWeakAddressLabel: UILabel!
-    @IBOutlet private var clinicOfWeekCategoryLabel: UILabel!
-    @IBOutlet private var clinicOfWeekImage: UIImageView!
-    @IBOutlet private var callClinicButton: UIButton!
     @IBOutlet private var clinicsTableView: UITableView!
     // MARK: - Attributes
+    lazy var clincOfWeek = ClinicOfTheWeekHeaderView()
     var presenter: ClinicsHomePresenterProtocol!
     // MARK: - Init
     init() {
@@ -37,35 +31,28 @@ class ClinicsHomeVC: UIViewController, ClinicsHomeViewProtocol {
     }
     // MARK: - Methods
     func setupUI() {
-        // clinics Keyword Label
-        clinicsKeywordLabel.text = presenter.localization.clinics
-        clinicsKeywordLabel.textColor = DesignSystem.Colors.secondaryText.color
-        clinicsKeywordLabel.font = DesignSystem.Typography.heading.font
-        // clincsOfWeek Keyword label
-        clinicOfWeekKeywordLabel.text = presenter.localization.clinicOfWeek
-        clinicOfWeekKeywordLabel.textColor = DesignSystem.Colors.secondaryText.color
-        clinicOfWeekKeywordLabel.font = DesignSystem.Typography.subHeading2.font
         // search textFiled
         searchTextField.placeholder = presenter.localization.searchPlaceholder
         searchTextField.textColor = DesignSystem.Colors.primaryText.color
         searchTextField.font = DesignSystem.Typography.title2.font
-        // clinicOfWeekName Label
-        clinicOfWeekNameLabel.textColor = DesignSystem.Colors.headingText.color
-        clinicOfWeekNameLabel.font = DesignSystem.Typography.heading.font
-        // clinicOfWeakAddress Label
-        clinicOfWeakAddressLabel.textColor = DesignSystem.Colors.headingText.color
-        clinicOfWeakAddressLabel.font = DesignSystem.Typography.title2.font
-       // clinicOfWeekCategory Label
-        clinicOfWeekCategoryLabel.textColor = DesignSystem.Colors.headingText.color
-        clinicOfWeekCategoryLabel.font = DesignSystem.Typography.subHeading3.font
-        // call Clinic Button
-        callClinicButton.titleLabel?.font = DesignSystem.Typography.subHeading4.font
-        callClinicButton.titleLabel?.text = presenter.localization.call
-        callClinicButton.setTitleColor(DesignSystem.Colors.primaryActionBackground.color, for: .normal)
-        callClinicButton.backgroundColor = DesignSystem.Colors.primaryActionText.color
+        // clinics Keyword Label
+        clinicsKeywordLabel.text = presenter.localization.clinics
+        clinicsKeywordLabel.textColor = DesignSystem.Colors.secondaryText.color
+        clinicsKeywordLabel.font = DesignSystem.Typography.heading.font
+        setupClinicOfTheWeekView()
     }
     func setupNavBar(withTitle title: String) {
         navigationController?.navigationBar.isHidden = true
+    }
+    func setupClinicOfTheWeekView() {
+        clincOfWeek.didTapClinicOfTheWeeekButton = { [weak self] in
+            guard let self = self else { return }
+            self.presenter.clinicOfWeekButtonTapped()
+        }
+        clincOfWeek.didTapCallButton = { [weak self] in
+            guard let self = self else { return }
+            self.presenter.callButtonTapped()
+        }
     }
     func setupClinicsTableView() {
         clinicsTableView.delegate = self
@@ -73,49 +60,33 @@ class ClinicsHomeVC: UIViewController, ClinicsHomeViewProtocol {
         clinicsTableView.register(cellWithClass: ClinicCell.self)
         clinicsTableView.register(cellWithClass: ClinicsSectionHeaderCell.self)
         clinicsTableView.register(cellWithClass: ClinicSkeletonCell.self)
+        clinicsTableView.tableHeaderView = clincOfWeek
+        clinicsTableView.tableFooterView = UIView(frame: CGRect(x: 0, y: 0, width: 4, height: 50))
     }
     func setClinicOfTheWeek(_ clinic: ClinicViewModel) {
-        clinicOfWeekNameLabel.text = clinic.name
-        clinicOfWeakAddressLabel.text = clinic.address
-        clinicOfWeekImage.kf.setImage(with: URL(string: clinic.image))
-        clinicOfWeekCategoryLabel.text = ""
+        clincOfWeek.setClinicOfTheWeek(clinic)
     }
     func reloadClinics() {
         clinicsTableView.reloadData()
     }
     func showClinicOfThWeek() {
-        clinicOfWeekKeywordLabel.isHidden = false
-        clinicOfWeekView.isHidden = false
+//        clinicsTableView.tableHeaderView = clincOfWeek
     }
     func hideClinicOfTheWeek() {
-        clinicOfWeekKeywordLabel.isHidden = true
-        clinicOfWeekView.isHidden = true
+        clinicsTableView.tableHeaderView = nil
     }
     func showSkeleton() {
-        clinicOfWeekImage.showAnimatedGradientSkeleton()
-        clinicOfWeekNameLabel.showAnimatedGradientSkeleton()
-        clinicOfWeakAddressLabel.showAnimatedGradientSkeleton()
-        clinicOfWeekCategoryLabel.showAnimatedGradientSkeleton()
-        callClinicButton.showAnimatedGradientSkeleton()
+        clincOfWeek.showSkeleton()
         clinicsTableView.showAnimatedGradientSkeleton()
     }
     func hideSkeleton() {
-        callClinicButton.hideSkeleton()
-        clinicOfWeekCategoryLabel.hideSkeleton()
-        clinicOfWeakAddressLabel.hideSkeleton()
-        clinicOfWeekNameLabel.hideSkeleton()
-        clinicOfWeekImage.hideSkeleton()
+        clincOfWeek.hideSkeleton()
         clinicsTableView.hideSkeleton()
     }
     // MARK: - Actions
-    @IBAction private func didTapCallButton(_ sender: UIButton) {
-        presenter.callButtonTapped()
-    }
+
     @IBAction private func didTapSearchButton(_ sender: UIButton) {
         presenter.searchButtonTapped()
-    }
-    @IBAction private func didTapClinicOfWeekButton(_ sender: UIButton) {
-        presenter.clinicOfWeekButtonTapped()
     }
     // MARK: - DeInit
     deinit {
@@ -155,7 +126,7 @@ extension ClinicsHomeVC: UITableViewDelegate {
         return header
     }
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 38
+        return 50
     }
 }
 // MARK: - SkeletonTableViewDataSource Implementaion

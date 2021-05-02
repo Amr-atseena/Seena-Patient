@@ -16,11 +16,19 @@ class PayHomeVC: UIViewController, PayHomeViewProtocol {
     @IBOutlet private var youPayKeywordLabel: UILabel!
     @IBOutlet private var amountPayedLabel: UILabel!
     @IBOutlet private var dueAmountLabel: UILabel!
+    @IBOutlet private var availableBalanceLabel: UILabel!
+    @IBOutlet private var availableBalanceKeywordLabel: UILabel!
     @IBOutlet private var paymentsDueKeywordLabel: UILabel!
     @IBOutlet private var payLabel: UILabel!
     @IBOutlet private var calculatorLabel: UILabel!
     @IBOutlet private var paymentsDueTableView: UITableView!
     @IBOutlet private var progressView: MKMagneticProgress!
+
+    @IBOutlet weak var getYourSeenaView: UIView!
+
+    @IBOutlet weak var applyBtn: UIButton!
+
+
     // MARK: - Attributes
     var presenter: PayHomePresenterProtocol!
     // MARK: - Init
@@ -35,10 +43,15 @@ class PayHomeVC: UIViewController, PayHomeViewProtocol {
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter.viewDidLoad()
+
+        applyBtn.layer.cornerRadius = 10
     }
+
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         presenter.viewWillAppear()
+        tabBarController?.tabBar.isHidden = false
     }
     // MARK: - Methods
     func setupNavBar() {
@@ -51,6 +64,9 @@ class PayHomeVC: UIViewController, PayHomeViewProtocol {
         // youPayKeyword Label
         youPayKeywordLabel.text = presenter.localization.youPaid
             youPayKeywordLabel.font =  DesignSystem.Typography.subHeading4.font
+        // availableBalanceKeyword Label
+        availableBalanceKeywordLabel.text = presenter.localization.availableBalance
+        availableBalanceKeywordLabel.font = AppResources.fonts.seena(styleForEnglish: .bold(20), styleForArabic: .bold(28))
         // amountPayed Label
         amountPayedLabel.font = DesignSystem.Typography.subHeading2.font
         // dueAmount Label
@@ -64,16 +80,20 @@ class PayHomeVC: UIViewController, PayHomeViewProtocol {
         // paymentsDueKeyword Label
         paymentsDueKeywordLabel.font = DesignSystem.Typography.subHeading2.font
         paymentsDueKeywordLabel.text = presenter.localization.paymentsDue
+        // availableBalance Label
+        availableBalanceLabel.font = DesignSystem.Typography.subHeading2.font
     }
     func setupPaymentsDueTableView() {
         paymentsDueTableView.dataSource = self
         paymentsDueTableView.delegate = self
         paymentsDueTableView.register(cellWithClass: DueCell.self)
     }
-    func setPaymentProgress(totalAmount: String, paidAmount: String, ratio: Double) {
+    func setPaymentProgress(totalAmount: String, paidAmount: String, avaliableBalance: String, ratio: Double) {
         amountPayedLabel.text = paidAmount
         dueAmountLabel.text = totalAmount
+        availableBalanceLabel.text = avaliableBalance
         progressView.setProgress(progress: CGFloat(ratio), animated: true)
+
     }
     func realodDue() {
         paymentsDueTableView.reloadData()
@@ -96,7 +116,32 @@ class PayHomeVC: UIViewController, PayHomeViewProtocol {
     func hideLoadingIndictor() {
         loadingIndictor.stopAnimating()
     }
+    func showGetYourSeenaView(){
+        getYourSeenaView.isHidden = false
+    }
+    func hideGetYourSeenaView(){
+        getYourSeenaView.isHidden = true
+    }
+    func showProgressView(){
+        progressView.isHidden = false
+    }
+    func hideProgressView(){
+        progressView.isHidden = true
+    }
+
+
     // MARK: - Actions
+
+    @IBAction func apply(_ sender: Any) {
+        let storyBoard: UIStoryboard = UIStoryboard(name: "SecondSignUp", bundle: nil)
+        let newViewController = storyBoard.instantiateViewController(withIdentifier: "CompleteSignStageOneViewController") as? CompleteSignStageOneViewController
+        self.navigationController?.pushViewController(newViewController!, animated: true)
+//        newViewController!.modalPresentationStyle = .fullScreen
+//        self.present(newViewController!, animated: true, completion: nil)
+    }
+
+
+
     @IBAction private func didTapPayButton(_ sender: UIButton) {
         presenter.payButtonTapped()
     }
@@ -125,3 +170,25 @@ extension PayHomeVC: UITableViewDelegate {
         presenter.dueCell(selectedAtIndex: indexPath.row)
     }
 }
+
+
+//extension PayHomeVC: HomeOutputInteractorProtocol {
+//    func onRetriveUserSuccess(withUser user: User?) {
+//        guard let user = user else {
+//            getYourSeenaView.isHidden = false
+//            progressView.isHidden = true
+//            return
+//        }
+//        progressView.isHidden = false
+//        getYourSeenaView.isHidden = true
+//    }
+//
+//    func onRetriveDataSuccess(with homeServices: HomeResponse) {
+////        view?.hideSkeltonView()
+////        specialities = homeServices.specialities
+////        packages = homeServices.packages
+//    }
+//    func onRetriveDataFail() {
+////        view?.hideSkeltonView()
+//    }
+//}

@@ -11,12 +11,12 @@ import Foundation
 struct UploadLocalization {
     // MARK: - Attributes
     var uploadDocs: String {
-        return "Upload the required documents"
+        return "Upload required documents".localized
     }
     var finish: String {
-        return "Finish"
+        return "Finish".localized
     }
     var upload: String {
-        return "Upload"
+        return "Upload".localized
     }
 }

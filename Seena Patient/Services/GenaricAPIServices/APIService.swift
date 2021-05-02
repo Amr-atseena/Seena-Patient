@@ -35,6 +35,7 @@ class APIService<T> where T: TargetType {
         provider.session.sessionConfiguration.timeoutIntervalForRequest = 20
         provider.session.sessionConfiguration.timeoutIntervalForResource = 20
     }
+    
     func request<C: Codable>(target: T, objType: C.Type, completionHandler:  @escaping (_ result: Result<Codable, Error>) -> Void) {
         provider.request(target) { (result) in
             switch result {

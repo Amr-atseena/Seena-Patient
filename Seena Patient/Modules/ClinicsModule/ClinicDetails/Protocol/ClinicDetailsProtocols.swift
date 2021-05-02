@@ -13,6 +13,7 @@ enum ClinicDetailsRoute {
     case clinicHome
     case serviceDetails(service: Service)
     case call(number: String)
+    case gallery(image: String)
 }
 protocol ClinicDetailsRouterProtocol {
     // Presenter -> Router

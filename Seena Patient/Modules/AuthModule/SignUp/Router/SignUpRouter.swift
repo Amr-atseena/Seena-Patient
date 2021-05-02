@@ -37,33 +37,38 @@ class SignUpRouter: SignUpRouterProtocol {
             showOptionsPicker(options: options, index: index)
         case .alert(let alertEntity):
             showAlert(alertEntity: alertEntity)
+
+        case .documents:
+//            navigateToDocumets()
+        print("AAA")
+
         }
     }
     private func navigateToSignIn() {
         viewController?.navigationController?.popViewController(animated: true)
     }
     private func showDatePicker() {
-        let alert = UIAlertController(title: "Choose", message: "Please Choose Your Date", preferredStyle: .actionSheet)
+        let alert = UIAlertController(title: "Choose".localized, message: "", preferredStyle: .actionSheet)
         guard let signUp = viewController as? SignUpViewProtocol else { return }
         var selectedDate = Date()
         alert.addDatePicker(mode: .date, date: Date()) { (date) in
             selectedDate = date
         }
-        let doneAlert = UIAlertAction(title: "Done", style: .cancel) { (_) in
+        let doneAlert = UIAlertAction(title: "Done".localized, style: .cancel) { (_) in
             signUp.presenter.dateSelected(selectedDate)
         }
         alert.addAction(doneAlert)
         viewController?.present(alert, animated: true)
     }
     private func showOptionsPicker(options: [String], index: Int) {
-        let alert = UIAlertController(title: "Choose", message: "Please Choose Your Birthdate", preferredStyle: .actionSheet)
+        let alert = UIAlertController(title: "Choose".localized, message: "", preferredStyle: .actionSheet)
         guard let signUp = viewController as? SignUpViewProtocol else { return }
         let documentOptionIndex = index
         var selectedIndex = 0
         alert.addPickerView(values: [options]) { (_, _, index, _) in
             selectedIndex = index.row
         }
-        let doneAlert = UIAlertAction(title: "Done", style: .cancel) { (_) in
+        let doneAlert = UIAlertAction(title: "Done".localized, style: .cancel) { (_) in
             signUp.presenter.optionSelected(atIndex: selectedIndex, forOption: documentOptionIndex)
         }
         alert.addAction(doneAlert)
@@ -73,8 +78,13 @@ class SignUpRouter: SignUpRouterProtocol {
         let uploadDocuments = UploadDocumentsRouter.assembleModule(withStatus: status)
         viewController?.navigationController?.pushViewController(uploadDocuments, animated: true)
     }
+
+//    private func navigateToDocumets() {
+//        let uploadDocuments = UploadDocumentsRouter.assembleModule
+//        viewController?.navigationController?.pushViewController(uploadDocuments, animated: true)
+//    }
     private func showAlert(alertEntity: AlertEntity) {
-        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        let okAction = UIAlertAction(title: "OK".localized, style: .default, handler: nil)
         viewController?.showAlertController(title: alertEntity.title, message: alertEntity.message, actions: [okAction])
     }
 }

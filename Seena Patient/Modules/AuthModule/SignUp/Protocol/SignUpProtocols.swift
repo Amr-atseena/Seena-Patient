@@ -15,6 +15,7 @@ enum SignUpRoute {
     case optionPicker(options: [String], index: Int)
     case alert(alertEntity: AlertEntity)
     case uploadDocuments(Status)
+    case documents
 }
 protocol SignUpRouterProtocol {
     // Presenter -> Router

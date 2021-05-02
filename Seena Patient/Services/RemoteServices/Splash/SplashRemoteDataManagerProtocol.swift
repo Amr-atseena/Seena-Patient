@@ -9,4 +9,5 @@
 import Foundation
 protocol SplashRemoteDataManagerProtocol: class {
     func retriveMetaData(completionHandler: @escaping ((_ result: Result<Codable, Error>) -> Void))
+    func sendFCMToken(serial: String, token: String, auth: String, completionHandler: @escaping ((_ result: Result<Codable, Error>) -> Void))
 }

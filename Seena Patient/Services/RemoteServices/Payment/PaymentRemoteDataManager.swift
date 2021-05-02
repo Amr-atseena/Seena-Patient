@@ -12,7 +12,7 @@ class PaymentRemoteDataManager: APIService<PaymentEndPoint>, PaymentRemoteDataMa
         request(target: .paymentHome(token), objType: BaseResponse<PaymentHomeResponse>.self, completionHandler: completionHandler)
     }
     func retriveTransactions(token: String, completionHandler: @escaping ((Result<Codable, Error>) -> Void)) {
-        request(target: .transactions(token), objType: ServerResonse.self, completionHandler: completionHandler)
+        request(target: .transactions(token), objType: BaseResponse<[Transaction]>.self, completionHandler: completionHandler)
     }
     func payInstallment(token: String, payment: Payment, completionHandler: @escaping ((Result<Codable, Error>) -> Void)) {
         request(target: .pay(token, payment), objType: BaseResponse<Response>.self, completionHandler: completionHandler)

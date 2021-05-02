@@ -45,10 +45,14 @@ class PaymentChannelPresenter: PaymentChannelPresenterProtocol {
         router?.go(to: .payHome)
     }
     func option(selectedAtIndex index: Int) {
-        paymentMethods = paymentMethods.map { OptionViewModel(name: $0.name, isSelected: false)}
-        paymentMethods[index].isSelected = true
-        view?.reloadPaymentMethods()
-        router?.go(to: .atm(index, installment))
+        if index == 0 {
+            router?.go(to: .alert(AlertEntity(title: "", message: "SeenaPayMessage".localized)))
+        } else {
+            paymentMethods = paymentMethods.map { OptionViewModel(name: $0.name, isSelected: false)}
+            paymentMethods[index].isSelected = true
+            view?.reloadPaymentMethods()
+            router?.go(to: .atm(index, installment))
+        }
     }
 }
 // MARK: - PaymentChannelOutputInteractorProtocol Implementation

@@ -8,10 +8,11 @@
 
 import Foundation
 import Moya
+import MOLH
 enum PaymentEndPoint {
     case paymentHome(String)
     case transactions(String)
-    case pay(String,Payment)
+    case pay(String, Payment)
 }
 // MARK: - TargetType Protocol Implementation
 extension PaymentEndPoint: TargetType, EnvironmentProtocol {
@@ -60,19 +61,19 @@ extension PaymentEndPoint: TargetType, EnvironmentProtocol {
         return [
             "Authorization": "Bearer \(token)",
             "Accept-Encoding": "gzip, deflate, br",
-            "Accept-Language": "en"
+            "Accept-Language": MOLHLanguage.currentAppleLanguage()
         ]
         case .transactions(let token):
         return [
             "Authorization": "Bearer \(token)",
             "Accept-Encoding": "gzip, deflate, br",
-            "Accept-Language": "en"
+            "Accept-Language": MOLHLanguage.currentAppleLanguage()
         ]
         case .pay(let token, _):
             return [
                 "Authorization": "Bearer \(token)",
                 "Accept-Encoding": "gzip, deflate, br",
-                "Accept-Language": "en"
+                "Accept-Language": MOLHLanguage.currentAppleLanguage()
             ]
         }
     }

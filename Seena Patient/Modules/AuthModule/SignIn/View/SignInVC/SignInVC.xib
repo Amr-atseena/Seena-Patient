@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -19,6 +19,7 @@
                 <outlet property="passwordTextFiled" destination="iSk-AL-jMx" id="wEN-0e-uB7"/>
                 <outlet property="phoneEditingIndictor" destination="yog-uy-fHU" id="d9G-LM-pG7"/>
                 <outlet property="phoneTextFiled" destination="N0h-6L-kQC" id="4Sc-dN-V8q"/>
+                <outlet property="regView" destination="GyG-jb-C82" id="hDV-sg-g7b"/>
                 <outlet property="signInKeywordLabel" destination="ffe-0K-EXh" id="4Bf-Ha-qwE"/>
                 <outlet property="signUpButton" destination="WHK-Nc-fF9" id="Vho-Yv-WOC"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>

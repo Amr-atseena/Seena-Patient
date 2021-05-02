@@ -7,7 +7,7 @@
 //
 
 import Foundation
-protocol PaymentLocalDataManagerProtocol: AuthenticationLocalDataManagerProtocol {
+protocol PaymentLocalDataManagerProtocol: AuthenticationLocalDataManagerProtocol, PlansLocalDataManagerProtocol {
     func save(bankAccount: [Account])
     func retriveBackAccount() -> [Account]
     func save(vodafoneAccount: [Vodafone])

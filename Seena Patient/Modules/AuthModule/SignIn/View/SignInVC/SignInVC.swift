@@ -20,6 +20,7 @@ class SignInVC: UIViewController, SignInViewProtocol {
     @IBOutlet private var phoneEditingIndictor: UIImageView!
     @IBOutlet private var passwordEditingIndictor: UIImageView!
     @IBOutlet private var loadingIndictor: UIActivityIndicatorView!
+    @IBOutlet private var regView: UIView!
     // MARK: - Attributes
     var presenter: SignInPresenterProtocol!
     // MARK: - Init
@@ -34,6 +35,7 @@ class SignInVC: UIViewController, SignInViewProtocol {
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter.viewDidLoad()
+        regView.isHidden = isInAppleReview
     }
     // MARK: - Methods
     func setupUI() {

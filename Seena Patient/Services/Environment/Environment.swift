@@ -18,7 +18,8 @@ public enum Environment: String {
     }
     // MARK: - Domain
     var serverMainDomain: String {
-        return "157.230.96.195"
+//        return "157.230.96.195"
+        return "dashboard.seenapay.com"
     }
 
     var apiDomain: String {

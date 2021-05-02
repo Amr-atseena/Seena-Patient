@@ -20,6 +20,7 @@ class ClinicsSectionHeaderCell: UITableViewCell {
         // seeAll Button
         seeAllButton.setTitleColor(DesignSystem.Colors.primaryActionBackground.color, for: .normal)
         seeAllButton.titleLabel?.font = DesignSystem.Typography.subHeading4.font
+        seeAllButton.setTitle("See All".localized, for: .normal)
     }
     @IBAction private func didTappSeeAllButton(_ sender: UIButton) {
         seeAllButtonTapped?()

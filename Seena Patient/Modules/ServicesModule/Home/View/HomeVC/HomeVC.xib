@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeVC" customModule="Seena" customModuleProvider="target">
             <connections>
-                <outlet property="beautySubscriptionKeywordLabel" destination="aJA-Es-uQM" id="hla-VC-9De"/>
                 <outlet property="helloKeywordLabel" destination="EXr-8j-gdq" id="oFs-2p-Yf7"/>
                 <outlet property="searchTextFiled" destination="aCZ-5A-alT" id="1rM-cz-KGa"/>
                 <outlet property="specialitiesTableView" destination="3s1-4Y-Hvb" id="872-zP-eHw"/>
@@ -22,7 +24,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12.5" translatesAutoresizingMaskIntoConstraints="NO" id="lUp-m9-vcX">
-                    <rect key="frame" x="30" y="64" width="354" height="113"/>
+                    <rect key="frame" x="30" y="108" width="354" height="113"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="Tc3-vc-Mgq">
                             <rect key="frame" x="0.0" y="0.0" width="354" height="60.5"/>
@@ -73,7 +75,7 @@
                                     </subviews>
                                 </stackView>
                             </subviews>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="40" id="4QA-KY-GZ7"/>
                                 <constraint firstItem="N01-aM-aVS" firstAttribute="top" secondItem="f4t-JC-Fs9" secondAttribute="top" constant="5" id="YHY-rS-4s1"/>
@@ -101,46 +103,37 @@
                         </view>
                     </subviews>
                 </stackView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Beauty subscription" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aJA-Es-uQM">
-                    <rect key="frame" x="20" y="192" width="374" height="20.5"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" keyboardDismissMode="onDrag" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3s1-4Y-Hvb">
-                    <rect key="frame" x="0.0" y="222.5" width="414" height="624.5"/>
+                    <rect key="frame" x="0.0" y="246" width="414" height="567"/>
                     <color key="backgroundColor" red="0.97254901959999995" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
                     </userDefinedRuntimeAttributes>
                 </tableView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BV8-pX-50V">
-                    <rect key="frame" x="30" y="137" width="354" height="40"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BV8-pX-50V">
+                    <rect key="frame" x="30" y="181" width="354" height="40"/>
                     <connections>
                         <action selector="didTapSearchButton:" destination="-1" eventType="touchUpInside" id="OOQ-Ci-hSh"/>
                     </connections>
                 </button>
             </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" red="0.97254901959999995" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="3s1-4Y-Hvb" secondAttribute="trailing" id="1A2-GJ-fum"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="3s1-4Y-Hvb" secondAttribute="bottom" id="4C6-qH-2jf"/>
                 <constraint firstItem="BV8-pX-50V" firstAttribute="leading" secondItem="f4t-JC-Fs9" secondAttribute="leading" id="Dsc-24-fAC"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="lUp-m9-vcX" secondAttribute="trailing" constant="30" id="IL8-bq-yL1"/>
-                <constraint firstItem="aJA-Es-uQM" firstAttribute="top" secondItem="lUp-m9-vcX" secondAttribute="bottom" constant="15" id="Y15-ip-mOk"/>
                 <constraint firstItem="BV8-pX-50V" firstAttribute="trailing" secondItem="f4t-JC-Fs9" secondAttribute="trailing" id="YHW-Hp-3Kz"/>
                 <constraint firstItem="lUp-m9-vcX" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="eTh-zt-pCQ"/>
-                <constraint firstItem="3s1-4Y-Hvb" firstAttribute="top" secondItem="aJA-Es-uQM" secondAttribute="bottom" constant="10" id="esk-XN-VJw"/>
-                <constraint firstItem="aJA-Es-uQM" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="fNU-Ot-0fK"/>
                 <constraint firstItem="BV8-pX-50V" firstAttribute="bottom" secondItem="f4t-JC-Fs9" secondAttribute="bottom" id="ftu-rQ-HrH"/>
+                <constraint firstItem="3s1-4Y-Hvb" firstAttribute="top" secondItem="lUp-m9-vcX" secondAttribute="bottom" constant="25" id="hm9-7y-g0x"/>
                 <constraint firstItem="3s1-4Y-Hvb" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="qfl-SN-Bzx"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="aJA-Es-uQM" secondAttribute="trailing" constant="20" id="tJ0-gJ-z7J"/>
                 <constraint firstItem="lUp-m9-vcX" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="uhQ-7w-rxh"/>
                 <constraint firstItem="BV8-pX-50V" firstAttribute="top" secondItem="f4t-JC-Fs9" secondAttribute="top" id="vdj-Kb-eAH"/>
             </constraints>
             <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
             <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <userDefinedRuntimeAttributes>
                 <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
             </userDefinedRuntimeAttributes>
@@ -150,5 +143,8 @@
     <resources>
         <image name="search" width="20" height="20"/>
         <image name="wellcome" width="40" height="40"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

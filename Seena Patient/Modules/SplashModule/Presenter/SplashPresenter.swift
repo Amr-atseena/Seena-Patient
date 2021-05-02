@@ -13,15 +13,20 @@ class SplashPresenter: SplashPresenterProtocol {
     var router: SplashRouterProtocol?
     var interactor: SplashInputInteractorProtocol?
     weak var view: SplashViewProtocol?
+    let serial: String
+    var token: String
     // MARK: - Init
-    init(view: SplashViewProtocol, interactor: SplashInputInteractorProtocol, router: SplashRouter ) {
+    init(view: SplashViewProtocol, interactor: SplashInputInteractorProtocol, router: SplashRouter, serial: String, token: String ) {
         self.view = view
         self.interactor = interactor
         self.router = router
+        self.serial = serial
+        self.token = token
     }
     // MARK: - Methods
     func viewDidLoad() {
         retriveMetaData()
+        interactor?.sendToken(serial: serial, token: token)
     }
     func retriveMetaData() {
         view?.showLoadingIndictor()

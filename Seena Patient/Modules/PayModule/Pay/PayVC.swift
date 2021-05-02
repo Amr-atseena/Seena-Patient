@@ -39,6 +39,7 @@ class PayVC: UIViewController, PayViewProtocol {
         paymentKeywordLabel.font = DesignSystem.Typography.heading.font
         // accountNumberKeyword Label
         accountNumberKeywordLabel.font = DesignSystem.Typography.subHeading3.font
+        accountNumberKeywordLabel.text = presenter.localization.accountNumber
         // accountNumber Label
         accountNumberLabel.font = DesignSystem.Typography.title3.font
         nextButton.setTitle(presenter.localization.next, for: .normal)
@@ -71,6 +72,9 @@ class PayVC: UIViewController, PayViewProtocol {
     }
     @IBAction private func didBackButtonTapped(_ sender: UIButton) {
         presenter.backButtonTapped()
+    }
+    @IBAction private func didInfoButtonTapped(_ sender: UIButton) {
+        presenter.infoButtonTapped()
     }
     @IBAction private func didTranactionTextFieldEditChange(_ sender: UITextField) {
         presenter.transactionIdEditChange(transactionId: sender.text)

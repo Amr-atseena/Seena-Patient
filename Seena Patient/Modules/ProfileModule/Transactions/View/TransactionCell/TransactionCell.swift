@@ -9,16 +9,28 @@
 import UIKit
 
 class TransactionCell: UITableViewCell {
-
+    @IBOutlet private var clinicNameLabel: UILabel!
+    @IBOutlet private var paymentDateLabel: UILabel!
+    @IBOutlet private var amountLabel: UILabel!
+    @IBOutlet private var paymentStatusLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        // clinicName Label
+        clinicNameLabel.font = DesignSystem.Typography.subHeading3.font
+        // paymentStatus Label
+        paymentStatusLabel.font = DesignSystem.Typography.title2.font
+        // paymentDate Label
+        paymentDateLabel.font = DesignSystem.Typography.title2.font
+        // amount Label
+        amountLabel.font = DesignSystem.Typography.subHeading4.font
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+}
+extension TransactionCell: TransactionCellProtocol {
+    func setTransaction(_ transaction: TransactionViewModel) {
+        amountLabel.text = transaction.amount
+        amountLabel.textColor = transaction.statusColor
+        paymentDateLabel.text = transaction.paymentDate
+        paymentStatusLabel.text = transaction.paymentStatus
+        clinicNameLabel.text = transaction.clinicName
     }
-    
 }

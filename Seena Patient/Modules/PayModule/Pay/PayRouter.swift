@@ -31,6 +31,10 @@ class PayRouter: PayRouterProtocol {
             navigateToPaymentChannel()
         case .alert(let alertEntity):
         showAlert(alertEntity: alertEntity)
+        case .paymentSuccess(let payment):
+            navigateToPaymentSuccess(withPayment: payment)
+        case .info:
+            navigateToInfo()
         }
     }
     private func navigateToPaymentChannel() {
@@ -39,5 +43,15 @@ class PayRouter: PayRouterProtocol {
     private func showAlert(alertEntity: AlertEntity) {
         let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
         viewController?.showAlertController(title: alertEntity.title, message: alertEntity.message, actions: [okAction])
+    }
+    private func navigateToPaymentSuccess(withPayment payment: Payment) {
+        let payment = PaymentSuccessRouter.assembleModule(withPayment: payment)
+        viewController?.navigationController?.pushViewController(payment, animated: true)
+    }
+    private func navigateToInfo() {
+        let info = InfoVC()
+        info.modalTransitionStyle = .crossDissolve
+        info.modalPresentationStyle = .overFullScreen
+        viewController?.present(info, animated: true, completion: nil)
     }
 }

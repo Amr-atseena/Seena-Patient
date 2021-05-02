@@ -11,7 +11,7 @@ import Foundation
 struct ProfileLocalization {
     // MARK: - Attributes
     var profile: String {
-        return "Profile".localized
+        return "profile".localized
     }
     var transactions: String {
         return "Transactions".localized

@@ -13,6 +13,7 @@ import UIKit
 enum HomeRoute {
     case serviceDetails(_ service: Service)
     case packageDetails(_ package: Package)
+    case specialities(_ spec : Speciality)
     case serviceList
     case servicesSearch
 }
@@ -78,4 +79,10 @@ protocol PackageCellView {
 // MARK: - Service Cell View
 protocol ServiceCellProtocol {
     func setService(_ service: ServiceViewModel)
+    func setSpeciality(_ title: String,_ image: String)
+}
+
+// MARK: - clinic Cell View
+protocol ClinicsCellProtocol {
+    func setClinic(_ clinic: ClinicsViewModel)
 }

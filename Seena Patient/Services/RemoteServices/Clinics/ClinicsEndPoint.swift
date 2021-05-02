@@ -8,7 +8,7 @@
 
 import Foundation
 import Moya
-
+import MOLH
 enum ClinicsEndPoint {
     case home
     case clinicDetails(clinicId: Int)
@@ -61,7 +61,7 @@ extension ClinicsEndPoint: TargetType, EnvironmentProtocol {
     var headers: [String: String]? {
         return [
             "Accept-Encoding": "gzip, deflate, br",
-            "Accept-Language": "en"
+            "Accept-Language": MOLHLanguage.currentAppleLanguage()
         ]
     }
 }

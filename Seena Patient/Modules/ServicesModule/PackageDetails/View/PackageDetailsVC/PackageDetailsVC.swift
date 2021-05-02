@@ -63,7 +63,7 @@ class PackageDetailsVC: UIViewController, PackageDetailsViewProtocol {
     func updateUI(withPackage package: PackageViewModel) {
         packageNameLabel.text = package.name
         packageDetailsLabel.text = package.details
-        packagePriceLabel.text = presenter.localization.egp + " " + package.price + " " + presenter.localization.monthly
+        packagePriceLabel.text =  package.price + " " + presenter.localization.egp + " " + presenter.localization.monthly
         packageImage.kf.setImage(with: URL(string: package.image))
     }
     // MARK: - Actions

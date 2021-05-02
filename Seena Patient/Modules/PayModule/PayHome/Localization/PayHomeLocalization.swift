@@ -11,18 +11,21 @@ import Foundation
 struct PayHomeLocalization {
     // MARK: - Attributes
     var yourBalance: String {
-        return "Your Balance"
+        return "Your Balance".localized
     }
     var youPaid: String {
-        return "You paid"
+        return "You paid".localized
     }
     var pay: String {
-        return "Pay"
+        return "Pay".localized
     }
     var calculate: String {
-        return "Calculate"
+        return "Calculate".localized
     }
     var paymentsDue: String {
-        return "Payments Due"
+        return "Payments Due".localized
+    }
+    var availableBalance: String {
+        return "Available Balance".localized
     }
 }

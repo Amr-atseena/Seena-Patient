@@ -11,6 +11,7 @@ import UIKit
 // MARK: - PayHome Router
 enum PayHomeRoute {
     case paymentChannel(installment: Installment)
+    case calculate
 }
 protocol PayHomeRouterProtocol {
     // Presenter -> Router
@@ -56,13 +57,19 @@ protocol PayHomeViewProtocol: class {
     func setupUI()
     func setupPaymentsDueTableView()
     func realodDue()
-    func setPaymentProgress(totalAmount: String, paidAmount: String, ratio: Double)
+    func setPaymentProgress(totalAmount: String, paidAmount: String, avaliableBalance: String, ratio: Double)
     func hideNoDataView()
     func showNoDataView()
     func showPaymentDue()
     func hidePaymentDue()
     func hideLoadingIndictor()
     func showLoadingIndictor()
+
+    func showGetYourSeenaView()
+    func hideGetYourSeenaView()
+    func showProgressView()
+    func hideProgressView()
+
 }
 
 protocol DueCellProtocol {

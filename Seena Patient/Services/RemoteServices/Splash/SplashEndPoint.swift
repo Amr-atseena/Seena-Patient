@@ -8,8 +8,10 @@
 
 import Foundation
 import Moya
+import MOLH
 enum SplashEndPoint {
     case splash
+    case fcmToken(String, String, String)
 }
 // MARK: - TargetType Protocol Implementation
 extension SplashEndPoint: TargetType, EnvironmentProtocol {
@@ -20,10 +22,17 @@ extension SplashEndPoint: TargetType, EnvironmentProtocol {
         switch self {
         case .splash:
             return "splash"
+        case .fcmToken:
+            return "set-token"
         }
     }
     var method: Moya.Method {
-        return .get
+        switch self {
+        case .fcmToken:
+            return .post
+        case .splash:
+            return .get
+        }
     }
     var sampleData: Data {
         return Data()
@@ -32,12 +41,25 @@ extension SplashEndPoint: TargetType, EnvironmentProtocol {
         switch self {
         case .splash:
             return .requestPlain
+        case .fcmToken(let serial, let token, _):
+            let params = ["serial": serial,
+                          "token": token]
+            return .requestParameters(parameters: params, encoding: JSONEncoding.default)
         }
     }
     var headers: [String: String]? {
-        return [
-            "Accept-Encoding": "gzip, deflate, br",
-            "Accept-Language": "en"
-        ]
+        switch self {
+        case .fcmToken(_, _, let token):
+            return [
+                "Authorization": "Bearer \(token)",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Accept-Language": MOLHLanguage.currentAppleLanguage()
+            ]
+        default:
+            return [
+                "Accept-Encoding": "gzip, deflate, br",
+                "Accept-Language": MOLHLanguage.currentAppleLanguage()
+            ]
+        }
     }
 }

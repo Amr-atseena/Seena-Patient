@@ -24,6 +24,7 @@ class ClinicCell: UITableViewCell {
         clinicAddressLabel.font = DesignSystem.Typography.title3.font
         // call Button
         callButton.titleLabel?.font = DesignSystem.Typography.subHeading4.font
+        callButton.setTitle("Call".localized, for: .normal)
     }
     @IBAction private func didTapCallButton(_ sender: UIButton) {
         callButtonTapped?()

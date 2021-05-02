@@ -49,17 +49,22 @@ class HomePresenter: HomePresenterProtocol {
         cell.setPackage(PackageViewModel(package: package))
     }
     func configure(spectialityCell cell: SpecialityCellView, atIndex index: Int) {
-        cell.setSpecialityName(specialities[index].speciality)
+        cell.setSpecialityName(specialities[index].speciality ?? "")
     }
     func configure(serviceCell cell: ServiceCellProtocol, atIndex index: Int, andSection section: Int) {
-        let service = specialities[section].services?[index]
-        cell.setService(ServiceViewModel(service: service))
+//        let service = specialities[section].services?[index]
+//        cell.setService(ServiceViewModel(service: service))
+        let speciality = specialities[index]
+        cell.setSpeciality(speciality.speciality, speciality.image ?? "")
     }
     func serviceSelected(atIndex index: Int, andSection section: Int) {
         switch section {
         case -1:
             let package = packages[index]
             router?.go(to: .packageDetails(package))
+        case -2:
+            let speciality = specialities[index]
+            router?.go(to: .specialities(speciality))
         default:
             guard let service = specialities[section].services?[index] else {return}
             router?.go(to: .serviceDetails(service))

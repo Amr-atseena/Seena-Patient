@@ -20,9 +20,7 @@ extension TokenLocalDataManagerProtocol {
         return UserDefaults.standard.string(forKey: "TOKEN") ?? ""
     }
     func removeUserData() {
-        UserDefaults.resetStandardUserDefaults()
-        let domain = Bundle.main.bundleIdentifier!
-        UserDefaults.standard.removePersistentDomain(forName: domain)
-        UserDefaults.standard.synchronize()
+        UserDefaults.standard.removeObject(forKey: "USER")
+        UserDefaults.standard.removeObject(forKey: "TOKEN")
     }
 }

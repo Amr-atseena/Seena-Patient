@@ -7,6 +7,9 @@
 //
 
 import Foundation
+
+var isInAppleReview = false
+
 class SplashInteractor: SplashInputInteractorProtocol {
     // MARK: - Attributes
     weak var presenter: SplashOutputInteractorProtocol?
@@ -34,6 +37,8 @@ class SplashInteractor: SplashInputInteractorProtocol {
                     let residence = response.response?.residenceProof,
                     let bankAccount = response.response?.accounts,
                     let vodafoneAccount = response.response?.vCash,
+                    let plans = response.response?.plans,
+                    let isInReview = response.response?.isInReview,
                     response.serverResonse.code == 200 else {
                     self.presenter?.onRetriveDataFail(response.serverResonse.desc)
                     return
@@ -44,8 +49,15 @@ class SplashInteractor: SplashInputInteractorProtocol {
                 self.localDataManager.save(documents: residence, forKey: .residence)
                 self.localDataManager.save(bankAccount: bankAccount)
                 self.localDataManager.save(vodafoneAccount: vodafoneAccount)
+                self.localDataManager.save(plans: plans)
                 self.presenter?.onRetriveMetaDataSuccess()
+                isInAppleReview = isInReview
             }
+        }
+    }
+    func sendToken(serial: String, token: String) {
+        remoteDataManager.sendFCMToken(serial: serial, token: token, auth: localDataManager.retriveToken()) { (result) in
+            print(result)
         }
     }
 }

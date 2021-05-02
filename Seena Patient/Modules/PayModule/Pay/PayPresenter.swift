@@ -48,11 +48,15 @@ class PayPresenter: PayPresenterProtocol {
             view?.enableNextButton()
         }
     }
+    func infoButtonTapped() {
+        router?.go(to: .info)
+    }
 }
 // MARK: - PayOutputInteractorProtocol Implementation
 extension PayPresenter: PayOutputInteractorProtocol {
     func onRetriveDataSuccess() {
         view?.hideLoadingIndictor()
+        router?.go(to: .paymentSuccess(payment))
     }
     func onRetriveDataFail(withError error: String) {
         view?.hideLoadingIndictor()

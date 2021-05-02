@@ -36,7 +36,7 @@ class ProfilePresenter: ProfilePresenterProtocol {
         case 2:
             router?.go(to: .share)
         case 3:
-            router?.go(to: .alert(AlertEntity(title: "", message: "Do you want To log out")))
+            router?.go(to: .alert(AlertEntity(title: "", message: "LogoutMessage".localized)))
         default:
             print(index)
         }
@@ -60,13 +60,13 @@ extension ProfilePresenter: ProfileOutputInteractorProtocol {
     func onRetrieApplicationStatusSuccess(_ status: String) {
         switch status {
         case "pending":
-            view?.setApplicationStatus(status: status, color: DesignSystem.Colors.pending.color)
+            view?.setApplicationStatus(status: "pending".localized, color: DesignSystem.Colors.pending.color)
         case "activate":
-            view?.setApplicationStatus(status: status, color: DesignSystem.Colors.accept.color)
+            view?.setApplicationStatus(status: "activate".localized, color: DesignSystem.Colors.accept.color)
         case "rejected":
-            view?.setApplicationStatus(status: status, color: DesignSystem.Colors.primaryActionBackground.color)
+            view?.setApplicationStatus(status: "rejected".localized, color: DesignSystem.Colors.primaryActionBackground.color)
         case "missing info":
-            view?.setApplicationStatus(status: status, color: DesignSystem.Colors.primaryActionBackground.color)
+            view?.setApplicationStatus(status: "missing info".localized, color: DesignSystem.Colors.primaryActionBackground.color)
         default:
             view?.setApplicationStatus(status: status, color: DesignSystem.Colors.primaryActionBackground.color)
         }

@@ -8,12 +8,27 @@
 
 import Foundation
 
-class TransactionsPresenter: TransactionsPresenterProtocol {
+class TransactionsPresenter: TransactionsPresenterProtocol {    
     // MARK: - Attributes
     weak var view: TransactionsViewProtocol?
     var interactor: TransactionsInputInteractorProtocol?
     var router: TransactionsRouterProtocol?
     let localization = TransactionsLocalization()
+    var transactions = [Transaction]() {
+        didSet {
+            if transactions.isEmpty {
+                view?.showNoDataView()
+                view?.hideTransactions()
+            }else {
+                view?.hideNoDataView()
+                view?.showTransactions()
+                view?.reloadTransactions()
+            }
+        }
+    }
+    var numberOfTransactions: Int {
+        return transactions.count
+    }
     // MARK: - Init
     init(view: TransactionsViewProtocol?, interactor: TransactionsInputInteractorProtocol, router: TransactionsRouterProtocol ) {
         self.view = view
@@ -30,16 +45,19 @@ class TransactionsPresenter: TransactionsPresenterProtocol {
         view?.showLoadingIndictor()
         interactor?.retriveTransactions()
     }
+    func config(transactionCell cell: TransactionCellProtocol, atIndex index: Int) {
+        let transaction = transactions[index]
+        cell.setTransaction(TransactionViewModel(transaction: transaction))
+    }
     func backButtonTapped() {
         router?.go(to: .back)
     }
 }
 // MARK: - TransactionsOutputInteractorProtocol Implementation
 extension TransactionsPresenter: TransactionsOutputInteractorProtocol {
-    func onRetriveTransactionsSuccess() {
+    func onRetriveTransactionsSuccess(withTransactions transactions: [Transaction]) {
         view?.hideLoadingIndictor()
-        view?.hideTransactions()
-        view?.showNoDataView()
+        self.transactions = transactions
     }
     func onRetriveTransactionsFail() {
         view?.hideLoadingIndictor()
