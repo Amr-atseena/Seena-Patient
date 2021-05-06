@@ -54,6 +54,7 @@ extension ProfilePresenter: ProfileOutputInteractorProtocol {
     func onRetriveUser(_ user: User?) {
         guard let currentUser = user else {
             router?.go(to: .signIn)
+            print("Hna")
             return
         }
         let username = currentUser.firstName + " " + currentUser.lastName

@@ -38,15 +38,17 @@ class SignInPresenter: SignInPresenterProtocol {
 // MARK: - SignInOutputInteractorProtocol Implementation
 extension SignInPresenter: SignInOutputInteractorProtocol {
     func onLoginSuccess(withStatus status: Status) {
-        view?.hideLoadingIndictor()
-        if status.financialProof && status.idType &&
-            status.profilePicture && status.residenceProof {
-               router?.go(to: .profile)
-        } else {
+//        view?.hideLoadingIndictor()
+//        if status.financialProof && status.idType &&
+//            status.profilePicture && status.residenceProof {
+//               router?.go(to: .profile)
+//        } else {
 //            router?.go(to: .uploadDocuments(status))
-            router?.go(to: .profile)
+////            router?.go(to: .profile)
+//
+//        }
+                       router?.go(to: .profile)
 
-        }
     }
     func onLoginFail(withMessage message: String) {
         view?.hideLoadingIndictor()
