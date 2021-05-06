@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -11,34 +11,32 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="63" id="KGk-i7-Jjw" customClass="DocumentTypeCell" customModule="Seena" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="321" height="63"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="50" id="KGk-i7-Jjw" customClass="DocumentTypeCell" customModule="Seena" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="321" height="50"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="321" height="63"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="321" height="50"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rXV-XZ-c5u">
-                        <rect key="frame" x="0.0" y="0.0" width="321" height="63"/>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rXV-XZ-c5u">
+                        <rect key="frame" x="0.0" y="0.0" width="321" height="50"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KRP-Zm-pWD" customClass="AnimatableView" customModule="IBAnimatable">
-                                <rect key="frame" x="60.5" y="10" width="200" height="50"/>
+                                <rect key="frame" x="60.5" y="10" width="200" height="30"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ID" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="0Ug-Cz-akB">
-                                        <rect key="frame" x="10" y="10" width="180" height="30"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <rect key="frame" x="93" y="6" width="14.5" height="18"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" name="primaryActionBackground"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="4iN-Z4-7BT"/>
-                                    <constraint firstItem="0Ug-Cz-akB" firstAttribute="leading" secondItem="KRP-Zm-pWD" secondAttribute="leading" constant="10" id="Axn-U4-Z3K"/>
-                                    <constraint firstAttribute="bottom" secondItem="0Ug-Cz-akB" secondAttribute="bottom" constant="10" id="B2f-mg-bRp"/>
-                                    <constraint firstAttribute="trailing" secondItem="0Ug-Cz-akB" secondAttribute="trailing" constant="10" id="KxL-47-GKS"/>
+                                    <constraint firstAttribute="height" constant="30" id="4iN-Z4-7BT"/>
+                                    <constraint firstItem="0Ug-Cz-akB" firstAttribute="centerY" secondItem="KRP-Zm-pWD" secondAttribute="centerY" id="BuY-Gr-kRP"/>
+                                    <constraint firstItem="0Ug-Cz-akB" firstAttribute="centerX" secondItem="KRP-Zm-pWD" secondAttribute="centerX" id="Lhr-hJ-lIZ"/>
                                     <constraint firstAttribute="width" constant="200" id="N3t-gf-obm"/>
-                                    <constraint firstItem="0Ug-Cz-akB" firstAttribute="top" secondItem="KRP-Zm-pWD" secondAttribute="top" constant="10" id="rg5-JO-X0n"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -46,8 +44,8 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" ambiguous="YES" image="correctCheck" translatesAutoresizingMaskIntoConstraints="NO" id="beU-u7-4m9">
-                                <rect key="frame" x="281" y="21.5" width="20" height="20"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="correctCheck" translatesAutoresizingMaskIntoConstraints="NO" id="beU-u7-4m9">
+                                <rect key="frame" x="281" y="15" width="20" height="20"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -75,7 +73,7 @@
                 <outlet property="uploadCheckImage" destination="beU-u7-4m9" id="puX-AT-e8p"/>
                 <outlet property="uploadTypeLabel" destination="0Ug-Cz-akB" id="aEw-j4-mtS"/>
             </connections>
-            <point key="canvasLocation" x="-121.0144927536232" y="35.15625"/>
+            <point key="canvasLocation" x="-121.0144927536232" y="30.803571428571427"/>
         </tableViewCell>
     </objects>
     <resources>

@@ -25,4 +25,7 @@ struct PaymentChannelLocalization {
     var vodafoneCash: String {
         return "Vodafone Cash".localized
     }
+    var etisalatCash: String {
+        return "Etisalat Cash".localized
+    }
 }

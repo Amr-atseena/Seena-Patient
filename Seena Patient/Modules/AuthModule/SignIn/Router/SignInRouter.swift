@@ -33,6 +33,7 @@ class SignInRouter: SignInRouterProtocol {
             navigateToUploadDocumets(withStatus: status)
         case .forgotPassword:
             print(" forgotPassword ")
+            navigateToForgetPass()
         case .profile:
             navigateToProfile()
         case .alert(let alertEntity):
@@ -56,5 +57,13 @@ class SignInRouter: SignInRouterProtocol {
     private func showAlert(alertEntity: AlertEntity) {
         let okAction = UIAlertAction(title: "OK", style: .default)
         viewController?.showAlertController(title: alertEntity.title, message: alertEntity.message, actions: [okAction])
+    }
+
+    private func navigateToForgetPass() {
+        let storyBoard: UIStoryboard = UIStoryboard(name: "ForgetPassword", bundle: nil)
+        let newViewController = storyBoard.instantiateViewController(withIdentifier: "ForgetPassViewController") as? ForgetPassViewController
+        newViewController!.modalPresentationStyle = .fullScreen
+        viewController?.navigationController?.pushViewController(newViewController!, animated: true)
+//        viewController?.present(newViewController!, animated: true, completion: nil)
     }
 }

@@ -43,7 +43,9 @@ extension SignInPresenter: SignInOutputInteractorProtocol {
             status.profilePicture && status.residenceProof {
                router?.go(to: .profile)
         } else {
-            router?.go(to: .uploadDocuments(status))
+//            router?.go(to: .uploadDocuments(status))
+            router?.go(to: .profile)
+
         }
     }
     func onLoginFail(withMessage message: String) {

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GalleryVC" customModule="Seena" customModuleProvider="target">
+            <connections>
+                <outlet property="galleryImage" destination="D8V-nE-GdQ" id="4hm-hK-xoI"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="D8V-nE-GdQ">
+                    <rect key="frame" x="0.0" y="273" width="414" height="350"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="350" id="Q3u-M8-Hkt"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0cv-o7-nrS">
+                    <rect key="frame" x="369" y="59" width="30" height="30"/>
+                    <state key="normal" image="dismiss"/>
+                    <connections>
+                        <action selector="didDissmisButtonTapped:" destination="-1" eventType="touchUpInside" id="0Gf-Ci-kC9"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="D8V-nE-GdQ" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="2TO-96-eIN"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="0cv-o7-nrS" secondAttribute="trailing" constant="15" id="Qzg-ix-rJo"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="D8V-nE-GdQ" secondAttribute="trailing" id="pb3-in-PaC"/>
+                <constraint firstItem="0cv-o7-nrS" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="15" id="ul0-fY-79g"/>
+                <constraint firstItem="D8V-nE-GdQ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="y6d-t6-VqM"/>
+            </constraints>
+            <point key="canvasLocation" x="-43" y="108"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="dismiss" width="30" height="30"/>
+    </resources>
+</document>

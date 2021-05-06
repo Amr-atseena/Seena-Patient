@@ -37,6 +37,9 @@ class ProfilePresenter: ProfilePresenterProtocol {
             router?.go(to: .share)
         case 3:
             router?.go(to: .alert(AlertEntity(title: "", message: "LogoutMessage".localized)))
+        case 4:
+            print("Profile")
+            router?.go(to: .applicationStatus)
         default:
             print(index)
         }

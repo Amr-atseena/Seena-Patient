@@ -88,7 +88,13 @@ class SignInVC: UIViewController, SignInViewProtocol {
         presenter.signInButtonTapped(withPhone: phoneTextFiled.text, andPassword: passwordTextFiled.text)
     }
     @IBAction private func didSignUpButtonTapped(_ sender: UIButton) {
-        presenter.signUpButtonTapped()
+//        presenter.signUpButtonTapped()
+
+        let storyBoard: UIStoryboard = UIStoryboard(name: "SignUp", bundle: nil)
+        let newViewController = storyBoard.instantiateViewController(withIdentifier: "FirstSignUpViewController") as? FirstSignUpViewController
+        newViewController!.modalPresentationStyle = .fullScreen
+        self.navigationController?.pushViewController(newViewController!, animated: true)
+        
     }
     @IBAction private func didForgotPasswordButtonTapped(_ sender: UIButton) {
         presenter.forgotPasswordTapped()

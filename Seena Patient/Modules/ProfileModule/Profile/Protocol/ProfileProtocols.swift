@@ -15,6 +15,7 @@ enum ProfileRoute {
     case settings
     case share
     case alert(AlertEntity)
+    case applicationStatus
 }
 protocol ProfileRouterProtocol {
     // Presenter -> Router

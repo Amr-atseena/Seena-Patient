@@ -9,22 +9,30 @@
 import UIKit
 
 class ForgetPassViewController: UIViewController {
+    @IBOutlet weak var nextBtn: UIButton!
+    @IBOutlet weak var emailTF: UITextField!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        nextBtn.layer.cornerRadius = 10
     }
     
 
-    /*
-    // MARK: - Navigation
+    @IBAction func next(_ sender: Any) {
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+//        APIClient().forgetPassword(email: emailTF.text ?? "") { (res) in
+//            print(res)
+//        } onError: { (error) in
+//            print(error)
+//        }
+
+
+        let storyBoard: UIStoryboard = UIStoryboard(name: "ForgetPassword", bundle: nil)
+        let newViewController = storyBoard.instantiateViewController(withIdentifier: "OTPForgetPasswordViewController") as? OTPForgetPasswordViewController
+        newViewController!.modalPresentationStyle = .fullScreen
+        self.navigationController?.pushViewController(newViewController!, animated: true)
+//        self.present(newViewController!, animated: true, completion: nil)
     }
-    */
+
 
 }

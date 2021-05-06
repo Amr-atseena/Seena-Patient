@@ -25,11 +25,15 @@ protocol ATMPayInputInteractorProtocol: class {
     // Presenter -> Interactor
     func retriveBanksAccount()
     func retriveVodafoneAccount()
+//    func retriveEtisalatAccount()
+
 }
 protocol ATMPayOutputInteractorProtocol: class {
     // Interactor -> Presenter
     func onRetriveBanksAccountSuccess(_ banksAccounts: [Account])
     func onRetriveVodafoneAccountSuccess(_ vodafoneAccounts: [Vodafone])
+//    func onRetriveEtisalatAccountSuccess(_ etisalatAccounts: [Etisalat])
+
 }
 // MARK: - ATMPay Preseneter
 protocol ATMPayPresenterProtocol: class {

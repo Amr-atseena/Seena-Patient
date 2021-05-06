@@ -14,3 +14,11 @@ struct Vodafone: Codable {
     let image: String
     let number: String
 }
+
+
+struct Etisalat: Codable {
+    let id: Int
+    let provider: String
+    let image: String
+    let number: String
+}

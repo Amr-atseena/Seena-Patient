@@ -16,6 +16,25 @@ class HomeVC: UIViewController, HomeViewProtocol {
     @IBOutlet var specialitiesTableView: UITableView!
     // MARK: - Attributes
 
+    private lazy var seeAllOffersBtn: UIButton = {
+        let button = UIButton()
+        button.frame = CGRect(x: self.view.frame.size.width - 120, y: 5, width: 80, height: 30)
+
+//        button.backgroundColor = UIColor.red
+        button.setTitle("See all ", for: .normal)
+        button.titleLabel?.font = .systemFont(ofSize: 15, weight: .regular)
+        button.setTitleColor(#colorLiteral(red: 0.8588235294, green: 0.07843137255, blue: 0.07843137255, alpha: 1), for: .normal)
+        button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+//        self.view.addSubview(button)
+        return button
+    }()
+
+    @objc func buttonAction(sender: UIButton!) {
+       print("Button tapped")
+        presenter.serachButtonTapped()
+
+    }
+
 
     private lazy var operationsLabel: UILabel = {
         let opertionsLabel = UILabel()
@@ -39,6 +58,7 @@ class HomeVC: UIViewController, HomeViewProtocol {
         let headerView = UIView(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: 290))
         headerView.addSubview(operationsLabel)
         headerView.addSubview(headerCollectionView)
+        headerView.addSubview(seeAllOffersBtn)
         headerCollectionView.translatesAutoresizingMaskIntoConstraints = false
         operationsLabel.translatesAutoresizingMaskIntoConstraints = false
         let constraint = [
@@ -54,45 +74,8 @@ class HomeVC: UIViewController, HomeViewProtocol {
         return headerView
     }()
 
-    private lazy var secondoperationsLabel: UILabel = {
-        let secondoperationsLabel = UILabel()
-//        opertionsLabel.text = self.presenter.localization.beautySubscription
-        secondoperationsLabel.text = "Second offers"
-        secondoperationsLabel.font = DesignSystem.Typography.subHeading2.font
-        secondoperationsLabel.textColor = DesignSystem.Colors.secondaryText.color
-        return secondoperationsLabel
-    }()
-
-    private lazy var secondheaderCollectionView: UICollectionView = {
-        let layout = UICollectionViewFlowLayout()
-        layout.scrollDirection = .horizontal
-        layout.sectionInset = UIEdgeInsets(top: 0, left: 20, bottom: 10, right: 20)
-        let header = UICollectionView(frame: CGRect(x: 0, y: 0, width: 0, height: 0), collectionViewLayout: layout)
-        header.backgroundColor = .clear
-        header.isSkeletonable = true
-        header.showsHorizontalScrollIndicator = false
-        return header
-    }()
-    private lazy var secondheaderView: UIView = {
-        let secondheaderView = UIView(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: 290))
-        secondheaderView.addSubview(secondoperationsLabel)
-        secondheaderView.addSubview(secondheaderCollectionView)
-        secondheaderCollectionView.translatesAutoresizingMaskIntoConstraints = false
-        secondoperationsLabel.translatesAutoresizingMaskIntoConstraints = false
-        let constraint = [
-            secondoperationsLabel.topAnchor.constraint(equalTo: secondheaderView.topAnchor, constant: 5),
-            secondoperationsLabel.leadingAnchor.constraint(equalTo: secondheaderView.leadingAnchor, constant: 20),
-            secondoperationsLabel.trailingAnchor.constraint(equalTo: secondheaderView.trailingAnchor, constant: -5),
-            secondoperationsLabel.bottomAnchor.constraint(equalTo: secondheaderCollectionView.topAnchor, constant: -10),
-            secondheaderView.leadingAnchor.constraint(equalTo: secondheaderView.leadingAnchor),
-            secondheaderCollectionView.trailingAnchor.constraint(equalTo: secondheaderView.trailingAnchor),
-            secondheaderCollectionView.bottomAnchor.constraint(equalTo: secondheaderView.bottomAnchor, constant: -20)
-        ]
-        NSLayoutConstraint.activate(constraint)
-        return secondheaderView
-    }()
     var presenter: HomePresenterProtocol!
-    var presenter2: ClinicsHomePresenterProtocol!
+//    var presenter2: ClinicsHomePresenterProtocol!
 
     // MARK: - Init
     init() {
@@ -140,12 +123,7 @@ class HomeVC: UIViewController, HomeViewProtocol {
         headerCollectionView.register(cellWithClass: PackageSkeltonCell.self)
         headerCollectionView.register(cellWithClass: PackageCell.self)
 
-        secondheaderCollectionView.delegate = self
-        secondheaderCollectionView.dataSource = self
-        secondheaderCollectionView.register(cellWithClass: PackageSkeltonCell.self)
-        secondheaderCollectionView.register(cellWithClass: ClinicsCell.self)
-        
-        specialitiesTableView.tableHeaderView = secondheaderView
+
         specialitiesTableView.tableHeaderView = headerView
 
     }
@@ -157,16 +135,13 @@ class HomeVC: UIViewController, HomeViewProtocol {
     }
     func reloadPackageCollectionView() {
         headerCollectionView.reloadData()
-        secondheaderCollectionView.reloadData()
     }
     func showSkeltonView() {
         headerCollectionView.showAnimatedGradientSkeleton()
-        secondheaderCollectionView.showAnimatedGradientSkeleton()
         specialitiesTableView.showAnimatedGradientSkeleton()
     }
     func hideSkeltonView() {
         headerCollectionView.hideSkeleton()
-        secondheaderCollectionView.hideSkeleton()
         specialitiesTableView.hideSkeleton()
     }
     // MARK: - Actions
@@ -181,13 +156,13 @@ class HomeVC: UIViewController, HomeViewProtocol {
 // MARK: - CategoriesTableView DataSource Implementation
 extension HomeVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return presenter.numberOfCategories
-        return 1
+        return presenter.numberOfCategories
+//        return 1
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withClass: SpectialityCell.self, for: indexPath)
-//        presenter.configure(spectialityCell: cell, atIndex: indexPath.row)
-        cell.spectialityNameLabel.text = "Clinics"
+        presenter.configure(spectialityCell: cell, atIndex: indexPath.row)
+//        cell.spectialityNameLabel.text = "Clinics"
         cell.callBack = {
             self.navigationController?.pushViewController(ClinicsHomeRouter.assembleModule(), animated: true)
         }
@@ -207,15 +182,14 @@ extension HomeVC: UITableViewDelegate {
 extension HomeVC: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if
-            collectionView == headerCollectionView ||
-                collectionView == secondheaderCollectionView {
+            collectionView == headerCollectionView {
             return presenter.numberOfPackages
         }
 //        else if collectionView == secondheaderCollectionView{
 //        }
         else {
-//            return presenter.numberOfServices(atRow: collectionView.tag)
-            return presenter.numberOfCategories
+            return presenter.numberOfServices(atRow: collectionView.tag)
+//            return presenter.numberOfCategories
         }
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -223,12 +197,6 @@ extension HomeVC: UICollectionViewDataSource {
             let cell = collectionView.dequeueReusableCell(withClass: PackageCell.self, for: indexPath)
             presenter.configure(packageCell: cell, atIndex: indexPath.item)
             return cell
-        }else
-        if collectionView == secondheaderCollectionView{
-            let cell = collectionView.dequeueReusableCell(withClass: ClinicsCell.self, for: indexPath)
-            presenter.configure(packageCell: cell, atIndex: indexPath.item)
-            return cell
-
         }
         else {
             let cell = collectionView.dequeueReusableCell(withClass: ServiceCell.self, for: indexPath)
@@ -242,12 +210,11 @@ extension HomeVC: UICollectionViewDataSource {
 extension HomeVC: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if
-            collectionView == headerCollectionView ||
-                collectionView == secondheaderCollectionView {
+            collectionView == headerCollectionView{
             presenter.serviceSelected(atIndex: indexPath.item, andSection: -1)
         } else {
-            presenter.serviceSelected(atIndex: indexPath.item, andSection: -2)
-
+//            presenter.serviceSelected(atIndex: indexPath.item, andSection: -2)
+            presenter.serviceSelected(atIndex: indexPath.item, andSection: 0)
 
         }
     }
@@ -257,8 +224,7 @@ extension HomeVC: UICollectionViewDelegate {
 extension HomeVC: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         if
-            collectionView == headerCollectionView ||
-            collectionView == secondheaderCollectionView {
+            collectionView == headerCollectionView {
 //            let width = (collectionView.frame.size.width - 30 ) / 1.05
             let width = (collectionView.frame.size.width ) / 1.05
             let height = (collectionView.frame.size.height)
@@ -277,8 +243,7 @@ extension HomeVC: UICollectionViewDelegateFlowLayout {
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         if
-//            collectionView != headerCollectionView ||
-            collectionView != secondheaderCollectionView{
+            collectionView != headerCollectionView {
             return UIEdgeInsets(top: 0, left: 15, bottom: 0, right: 15)
         } else {
             return UIEdgeInsets(top: 10, left: 15, bottom: 15, right: 15)

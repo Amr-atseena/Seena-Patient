@@ -23,4 +23,9 @@ class ATMPayInteractor: ATMPayInputInteractorProtocol {
     func retriveVodafoneAccount() {
         presenter?.onRetriveVodafoneAccountSuccess(localDataManager.retriveVodafoneAccount())
     }
+
+//    func retriveEtisalatAccount() {
+//        presenter?.onRetriveEtisalatAccountSuccess(localDataManager.retriveEtisalatAccount())
+//    }
+
 }

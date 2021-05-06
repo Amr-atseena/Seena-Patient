@@ -31,18 +31,14 @@ class CompleteSignStageOneViewController: UIViewController {
 
 
     @IBAction func button(_ sender: Any) {
-//        let storyBoard: UIStoryboard = UIStoryboard(name: "UploadDocumentsVC", bundle: nil)
-//        let newViewController = storyBoard.instantiateViewController(withIdentifier: "UploadDocumentsVC") as? UploadDocumentsVC
-//        newViewController!.modalPresentationStyle = .fullScreen
-//        self.present(newViewController!, animated: true, completion: nil)
 
-//                presenter.finishButtonTapped()
-//
-//        router?.go(to: .uploadDocuments(status))
-//        self.navigationController?.pushViewController(UploadDocumentsRouter.assembleModule(), animated: true)
+//        APIClient().signUpsecond(birthdate: <#T##String#>, id: <#T##Int#>, financialProof: <#T##Int#>, ResidenceProof: <#T##Int#>) { (res) in
+//            print(res)
+//        } onError: { (error) in
+//            print(error)
+//        }
 
-//        let uploadDocuments = UploadDocumentsRouter.assembleModule(withStatus: status)
-//        uploadDocuments.modalPresentationStyle = .fullScreen
+
         let status = Status(profilePicture: false, idType: false, financialProof: false, residenceProof: false)
         let router = UploadDocumentsRouter()
         let interactor = UploadDocumentsInteractor()
@@ -54,18 +50,9 @@ class CompleteSignStageOneViewController: UIViewController {
         vc.presenter = presenter
         self.navigationController?.pushViewController(vc, animated: true)
 
-//        self.pres?.pushViewController(UploadDocumentsVC(), animated: true)
 
-//        router?.go(to: .uploadDocuments(status))
     }
 
-    private func navigateToUploadDocumets(withStatus status: Status) {
-        let uploadDocuments = UploadDocumentsRouter.assembleModule(withStatus: status)
-//        viewController?.hidesBottomBarWhenPushed = true
-//        self.navigateToUploadDocumets(withStatus: Status)
-        self.navigationController?.pushViewController(uploadDocuments, animated: true)
-//        viewController?.hidesBottomBarWhenPushed = false
-    }
 
 
 }

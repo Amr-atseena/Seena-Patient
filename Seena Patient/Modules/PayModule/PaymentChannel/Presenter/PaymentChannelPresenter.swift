@@ -35,7 +35,8 @@ class PaymentChannelPresenter: PaymentChannelPresenterProtocol {
         paymentMethods = [OptionViewModel(name: localization.seenaPay),
                           OptionViewModel(name: localization.atm),
                           OptionViewModel(name: localization.onlinePay),
-                          OptionViewModel(name: localization.vodafoneCash)]
+                          OptionViewModel(name: localization.vodafoneCash),
+                          OptionViewModel(name: localization.etisalatCash)]
     }
     func config(paymentCell cell: PaymentMethodCellProtocol, atIndex index: Int) {
         let option = paymentMethods[index]
@@ -47,7 +48,11 @@ class PaymentChannelPresenter: PaymentChannelPresenterProtocol {
     func option(selectedAtIndex index: Int) {
         if index == 0 {
             router?.go(to: .alert(AlertEntity(title: "", message: "SeenaPayMessage".localized)))
-        } else {
+        }
+//            else if index == 4{
+//            print("Etisalat")
+//        }
+        else {
             paymentMethods = paymentMethods.map { OptionViewModel(name: $0.name, isSelected: false)}
             paymentMethods[index].isSelected = true
             view?.reloadPaymentMethods()

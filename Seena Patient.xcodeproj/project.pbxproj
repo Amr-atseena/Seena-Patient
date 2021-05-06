@@ -276,6 +276,15 @@
 		88F706C624EE6804005C2ADB /* PackageDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F706BF24EE6804005C2ADB /* PackageDetailsVC.swift */; };
 		88F83BA825210E6D00C9295A /* ServicesLocalDataManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F83BA725210E6D00C9295A /* ServicesLocalDataManagerProtocol.swift */; };
 		88F83BAC25210E9100C9295A /* ServicesLocalDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F83BAB25210E9100C9295A /* ServicesLocalDataManager.swift */; };
+		8C3FD6302642CA08002B5240 /* SignUpFirst.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3FD62F2642CA08002B5240 /* SignUpFirst.swift */; };
+		8C3FD6342642CA71002B5240 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3FD6332642CA71002B5240 /* APIClient.swift */; };
+		8C3FD6382642D054002B5240 /* OTPSignUpModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3FD6372642D054002B5240 /* OTPSignUpModel.swift */; };
+		8C3FD63C2642D391002B5240 /* SignUpSecond.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3FD63B2642D391002B5240 /* SignUpSecond.swift */; };
+		8C3FD6402642D705002B5240 /* ForgetPassModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3FD63F2642D705002B5240 /* ForgetPassModel.swift */; };
+		8C76E70A26418C2400E0C06B /* NewPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C76E70926418C2400E0C06B /* NewPasswordViewController.swift */; };
+		8C76E70E264197AD00E0C06B /* FirstSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C76E70D264197AD00E0C06B /* FirstSignUpViewController.swift */; };
+		8C76E712264197C600E0C06B /* SignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C76E711264197C600E0C06B /* SignUp.storyboard */; };
+		8C76E7162641998600E0C06B /* OTPVerifyPhoneNumberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C76E7152641998600E0C06B /* OTPVerifyPhoneNumberViewController.swift */; };
 		8C81545024EB21CA00CA30E7 /* ServicesSearchVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C81544824EB21CA00CA30E7 /* ServicesSearchVC.xib */; };
 		8C81545224EB21CA00CA30E7 /* ServicesSearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C81544A24EB21CA00CA30E7 /* ServicesSearchPresenter.swift */; };
 		8C81545324EB21CA00CA30E7 /* ServicesSearchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C81544B24EB21CA00CA30E7 /* ServicesSearchRouter.swift */; };
@@ -349,6 +358,9 @@
 		8CEC780924E9CC2B000CED1F /* ServiceDetailsLocalizaition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEC780824E9CC2B000CED1F /* ServiceDetailsLocalizaition.swift */; };
 		8CEC780E24E9DDDB000CED1F /* ServiceClinicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEC780C24E9DDDB000CED1F /* ServiceClinicCell.swift */; };
 		8CEC780F24E9DDDB000CED1F /* ServiceClinicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CEC780D24E9DDDB000CED1F /* ServiceClinicCell.xib */; };
+		8CFD17E5263E5CBF002C0F8A /* OTPForgetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFD17E4263E5CBF002C0F8A /* OTPForgetPasswordViewController.swift */; };
+		8CFD17E9263E6339002C0F8A /* ApplicationStatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFD17E8263E6339002C0F8A /* ApplicationStatusViewController.swift */; };
+		8CFD17ED263E634C002C0F8A /* ApplicationStatus.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CFD17EC263E634C002C0F8A /* ApplicationStatus.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -635,6 +647,15 @@
 		88F706BF24EE6804005C2ADB /* PackageDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageDetailsVC.swift; sourceTree = "<group>"; };
 		88F83BA725210E6D00C9295A /* ServicesLocalDataManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesLocalDataManagerProtocol.swift; sourceTree = "<group>"; };
 		88F83BAB25210E9100C9295A /* ServicesLocalDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesLocalDataManager.swift; sourceTree = "<group>"; };
+		8C3FD62F2642CA08002B5240 /* SignUpFirst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpFirst.swift; sourceTree = "<group>"; };
+		8C3FD6332642CA71002B5240 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		8C3FD6372642D054002B5240 /* OTPSignUpModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPSignUpModel.swift; sourceTree = "<group>"; };
+		8C3FD63B2642D391002B5240 /* SignUpSecond.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpSecond.swift; sourceTree = "<group>"; };
+		8C3FD63F2642D705002B5240 /* ForgetPassModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPassModel.swift; sourceTree = "<group>"; };
+		8C76E70926418C2400E0C06B /* NewPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPasswordViewController.swift; sourceTree = "<group>"; };
+		8C76E70D264197AD00E0C06B /* FirstSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstSignUpViewController.swift; sourceTree = "<group>"; };
+		8C76E711264197C600E0C06B /* SignUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignUp.storyboard; sourceTree = "<group>"; };
+		8C76E7152641998600E0C06B /* OTPVerifyPhoneNumberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPVerifyPhoneNumberViewController.swift; sourceTree = "<group>"; };
 		8C81544824EB21CA00CA30E7 /* ServicesSearchVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServicesSearchVC.xib; sourceTree = "<group>"; };
 		8C81544A24EB21CA00CA30E7 /* ServicesSearchPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesSearchPresenter.swift; sourceTree = "<group>"; };
 		8C81544B24EB21CA00CA30E7 /* ServicesSearchRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesSearchRouter.swift; sourceTree = "<group>"; };
@@ -710,6 +731,9 @@
 		8CEC780824E9CC2B000CED1F /* ServiceDetailsLocalizaition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceDetailsLocalizaition.swift; sourceTree = "<group>"; };
 		8CEC780C24E9DDDB000CED1F /* ServiceClinicCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceClinicCell.swift; sourceTree = "<group>"; };
 		8CEC780D24E9DDDB000CED1F /* ServiceClinicCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServiceClinicCell.xib; sourceTree = "<group>"; };
+		8CFD17E4263E5CBF002C0F8A /* OTPForgetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPForgetPasswordViewController.swift; sourceTree = "<group>"; };
+		8CFD17E8263E6339002C0F8A /* ApplicationStatusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationStatusViewController.swift; sourceTree = "<group>"; };
+		8CFD17EC263E634C002C0F8A /* ApplicationStatus.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ApplicationStatus.storyboard; sourceTree = "<group>"; };
 		A829CAD199C8BC7D0018D428 /* Pods_Seena_Patient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Seena_Patient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE9E485092256443C69FE26D /* Pods-Seena Patient.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Seena Patient.release.xcconfig"; path = "Target Support Files/Pods-Seena Patient/Pods-Seena Patient.release.xcconfig"; sourceTree = "<group>"; };
 		E338E54FF4A9A0DE828B1EE8 /* Pods-Seena Patient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Seena Patient.debug.xcconfig"; path = "Target Support Files/Pods-Seena Patient/Pods-Seena Patient.debug.xcconfig"; sourceTree = "<group>"; };
@@ -1043,6 +1067,9 @@
 			children = (
 				882DE7A62510005900B1F4F7 /* SignUpVC.swift */,
 				882DE7A02510005900B1F4F7 /* SignUpVC.xib */,
+				8C76E70D264197AD00E0C06B /* FirstSignUpViewController.swift */,
+				8C76E7152641998600E0C06B /* OTPVerifyPhoneNumberViewController.swift */,
+				8C76E711264197C600E0C06B /* SignUp.storyboard */,
 			);
 			path = SignUpVC;
 			sourceTree = "<group>";
@@ -1312,6 +1339,8 @@
 			children = (
 				88EDA12824FAE41200460B4D /* ProfileVC.swift */,
 				88EDA12224FAE41200460B4D /* ProfileVC.xib */,
+				8CFD17E8263E6339002C0F8A /* ApplicationStatusViewController.swift */,
+				8CFD17EC263E634C002C0F8A /* ApplicationStatus.storyboard */,
 			);
 			path = ProfileVC;
 			sourceTree = "<group>";
@@ -2747,6 +2776,7 @@
 			children = (
 				8C8CB3F624E6CF23009679E5 /* EnvironmentProtocol.swift */,
 				8C8CB3F524E6CF23009679E5 /* Environment.swift */,
+				8C3FD6332642CA71002B5240 /* APIClient.swift */,
 			);
 			path = Environment;
 			sourceTree = "<group>";
@@ -2847,6 +2877,10 @@
 				881868A0252F5E3F00C0B42D /* Payment.swift */,
 				88D3FF642530A12C00FDC151 /* Plan.swift */,
 				88789E222531A734006979D2 /* Transaction.swift */,
+				8C3FD62F2642CA08002B5240 /* SignUpFirst.swift */,
+				8C3FD6372642D054002B5240 /* OTPSignUpModel.swift */,
+				8C3FD63B2642D391002B5240 /* SignUpSecond.swift */,
+				8C3FD63F2642D705002B5240 /* ForgetPassModel.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -2866,6 +2900,8 @@
 			isa = PBXGroup;
 			children = (
 				8C9BA48E2635831700E2AF83 /* ForgetPassViewController.swift */,
+				8CFD17E4263E5CBF002C0F8A /* OTPForgetPasswordViewController.swift */,
+				8C76E70926418C2400E0C06B /* NewPasswordViewController.swift */,
 				8C9BA4922635833600E2AF83 /* ForgetPassword.storyboard */,
 			);
 			path = ForgetPassword;
@@ -3253,7 +3289,9 @@
 				88ED03FC24EFC7B300BBCEF6 /* ClinicsSectionHeaderCell.xib in Resources */,
 				88120B5F24EF07BE004A2381 /* ClinicsHomeVC.xib in Resources */,
 				887C63242502683700C69E2A /* ClinicSkeletonCell.xib in Resources */,
+				8CFD17ED263E634C002C0F8A /* ApplicationStatus.storyboard in Resources */,
 				88D291252515153D008738A5 /* UploadDocumentsVC.xib in Resources */,
+				8C76E712264197C600E0C06B /* SignUp.storyboard in Resources */,
 				8803D1F125082532004A6A46 /* PayOptionCell.xib in Resources */,
 				88C0F1BC25BB3EBF0035E422 /* ClinicOfTheWeekHeaderView.xib in Resources */,
 				8803D1E025081EAA004A6A46 /* ATMPayVC.xib in Resources */,
@@ -3383,6 +3421,7 @@
 				883D941C24F474CA004A3F86 /* PackageSkeltonCell.swift in Sources */,
 				88D2914925152233008738A5 /* DocumentTypeCell.swift in Sources */,
 				88295E5925303C3800AFF5A3 /* Response.swift in Sources */,
+				8C76E70A26418C2400E0C06B /* NewPasswordViewController.swift in Sources */,
 				8C81545224EB21CA00CA30E7 /* ServicesSearchPresenter.swift in Sources */,
 				88EDA12C24FAE41200460B4D /* ProfileProtocols.swift in Sources */,
 				88EDA12A24FAE41200460B4D /* ProfilePresenter.swift in Sources */,
@@ -3394,10 +3433,13 @@
 				88D2912B2515153D008738A5 /* UploadDocumentsVC.swift in Sources */,
 				882DE798250FEE5000B1F4F7 /* AuthenticationLocalDataManagerProtocol.swift in Sources */,
 				8885BB1B2501760F000D7BD5 /* ClinicsRomoteDataManager.swift in Sources */,
+				8C3FD6302642CA08002B5240 /* SignUpFirst.swift in Sources */,
 				882DE79C250FFBA300B1F4F7 /* TokenLocalDataManagerProtocol.swift in Sources */,
 				887C6318250237F300C69E2A /* OptionViewModel.swift in Sources */,
 				8C8CB3EA24E6CA46009679E5 /* UICollectionView+Extensions.swift in Sources */,
+				8C76E70E264197AD00E0C06B /* FirstSignUpViewController.swift in Sources */,
 				88EDA12B24FAE41200460B4D /* ProfileRouter.swift in Sources */,
+				8C76E7162641998600E0C06B /* OTPVerifyPhoneNumberViewController.swift in Sources */,
 				88120B6524EF07BE004A2381 /* ClinicsHomeVC.swift in Sources */,
 				88340EC8251A93940099EB06 /* NotificationEndPoint.swift in Sources */,
 				8829891325129BE2004C5AB6 /* Document.swift in Sources */,
@@ -3406,11 +3448,13 @@
 				88120B6224EF07BE004A2381 /* ClinicsHomeProtocols.swift in Sources */,
 				8CEC77F924E9BB2A000CED1F /* ServiceDetailsVC.swift in Sources */,
 				88E0C71D2505676C001A1B3B /* PayHomeRouter.swift in Sources */,
+				8CFD17E9263E6339002C0F8A /* ApplicationStatusViewController.swift in Sources */,
 				8CAB098724E7F25900D38CDD /* HomePresenter.swift in Sources */,
 				88E0C71C2505676C001A1B3B /* PayHomePresenter.swift in Sources */,
 				88B460CE25193BA5002E798C /* SettingsRouter.swift in Sources */,
 				882DE7AC2510005900B1F4F7 /* SignUpLocalization.swift in Sources */,
 				88B460A7251928E5002E798C /* TransactionsPresenter.swift in Sources */,
+				8C3FD6382642D054002B5240 /* OTPSignUpModel.swift in Sources */,
 				88B460CD25193BA5002E798C /* SettingsPresenter.swift in Sources */,
 				88EDA11F24FADD9B00460B4D /* ServiceResultSkeltonCell.swift in Sources */,
 				88D3FF5E2530A0B300FDC151 /* CalculatorProtocols.swift in Sources */,
@@ -3423,10 +3467,12 @@
 				887C630D250225C200C69E2A /* AlertEntity.swift in Sources */,
 				88B460D125193BA5002E798C /* SettingsLocalization.swift in Sources */,
 				8C9BA4BE2636E24600E2AF83 /* ClinicsCell.swift in Sources */,
+				8C3FD63C2642D391002B5240 /* SignUpSecond.swift in Sources */,
 				88BE60AA2506BE6900EB2F03 /* DueCell.swift in Sources */,
 				8C8CB3ED24E6CA46009679E5 /* String+Extensions.swift in Sources */,
 				8C8CB41424E6EBFD009679E5 /* CustomizedTabBar.swift in Sources */,
 				88F67593250D2B8F00D19822 /* SignInRouter.swift in Sources */,
+				8CFD17E5263E5CBF002C0F8A /* OTPForgetPasswordViewController.swift in Sources */,
 				88F675A1250D56A700D19822 /* LoginResponse.swift in Sources */,
 				88EDA11A24FADA0D00460B4D /* ServiceResultCell.swift in Sources */,
 				882DE7AB2510005900B1F4F7 /* SignUpInteractor.swift in Sources */,
@@ -3440,6 +3486,7 @@
 				88E0C7202505676C001A1B3B /* PayHomeLocalization.swift in Sources */,
 				882DE7A82510005900B1F4F7 /* SignUpPresenter.swift in Sources */,
 				88104B9124F2FD3600DB5ED9 /* PackageViewModel.swift in Sources */,
+				8C3FD6402642D705002B5240 /* ForgetPassModel.swift in Sources */,
 				8C81545624EB21CA00CA30E7 /* ServicesSearchLocalization.swift in Sources */,
 				88D291292515153D008738A5 /* UploadDocumentsInteractor.swift in Sources */,
 				8C8CB3EF24E6CA46009679E5 /* UIApplication+Extensions.swift in Sources */,
@@ -3541,6 +3588,7 @@
 				88F706C324EE6804005C2ADB /* PackageDetailsProtocols.swift in Sources */,
 				88120B7E24EF2C66004A2381 /* ClinicDetailsInteractor.swift in Sources */,
 				88B460AC251928E5002E798C /* TransactionsVC.swift in Sources */,
+				8C3FD6342642CA71002B5240 /* APIClient.swift in Sources */,
 				88D291262515153D008738A5 /* UploadDocumentsPresenter.swift in Sources */,
 				887C63142502341D00C69E2A /* OptionCell.swift in Sources */,
 				88D29168251549DD008738A5 /* UploadVC.swift in Sources */,

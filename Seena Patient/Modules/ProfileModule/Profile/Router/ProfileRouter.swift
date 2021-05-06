@@ -37,6 +37,9 @@ class ProfileRouter: ProfileRouterProtocol {
             share()
         case .alert(let alertEntity):
             showAlert(alertEntity: alertEntity)
+        case .applicationStatus:
+            navigateToApplicationStatus()
+
         }
     }
     private func navigateToSignIn() {
@@ -85,5 +88,12 @@ class ProfileRouter: ProfileRouterProtocol {
             profile.presenter.logOut()
         }
         viewController?.showAlertController(title: alertEntity.title, message: alertEntity.message, actions: [okAction, cancelAction])
+    }
+
+    private func navigateToApplicationStatus() {
+        let storyBoard: UIStoryboard = UIStoryboard(name: "ApplicationStatus", bundle: nil)
+        let newViewController = storyBoard.instantiateViewController(withIdentifier: "ApplicationStatusViewController") as? ApplicationStatusViewController
+        newViewController!.modalPresentationStyle = .fullScreen
+        viewController?.navigationController?.pushViewController(newViewController!, animated: true)
     }
 }

@@ -61,7 +61,8 @@ class PaymentChannelVC: UIViewController, PaymentChannelViewProtocol {
 // MARK: - tableView DataSource Impelementations
 extension PaymentChannelVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+//        return 4
+        return 5
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withClass: PaymentMethodCell.self, for: indexPath)

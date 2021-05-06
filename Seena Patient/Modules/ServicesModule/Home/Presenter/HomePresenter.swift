@@ -52,10 +52,10 @@ class HomePresenter: HomePresenterProtocol {
         cell.setSpecialityName(specialities[index].speciality ?? "")
     }
     func configure(serviceCell cell: ServiceCellProtocol, atIndex index: Int, andSection section: Int) {
-//        let service = specialities[section].services?[index]
-//        cell.setService(ServiceViewModel(service: service))
-        let speciality = specialities[index]
-        cell.setSpeciality(speciality.speciality, speciality.image ?? "")
+        let service = specialities[section].services?[index]
+        cell.setService(ServiceViewModel(service: service))
+//        let speciality = specialities[index]
+//        cell.setSpeciality(speciality.speciality, speciality.image ?? "")
     }
     func serviceSelected(atIndex index: Int, andSection section: Int) {
         switch section {
