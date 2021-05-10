@@ -56,7 +56,7 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </textField>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ya2-Jx-fzx" customClass="SkyFloatingLabelTextFieldWithIcon" customModule="SkyFloatingLabelTextField">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="01156140909" borderStyle="roundedRect" placeholder="Phone" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ya2-Jx-fzx" customClass="SkyFloatingLabelTextFieldWithIcon" customModule="SkyFloatingLabelTextField">
                                                         <rect key="frame" x="0.0" y="60" width="374" height="40"/>
                                                         <color key="tintColor" name="secondaryActionText"/>
                                                         <constraints>
@@ -98,7 +98,7 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </textField>
-                                                    <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Frist Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lwA-UE-PZ7" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
+                                                    <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Amr" borderStyle="roundedRect" placeholder="Frist Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lwA-UE-PZ7" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
                                                         <rect key="frame" x="0.0" y="120" width="374" height="40"/>
                                                         <color key="tintColor" name="secondaryActionText"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="16"/>
@@ -137,7 +137,7 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </textField>
-                                                    <textField opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="U0L-MO-LlO" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
+                                                    <textField opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Ghonim" borderStyle="roundedRect" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="U0L-MO-LlO" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
                                                         <rect key="frame" x="0.0" y="180" width="374" height="40"/>
                                                         <color key="tintColor" name="secondaryActionText"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="16"/>
@@ -176,7 +176,7 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </textField>
-                                                    <textField opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zma-gm-aDt" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
+                                                    <textField opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Abc.00000" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zma-gm-aDt" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
                                                         <rect key="frame" x="0.0" y="240" width="374" height="40"/>
                                                         <color key="tintColor" name="secondaryActionText"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="16"/>
@@ -205,7 +205,7 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </textField>
-                                                    <textField opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ihh-gT-pWn" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
+                                                    <textField opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Abc.00000" borderStyle="roundedRect" placeholder="Confirm Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ihh-gT-pWn" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
                                                         <rect key="frame" x="0.0" y="300" width="374" height="40"/>
                                                         <color key="tintColor" name="secondaryActionText"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="16"/>
@@ -287,11 +287,11 @@
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Ca-aB-tOh" customClass="AnimatableButton" customModule="IBAnimatable">
                                 <rect key="frame" x="20" y="746" width="374" height="50"/>
-                                <color key="backgroundColor" name="primaryBorder"/>
+                                <color key="backgroundColor" red="0.85882352939999995" green="0.078431372550000003" blue="0.078431372550000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="xuZ-Lr-PNI"/>
                                 </constraints>
-                                <state key="normal" title="Finish">
+                                <state key="normal" title="Next">
                                     <color key="titleColor" name="primaryActionText"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -321,9 +321,9 @@
                         <outlet property="birthDate" destination="qqS-cJ-FCi" id="Z4l-CN-zYN"/>
                         <outlet property="confirmPass" destination="ihh-gT-pWn" id="Kem-Kk-fDc"/>
                         <outlet property="email" destination="Kxa-Hi-dIB" id="azK-LX-HKp"/>
-                        <outlet property="finishBtn" destination="2Ca-aB-tOh" id="BhH-Ny-s8h"/>
                         <outlet property="firstName" destination="lwA-UE-PZ7" id="nvo-u7-clY"/>
                         <outlet property="lastName" destination="U0L-MO-LlO" id="G5D-dD-dec"/>
+                        <outlet property="nextBtn" destination="2Ca-aB-tOh" id="BhH-Ny-s8h"/>
                         <outlet property="password" destination="Zma-gm-aDt" id="BTR-st-VKM"/>
                         <outlet property="phone" destination="ya2-Jx-fzx" id="H2i-aa-2jh"/>
                     </connections>
@@ -460,29 +460,6 @@ registered number</string>
             <point key="canvasLocation" x="140.57971014492756" y="41.517857142857139"/>
         </scene>
     </scenes>
-    <designables>
-        <designable name="2Ca-aB-tOh">
-            <size key="intrinsicContentSize" width="41" height="30"/>
-        </designable>
-        <designable name="Kxa-Hi-dIB">
-            <size key="intrinsicContentSize" width="374" height="44.369671875000002"/>
-        </designable>
-        <designable name="U0L-MO-LlO">
-            <size key="intrinsicContentSize" width="374" height="44.369671875000002"/>
-        </designable>
-        <designable name="Zma-gm-aDt">
-            <size key="intrinsicContentSize" width="374" height="44.369671875000002"/>
-        </designable>
-        <designable name="ihh-gT-pWn">
-            <size key="intrinsicContentSize" width="374" height="44.369671875000002"/>
-        </designable>
-        <designable name="lwA-UE-PZ7">
-            <size key="intrinsicContentSize" width="374" height="44.369671875000002"/>
-        </designable>
-        <designable name="qqS-cJ-FCi">
-            <size key="intrinsicContentSize" width="374" height="44.369671875000002"/>
-        </designable>
-    </designables>
     <resources>
         <image name="Seena-Logo" width="237" height="357"/>
         <namedColor name="primaryActionText">

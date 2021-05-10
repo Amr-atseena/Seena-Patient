@@ -56,7 +56,7 @@ struct SignUpFirstResponse: Decodable {
 }
 
 // MARK: - Status
-struct SignUpFirstStatus: Decodable {
+struct SignUpFirstStatus: Codable {
     var profilePicture, idType, financialProof, residenceProof: Bool?
 
     enum CodingKeys: String, CodingKey {
@@ -68,7 +68,7 @@ struct SignUpFirstStatus: Decodable {
 }
 
 // MARK: - User
-struct SignUpFirstUser: Decodable {
+struct SignUpFirstUser: Codable {
     var id: Int?
     var firstName, lastName: String?
     var image: String?

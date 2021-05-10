@@ -25,9 +25,18 @@ class ProfileInteractor: ProfileInputInteractorProtocol {
     }
     func removeUser() {
         localDataManager.removeUserData()
+        UserDefaults.standard.removeObject(forKey: "firstSignUpToken")
+        UserDefaults.standard.removeObject(forKey: "Uploaded")
+        UserDefaults.standard.removeObject(forKey: "UploadSignin")
+        UserDefaults.standard.removeObject(forKey: "Signin")
+
     }
     func retriveApplicationStatus() {
-        remoteDataManager.retriveApplicationStatus(token: localDataManager.retriveToken()) { [weak self] (results) in
+        remoteDataManager.retriveApplicationStatus(token: localDataManager.retriveToken())
+//        let tok = UserDefaults.standard.string(forKey: "firstSignUpToken")
+//        remoteDataManager.retriveApplicationStatus(token: tok!)
+
+        { [weak self] (results) in
             guard let self = self else {return}
             switch results {
             case .failure:

@@ -214,7 +214,7 @@ extension HomeVC: UICollectionViewDelegate {
             presenter.serviceSelected(atIndex: indexPath.item, andSection: -1)
         } else {
 //            presenter.serviceSelected(atIndex: indexPath.item, andSection: -2)
-            presenter.serviceSelected(atIndex: indexPath.item, andSection: 0)
+            presenter.serviceSelected(atIndex: indexPath.item, andSection: collectionView.tag)
 
         }
     }

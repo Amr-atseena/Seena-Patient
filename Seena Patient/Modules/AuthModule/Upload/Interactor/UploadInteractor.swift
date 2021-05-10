@@ -21,10 +21,10 @@ class UploadInteractor: UploadInputInteractorProtocol {
     }
     // MARK: - Methods
     func upload(images: [Data], forType type: Int) {
-        let tok = UserDefaults.standard.string(forKey: "firstSignUpToken")
-        let params = UploadRequestParamaters(images: images, documentType: type, token: tok!)
+//        let tok = UserDefaults.standard.string(forKey: "firstSignUpToken")
+//        let params = UploadRequestParamaters(images: images, documentType: type, token: tok!)
 
-//        let params = UploadRequestParamaters(images: images, documentType: type, token: localDataManager.retriveToken())
+        let params = UploadRequestParamaters(images: images, documentType: type, token: localDataManager.retriveToken())
         print(params.token)
         remoteDataManager.upload(params: params) { [weak self] (result) in
             guard let self = self else { return }
@@ -44,6 +44,7 @@ class UploadInteractor: UploadInputInteractorProtocol {
                 if status.financialProof && status.idType &&
                     status.profilePicture && status.residenceProof {
                     self.localDataManager.save(user: user)
+                    UserDefaults.standard.set(true, forKey: "Uploaded")
                 }
                 self.presenter?.onUploadImagesSuccess(withStatus: status)
             }

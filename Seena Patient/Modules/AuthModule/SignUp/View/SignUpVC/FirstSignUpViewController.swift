@@ -16,11 +16,12 @@ class FirstSignUpViewController: UIViewController {
     @IBOutlet weak var lastName: SkyFloatingLabelTextField!
     @IBOutlet weak var password: SkyFloatingLabelTextField!
     @IBOutlet weak var confirmPass: SkyFloatingLabelTextField!
-    @IBOutlet weak var finishBtn: UIButton!
+    @IBOutlet weak var nextBtn: UIButton!
     @IBOutlet weak var birthDate: SkyFloatingLabelTextField!
 
     var selectedDate = ""
     let datePicker = UIDatePicker()
+//    var localDataManager: SignUpLocalDataManagerProtocol?
 
 
     override func viewDidLoad() {
@@ -147,6 +148,7 @@ class FirstSignUpViewController: UIViewController {
     }
 
 
+    weak var presenter: SignInOutputInteractorProtocol?
 
 
     func mainAPI(){
@@ -158,7 +160,14 @@ class FirstSignUpViewController: UIViewController {
             APIClient().signUpFirst(userInfo: regUser) {(res) in
 
                 print(res.error?.token)
-                UserDefaults.standard.setValue(res.error?.token!, forKey: "firstSignUpToken")
+
+
+
+
+                UserDefaults.standard.setValue(res.response?.status?.idType, forKey: "keyRegistered")
+                UserDefaults.standard.set(res.error?.token, forKey: "TOKEN")
+
+
                 if res.error?.code == 400{
                     self.showAlertController(title: "Error!", message: (res.error?.validation)!, actions: [])
                 }else{
@@ -166,6 +175,8 @@ class FirstSignUpViewController: UIViewController {
                 let storyBoard: UIStoryboard = UIStoryboard(name: "SignUp", bundle: nil)
                 let newViewController = storyBoard.instantiateViewController(withIdentifier: "OTPVerifyPhoneNumberViewController") as? OTPVerifyPhoneNumberViewController
                 newViewController!.modalPresentationStyle = .fullScreen
+                    newViewController?.phoneNum = res.response?.user?.phone
+                    newViewController?.result = res
                 self.navigationController?.pushViewController(newViewController!, animated: true)
                 }
 
@@ -249,6 +260,7 @@ class FirstSignUpViewController: UIViewController {
         }
 
         if textFieldsFilled == true {
+            
             mainAPI()
         }
 
@@ -275,3 +287,4 @@ extension FirstSignUpViewController{
     }
 
 }
+

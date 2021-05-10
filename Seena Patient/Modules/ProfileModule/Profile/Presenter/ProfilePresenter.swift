@@ -72,7 +72,8 @@ extension ProfilePresenter: ProfileOutputInteractorProtocol {
         case "missing info":
             view?.setApplicationStatus(status: "missing info".localized, color: DesignSystem.Colors.primaryActionBackground.color)
         default:
-            view?.setApplicationStatus(status: status, color: DesignSystem.Colors.primaryActionBackground.color)
+//            view?.setApplicationStatus(status: status, color: DesignSystem.Colors.primaryActionBackground.color)
+            view?.setApplicationStatus(status: status, color: .clear)
         }
     }
     func onRetriveApplicationStatusFail() {

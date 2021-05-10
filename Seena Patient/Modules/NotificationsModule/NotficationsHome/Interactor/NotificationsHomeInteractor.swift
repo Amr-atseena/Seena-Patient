@@ -22,6 +22,10 @@ class NotificationsHomeInteractor: NotificationsHomeInputInteractorProtocol {
     // MARK: - Methods
     func retiveNotificationsList(foPage page: Int) {
         let params = NotificationRequestParameters(token: localDataManager.retriveToken(), currentPage: page)
+
+//        let tok = UserDefaults.standard.string(forKey: "firstSignUpToken")
+//        let params = NotificationRequestParameters(token: tok!, currentPage: page)
+
         remoteDataManager.retriveNotificationsList(parameters: params) { [weak self] (results) in
             guard let self = self else {return}
             switch results {

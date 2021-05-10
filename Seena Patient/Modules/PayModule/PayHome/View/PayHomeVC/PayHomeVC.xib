@@ -26,6 +26,7 @@
                 <outlet property="paymentsDueTableView" destination="p0h-37-Zio" id="yAv-HK-OlM"/>
                 <outlet property="progressView" destination="0d7-W4-1DF" id="Nh5-8O-JeM"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="youHaveLbl" destination="Z5T-vB-SuQ" id="IZG-gd-IxW"/>
                 <outlet property="youPayKeywordLabel" destination="UcN-bw-QIG" id="l6v-Gm-hw2"/>
                 <outlet property="yourBalanceKeywordLabel" destination="MHR-Lg-W0J" id="KQf-19-YNc"/>
             </connections>
@@ -159,7 +160,7 @@
                                     </constraints>
                                 </imageView>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ooF-qv-EoG">
-                                    <rect key="frame" x="30.000000000000014" y="179.33333333333337" width="232.66666666666669" height="40"/>
+                                    <rect key="frame" x="30.000000000000014" y="158.66666666666669" width="232.66666666666669" height="40"/>
                                     <color key="backgroundColor" red="0.85882352939999995" green="0.078431372550000003" blue="0.078431372550000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="40" id="9r7-Y3-bHA"/>
@@ -171,18 +172,27 @@
                                         <action selector="apply:" destination="-1" eventType="touchUpInside" id="p9e-VZ-BCj"/>
                                     </connections>
                                 </button>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="If you signed up already, sign in" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z5T-vB-SuQ">
+                                    <rect key="frame" x="5" y="208.66666666666669" width="282.66666666666669" height="20.666666666666657"/>
+                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
+                                    <color key="textColor" red="0.4941176471" green="0.4941176471" blue="0.4941176471" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="trailing" secondItem="ooF-qv-EoG" secondAttribute="trailing" constant="30" id="1Le-sq-GMo"/>
+                                <constraint firstItem="Z5T-vB-SuQ" firstAttribute="top" secondItem="ooF-qv-EoG" secondAttribute="bottom" constant="10" id="41s-3N-yqk"/>
                                 <constraint firstItem="cbV-7J-psJ" firstAttribute="top" secondItem="iXr-zB-LIW" secondAttribute="top" constant="30" id="427-gc-Rsm"/>
-                                <constraint firstAttribute="bottom" secondItem="ooF-qv-EoG" secondAttribute="bottom" constant="20" id="F6F-5h-GuS"/>
+                                <constraint firstItem="Z5T-vB-SuQ" firstAttribute="leading" secondItem="iXr-zB-LIW" secondAttribute="leading" constant="5" id="BDh-Eg-8mT"/>
+                                <constraint firstAttribute="bottom" secondItem="Z5T-vB-SuQ" secondAttribute="bottom" constant="10" id="KuO-Qz-miV"/>
+                                <constraint firstAttribute="trailing" secondItem="Z5T-vB-SuQ" secondAttribute="trailing" constant="5" id="Obq-Rf-TvN"/>
                                 <constraint firstItem="cbV-7J-psJ" firstAttribute="leading" secondItem="iXr-zB-LIW" secondAttribute="leading" constant="25" id="bZa-WN-rZg"/>
                                 <constraint firstAttribute="trailing" secondItem="cbV-7J-psJ" secondAttribute="trailing" constant="25" id="qW2-S6-fHo"/>
                                 <constraint firstItem="ooF-qv-EoG" firstAttribute="leading" secondItem="iXr-zB-LIW" secondAttribute="leading" constant="30" id="xew-aM-qwf"/>
                             </constraints>
                         </view>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0d7-W4-1DF" customClass="MKMagneticProgress" customModule="Seena" customModuleProvider="target">
+                        <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0d7-W4-1DF" customClass="MKMagneticProgress" customModule="Seena" customModuleProvider="target">
                             <rect key="frame" x="40" y="40.000000000000014" width="292.66666666666669" height="239.33333333333337"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cgX-lY-U6Q">

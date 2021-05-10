@@ -32,6 +32,9 @@ class PayHomePresenter: PayHomePresenterProtocol {
     }
     func viewWillAppear() {
         interactor?.retriveUser()
+        view?.setupNavBar()
+        view?.setupUI()
+        view?.setupPaymentsDueTableView()
     }
     func payButtonTapped() {
        // router?.go(to: .paymentChannel)
@@ -54,20 +57,105 @@ class PayHomePresenter: PayHomePresenterProtocol {
 // MARK: - PayHomeOutputInteractorProtocol Implementation
 extension PayHomePresenter: PayHomeOutputInteractorProtocol {
     func onRetriveUserSuccess(_ user: User?) {
+
+
         guard let _ = user else {
-            view?.showNoDataView()
-            view?.hidePaymentDue()
-            view?.showGetYourSeenaView()
-            view?.hideProgressView()
-            view?.setPaymentProgress(totalAmount: "no Due Payement".localized, paidAmount: "", avaliableBalance: "", ratio: 0)
+//            view?.showNoDataView()
+//            view?.hidePaymentDue()
+//            view?.showGetYourSeenaView()
+//            view?.hideProgressView()
+//            view?.setPaymentProgress(totalAmount: "no Due Payement".localized, paidAmount: "", avaliableBalance: "", ratio: 0)
+
+
+                view?.showNoDataView()
+                view?.hidePaymentDue()
+                view?.showGetYourSeenaView()
+                view?.hideProgressView()
+                view?.setPaymentProgress(totalAmount: "no Due Payement".localized, paidAmount: "", avaliableBalance: "", ratio: 0)
+
             return
         }
-        view?.hideGetYourSeenaView()
-        view?.showProgressView()
-        view?.hideNoDataView()
-        view?.hidePaymentDue()
-        view?.showLoadingIndictor()
-        interactor?.retrivePaymentDue()
+
+
+        let signed = UserDefaults.standard.bool(forKey: "Signin")
+        let tokkkk = UserDefaults.standard.bool(forKey: "Uploaded")
+        let uploadedFromSign = UserDefaults.standard.bool(forKey: "UploadSignin")
+
+
+
+        if signed == true {
+
+            if tokkkk == true || uploadedFromSign {
+                view?.hideGetYourSeenaView()
+                view?.showProgressView()
+                view?.hidePaymentDue()
+        //        view?.hideNoDataView()
+                view?.showNoDataView()
+                view?.showLoadingIndictor()
+                interactor?.retrivePaymentDue()
+
+            }else{
+                view?.showNoDataView()
+                view?.hidePaymentDue()
+                view?.showGetYourSeenaView()
+                view?.hideProgressView()
+                view?.setPaymentProgress(totalAmount: "no Due Payement".localized, paidAmount: "", avaliableBalance: "", ratio: 0)
+
+            }
+
+
+        }else{
+
+            view?.hideGetYourSeenaView()
+            view?.showProgressView()
+            view?.hidePaymentDue()
+    //        view?.hideNoDataView()
+            view?.showNoDataView()
+            view?.showLoadingIndictor()
+            interactor?.retrivePaymentDue()
+        }
+        return
+
+//        let tokkkk = UserDefaults.standard.bool(forKey: "Statuss")
+//        let tokkkk = UserDefaults.standard.bool(forKey: "Uploaded")
+
+//        if tokkkk == false {
+//            view?.showNoDataView()
+//            view?.hidePaymentDue()
+//            view?.showGetYourSeenaView()
+//            view?.hideProgressView()
+//            view?.setPaymentProgress(totalAmount: "no Due Payement".localized, paidAmount: "", avaliableBalance: "", ratio: 0)
+//        }else{
+//
+//            view?.hideGetYourSeenaView()
+//            view?.showProgressView()
+//            view?.hidePaymentDue()
+//    //        view?.hideNoDataView()
+//            view?.showNoDataView()
+//            view?.showLoadingIndictor()
+//            interactor?.retrivePaymentDue()
+//        }
+
+
+//        guard let _ = user else {
+//            view?.showNoDataView()
+//            view?.hidePaymentDue()
+//            view?.showGetYourSeenaView()
+//            view?.hideProgressView()
+//            view?.setPaymentProgress(totalAmount: "no Due Payement".localized, paidAmount: "", avaliableBalance: "", ratio: 0)
+//            return
+//        }
+
+
+
+
+//        view?.hideGetYourSeenaView()
+//        view?.showProgressView()
+//        view?.hidePaymentDue()
+////        view?.hideNoDataView()
+//        view?.showNoDataView()
+//        view?.showLoadingIndictor()
+//        interactor?.retrivePaymentDue()
     }
     func onRetrivePaymentSuccess(_ payment: PaymentHomeResponse) {
         view?.hideLoadingIndictor()

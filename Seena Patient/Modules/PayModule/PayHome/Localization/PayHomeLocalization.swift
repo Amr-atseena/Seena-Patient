@@ -20,7 +20,7 @@ struct PayHomeLocalization {
         return "Pay".localized
     }
     var calculate: String {
-        return "Calculate".localized
+        return "Calculator".localized
     }
     var paymentsDue: String {
         return "Payments Due".localized

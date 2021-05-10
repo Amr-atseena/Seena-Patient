@@ -10,7 +10,7 @@ import UIKit
 
 class ForgetPassViewController: UIViewController {
     @IBOutlet weak var nextBtn: UIButton!
-    @IBOutlet weak var emailTF: UITextField!
+    @IBOutlet weak var phoneNumTF: UITextField!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,17 +20,24 @@ class ForgetPassViewController: UIViewController {
 
     @IBAction func next(_ sender: Any) {
 
-//        APIClient().forgetPassword(email: emailTF.text ?? "") { (res) in
-//            print(res)
-//        } onError: { (error) in
-//            print(error)
-//        }
+        APIClient().forgetPassword(phone: phoneNumTF.text ?? "") { (res) in
+            print(res)
+            if res.error.validation == "User Not Found" {
+                self.showAlertController(title: "Not found!", message: "User Not Found, enter your phone number again", actions: [])
+            }else{
+                let storyBoard: UIStoryboard = UIStoryboard(name: "ForgetPassword", bundle: nil)
+                let newViewController = storyBoard.instantiateViewController(withIdentifier: "OTPForgetPasswordViewController") as? OTPForgetPasswordViewController
+                newViewController!.modalPresentationStyle = .fullScreen
+                newViewController?.userPhoneNum = self.phoneNumTF.text
+                UserDefaults.standard.set(self.phoneNumTF.text, forKey: "num")
+                self.navigationController?.pushViewController(newViewController!, animated: true)
+            }
+        } onError: { (error) in
+            self.showAlertController(title: "Error!", message: error, actions: [])
+        }
 
 
-        let storyBoard: UIStoryboard = UIStoryboard(name: "ForgetPassword", bundle: nil)
-        let newViewController = storyBoard.instantiateViewController(withIdentifier: "OTPForgetPasswordViewController") as? OTPForgetPasswordViewController
-        newViewController!.modalPresentationStyle = .fullScreen
-        self.navigationController?.pushViewController(newViewController!, animated: true)
+
 //        self.present(newViewController!, animated: true, completion: nil)
     }
 

@@ -41,7 +41,11 @@ class SignInRouter: SignInRouterProtocol {
         }
     }
     private func navigateToProfile() {
-        viewController?.navigationController?.setViewControllers([ProfileRouter.assembleModule()], animated: true)
+//        viewController?.navigationController?.setViewControllers([ProfileRouter.assembleModule()], animated: true)
+
+        let tabBar = HomeTabBarVC()
+        viewController?.present(tabBar, animated: true)
+
     }
     private func navigateToSignUp() {
         viewController?.hidesBottomBarWhenPushed = true

@@ -18,13 +18,21 @@ class OTPVerifyPhoneNumberViewController: UIViewController, UITextFieldDelegate 
     @IBOutlet weak var fourthCodeTF: UITextField!
     @IBOutlet weak var fifthTF: UITextField!
 
-//    var otpFields: [UITextField] {
+
+    //    var otpFields: [UITextField] {
 //       return [firstCodeTF!, secondCodeTF!, thirdCodeTF!, fourthCodeTF!]
 //    }
 
+    var phoneNum: String?
+
+    var result : SignUpFirst?
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         viewDesign()
+
+
     }
 
 
@@ -35,6 +43,13 @@ class OTPVerifyPhoneNumberViewController: UIViewController, UITextFieldDelegate 
         secondCodeTF.delegate = self
         thirdCodeTF.delegate = self
         fourthCodeTF.delegate = self
+
+        let intLetters = phoneNum!.prefix(3)
+        let endLetters = phoneNum!.suffix(2)
+
+        let newString = intLetters + "******" + endLetters   //"+91*******21"
+        phoneNumber.text = String(newString)
+
         firstCodeTF.becomeFirstResponder()
 
         fourthCodeTF.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
@@ -129,10 +144,18 @@ class OTPVerifyPhoneNumberViewController: UIViewController, UITextFieldDelegate 
 
         APIClient().postOTPSignUp(otp: abc) { (res) in
             print(res)
-            if res.error?.validation == "not authorized"{
+            if res.error?.status == false {
+//                let cancelAction = UIAlertAction(title: "Cancel".localized, style: .default, handler: nil)
+//                let okAction = UIAlertAction(title: "Back".localized, style: .default) {  (_) in
+//                    _ = self.navigationController?.popViewController(animated: true)
+//
+//                }
                 self.showAlertController(title: "Error", message: (res.error?.validation)! , actions: [])
+                
             }else{
-            _ = self.navigationController?.popToRootViewController(animated: true)
+                self.login()
+//                self.navigationController?.setViewControllers([ProfileRouter.assembleModule()], animated: true)
+//            _ = self.navigationController?.popToRootViewController(animated: true)
         }
             
         } onError: { (error) in
@@ -144,6 +167,40 @@ class OTPVerifyPhoneNumberViewController: UIViewController, UITextFieldDelegate 
     }
 
 
-    
+    func login(){
+
+        let user = result?.response?.user
+        let status = result?.response?.status
+
+        UserDefaults.standard.set(true, forKey: "Signin")
+
+        let data = try? JSONEncoder().encode(user)
+        UserDefaults.standard.set(data, forKey: "USER")
+
+        
+
+        if status?.financialProof == true && status?.idType == true &&
+            status?.profilePicture == true && status?.residenceProof == true {
+            UserDefaults.standard.set(true, forKey: "UploadSignin")
+        }
+        UserDefaults.standard.set(result?.error?.token, forKey: "TOKEN")
+
+
+
+        let id = result?.response?.status?.idType
+        let fin = result?.response?.status?.financialProof
+        let resd = result?.response?.status?.residenceProof
+
+        if id == false || fin == false || resd == false  {
+            UserDefaults.standard.set(false, forKey: "Statuss")
+        }else{
+            UserDefaults.standard.set(true, forKey: "Statuss")
+        }
+
+//        self.navigationController?.setViewControllers([Home.assembleModule()], animated: true)
+        let tabBar = HomeTabBarVC()
+        self.present(tabBar, animated: true)
+
+    }
 
 }

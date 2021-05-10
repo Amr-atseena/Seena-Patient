@@ -19,7 +19,12 @@ class PayInteractor: PayInputInteractorProtocol {
     }
     // MARK: - Methods
     func payInstallment(_ payemnt: Payment) {
-        remoteDataManager.payInstallment(token: localDataManager.retriveToken(), payment: payemnt) { [weak self] (result) in
+        remoteDataManager.payInstallment(token: localDataManager.retriveToken(), payment: payemnt)
+
+//        let tok = UserDefaults.standard.string(forKey: "firstSignUpToken")
+//        remoteDataManager.payInstallment(token: tok!, payment: payemnt)
+
+        { [weak self] (result) in
             guard let self = self else {return}
             switch result {
             case .success(let data):

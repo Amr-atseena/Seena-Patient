@@ -20,7 +20,11 @@ class TransactionsInteractor: TransactionsInputInteractorProtocol {
     }
     // MARK: - Methods
     func retriveTransactions() {
-        remoteDataManager.retriveTransactions(token: localDataManager.retriveToken()) { [weak self] (results) in
+        remoteDataManager.retriveTransactions(token: localDataManager.retriveToken())
+//        let tok = UserDefaults.standard.string(forKey: "firstSignUpToken")
+//        remoteDataManager.retriveTransactions(token: tok!)
+
+        { [weak self] (results) in
             guard let self = self else {return}
             switch results {
             case .failure:

@@ -34,7 +34,13 @@ class UploadDocumentsRouter: UploadDocumentsRouterProtocol {
         }
     }
     private func navigateToback() {
-        viewController?.navigationController?.popViewController(animated: true)
+
+        let cancelAction = UIAlertAction(title: "Cancel".localized, style: .default, handler: nil)
+        let okAction = UIAlertAction(title: "Ok".localized, style: .default) {  (_) in
+            self.viewController?.navigationController?.popViewController(animated: true)
+        }
+        viewController?.showAlertController(title: "Warning", message: "You will loss any progress you have done.", actions: [okAction, cancelAction])
+
     }
     private func navigateToFinishSignUp() {
         viewController?.navigationController?.setViewControllers([FinishSignUpVC()], animated: true)

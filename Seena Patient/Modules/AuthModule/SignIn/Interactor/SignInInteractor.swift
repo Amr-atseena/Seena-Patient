@@ -44,14 +44,26 @@ class SignInInteractor: SignInInputInteractorProtocol {
                         self.presenter?.onLoginFail(withMessage: response.serverResonse.desc)
                         return
                 }
+                UserDefaults.standard.set(true, forKey: "Signin")
                 self.localDataManager.save(user: user)
 
-//                if status.financialProof && status.idType &&
-//                    status.profilePicture && status.residenceProof {
-//                    self.localDataManager.save(user: user)
-//                }
+                if status.financialProof && status.idType &&
+                    status.profilePicture && status.residenceProof {
+                    self.localDataManager.save(user: user)
+                    UserDefaults.standard.set(true, forKey: "UploadSignin")
+                }
                 self.localDataManager.save(token: response.serverResonse.token)
                 self.presenter?.onLoginSuccess(withStatus: status)
+
+                let id = response.response?.status?.idType
+                let fin = response.response?.status?.financialProof
+                let resd = response.response?.status?.residenceProof
+
+                if id == false || fin == false || resd == false  {
+                    UserDefaults.standard.set(false, forKey: "Statuss")
+                }else{
+                    UserDefaults.standard.set(true, forKey: "Statuss")
+                }
             }
         }
     }

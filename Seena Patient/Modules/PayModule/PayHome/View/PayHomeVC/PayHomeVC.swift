@@ -27,6 +27,7 @@ class PayHomeVC: UIViewController, PayHomeViewProtocol {
     @IBOutlet weak var getYourSeenaView: UIView!
 
     @IBOutlet weak var applyBtn: UIButton!
+    @IBOutlet weak var youHaveLbl: UILabel!
 
 
     // MARK: - Attributes
@@ -118,6 +119,41 @@ class PayHomeVC: UIViewController, PayHomeViewProtocol {
     }
     func showGetYourSeenaView(){
         getYourSeenaView.isHidden = false
+
+
+        let signed = UserDefaults.standard.bool(forKey: "Signin")
+
+        let token = UserDefaults.standard.string(forKey: "TOKEN")
+        if signed == false {
+            applyBtn.isUserInteractionEnabled = false
+                        applyBtn.backgroundColor = #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
+                        youHaveLbl.isHidden = false
+            youHaveLbl.text = "Please sign in"
+        }else{
+            applyBtn.isUserInteractionEnabled = true
+                       applyBtn.backgroundColor = #colorLiteral(red: 0.8588235294, green: 0.07843137255, blue: 0.07843137255, alpha: 1)
+                       youHaveLbl.isHidden = true
+        }
+//        if !tokkkk {
+//            applyBtn.isUserInteractionEnabled = true
+//                       applyBtn.backgroundColor = #colorLiteral(red: 0.8588235294, green: 0.07843137255, blue: 0.07843137255, alpha: 1)
+//                       youHaveLbl.isHidden = true
+//        }else{
+//            applyBtn.isUserInteractionEnabled = false
+//                        applyBtn.backgroundColor = #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
+//                        youHaveLbl.isHidden = false
+//        }
+
+//        let userToken = UserDefaults.standard.string(forKey: "firstSignUpToken")
+//        if userToken == nil{
+//        applyBtn.isUserInteractionEnabled = false
+//            applyBtn.backgroundColor = #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
+//            youHaveLbl.isHidden = false
+//        }else{
+//            applyBtn.isUserInteractionEnabled = true
+//            applyBtn.backgroundColor = #colorLiteral(red: 0.8588235294, green: 0.07843137255, blue: 0.07843137255, alpha: 1)
+//            youHaveLbl.isHidden = true
+//        }
     }
     func hideGetYourSeenaView(){
         getYourSeenaView.isHidden = true

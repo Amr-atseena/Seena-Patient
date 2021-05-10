@@ -276,6 +276,8 @@
 		88F706C624EE6804005C2ADB /* PackageDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F706BF24EE6804005C2ADB /* PackageDetailsVC.swift */; };
 		88F83BA825210E6D00C9295A /* ServicesLocalDataManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F83BA725210E6D00C9295A /* ServicesLocalDataManagerProtocol.swift */; };
 		88F83BAC25210E9100C9295A /* ServicesLocalDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F83BAB25210E9100C9295A /* ServicesLocalDataManager.swift */; };
+		8C0F8A352648180C00DD30E6 /* CheckOTPForget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0F8A342648180C00DD30E6 /* CheckOTPForget.swift */; };
+		8C0F8A39264818CF00DD30E6 /* ResetPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0F8A38264818CF00DD30E6 /* ResetPassword.swift */; };
 		8C3FD6302642CA08002B5240 /* SignUpFirst.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3FD62F2642CA08002B5240 /* SignUpFirst.swift */; };
 		8C3FD6342642CA71002B5240 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3FD6332642CA71002B5240 /* APIClient.swift */; };
 		8C3FD6382642D054002B5240 /* OTPSignUpModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3FD6372642D054002B5240 /* OTPSignUpModel.swift */; };
@@ -647,6 +649,8 @@
 		88F706BF24EE6804005C2ADB /* PackageDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageDetailsVC.swift; sourceTree = "<group>"; };
 		88F83BA725210E6D00C9295A /* ServicesLocalDataManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesLocalDataManagerProtocol.swift; sourceTree = "<group>"; };
 		88F83BAB25210E9100C9295A /* ServicesLocalDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesLocalDataManager.swift; sourceTree = "<group>"; };
+		8C0F8A342648180C00DD30E6 /* CheckOTPForget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckOTPForget.swift; sourceTree = "<group>"; };
+		8C0F8A38264818CF00DD30E6 /* ResetPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPassword.swift; sourceTree = "<group>"; };
 		8C3FD62F2642CA08002B5240 /* SignUpFirst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpFirst.swift; sourceTree = "<group>"; };
 		8C3FD6332642CA71002B5240 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		8C3FD6372642D054002B5240 /* OTPSignUpModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPSignUpModel.swift; sourceTree = "<group>"; };
@@ -2881,6 +2885,8 @@
 				8C3FD6372642D054002B5240 /* OTPSignUpModel.swift */,
 				8C3FD63B2642D391002B5240 /* SignUpSecond.swift */,
 				8C3FD63F2642D705002B5240 /* ForgetPassModel.swift */,
+				8C0F8A342648180C00DD30E6 /* CheckOTPForget.swift */,
+				8C0F8A38264818CF00DD30E6 /* ResetPassword.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -3546,6 +3552,7 @@
 				88EDA12F24FAE41200460B4D /* ProfileVC.swift in Sources */,
 				882DE7AA2510005900B1F4F7 /* SignUpProtocols.swift in Sources */,
 				88F675AE250D612800D19822 /* AuthenticationRemoteDataManager.swift in Sources */,
+				8C0F8A352648180C00DD30E6 /* CheckOTPForget.swift in Sources */,
 				88D2918C251550FE008738A5 /* UIImagePicker+Extension.swift in Sources */,
 				88295E7425304E0000AFF5A3 /* InfoVC.swift in Sources */,
 				8CEC780324E9BD68000CED1F /* ServiceDetailsRouter.swift in Sources */,
@@ -3656,6 +3663,7 @@
 				88340EBB251A92FF0099EB06 /* NotificationLocalDataManager.swift in Sources */,
 				8829891525129D04004C5AB6 /* Account.swift in Sources */,
 				882DE7AD2510005900B1F4F7 /* SignUpVC.swift in Sources */,
+				8C0F8A39264818CF00DD30E6 /* ResetPassword.swift in Sources */,
 				88BD395025161FF3004D149B /* UploadRequestParamaters.swift in Sources */,
 				88B460A8251928E5002E798C /* TransactionsRouter.swift in Sources */,
 				88295E6A253040E300AFF5A3 /* PaymentSuccessInteractor.swift in Sources */,
