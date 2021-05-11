@@ -37,6 +37,17 @@ class FinishSignUpVC: UIViewController {
         let tabBar = HomeTabBarVC()
         self.present(tabBar, animated: true, completion: nil)
 
+
+        UserDefaults.standard.removeObject(forKey: "financialProof")
+        UserDefaults.standard.removeObject(forKey: "idType")
+        UserDefaults.standard.removeObject(forKey: "profilePicture")
+        UserDefaults.standard.removeObject(forKey: "residenceProof")
+        UserDefaults.standard.removeObject(forKey: "financialProofLogin")
+        UserDefaults.standard.removeObject(forKey: "idTypeLogin")
+        UserDefaults.standard.removeObject(forKey: "profilePictureLogin")
+        UserDefaults.standard.removeObject(forKey: "residenceProofLogin")
+
+
         // final one
 //        _ = self.navigationController?.popToRootViewController(animated: true)
 

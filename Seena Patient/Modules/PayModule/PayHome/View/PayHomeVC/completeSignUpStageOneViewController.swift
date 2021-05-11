@@ -122,13 +122,53 @@ class CompleteSignStageOneViewController: UIViewController, UIPickerViewDelegate
     var textFieldsFilled : Bool?
     var goCallAPI = false
 
+    var sendProfile: Bool?
+    var sendID: Bool?
+    var sendFin: Bool?
+    var sendRes:Bool?
+
     func callMainAPI() {
 
 
             APIClient().signUpsecond(iDType: selectedID, financialProofType: selectedFin, residenceProofType: selectedResd) { (res) in
 
                 print(res.response?.otp)
-                let status = Status(profilePicture: false, idType: false, financialProof: false, residenceProof: false)
+
+                let isID = UserDefaults.standard.bool(forKey: "idType")
+                let isIDLogin = UserDefaults.standard.bool(forKey: "idTypeLogin")
+                let isFin = UserDefaults.standard.bool(forKey: "financialProof")
+                let isFinLogin = UserDefaults.standard.bool(forKey: "financialProofLogin")
+                let isProfile = UserDefaults.standard.bool(forKey: "profilePicture")
+                let isProfileLogin = UserDefaults.standard.bool(forKey: "profilePictureLogin")
+                let isRes = UserDefaults.standard.bool(forKey: "residenceProof")
+                let isResLogin = UserDefaults.standard.bool(forKey: "residenceProofLogin")
+
+
+                if isID == true || isIDLogin == true {
+                    self.sendID = true
+                }else{
+                    self.sendID = false
+                }
+
+                if isProfile == true || isProfileLogin == true{
+                    self.sendProfile = true
+                }else{
+                    self.sendProfile = false
+                }
+
+                if isRes == true || isResLogin == true{
+                    self.sendRes = true
+                }else{
+                    self.sendRes = false
+                }
+
+                if isFin == true || isFinLogin == true{
+                    self.sendFin = true
+                }else{
+                    self.sendFin = false
+                }
+
+                let status = Status(profilePicture: self.sendProfile ?? false, idType: self.sendID ?? false, financialProof: self.sendFin ?? false, residenceProof: self.sendRes ?? false)
                 let router = UploadDocumentsRouter()
                 let interactor = UploadDocumentsInteractor()
                 let vc = UploadDocumentsVC()
@@ -138,6 +178,9 @@ class CompleteSignStageOneViewController: UIViewController, UIPickerViewDelegate
                 interactor.presenter = presenter
                 vc.presenter = presenter
                 self.navigationController?.pushViewController(vc, animated: true)
+
+
+
 
             } onError: { (error) in
                 print(error)

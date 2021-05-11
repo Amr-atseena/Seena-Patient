@@ -64,6 +64,21 @@ class SignInInteractor: SignInInputInteractorProtocol {
                 }else{
                     UserDefaults.standard.set(true, forKey: "Statuss")
                 }
+
+                if status.financialProof == true {
+                    UserDefaults.standard.set(true, forKey: "financialProofLogin")
+                }
+                if status.idType == true {
+                    UserDefaults.standard.set(true, forKey: "idTypeLogin")
+                }
+                if status.profilePicture == true {
+                    UserDefaults.standard.set(true, forKey: "profilePictureLogin")
+                }
+                if status.residenceProof == true {
+                    UserDefaults.standard.set(true, forKey: "residenceProofLogin")
+                }
+
+
             }
         }
     }

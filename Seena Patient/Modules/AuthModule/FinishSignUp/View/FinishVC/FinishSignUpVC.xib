@@ -50,13 +50,13 @@ we will shortly update you with the status of your application</string>
                                     </subviews>
                                 </stackView>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="2t0-hO-E7l">
-                                    <rect key="frame" x="20" y="718" width="374" height="80"/>
+                                    <rect key="frame" x="20" y="718" width="374" height="50"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" verticalHuggingPriority="1000" image="phase3" translatesAutoresizingMaskIntoConstraints="NO" id="qEF-2H-RnH">
-                                            <rect key="frame" x="0.0" y="0.0" width="374" height="10"/>
+                                        <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" verticalHuggingPriority="1000" image="phase3" translatesAutoresizingMaskIntoConstraints="NO" id="qEF-2H-RnH">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="0.0"/>
                                         </imageView>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EMH-iq-SAs" customClass="AnimatableButton" customModule="IBAnimatable">
-                                            <rect key="frame" x="0.0" y="30" width="374" height="50"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
                                             <color key="backgroundColor" name="primaryActionBackground"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="50" id="kqd-1j-YH5"/>
@@ -81,7 +81,7 @@ we will shortly update you with the status of your application</string>
                                 <constraint firstItem="ndr-Mn-Ihq" firstAttribute="centerY" secondItem="X9Z-s1-JZk" secondAttribute="centerY" id="IAj-KG-t2g"/>
                                 <constraint firstItem="ndr-Mn-Ihq" firstAttribute="leading" secondItem="X9Z-s1-JZk" secondAttribute="leading" constant="20" id="LSB-zM-1VE"/>
                                 <constraint firstItem="2t0-hO-E7l" firstAttribute="leading" secondItem="X9Z-s1-JZk" secondAttribute="leading" constant="20" id="jos-Rk-JuR"/>
-                                <constraint firstAttribute="bottom" secondItem="2t0-hO-E7l" secondAttribute="bottom" constant="20" id="kk0-6H-19C"/>
+                                <constraint firstAttribute="bottom" secondItem="2t0-hO-E7l" secondAttribute="bottom" constant="50" id="kk0-6H-19C"/>
                                 <constraint firstAttribute="trailing" secondItem="ndr-Mn-Ihq" secondAttribute="trailing" constant="20" id="vwO-uk-Mz0"/>
                                 <constraint firstAttribute="trailing" secondItem="2t0-hO-E7l" secondAttribute="trailing" constant="20" id="w29-qs-75m"/>
                             </constraints>

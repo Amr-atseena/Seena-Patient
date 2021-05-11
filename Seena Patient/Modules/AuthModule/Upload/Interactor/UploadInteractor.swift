@@ -35,6 +35,8 @@ class UploadInteractor: UploadInputInteractorProtocol {
                 guard let response = response as? BaseResponse<LoginResponse> else {
                     return
                 }
+
+                print(response)
                 guard let user = response.response?.user,
                       let status = response.response?.status,
                       response.serverResonse.code == 200 else {
@@ -46,6 +48,21 @@ class UploadInteractor: UploadInputInteractorProtocol {
                     self.localDataManager.save(user: user)
                     UserDefaults.standard.set(true, forKey: "Uploaded")
                 }
+
+                if status.financialProof == true {
+                    UserDefaults.standard.set(true, forKey: "financialProof")
+                }
+                if status.idType == true {
+                    UserDefaults.standard.set(true, forKey: "idType")
+                }
+                if status.profilePicture == true {
+                    UserDefaults.standard.set(true, forKey: "profilePicture")
+                }
+                if status.residenceProof == true {
+                    UserDefaults.standard.set(true, forKey: "residenceProof")
+                }
+
+
                 self.presenter?.onUploadImagesSuccess(withStatus: status)
             }
         }

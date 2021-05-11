@@ -29,6 +29,11 @@ class UploadDocumentsVC: UIViewController, UploadDocumentsViewProtocol {
         super.viewDidLoad()
         presenter.viewDidLoad()
     }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        presenter.viewDidLoad()
+    }
     // MARK: - Methods
     func setupUI() {
         //uploadRequiredDocumentKeyword Label

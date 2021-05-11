@@ -47,7 +47,7 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m35-xy-Cud">
-                                        <rect key="frame" x="20" y="664" width="374" height="50"/>
+                                        <rect key="frame" x="20" y="644" width="374" height="50"/>
                                         <color key="backgroundColor" red="0.56862745098039214" green="0.56862745098039214" blue="0.56862745098039214" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="9hC-to-h4X"/>
@@ -69,7 +69,7 @@
                                     <constraint firstItem="t9G-66-laN" firstAttribute="top" secondItem="aVb-n7-gh8" secondAttribute="bottom" constant="30" id="Hon-KC-kH9"/>
                                     <constraint firstAttribute="trailing" secondItem="tMZ-5l-FdV" secondAttribute="trailing" constant="97" id="TXU-HT-FiQ"/>
                                     <constraint firstAttribute="trailing" secondItem="t9G-66-laN" secondAttribute="trailing" constant="20" id="UBC-Mk-Y82"/>
-                                    <constraint firstAttribute="bottom" secondItem="m35-xy-Cud" secondAttribute="bottom" constant="80" id="afm-K8-1IB"/>
+                                    <constraint firstAttribute="bottom" secondItem="m35-xy-Cud" secondAttribute="bottom" constant="100" id="afm-K8-1IB"/>
                                     <constraint firstAttribute="trailing" secondItem="m35-xy-Cud" secondAttribute="trailing" constant="20" id="gbF-iT-KHs"/>
                                     <constraint firstItem="aVb-n7-gh8" firstAttribute="top" secondItem="6XC-tZ-QJd" secondAttribute="top" constant="30" id="hhs-jb-ybQ"/>
                                     <constraint firstItem="aVb-n7-gh8" firstAttribute="leading" secondItem="6XC-tZ-QJd" secondAttribute="leading" constant="20" id="o5H-ON-I9A"/>
