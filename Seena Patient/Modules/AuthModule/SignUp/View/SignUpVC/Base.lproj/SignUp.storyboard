@@ -18,6 +18,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Fj8-i4-86r">
+                                <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                                <color key="color" name="secondroyActionBackground"/>
+                            </activityIndicatorView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qqn-tU-rve">
                                 <rect key="frame" x="0.0" y="138" width="414" height="588"/>
                                 <subviews>
@@ -310,8 +314,10 @@
                             <constraint firstItem="qqn-tU-rve" firstAttribute="leading" secondItem="WcC-by-JrN" secondAttribute="leading" id="5LQ-3F-2Ed"/>
                             <constraint firstAttribute="trailing" secondItem="qqn-tU-rve" secondAttribute="trailing" id="DnW-cN-u6M"/>
                             <constraint firstItem="2Ca-aB-tOh" firstAttribute="leading" secondItem="WcC-by-JrN" secondAttribute="leading" constant="20" id="MXH-k3-eoG"/>
+                            <constraint firstItem="Fj8-i4-86r" firstAttribute="centerY" secondItem="YXb-UY-clg" secondAttribute="centerY" id="Tbf-n2-XMV"/>
                             <constraint firstAttribute="bottom" secondItem="2Ca-aB-tOh" secondAttribute="bottom" constant="100" id="gfs-Xk-WLN"/>
                             <constraint firstAttribute="trailing" secondItem="2Ca-aB-tOh" secondAttribute="trailing" constant="20" id="kqS-TC-oLb"/>
+                            <constraint firstItem="Fj8-i4-86r" firstAttribute="centerX" secondItem="YXb-UY-clg" secondAttribute="centerX" id="lhC-qi-lDH"/>
                             <constraint firstItem="2Ca-aB-tOh" firstAttribute="top" secondItem="qqn-tU-rve" secondAttribute="bottom" constant="20" id="okj-oT-Z1Q"/>
                             <constraint firstItem="qqn-tU-rve" firstAttribute="top" secondItem="WcC-by-JrN" secondAttribute="top" constant="50" id="uJ2-kx-QTt"/>
                         </constraints>
@@ -323,6 +329,7 @@
                         <outlet property="email" destination="Kxa-Hi-dIB" id="azK-LX-HKp"/>
                         <outlet property="firstName" destination="lwA-UE-PZ7" id="nvo-u7-clY"/>
                         <outlet property="lastName" destination="U0L-MO-LlO" id="G5D-dD-dec"/>
+                        <outlet property="loadingIndictor" destination="Fj8-i4-86r" id="d3U-V1-HGk"/>
                         <outlet property="nextBtn" destination="2Ca-aB-tOh" id="BhH-Ny-s8h"/>
                         <outlet property="password" destination="Zma-gm-aDt" id="BTR-st-VKM"/>
                         <outlet property="phone" destination="ya2-Jx-fzx" id="H2i-aa-2jh"/>
@@ -499,6 +506,9 @@ registered number</string>
         </namedColor>
         <namedColor name="secondaryActionText">
             <color red="0.0" green="0.41200000047683716" blue="0.51399999856948853" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="secondroyActionBackground">
+            <color red="0.875" green="0.90600001811981201" blue="0.96100002527236938" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

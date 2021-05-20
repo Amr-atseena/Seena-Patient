@@ -14,6 +14,9 @@ class NewPasswordViewController: UIViewController {
     @IBOutlet weak var password: SkyFloatingLabelTextFieldWithIcon!
     @IBOutlet weak var newPass: SkyFloatingLabelTextFieldWithIcon!
 
+    let progressHUD = ProgressHUD(text: "")
+
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -61,6 +64,7 @@ class NewPasswordViewController: UIViewController {
 
     @IBAction func done(_ sender: Any) {
 
+        self.view.addSubview(progressHUD)
 
         let password = validpassword(mypassword: self.newPass.text!)
         if(password == true){
@@ -68,6 +72,8 @@ class NewPasswordViewController: UIViewController {
 
             APIClient().resetPass(phone: phoneee!, newPassword: newPass.text!) { (res) in
                 print(res)
+                self.progressHUD.removeFromSuperview()
+
                 if res.error.status == false{
                     let okAction = UIAlertAction(title: "OK".localized, style: .default, handler: nil)
 
@@ -76,6 +82,7 @@ class NewPasswordViewController: UIViewController {
                 _ = self.navigationController?.popToRootViewController(animated: true)
                 }
             } onError: { (error) in
+                self.progressHUD.removeFromSuperview()
                 print(error)
             }
 

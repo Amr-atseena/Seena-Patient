@@ -11,6 +11,8 @@ import UIKit
 class ForgetPassViewController: UIViewController {
     @IBOutlet weak var nextBtn: UIButton!
     @IBOutlet weak var phoneNumTF: UITextField!
+    
+    let progressHUD = ProgressHUD(text: "")
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,9 +22,17 @@ class ForgetPassViewController: UIViewController {
 
     @IBAction func next(_ sender: Any) {
 
+        self.view.addSubview(progressHUD)
+
+
         APIClient().forgetPassword(phone: phoneNumTF.text ?? "") { (res) in
             print(res)
+//            self.view.willRemoveSubview(progressHUD)
+
+            self.progressHUD.removeFromSuperview()
+
             if res.error.validation == "User Not Found" {
+
                 let okAction = UIAlertAction(title: "OK".localized, style: .default, handler: nil)
                 self.showAlertController(title: "Not found!".toLocalize, message: "User Not Found, enter your phone number again".toLocalize, actions: [okAction])
             }else{
@@ -35,6 +45,7 @@ class ForgetPassViewController: UIViewController {
             }
         } onError: { (error) in
 
+            self.progressHUD.removeFromSuperview()
             let okAction = UIAlertAction(title: "OK".localized, style: .default, handler: nil)
 
             self.showAlertController(title: "Error!".toLocalize, message: error, actions: [okAction])

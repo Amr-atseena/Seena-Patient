@@ -18,10 +18,11 @@ class FirstSignUpViewController: UIViewController {
     @IBOutlet weak var confirmPass: SkyFloatingLabelTextField!
     @IBOutlet weak var nextBtn: UIButton!
     @IBOutlet weak var birthDate: SkyFloatingLabelTextField!
+    @IBOutlet weak var loadingIndictor: UIActivityIndicatorView!
 
     var selectedDate = ""
     let datePicker = UIDatePicker()
-//    var localDataManager: SignUpLocalDataManagerProtocol?
+    let progressHUD = ProgressHUD(text: "")
 
 
     override func viewDidLoad() {
@@ -119,6 +120,8 @@ class FirstSignUpViewController: UIViewController {
     var goCallAPI = false
 
     func emailAndPassValidation(){
+        self.progressHUD.removeFromSuperview()
+
         let email = isValidEmail(self.email.text!)
         let password = validpassword(mypassword: self.password.text!) //get text Field data & checked through the function
 
@@ -137,6 +140,8 @@ class FirstSignUpViewController: UIViewController {
 
         //        let password = validpassword(mypassword: self.password.text!) //get text Field data & checked through the function
         if(password == true){
+            self.progressHUD.removeFromSuperview()
+
             print("Valid Password")  //Use to Alert Msg Box
         }else
         {
@@ -158,6 +163,10 @@ class FirstSignUpViewController: UIViewController {
             let regUser = UserInfo(firstName: firstName.text!, lastName: lastName.text, password: password.text!, phone: phone.text!, email: email.text, birthdate: selectedDate)
 
             APIClient().signUpFirst(userInfo: regUser) {(res) in
+                self.progressHUD.removeFromSuperview()
+
+                self.loadingIndictor.isHidden = true
+                self.loadingIndictor.stopAnimating()
 
                 print(res.error?.token)
 
@@ -169,6 +178,9 @@ class FirstSignUpViewController: UIViewController {
 
 
                 if res.error?.code == 400{
+                    self.loadingIndictor.isHidden = true
+                    self.loadingIndictor.stopAnimating()
+
                     self.showAlertController(title: "Error!".toLocalize, message: (res.error?.validation)!, actions: [])
                 }else{
 
@@ -181,6 +193,8 @@ class FirstSignUpViewController: UIViewController {
                 }
 
             } onError: { (error) in
+                self.progressHUD.removeFromSuperview()
+
                 print(error)
                 let okAction = UIAlertAction(title: "OK".localized, style: .default, handler: nil)
 
@@ -193,7 +207,8 @@ class FirstSignUpViewController: UIViewController {
     var textFieldsFilled : Bool?
 
     @IBAction func finish(_ sender: Any) {
-
+        
+        self.view.addSubview(progressHUD)
         
         emailAndPassValidation()
 

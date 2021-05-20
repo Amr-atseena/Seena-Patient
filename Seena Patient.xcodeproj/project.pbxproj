@@ -352,6 +352,7 @@
 		8CAB09B124E8357E00D38CDD /* ServiceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CAB09AF24E8357E00D38CDD /* ServiceCell.xib */; };
 		8CAB09B424E84C6800D38CDD /* PackageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAB09B224E84C6800D38CDD /* PackageCell.swift */; };
 		8CAB09B524E84C6800D38CDD /* PackageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CAB09B324E84C6800D38CDD /* PackageCell.xib */; };
+		8CBBAE2E2656ADD7002DA57A /* ProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CBBAE2D2656ADD7002DA57A /* ProgressHUD.swift */; };
 		8CEC77F924E9BB2A000CED1F /* ServiceDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEC77F724E9BB2A000CED1F /* ServiceDetailsVC.swift */; };
 		8CEC77FA24E9BB2A000CED1F /* ServiceDetailsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CEC77F824E9BB2A000CED1F /* ServiceDetailsVC.xib */; };
 		8CEC77FD24E9BC5C000CED1F /* ServiceDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEC77FC24E9BC5C000CED1F /* ServiceDetailsPresenter.swift */; };
@@ -735,6 +736,7 @@
 		8CAB09AF24E8357E00D38CDD /* ServiceCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServiceCell.xib; sourceTree = "<group>"; };
 		8CAB09B224E84C6800D38CDD /* PackageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageCell.swift; sourceTree = "<group>"; };
 		8CAB09B324E84C6800D38CDD /* PackageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PackageCell.xib; sourceTree = "<group>"; };
+		8CBBAE2D2656ADD7002DA57A /* ProgressHUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressHUD.swift; sourceTree = "<group>"; };
 		8CEC77F724E9BB2A000CED1F /* ServiceDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceDetailsVC.swift; sourceTree = "<group>"; };
 		8CEC77F824E9BB2A000CED1F /* ServiceDetailsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServiceDetailsVC.xib; sourceTree = "<group>"; };
 		8CEC77FC24E9BC5C000CED1F /* ServiceDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceDetailsPresenter.swift; sourceTree = "<group>"; };
@@ -2853,6 +2855,7 @@
 				8827E94C24F5A1DB009C64FB /* EmptyStateView */,
 				8C8CB41324E6EBFD009679E5 /* CustomizedTabBar.swift */,
 				88E0C72925056A02001A1B3B /* MKMagneticProgress.swift */,
+				8CBBAE2D2656ADD7002DA57A /* ProgressHUD.swift */,
 			);
 			path = CustomUI;
 			sourceTree = "<group>";
@@ -3587,6 +3590,7 @@
 				88104B8C24F2E9D200DB5ED9 /* ServicesRemoteDataManager.swift in Sources */,
 				88ED040A24EFCD9A00BBCEF6 /* ClinicsSearchLocalization.swift in Sources */,
 				88D29166251549DD008738A5 /* UploadInteractor.swift in Sources */,
+				8CBBAE2E2656ADD7002DA57A /* ProgressHUD.swift in Sources */,
 				88ED040924EFCD9A00BBCEF6 /* ClinicsSearchInteractor.swift in Sources */,
 				8C81545424EB21CA00CA30E7 /* ServicesSearchProtocols.swift in Sources */,
 				8C9BA4AD2636BD3800E2AF83 /* OTPViewController.swift in Sources */,

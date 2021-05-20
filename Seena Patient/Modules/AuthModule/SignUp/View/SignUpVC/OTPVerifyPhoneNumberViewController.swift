@@ -26,12 +26,11 @@ class OTPVerifyPhoneNumberViewController: UIViewController, UITextFieldDelegate 
     var phoneNum: String?
 
     var result : SignUpFirst?
-
+    let progressHUD = ProgressHUD(text: "")
     
     override func viewDidLoad() {
         super.viewDidLoad()
         viewDesign()
-
 
     }
 
@@ -141,9 +140,12 @@ class OTPVerifyPhoneNumberViewController: UIViewController, UITextFieldDelegate 
         abc = firstCodeTF.text! + secondCodeTF.text! + thirdCodeTF.text! + fourthCodeTF.text!
 
         print(abc)
+        self.view.addSubview(progressHUD)
 
         APIClient().postOTPSignUp(otp: abc) { (res) in
             print(res)
+            self.progressHUD.removeFromSuperview()
+
             if res.error?.status == false {
 //                let cancelAction = UIAlertAction(title: "Cancel".localized, style: .default, handler: nil)
 //                let okAction = UIAlertAction(title: "Back".localized, style: .default) {  (_) in
@@ -161,7 +163,10 @@ class OTPVerifyPhoneNumberViewController: UIViewController, UITextFieldDelegate 
         }
             
         } onError: { (error) in
-            print(error)
+            self.progressHUD.removeFromSuperview()
+
+            let okAction = UIAlertAction(title: "Ok".localized, style: .default, handler: nil)
+            self.showAlertController(title: "Error!".toLocalize, message: error , actions: [okAction])
         }
 
 
