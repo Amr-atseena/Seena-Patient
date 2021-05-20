@@ -29,6 +29,7 @@ class ProfileInteractor: ProfileInputInteractorProtocol {
         UserDefaults.standard.removeObject(forKey: "Uploaded")
         UserDefaults.standard.removeObject(forKey: "UploadSignin")
         UserDefaults.standard.removeObject(forKey: "Signin")
+        
 
     }
     func retriveApplicationStatus() {

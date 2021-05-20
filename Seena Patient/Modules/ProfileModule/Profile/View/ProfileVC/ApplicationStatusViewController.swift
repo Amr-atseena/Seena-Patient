@@ -15,10 +15,14 @@ class ApplicationStatusViewController: UIViewController {
     @IBOutlet weak var reasonLbl: UILabel!
     @IBOutlet weak var actionLbl: UILabel!
     @IBOutlet weak var nextBtn: UIButton!
+    @IBOutlet weak var statusKeywordLabel: UILabel!
+
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        statusKeywordLabel.font = DesignSystem.Typography.heading.font
         viewDesign()
 
     }

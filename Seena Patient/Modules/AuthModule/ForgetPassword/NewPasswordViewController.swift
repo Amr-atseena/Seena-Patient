@@ -69,7 +69,9 @@ class NewPasswordViewController: UIViewController {
             APIClient().resetPass(phone: phoneee!, newPassword: newPass.text!) { (res) in
                 print(res)
                 if res.error.status == false{
-                    self.showAlertController(title: "Error!", message: res.error.validation, actions: [])
+                    let okAction = UIAlertAction(title: "OK".localized, style: .default, handler: nil)
+
+                    self.showAlertController(title: "Error!".toLocalize, message: res.error.validation, actions: [okAction])
                 }else{
                 _ = self.navigationController?.popToRootViewController(animated: true)
                 }
@@ -81,7 +83,7 @@ class NewPasswordViewController: UIViewController {
         }else
         {
             let okAction = UIAlertAction(title: "OK".localized, style: .default, handler: nil)
-            showAlertController(title: "Password validation!", message: "Password should be more than 8 characters, including numbers, uppercase letter, and symbols", actions: [okAction])
+            showAlertController(title: "Password validation!".toLocalize, message: "Password should be more than 8 characters, including numbers, uppercase letter, and symbols".toLocalize, actions: [okAction])
 
         }
 

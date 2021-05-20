@@ -20,6 +20,9 @@ class ProfileVC: UIViewController, ProfileViewProtocol {
     @IBOutlet private var settingsKeywordLabel: UILabel!
     @IBOutlet private var sendToFriendKeywordLabel: UILabel!
     @IBOutlet private var logOutKeywordLabel: UILabel!
+    @IBOutlet weak var applicationStatusLbl: UILabel!
+    @IBOutlet weak var statusLbl: UILabel!
+
     // MARK: - Attributes
     var presenter: ProfilePresenterProtocol!
     // MARK: - Init
@@ -50,6 +53,9 @@ class ProfileVC: UIViewController, ProfileViewProtocol {
         //transactionsKeyword Label
         transactionsKeywordLabel.text = presenter.localization.transactions
         transactionsKeywordLabel.font = DesignSystem.Typography.subHeading4.font
+
+        applicationStatusLbl.text = "Application status".toLocalize
+        applicationStatusLbl.font = DesignSystem.Typography.subHeading4.font
         //settingsKeyword Label
         settingsKeywordLabel.text = presenter.localization.settings
         settingsKeywordLabel.font = DesignSystem.Typography.subHeading4.font

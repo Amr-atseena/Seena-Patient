@@ -103,7 +103,9 @@ class OTPForgetPasswordViewController: UIViewController, UITextFieldDelegate {
             print(res)
 
             if res.error.status == false{
-                self.showAlertController(title: "Error!", message: res.error.validation, actions: [])
+                let okAction = UIAlertAction(title: "OK".localized, style: .default, handler: nil)
+
+                self.showAlertController(title: "Error!".toLocalize, message: res.error.validation, actions: [okAction])
             }else{
             let storyBoard: UIStoryboard = UIStoryboard(name: "ForgetPassword", bundle: nil)
             let newViewController = storyBoard.instantiateViewController(withIdentifier: "NewPasswordViewController") as? NewPasswordViewController
@@ -112,7 +114,9 @@ class OTPForgetPasswordViewController: UIViewController, UITextFieldDelegate {
             }
         } onError: { (error) in
             print(error)
-            self.showAlertController(title: "Error!", message: error, actions: [])
+            let okAction = UIAlertAction(title: "OK".localized, style: .default, handler: nil)
+
+            self.showAlertController(title: "Error!".toLocalize, message: error, actions: [okAction])
         }
 
 

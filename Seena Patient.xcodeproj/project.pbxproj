@@ -29,7 +29,6 @@
 		88104B8E24F2EA8300DB5ED9 /* ServicesRemoteDataManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88104B8D24F2EA8300DB5ED9 /* ServicesRemoteDataManagerProtocol.swift */; };
 		88104B9124F2FD3600DB5ED9 /* PackageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88104B9024F2FD3600DB5ED9 /* PackageViewModel.swift */; };
 		88104B9324F3023B00DB5ED9 /* ServiceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88104B9224F3023B00DB5ED9 /* ServiceViewModel.swift */; };
-		88120B5F24EF07BE004A2381 /* ClinicsHomeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88120B5824EF07BE004A2381 /* ClinicsHomeVC.xib */; };
 		88120B6024EF07BE004A2381 /* ClinicsHomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88120B5924EF07BE004A2381 /* ClinicsHomePresenter.swift */; };
 		88120B6124EF07BE004A2381 /* ClinicsHomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88120B5A24EF07BE004A2381 /* ClinicsHomeRouter.swift */; };
 		88120B6224EF07BE004A2381 /* ClinicsHomeProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88120B5B24EF07BE004A2381 /* ClinicsHomeProtocols.swift */; };
@@ -210,7 +209,6 @@
 		88D3FF6A2530A6D700FDC151 /* PlansLocalDataManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D3FF692530A6D700FDC151 /* PlansLocalDataManagerProtocol.swift */; };
 		88D3FF722530BA2700FDC151 /* PlanCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D3FF702530BA2700FDC151 /* PlanCell.swift */; };
 		88D3FF732530BA2700FDC151 /* PlanCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88D3FF712530BA2700FDC151 /* PlanCell.xib */; };
-		88E0C71B2505676C001A1B3B /* PayHomeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88E0C7142505676C001A1B3B /* PayHomeVC.xib */; };
 		88E0C71C2505676C001A1B3B /* PayHomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E0C7152505676C001A1B3B /* PayHomePresenter.swift */; };
 		88E0C71D2505676C001A1B3B /* PayHomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E0C7162505676C001A1B3B /* PayHomeRouter.swift */; };
 		88E0C71E2505676C001A1B3B /* PayHomeProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E0C7172505676C001A1B3B /* PayHomeProtocols.swift */; };
@@ -283,9 +281,17 @@
 		8C3FD6382642D054002B5240 /* OTPSignUpModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3FD6372642D054002B5240 /* OTPSignUpModel.swift */; };
 		8C3FD63C2642D391002B5240 /* SignUpSecond.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3FD63B2642D391002B5240 /* SignUpSecond.swift */; };
 		8C3FD6402642D705002B5240 /* ForgetPassModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3FD63F2642D705002B5240 /* ForgetPassModel.swift */; };
+		8C6DFF9226566B31008C52CE /* ForgetPassword.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C6DFF9426566B31008C52CE /* ForgetPassword.storyboard */; };
+		8C6DFF9726566B9A008C52CE /* SignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C6DFF9926566B9A008C52CE /* SignUp.storyboard */; };
+		8C6DFFA026566C4B008C52CE /* NewPayment.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C6DFFA226566C4B008C52CE /* NewPayment.storyboard */; };
+		8C6DFFA726566CA5008C52CE /* SecondSignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C6DFFA926566CA5008C52CE /* SecondSignUp.storyboard */; };
+		8C6DFFAE26566CC0008C52CE /* ApplicationStatus.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C6DFFB026566CC0008C52CE /* ApplicationStatus.storyboard */; };
+		8C6DFFBF26567BBC008C52CE /* PayHomeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C6DFFC126567BBC008C52CE /* PayHomeVC.xib */; };
+		8C6DFFCA26567F68008C52CE /* HomeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C6DFFCC26567F68008C52CE /* HomeVC.xib */; };
+		8C6DFFD326567FE9008C52CE /* ClinicsHomeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C6DFFD526567FE9008C52CE /* ClinicsHomeVC.xib */; };
+		8C6DFFDE2656861A008C52CE /* SpectialityCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C6DFFE02656861A008C52CE /* SpectialityCell.xib */; };
 		8C76E70A26418C2400E0C06B /* NewPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C76E70926418C2400E0C06B /* NewPasswordViewController.swift */; };
 		8C76E70E264197AD00E0C06B /* FirstSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C76E70D264197AD00E0C06B /* FirstSignUpViewController.swift */; };
-		8C76E712264197C600E0C06B /* SignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C76E711264197C600E0C06B /* SignUp.storyboard */; };
 		8C76E7162641998600E0C06B /* OTPVerifyPhoneNumberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C76E7152641998600E0C06B /* OTPVerifyPhoneNumberViewController.swift */; };
 		8C81545024EB21CA00CA30E7 /* ServicesSearchVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C81544824EB21CA00CA30E7 /* ServicesSearchVC.xib */; };
 		8C81545224EB21CA00CA30E7 /* ServicesSearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C81544A24EB21CA00CA30E7 /* ServicesSearchPresenter.swift */; };
@@ -319,19 +325,16 @@
 		8C8CB42124E71353009679E5 /* DesignSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8CB42024E71353009679E5 /* DesignSystem.swift */; };
 		8C8CB42324E71369009679E5 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8CB42224E71369009679E5 /* Colors.swift */; };
 		8C9BA48F2635831700E2AF83 /* ForgetPassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9BA48E2635831700E2AF83 /* ForgetPassViewController.swift */; };
-		8C9BA4932635833600E2AF83 /* ForgetPassword.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C9BA4922635833600E2AF83 /* ForgetPassword.storyboard */; };
 		8C9BA49B2636BCC900E2AF83 /* CheckoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9BA49A2636BCC900E2AF83 /* CheckoutViewController.swift */; };
 		8C9BA4A12636BCFE00E2AF83 /* PaymentMethodsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9BA4A02636BCFE00E2AF83 /* PaymentMethodsViewController.swift */; };
 		8C9BA4A52636BD1500E2AF83 /* ContinuePayMethViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9BA4A42636BD1500E2AF83 /* ContinuePayMethViewController.swift */; };
 		8C9BA4A92636BD2800E2AF83 /* ScanQRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9BA4A82636BD2800E2AF83 /* ScanQRViewController.swift */; };
 		8C9BA4AD2636BD3800E2AF83 /* OTPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9BA4AC2636BD3800E2AF83 /* OTPViewController.swift */; };
 		8C9BA4B12636BD5200E2AF83 /* PaymentSuccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9BA4B02636BD5200E2AF83 /* PaymentSuccessViewController.swift */; };
-		8C9BA4B52636BD6400E2AF83 /* NewPayment.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C9BA4B42636BD6400E2AF83 /* NewPayment.storyboard */; };
 		8C9BA4BE2636E24600E2AF83 /* ClinicsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9BA4BC2636E24600E2AF83 /* ClinicsCell.swift */; };
 		8C9BA4BF2636E24600E2AF83 /* ClinicsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C9BA4BD2636E24600E2AF83 /* ClinicsCell.xib */; };
 		8C9BA4C32636E4E600E2AF83 /* ClinicsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9BA4C22636E4E600E2AF83 /* ClinicsViewModel.swift */; };
 		8C9BA4EE263B0E7400E2AF83 /* completeSignUpStageOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9BA4ED263B0E7400E2AF83 /* completeSignUpStageOneViewController.swift */; };
-		8C9BA4F6263B123000E2AF83 /* SecondSignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C9BA4F5263B123000E2AF83 /* SecondSignUp.storyboard */; };
 		8CAB097124E7CEA700D38CDD /* TabBarLocalization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAB097024E7CEA700D38CDD /* TabBarLocalization.swift */; };
 		8CAB097524E7DDED00D38CDD /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAB097424E7DDED00D38CDD /* UIView+Extensions.swift */; };
 		8CAB097924E7E6CB00D38CDD /* UIViewContorller+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAB097824E7E6CA00D38CDD /* UIViewContorller+Extensions.swift */; };
@@ -340,13 +343,11 @@
 		8CAB098524E7F22000D38CDD /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAB098424E7F22000D38CDD /* HomeInteractor.swift */; };
 		8CAB098724E7F25900D38CDD /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAB098624E7F25900D38CDD /* HomePresenter.swift */; };
 		8CAB098A24E7F2F400D38CDD /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAB098824E7F2F400D38CDD /* HomeVC.swift */; };
-		8CAB098B24E7F2F400D38CDD /* HomeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CAB098924E7F2F400D38CDD /* HomeVC.xib */; };
 		8CAB098E24E7F55800D38CDD /* HomeLocalization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAB098D24E7F55800D38CDD /* HomeLocalization.swift */; };
 		8CAB099224E806C100D38CDD /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAB099124E806C100D38CDD /* Font.swift */; };
 		8CAB09A324E80BC600D38CDD /* CustomFontDiscriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAB09A224E80BC600D38CDD /* CustomFontDiscriptor.swift */; };
 		8CAB09A524E80C2700D38CDD /* Typography.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAB09A424E80C2700D38CDD /* Typography.swift */; };
 		8CAB09AB24E8274200D38CDD /* SpectialityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAB09A924E8274200D38CDD /* SpectialityCell.swift */; };
-		8CAB09AC24E8274200D38CDD /* SpectialityCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CAB09AA24E8274200D38CDD /* SpectialityCell.xib */; };
 		8CAB09B024E8357E00D38CDD /* ServiceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAB09AE24E8357E00D38CDD /* ServiceCell.swift */; };
 		8CAB09B124E8357E00D38CDD /* ServiceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CAB09AF24E8357E00D38CDD /* ServiceCell.xib */; };
 		8CAB09B424E84C6800D38CDD /* PackageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAB09B224E84C6800D38CDD /* PackageCell.swift */; };
@@ -362,7 +363,6 @@
 		8CEC780F24E9DDDB000CED1F /* ServiceClinicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CEC780D24E9DDDB000CED1F /* ServiceClinicCell.xib */; };
 		8CFD17E5263E5CBF002C0F8A /* OTPForgetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFD17E4263E5CBF002C0F8A /* OTPForgetPasswordViewController.swift */; };
 		8CFD17E9263E6339002C0F8A /* ApplicationStatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFD17E8263E6339002C0F8A /* ApplicationStatusViewController.swift */; };
-		8CFD17ED263E634C002C0F8A /* ApplicationStatus.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CFD17EC263E634C002C0F8A /* ApplicationStatus.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -397,7 +397,6 @@
 		88104B8D24F2EA8300DB5ED9 /* ServicesRemoteDataManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesRemoteDataManagerProtocol.swift; sourceTree = "<group>"; };
 		88104B9024F2FD3600DB5ED9 /* PackageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageViewModel.swift; sourceTree = "<group>"; };
 		88104B9224F3023B00DB5ED9 /* ServiceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceViewModel.swift; sourceTree = "<group>"; };
-		88120B5824EF07BE004A2381 /* ClinicsHomeVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ClinicsHomeVC.xib; sourceTree = "<group>"; };
 		88120B5924EF07BE004A2381 /* ClinicsHomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicsHomePresenter.swift; sourceTree = "<group>"; };
 		88120B5A24EF07BE004A2381 /* ClinicsHomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicsHomeRouter.swift; sourceTree = "<group>"; };
 		88120B5B24EF07BE004A2381 /* ClinicsHomeProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicsHomeProtocols.swift; sourceTree = "<group>"; };
@@ -583,7 +582,6 @@
 		88D3FF692530A6D700FDC151 /* PlansLocalDataManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlansLocalDataManagerProtocol.swift; sourceTree = "<group>"; };
 		88D3FF702530BA2700FDC151 /* PlanCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanCell.swift; sourceTree = "<group>"; };
 		88D3FF712530BA2700FDC151 /* PlanCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlanCell.xib; sourceTree = "<group>"; };
-		88E0C7142505676C001A1B3B /* PayHomeVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PayHomeVC.xib; sourceTree = "<group>"; };
 		88E0C7152505676C001A1B3B /* PayHomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayHomePresenter.swift; sourceTree = "<group>"; };
 		88E0C7162505676C001A1B3B /* PayHomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayHomeRouter.swift; sourceTree = "<group>"; };
 		88E0C7172505676C001A1B3B /* PayHomeProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayHomeProtocols.swift; sourceTree = "<group>"; };
@@ -656,9 +654,25 @@
 		8C3FD6372642D054002B5240 /* OTPSignUpModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPSignUpModel.swift; sourceTree = "<group>"; };
 		8C3FD63B2642D391002B5240 /* SignUpSecond.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpSecond.swift; sourceTree = "<group>"; };
 		8C3FD63F2642D705002B5240 /* ForgetPassModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPassModel.swift; sourceTree = "<group>"; };
+		8C6DFF9326566B31008C52CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/ForgetPassword.storyboard; sourceTree = "<group>"; };
+		8C6DFF9626566B3D008C52CE /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/ForgetPassword.strings; sourceTree = "<group>"; };
+		8C6DFF9826566B9A008C52CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/SignUp.storyboard; sourceTree = "<group>"; };
+		8C6DFF9D26566BD7008C52CE /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/SignUp.strings; sourceTree = "<group>"; };
+		8C6DFFA126566C4B008C52CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/NewPayment.storyboard; sourceTree = "<group>"; };
+		8C6DFFA426566C7C008C52CE /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/NewPayment.strings; sourceTree = "<group>"; };
+		8C6DFFA826566CA5008C52CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/SecondSignUp.storyboard; sourceTree = "<group>"; };
+		8C6DFFAD26566CA8008C52CE /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/SecondSignUp.strings; sourceTree = "<group>"; };
+		8C6DFFAF26566CC0008C52CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/ApplicationStatus.storyboard; sourceTree = "<group>"; };
+		8C6DFFB226566CC5008C52CE /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/ApplicationStatus.strings; sourceTree = "<group>"; };
+		8C6DFFC026567BBC008C52CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/PayHomeVC.xib; sourceTree = "<group>"; };
+		8C6DFFC326567BC2008C52CE /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/PayHomeVC.strings; sourceTree = "<group>"; };
+		8C6DFFC726567D77008C52CE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/PayHomeVC.strings; sourceTree = "<group>"; };
+		8C6DFFCB26567F68008C52CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/HomeVC.xib; sourceTree = "<group>"; };
+		8C6DFFD426567FE9008C52CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/ClinicsHomeVC.xib; sourceTree = "<group>"; };
+		8C6DFFDF2656861A008C52CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/SpectialityCell.xib; sourceTree = "<group>"; };
+		8C6DFFE426568620008C52CE /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/SpectialityCell.strings; sourceTree = "<group>"; };
 		8C76E70926418C2400E0C06B /* NewPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPasswordViewController.swift; sourceTree = "<group>"; };
 		8C76E70D264197AD00E0C06B /* FirstSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstSignUpViewController.swift; sourceTree = "<group>"; };
-		8C76E711264197C600E0C06B /* SignUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignUp.storyboard; sourceTree = "<group>"; };
 		8C76E7152641998600E0C06B /* OTPVerifyPhoneNumberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPVerifyPhoneNumberViewController.swift; sourceTree = "<group>"; };
 		8C81544824EB21CA00CA30E7 /* ServicesSearchVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServicesSearchVC.xib; sourceTree = "<group>"; };
 		8C81544A24EB21CA00CA30E7 /* ServicesSearchPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesSearchPresenter.swift; sourceTree = "<group>"; };
@@ -694,19 +708,16 @@
 		8C8CB42024E71353009679E5 /* DesignSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSystem.swift; sourceTree = "<group>"; };
 		8C8CB42224E71369009679E5 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		8C9BA48E2635831700E2AF83 /* ForgetPassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPassViewController.swift; sourceTree = "<group>"; };
-		8C9BA4922635833600E2AF83 /* ForgetPassword.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ForgetPassword.storyboard; sourceTree = "<group>"; };
 		8C9BA49A2636BCC900E2AF83 /* CheckoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutViewController.swift; sourceTree = "<group>"; };
 		8C9BA4A02636BCFE00E2AF83 /* PaymentMethodsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentMethodsViewController.swift; sourceTree = "<group>"; };
 		8C9BA4A42636BD1500E2AF83 /* ContinuePayMethViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContinuePayMethViewController.swift; sourceTree = "<group>"; };
 		8C9BA4A82636BD2800E2AF83 /* ScanQRViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanQRViewController.swift; sourceTree = "<group>"; };
 		8C9BA4AC2636BD3800E2AF83 /* OTPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPViewController.swift; sourceTree = "<group>"; };
 		8C9BA4B02636BD5200E2AF83 /* PaymentSuccessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentSuccessViewController.swift; sourceTree = "<group>"; };
-		8C9BA4B42636BD6400E2AF83 /* NewPayment.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NewPayment.storyboard; sourceTree = "<group>"; };
 		8C9BA4BC2636E24600E2AF83 /* ClinicsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicsCell.swift; sourceTree = "<group>"; };
 		8C9BA4BD2636E24600E2AF83 /* ClinicsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ClinicsCell.xib; sourceTree = "<group>"; };
 		8C9BA4C22636E4E600E2AF83 /* ClinicsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicsViewModel.swift; sourceTree = "<group>"; };
 		8C9BA4ED263B0E7400E2AF83 /* completeSignUpStageOneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = completeSignUpStageOneViewController.swift; sourceTree = "<group>"; };
-		8C9BA4F5263B123000E2AF83 /* SecondSignUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SecondSignUp.storyboard; sourceTree = "<group>"; };
 		8CAB097024E7CEA700D38CDD /* TabBarLocalization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarLocalization.swift; sourceTree = "<group>"; };
 		8CAB097424E7DDED00D38CDD /* UIView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		8CAB097824E7E6CA00D38CDD /* UIViewContorller+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewContorller+Extensions.swift"; sourceTree = "<group>"; };
@@ -715,13 +726,11 @@
 		8CAB098424E7F22000D38CDD /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
 		8CAB098624E7F25900D38CDD /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 		8CAB098824E7F2F400D38CDD /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
-		8CAB098924E7F2F400D38CDD /* HomeVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeVC.xib; sourceTree = "<group>"; };
 		8CAB098D24E7F55800D38CDD /* HomeLocalization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeLocalization.swift; sourceTree = "<group>"; };
 		8CAB099124E806C100D38CDD /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 		8CAB09A224E80BC600D38CDD /* CustomFontDiscriptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFontDiscriptor.swift; sourceTree = "<group>"; };
 		8CAB09A424E80C2700D38CDD /* Typography.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typography.swift; sourceTree = "<group>"; };
 		8CAB09A924E8274200D38CDD /* SpectialityCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpectialityCell.swift; sourceTree = "<group>"; };
-		8CAB09AA24E8274200D38CDD /* SpectialityCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SpectialityCell.xib; sourceTree = "<group>"; };
 		8CAB09AE24E8357E00D38CDD /* ServiceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceCell.swift; sourceTree = "<group>"; };
 		8CAB09AF24E8357E00D38CDD /* ServiceCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServiceCell.xib; sourceTree = "<group>"; };
 		8CAB09B224E84C6800D38CDD /* PackageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageCell.swift; sourceTree = "<group>"; };
@@ -737,7 +746,6 @@
 		8CEC780D24E9DDDB000CED1F /* ServiceClinicCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServiceClinicCell.xib; sourceTree = "<group>"; };
 		8CFD17E4263E5CBF002C0F8A /* OTPForgetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPForgetPasswordViewController.swift; sourceTree = "<group>"; };
 		8CFD17E8263E6339002C0F8A /* ApplicationStatusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationStatusViewController.swift; sourceTree = "<group>"; };
-		8CFD17EC263E634C002C0F8A /* ApplicationStatus.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ApplicationStatus.storyboard; sourceTree = "<group>"; };
 		A829CAD199C8BC7D0018D428 /* Pods_Seena_Patient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Seena_Patient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE9E485092256443C69FE26D /* Pods-Seena Patient.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Seena Patient.release.xcconfig"; path = "Target Support Files/Pods-Seena Patient/Pods-Seena Patient.release.xcconfig"; sourceTree = "<group>"; };
 		E338E54FF4A9A0DE828B1EE8 /* Pods-Seena Patient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Seena Patient.debug.xcconfig"; path = "Target Support Files/Pods-Seena Patient/Pods-Seena Patient.debug.xcconfig"; sourceTree = "<group>"; };
@@ -843,7 +851,7 @@
 			isa = PBXGroup;
 			children = (
 				88120B5E24EF07BE004A2381 /* ClinicsHomeVC.swift */,
-				88120B5824EF07BE004A2381 /* ClinicsHomeVC.xib */,
+				8C6DFFD526567FE9008C52CE /* ClinicsHomeVC.xib */,
 			);
 			path = ClinicsHomeVC;
 			sourceTree = "<group>";
@@ -1073,7 +1081,7 @@
 				882DE7A02510005900B1F4F7 /* SignUpVC.xib */,
 				8C76E70D264197AD00E0C06B /* FirstSignUpViewController.swift */,
 				8C76E7152641998600E0C06B /* OTPVerifyPhoneNumberViewController.swift */,
-				8C76E711264197C600E0C06B /* SignUp.storyboard */,
+				8C6DFF9926566B9A008C52CE /* SignUp.storyboard */,
 			);
 			path = SignUpVC;
 			sourceTree = "<group>";
@@ -1344,7 +1352,7 @@
 				88EDA12824FAE41200460B4D /* ProfileVC.swift */,
 				88EDA12224FAE41200460B4D /* ProfileVC.xib */,
 				8CFD17E8263E6339002C0F8A /* ApplicationStatusViewController.swift */,
-				8CFD17EC263E634C002C0F8A /* ApplicationStatus.storyboard */,
+				8C6DFFB026566CC0008C52CE /* ApplicationStatus.storyboard */,
 			);
 			path = ProfileVC;
 			sourceTree = "<group>";
@@ -1954,10 +1962,10 @@
 		88E0C728250567CF001A1B3B /* PayHomeVC */ = {
 			isa = PBXGroup;
 			children = (
-				88E0C7142505676C001A1B3B /* PayHomeVC.xib */,
+				8C6DFFC126567BBC008C52CE /* PayHomeVC.xib */,
 				88E0C71A2505676C001A1B3B /* PayHomeVC.swift */,
 				8C9BA4ED263B0E7400E2AF83 /* completeSignUpStageOneViewController.swift */,
-				8C9BA4F5263B123000E2AF83 /* SecondSignUp.storyboard */,
+				8C6DFFA926566CA5008C52CE /* SecondSignUp.storyboard */,
 			);
 			path = PayHomeVC;
 			sourceTree = "<group>";
@@ -2908,7 +2916,7 @@
 				8C9BA48E2635831700E2AF83 /* ForgetPassViewController.swift */,
 				8CFD17E4263E5CBF002C0F8A /* OTPForgetPasswordViewController.swift */,
 				8C76E70926418C2400E0C06B /* NewPasswordViewController.swift */,
-				8C9BA4922635833600E2AF83 /* ForgetPassword.storyboard */,
+				8C6DFF9426566B31008C52CE /* ForgetPassword.storyboard */,
 			);
 			path = ForgetPassword;
 			sourceTree = "<group>";
@@ -2922,7 +2930,7 @@
 				8C9BA4A82636BD2800E2AF83 /* ScanQRViewController.swift */,
 				8C9BA4AC2636BD3800E2AF83 /* OTPViewController.swift */,
 				8C9BA4B02636BD5200E2AF83 /* PaymentSuccessViewController.swift */,
-				8C9BA4B42636BD6400E2AF83 /* NewPayment.storyboard */,
+				8C6DFFA226566C4B008C52CE /* NewPayment.storyboard */,
 			);
 			path = NewPay;
 			sourceTree = "<group>";
@@ -3032,7 +3040,7 @@
 			isa = PBXGroup;
 			children = (
 				8CAB098824E7F2F400D38CDD /* HomeVC.swift */,
-				8CAB098924E7F2F400D38CDD /* HomeVC.xib */,
+				8C6DFFCC26567F68008C52CE /* HomeVC.xib */,
 			);
 			path = HomeVC;
 			sourceTree = "<group>";
@@ -3052,7 +3060,7 @@
 			isa = PBXGroup;
 			children = (
 				8CAB09A924E8274200D38CDD /* SpectialityCell.swift */,
-				8CAB09AA24E8274200D38CDD /* SpectialityCell.xib */,
+				8C6DFFE02656861A008C52CE /* SpectialityCell.xib */,
 			);
 			path = SpectialityCell;
 			sourceTree = "<group>";
@@ -3262,15 +3270,15 @@
 				88ED040524EFCD9A00BBCEF6 /* ClinicsSearchVC.xib in Resources */,
 				88120B7A24EF2C66004A2381 /* ClinicDetailsVC.xib in Resources */,
 				8CAB09B524E84C6800D38CDD /* PackageCell.xib in Resources */,
-				8C9BA4F6263B123000E2AF83 /* SecondSignUp.storyboard in Resources */,
+				8C6DFFA726566CA5008C52CE /* SecondSignUp.storyboard in Resources */,
 				8CEC780F24E9DDDB000CED1F /* ServiceClinicCell.xib in Resources */,
-				88E0C71B2505676C001A1B3B /* PayHomeVC.xib in Resources */,
-				8C9BA4B52636BD6400E2AF83 /* NewPayment.storyboard in Resources */,
+				8C6DFFBF26567BBC008C52CE /* PayHomeVC.xib in Resources */,
+				8C6DFFA026566C4B008C52CE /* NewPayment.storyboard in Resources */,
 				88295E7525304E0000AFF5A3 /* InfoVC.xib in Resources */,
 				88D3FF5B2530A0B300FDC151 /* CalculatorVC.xib in Resources */,
 				88EDA12924FAE41200460B4D /* ProfileVC.xib in Resources */,
 				883D941824F44392004A3F86 /* SpectialitySkeltonCell.xib in Resources */,
-				8C9BA4932635833600E2AF83 /* ForgetPassword.storyboard in Resources */,
+				8C6DFF9226566B31008C52CE /* ForgetPassword.storyboard in Resources */,
 				88A06F632517D52900D8F7A3 /* FinishSignUpVC.xib in Resources */,
 				88BE60AB2506BE6900EB2F03 /* DueCell.xib in Resources */,
 				8827E95024F5A264009C64FB /* EmptyStateView.xib in Resources */,
@@ -3278,7 +3286,7 @@
 				8CAB09B124E8357E00D38CDD /* ServiceCell.xib in Resources */,
 				88695C742555D7B600A680C8 /* Tajawal-Regular.ttf in Resources */,
 				88695C702555D7B600A680C8 /* Tajawal-ExtraBold.ttf in Resources */,
-				8CAB098B24E7F2F400D38CDD /* HomeVC.xib in Resources */,
+				8C6DFFCA26567F68008C52CE /* HomeVC.xib in Resources */,
 				88120B7124EF1CC3004A2381 /* ClinicCell.xib in Resources */,
 				88740130255FCAA200CCAF0A /* GalleryVC.xib in Resources */,
 				88ED041C24EFFD9100BBCEF6 /* NotificationsHomeVC.xib in Resources */,
@@ -3293,17 +3301,17 @@
 				88BE60C62506CD8E00EB2F03 /* PaymentMethodCell.xib in Resources */,
 				88BE60B42506CA2500EB2F03 /* PaymentChannelVC.xib in Resources */,
 				88ED03FC24EFC7B300BBCEF6 /* ClinicsSectionHeaderCell.xib in Resources */,
-				88120B5F24EF07BE004A2381 /* ClinicsHomeVC.xib in Resources */,
+				8C6DFFD326567FE9008C52CE /* ClinicsHomeVC.xib in Resources */,
 				887C63242502683700C69E2A /* ClinicSkeletonCell.xib in Resources */,
-				8CFD17ED263E634C002C0F8A /* ApplicationStatus.storyboard in Resources */,
+				8C6DFFAE26566CC0008C52CE /* ApplicationStatus.storyboard in Resources */,
 				88D291252515153D008738A5 /* UploadDocumentsVC.xib in Resources */,
-				8C76E712264197C600E0C06B /* SignUp.storyboard in Resources */,
+				8C6DFF9726566B9A008C52CE /* SignUp.storyboard in Resources */,
 				8803D1F125082532004A6A46 /* PayOptionCell.xib in Resources */,
 				88C0F1BC25BB3EBF0035E422 /* ClinicOfTheWeekHeaderView.xib in Resources */,
 				8803D1E025081EAA004A6A46 /* ATMPayVC.xib in Resources */,
 				88ED042E24F0042600BBCEF6 /* NotificationCell.xib in Resources */,
 				8C8CB3CB24E6B817009679E5 /* Assets.xcassets in Resources */,
-				8CAB09AC24E8274200D38CDD /* SpectialityCell.xib in Resources */,
+				8C6DFFDE2656861A008C52CE /* SpectialityCell.xib in Resources */,
 				88695C722555D7B600A680C8 /* Tajawal-Bold.ttf in Resources */,
 				882DE7A72510005900B1F4F7 /* SignUpVC.xib in Resources */,
 				88EDA11B24FADA0D00460B4D /* ServiceResultCell.xib in Resources */,
@@ -3700,6 +3708,86 @@
 				88789EE32531B44C006979D2 /* en */,
 			);
 			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		8C6DFF9426566B31008C52CE /* ForgetPassword.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8C6DFF9326566B31008C52CE /* Base */,
+				8C6DFF9626566B3D008C52CE /* ar */,
+			);
+			name = ForgetPassword.storyboard;
+			sourceTree = "<group>";
+		};
+		8C6DFF9926566B9A008C52CE /* SignUp.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8C6DFF9826566B9A008C52CE /* Base */,
+				8C6DFF9D26566BD7008C52CE /* ar */,
+			);
+			name = SignUp.storyboard;
+			sourceTree = "<group>";
+		};
+		8C6DFFA226566C4B008C52CE /* NewPayment.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8C6DFFA126566C4B008C52CE /* Base */,
+				8C6DFFA426566C7C008C52CE /* ar */,
+			);
+			name = NewPayment.storyboard;
+			sourceTree = "<group>";
+		};
+		8C6DFFA926566CA5008C52CE /* SecondSignUp.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8C6DFFA826566CA5008C52CE /* Base */,
+				8C6DFFAD26566CA8008C52CE /* ar */,
+			);
+			name = SecondSignUp.storyboard;
+			sourceTree = "<group>";
+		};
+		8C6DFFB026566CC0008C52CE /* ApplicationStatus.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8C6DFFAF26566CC0008C52CE /* Base */,
+				8C6DFFB226566CC5008C52CE /* ar */,
+			);
+			name = ApplicationStatus.storyboard;
+			sourceTree = "<group>";
+		};
+		8C6DFFC126567BBC008C52CE /* PayHomeVC.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8C6DFFC026567BBC008C52CE /* Base */,
+				8C6DFFC326567BC2008C52CE /* ar */,
+				8C6DFFC726567D77008C52CE /* en */,
+			);
+			name = PayHomeVC.xib;
+			sourceTree = "<group>";
+		};
+		8C6DFFCC26567F68008C52CE /* HomeVC.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8C6DFFCB26567F68008C52CE /* Base */,
+			);
+			name = HomeVC.xib;
+			sourceTree = "<group>";
+		};
+		8C6DFFD526567FE9008C52CE /* ClinicsHomeVC.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8C6DFFD426567FE9008C52CE /* Base */,
+			);
+			name = ClinicsHomeVC.xib;
+			sourceTree = "<group>";
+		};
+		8C6DFFE02656861A008C52CE /* SpectialityCell.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8C6DFFDF2656861A008C52CE /* Base */,
+				8C6DFFE426568620008C52CE /* ar */,
+			);
+			name = SpectialityCell.xib;
 			sourceTree = "<group>";
 		};
 		8C8CB3CC24E6B817009679E5 /* LaunchScreen.storyboard */ = {

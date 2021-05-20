@@ -1,0 +1,33 @@
+
+/* Class = "UIButton"; normalTitle = "Next"; ObjectID = "2Ca-aB-tOh"; */
+"2Ca-aB-tOh.normalTitle" = "التالي";
+
+/* Class = "UILabel"; text = "01*******74"; ObjectID = "Abf-eb-Mrj"; */
+"Abf-eb-Mrj.text" = "01*******74";
+
+/* Class = "UITextField"; placeholder = "Email"; ObjectID = "Kxa-Hi-dIB"; */
+"Kxa-Hi-dIB.placeholder" = "البريد الإلكتروني";
+
+/* Class = "UIButton"; normalTitle = "next"; ObjectID = "Mvu-vi-bNE"; */
+"Mvu-vi-bNE.normalTitle" = "التالي";
+
+/* Class = "UITextField"; placeholder = "Last Name"; ObjectID = "U0L-MO-LlO"; */
+"U0L-MO-LlO.placeholder" = "الاسم الأخير";
+
+/* Class = "UITextField"; placeholder = "Password"; ObjectID = "Zma-gm-aDt"; */
+"Zma-gm-aDt.placeholder" = "كلمة المرور";
+
+/* Class = "UILabel"; text = "We sent a code on your\nregistered number"; ObjectID = "ia2-PU-rij"; */
+"ia2-PU-rij.text" = "لقد أرسلنا رمزًا على رقمك المسجل";
+
+/* Class = "UITextField"; placeholder = "Confirm Password"; ObjectID = "ihh-gT-pWn"; */
+"ihh-gT-pWn.placeholder" = "تأكيد كلمة المرور";
+
+/* Class = "UITextField"; placeholder = "Frist Name"; ObjectID = "lwA-UE-PZ7"; */
+"lwA-UE-PZ7.placeholder" = "الاسم الأول";
+
+/* Class = "UITextField"; placeholder = "Birth date"; ObjectID = "qqS-cJ-FCi"; */
+"qqS-cJ-FCi.placeholder" = "تاريخ الميلاد";
+
+/* Class = "UITextField"; placeholder = "Phone"; ObjectID = "ya2-Jx-fzx"; */
+"ya2-Jx-fzx.placeholder" = "رقم الهاتف";

@@ -82,9 +82,9 @@ class FirstSignUpViewController: UIViewController {
         //ToolBar
         let toolbar = UIToolbar();
         toolbar.sizeToFit()
-        let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(doneDatePicker));
+        let doneButton = UIBarButtonItem(title: "Done".toLocalize, style: .plain, target: self, action: #selector(doneDatePicker));
         let spaceButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace, target: nil, action: nil)
-        let cancelButton = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(cancelDatePicker));
+        let cancelButton = UIBarButtonItem(title: "Cancel".toLocalize, style: .plain, target: self, action: #selector(cancelDatePicker));
 
         toolbar.setItems([doneButton,spaceButton,cancelButton], animated: false)
 
@@ -129,8 +129,8 @@ class FirstSignUpViewController: UIViewController {
             }
 
         }else{
-            let okAction = UIAlertAction(title: "OK".localized, style: .default, handler: nil)
-            showAlertController(title: "Email validation!", message: "E-mail must contain only latin letters, numbers, '@' and '.'", actions: [okAction])
+            let okAction = UIAlertAction(title: "Ok".localized, style: .default, handler: nil)
+            showAlertController(title: "Email validation!".toLocalize, message: "E-mail must contain only latin letters, numbers, '@' and '.'".toLocalize, actions: [okAction])
 
             goCallAPI = false
         }
@@ -140,8 +140,8 @@ class FirstSignUpViewController: UIViewController {
             print("Valid Password")  //Use to Alert Msg Box
         }else
         {
-            let okAction = UIAlertAction(title: "OK".localized, style: .default, handler: nil)
-            showAlertController(title: "Password validation!", message: "Password should be more than 8 characters, including numbers, uppercase letter, and symbols", actions: [okAction])
+            let okAction = UIAlertAction(title: "Ok".localized, style: .default, handler: nil)
+            showAlertController(title: "Password validation!".toLocalize, message: "Password should be more than 8 characters, including numbers, uppercase letter, and symbols".toLocalize, actions: [okAction])
 
             goCallAPI = false
         }
@@ -169,7 +169,7 @@ class FirstSignUpViewController: UIViewController {
 
 
                 if res.error?.code == 400{
-                    self.showAlertController(title: "Error!", message: (res.error?.validation)!, actions: [])
+                    self.showAlertController(title: "Error!".toLocalize, message: (res.error?.validation)!, actions: [])
                 }else{
 
                 let storyBoard: UIStoryboard = UIStoryboard(name: "SignUp", bundle: nil)
@@ -182,7 +182,9 @@ class FirstSignUpViewController: UIViewController {
 
             } onError: { (error) in
                 print(error)
-                self.showAlertController(title: "Error!", message: error, actions: [])
+                let okAction = UIAlertAction(title: "OK".localized, style: .default, handler: nil)
+
+                self.showAlertController(title: "Error!".toLocalize, message: error, actions: [okAction])
 
             }
         }else{}

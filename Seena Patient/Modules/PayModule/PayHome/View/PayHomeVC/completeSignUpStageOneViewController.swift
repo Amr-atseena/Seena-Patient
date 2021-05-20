@@ -22,9 +22,9 @@ class CompleteSignStageOneViewController: UIViewController, UIPickerViewDelegate
 
     var currentTextField = SkyFloatingLabelTextField()
 
-    let id = ["National ID","Passport"]
-    let fin = ["Bank statement","HR letter"]
-    let resd = ["Electricity bill","Telephone bill","Natural gas bill"]
+    let id = ["National ID".toLocalize,"Passport".toLocalize]
+    let fin = ["Bank statement".toLocalize,"HR letter".toLocalize]
+    let resd = ["Electricity bill".toLocalize,"Telephone bill".toLocalize,"Natural gas bill".toLocalize]
 
     var idPicker = UIPickerView()
     var finPicker = UIPickerView()

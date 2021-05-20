@@ -18,10 +18,10 @@ class HomeVC: UIViewController, HomeViewProtocol {
 
     private lazy var seeAllOffersBtn: UIButton = {
         let button = UIButton()
-        button.frame = CGRect(x: self.view.frame.size.width - 120, y: 5, width: 80, height: 30)
+//        button.frame = CGRect(x: self.view.frame.size.width - 120, y: 5, width: 80, height: 30)
 
 //        button.backgroundColor = UIColor.red
-        button.setTitle("See all ", for: .normal)
+        button.setTitle("See all".toLocalize, for: .normal)
         button.titleLabel?.font = .systemFont(ofSize: 15, weight: .regular)
         button.setTitleColor(#colorLiteral(red: 0.8588235294, green: 0.07843137255, blue: 0.07843137255, alpha: 1), for: .normal)
         button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
@@ -39,7 +39,7 @@ class HomeVC: UIViewController, HomeViewProtocol {
     private lazy var operationsLabel: UILabel = {
         let opertionsLabel = UILabel()
 //        opertionsLabel.text = self.presenter.localization.beautySubscription
-                opertionsLabel.text = "Offers"
+        opertionsLabel.text = "Offers".toLocalize
         opertionsLabel.font = DesignSystem.Typography.subHeading2.font
         opertionsLabel.textColor = DesignSystem.Colors.secondaryText.color
         return opertionsLabel
@@ -61,11 +61,16 @@ class HomeVC: UIViewController, HomeViewProtocol {
         headerView.addSubview(seeAllOffersBtn)
         headerCollectionView.translatesAutoresizingMaskIntoConstraints = false
         operationsLabel.translatesAutoresizingMaskIntoConstraints = false
+        seeAllOffersBtn.translatesAutoresizingMaskIntoConstraints = false
         let constraint = [
             operationsLabel.topAnchor.constraint(equalTo: headerView.topAnchor, constant: 5),
             operationsLabel.leadingAnchor.constraint(equalTo: headerView.leadingAnchor, constant: 20),
             operationsLabel.trailingAnchor.constraint(equalTo: headerView.trailingAnchor, constant: -5),
             operationsLabel.bottomAnchor.constraint(equalTo: headerCollectionView.topAnchor, constant: -10),
+            seeAllOffersBtn.topAnchor.constraint(equalTo: headerView.topAnchor, constant: 5),
+//            seeAllOffersBtn.leadingAnchor.constraint(equalTo: headerView.leadingAnchor, constant: 280),
+            seeAllOffersBtn.trailingAnchor.constraint(equalTo: headerView.trailingAnchor, constant: -20),
+            seeAllOffersBtn.bottomAnchor.constraint(equalTo: headerCollectionView.topAnchor, constant: -10),
             headerCollectionView.leadingAnchor.constraint(equalTo: headerView.leadingAnchor),
             headerCollectionView.trailingAnchor.constraint(equalTo: headerView.trailingAnchor),
             headerCollectionView.bottomAnchor.constraint(equalTo: headerView.bottomAnchor, constant: -20)

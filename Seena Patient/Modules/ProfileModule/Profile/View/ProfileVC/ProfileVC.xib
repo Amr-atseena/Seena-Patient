@@ -12,12 +12,14 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProfileVC">
             <connections>
+                <outlet property="applicationStatusLbl" destination="jTM-0W-ytN" id="u52-Rg-sdK"/>
                 <outlet property="holderView" destination="iyA-j9-gCq" id="jh9-Uh-eEb"/>
                 <outlet property="logOutKeywordLabel" destination="rvd-2f-ury" id="IQl-bV-ynf"/>
                 <outlet property="profileKeywordLabel" destination="BWD-oV-deY" id="2Wp-gD-FAL"/>
                 <outlet property="sendToFriendKeywordLabel" destination="dqG-cm-6fw" id="lc5-of-MfX"/>
                 <outlet property="settingsKeywordLabel" destination="9PL-6R-KjC" id="yMH-cT-D33"/>
                 <outlet property="statusLabel" destination="YyG-7O-QF5" id="5CB-ii-hTc"/>
+                <outlet property="statusLbl" destination="XS9-Cp-WGI" id="CRY-Pi-yFa"/>
                 <outlet property="tagView" destination="5re-3W-WpM" id="gmP-So-DFR"/>
                 <outlet property="transactionsKeywordLabel" destination="REo-CK-tv7" id="9Oo-h0-cj3"/>
                 <outlet property="userImage" destination="ohl-j8-aiN" id="s6G-bQ-1t7"/>

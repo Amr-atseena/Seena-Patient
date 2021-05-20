@@ -128,7 +128,7 @@ class PayHomeVC: UIViewController, PayHomeViewProtocol {
             applyBtn.isUserInteractionEnabled = false
                         applyBtn.backgroundColor = #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
                         youHaveLbl.isHidden = false
-            youHaveLbl.text = "Please sign in"
+            youHaveLbl.text = "Please sign in".toLocalize
         }else{
             applyBtn.isUserInteractionEnabled = true
                        applyBtn.backgroundColor = #colorLiteral(red: 0.8588235294, green: 0.07843137255, blue: 0.07843137255, alpha: 1)

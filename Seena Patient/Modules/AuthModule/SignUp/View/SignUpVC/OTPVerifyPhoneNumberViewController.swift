@@ -150,7 +150,9 @@ class OTPVerifyPhoneNumberViewController: UIViewController, UITextFieldDelegate 
 //                    _ = self.navigationController?.popViewController(animated: true)
 //
 //                }
-                self.showAlertController(title: "Error", message: (res.error?.validation)! , actions: [])
+                let okAction = UIAlertAction(title: "Ok".localized, style: .default, handler: nil)
+
+                self.showAlertController(title: "Error!".toLocalize, message: (res.error?.validation)! , actions: [okAction])
                 
             }else{
                 self.login()
@@ -196,6 +198,33 @@ class OTPVerifyPhoneNumberViewController: UIViewController, UITextFieldDelegate 
         }else{
             UserDefaults.standard.set(true, forKey: "Statuss")
         }
+
+
+
+        if status?.financialProof == true {
+            UserDefaults.standard.set(true, forKey: "financialProofLogin")
+        }else{
+            UserDefaults.standard.set(false, forKey: "financialProofLogin")
+        }
+        if status?.idType == true {
+            UserDefaults.standard.set(true, forKey: "idTypeLogin")
+        }else{
+            UserDefaults.standard.set(false, forKey: "idTypeLogin")
+        }
+        if status?.profilePicture == true {
+            UserDefaults.standard.set(true, forKey: "profilePictureLogin")
+        }else{
+            UserDefaults.standard.set(false, forKey: "profilePictureLogin")
+        }
+        if status?.residenceProof == true {
+            UserDefaults.standard.set(true, forKey: "residenceProofLogin")
+        }else{
+            UserDefaults.standard.set(false, forKey: "residenceProofLogin")
+        }
+
+
+
+       
 
 //        self.navigationController?.setViewControllers([Home.assembleModule()], animated: true)
         let tabBar = HomeTabBarVC()

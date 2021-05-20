@@ -34,10 +34,6 @@ class FinishSignUpVC: UIViewController {
         //        navigationController?.setViewControllers([ProfileRouter.assembleModule()], animated: true)
 
         // the second one
-        let tabBar = HomeTabBarVC()
-        self.present(tabBar, animated: true, completion: nil)
-
-
         UserDefaults.standard.removeObject(forKey: "financialProof")
         UserDefaults.standard.removeObject(forKey: "idType")
         UserDefaults.standard.removeObject(forKey: "profilePicture")
@@ -46,6 +42,12 @@ class FinishSignUpVC: UIViewController {
         UserDefaults.standard.removeObject(forKey: "idTypeLogin")
         UserDefaults.standard.removeObject(forKey: "profilePictureLogin")
         UserDefaults.standard.removeObject(forKey: "residenceProofLogin")
+        
+        let tabBar = HomeTabBarVC()
+        self.present(tabBar, animated: true, completion: nil)
+
+
+
 
 
         // final one

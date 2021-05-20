@@ -1,0 +1,18 @@
+
+/* Class = "UITextField"; placeholder = "Birthdate (Optinal)"; ObjectID = "6Hi-3M-VOp"; */
+"6Hi-3M-VOp.placeholder" = "Birthdate (Optinal)";
+
+/* Class = "UITextField"; placeholder = "Financial Proof Type"; ObjectID = "bDh-21-OSl"; */
+"bDh-21-OSl.placeholder" = "نوع الإثبات المالي";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "iD2-Ia-HPR"; */
+"iD2-Ia-HPR.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Next"; ObjectID = "pUC-G8-5dT"; */
+"pUC-G8-5dT.normalTitle" = "التالي";
+
+/* Class = "UITextField"; placeholder = "Residence Proof Type"; ObjectID = "qne-op-38n"; */
+"qne-op-38n.placeholder" = "نوع إثبات الإقامة";
+
+/* Class = "UITextField"; placeholder = "ID Type"; ObjectID = "tL9-VL-7vT"; */
+"tL9-VL-7vT.placeholder" = "نوع الهوية";

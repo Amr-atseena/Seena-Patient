@@ -29,7 +29,7 @@ class DocumentTypeCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // uploadType Label
-        uploadTypeLabel.font = DesignSystem.Typography.subHeading2.font
+        uploadTypeLabel.font = DesignSystem.Typography.subHeading4.font
     }
 }
 // MARK: - DocumentTypeCellProtocol Implemention

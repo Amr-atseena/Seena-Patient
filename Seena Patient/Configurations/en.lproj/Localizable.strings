@@ -31,6 +31,7 @@
 "Our Work" = "Our Work";
 "Our Services" = "Our Services";
 "See All" = "See All";
+"See all" = "See all";
 "All" = "All";
 "Calculator" = "Calculator";
 "Find out" = "Find out";
@@ -103,3 +104,30 @@ we will shortly update you with the status of your application";
 "missing info" = "missing info";
 "Available Balance" = "Available Balance";
 "SeenaPayMessage" = "Seena pay will be available soon please use another payment method";
+
+
+
+
+"Error!" = "Error!";
+"Not found!" = "Not found!";
+"User Not Found, enter your phone number again" = "User Not Found, enter your phone number again";
+"Password validation!" = "Password validation!";
+"Password should be more than 8 characters, including numbers, uppercase letter, and symbols" = "Password should be more than 8 characters, including numbers, uppercase letter, and symbols";
+"Done" = "Done";
+"Cancel" = "Cancel";
+"Scanning not supported" = "Scanning not supported";
+"Your device does not support scanning a code from an item. Please use a device with a camera." = "Your device does not support scanning a code from an item. Please use a device with a camera.";
+"National ID" = "National ID";
+"Passport" = "Passport";
+"Bank statement" = "Bank statement";
+"HR letter" = "HR letter";
+"Electricity bill" = "Electricity bill";
+"Telephone bill" = "Telephone bill";
+"Natural gas bill" = "Natural gas bill";
+"Email validation!" = "Email validation!";
+"E-mail must contain only latin letters, numbers, '@' and '.'" = "E-mail must contain only latin letters, numbers, '@' and '.'";
+"OK" = "Ok";
+
+"Please sign in" = "Please sign in";
+"Offers" = "Offers";
+"Application status" = "Application status";

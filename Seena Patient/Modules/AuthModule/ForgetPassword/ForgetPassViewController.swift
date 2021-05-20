@@ -23,7 +23,8 @@ class ForgetPassViewController: UIViewController {
         APIClient().forgetPassword(phone: phoneNumTF.text ?? "") { (res) in
             print(res)
             if res.error.validation == "User Not Found" {
-                self.showAlertController(title: "Not found!", message: "User Not Found, enter your phone number again", actions: [])
+                let okAction = UIAlertAction(title: "OK".localized, style: .default, handler: nil)
+                self.showAlertController(title: "Not found!".toLocalize, message: "User Not Found, enter your phone number again".toLocalize, actions: [okAction])
             }else{
                 let storyBoard: UIStoryboard = UIStoryboard(name: "ForgetPassword", bundle: nil)
                 let newViewController = storyBoard.instantiateViewController(withIdentifier: "OTPForgetPasswordViewController") as? OTPForgetPasswordViewController
@@ -33,7 +34,10 @@ class ForgetPassViewController: UIViewController {
                 self.navigationController?.pushViewController(newViewController!, animated: true)
             }
         } onError: { (error) in
-            self.showAlertController(title: "Error!", message: error, actions: [])
+
+            let okAction = UIAlertAction(title: "OK".localized, style: .default, handler: nil)
+
+            self.showAlertController(title: "Error!".toLocalize, message: error, actions: [okAction])
         }
 
 

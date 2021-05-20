@@ -1,0 +1,81 @@
+
+/* Class = "UILabel"; text = "Installments"; ObjectID = "03p-4G-wL1"; */
+"03p-4G-wL1.text" = "الأقساط";
+
+/* Class = "UIButton"; normalTitle = "Done"; ObjectID = "0eU-fp-mKf"; */
+"0eU-fp-mKf.normalTitle" = "تم";
+
+/* Class = "UILabel"; text = "04 March 2020"; ObjectID = "0sA-Yg-0rg"; */
+"0sA-Yg-0rg.text" = "04 March 2020";
+
+/* Class = "UILabel"; text = "Calculator"; ObjectID = "9jw-QS-Fwc"; */
+"9jw-QS-Fwc.text" = "آلة حاسبة";
+
+/* Class = "UILabel"; text = "Payment Success!"; ObjectID = "FlF-fB-4ul"; */
+"FlF-fB-4ul.text" = "تم الدفع بنجاح!";
+
+/* Class = "UILabel"; text = "EGP 1,000"; ObjectID = "G77-PA-m5g"; */
+"G77-PA-m5g.text" = "EGP 1,000";
+
+/* Class = "UILabel"; text = "Mohammed Aman"; ObjectID = "HGR-iE-Huu"; */
+"HGR-iE-Huu.text" = "Mohammed Aman";
+
+/* Class = "UILabel"; text = "EGP 30,000"; ObjectID = "HcF-ru-C6p"; */
+"HcF-ru-C6p.text" = "EGP 30,000";
+
+/* Class = "UIButton"; normalTitle = "Done"; ObjectID = "IAa-Fe-JFC"; */
+"IAa-Fe-JFC.normalTitle" = "تم";
+
+/* Class = "UIButton"; normalTitle = "Next"; ObjectID = "KVb-8S-2C5"; */
+"KVb-8S-2C5.normalTitle" = "التالي";
+
+/* Class = "UILabel"; text = "My Walllet"; ObjectID = "M0a-K4-mTW"; */
+"M0a-K4-mTW.text" = "محفظتى";
+
+/* Class = "UILabel"; text = "valU"; ObjectID = "OOy-Qx-ZS0"; */
+"OOy-Qx-ZS0.text" = "valU";
+
+/* Class = "UILabel"; text = "Payment methods"; ObjectID = "T6Z-Fo-gkS"; */
+"T6Z-Fo-gkS.text" = "طرق الدفع";
+
+/* Class = "UILabel"; text = "Calculator"; ObjectID = "VNp-0f-bes"; */
+"VNp-0f-bes.text" = "آلة حاسبة";
+
+/* Class = "UILabel"; text = "Please enter OTP"; ObjectID = "WpU-hh-fTd"; */
+"WpU-hh-fTd.text" = "الرجاء إدخال الرمز المرسل";
+
+/* Class = "UILabel"; text = "12 Months"; ObjectID = "YWH-ku-NMg"; */
+"YWH-ku-NMg.text" = "١٢ شهر";
+
+/* Class = "UILabel"; text = "3 Months"; ObjectID = "ZZX-7O-QyX"; */
+"ZZX-7O-QyX.text" = "٣ أشهر";
+
+/* Class = "UILabel"; text = "Check out"; ObjectID = "aVb-n7-gh8"; */
+"aVb-n7-gh8.text" = "الدفع";
+
+/* Class = "UILabel"; text = "EGP 1,000"; ObjectID = "afA-Am-Ib3"; */
+"afA-Am-Ib3.text" = "EGP 1,000";
+
+/* Class = "UIButton"; normalTitle = "Next"; ObjectID = "c2Y-PB-ajd"; */
+"c2Y-PB-ajd.normalTitle" = "التالي";
+
+/* Class = "UILabel"; text = "6 Months"; ObjectID = "hvg-Ga-rqa"; */
+"hvg-Ga-rqa.text" = "٦ أشهر";
+
+/* Class = "UIButton"; normalTitle = "Next"; ObjectID = "m35-xy-Cud"; */
+"m35-xy-Cud.normalTitle" = "التالي";
+
+/* Class = "UILabel"; text = "Scan merchant QR code"; ObjectID = "qUZ-Lj-owl"; */
+"qUZ-Lj-owl.text" = "امسح رمز الاستجابة السريعة الخاص بالتاجر";
+
+/* Class = "UILabel"; text = "EGP 1,000"; ObjectID = "rnw-Jw-oAB"; */
+"rnw-Jw-oAB.text" = "EGP 1,000";
+
+/* Class = "UILabel"; text = "Payment"; ObjectID = "siI-Nj-Zdq"; */
+"siI-Nj-Zdq.text" = "الدفع";
+
+/* Class = "UILabel"; text = "Please enter the required payment amount"; ObjectID = "t9G-66-laN"; */
+"t9G-66-laN.text" = "الرجاء إدخال مبلغ الدفع المطلوب";
+
+/* Class = "UILabel"; text = "12 Months"; ObjectID = "xNI-en-p9p"; */
+"xNI-en-p9p.text" = "١٢ شهر";

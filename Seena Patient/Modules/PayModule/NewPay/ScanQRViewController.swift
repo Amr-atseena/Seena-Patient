@@ -74,8 +74,8 @@ class ScanQRViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
 
 
     func failed() {
-        let ac = UIAlertController(title: "Scanning not supported", message: "Your device does not support scanning a code from an item. Please use a device with a camera.", preferredStyle: .alert)
-        ac.addAction(UIAlertAction(title: "OK", style: .default))
+        let ac = UIAlertController(title: "Scanning not supported".toLocalize, message: "Your device does not support scanning a code from an item. Please use a device with a camera.".toLocalize, preferredStyle: .alert)
+        ac.addAction(UIAlertAction(title: "OK".toLocalize, style: .default))
         present(ac, animated: true)
         captureSession = nil
     }

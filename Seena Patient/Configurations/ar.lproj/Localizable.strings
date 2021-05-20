@@ -30,6 +30,7 @@
 "Our Work" = "أعمالنا";
 "Our Services" = "خدماتنا";
 "See All" = "اظهار الكل";
+"See all" = "اظهار الكل";
 "All" = "كل المحافظات";
 "Calculator" = "آلة حاسبة";
 "Find out" = "احسب القسط";
@@ -102,3 +103,33 @@
 "missing info" = "نقص في المعلومات";
 "Available Balance" = "الرصيد المتوفر";
 "SeenaPayMessage" = "مدفوعات سينا ستكون متاحة قريبا من فضلك استخدم طريقة دفع اخري";
+
+
+
+
+
+"Error!" = "خطأ!";
+"Not found!" = "غير موجود!";
+"User Not Found, enter your phone number again" = "لم يتم العثور على المستخدم ، أدخل رقم هاتفك مرة أخرى";
+"Password validation!" = "التحقق من صحة كلمة المرور!";
+"Password should be more than 8 characters, including numbers, uppercase letter, and symbols" = "يجب أن تكون كلمة المرور أكثر من 8 أحرف ، بما في ذلك الأرقام والأحرف الكبيرة والرموز";
+"Done" = "تم";
+"Cancel" = "إلغاء";
+"Scanning not supported" = "المسح غير مدعوم";
+"Your device does not support scanning a code from an item. Please use a device with a camera." = "جهازك لا يدعم مسح رمز من عنصر. الرجاء استخدام جهاز مع كاميرا.";
+"National ID" = "الرقم القومي";
+"Passport" = "جواز السفر";
+"Bank statement" = "كشف حساب بنكى";
+"HR letter" = "خطاب الموارد البشرية";
+"Electricity bill" = "فاتورة الكهرباء";
+"Telephone bill" = "فاتورة الهاتف";
+"Natural gas bill" = "فاتورة الغاز الطبيعي";
+
+"Email validation!" = "التحقق من صحة البريد الإلكتروني!";
+"E-mail must contain only latin letters, numbers, '@' and '.'" = "يجب أن يحتوي البريد الإلكتروني على أحرف لاتينية وأرقام و '@' و '.'";
+
+"OK" = "تم";
+"Please sign in" = "الرجاء تسجيل الدخول";
+"Offers" = "العروض";
+
+"Application status" = "حالة الطلب";

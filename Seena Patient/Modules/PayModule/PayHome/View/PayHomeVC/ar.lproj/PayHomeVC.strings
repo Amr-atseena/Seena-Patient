@@ -1,0 +1,36 @@
+
+/* Class = "UILabel"; text = "No due payments"; ObjectID = "GRq-sH-FAq"; */
+"GRq-sH-FAq.text" = "لا توجد مدفوعات مستحقة";
+
+/* Class = "UILabel"; text = "Your Balance"; ObjectID = "MHR-Lg-W0J"; */
+"MHR-Lg-W0J.text" = "رصيدك";
+
+/* Class = "UILabel"; text = "Pay"; ObjectID = "Rlo-uG-PD9"; */
+"Rlo-uG-PD9.text" = "دفع";
+
+/* Class = "UILabel"; text = "You paid"; ObjectID = "UcN-bw-QIG"; */
+"UcN-bw-QIG.text" = "لقد دفعت";
+
+/* Class = "UILabel"; text = "If you signed up already, sign in"; ObjectID = "Z5T-vB-SuQ"; */
+"Z5T-vB-SuQ.text" = "الرجاء تسجيل الدخول";
+
+/* Class = "UILabel"; text = "Payments due"; ObjectID = "Zia-VY-44m"; */
+"Zia-VY-44m.text" = "المدفوعات المستحقة";
+
+/* Class = "UILabel"; text = "Available Balance"; ObjectID = "dmt-kB-UDy"; */
+"dmt-kB-UDy.text" = "الرصيد المتاح";
+
+/* Class = "UILabel"; text = "of EGP 30,000"; ObjectID = "lKS-CI-ZZM"; */
+"lKS-CI-ZZM.text" = "of EGP 30,000";
+
+/* Class = "UIButton"; normalTitle = "Apply"; ObjectID = "ooF-qv-EoG"; */
+"ooF-qv-EoG.normalTitle" = "تسجيل";
+
+/* Class = "UILabel"; text = "of EGP 30,000"; ObjectID = "qKI-2p-Brg"; */
+"qKI-2p-Brg.text" = "of EGP 30,000";
+
+/* Class = "UILabel"; text = "Calculator"; ObjectID = "qhM-17-oYP"; */
+"qhM-17-oYP.text" = "احسب قسطك";
+
+/* Class = "UILabel"; text = "EGP 14,390"; ObjectID = "wTj-u8-hPs"; */
+"wTj-u8-hPs.text" = "EGP 14,390";

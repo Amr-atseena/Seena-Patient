@@ -79,3 +79,9 @@ extension AppDelegate: MessagingDelegate {
         print(fcmToken)
     }
 }
+
+extension String {
+    var toLocalize: String {
+        return NSLocalizedString(self, comment: "")
+    }
+}
