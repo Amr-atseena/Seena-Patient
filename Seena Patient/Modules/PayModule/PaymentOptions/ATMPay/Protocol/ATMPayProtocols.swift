@@ -11,6 +11,7 @@ import UIKit
 // MARK: - ATMPay Router
 enum ATMPayRoute {
     case pay(Payment)
+    case succ
 }
 protocol ATMPayRouterProtocol {
     // Presenter -> Router
@@ -26,6 +27,7 @@ protocol ATMPayInputInteractorProtocol: class {
     func retriveBanksAccount()
     func retriveVodafoneAccount()
 //    func retriveEtisalatAccount()
+    func retriveSeena()
 
 }
 protocol ATMPayOutputInteractorProtocol: class {
@@ -33,6 +35,7 @@ protocol ATMPayOutputInteractorProtocol: class {
     func onRetriveBanksAccountSuccess(_ banksAccounts: [Account])
     func onRetriveVodafoneAccountSuccess(_ vodafoneAccounts: [Vodafone])
 //    func onRetriveEtisalatAccountSuccess(_ etisalatAccounts: [Etisalat])
+    func onRetriveSeena()
 
 }
 // MARK: - ATMPay Preseneter
@@ -54,11 +57,19 @@ protocol ATMPayViewProtocol: class {
     var presenter: ATMPayPresenterProtocol! { get set }
     // Presenter -> View
     func setupBankAccountsCollectionView()
+    func setupSecondPay()
     func setupUI()
     func enableNextButton()
     func reloadAccounts()
+    func callCollection()
 }
 // MARK: - PayOPtionCellProtocol
 protocol PayOPtionCellProtocol: class {
     func setAccount(_ account: AccountViewModel)
+}
+
+
+// MARK: - PayOPtionCellProtocol
+protocol PaySeenaProtocol: class {
+    func setAccount(_ merchant: String, amount : String)
 }

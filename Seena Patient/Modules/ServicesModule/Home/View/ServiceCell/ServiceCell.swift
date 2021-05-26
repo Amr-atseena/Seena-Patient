@@ -19,13 +19,29 @@ class ServiceCell: UICollectionViewCell {
 }
 // MARK: - Implementation Of ServiceCellView Protocol
 extension ServiceCell: ServiceCellProtocol {
+
+
     func setService(_ service: ServiceViewModel) {
         serviceNameLabel.text = service.serviceName
-        serviceImage.kf.setImage(with: URL(string: service.serviceImage))
+
+        if !service.serviceImage.contains("http") {
+            serviceImage.kf.setImage(with: URL(string: "http://dashboard.seenapay.com/storage/users/\(service.serviceImage)"))
+
+        }else{
+            serviceImage.kf.setImage(with: URL(string: service.serviceImage))
+
+        }
     }
 
     func setSpeciality(_ title: String,_ image: String) {
         serviceNameLabel.text = title
+
+        if !image.contains("http") {
+            serviceImage.kf.setImage(with: URL(string: "http://dashboard.seenapay.com/storage/users/\(image)"))
+
+        }else{
         serviceImage.kf.setImage(with: URL(string: image))
+        }
     }
+
 }

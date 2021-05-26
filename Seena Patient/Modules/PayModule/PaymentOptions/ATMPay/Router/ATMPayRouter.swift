@@ -28,11 +28,22 @@ class ATMPayRouter: ATMPayRouterProtocol {
         switch router {
         case .pay(let pay):
             navigateToPay(payment: pay)
+
+        case .succ:
+            navigateToSucc()
         }
     }
     
     private func navigateToPay(payment: Payment) {
         let payVC = PayRouter.assembleModule(withPayment: payment)
         viewController?.navigationController?.pushViewController(payVC, animated: true)
+    }
+
+
+    private func navigateToSucc() {
+        let storyBoard: UIStoryboard = UIStoryboard(name: "SeenaPaySuccess", bundle: nil)
+        let newViewController = storyBoard.instantiateViewController(withIdentifier: "SeenaPaySuccViewController") as? SeenaPaySuccViewController
+        newViewController!.modalPresentationStyle = .fullScreen
+        viewController?.navigationController?.pushViewController(newViewController!, animated: true)
     }
 }

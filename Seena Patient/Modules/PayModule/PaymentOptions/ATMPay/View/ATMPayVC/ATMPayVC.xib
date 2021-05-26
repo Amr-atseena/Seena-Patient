@@ -70,7 +70,7 @@
                         <constraint firstItem="I50-es-7sK" firstAttribute="top" secondItem="JqK-XH-3hz" secondAttribute="bottom" constant="10" id="JWU-bx-7r0"/>
                         <constraint firstItem="JqK-XH-3hz" firstAttribute="leading" secondItem="uos-kx-BVC" secondAttribute="leading" constant="20" id="KyE-g1-LfK"/>
                         <constraint firstAttribute="bottom" secondItem="iMf-R8-gW1" secondAttribute="bottom" constant="10" id="RD7-3H-1oR"/>
-                        <constraint firstItem="iMf-R8-gW1" firstAttribute="top" relation="greaterThanOrEqual" secondItem="I50-es-7sK" secondAttribute="bottom" constant="10" id="Wfi-mZ-Amu"/>
+                        <constraint firstItem="iMf-R8-gW1" firstAttribute="top" relation="greaterThanOrEqual" secondItem="I50-es-7sK" secondAttribute="bottom" constant="5" id="Wfi-mZ-Amu"/>
                         <constraint firstItem="I50-es-7sK" firstAttribute="leading" secondItem="uos-kx-BVC" secondAttribute="leading" id="udc-9P-utL"/>
                         <constraint firstAttribute="trailing" secondItem="iMf-R8-gW1" secondAttribute="trailing" constant="20" id="vop-ga-1px"/>
                         <constraint firstItem="iMf-R8-gW1" firstAttribute="leading" secondItem="uos-kx-BVC" secondAttribute="leading" constant="20" id="xh3-zn-qAB"/>

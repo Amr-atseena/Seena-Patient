@@ -9,8 +9,10 @@
 import Foundation
 
 class HomePresenter: HomePresenterProtocol {
+
     // MARK: - Attributes
     var router: HomeRouterProtocol?
+
     var interactor: HomeInputInteractorProtocol?
     weak var view: HomeViewProtocol?
     var localization = HomeLocalization()
@@ -22,6 +24,12 @@ class HomePresenter: HomePresenterProtocol {
     fileprivate var packages = [Package]() {
         didSet {
             view?.reloadPackageCollectionView()
+        }
+    }
+    fileprivate var clinic = [Clinic]()
+    {
+        didSet {
+            view?.reloadCategoryTableView()
         }
     }
     // MARK: - Init
@@ -48,14 +56,33 @@ class HomePresenter: HomePresenterProtocol {
         let package = packages[index]
         cell.setPackage(PackageViewModel(package: package))
     }
-    func configure(spectialityCell cell: SpecialityCellView, atIndex index: Int) {
+    func configure(spectialityCell cell: SpecialityCellView, atIndex index: Int ) {
         cell.setSpecialityName(specialities[index].speciality ?? "")
+        
     }
     func configure(serviceCell cell: ServiceCellProtocol, atIndex index: Int, andSection section: Int) {
-        let service = specialities[section].services?[index]
-        cell.setService(ServiceViewModel(service: service))
+
+        if section == 0 {
+            let service = clinic[index]
+            cell.setSpeciality(service.name, service.image)
+        }else{
+            let service = specialities[section].services?[index]
+            cell.setService(ServiceViewModel(service: service))
+        }
+
 //        let speciality = specialities[index]
 //        cell.setSpeciality(speciality.speciality, speciality.image ?? "")
+    }
+
+    func configuress(clinicCell cell: ClinicCellProtocol, atIndex index: Int, andSection section: Int) {
+
+        let xxxxx = clinic[section]
+        cell.setClinic(ClinicViewModel(clinic: xxxxx))
+    }
+
+    func config(ClinicCell cell: ClinicCellProtocol, atIndex index: Int, andSection section: Int) {
+        let clinic = specialities[section].clinics?[index]
+        cell.setClinic(ClinicViewModel(clinic: clinic))
     }
     func serviceSelected(atIndex index: Int, andSection section: Int) {
         switch section {
@@ -65,11 +92,18 @@ class HomePresenter: HomePresenterProtocol {
         case -2:
             let speciality = specialities[index]
             router?.go(to: .specialities(speciality))
+
+        case 0:
+            let speciality = clinic[index]
+//            router?.go(to: .clinic(speciality))
+            router?.go(to: .clincss(speciality))
         default:
             guard let service = specialities[section].services?[index] else {return}
             router?.go(to: .serviceDetails(service))
         }
     }
+
+
     func numberOfServices(atRow row: Int) -> Int {
         if specialities.isEmpty {
             return 0
@@ -83,6 +117,12 @@ class HomePresenter: HomePresenterProtocol {
     var numberOfPackages: Int {
         return packages.count
     }
+
+//    var numberOfClincs: Int
+
+    var numberOfClincs: Int {
+        return clinic.count
+    }
 }
 // MARK: - HomeOutputInteractorProtocol Implementation
 extension HomePresenter: HomeOutputInteractorProtocol {
@@ -95,8 +135,13 @@ extension HomePresenter: HomeOutputInteractorProtocol {
     }
     func onRetriveDataSuccess(with homeServices: HomeResponse) {
         view?.hideSkeltonView()
-        specialities = homeServices.specialities
+//        specialities = homeServices.specialities
         packages = homeServices.packages
+        clinic = homeServices.sponsoredClinics
+
+        specialities.removeAll()
+        specialities.append(Speciality(id: -1, image: "",speciality: "Sponsored",services: [],clinics: homeServices.sponsoredClinics))
+        specialities.append(contentsOf: homeServices.specialities)
     }
     func onRetriveDataFail() {
         view?.hideSkeltonView()

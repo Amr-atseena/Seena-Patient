@@ -47,7 +47,13 @@ class PaymentChannelPresenter: PaymentChannelPresenterProtocol {
     }
     func option(selectedAtIndex index: Int) {
         if index == 0 {
-            router?.go(to: .alert(AlertEntity(title: "", message: "SeenaPayMessage".localized)))
+//            router?.go(to: .alert(AlertEntity(title: "", message: "SeenaPayMessage".localized)))
+            print ("SS")
+
+            paymentMethods = paymentMethods.map { OptionViewModel(name: $0.name, isSelected: false)}
+            paymentMethods[index].isSelected = true
+            view?.reloadPaymentMethods()
+            router?.go(to: .atm(index, installment))
         }
 //            else if index == 4{
 //            print("Etisalat")

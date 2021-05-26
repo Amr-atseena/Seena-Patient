@@ -14,3 +14,11 @@ struct AccountViewModel {
     private(set) var accountNumber: String
     private(set) var image: String
 }
+
+
+struct PaySeenaViewModel {
+    private(set) var id: Int
+    private(set) var title: String
+    private(set) var accountNumber: String
+    private(set) var image: String
+}

@@ -9,6 +9,8 @@
 import Foundation
 
 class ATMPayInteractor: ATMPayInputInteractorProtocol {
+
+
     // MARK: - Attributes
     weak var presenter: ATMPayOutputInteractorProtocol?
     var localDataManager: PaymentLocalDataManagerProtocol
@@ -23,6 +25,11 @@ class ATMPayInteractor: ATMPayInputInteractorProtocol {
     func retriveVodafoneAccount() {
         presenter?.onRetriveVodafoneAccountSuccess(localDataManager.retriveVodafoneAccount())
     }
+
+    func retriveSeena() {
+        presenter?.onRetriveSeena()
+    }
+
 
 //    func retriveEtisalatAccount() {
 //        presenter?.onRetriveEtisalatAccountSuccess(localDataManager.retriveEtisalatAccount())

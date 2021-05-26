@@ -11,4 +11,9 @@ import Foundation
 struct HomeResponse: Codable {
     let specialities: [Speciality]
     let packages: [Package]
+    let sponsoredClinics: [Clinic]
+    enum CodingKeys: String, CodingKey {
+        case specialities, packages
+        case sponsoredClinics = "SponsoredClinics"
+    }
 }

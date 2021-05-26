@@ -79,6 +79,7 @@
                 <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
             </userDefinedRuntimeAttributes>
             <connections>
+                <outlet property="seeAllBtn" destination="3Iw-1r-oWX" id="Rvd-VV-UZu"/>
                 <outlet property="servicesCollectionView" destination="ITh-qs-bAH" id="Nli-z9-6BD"/>
                 <outlet property="spectialityNameLabel" destination="aKY-v6-nEf" id="NPx-77-n1K"/>
             </connections>

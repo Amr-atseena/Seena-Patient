@@ -12,6 +12,7 @@ class SpectialityCell: UITableViewCell {
     // MARK: - Outlets
     @IBOutlet var spectialityNameLabel: UILabel!
     @IBOutlet var servicesCollectionView: UICollectionView!
+    @IBOutlet weak var seeAllBtn: UIButton!
     // MARK: - Methods
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -43,7 +44,13 @@ extension SpectialityCell: SpecialityCellView, ClinicCellProtocol {
     }
 
     func setSpecialityName(_ specialityName: String) {
-         spectialityNameLabel.text = specialityName
+        if specialityName == "Sponsored" {
+            spectialityNameLabel.text = "Sponsored"
+            seeAllBtn.isHidden = false
+        }else{
+            seeAllBtn.isHidden = false
+            spectialityNameLabel.text = specialityName
+        }
     }
 }
 

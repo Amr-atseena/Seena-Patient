@@ -12,7 +12,7 @@ import UIKit
 enum PaymentChannelRoute {
     case atm(Int, Installment)
     case payHome
-    case alert(AlertEntity)
+//    case alert(AlertEntity)
 }
 protocol PaymentChannelRouterProtocol {
     // Presenter -> Router

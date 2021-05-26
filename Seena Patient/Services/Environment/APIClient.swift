@@ -254,6 +254,44 @@ class APIClient{
     }
 
 
+
+
+    //MARK:- GetSponsoredClincs
+
+    func getSponsoredClincs(onSuccess: @escaping ([Clinic]) -> Void, onError: @escaping (_ error: String)-> Void) {
+
+
+//        let token = UserDefaults.standard.string(forKey: Keys.token)
+//        let header = ["Authorization" : "Bearer " + token!] as HTTPHeaders?
+
+        let url = "http://dashboard.seenapay.com/api/clinic/sponsored"
+
+        AF.request(URL(string: url)!, method: .get,encoding: JSONEncoding.default ).responseData {
+            response in
+            switch response.result {
+            case .success(let jsonData):
+                do {
+                    let data = try JSONDecoder().decode([Clinic].self, from: jsonData)
+                    print(data)
+//                    if (data.id != nil) {
+//                    onSuccess(data)
+//                } else {
+//                    onError(data.address)
+//                }
+                } catch {
+                    print("ParseError",error.localizedDescription)
+                    onError(error.localizedDescription)
+                }
+                break
+            case .failure(let error):
+                print("Request error: \(error)")
+                onError(error.localizedDescription)
+                break
+            }
+        }
+    }
+
+
 }
 
 

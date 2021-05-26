@@ -70,8 +70,13 @@ class ClinicDetailsVC: UIViewController, ClinicDetailsViewProtocol {
     }
     func updateUI(withClinic clinic: ClinicViewModel) {
         clinicNameLabel.text = clinic.name
+        if !clinic.image.contains("http"){
+            clinicImage.kf.setImage(with: URL(string: "http://dashboard.seenapay.com/storage/users/\(clinic.image)"))
+        }else{
         clinicImage.kf.setImage(with: URL(string: clinic.image))
+        }
         clinicAddressLabel.text = clinic.address
+
     }
     func showOurWork() {
         imageGalleryCollectionView.isHidden = false

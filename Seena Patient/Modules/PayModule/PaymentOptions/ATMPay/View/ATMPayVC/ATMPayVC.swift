@@ -13,6 +13,7 @@ class ATMPayVC: UIViewController, ATMPayViewProtocol {
     @IBOutlet private var accountsCollectionView: UICollectionView!
     @IBOutlet private var nextButton: UIButton!
     @IBOutlet private var messageLabel: UILabel!
+    var seenaPayss : Int?
     // MARK: - Attributes
     var presenter: ATMPayPresenterProtocol!
     // MARK: - Init
@@ -42,11 +43,20 @@ class ATMPayVC: UIViewController, ATMPayViewProtocol {
         self.accountsCollectionView.dataSource = self
         accountsCollectionView.register(cellWithClass: PayOptionCell.self)
     }
+
+    func setupSecondPay() {
+        accountsCollectionView.register(cellWithClass: SecondPayOptionCollectionViewCell.self)
+    }
     func enableNextButton() {
         nextButton.backgroundColor = DesignSystem.Colors.primaryActionBackground.color
         nextButton.isUserInteractionEnabled = true
     }
     func reloadAccounts() {
+        accountsCollectionView.reloadData()
+    }
+
+    func callCollection() {
+        accountsCollectionView.tag = -5
         accountsCollectionView.reloadData()
     }
     // MARK: - Actions
@@ -64,31 +74,54 @@ extension ATMPayVC: UICollectionViewDataSource {
         return presenter.numberOfAccounts
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withClass: PayOptionCell.self, for: indexPath)
-        presenter.config(payCell: cell, atIndex: indexPath.item)
-        return cell
+
+        if collectionView.tag == -5 {
+            seenaPayss = -5
+            messageLabel.text = "Ask the merchant for the merchant number"
+            let cell = collectionView.dequeueReusableCell(withClass: SecondPayOptionCollectionViewCell.self, for: indexPath)
+//            presenter.config(payCell: cell, atIndex: indexPath.item)
+            return cell
+
+        }else{ let cell = collectionView.dequeueReusableCell(withClass: PayOptionCell.self, for: indexPath)
+            presenter.config(payCell: cell, atIndex: indexPath.item)
+            return cell}
+
+
+
+
+
     }
 }
 // MARK: - clinicsCollectionView Delegate Implementation
 extension ATMPayVC: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if collectionView.tag == -5 {}else{
         presenter.payOption(selectedAtIndex: indexPath.item)
         let cell = collectionView.cellForItem(at: indexPath)
         cell?.isSelected = true
+        }
     }
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        if collectionView.tag == -5 {}else{
         presenter.payOption(deSelectedAtIndex: indexPath.item)
         let cell = collectionView.cellForItem(at: indexPath)
         cell?.isSelected = false
+        }
     }
 }
 
 // MARK: - clinicsCollectionView FlowLayoutDelegate Implementation
 extension ATMPayVC: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width = (collectionView.frame.size.width  - 30) / 1.1
-        let height = (collectionView.frame.size.height)
-        return CGSize(width: width, height: height)
+        if collectionView.tag == -5 {
+            let width = (collectionView.frame.size.width  - 10)
+            let height = (collectionView.frame.size.height + 50) + 70
+            return CGSize(width: width, height: height)
+
+        }else{let width = (collectionView.frame.size.width  - 30) / 1.1
+            let height = (collectionView.frame.size.height)
+            return CGSize(width: width, height: height)}
+
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return  5.0

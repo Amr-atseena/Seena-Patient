@@ -51,7 +51,15 @@ class PayHomePresenter: PayHomePresenterProtocol {
     }
     func dueCell(selectedAtIndex index: Int) {
         guard let installment = payment?.installment[index] else { return }
-        router?.go(to: .paymentChannel(installment: installment))
+        for activeInst in [installment] {
+            if activeInst.active == 0 {
+
+            }else{
+                router?.go(to: .paymentChannel(installment: installment))
+
+            }
+        }
+//        router?.go(to: .paymentChannel(installment: installment))
     }
 }
 // MARK: - PayHomeOutputInteractorProtocol Implementation
@@ -116,35 +124,6 @@ extension PayHomePresenter: PayHomeOutputInteractorProtocol {
         }
         return
 
-//        let tokkkk = UserDefaults.standard.bool(forKey: "Statuss")
-//        let tokkkk = UserDefaults.standard.bool(forKey: "Uploaded")
-
-//        if tokkkk == false {
-//            view?.showNoDataView()
-//            view?.hidePaymentDue()
-//            view?.showGetYourSeenaView()
-//            view?.hideProgressView()
-//            view?.setPaymentProgress(totalAmount: "no Due Payement".localized, paidAmount: "", avaliableBalance: "", ratio: 0)
-//        }else{
-//
-//            view?.hideGetYourSeenaView()
-//            view?.showProgressView()
-//            view?.hidePaymentDue()
-//    //        view?.hideNoDataView()
-//            view?.showNoDataView()
-//            view?.showLoadingIndictor()
-//            interactor?.retrivePaymentDue()
-//        }
-
-
-//        guard let _ = user else {
-//            view?.showNoDataView()
-//            view?.hidePaymentDue()
-//            view?.showGetYourSeenaView()
-//            view?.hideProgressView()
-//            view?.setPaymentProgress(totalAmount: "no Due Payement".localized, paidAmount: "", avaliableBalance: "", ratio: 0)
-//            return
-//        }
 
 
 

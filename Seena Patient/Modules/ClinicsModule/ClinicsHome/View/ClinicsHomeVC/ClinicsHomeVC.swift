@@ -28,6 +28,7 @@ class ClinicsHomeVC: UIViewController, ClinicsHomeViewProtocol {
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter.viewDidLoad()
+
     }
     // MARK: - Methods
     func setupUI() {

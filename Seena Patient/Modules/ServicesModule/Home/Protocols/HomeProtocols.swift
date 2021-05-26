@@ -14,6 +14,7 @@ enum HomeRoute {
     case serviceDetails(_ service: Service)
     case packageDetails(_ package: Package)
     case specialities(_ spec : Speciality)
+    case clincss(_ cli : Clinic)
     case serviceList
     case servicesSearch
 }
@@ -50,10 +51,13 @@ protocol HomePresenterProtocol: class {
     func configure(spectialityCell cell: SpecialityCellView, atIndex index: Int )
     func configure(packageCell cell: PackageCellView, atIndex index: Int )
     func configure(serviceCell cell: ServiceCellProtocol, atIndex index: Int, andSection section: Int)
+    func configuress(clinicCell cell: ClinicCellProtocol, atIndex index: Int, andSection section: Int)
     func serviceSelected(atIndex index: Int, andSection section: Int)
     func numberOfServices(atRow row: Int) -> Int
     var numberOfCategories: Int { get }
     var numberOfPackages: Int { get }
+    var numberOfClincs: Int { get }
+
 }
 // MARK: - Home View
 protocol HomeViewProtocol: class {

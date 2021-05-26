@@ -281,6 +281,7 @@
 		8C3FD6382642D054002B5240 /* OTPSignUpModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3FD6372642D054002B5240 /* OTPSignUpModel.swift */; };
 		8C3FD63C2642D391002B5240 /* SignUpSecond.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3FD63B2642D391002B5240 /* SignUpSecond.swift */; };
 		8C3FD6402642D705002B5240 /* ForgetPassModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3FD63F2642D705002B5240 /* ForgetPassModel.swift */; };
+		8C6DEF7D265A707B00C69E0A /* SponsoredClincs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6DEF7C265A707B00C69E0A /* SponsoredClincs.swift */; };
 		8C6DFF9226566B31008C52CE /* ForgetPassword.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C6DFF9426566B31008C52CE /* ForgetPassword.storyboard */; };
 		8C6DFF9726566B9A008C52CE /* SignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C6DFF9926566B9A008C52CE /* SignUp.storyboard */; };
 		8C6DFFA026566C4B008C52CE /* NewPayment.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C6DFFA226566C4B008C52CE /* NewPayment.storyboard */; };
@@ -293,6 +294,8 @@
 		8C76E70A26418C2400E0C06B /* NewPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C76E70926418C2400E0C06B /* NewPasswordViewController.swift */; };
 		8C76E70E264197AD00E0C06B /* FirstSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C76E70D264197AD00E0C06B /* FirstSignUpViewController.swift */; };
 		8C76E7162641998600E0C06B /* OTPVerifyPhoneNumberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C76E7152641998600E0C06B /* OTPVerifyPhoneNumberViewController.swift */; };
+		8C7E369E265D3D0500745F1B /* SecondPayOptionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7E369C265D3D0500745F1B /* SecondPayOptionCollectionViewCell.swift */; };
+		8C7E369F265D3D0500745F1B /* SecondPayOptionCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C7E369D265D3D0500745F1B /* SecondPayOptionCollectionViewCell.xib */; };
 		8C81545024EB21CA00CA30E7 /* ServicesSearchVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C81544824EB21CA00CA30E7 /* ServicesSearchVC.xib */; };
 		8C81545224EB21CA00CA30E7 /* ServicesSearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C81544A24EB21CA00CA30E7 /* ServicesSearchPresenter.swift */; };
 		8C81545324EB21CA00CA30E7 /* ServicesSearchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C81544B24EB21CA00CA30E7 /* ServicesSearchRouter.swift */; };
@@ -353,6 +356,8 @@
 		8CAB09B424E84C6800D38CDD /* PackageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAB09B224E84C6800D38CDD /* PackageCell.swift */; };
 		8CAB09B524E84C6800D38CDD /* PackageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CAB09B324E84C6800D38CDD /* PackageCell.xib */; };
 		8CBBAE2E2656ADD7002DA57A /* ProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CBBAE2D2656ADD7002DA57A /* ProgressHUD.swift */; };
+		8CE73C18265E7914002D3BF1 /* SeenaPaySuccViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CE73C17265E7914002D3BF1 /* SeenaPaySuccViewController.swift */; };
+		8CE73C22265E794E002D3BF1 /* SeenaPaySuccess.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CE73C21265E794E002D3BF1 /* SeenaPaySuccess.storyboard */; };
 		8CEC77F924E9BB2A000CED1F /* ServiceDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEC77F724E9BB2A000CED1F /* ServiceDetailsVC.swift */; };
 		8CEC77FA24E9BB2A000CED1F /* ServiceDetailsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CEC77F824E9BB2A000CED1F /* ServiceDetailsVC.xib */; };
 		8CEC77FD24E9BC5C000CED1F /* ServiceDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEC77FC24E9BC5C000CED1F /* ServiceDetailsPresenter.swift */; };
@@ -655,6 +660,7 @@
 		8C3FD6372642D054002B5240 /* OTPSignUpModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPSignUpModel.swift; sourceTree = "<group>"; };
 		8C3FD63B2642D391002B5240 /* SignUpSecond.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpSecond.swift; sourceTree = "<group>"; };
 		8C3FD63F2642D705002B5240 /* ForgetPassModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPassModel.swift; sourceTree = "<group>"; };
+		8C6DEF7C265A707B00C69E0A /* SponsoredClincs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SponsoredClincs.swift; sourceTree = "<group>"; };
 		8C6DFF9326566B31008C52CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/ForgetPassword.storyboard; sourceTree = "<group>"; };
 		8C6DFF9626566B3D008C52CE /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/ForgetPassword.strings; sourceTree = "<group>"; };
 		8C6DFF9826566B9A008C52CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/SignUp.storyboard; sourceTree = "<group>"; };
@@ -675,6 +681,8 @@
 		8C76E70926418C2400E0C06B /* NewPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPasswordViewController.swift; sourceTree = "<group>"; };
 		8C76E70D264197AD00E0C06B /* FirstSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstSignUpViewController.swift; sourceTree = "<group>"; };
 		8C76E7152641998600E0C06B /* OTPVerifyPhoneNumberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPVerifyPhoneNumberViewController.swift; sourceTree = "<group>"; };
+		8C7E369C265D3D0500745F1B /* SecondPayOptionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondPayOptionCollectionViewCell.swift; sourceTree = "<group>"; };
+		8C7E369D265D3D0500745F1B /* SecondPayOptionCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecondPayOptionCollectionViewCell.xib; sourceTree = "<group>"; };
 		8C81544824EB21CA00CA30E7 /* ServicesSearchVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServicesSearchVC.xib; sourceTree = "<group>"; };
 		8C81544A24EB21CA00CA30E7 /* ServicesSearchPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesSearchPresenter.swift; sourceTree = "<group>"; };
 		8C81544B24EB21CA00CA30E7 /* ServicesSearchRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesSearchRouter.swift; sourceTree = "<group>"; };
@@ -737,6 +745,8 @@
 		8CAB09B224E84C6800D38CDD /* PackageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageCell.swift; sourceTree = "<group>"; };
 		8CAB09B324E84C6800D38CDD /* PackageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PackageCell.xib; sourceTree = "<group>"; };
 		8CBBAE2D2656ADD7002DA57A /* ProgressHUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressHUD.swift; sourceTree = "<group>"; };
+		8CE73C17265E7914002D3BF1 /* SeenaPaySuccViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeenaPaySuccViewController.swift; sourceTree = "<group>"; };
+		8CE73C21265E794E002D3BF1 /* SeenaPaySuccess.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SeenaPaySuccess.storyboard; sourceTree = "<group>"; };
 		8CEC77F724E9BB2A000CED1F /* ServiceDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceDetailsVC.swift; sourceTree = "<group>"; };
 		8CEC77F824E9BB2A000CED1F /* ServiceDetailsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServiceDetailsVC.xib; sourceTree = "<group>"; };
 		8CEC77FC24E9BC5C000CED1F /* ServiceDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceDetailsPresenter.swift; sourceTree = "<group>"; };
@@ -800,6 +810,10 @@
 			children = (
 				8803D1EE25082532004A6A46 /* PayOptionCell.swift */,
 				8803D1EF25082532004A6A46 /* PayOptionCell.xib */,
+				8C7E369C265D3D0500745F1B /* SecondPayOptionCollectionViewCell.swift */,
+				8C7E369D265D3D0500745F1B /* SecondPayOptionCollectionViewCell.xib */,
+				8CE73C17265E7914002D3BF1 /* SeenaPaySuccViewController.swift */,
+				8CE73C21265E794E002D3BF1 /* SeenaPaySuccess.storyboard */,
 			);
 			path = PayOptionCell;
 			sourceTree = "<group>";
@@ -2898,6 +2912,7 @@
 				8C3FD63F2642D705002B5240 /* ForgetPassModel.swift */,
 				8C0F8A342648180C00DD30E6 /* CheckOTPForget.swift */,
 				8C0F8A38264818CF00DD30E6 /* ResetPassword.swift */,
+				8C6DEF7C265A707B00C69E0A /* SponsoredClincs.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -3258,6 +3273,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8CE73C22265E794E002D3BF1 /* SeenaPaySuccess.storyboard in Resources */,
 				88ED03F324EFA5CF00BBCEF6 /* GalleryCell.xib in Resources */,
 				88EDA12024FADD9B00460B4D /* ServiceResultSkeltonCell.xib in Resources */,
 				88D3FF732530BA2700FDC151 /* PlanCell.xib in Resources */,
@@ -3319,6 +3335,7 @@
 				882DE7A72510005900B1F4F7 /* SignUpVC.xib in Resources */,
 				88EDA11B24FADA0D00460B4D /* ServiceResultCell.xib in Resources */,
 				88BD393F25160BB9004D149B /* UploadImageCell.xib in Resources */,
+				8C7E369F265D3D0500745F1B /* SecondPayOptionCollectionViewCell.xib in Resources */,
 				88B460A6251928E5002E798C /* TransactionsVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -3450,6 +3467,7 @@
 				88D2912B2515153D008738A5 /* UploadDocumentsVC.swift in Sources */,
 				882DE798250FEE5000B1F4F7 /* AuthenticationLocalDataManagerProtocol.swift in Sources */,
 				8885BB1B2501760F000D7BD5 /* ClinicsRomoteDataManager.swift in Sources */,
+				8C7E369E265D3D0500745F1B /* SecondPayOptionCollectionViewCell.swift in Sources */,
 				8C3FD6302642CA08002B5240 /* SignUpFirst.swift in Sources */,
 				882DE79C250FFBA300B1F4F7 /* TokenLocalDataManagerProtocol.swift in Sources */,
 				887C6318250237F300C69E2A /* OptionViewModel.swift in Sources */,
@@ -3553,6 +3571,7 @@
 				8C9BA4B12636BD5200E2AF83 /* PaymentSuccessViewController.swift in Sources */,
 				88BE60B72506CA2500EB2F03 /* PaymentChannelProtocols.swift in Sources */,
 				88F83BA825210E6D00C9295A /* ServicesLocalDataManagerProtocol.swift in Sources */,
+				8C6DEF7D265A707B00C69E0A /* SponsoredClincs.swift in Sources */,
 				8C9BA4C32636E4E600E2AF83 /* ClinicsViewModel.swift in Sources */,
 				881C9B2C251F3FD600A481C0 /* PaymentLocalDataManager.swift in Sources */,
 				88104B7F24F2E14E00DB5ED9 /* ServerResonse.swift in Sources */,
@@ -3560,6 +3579,7 @@
 				88F675A3250D56BB00D19822 /* Status.swift in Sources */,
 				8CAB097524E7DDED00D38CDD /* UIView+Extensions.swift in Sources */,
 				88F706C524EE6804005C2ADB /* PackageDetailsLocalization.swift in Sources */,
+				8CE73C18265E7914002D3BF1 /* SeenaPaySuccViewController.swift in Sources */,
 				88EDA12F24FAE41200460B4D /* ProfileVC.swift in Sources */,
 				882DE7AA2510005900B1F4F7 /* SignUpProtocols.swift in Sources */,
 				88F675AE250D612800D19822 /* AuthenticationRemoteDataManager.swift in Sources */,

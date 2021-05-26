@@ -15,30 +15,30 @@ class HomeVC: UIViewController, HomeViewProtocol {
     @IBOutlet var searchTextFiled: UITextField!
     @IBOutlet var specialitiesTableView: UITableView!
     // MARK: - Attributes
-
+    
     private lazy var seeAllOffersBtn: UIButton = {
         let button = UIButton()
-//        button.frame = CGRect(x: self.view.frame.size.width - 120, y: 5, width: 80, height: 30)
-
-//        button.backgroundColor = UIColor.red
+        //        button.frame = CGRect(x: self.view.frame.size.width - 120, y: 5, width: 80, height: 30)
+        
+        //        button.backgroundColor = UIColor.red
         button.setTitle("See all".toLocalize, for: .normal)
         button.titleLabel?.font = .systemFont(ofSize: 15, weight: .regular)
         button.setTitleColor(#colorLiteral(red: 0.8588235294, green: 0.07843137255, blue: 0.07843137255, alpha: 1), for: .normal)
         button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
-//        self.view.addSubview(button)
+        //        self.view.addSubview(button)
         return button
     }()
-
+    
     @objc func buttonAction(sender: UIButton!) {
-       print("Button tapped")
+        print("Button tapped")
         presenter.serachButtonTapped()
-
+        
     }
-
-
+    
+    
     private lazy var operationsLabel: UILabel = {
         let opertionsLabel = UILabel()
-//        opertionsLabel.text = self.presenter.localization.beautySubscription
+        //        opertionsLabel.text = self.presenter.localization.beautySubscription
         opertionsLabel.text = "Offers".toLocalize
         opertionsLabel.font = DesignSystem.Typography.subHeading2.font
         opertionsLabel.textColor = DesignSystem.Colors.secondaryText.color
@@ -68,7 +68,7 @@ class HomeVC: UIViewController, HomeViewProtocol {
             operationsLabel.trailingAnchor.constraint(equalTo: headerView.trailingAnchor, constant: -5),
             operationsLabel.bottomAnchor.constraint(equalTo: headerCollectionView.topAnchor, constant: -10),
             seeAllOffersBtn.topAnchor.constraint(equalTo: headerView.topAnchor, constant: 5),
-//            seeAllOffersBtn.leadingAnchor.constraint(equalTo: headerView.leadingAnchor, constant: 280),
+            //            seeAllOffersBtn.leadingAnchor.constraint(equalTo: headerView.leadingAnchor, constant: 280),
             seeAllOffersBtn.trailingAnchor.constraint(equalTo: headerView.trailingAnchor, constant: -20),
             seeAllOffersBtn.bottomAnchor.constraint(equalTo: headerCollectionView.topAnchor, constant: -10),
             headerCollectionView.leadingAnchor.constraint(equalTo: headerView.leadingAnchor),
@@ -78,10 +78,10 @@ class HomeVC: UIViewController, HomeViewProtocol {
         NSLayoutConstraint.activate(constraint)
         return headerView
     }()
-
+    
     var presenter: HomePresenterProtocol!
-//    var presenter2: ClinicsHomePresenterProtocol!
-
+    //    var presenter2: ClinicsHomePresenterProtocol!
+    
     // MARK: - Init
     init() {
         super.init(nibName: HomeVC.className, bundle: nil)
@@ -99,6 +99,7 @@ class HomeVC: UIViewController, HomeViewProtocol {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         presenter.viewWillAppear()
+        
     }
     // MARK: - Methods
     func setupNavBar(withTitle title: String) {
@@ -123,14 +124,15 @@ class HomeVC: UIViewController, HomeViewProtocol {
         specialitiesTableView.dataSource = self
         specialitiesTableView.register(cellWithClass: SpectialityCell.self)
         specialitiesTableView.register(cellWithClass: SpectialitySkeltonCell.self)
+        
         headerCollectionView.delegate = self
         headerCollectionView.dataSource = self
         headerCollectionView.register(cellWithClass: PackageSkeltonCell.self)
         headerCollectionView.register(cellWithClass: PackageCell.self)
-
-
+        
+        
         specialitiesTableView.tableHeaderView = headerView
-
+        
     }
     func setUsername(_ username: String) {
         usernameLabel.text = username
@@ -157,19 +159,40 @@ class HomeVC: UIViewController, HomeViewProtocol {
     deinit {
         debugPrint(HomeVC.className + " Release from Momery")
     }
+    var router: ClinicsHomeRouterProtocol?
+    var presenter2: ClinicsHomePresenterProtocol!
+    weak var view2: ClinicsHomeViewProtocol?
+    
+    var specialities = [Speciality]() {
+        didSet {
+            view2?.reloadClinics()
+        }
+    }
+    
 }
 // MARK: - CategoriesTableView DataSource Implementation
 extension HomeVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return presenter.numberOfCategories
-//        return 1
+        //        return 1
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withClass: SpectialityCell.self, for: indexPath)
         presenter.configure(spectialityCell: cell, atIndex: indexPath.row)
-//        cell.spectialityNameLabel.text = "Clinics"
+        //        cell.spectialityNameLabel.text = "Clinics"
         cell.callBack = {
-            self.navigationController?.pushViewController(ClinicsHomeRouter.assembleModule(), animated: true)
+            
+            if cell.spectialityNameLabel.text == "Sponsored"{
+                self.navigationController?.pushViewController(ClinicsHomeRouter.assembleModule(), animated: true)
+            }else{
+                self.presenter.serviceSelected(atIndex: indexPath.row, andSection: -2)
+            }
+            
+            //            self.navigationController?.pushViewController(ClinicsHomeRouter.assembleModule(), animated: true)
+            
+            
+            
+            
         }
         return cell
     }
@@ -190,11 +213,15 @@ extension HomeVC: UICollectionViewDataSource {
             collectionView == headerCollectionView {
             return presenter.numberOfPackages
         }
-//        else if collectionView == secondheaderCollectionView{
-//        }
+        
         else {
-            return presenter.numberOfServices(atRow: collectionView.tag)
-//            return presenter.numberOfCategories
+            
+            if collectionView.tag == 0 {
+                return presenter.numberOfClincs
+            }else{
+                return presenter.numberOfServices(atRow: collectionView.tag)
+            }
+            //            return presenter.numberOfCategories
         }
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -206,7 +233,6 @@ extension HomeVC: UICollectionViewDataSource {
         else {
             let cell = collectionView.dequeueReusableCell(withClass: ServiceCell.self, for: indexPath)
             presenter.configure(serviceCell: cell, atIndex: indexPath.item, andSection: collectionView.tag)
-            
             return cell
         }
     }
@@ -218,9 +244,11 @@ extension HomeVC: UICollectionViewDelegate {
             collectionView == headerCollectionView{
             presenter.serviceSelected(atIndex: indexPath.item, andSection: -1)
         } else {
-//            presenter.serviceSelected(atIndex: indexPath.item, andSection: -2)
+            //            presenter.serviceSelected(atIndex: indexPath.item, andSection: -2)
+            
             presenter.serviceSelected(atIndex: indexPath.item, andSection: collectionView.tag)
-
+            
+            
         }
     }
 }
@@ -230,7 +258,7 @@ extension HomeVC: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         if
             collectionView == headerCollectionView {
-//            let width = (collectionView.frame.size.width - 30 ) / 1.05
+            //            let width = (collectionView.frame.size.width - 30 ) / 1.05
             let width = (collectionView.frame.size.width ) / 1.05
             let height = (collectionView.frame.size.height)
             return CGSize(width: width, height: height)

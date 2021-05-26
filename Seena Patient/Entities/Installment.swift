@@ -13,9 +13,11 @@ struct Installment: Codable {
     let amount: Int
     let clinicName: String
     let dueDate: String
+    let status: String
+    let active: Int
     enum CodingKeys: String, CodingKey {
         case installmentId = "id"
-        case amount
+        case amount, status, active
         case clinicName = "name"
         case dueDate = "due_date"
     }

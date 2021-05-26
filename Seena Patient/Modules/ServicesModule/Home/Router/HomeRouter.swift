@@ -36,6 +36,9 @@ class HomeRouter: HomeRouterProtocol {
         case .specialities(let spec):
             navigateToServiceDetails(withSpeciality: spec)
 
+        case .clincss(let cli):
+            navigateToClinicDetails(withClinic: cli)
+
         default:
             print("")
         }
@@ -51,5 +54,9 @@ class HomeRouter: HomeRouterProtocol {
     }
     private func navigateToServiceDetails(withSpeciality speciality: Speciality) {
         viewController?.navigationController?.pushViewController(ClinicsSearchRouter.assembleModule(withSpeciality: speciality), animated: true)
+    }
+
+    private func navigateToClinicDetails(withClinic clinic: Clinic) {
+        viewController?.navigationController?.pushViewController(ClinicDetailsRouter.assembleModule(withClinic: clinic), animated: true)
     }
 }

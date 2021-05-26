@@ -29,8 +29,10 @@ class PaymentChannelRouter: PaymentChannelRouterProtocol {
             navigateToATM(withType: type, andInstallment: installment)
         case .payHome:
             navigateToPayHome()
-        case let .alert(alertEntity):
-            showAlert(alertEntity: alertEntity)
+
+            
+//        case let .alert(alertEntity):
+//            showAlert(alertEntity: alertEntity)
         }
     }
     private func navigateToPayHome() {
@@ -53,7 +55,9 @@ class PaymentChannelRouter: PaymentChannelRouterProtocol {
             $0.removeFromParent()
         }
     }
+    
     private func showAlert(alertEntity: AlertEntity) {
         viewController?.showAlertController(title: alertEntity.title, message: alertEntity.message, actions: [])
+        print("AAAA")
     }
 }
