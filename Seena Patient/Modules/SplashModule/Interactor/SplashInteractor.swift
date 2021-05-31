@@ -37,7 +37,7 @@ class SplashInteractor: SplashInputInteractorProtocol {
                     let residence = response.response?.residenceProof,
                     let bankAccount = response.response?.accounts,
                     let vodafoneAccount = response.response?.vCash,
-                    let etisalatAccount = response.response?.vCash,
+                    let etisalatAccount = response.response?.eCash,
                     let plans = response.response?.plans,
                     let isInReview = response.response?.isInReview,
                     response.serverResonse.code == 200 else {
@@ -50,7 +50,7 @@ class SplashInteractor: SplashInputInteractorProtocol {
                 self.localDataManager.save(documents: residence, forKey: .residence)
                 self.localDataManager.save(bankAccount: bankAccount)
                 self.localDataManager.save(vodafoneAccount: vodafoneAccount)
-//                self.localDataManager.save(etisalatAccount: etisalatAccount)
+                self.localDataManager.save(etisalatAccount: etisalatAccount)
                 self.localDataManager.save(plans: plans)
                 self.presenter?.onRetriveMetaDataSuccess()
                 isInAppleReview = isInReview

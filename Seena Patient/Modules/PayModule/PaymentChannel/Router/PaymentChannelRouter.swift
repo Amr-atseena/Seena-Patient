@@ -31,8 +31,8 @@ class PaymentChannelRouter: PaymentChannelRouterProtocol {
             navigateToPayHome()
 
             
-//        case let .alert(alertEntity):
-//            showAlert(alertEntity: alertEntity)
+        case let .alert(alertEntity):
+            showAlert(alertEntity: alertEntity)
         }
     }
     private func navigateToPayHome() {

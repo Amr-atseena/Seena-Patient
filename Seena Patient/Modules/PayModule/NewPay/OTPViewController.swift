@@ -16,9 +16,22 @@ class OTPViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var thirdTF: UITextField!
     @IBOutlet weak var fourthTF: UITextField!
 
+    var fullOTP : String = ""
+    let progressHUD = ProgressHUD(text: "")
+
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        print(UserDefaults.standard.string(forKey: "amount")!)
+
+        print(UserDefaults.standard.string(forKey: "installmentsPayment")!)
+
+//        print(UserDefaults.standard.string(forKey: "QRCode")!)
+
+        print(UserDefaults.standard.integer(forKey: "installment_plans_ID"))
+
 
         viewDesign()
 
@@ -85,10 +98,42 @@ class OTPViewController: UIViewController, UITextFieldDelegate {
 
 
     @IBAction func done(_ sender: Any) {
-        let storyBoard: UIStoryboard = UIStoryboard(name: "NewPayment", bundle: nil)
-        let newViewController = storyBoard.instantiateViewController(withIdentifier: "PaymentSuccessViewController") as? PaymentSuccessViewController
-        newViewController!.modalPresentationStyle = .fullScreen
-        self.present(newViewController!, animated: true, completion: nil)
+        self.view.addSubview(progressHUD)
+
+        fullOTP = firstTF.text! + secondTF.text! + thirdTF.text! + fourthTF.text!
+
+        print(fullOTP)
+
+        if firstTF.text == "" ||  secondTF.text == "" || thirdTF.text == "" || fourthTF.text == "" {
+
+            self.progressHUD.removeFromSuperview()
+            showAlertController(title: "Error!", message: "Please fill all fields", actions: [])
+
+        }else{
+
+            APIClient().transferCompleteOTP(otp: Int(fullOTP)!) { (res) in
+                self.progressHUD.removeFromSuperview()
+
+                print(res)
+
+                UserDefaults.standard.setValue(res.response.doctor.name, forKey: "doctorName")
+                UserDefaults.standard.setValue(res.response.createdAt, forKey: "paymentDate")
+                UserDefaults.standard.setValue(res.response.doctor.image, forKey: "doctorImage")
+
+                let storyBoard: UIStoryboard = UIStoryboard(name: "NewPayment", bundle: nil)
+                let newViewController = storyBoard.instantiateViewController(withIdentifier: "PaymentSuccessViewController") as? PaymentSuccessViewController
+                newViewController!.modalPresentationStyle = .fullScreen
+                self.present(newViewController!, animated: true, completion: nil)
+            } onError: { (error) in
+                self.progressHUD.removeFromSuperview()
+                self.showAlertController(title: "Error!", message: error, actions: [])
+            }
+
+
+        }
+
+
+
     }
 
 

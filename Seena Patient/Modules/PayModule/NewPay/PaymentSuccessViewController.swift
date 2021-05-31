@@ -23,6 +23,20 @@ class PaymentSuccessViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         viewDesign()
+
+        let savedAmount = UserDefaults.standard.string(forKey: "amount")
+        let period = UserDefaults.standard.string(forKey: "installmentPeriod")
+        let name = UserDefaults.standard.string(forKey: "doctorName")
+        let datee = UserDefaults.standard.string(forKey: "paymentDate")
+        let imagee = UserDefaults.standard.string(forKey: "doctorImage")
+
+        amount.text = "EGP \(savedAmount ?? "")"
+        duration.text = "\(period ?? "") months"
+        date.text = datee
+        clinicName.text = name
+
+        let url = URL(string: imagee ?? "")
+        clinicImage.kf.setImage(with: url)
     }
 
 
@@ -49,6 +63,16 @@ class PaymentSuccessViewController: UIViewController {
 
 
     @IBAction func done(_ sender: Any) {
+
+        UserDefaults.standard.removeObject(forKey: "amount")
+        UserDefaults.standard.removeObject(forKey: "installmentPeriod")
+        UserDefaults.standard.removeObject(forKey: "installmentsPayment")
+//        UserDefaults.standard.removeObject(forKey: "QRCode")
+        UserDefaults.standard.removeObject(forKey: "installment_plans_ID")
+        UserDefaults.standard.removeObject(forKey: "doctorName")
+        UserDefaults.standard.removeObject(forKey: "paymentDate")
+        UserDefaults.standard.removeObject(forKey: "doctorImage")
+
         let controller = HomeTabBarVC()
         controller.modalPresentationStyle = .fullScreen
         present(controller, animated: true)

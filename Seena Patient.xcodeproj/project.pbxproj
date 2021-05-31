@@ -294,6 +294,9 @@
 		8C76E70A26418C2400E0C06B /* NewPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C76E70926418C2400E0C06B /* NewPasswordViewController.swift */; };
 		8C76E70E264197AD00E0C06B /* FirstSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C76E70D264197AD00E0C06B /* FirstSignUpViewController.swift */; };
 		8C76E7162641998600E0C06B /* OTPVerifyPhoneNumberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C76E7152641998600E0C06B /* OTPVerifyPhoneNumberViewController.swift */; };
+		8C78E2002663A242008FF88A /* PayForDoctorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C78E1FF2663A242008FF88A /* PayForDoctorModel.swift */; };
+		8C78E2042663AB8D008FF88A /* InstallmentPlansModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C78E2032663AB8D008FF88A /* InstallmentPlansModel.swift */; };
+		8C78E2082663D280008FF88A /* OTPtransferCompleteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C78E2072663D280008FF88A /* OTPtransferCompleteModel.swift */; };
 		8C7E369E265D3D0500745F1B /* SecondPayOptionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7E369C265D3D0500745F1B /* SecondPayOptionCollectionViewCell.swift */; };
 		8C7E369F265D3D0500745F1B /* SecondPayOptionCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C7E369D265D3D0500745F1B /* SecondPayOptionCollectionViewCell.xib */; };
 		8C81545024EB21CA00CA30E7 /* ServicesSearchVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C81544824EB21CA00CA30E7 /* ServicesSearchVC.xib */; };
@@ -681,6 +684,9 @@
 		8C76E70926418C2400E0C06B /* NewPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPasswordViewController.swift; sourceTree = "<group>"; };
 		8C76E70D264197AD00E0C06B /* FirstSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstSignUpViewController.swift; sourceTree = "<group>"; };
 		8C76E7152641998600E0C06B /* OTPVerifyPhoneNumberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPVerifyPhoneNumberViewController.swift; sourceTree = "<group>"; };
+		8C78E1FF2663A242008FF88A /* PayForDoctorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayForDoctorModel.swift; sourceTree = "<group>"; };
+		8C78E2032663AB8D008FF88A /* InstallmentPlansModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstallmentPlansModel.swift; sourceTree = "<group>"; };
+		8C78E2072663D280008FF88A /* OTPtransferCompleteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPtransferCompleteModel.swift; sourceTree = "<group>"; };
 		8C7E369C265D3D0500745F1B /* SecondPayOptionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondPayOptionCollectionViewCell.swift; sourceTree = "<group>"; };
 		8C7E369D265D3D0500745F1B /* SecondPayOptionCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecondPayOptionCollectionViewCell.xib; sourceTree = "<group>"; };
 		8C81544824EB21CA00CA30E7 /* ServicesSearchVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServicesSearchVC.xib; sourceTree = "<group>"; };
@@ -2913,6 +2919,9 @@
 				8C0F8A342648180C00DD30E6 /* CheckOTPForget.swift */,
 				8C0F8A38264818CF00DD30E6 /* ResetPassword.swift */,
 				8C6DEF7C265A707B00C69E0A /* SponsoredClincs.swift */,
+				8C78E1FF2663A242008FF88A /* PayForDoctorModel.swift */,
+				8C78E2032663AB8D008FF88A /* InstallmentPlansModel.swift */,
+				8C78E2072663D280008FF88A /* OTPtransferCompleteModel.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -3533,6 +3542,7 @@
 				8C9BA4EE263B0E7400E2AF83 /* completeSignUpStageOneViewController.swift in Sources */,
 				88295E67253040E300AFF5A3 /* PaymentSuccessPresenter.swift in Sources */,
 				882989242512AAFE004C5AB6 /* UIDatePicker+Extension.swift in Sources */,
+				8C78E2042663AB8D008FF88A /* InstallmentPlansModel.swift in Sources */,
 				881C9B28251F3DF600A481C0 /* PaymentLocalDataManagerProtocol.swift in Sources */,
 				8885BB3125019CF4000D7BD5 /* SplashLocalDataManager.swift in Sources */,
 				8C8CB3FE24E6CF23009679E5 /* EnvironmentProtocol.swift in Sources */,
@@ -3611,6 +3621,7 @@
 				88ED040A24EFCD9A00BBCEF6 /* ClinicsSearchLocalization.swift in Sources */,
 				88D29166251549DD008738A5 /* UploadInteractor.swift in Sources */,
 				8CBBAE2E2656ADD7002DA57A /* ProgressHUD.swift in Sources */,
+				8C78E2082663D280008FF88A /* OTPtransferCompleteModel.swift in Sources */,
 				88ED040924EFCD9A00BBCEF6 /* ClinicsSearchInteractor.swift in Sources */,
 				8C81545424EB21CA00CA30E7 /* ServicesSearchProtocols.swift in Sources */,
 				8C9BA4AD2636BD3800E2AF83 /* OTPViewController.swift in Sources */,
@@ -3636,6 +3647,7 @@
 				8CAB098324E7E9A900D38CDD /* HomeRouter.swift in Sources */,
 				88D3FF652530A12C00FDC151 /* Plan.swift in Sources */,
 				8827E94E24F5A226009C64FB /* EmptyStateView.swift in Sources */,
+				8C78E2002663A242008FF88A /* PayForDoctorModel.swift in Sources */,
 				88D291272515153D008738A5 /* UploadDocumentsRouter.swift in Sources */,
 				88120B7F24EF2C66004A2381 /* ClinicDetailsLocalization.swift in Sources */,
 				887C630B25021CE800C69E2A /* SplashResponse.swift in Sources */,

@@ -13,7 +13,7 @@ protocol PaymentLocalDataManagerProtocol: AuthenticationLocalDataManagerProtocol
     func save(vodafoneAccount: [Vodafone])
     func retriveVodafoneAccount() -> [Vodafone]
     func save(etisalatAccount: [Etisalat])
-//    func retriveEtisalatAccount() -> [Etisalat]
+    func retriveEtisalatAccount() -> [Etisalat]
 }
 
 extension PaymentLocalDataManagerProtocol {

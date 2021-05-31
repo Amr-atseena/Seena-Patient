@@ -30,9 +30,31 @@ class PaymentMethodsViewController: UIViewController {
     @IBOutlet weak var twelveDur: UILabel!
 
     var whichInstallment : Int?
+    var arrayOfValues = [Int]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        let amo = Int(UserDefaults.standard.string(forKey: "amount") ?? "") ?? 0
+
+        APIClient().installmentPlans(amount: amo) { (res) in
+
+            for ing in res.response {
+                print(ing.value)
+                self.arrayOfValues.append(ing.value)
+                print(self.arrayOfValues)
+            }
+
+            self.threeAmount.text = "EGP \(self.arrayOfValues[2])"
+            self.sixAmount.text = "EGP \(self.arrayOfValues[1])"
+            self.twelveAmount.text = "EGP \(self.arrayOfValues[0])"
+
+        } onError: { (error) in
+            self.showAlertController(title: "Error!", message: error, actions: [])
+        }
+
+
+
 
         viewDesign()
         viewActions()
@@ -82,6 +104,9 @@ class PaymentMethodsViewController: UIViewController {
     }
 
     @objc func installmentAction(sender : UITapGestureRecognizer) {
+
+        UserDefaults.standard.setValue("1", forKey: "installmentsPayment")
+
         installmentImg.image = UIImage(named: "selected")
         walletImg.image = UIImage(named: "unselected")
         valuImg.image = UIImage(named: "unselected")
@@ -107,7 +132,9 @@ class PaymentMethodsViewController: UIViewController {
         container.layer.maskedCorners = [ .layerMaxXMinYCorner,.layerMinXMinYCorner ,.layerMaxXMaxYCorner, .layerMinXMaxYCorner]
         container.layer.borderWidth = 2
         container.layer.borderColor = #colorLiteral(red: 0.4666666667, green: 0.5254901961, blue: 0.6196078431, alpha: 1)
+
     }
+    
 
     func unSelectedInst(container:UIView, amount : UILabel, duration: UILabel){
         container.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
@@ -120,12 +147,17 @@ class PaymentMethodsViewController: UIViewController {
         container.layer.borderColor = #colorLiteral(red: 0.4666666667, green: 0.5254901961, blue: 0.6196078431, alpha: 1)
     }
 
+    var selectedMo : Int?
 
     @objc func threeMonsAction(sender : UITapGestureRecognizer) {
         selectedInst(container: threeMons, amount: threeAmount, duration: threeDur)
         unSelectedInst(container: sixMons, amount: sixAmount, duration: sixDur)
         unSelectedInst(container: twelveMons, amount: twelveAmount, duration: twelveDur)
         whichInstallment = 3
+        selectedMo = 4
+        UserDefaults.standard.setValue(selectedMo, forKey: "installment_plans_ID")
+        UserDefaults.standard.setValue(whichInstallment, forKey: "installmentPeriod")
+
     }
 
     @objc func sixMonsAction(sender : UITapGestureRecognizer) {
@@ -133,6 +165,10 @@ class PaymentMethodsViewController: UIViewController {
         unSelectedInst(container: threeMons, amount: threeAmount, duration: threeDur)
         unSelectedInst(container: twelveMons, amount: twelveAmount, duration: twelveDur)
         whichInstallment = 6
+        selectedMo = 3
+        UserDefaults.standard.setValue(selectedMo, forKey: "installment_plans_ID")
+        UserDefaults.standard.setValue(whichInstallment, forKey: "installmentPeriod")
+
     }
 
     @objc func twelveMonsAction(sender : UITapGestureRecognizer) {
@@ -140,13 +176,24 @@ class PaymentMethodsViewController: UIViewController {
         unSelectedInst(container: threeMons, amount: threeAmount, duration: threeDur)
         unSelectedInst(container: sixMons, amount: sixAmount, duration: sixDur)
         whichInstallment = 12
+        selectedMo = 2
+        UserDefaults.standard.setValue(selectedMo, forKey: "installment_plans_ID")
+        UserDefaults.standard.setValue(whichInstallment, forKey: "installmentPeriod")
+
     }
 
     @IBAction func next(_ sender: Any) {
-        let storyBoard: UIStoryboard = UIStoryboard(name: "NewPayment", bundle: nil)
-        let newViewController = storyBoard.instantiateViewController(withIdentifier: "ScanQRViewController") as? ScanQRViewController
-        newViewController!.modalPresentationStyle = .fullScreen
-        self.present(newViewController!, animated: true, completion: nil)
+
+        if installmentStackView.isHidden == false && selectedMo == nil {
+            showAlertController(title: "Error!", message: "Select one of installment plans", actions: [])
+        }else{
+            let storyBoard: UIStoryboard = UIStoryboard(name: "NewPayment", bundle: nil)
+            let newViewController = storyBoard.instantiateViewController(withIdentifier: "ScanQRViewController") as? ScanQRViewController
+            newViewController!.modalPresentationStyle = .fullScreen
+            self.present(newViewController!, animated: true, completion: nil)
+        }
+        
+
     }
     
 

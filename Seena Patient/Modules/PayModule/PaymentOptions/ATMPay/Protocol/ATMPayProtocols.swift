@@ -26,7 +26,7 @@ protocol ATMPayInputInteractorProtocol: class {
     // Presenter -> Interactor
     func retriveBanksAccount()
     func retriveVodafoneAccount()
-//    func retriveEtisalatAccount()
+    func retriveEtisalatAccount()
     func retriveSeena()
 
 }
@@ -34,7 +34,7 @@ protocol ATMPayOutputInteractorProtocol: class {
     // Interactor -> Presenter
     func onRetriveBanksAccountSuccess(_ banksAccounts: [Account])
     func onRetriveVodafoneAccountSuccess(_ vodafoneAccounts: [Vodafone])
-//    func onRetriveEtisalatAccountSuccess(_ etisalatAccounts: [Etisalat])
+    func onRetriveEtisalatAccountSuccess(_ etisalatAccounts: [Etisalat])
     func onRetriveSeena()
 
 }

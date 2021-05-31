@@ -31,8 +31,8 @@ class ATMPayInteractor: ATMPayInputInteractorProtocol {
     }
 
 
-//    func retriveEtisalatAccount() {
-//        presenter?.onRetriveEtisalatAccountSuccess(localDataManager.retriveEtisalatAccount())
-//    }
+    func retriveEtisalatAccount() {
+        presenter?.onRetriveEtisalatAccountSuccess(localDataManager.retriveEtisalatAccount())
+    }
 
 }

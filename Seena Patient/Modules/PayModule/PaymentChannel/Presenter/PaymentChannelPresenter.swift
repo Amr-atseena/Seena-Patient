@@ -46,20 +46,23 @@ class PaymentChannelPresenter: PaymentChannelPresenterProtocol {
         router?.go(to: .payHome)
     }
     func option(selectedAtIndex index: Int) {
-        if index == 0 {
-//            router?.go(to: .alert(AlertEntity(title: "", message: "SeenaPayMessage".localized)))
-            print ("SS")
 
-            paymentMethods = paymentMethods.map { OptionViewModel(name: $0.name, isSelected: false)}
-            paymentMethods[index].isSelected = true
-            view?.reloadPaymentMethods()
-            router?.go(to: .atm(index, installment))
+// كومنت router.go to  .alert ورجع اللي معموله كومنت اللي تحتها اللي جوه ال if index == 0 وبعدين روح على ATMPayPresenter وكومنت case 0 اللي موجوده و uncomment اللي معمولها كومنت
+
+        if index == 0 {
+            router?.go(to: .alert(AlertEntity(title: "", message: "SeenaPayMessage".localized)))
+//            print ("SS")
+//
+//            paymentMethods = paymentMethods.map { OptionViewModel(name: $0.name, isSelected: false)}
+//            paymentMethods[index].isSelected = true
+//            view?.reloadPaymentMethods()
+//            router?.go(to: .atm(index, installment))
         }
-//            else if index == 4{
-//            print("Etisalat")
-//        }
+////            else if index == 4{
+////            print("Etisalat")
+////        }
         else {
-            paymentMethods = paymentMethods.map { OptionViewModel(name: $0.name, isSelected: false)}
+        self.paymentMethods = paymentMethods.map { OptionViewModel(name: $0.name, isSelected: false)}
             paymentMethods[index].isSelected = true
             view?.reloadPaymentMethods()
             router?.go(to: .atm(index, installment))

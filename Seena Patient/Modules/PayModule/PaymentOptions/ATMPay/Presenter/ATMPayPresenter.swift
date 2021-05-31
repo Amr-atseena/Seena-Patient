@@ -46,12 +46,12 @@ class ATMPayPresenter: ATMPayPresenterProtocol {
         view?.setupBankAccountsCollectionView()
         view?.setupSecondPay()
         switch type {
-//        case 0: print("TYPE IS \(type)")
-        case 0: interactor?.retriveSeena()
+        case 0: print("TYPE IS \(type)")
+//        case 0: interactor?.retriveSeena()
 
         case 1, 2: interactor?.retriveBanksAccount()
         case 3: interactor?.retriveVodafoneAccount()
-//        case 4: interactor?.retriveEtisalatAccount()
+        case 4: interactor?.retriveEtisalatAccount()
         default: print(type)
         }
     }

@@ -44,7 +44,7 @@
                                             <constraint firstAttribute="height" constant="40" id="gyQ-Ah-bs4"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m35-xy-Cud">
                                         <rect key="frame" x="20" y="644" width="374" height="50"/>

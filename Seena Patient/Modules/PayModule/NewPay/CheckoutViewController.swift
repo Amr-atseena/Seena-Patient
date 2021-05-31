@@ -40,6 +40,9 @@ class CheckoutViewController: UIViewController {
     }
 
     @IBAction func next(_ sender: Any) {
+
+        UserDefaults.standard.setValue(amountTF.text!, forKey: "amount")
+
         if nextBtn.backgroundColor == .red{
         let storyBoard: UIStoryboard = UIStoryboard(name: "NewPayment", bundle: nil)
         let newViewController = storyBoard.instantiateViewController(withIdentifier: "PaymentMethodsViewController") as? PaymentMethodsViewController

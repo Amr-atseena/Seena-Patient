@@ -19,6 +19,8 @@ class ScanQRViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
     var captureSession: AVCaptureSession!
     var previewLayer: AVCaptureVideoPreviewLayer!
 
+    var theCode : String?
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -106,11 +108,36 @@ class ScanQRViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
             found(code: stringValue)
         }
 
-        dismiss(animated: true)
+//        dismiss(animated: true)
+//        UserDefaults.standard.setValue(self.theCode, forKey: "QRCode")
+
+
+        let amo = UserDefaults.standard.string(forKey: "amount")
+        let pay = UserDefaults.standard.string(forKey: "installmentsPayment")
+//        let docId = UserDefaults.standard.string(forKey: "QRCode")
+        let inst = UserDefaults.standard.integer(forKey: "installment_plans_ID")
+
+        APIClient().payForDoctor(amount: amo!, paymentMethod: pay!, doctorID: self.theCode!, inst: inst) { (res) in
+            print(res.response.success)
+
+            let storyBoard: UIStoryboard = UIStoryboard(name: "NewPayment", bundle: nil)
+            let newViewController = storyBoard.instantiateViewController(withIdentifier: "OTPViewController") as? OTPViewController
+            newViewController!.modalPresentationStyle = .fullScreen
+            self.present(newViewController!, animated: true, completion: nil)
+
+
+        } onError: { (error) in
+            self.showAlertController(title: "Error!", message: error, actions: [])
+        }
+
+        
     }
 
     func found(code: String) {
         print(code)
+
+        theCode = code
+        
     }
 
     override var prefersStatusBarHidden: Bool {
