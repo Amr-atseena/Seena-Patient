@@ -23,6 +23,7 @@ class OTPViewController: UIViewController, UITextFieldDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        doneBtn.layer.cornerRadius = 10
 
         print(UserDefaults.standard.string(forKey: "amount")!)
 

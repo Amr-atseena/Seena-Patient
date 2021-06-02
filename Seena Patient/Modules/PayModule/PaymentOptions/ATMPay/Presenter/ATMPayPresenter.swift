@@ -90,6 +90,16 @@ class ATMPayPresenter: ATMPayPresenterProtocol {
         }else{
         let account = accounts[selectAccountIndex]
         let payment = Payment(installment: installment, paymentMethod: type, account: account)
+
+
+
+            UserDefaults.standard.setValue(installment.installmentId, forKey: "installmentId")
+            UserDefaults.standard.setValue(type, forKey: "insType")
+            UserDefaults.standard.setValue(account.id, forKey: "insID")
+
+            print("installment id is : \(installment.installmentId)")
+            print("Payment method is : \(type)")
+            print("ID is : \(account.id)")
         router?.go(to: .pay(payment))
         }
     }

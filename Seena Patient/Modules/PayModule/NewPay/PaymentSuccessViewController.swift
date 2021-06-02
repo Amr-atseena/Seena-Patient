@@ -24,6 +24,9 @@ class PaymentSuccessViewController: UIViewController {
         super.viewDidLoad()
         viewDesign()
 
+        doneBtn.layer.cornerRadius = 10
+
+
         let savedAmount = UserDefaults.standard.string(forKey: "amount")
         let period = UserDefaults.standard.string(forKey: "installmentPeriod")
         let name = UserDefaults.standard.string(forKey: "doctorName")
@@ -36,6 +39,7 @@ class PaymentSuccessViewController: UIViewController {
         clinicName.text = name
 
         let url = URL(string: imagee ?? "")
+        clinicImage.kf.indicatorType = .activity
         clinicImage.kf.setImage(with: url)
     }
 

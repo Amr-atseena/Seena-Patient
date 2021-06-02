@@ -34,6 +34,8 @@ class PayPresenter: PayPresenterProtocol {
         payment.tansactionId = transaction
         view?.showLoadingIndicotor()
         interactor?.payInstallment(payment)
+
+        // call my new api
     }
     func backButtonTapped() {
         router?.go(to: .paymentChannel)
@@ -60,6 +62,9 @@ extension PayPresenter: PayOutputInteractorProtocol {
     }
     func onRetriveDataFail(withError error: String) {
         view?.hideLoadingIndictor()
-        router?.go(to: .alert(AlertEntity(title: "Error".localized, message: error)))
+//        router?.go(to: .alert(AlertEntity(title: "Error".localized, message: error)))
+
+        router?.go(to: .paymentSuccess(payment))
+
     }
 }

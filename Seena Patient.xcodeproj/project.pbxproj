@@ -274,6 +274,7 @@
 		88F706C624EE6804005C2ADB /* PackageDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F706BF24EE6804005C2ADB /* PackageDetailsVC.swift */; };
 		88F83BA825210E6D00C9295A /* ServicesLocalDataManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F83BA725210E6D00C9295A /* ServicesLocalDataManagerProtocol.swift */; };
 		88F83BAC25210E9100C9295A /* ServicesLocalDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F83BAB25210E9100C9295A /* ServicesLocalDataManager.swift */; };
+		8C07525F2667BFC800EE5DCB /* paymentPay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C07525E2667BFC800EE5DCB /* paymentPay.swift */; };
 		8C0F8A352648180C00DD30E6 /* CheckOTPForget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0F8A342648180C00DD30E6 /* CheckOTPForget.swift */; };
 		8C0F8A39264818CF00DD30E6 /* ResetPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0F8A38264818CF00DD30E6 /* ResetPassword.swift */; };
 		8C3FD6302642CA08002B5240 /* SignUpFirst.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3FD62F2642CA08002B5240 /* SignUpFirst.swift */; };
@@ -656,6 +657,7 @@
 		88F706BF24EE6804005C2ADB /* PackageDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageDetailsVC.swift; sourceTree = "<group>"; };
 		88F83BA725210E6D00C9295A /* ServicesLocalDataManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesLocalDataManagerProtocol.swift; sourceTree = "<group>"; };
 		88F83BAB25210E9100C9295A /* ServicesLocalDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesLocalDataManager.swift; sourceTree = "<group>"; };
+		8C07525E2667BFC800EE5DCB /* paymentPay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = paymentPay.swift; sourceTree = "<group>"; };
 		8C0F8A342648180C00DD30E6 /* CheckOTPForget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckOTPForget.swift; sourceTree = "<group>"; };
 		8C0F8A38264818CF00DD30E6 /* ResetPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPassword.swift; sourceTree = "<group>"; };
 		8C3FD62F2642CA08002B5240 /* SignUpFirst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpFirst.swift; sourceTree = "<group>"; };
@@ -2922,6 +2924,7 @@
 				8C78E1FF2663A242008FF88A /* PayForDoctorModel.swift */,
 				8C78E2032663AB8D008FF88A /* InstallmentPlansModel.swift */,
 				8C78E2072663D280008FF88A /* OTPtransferCompleteModel.swift */,
+				8C07525E2667BFC800EE5DCB /* paymentPay.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -3591,6 +3594,7 @@
 				88F706C524EE6804005C2ADB /* PackageDetailsLocalization.swift in Sources */,
 				8CE73C18265E7914002D3BF1 /* SeenaPaySuccViewController.swift in Sources */,
 				88EDA12F24FAE41200460B4D /* ProfileVC.swift in Sources */,
+				8C07525F2667BFC800EE5DCB /* paymentPay.swift in Sources */,
 				882DE7AA2510005900B1F4F7 /* SignUpProtocols.swift in Sources */,
 				88F675AE250D612800D19822 /* AuthenticationRemoteDataManager.swift in Sources */,
 				8C0F8A352648180C00DD30E6 /* CheckOTPForget.swift in Sources */,

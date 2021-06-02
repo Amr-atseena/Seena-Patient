@@ -15,10 +15,13 @@
                 <outlet property="accountNumberKeywordLabel" destination="FaT-bO-GTE" id="w8M-Os-T93"/>
                 <outlet property="accountNumberLabel" destination="Y84-pk-Wo2" id="Zfb-hO-0DP"/>
                 <outlet property="bankImage" destination="uyB-P6-iuB" id="tBd-lw-A3y"/>
+                <outlet property="infoBtn" destination="Kfj-ji-Puk" id="MtX-dk-iTI"/>
                 <outlet property="loadingIndicotor" destination="NGS-NG-8dk" id="fhT-l8-q6C"/>
                 <outlet property="nextButton" destination="54O-iu-tCY" id="MEy-CV-Zag"/>
                 <outlet property="paymentKeywordLabel" destination="bXS-1P-z6R" id="yBs-dh-y8v"/>
+                <outlet property="rightImage" destination="s3u-BJ-QKB" id="KyB-mb-z5L"/>
                 <outlet property="transactionIdTextFiled" destination="PuH-5P-Fpl" id="TBE-dj-07g"/>
+                <outlet property="uploadRecBtn" destination="wLC-Ln-hJu" id="in0-bO-GC7"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -178,7 +181,7 @@
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sog-3H-cp3" customClass="AnimatableView" customModule="IBAnimatable">
                                             <rect key="frame" x="0.0" y="0.0" width="318" height="50"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Receipt Reference" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PuH-5P-Fpl">
+                                                <textField hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Receipt Reference" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PuH-5P-Fpl">
                                                     <rect key="frame" x="10" y="5" width="298" height="40"/>
                                                     <color key="tintColor" name="secondaryActionText"/>
                                                     <color key="textColor" name="secondaryActionText"/>
@@ -188,13 +191,24 @@
                                                         <action selector="didTranactionTextFieldEditChange:" destination="-1" eventType="editingChanged" id="RwF-XV-8FT"/>
                                                     </connections>
                                                 </textField>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wLC-Ln-hJu">
+                                                    <rect key="frame" x="10" y="5" width="298" height="40"/>
+                                                    <state key="normal" title="Upload Receipt reference"/>
+                                                    <connections>
+                                                        <action selector="uploadReceipt:" destination="-1" eventType="touchUpInside" id="hmR-50-BFx"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                             <constraints>
+                                                <constraint firstItem="wLC-Ln-hJu" firstAttribute="top" secondItem="sog-3H-cp3" secondAttribute="top" constant="5" id="CJI-am-7B5"/>
+                                                <constraint firstItem="wLC-Ln-hJu" firstAttribute="leading" secondItem="sog-3H-cp3" secondAttribute="leading" constant="10" id="EC2-QO-dFR"/>
+                                                <constraint firstAttribute="trailing" secondItem="wLC-Ln-hJu" secondAttribute="trailing" constant="10" id="Lyv-w6-F5l"/>
                                                 <constraint firstAttribute="height" constant="50" id="fV3-dL-GwP"/>
                                                 <constraint firstItem="PuH-5P-Fpl" firstAttribute="leading" secondItem="sog-3H-cp3" secondAttribute="leading" constant="10" id="gW4-r0-3dq"/>
                                                 <constraint firstItem="PuH-5P-Fpl" firstAttribute="top" secondItem="sog-3H-cp3" secondAttribute="top" constant="5" id="i4m-YY-MYX"/>
                                                 <constraint firstAttribute="trailing" secondItem="PuH-5P-Fpl" secondAttribute="trailing" constant="10" id="j9Z-2B-E5K"/>
+                                                <constraint firstAttribute="bottom" secondItem="wLC-Ln-hJu" secondAttribute="bottom" constant="5" id="mNz-Cv-LZH"/>
                                                 <constraint firstAttribute="bottom" secondItem="PuH-5P-Fpl" secondAttribute="bottom" constant="5" id="p5a-sg-6oW"/>
                                             </constraints>
                                             <userDefinedRuntimeAttributes>
@@ -222,6 +236,9 @@
                                                 <action selector="didInfoButtonTapped:" destination="-1" eventType="touchUpInside" id="E9l-IS-2B2"/>
                                             </connections>
                                         </button>
+                                        <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" image="right" translatesAutoresizingMaskIntoConstraints="NO" id="s3u-BJ-QKB">
+                                            <rect key="frame" x="374" y="0.0" width="0.0" height="50"/>
+                                        </imageView>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="sog-3H-cp3" firstAttribute="width" secondItem="vqC-9J-gbV" secondAttribute="width" multiplier="0.850267" id="dTJ-Cj-Gjp"/>
@@ -302,6 +319,7 @@
         <image name="CIBCommon" width="84" height="87"/>
         <image name="back-1" width="22" height="14"/>
         <image name="information" width="20" height="20"/>
+        <image name="right" width="20" height="20"/>
         <namedColor name="PrimaryNavBarText">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

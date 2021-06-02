@@ -23,6 +23,7 @@ class ScanQRViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        nextBtn.layer.cornerRadius = 10
 
         captureSession = AVCaptureSession()
 

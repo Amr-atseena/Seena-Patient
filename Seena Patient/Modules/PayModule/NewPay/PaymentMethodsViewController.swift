@@ -18,6 +18,7 @@ class PaymentMethodsViewController: UIViewController {
     @IBOutlet weak var valuView: UIView!
     @IBOutlet weak var valuImg: UIImageView!
     @IBOutlet weak var installmentStackView: UIStackView!
+    @IBOutlet weak var nextBtn: UIButton!
 
     @IBOutlet weak var threeMons: UIView!
     @IBOutlet weak var sixMons: UIView!
@@ -34,6 +35,7 @@ class PaymentMethodsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        nextBtn.layer.cornerRadius = 10
 
         let amo = Int(UserDefaults.standard.string(forKey: "amount") ?? "") ?? 0
 
@@ -101,6 +103,8 @@ class PaymentMethodsViewController: UIViewController {
         valuImg.image = UIImage(named: "unselected")
         installmentStackView.isHidden = true
         whichInstallment = 0
+
+        showAlertController(title: "Soon", message: "Will be avaliable soon", actions: [])
     }
 
     @objc func installmentAction(sender : UITapGestureRecognizer) {
@@ -120,6 +124,8 @@ class PaymentMethodsViewController: UIViewController {
         walletImg.image = UIImage(named: "unselected")
         installmentStackView.isHidden = true
         whichInstallment = 0
+
+        showAlertController(title: "Soon", message: "Will be avaliable soon", actions: [])
     }
 
 

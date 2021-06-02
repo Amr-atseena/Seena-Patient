@@ -8,8 +8,9 @@
 
 import UIKit
 
-class PayVC: UIViewController, PayViewProtocol {
+class PayVC: UIViewController, PayViewProtocol, UIImagePickerControllerDelegate & UINavigationControllerDelegate {
     // MARK: - Outlets
+    @IBOutlet weak var uploadRecBtn: UIButton!
     @IBOutlet private var paymentKeywordLabel: UILabel!
     @IBOutlet private var bankImage: UIImageView!
     @IBOutlet private var accountNumberKeywordLabel: UILabel!
@@ -17,6 +18,8 @@ class PayVC: UIViewController, PayViewProtocol {
     @IBOutlet private var nextButton: UIButton!
     @IBOutlet private var transactionIdTextFiled: UITextField!
     @IBOutlet private var loadingIndicotor: UIActivityIndicatorView!
+    @IBOutlet weak var infoBtn: UIButton!
+    @IBOutlet weak var rightImage: UIImageView!
     // MARK: - Attributes
     var presenter: PayPresenterProtocol!
     // MARK: - Init
@@ -66,10 +69,79 @@ class PayVC: UIViewController, PayViewProtocol {
     func hideLoadingIndictor() {
         loadingIndicotor.stopAnimating()
     }
+
+
+    @IBAction func uploadReceipt(_ sender: Any) {
+        let picker = UIImagePickerController()
+                picker.delegate = self
+        picker.sourceType = UIImagePickerController.SourceType.photoLibrary
+                picker.allowsEditing = false
+                self.present(picker, animated: true) {
+                }
+
+    }
+
+    var uploadedImage : UIImage?
+    let progressHUD = ProgressHUD(text: "")
+
     // MARK: - Actions
     @IBAction private func didNextButtonTapped(_ sender: UIButton) {
-        presenter.nextButtonTapped(withTransactionId: transactionIdTextFiled.text)
+
+        let instID = UserDefaults.standard.string(forKey: "installmentId")
+        let payMeth = UserDefaults.standard.string(forKey: "insType")
+        let idd = UserDefaults.standard.string(forKey: "insID")
+
+        let payyy = PayParams(image: uploadedImage, installmentId: Int(instID!), paymentMethod: Int(payMeth!), id: Int(idd!))
+
+        self.view.addSubview(progressHUD)
+
+        APIClient().uploadReceptCall(payParams: payyy) { (res) in
+            self.progressHUD.removeFromSuperview()
+
+            print(res)
+            self.presenter.nextButtonTapped(withTransactionId: "")
+
+        } onError: { (error) in
+            self.showAlertController(title: "Error!", message: error, actions: [])
+        }
+
+
+
+//        presenter.nextButtonTapped(withTransactionId: transactionIdTextFiled.text)
+
+
     }
+
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        var newImage: UIImage
+
+        if let possibleImage = info[.editedImage] as? UIImage {
+            newImage = possibleImage
+        } else if let possibleImage = info[.originalImage] as? UIImage {
+            newImage = possibleImage
+        } else {
+            return
+        }
+
+        // do something interesting here!
+        print(newImage)
+        uploadedImage = newImage
+        infoBtn.isHidden = true
+        rightImage.isHidden = false
+        enableNextButton()
+
+        dismiss(animated: true)
+    }
+
+
+
+
+
+
+
+
+
+
     @IBAction private func didBackButtonTapped(_ sender: UIButton) {
         presenter.backButtonTapped()
     }

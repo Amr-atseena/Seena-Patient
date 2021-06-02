@@ -21,6 +21,14 @@ struct UserInfo {
 
 }
 
+struct PayParams {
+    var image: UIImage?
+    var installmentId : Int?
+    var paymentMethod : Int?
+    var id : Int?
+
+
+}
 
 class APIClient{
 
@@ -405,6 +413,56 @@ class APIClient{
             }
         }
     }
+
+
+
+
+
+    //MARK:- SignUP
+
+    func uploadReceptCall(payParams: PayParams, onSuccess: @escaping (PaymentPay) -> Void, onError: @escaping (_ error: String)-> Void) {
+
+        let token = UserDefaults.standard.string(forKey: "TOKEN")
+        let header = ["Authorization" : "Bearer " + token!] as HTTPHeaders?
+
+        let imgData = payParams.image != nil ? payParams.image?.jpegData(compressionQuality: 0.5) : nil
+
+        let parameter = ["installment_id" : String(payParams.installmentId!) , "payment_method" : String(payParams.paymentMethod!), "id" : String(payParams.id!)]
+
+        AF.upload(multipartFormData: { multipartFormData in
+            for (key, value) in parameter {
+                multipartFormData.append(value.data(using: String.Encoding.utf8)!, withName: key)
+            }
+            if imgData != nil {
+                multipartFormData.append(imgData!, withName: "image",fileName: "image.jpg", mimeType: "image/jpg")
+            }
+
+        }, to: URL(string: "http://dashboard.seenapay.com/api/payment/pay")!,method: .post,headers: header).responseData {
+            response in
+            switch response.result {
+            case .success(let jsonData):
+                do {
+                    let data = try JSONDecoder().decode(PaymentPay.self, from: jsonData)
+                    print(data)
+                    if data.error.status {
+                        onSuccess(data)
+                    } else {
+                        onError(data.error.desc)
+                    }
+                } catch {
+                    print("ParseError",error.localizedDescription)
+                    onError(error.localizedDescription)
+                }
+                break
+            case .failure(let error):
+                print("Request error: \(error)")
+                onError(error.localizedDescription)
+                break
+            }
+        }
+    }
+
+
 
 
 

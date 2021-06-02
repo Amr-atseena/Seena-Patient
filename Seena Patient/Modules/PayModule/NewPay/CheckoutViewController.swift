@@ -16,6 +16,8 @@ class CheckoutViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         viewDesign()
+        nextBtn.layer.cornerRadius = 10
+
     }
 
     func viewDesign(){
