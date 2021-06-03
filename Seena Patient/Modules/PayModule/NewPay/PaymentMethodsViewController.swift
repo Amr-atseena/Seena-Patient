@@ -72,6 +72,12 @@ class PaymentMethodsViewController: UIViewController {
         unSelectedInst(container: threeMons, amount: threeAmount, duration: threeDur)
         unSelectedInst(container: sixMons, amount: sixAmount, duration: sixDur)
         unSelectedInst(container: twelveMons, amount: twelveAmount, duration: twelveDur)
+
+//        walletImg.image = UIImage(named: "unselected")
+//        installmentImg.image = UIImage(named: "selected")
+//        valuImg.image = UIImage(named: "unselected")
+
+
         whichInstallment = 0
     }
 

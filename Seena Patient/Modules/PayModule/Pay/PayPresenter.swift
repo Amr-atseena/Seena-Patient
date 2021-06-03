@@ -33,7 +33,9 @@ class PayPresenter: PayPresenterProtocol {
         }
         payment.tansactionId = transaction
         view?.showLoadingIndicotor()
-        interactor?.payInstallment(payment)
+//        interactor?.payInstallment(payment)
+        router?.go(to: .paymentSuccess(payment))
+
 
         // call my new api
     }

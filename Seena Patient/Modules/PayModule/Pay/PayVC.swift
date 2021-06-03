@@ -83,6 +83,7 @@ class PayVC: UIViewController, PayViewProtocol, UIImagePickerControllerDelegate 
 
     var uploadedImage : UIImage?
     let progressHUD = ProgressHUD(text: "")
+    weak var viewController: UIViewController?
 
     // MARK: - Actions
     @IBAction private func didNextButtonTapped(_ sender: UIButton) {
@@ -102,6 +103,7 @@ class PayVC: UIViewController, PayViewProtocol, UIImagePickerControllerDelegate 
             self.presenter.nextButtonTapped(withTransactionId: "")
 
         } onError: { (error) in
+            self.progressHUD.removeFromSuperview()
             self.showAlertController(title: "Error!", message: error, actions: [])
         }
 
@@ -111,6 +113,12 @@ class PayVC: UIViewController, PayViewProtocol, UIImagePickerControllerDelegate 
 
 
     }
+
+    private func navigateToPaymentSuccess(withPayment payment: Payment) {
+        let payment = PaymentSuccessRouter.assembleModule(withPayment: payment)
+        viewController?.navigationController?.pushViewController(payment, animated: true)
+    }
+
 
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         var newImage: UIImage

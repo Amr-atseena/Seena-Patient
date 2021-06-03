@@ -124,33 +124,8 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Rw0-2V-RgK">
                                         <rect key="frame" x="20" y="107.5" width="240" height="140"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nEY-2D-k7d">
-                                                <rect key="frame" x="0.0" y="0.0" width="240" height="40"/>
-                                                <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="selected" translatesAutoresizingMaskIntoConstraints="NO" id="1Fx-IK-R1k">
-                                                        <rect key="frame" x="10" y="10" width="20" height="20"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="20" id="QXL-VG-Qbr"/>
-                                                            <constraint firstAttribute="height" constant="20" id="kfn-Gr-Hii"/>
-                                                        </constraints>
-                                                    </imageView>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Wallet" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M0a-K4-mTW">
-                                                        <rect key="frame" x="50" y="9" width="75.5" height="22"/>
-                                                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="16"/>
-                                                        <color key="textColor" red="0.015686274509803921" green="0.17254901960784313" blue="0.36078431372549019" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                                <constraints>
-                                                    <constraint firstItem="M0a-K4-mTW" firstAttribute="leading" secondItem="1Fx-IK-R1k" secondAttribute="trailing" constant="20" id="KM7-kI-HHq"/>
-                                                    <constraint firstItem="1Fx-IK-R1k" firstAttribute="centerY" secondItem="nEY-2D-k7d" secondAttribute="centerY" id="OTm-d9-gDu"/>
-                                                    <constraint firstItem="M0a-K4-mTW" firstAttribute="centerY" secondItem="1Fx-IK-R1k" secondAttribute="centerY" id="eg7-zj-K8P"/>
-                                                    <constraint firstAttribute="height" constant="40" id="t1u-1j-F20"/>
-                                                    <constraint firstItem="1Fx-IK-R1k" firstAttribute="leading" secondItem="nEY-2D-k7d" secondAttribute="leading" constant="10" id="w3G-RF-ygy"/>
-                                                </constraints>
-                                            </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vmd-H7-Jur">
-                                                <rect key="frame" x="0.0" y="50" width="240" height="40"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="240" height="40"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="unselected" translatesAutoresizingMaskIntoConstraints="NO" id="ezv-2j-goW">
                                                         <rect key="frame" x="10" y="10" width="20" height="20"/>
@@ -172,6 +147,31 @@
                                                     <constraint firstAttribute="height" constant="40" id="Wjo-Ly-i1Y"/>
                                                     <constraint firstItem="03p-4G-wL1" firstAttribute="leading" secondItem="ezv-2j-goW" secondAttribute="trailing" constant="20" id="jVJ-O3-iZa"/>
                                                     <constraint firstItem="03p-4G-wL1" firstAttribute="centerY" secondItem="ezv-2j-goW" secondAttribute="centerY" id="xzr-ra-mg8"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nEY-2D-k7d">
+                                                <rect key="frame" x="0.0" y="50" width="240" height="40"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="unselected" translatesAutoresizingMaskIntoConstraints="NO" id="1Fx-IK-R1k">
+                                                        <rect key="frame" x="10" y="10" width="20" height="20"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="20" id="QXL-VG-Qbr"/>
+                                                            <constraint firstAttribute="height" constant="20" id="kfn-Gr-Hii"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Wallet" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M0a-K4-mTW">
+                                                        <rect key="frame" x="50" y="9" width="75.5" height="22"/>
+                                                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="16"/>
+                                                        <color key="textColor" red="0.015686274509803921" green="0.17254901960784313" blue="0.36078431372549019" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="M0a-K4-mTW" firstAttribute="leading" secondItem="1Fx-IK-R1k" secondAttribute="trailing" constant="20" id="KM7-kI-HHq"/>
+                                                    <constraint firstItem="1Fx-IK-R1k" firstAttribute="centerY" secondItem="nEY-2D-k7d" secondAttribute="centerY" id="OTm-d9-gDu"/>
+                                                    <constraint firstItem="M0a-K4-mTW" firstAttribute="centerY" secondItem="1Fx-IK-R1k" secondAttribute="centerY" id="eg7-zj-K8P"/>
+                                                    <constraint firstAttribute="height" constant="40" id="t1u-1j-F20"/>
+                                                    <constraint firstItem="1Fx-IK-R1k" firstAttribute="leading" secondItem="nEY-2D-k7d" secondAttribute="leading" constant="10" id="w3G-RF-ygy"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bdG-qJ-Yjo">
@@ -691,7 +691,6 @@
     <resources>
         <image name="Seena-Logo" width="237" height="357"/>
         <image name="clinic" width="100" height="100"/>
-        <image name="selected" width="20" height="20"/>
         <image name="unselected" width="20" height="20"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

@@ -20,7 +20,7 @@ class DueCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // clinicName Label
-        clinicNameLabel.font = DesignSystem.Typography.subHeading2.font
+        clinicNameLabel.font = DesignSystem.Typography.subHeading4.font
         // clinicPlaceHolder Label
         clinicPlaceHolderLabel.font = DesignSystem.Typography.heading.font
         // paymentDate Label
