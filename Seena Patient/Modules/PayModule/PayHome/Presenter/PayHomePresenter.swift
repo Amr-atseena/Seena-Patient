@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 class PayHomePresenter: PayHomePresenterProtocol {
     // MARK: - Attributes
@@ -49,11 +50,13 @@ class PayHomePresenter: PayHomePresenterProtocol {
         let due = PaymentDueViewModel(installment: installment)
         cell.setPaymentDue(due)
     }
+
+    var views : UIViewController?
     func dueCell(selectedAtIndex index: Int) {
         guard let installment = payment?.installment[index] else { return }
         for activeInst in [installment] {
             if activeInst.active == 0 {
-
+                router?.go(to: .notActive)
             }else{
                 router?.go(to: .paymentChannel(installment: installment))
 

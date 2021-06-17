@@ -140,7 +140,7 @@ extension HomePresenter: HomeOutputInteractorProtocol {
         clinic = homeServices.sponsoredClinics
 
         specialities.removeAll()
-        specialities.append(Speciality(id: -1, image: "",speciality: "Sponsored",services: [],clinics: homeServices.sponsoredClinics))
+        specialities.append(Speciality(id: -1, image: "",speciality: "Clinics".localized,services: [],clinics: homeServices.sponsoredClinics))
         specialities.append(contentsOf: homeServices.specialities)
     }
     func onRetriveDataFail() {

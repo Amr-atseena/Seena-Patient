@@ -66,7 +66,7 @@
 "m35-xy-Cud.normalTitle" = "التالي";
 
 /* Class = "UILabel"; text = "Scan merchant QR code"; ObjectID = "qUZ-Lj-owl"; */
-"qUZ-Lj-owl.text" = "امسح رمز الاستجابة السريعة الخاص بالتاجر";
+"qUZ-Lj-owl.text" = "امسح رمز الاستجابة السريعة";
 
 /* Class = "UILabel"; text = "EGP 1,000"; ObjectID = "rnw-Jw-oAB"; */
 "rnw-Jw-oAB.text" = "EGP 1,000";

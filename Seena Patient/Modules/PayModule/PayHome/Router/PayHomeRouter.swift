@@ -31,6 +31,10 @@ class PayHomeRouter: PayHomeRouterProtocol {
             navigateToPaymentChannel(installment: installment)
         case .calculate:
             navigateToCalculate()
+
+        case .notActive:
+            notActivee()
+
         }
     }
     private func navigateToPaymentChannel(installment: Installment) {
@@ -40,5 +44,10 @@ class PayHomeRouter: PayHomeRouterProtocol {
     private func navigateToCalculate() {
         viewController?.tabBarController?.tabBar.isHidden = true
         viewController?.navigationController?.pushViewController(CalculatorRouter.assembleModule(), animated: true)
+    }
+
+    private func notActivee() {
+        viewController?.showAlertController(title: "Attention!".toLocalize, message: "You can pay only current unpaid and rejected installments".toLocalize, actions: [])
+//        viewController?.showToast(message: "You can pay only current unpaid and rejected installments".toLocalize, font: .systemFont(ofSize: 15))
     }
 }

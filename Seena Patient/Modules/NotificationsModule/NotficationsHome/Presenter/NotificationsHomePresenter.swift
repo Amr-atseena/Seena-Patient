@@ -33,7 +33,7 @@ class NotificationsHomePresenter: NotificationsHomePresenterProtocol {
         view?.setupInifityScrolling()
     }
     func viewWillAppear() {
-        page = 0
+//        page = 0
         retriveNotifications()
     }
     func retriveNotifications() {
@@ -62,5 +62,7 @@ extension NotificationsHomePresenter: NotificationsHomeOutputInteractorProtocol 
     }
     func onRetriveNotificationListFail() {
         view?.hideLoadingIndictor()
+        view?.showNoDataView()
+
     }
 }

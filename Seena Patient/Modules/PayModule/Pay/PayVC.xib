@@ -193,7 +193,7 @@
                                                 </textField>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wLC-Ln-hJu">
                                                     <rect key="frame" x="10" y="5" width="298" height="40"/>
-                                                    <state key="normal" title="Upload Receipt reference"/>
+                                                    <state key="normal" title="Upload receipt reference"/>
                                                     <connections>
                                                         <action selector="uploadReceipt:" destination="-1" eventType="touchUpInside" id="hmR-50-BFx"/>
                                                     </connections>

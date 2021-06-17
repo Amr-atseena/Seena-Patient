@@ -182,7 +182,7 @@ extension HomeVC: UITableViewDataSource {
         //        cell.spectialityNameLabel.text = "Clinics"
         cell.callBack = {
             
-            if cell.spectialityNameLabel.text == "Sponsored"{
+            if cell.spectialityNameLabel.text == "Clinics" || cell.spectialityNameLabel.text == "العيادات"{
                 self.navigationController?.pushViewController(ClinicsHomeRouter.assembleModule(), animated: true)
             }else{
                 self.presenter.serviceSelected(atIndex: indexPath.row, andSection: -2)

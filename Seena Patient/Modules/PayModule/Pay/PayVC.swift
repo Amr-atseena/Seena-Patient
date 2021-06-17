@@ -34,6 +34,7 @@ class PayVC: UIViewController, PayViewProtocol, UIImagePickerControllerDelegate 
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter.viewDidLoad()
+        uploadRecBtn.setTitle("Upload receipt reference".localized, for: .normal)
     }
     // MARK: - Methods
     func setupUI() {
@@ -116,6 +117,7 @@ class PayVC: UIViewController, PayViewProtocol, UIImagePickerControllerDelegate 
 
     private func navigateToPaymentSuccess(withPayment payment: Payment) {
         let payment = PaymentSuccessRouter.assembleModule(withPayment: payment)
+        payment.hidesBottomBarWhenPushed = true
         viewController?.navigationController?.pushViewController(payment, animated: true)
     }
 

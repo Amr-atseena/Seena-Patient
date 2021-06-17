@@ -16,6 +16,8 @@ class UploadDocumentsVC: UIViewController, UploadDocumentsViewProtocol {
     @IBOutlet private var finishButton: UIButton!
     // MARK: - Attributes
     var presenter: UploadDocumentsPresenterProtocol!
+
+    weak var viewController: UIViewController?
     // MARK: - Init
     init() {
         super.init(nibName: UploadDocumentsVC.className, bundle: nil)
@@ -28,12 +30,16 @@ class UploadDocumentsVC: UIViewController, UploadDocumentsViewProtocol {
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter.viewDidLoad()
+
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         presenter.viewDidLoad()
     }
+
+
+
     // MARK: - Methods
     func setupUI() {
         //uploadRequiredDocumentKeyword Label

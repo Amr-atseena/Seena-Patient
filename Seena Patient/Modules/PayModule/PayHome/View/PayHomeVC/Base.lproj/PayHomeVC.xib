@@ -18,6 +18,7 @@
                 <outlet property="availableBalanceLabel" destination="qKI-2p-Brg" id="Dqk-hf-Tf8"/>
                 <outlet property="calculatorLabel" destination="qhM-17-oYP" id="43e-Mw-bsB"/>
                 <outlet property="dueAmountLabel" destination="lKS-CI-ZZM" id="wZA-kB-PkY"/>
+                <outlet property="getYourSeenaImage" destination="cbV-7J-psJ" id="G3C-KO-nRh"/>
                 <outlet property="getYourSeenaView" destination="iXr-zB-LIW" id="ceC-Ty-YSF"/>
                 <outlet property="loadingIndictor" destination="emT-Qi-WZT" id="LWc-78-irI"/>
                 <outlet property="noDataView" destination="5hH-Vq-Ob3" id="3aR-nr-xwm"/>
@@ -37,9 +38,9 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="TdC-6e-0WS">
-                    <rect key="frame" x="20" y="384.66666666666669" width="374" height="74"/>
+                    <rect key="frame" x="20" y="384.66666666666669" width="374" height="24"/>
                     <subviews>
-                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="1wE-VT-i31">
+                        <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="1wE-VT-i31">
                             <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
                             <subviews>
                                 <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UTr-SS-6mY" customClass="AnimatableView" customModule="IBAnimatable">
@@ -109,7 +110,7 @@
                             </subviews>
                         </stackView>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="7Rr-Z6-RTA">
-                            <rect key="frame" x="0.0" y="50" width="374" height="24"/>
+                            <rect key="frame" x="0.0" y="0.0" width="374" height="24"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Payments due" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zia-VY-44m">
                                     <rect key="frame" x="0.0" y="0.0" width="374" height="24"/>
@@ -145,7 +146,7 @@
                     </userDefinedRuntimeAttributes>
                 </view>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="p0h-37-Zio">
-                    <rect key="frame" x="20" y="468.66666666666674" width="374" height="383.33333333333326"/>
+                    <rect key="frame" x="20" y="418.66666666666674" width="374" height="433.33333333333326"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Df9-04-0Dy" customClass="AnimatableView" customModule="IBAnimatable">
@@ -155,7 +156,7 @@
                             <rect key="frame" x="40" y="40.000000000000014" width="292.66666666666669" height="239.33333333333337"/>
                             <subviews>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GetYourSeena" translatesAutoresizingMaskIntoConstraints="NO" id="cbV-7J-psJ">
-                                    <rect key="frame" x="25.000000000000014" y="30.000000000000014" width="242.66666666666669" height="87"/>
+                                    <rect key="frame" x="25.000000000000014" y="30.000000000000021" width="242.66666666666669" height="87.333333333333314"/>
                                     <constraints>
                                         <constraint firstAttribute="width" secondItem="cbV-7J-psJ" secondAttribute="height" multiplier="242:87" id="K1X-kM-i1t"/>
                                     </constraints>
@@ -301,10 +302,10 @@
                     </userDefinedRuntimeAttributes>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5hH-Vq-Ob3">
-                    <rect key="frame" x="20" y="468.66666666666674" width="374" height="383.33333333333326"/>
+                    <rect key="frame" x="20" y="418.66666666666674" width="374" height="433.33333333333326"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="xYU-mg-gQQ">
-                            <rect key="frame" x="20" y="150.66666666666669" width="334" height="82.333333333333314"/>
+                            <rect key="frame" x="20" y="175.66666666666669" width="334" height="82.333333333333314"/>
                             <subviews>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="like1" translatesAutoresizingMaskIntoConstraints="NO" id="pm6-Oq-usS">
                                     <rect key="frame" x="141" y="0.0" width="52" height="52"/>
@@ -332,7 +333,7 @@
                     </connections>
                 </button>
                 <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="emT-Qi-WZT">
-                    <rect key="frame" x="188.66666666666666" y="642" width="37" height="37"/>
+                    <rect key="frame" x="188.66666666666666" y="617" width="37" height="37"/>
                     <color key="color" name="payEnd"/>
                 </activityIndicatorView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oKj-OA-3El">

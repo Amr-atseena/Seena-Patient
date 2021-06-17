@@ -23,7 +23,7 @@
                                 <color key="color" name="secondroyActionBackground"/>
                             </activityIndicatorView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qqn-tU-rve">
-                                <rect key="frame" x="0.0" y="138" width="414" height="588"/>
+                                <rect key="frame" x="0.0" y="138" width="414" height="558"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="BkP-RI-LuX">
                                         <rect key="frame" x="20" y="20" width="374" height="400"/>
@@ -290,12 +290,12 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Ca-aB-tOh" customClass="AnimatableButton" customModule="IBAnimatable">
-                                <rect key="frame" x="20" y="746" width="374" height="50"/>
+                                <rect key="frame" x="20" y="716" width="374" height="50"/>
                                 <color key="backgroundColor" red="0.85882352939999995" green="0.078431372550000003" blue="0.078431372550000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="xuZ-Lr-PNI"/>
                                 </constraints>
-                                <state key="normal" title="Next">
+                                <state key="normal" title="NEXT">
                                     <color key="titleColor" name="primaryActionText"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -315,7 +315,7 @@
                             <constraint firstAttribute="trailing" secondItem="qqn-tU-rve" secondAttribute="trailing" id="DnW-cN-u6M"/>
                             <constraint firstItem="2Ca-aB-tOh" firstAttribute="leading" secondItem="WcC-by-JrN" secondAttribute="leading" constant="20" id="MXH-k3-eoG"/>
                             <constraint firstItem="Fj8-i4-86r" firstAttribute="centerY" secondItem="YXb-UY-clg" secondAttribute="centerY" id="Tbf-n2-XMV"/>
-                            <constraint firstAttribute="bottom" secondItem="2Ca-aB-tOh" secondAttribute="bottom" constant="100" id="gfs-Xk-WLN"/>
+                            <constraint firstAttribute="bottom" secondItem="2Ca-aB-tOh" secondAttribute="bottom" constant="130" id="gfs-Xk-WLN"/>
                             <constraint firstAttribute="trailing" secondItem="2Ca-aB-tOh" secondAttribute="trailing" constant="20" id="kqS-TC-oLb"/>
                             <constraint firstItem="Fj8-i4-86r" firstAttribute="centerX" secondItem="YXb-UY-clg" secondAttribute="centerX" id="lhC-qi-lDH"/>
                             <constraint firstItem="2Ca-aB-tOh" firstAttribute="top" secondItem="qqn-tU-rve" secondAttribute="bottom" constant="20" id="okj-oT-Z1Q"/>
@@ -469,7 +469,7 @@ registered number</string>
     </scenes>
     <designables>
         <designable name="2Ca-aB-tOh">
-            <size key="intrinsicContentSize" width="32" height="30"/>
+            <size key="intrinsicContentSize" width="39" height="30"/>
         </designable>
         <designable name="Kxa-Hi-dIB">
             <size key="intrinsicContentSize" width="374" height="44.369671875000002"/>

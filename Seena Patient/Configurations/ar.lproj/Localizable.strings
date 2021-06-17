@@ -8,7 +8,7 @@
 "Home" = "الرئيسية";
 "Clinics" = "العيادات";
 "Pay" = "ادفع";
-"Notifications" =  "الأشعارات";
+"Notifications" =  "الإشعارات";
 "Profile" = "الملف";
 "Hello" = "مرحباً";
 "Search by Service" = "البحث عن خدمة";
@@ -23,7 +23,7 @@
 "Monthly" = "شهرياً";
 "Results" = "النتائج";
 "We tried looking;" = "حاولنا البحث";
-"found nothing!" = "ولم نجد شي !";
+"found nothing!" = "ولم نجد شئ !";
 "Clinic Of The Week" = "عيادة الأسبوع";
 "Search by Clinic" = "البحث عن عيادة";
 "Call" = "اتصل";
@@ -62,7 +62,7 @@
 "Settings" = "الإعدادات";
 "Send to a friend" = "أرسل لصديق";
 "Logout" = "تسجيل خروج";
-"Push Notifications" = "Push Notifications";
+"Push Notifications" = "تفعيل الاشعارات";
 "Send Payment Reminders" = "إرسال تذكيرات الدفع";
 "Language" = "اللغة";
 "Rate App" = "قيم التطبيق";
@@ -133,3 +133,26 @@
 "Offers" = "العروض";
 
 "Application status" = "حالة الطلب";
+"Please fill all fields" = "يرجى ملء جميع الحقول";
+"Select one of installment plans" = "اختر واحدة من خطط التقسيط";
+"Select one of payment methods" = "اختر واحدة من وسائل الدفع";
+"Will be available soon" = "سيكون متاحا قريبا";
+"Soon" = "قريبا";
+"Alert!" = "تنبيه!";
+"Please, sign in first" = "من فضلك قم بتسجيل الدخول اولاً";
+"Clinics" = "العيادات";
+"Etisalat Cash" = "اتصالات كاش";
+"Upload receipt reference" = "رفع مرجع الإيصال";
+"Payment pending" = "الدفع قيد الانتظار";
+"No" = "لا";
+"Yes" = "نعم";
+"Confirm!" = "تأكيد!";
+"Would you like to change uploaded photo/s" = "هل ترغب في تغيير الصورة / الصور التي تم تحميلها";
+"You can pay only current unpaid and rejected installments" = "يمكنك فقط دفع الأقساط الحالية غير المسددة والمرفوضة";
+"Attention!" = "!تنبيه";
+"Alert!" = "تنبيه!";
+"You can only upload one image for profile picture" = "يمكنك فقط تحميل صورة واحدة لصورة الملف الشخصي";
+"Upload pdf file" = "تحميل ملف pdf";
+"Please, sign in first" = "من فضلك قم بتسجيل الدخول اولاً";
+"Warning" = "تحذير";
+"You will lose any progress you have done." = "ستفقد أي تقدم قمت به.";

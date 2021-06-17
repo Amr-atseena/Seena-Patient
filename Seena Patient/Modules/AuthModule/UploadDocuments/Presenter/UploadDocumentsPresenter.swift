@@ -31,6 +31,7 @@ class UploadDocumentsPresenter: UploadDocumentsPresenterProtocol {
         self.router = router
         self.status = status
     }
+
     // MARK: - Methods
     func viewDidLoad() {
         documetsType = [

@@ -29,6 +29,7 @@ class ClinicsSearchPresenter: ClinicsSearchPresenterProtocol {
             if MOLHLanguage.isArabic() {
                 options = cities.map { OptionViewModel(name: $0.name) }
                 options.reverse()
+                cities.reversed()
             } else {
                 options = cities.map { OptionViewModel(name: $0.name) }
             }
@@ -51,6 +52,9 @@ class ClinicsSearchPresenter: ClinicsSearchPresenterProtocol {
         interactor?.retriveCities()
         retriveClinicsList()
     }
+
+   var cityName:String?
+
     func retriveClinicsList() {
         if clinics.isEmpty {
             view?.showSkelton()
@@ -58,6 +62,7 @@ class ClinicsSearchPresenter: ClinicsSearchPresenterProtocol {
         let cityId = cities[selectedCityIndex].id
         let parms = ClinicsListParameters(specialityId: speciality.id, cityId: cityId, searchKeyword: searchKeyword, currentPage: page)
         interactor?.retriveClinicsList(withParameters: parms)
+
     }
     func backButtonTapped() {
         router?.go(to: .home)
@@ -88,10 +93,19 @@ class ClinicsSearchPresenter: ClinicsSearchPresenterProtocol {
 // MARK: - ClinicsSearchOutputInteractorProtocol Implementation
 extension ClinicsSearchPresenter: ClinicsSearchOutputInteractorProtocol {
     func onRetriveCities(_ cities: [City]) {
-        self.cities = cities
-        if !options.isEmpty {
-          //  options[0].isSelected = true
+        if MOLHLanguage.isArabic(){
+            self.cities = cities.reversed()
+            if !options.isEmpty {
+              //  options[0].isSelected = true
+            }
+            
+        }else{
+            self.cities = cities
+            if !options.isEmpty {
+              //  options[0].isSelected = true
+            }
         }
+
     }
     func onRetriveClinicsListSuccess(_ clinics: [Clinic]) {
         view?.hideSkelton()
@@ -112,12 +126,24 @@ extension ClinicsSearchPresenter: ClinicsSearchOutputInteractorProtocol {
 extension ClinicsSearchPresenter: OptionsAdapterProtocol {
     func cnofig(optionCell cell: OptionCellProtocol, atIndex index: Int) {
         cell.set(option: options[index])
+
     }
     func optionCell(deSelectedAtIndex index: Int) {
         options[index].isSelected = false
     }
     func optionCell(selectedAtIndex index: Int) {
-        selectedCityIndex = index
+        cityName = options[index].name
+
+        if MOLHLanguage.isArabic(){
+            if cityName == "All" || cityName == "كل المحافظات" {
+            selectedCityIndex = 0
+            } else{
+                selectedCityIndex = index
+
+            }
+        }else{
+            selectedCityIndex = index
+        }
         options[index].isSelected = true
         page = 0
         clinics.removeAll()

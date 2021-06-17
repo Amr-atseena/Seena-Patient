@@ -71,7 +71,7 @@ class FirstSignUpViewController: UIViewController {
     @objc func dateChanged(_ sender: UIDatePicker) {
         let components = Calendar.current.dateComponents([.year, .month, .day], from: sender.date)
         if let day = components.day, let month = components.month, let year = components.year {
-            print("\(day) \(month) \(year)")
+            print("\(day) \(month) \(year)".replacedArabicDigitsWithEnglish)
         }
     }
 
@@ -81,7 +81,7 @@ class FirstSignUpViewController: UIViewController {
         datePicker.datePickerMode = .date
 
         //ToolBar
-        let toolbar = UIToolbar();
+        let toolbar = UIToolbar()
         toolbar.sizeToFit()
         let doneButton = UIBarButtonItem(title: "Done".toLocalize, style: .plain, target: self, action: #selector(doneDatePicker));
         let spaceButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace, target: nil, action: nil)
@@ -89,6 +89,7 @@ class FirstSignUpViewController: UIViewController {
 
         toolbar.setItems([doneButton,spaceButton,cancelButton], animated: false)
 
+        datePicker.translatesAutoresizingMaskIntoConstraints = false
         birthDate.inputAccessoryView = toolbar
         birthDate.inputView = datePicker
     }
@@ -96,8 +97,8 @@ class FirstSignUpViewController: UIViewController {
     @objc func doneDatePicker(){
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd"
-        birthDate.text = formatter.string(from: datePicker.date)
-        selectedDate = formatter.string(from: datePicker.date)
+        birthDate.text = formatter.string(from: datePicker.date).replacedArabicDigitsWithEnglish
+        selectedDate = formatter.string(from: datePicker.date).replacedArabicDigitsWithEnglish
         self.setBirthDate(selectedDate)
         self.view.endEditing(true)
     }
@@ -160,7 +161,7 @@ class FirstSignUpViewController: UIViewController {
 
         if goCallAPI == true{
 
-            let regUser = UserInfo(firstName: firstName.text!, lastName: lastName.text, password: password.text!, phone: phone.text!, email: email.text, birthdate: selectedDate)
+            let regUser = UserInfo(firstName: firstName.text!, lastName: lastName.text, password: password.text!, phone: phone.text!.replacedArabicDigitsWithEnglish, email: email.text, birthdate: selectedDate)
 
             APIClient().signUpFirst(userInfo: regUser) {(res) in
                 self.progressHUD.removeFromSuperview()
@@ -305,3 +306,22 @@ extension FirstSignUpViewController{
 
 }
 
+
+public extension String {
+
+public var replacedArabicDigitsWithEnglish: String {
+    var str = self
+    let map = ["٠": "0",
+               "١": "1",
+               "٢": "2",
+               "٣": "3",
+               "٤": "4",
+               "٥": "5",
+               "٦": "6",
+               "٧": "7",
+               "٨": "8",
+               "٩": "9"]
+    map.forEach { str = str.replacingOccurrences(of: $0, with: $1) }
+    return str
+}
+}

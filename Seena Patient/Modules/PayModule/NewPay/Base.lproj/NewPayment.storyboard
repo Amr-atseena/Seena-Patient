@@ -396,7 +396,7 @@
                                 <rect key="frame" x="0.0" y="111.5" width="414" height="784.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scan merchant QR code" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qUZ-Lj-owl">
-                                        <rect key="frame" x="20" y="30" width="225" height="28"/>
+                                        <rect key="frame" x="20" y="30" width="374" height="28"/>
                                         <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
                                         <color key="textColor" red="0.015686274510000001" green="0.17254901959999999" blue="0.36078431370000003" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -433,6 +433,7 @@
                                     <constraint firstItem="BcQ-5l-wJc" firstAttribute="centerX" secondItem="9aD-ed-RcI" secondAttribute="centerX" id="cEd-mL-urC"/>
                                     <constraint firstItem="qUZ-Lj-owl" firstAttribute="leading" secondItem="9aD-ed-RcI" secondAttribute="leading" constant="20" id="gDM-7E-qdO"/>
                                     <constraint firstItem="BcQ-5l-wJc" firstAttribute="top" secondItem="qUZ-Lj-owl" secondAttribute="bottom" constant="150" id="hs6-4E-w4s"/>
+                                    <constraint firstAttribute="trailing" secondItem="qUZ-Lj-owl" secondAttribute="trailing" constant="20" id="tFH-59-rex"/>
                                 </constraints>
                             </view>
                         </subviews>

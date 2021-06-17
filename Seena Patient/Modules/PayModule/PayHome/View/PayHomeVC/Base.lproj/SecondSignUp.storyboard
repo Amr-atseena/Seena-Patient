@@ -18,8 +18,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wMS-a9-ecR">
+                                <rect key="frame" x="20" y="98" width="22" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="22" id="CdR-v1-DvT"/>
+                                    <constraint firstAttribute="height" constant="20" id="nVg-Hl-N4X"/>
+                                </constraints>
+                                <state key="normal" image="back-1"/>
+                                <connections>
+                                    <action selector="back:" destination="lOK-qD-fIM" eventType="touchUpInside" id="KUK-ku-aUJ"/>
+                                </connections>
+                            </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Le4-iL-CSg">
-                                <rect key="frame" x="20" y="138" width="374" height="173"/>
+                                <rect key="frame" x="20" y="168" width="374" height="173"/>
                                 <subviews>
                                     <textField hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Birthdate (Optinal)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6Hi-3M-VOp" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="0.0"/>
@@ -217,16 +228,19 @@
                         <viewLayoutGuide key="safeArea" id="VM7-zX-htU"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="wMS-a9-ecR" firstAttribute="top" secondItem="VM7-zX-htU" secondAttribute="top" constant="10" id="Bng-b6-HgV"/>
+                            <constraint firstItem="wMS-a9-ecR" firstAttribute="leading" secondItem="VM7-zX-htU" secondAttribute="leading" constant="20" id="I1B-v5-e8H"/>
                             <constraint firstItem="VM7-zX-htU" firstAttribute="trailing" secondItem="bxn-vz-ieV" secondAttribute="trailing" constant="20" id="IQX-qz-3JT"/>
                             <constraint firstItem="Le4-iL-CSg" firstAttribute="leading" secondItem="VM7-zX-htU" secondAttribute="leading" constant="20" id="IoW-yA-QcP"/>
                             <constraint firstItem="VM7-zX-htU" firstAttribute="trailing" secondItem="Le4-iL-CSg" secondAttribute="trailing" constant="20" id="M3G-B8-gaQ"/>
-                            <constraint firstItem="Le4-iL-CSg" firstAttribute="top" secondItem="VM7-zX-htU" secondAttribute="top" constant="50" id="SLd-wc-E0H"/>
+                            <constraint firstItem="Le4-iL-CSg" firstAttribute="top" secondItem="wMS-a9-ecR" secondAttribute="bottom" constant="50" id="Z5M-9Q-XWE"/>
                             <constraint firstItem="bxn-vz-ieV" firstAttribute="leading" secondItem="VM7-zX-htU" secondAttribute="leading" constant="20" id="oCr-EM-Dwa"/>
                             <constraint firstItem="VM7-zX-htU" firstAttribute="bottom" secondItem="bxn-vz-ieV" secondAttribute="bottom" constant="50" id="pTc-2F-W2o"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Yak-Jc-cDT"/>
                     <connections>
+                        <outlet property="backBtn" destination="wMS-a9-ecR" id="Ht0-Mg-nfv"/>
                         <outlet property="financialProof" destination="bDh-21-OSl" id="Kmg-lY-38U"/>
                         <outlet property="idType" destination="tL9-VL-7vT" id="iMA-Wn-Sga"/>
                         <outlet property="nextBtn" destination="pUC-G8-5dT" id="nBg-0S-Ekj"/>
@@ -274,6 +288,7 @@
         </designable>
     </designables>
     <resources>
+        <image name="back-1" width="22" height="14"/>
         <image name="phase1" width="70" height="10"/>
         <namedColor name="primaryActionText">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

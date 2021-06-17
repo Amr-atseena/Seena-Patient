@@ -12,6 +12,7 @@ import UIKit
 enum PayHomeRoute {
     case paymentChannel(installment: Installment)
     case calculate
+    case notActive
 }
 protocol PayHomeRouterProtocol {
     // Presenter -> Router

@@ -15,6 +15,7 @@ struct PaymentDueViewModel {
     private(set) var clinicPlaceHolder: String
     private(set) var paymentDate: String
     private(set) var status: String
+    private(set) var statusar: String
     private(set) var active: Int
 
     // MARK: - Init
@@ -29,6 +30,7 @@ struct PaymentDueViewModel {
         paymentDate = dateFormatter.string(from: date)
         status = installment.status
         active = installment.active
+        statusar = installment.statusar
     }
 }
 extension StringProtocol {

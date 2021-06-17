@@ -44,7 +44,7 @@ class PaymentSuccessVC: UIViewController, PaymentSuccessViewProtocol {
         doneButton.titleLabel?.font = DesignSystem.Typography.subHeading3.font
         // paymentSuccessKeyword Label
 //        paymentSuccessKeywordLabel.text = presenter.localization.paymentSuccess
-        paymentSuccessKeywordLabel.text = "Payment pending"
+        paymentSuccessKeywordLabel.text = "Payment pending".localized
         paymentSuccessKeywordLabel.font = DesignSystem.Typography.heading.font
         // amount Label
         amountLabel.font = DesignSystem.Typography.heading.font

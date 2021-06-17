@@ -16,10 +16,11 @@ class CompleteSignStageOneViewController: UIViewController, UIPickerViewDelegate
     @IBOutlet weak var residenceProof: SkyFloatingLabelTextField!
 
     @IBOutlet weak var nextBtn: UIButton!
+    @IBOutlet weak var backBtn: UIButton!
 
     var presenter: SignUpPresenterProtocol!
     var router: SignUpRouterProtocol?
-
+    var viewController : UIViewController?
     var currentTextField = SkyFloatingLabelTextField()
 
     let id = ["National ID".toLocalize,"Passport".toLocalize]
@@ -72,6 +73,9 @@ class CompleteSignStageOneViewController: UIViewController, UIPickerViewDelegate
         idPicker.tag = 1
         finPicker.tag = 2
         resdPicker.tag = 3
+
+
+        viewController?.hidesBottomBarWhenPushed = true
 
     }
     
@@ -319,5 +323,11 @@ class CompleteSignStageOneViewController: UIViewController, UIPickerViewDelegate
         //api call
         //        self.presenter.bankSelected(atIndex: Int(selectedValue) ?? 0)
     }
+
+    @IBAction func back(_ sender: Any) {
+        _ = navigationController?.popViewController(animated: true)
+
+    }
+
 
 }

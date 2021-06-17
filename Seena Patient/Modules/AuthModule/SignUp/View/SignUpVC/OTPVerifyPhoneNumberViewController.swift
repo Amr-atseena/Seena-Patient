@@ -142,7 +142,7 @@ class OTPVerifyPhoneNumberViewController: UIViewController, UITextFieldDelegate 
         print(abc)
         self.view.addSubview(progressHUD)
 
-        APIClient().postOTPSignUp(otp: abc) { (res) in
+        APIClient().postOTPSignUp(otp: abc.replacedArabicDigitsWithEnglish) { (res) in
             print(res)
             self.progressHUD.removeFromSuperview()
 

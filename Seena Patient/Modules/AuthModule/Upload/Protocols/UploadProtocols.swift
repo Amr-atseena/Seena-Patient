@@ -47,6 +47,7 @@ protocol UploadPresenterProtocol: class {
     func config(UploadImageCell cell: UploadImageCellProtocol, atIndex index: Int)
     func deleteImageButtonTapped(atIndex index: Int)
     var numberOfImages: Int { get }
+    var docType: Int { get }
 }
 // MARK: - Upload View
 protocol UploadViewProtocol: class {

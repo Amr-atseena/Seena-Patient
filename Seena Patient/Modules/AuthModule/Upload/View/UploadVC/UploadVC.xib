@@ -17,6 +17,7 @@
                 <outlet property="loadingIndictor" destination="aGZ-b7-NCS" id="b94-VR-8Xx"/>
                 <outlet property="uploadButton" destination="deA-PZ-MYG" id="tMK-R8-483"/>
                 <outlet property="uploadKeywordLabel" destination="SEG-re-HKc" id="SaR-VJ-3hE"/>
+                <outlet property="uploadPdfBtn" destination="PVt-Tq-lBz" id="uhS-X3-1w5"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -47,17 +48,35 @@
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aBZ-xk-b2G" customClass="AnimatableView" customModule="IBAnimatable">
                                             <rect key="frame" x="0.0" y="0.0" width="334" height="180"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Xaa-OC-1rz">
-                                                    <rect key="frame" x="20" y="45" width="294" height="90.5"/>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Xaa-OC-1rz">
+                                                    <rect key="frame" x="20" y="40.5" width="294" height="99"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Upload the required documents" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SEG-re-HKc">
-                                                            <rect key="frame" x="26.5" y="0.0" width="241" height="20.5"/>
+                                                            <rect key="frame" x="26.5" y="0.0" width="241" height="29"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <color key="textColor" name="secondaryText"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
+                                                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PVt-Tq-lBz" customClass="AnimatableButton" customModule="IBAnimatable">
+                                                            <rect key="frame" x="96.5" y="39" width="101" height="50"/>
+                                                            <color key="backgroundColor" name="primaryBorder"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="50" id="GHU-Qc-uOy"/>
+                                                            </constraints>
+                                                            <state key="normal" title="Upload pdf file">
+                                                                <color key="titleColor" name="primaryActionText"/>
+                                                            </state>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                    <real key="value" value="8"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                            <connections>
+                                                                <action selector="uploadPdf:" destination="-1" eventType="touchUpInside" id="OaW-s5-omU"/>
+                                                            </connections>
+                                                        </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="deA-PZ-MYG" customClass="AnimatableButton" customModule="IBAnimatable">
-                                                            <rect key="frame" x="44" y="40.5" width="206" height="50"/>
+                                                            <rect key="frame" x="44" y="49" width="206" height="50"/>
                                                             <color key="backgroundColor" name="primaryBorder"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="50" id="dTv-Dh-XRB"/>
@@ -176,6 +195,9 @@
         </view>
     </objects>
     <designables>
+        <designable name="PVt-Tq-lBz">
+            <size key="intrinsicContentSize" width="101" height="30"/>
+        </designable>
         <designable name="TeZ-rh-IkP">
             <size key="intrinsicContentSize" width="41" height="30"/>
         </designable>

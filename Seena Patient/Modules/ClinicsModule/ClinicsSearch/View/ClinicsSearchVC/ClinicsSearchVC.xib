@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -17,6 +17,7 @@
                 <outlet property="resultsKeyordLabel" destination="zxb-4o-uAS" id="rhD-ln-a2q"/>
                 <outlet property="searchTextFiled" destination="BS4-mK-Jcg" id="zWv-k3-3I7"/>
                 <outlet property="spicialityLabel" destination="R0S-0h-xHt" id="3At-HE-dpW"/>
+                <outlet property="triedAr" destination="U7d-6A-3qo" id="CwY-Cm-DR4"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -120,6 +121,13 @@
                                 <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
                             </userDefinedRuntimeAttributes>
                         </tableView>
+                        <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WeTriedAr" translatesAutoresizingMaskIntoConstraints="NO" id="U7d-6A-3qo">
+                            <rect key="frame" x="84.5" y="374" width="245" height="148"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="148" id="97k-TN-leN"/>
+                                <constraint firstAttribute="width" constant="245" id="sLd-fr-yca"/>
+                            </constraints>
+                        </imageView>
                         <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p58-8f-KNK" customClass="EmptyStateView" customModule="Seena" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="239" width="414" height="657"/>
                             <color key="backgroundColor" red="0.97254901959999995" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -136,12 +144,14 @@
                         <constraint firstItem="KwU-3G-FP8" firstAttribute="leading" secondItem="XxY-ng-Zav" secondAttribute="leading" id="Ned-B7-c9k"/>
                         <constraint firstItem="p58-8f-KNK" firstAttribute="centerX" secondItem="KwU-3G-FP8" secondAttribute="centerX" id="Q7u-G7-cKo"/>
                         <constraint firstItem="DQT-jp-xa2" firstAttribute="top" secondItem="Cni-Of-2Sc" secondAttribute="bottom" constant="15" id="SRh-z3-YDN"/>
+                        <constraint firstItem="U7d-6A-3qo" firstAttribute="centerY" secondItem="XxY-ng-Zav" secondAttribute="centerY" id="VHQ-io-M50"/>
                         <constraint firstAttribute="trailing" secondItem="KwU-3G-FP8" secondAttribute="trailing" id="YRw-lq-aMQ"/>
                         <constraint firstAttribute="bottom" secondItem="KwU-3G-FP8" secondAttribute="bottom" id="fRC-MH-cRc"/>
                         <constraint firstItem="Cni-Of-2Sc" firstAttribute="leading" secondItem="XxY-ng-Zav" secondAttribute="leading" constant="20" id="h3K-5O-LqT"/>
                         <constraint firstAttribute="trailing" secondItem="Cni-Of-2Sc" secondAttribute="trailing" constant="20" id="ke2-8Q-u6c"/>
                         <constraint firstAttribute="trailing" secondItem="DQT-jp-xa2" secondAttribute="trailing" id="rOE-Nl-6vH"/>
                         <constraint firstItem="KwU-3G-FP8" firstAttribute="top" secondItem="DQT-jp-xa2" secondAttribute="bottom" constant="15" id="sgf-g2-kwA"/>
+                        <constraint firstItem="U7d-6A-3qo" firstAttribute="centerX" secondItem="XxY-ng-Zav" secondAttribute="centerX" id="uk3-bY-M05"/>
                         <constraint firstItem="DQT-jp-xa2" firstAttribute="leading" secondItem="XxY-ng-Zav" secondAttribute="leading" id="vgK-ya-Z0g"/>
                     </constraints>
                     <userDefinedRuntimeAttributes>
@@ -162,10 +172,11 @@
             <userDefinedRuntimeAttributes>
                 <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
             </userDefinedRuntimeAttributes>
-            <point key="canvasLocation" x="141" y="125"/>
+            <point key="canvasLocation" x="140.57971014492756" y="124.55357142857142"/>
         </view>
     </objects>
     <resources>
+        <image name="WeTriedAr" width="84" height="152.5"/>
         <image name="back" width="25" height="25"/>
         <image name="search" width="20" height="20"/>
         <systemColor name="systemBackgroundColor">

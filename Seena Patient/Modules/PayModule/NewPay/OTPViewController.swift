@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MOLH
 
 class OTPViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var mainView: UIView!
@@ -103,12 +104,17 @@ class OTPViewController: UIViewController, UITextFieldDelegate {
 
         fullOTP = firstTF.text! + secondTF.text! + thirdTF.text! + fourthTF.text!
 
+//        if MOLHLanguage.isArabic(){
+//            fullOTP = fourthTF.text! + thirdTF.text! + secondTF.text! + firstTF.text!
+//        }else{
+//            fullOTP = firstTF.text! + secondTF.text! + thirdTF.text! + fourthTF.text!
+//        }
         print(fullOTP)
 
         if firstTF.text == "" ||  secondTF.text == "" || thirdTF.text == "" || fourthTF.text == "" {
 
             self.progressHUD.removeFromSuperview()
-            showAlertController(title: "Error!", message: "Please fill all fields", actions: [])
+            showAlertController(title: "Error!".localized, message: "Please fill all fields".localized, actions: [])
 
         }else{
 
@@ -127,7 +133,7 @@ class OTPViewController: UIViewController, UITextFieldDelegate {
                 self.present(newViewController!, animated: true, completion: nil)
             } onError: { (error) in
                 self.progressHUD.removeFromSuperview()
-                self.showAlertController(title: "Error!", message: error, actions: [])
+                self.showAlertController(title: "Error!".localized, message: error, actions: [])
             }
 
 

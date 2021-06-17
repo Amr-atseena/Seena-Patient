@@ -9,6 +9,7 @@
 import UIKit
 import UIScrollView_InfiniteScroll
 import SkeletonView
+import MOLH
 class ClinicsSearchVC: UIViewController, ClinicsSearchViewProtocol {
     // MARK: - Outlets
     @IBOutlet private var resultsKeyordLabel: UILabel!
@@ -16,6 +17,7 @@ class ClinicsSearchVC: UIViewController, ClinicsSearchViewProtocol {
     @IBOutlet private var searchTextFiled: UITextField!
     @IBOutlet private var noResultsView: UIView!
     @IBOutlet private var clinicsResultsTableView: UITableView!
+    @IBOutlet weak var triedAr: UIImageView!
     @IBOutlet private var citiesCollectionView: UICollectionView!
     // MARK: - Attributes
     var presenter: ClinicsSearchPresenterProtocol!
@@ -82,10 +84,18 @@ class ClinicsSearchVC: UIViewController, ClinicsSearchViewProtocol {
         clinicsResultsTableView.hideSkeleton()
     }
     func showNoDataView() {
-        self.noResultsView.isHidden = false
+        if MOLHLanguage.isArabic(){
+            triedAr.isHidden = false
+            self.noResultsView.isHidden = true
+        }else{
+            triedAr.isHidden = true
+            self.noResultsView.isHidden = false
+
+        }
     }
     func hideNoDataView() {
         self.noResultsView.isHidden = true
+        triedAr.isHidden = true
     }
     // MARK: - Actions
     @IBAction private func didTapBackButton(_ sender: UIButton) {

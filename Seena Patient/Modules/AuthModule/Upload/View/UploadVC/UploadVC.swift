@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import MobileCoreServices
+
 
 class UploadVC: UIViewController, UploadViewProtocol {
     // MARK: - Outlets
@@ -15,8 +17,10 @@ class UploadVC: UIViewController, UploadViewProtocol {
     @IBOutlet private var finishButton: UIButton!
     @IBOutlet private var imagesCollectionView: UICollectionView!
     @IBOutlet private var loadingIndictor: UIActivityIndicatorView!
+    @IBOutlet weak var uploadPdfBtn: UIButton!
     // MARK: - Attributes
     var presenter: UploadPresenterProtocol!
+    var viewController : UIViewController?
     private lazy var imagePicker: ImagePicker = {
         return ImagePicker(presentationController: self, delegate: self)
     }()
@@ -32,6 +36,15 @@ class UploadVC: UIViewController, UploadViewProtocol {
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter.viewDidLoad()
+        viewController?.hidesBottomBarWhenPushed = true
+
+        uploadPdfBtn.setTitle("Upload pdf file".toLocalize, for: .normal)
+
+        if presenter.docType == 2 || presenter.docType == 3 {
+            uploadPdfBtn.isHidden = false
+        }else{
+            uploadPdfBtn.isHidden = true
+        }
     }
     // MARK: - Methods
     func setupUI() {
@@ -72,18 +85,57 @@ class UploadVC: UIViewController, UploadViewProtocol {
     }
     // MARK: - Actions
     @IBAction func didTapUploadButton(_ sender: UIButton) {
-        presenter.uploadButtonTapped()
+//        if presenter.docType == 0 {
+//            if presenter.numberOfImages == 1 {
+//                showAlertController(title: "Alert!".toLocalize, message: "You can only upload one image for profile picture".toLocalize, actions: [])
+//            }else{
+//                presenter.uploadButtonTapped()
+//            }
+//        }else{
+            presenter.uploadButtonTapped()
+//        }
+
     }
     @IBAction func didTapBackButton(_ sender: UIButton) {
-        presenter.backButtonTapped()
+//        if presenter.numberOfImages == 0 {
+            self.presenter.backButtonTapped()
+//        }else{
+//            let noAction = UIAlertAction(title: "No".localized, style: .default) {  (_) in
+//                self.presenter.backButtonTapped()
+//            }
+//            let yesAction = UIAlertAction(title: "Yes".localized, style: .default, handler: nil)
+//
+//            self.showAlertController(title: "Confirm!".toLocalize, message: "Would you like to change uploaded photo/s".toLocalize, actions: [noAction,yesAction])
+//        }
+
+
     }
     @IBAction func didTapFinishButton(_ sender: UIButton) {
-        presenter.finishButtonTapped()
+//        let noAction = UIAlertAction(title: "No".localized, style: .default) {  (_) in
+            self.presenter.finishButtonTapped()
+//        }
+//        let yesAction = UIAlertAction(title: "Yes".localized, style: .default, handler: nil)
+//
+//        self.showAlertController(title: "Confirm!".toLocalize, message: "Would you like to change uploaded photo/s".toLocalize, actions: [noAction,yesAction])
     }
     // MARK: - DeInit
     deinit {
-         debugPrint(UploadVC.className + " Release from Momery")
+        debugPrint(UploadVC.className + " Release from Momery")
     }
+
+
+    var types = [kUTTypePDF]
+
+    @IBAction func uploadPdf(_ sender: Any) {
+        let documentPicker = UIDocumentPickerViewController(documentTypes: types as [String] , in: .import)
+        documentPicker.delegate = self
+        documentPicker.modalPresentationStyle = .formSheet
+        self.present(documentPicker, animated: true, completion: nil)
+    }
+
+
+
+
 }
 // MARK: - ImagePickerDelegate Implementation
 extension UploadVC: ImagePickerDelegate {
@@ -125,4 +177,30 @@ extension UploadVC: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
     }
+}
+
+
+extension UploadVC: UIDocumentPickerDelegate,UINavigationControllerDelegate
+{
+    //MARK: Document Picker Delegate
+    public func documentPicker(_ controller: UIDocumentPickerViewController, didPickDocumentsAt urls: [URL]) {
+
+        /* Picker pick the specified Document and Given output as URL format */
+
+        guard let myURL = urls.first else {
+            return
+        }
+        print("import result : \(myURL)")
+
+
+    }
+
+    func documentPickerWasCancelled(_ controller: UIDocumentPickerViewController) {
+
+        // Picker Cancelled
+        print("view was cancelled")
+        dismiss(animated: true, completion: nil)
+    }
+
+
 }

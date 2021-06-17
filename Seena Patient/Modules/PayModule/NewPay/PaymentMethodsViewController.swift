@@ -32,6 +32,7 @@ class PaymentMethodsViewController: UIViewController {
 
     var whichInstallment : Int?
     var arrayOfValues = [Int]()
+    var oneOfPaymentMethodsSelected: Bool?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -109,8 +110,9 @@ class PaymentMethodsViewController: UIViewController {
         valuImg.image = UIImage(named: "unselected")
         installmentStackView.isHidden = true
         whichInstallment = 0
+        oneOfPaymentMethodsSelected = false
 
-        showAlertController(title: "Soon", message: "Will be avaliable soon", actions: [])
+        showAlertController(title: "Soon".localized, message: "Will be available soon".localized, actions: [])
     }
 
     @objc func installmentAction(sender : UITapGestureRecognizer) {
@@ -120,6 +122,7 @@ class PaymentMethodsViewController: UIViewController {
         installmentImg.image = UIImage(named: "selected")
         walletImg.image = UIImage(named: "unselected")
         valuImg.image = UIImage(named: "unselected")
+        oneOfPaymentMethodsSelected = true
 
         installmentStackView.isHidden = false
     }
@@ -130,8 +133,9 @@ class PaymentMethodsViewController: UIViewController {
         walletImg.image = UIImage(named: "unselected")
         installmentStackView.isHidden = true
         whichInstallment = 0
+        oneOfPaymentMethodsSelected = false
 
-        showAlertController(title: "Soon", message: "Will be avaliable soon", actions: [])
+        showAlertController(title: "Soon".localized, message: "Will be available soon".localized, actions: [])
     }
 
 
@@ -196,8 +200,13 @@ class PaymentMethodsViewController: UIViewController {
 
     @IBAction func next(_ sender: Any) {
 
+
+
         if installmentStackView.isHidden == false && selectedMo == nil {
-            showAlertController(title: "Error!", message: "Select one of installment plans", actions: [])
+            showAlertController(title: "Error!".localized, message: "Select one of installment plans".toLocalize, actions: [])
+        }else if oneOfPaymentMethodsSelected == nil || oneOfPaymentMethodsSelected == false{
+            showAlertController(title: "Error!".localized, message: "Select one of payment methods".localized, actions: [])
+
         }else{
             let storyBoard: UIStoryboard = UIStoryboard(name: "NewPayment", bundle: nil)
             let newViewController = storyBoard.instantiateViewController(withIdentifier: "ScanQRViewController") as? ScanQRViewController

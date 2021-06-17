@@ -27,8 +27,14 @@ class HomeTabBarVC: UITabBarController {
         customTabBar.barTintColor = DesignSystem.Colors.selectedTabBar.color
         customTabBar.unselectedItemTintColor = DesignSystem.Colors.unSelectedTabBar.color
         customTabBar.centerButtonActionHandler = { [weak self] in
+            let isSigned = UserDefaults.standard.bool(forKey: "Signin")
+
+            if isSigned == true {
             guard let self = self else { return }
             self.selectedIndex = 2
+            }else{
+                self?.showAlertController(title: "Alert!".toLocalize, message: "Please, sign in first".toLocalize, actions: [])
+            }
         }
         self.setValue(customTabBar, forKey: "tabBar")
     }
@@ -36,6 +42,7 @@ class HomeTabBarVC: UITabBarController {
 //        let home = UINavigationController(rootViewController: HomeRouter.assembleModule())
 //        home.tabBarItem = UITabBarItem(title: localization.home, image: #imageLiteral(resourceName: "home"), tag: 0)
 //        return home
+
 
                 let pay = UINavigationController(rootViewController: PayHomeRouter.assembleModule())
                 pay.tabBarItem = UITabBarItem(title: localization.home, image: #imageLiteral(resourceName: "home"), tag: 0)
@@ -56,11 +63,15 @@ class HomeTabBarVC: UITabBarController {
 //        pay.tabBarItem = UITabBarItem()
 //        return pay
 
+
         let storyBoard: UIStoryboard = UIStoryboard(name: "NewPayment", bundle: nil)
         let newViewController = storyBoard.instantiateViewController(withIdentifier: "CheckoutViewController") as? CheckoutViewController
         newViewController!.modalPresentationStyle = .fullScreen
         navigationController?.pushViewController(newViewController!, animated: true)
         return newViewController!
+
+
+
     }
     private func notificationsModule() -> UIViewController {
         let notifications = UINavigationController(rootViewController: NotificationsHomeRouter.assembleModule())

@@ -39,11 +39,20 @@ class UploadDocumentsRouter: UploadDocumentsRouterProtocol {
         let okAction = UIAlertAction(title: "Ok".localized, style: .default) {  (_) in
             self.viewController?.navigationController?.popViewController(animated: true)
         }
-        viewController?.showAlertController(title: "Warning", message: "You will loss any progress you have done.", actions: [okAction, cancelAction])
+        viewController?.showAlertController(title: "Warning".toLocalize, message: "You will lose any progress you have done.".toLocalize, actions: [okAction, cancelAction])
 
     }
     private func navigateToFinishSignUp() {
-        viewController?.navigationController?.setViewControllers([FinishSignUpVC()], animated: true)
+        
+//        viewController?.navigationController?.setViewControllers([FinishSignUpVC()], animated: true)
+
+
+        // I make this navi to hide bottom toolbar
+        let aaaaa = FinishSignUpVC()
+        aaaaa.hidesBottomBarWhenPushed = true
+        viewController?.navigationController?.pushViewController(aaaaa, animated: true)
+
+
     }
     private func navigateToUpload(withDocumentTypeIndex index: Int) {
         guard let uploadDoc = viewController as? UploadDocumentsViewProtocol else {
@@ -53,6 +62,7 @@ class UploadDocumentsRouter: UploadDocumentsRouterProtocol {
         UploadRouter.reloadStatus = { (status) in
             uploadDoc.presenter.updateStatus(status)
         }
+        
         viewController?.navigationController?.pushViewController(uploadVC, animated: true)
     }
 }

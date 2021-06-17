@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MOLH
 
 class PayHomeVC: UIViewController, PayHomeViewProtocol {
     // MARK: - Outlets
@@ -28,6 +29,7 @@ class PayHomeVC: UIViewController, PayHomeViewProtocol {
 
     @IBOutlet weak var applyBtn: UIButton!
     @IBOutlet weak var youHaveLbl: UILabel!
+    @IBOutlet weak var getYourSeenaImage: UIImageView!
 
 
     // MARK: - Attributes
@@ -120,6 +122,12 @@ class PayHomeVC: UIViewController, PayHomeViewProtocol {
     func showGetYourSeenaView(){
         getYourSeenaView.isHidden = false
 
+        if MOLHLanguage.isArabic() {
+            getYourSeenaImage.image = UIImage(named: "GetYourCreditAr")
+        }else{
+            getYourSeenaImage.image = UIImage(named: "GetYourSeena")
+        }
+
 
         let signed = UserDefaults.standard.bool(forKey: "Signin")
 
@@ -171,6 +179,7 @@ class PayHomeVC: UIViewController, PayHomeViewProtocol {
     @IBAction func apply(_ sender: Any) {
         let storyBoard: UIStoryboard = UIStoryboard(name: "SecondSignUp", bundle: nil)
         let newViewController = storyBoard.instantiateViewController(withIdentifier: "CompleteSignStageOneViewController") as? CompleteSignStageOneViewController
+        newViewController!.hidesBottomBarWhenPushed = true
         self.navigationController?.pushViewController(newViewController!, animated: true)
 //        newViewController!.modalPresentationStyle = .fullScreen
 //        self.present(newViewController!, animated: true, completion: nil)
@@ -182,7 +191,7 @@ class PayHomeVC: UIViewController, PayHomeViewProtocol {
         presenter.payButtonTapped()
     }
     @IBAction private func didTapCalculateButton(_ sender: UIButton) {
-        presenter.calculateButtonTapped()
+//        presenter.calculateButtonTapped()
     }
     // MARK: - DeInit
     deinit {

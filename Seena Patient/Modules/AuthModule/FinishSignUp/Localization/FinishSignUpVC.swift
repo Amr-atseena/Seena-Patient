@@ -18,6 +18,14 @@ class FinishSignUpVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setToolbarHidden(true, animated: animated)
+        self.hidesBottomBarWhenPushed = true
+
     }
     // MARK: - Methods
     func setupUI() {

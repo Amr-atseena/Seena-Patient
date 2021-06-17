@@ -14,6 +14,9 @@ class NotificationsHomeVC: UIViewController, NotificationsHomeViewProtocol {
     @IBOutlet private var notificationTableView: UITableView!
     @IBOutlet private var loadingIndictor: UIActivityIndicatorView!
     @IBOutlet private var noDataView: UIView!
+    @IBOutlet weak var weTried: UILabel!
+    @IBOutlet weak var foundNothing: UILabel!
+
     // MARK: - Attributes
     var presenter: NotificationsHomePresenterProtocol!
     // MARK: - Init
@@ -28,6 +31,8 @@ class NotificationsHomeVC: UIViewController, NotificationsHomeViewProtocol {
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter.viewDidLoad()
+        weTried.text = "We tried looking;".toLocalize
+        foundNothing.text = "found nothing!".toLocalize
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)

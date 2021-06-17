@@ -135,7 +135,14 @@ class ScanQRViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
     }
 
     func found(code: String) {
-        print(code)
+        let dateFormatter : DateFormatter = DateFormatter()
+          dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+//        dateFormatter.dateFormat = "yyyy-MMM-dd HH:mm:ss"
+        let date = Date()
+        let dateString = dateFormatter.string(from: date)
+        let interval = date.timeIntervalSince1970
+
+        print("Code is: \(code), Time is: \(dateString)")
 
         theCode = code
         

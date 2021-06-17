@@ -28,6 +28,10 @@ class UploadPresenter: UploadPresenterProtocol {
     var numberOfImages: Int {
         return selectedImages.count
     }
+
+    var docType: Int {
+        return documentType
+    }
     // MARK: - Init
     init(view: UploadViewProtocol?,
          interactor: UploadInputInteractorProtocol,

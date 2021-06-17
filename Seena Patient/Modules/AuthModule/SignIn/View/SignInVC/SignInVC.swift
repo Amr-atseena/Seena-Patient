@@ -8,6 +8,8 @@
 
 import UIKit
 import SkyFloatingLabelTextField
+import MobileCoreServices
+
 class SignInVC: UIViewController, SignInViewProtocol {
     // MARK: - Outlets
     @IBOutlet private var welcomeKeywordLabel: UILabel!
@@ -85,10 +87,10 @@ class SignInVC: UIViewController, SignInViewProtocol {
         }
     }
     @IBAction private func didSignInButtonTapped(_ sender: UIButton) {
-        presenter.signInButtonTapped(withPhone: phoneTextFiled.text, andPassword: passwordTextFiled.text)
+        presenter.signInButtonTapped(withPhone: phoneTextFiled.text?.replacedArabicDigitsWithEnglish, andPassword: passwordTextFiled.text)
     }
     @IBAction private func didSignUpButtonTapped(_ sender: UIButton) {
-//        presenter.signUpButtonTapped()
+        //        presenter.signUpButtonTapped()
 
         let storyBoard: UIStoryboard = UIStoryboard(name: "SignUp", bundle: nil)
         let newViewController = storyBoard.instantiateViewController(withIdentifier: "FirstSignUpViewController") as? FirstSignUpViewController
@@ -101,6 +103,11 @@ class SignInVC: UIViewController, SignInViewProtocol {
     }
     // MARK: - DeInit
     deinit {
-         debugPrint(SignInVC.className + " Release from Momery")
+        debugPrint(SignInVC.className + " Release from Momery")
     }
+
+
+
+
+
 }

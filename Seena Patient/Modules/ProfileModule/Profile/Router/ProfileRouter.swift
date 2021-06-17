@@ -58,7 +58,7 @@ class ProfileRouter: ProfileRouterProtocol {
         // Setting description
         let firstActivityItem = "سينا لتقسيط عمليات التجميل والأسنان والسمنة بدون فوائد، بدون مقدم وأقل عمولة في مصر"
         // Setting url
-        let secondActivityItem = URL(string: "https://ar.seenapay.com/")!
+        let secondActivityItem = URL(string: "https://apps.apple.com/eg/app/seena-pay/id1539209003")!
         // If you want to use an image
         let image  = #imageLiteral(resourceName: "Seena-Logo")
         let activityViewController  = UIActivityViewController(
