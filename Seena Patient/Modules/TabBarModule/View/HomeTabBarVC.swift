@@ -39,23 +39,27 @@ class HomeTabBarVC: UITabBarController {
         self.setValue(customTabBar, forKey: "tabBar")
     }
     private func homeModule() -> UIViewController {
-//        let home = UINavigationController(rootViewController: HomeRouter.assembleModule())
-//        home.tabBarItem = UITabBarItem(title: localization.home, image: #imageLiteral(resourceName: "home"), tag: 0)
-//        return home
+        let home = UINavigationController(rootViewController: HomeRouter.assembleModule())
+        home.tabBarItem = UITabBarItem(title: localization.home, image: #imageLiteral(resourceName: "home"), tag: 0)
+        return home
 
 
-                let pay = UINavigationController(rootViewController: PayHomeRouter.assembleModule())
-                pay.tabBarItem = UITabBarItem(title: localization.home, image: #imageLiteral(resourceName: "home"), tag: 0)
-                return pay
+//                let pay = UINavigationController(rootViewController: PayHomeRouter.assembleModule())
+//                pay.tabBarItem = UITabBarItem(title: localization.home, image: #imageLiteral(resourceName: "home"), tag: 0)
+//                return pay
     }
     
     private func clinicsModule() -> UIViewController {
 //        let clinics = UINavigationController(rootViewController: ClinicsHomeRouter.assembleModule())
 //        clinics.tabBarItem = UITabBarItem(title: localization.clinics, image: #imageLiteral(resourceName: "Clinics"), tag: 1)
 //        return clinics
-        let home = UINavigationController(rootViewController: HomeRouter.assembleModule())
-        home.tabBarItem = UITabBarItem(title: localization.clinics, image: #imageLiteral(resourceName: "Clinics"), tag: 1)
-        return home
+//        let home = UINavigationController(rootViewController: HomeRouter.assembleModule())
+//        home.tabBarItem = UITabBarItem(title: localization.clinics, image: #imageLiteral(resourceName: "Clinics"), tag: 1)
+//        return home
+
+                        let pay = UINavigationController(rootViewController: PayHomeRouter.assembleModule())
+                        pay.tabBarItem = UITabBarItem(title: localization.home, image: #imageLiteral(resourceName: "transaction"), tag: 0)
+                        return pay
 
     }
     private func payModule() -> UIViewController {

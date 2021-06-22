@@ -64,12 +64,20 @@ extension ProfilePresenter: ProfileOutputInteractorProtocol {
     func onRetrieApplicationStatusSuccess(_ status: String) {
         switch status {
         case "pending":
-            view?.setApplicationStatus(status: "pending".localized, color: DesignSystem.Colors.pending.color)
+            view?.setApplicationStatus(status: "pending".toLocalize, color: DesignSystem.Colors.pending.color)
+        case "قيد الأنتظار":
+            view?.setApplicationStatus(status: "pending".toLocalize, color: DesignSystem.Colors.pending.color)
         case "activate":
+            view?.setApplicationStatus(status: "activate".localized, color: DesignSystem.Colors.accept.color)
+        case "فعال":
             view?.setApplicationStatus(status: "activate".localized, color: DesignSystem.Colors.accept.color)
         case "rejected":
             view?.setApplicationStatus(status: "rejected".localized, color: DesignSystem.Colors.primaryActionBackground.color)
+        case "مرفوض":
+            view?.setApplicationStatus(status: "rejected".localized, color: DesignSystem.Colors.primaryActionBackground.color)
         case "missing info":
+            view?.setApplicationStatus(status: "missing info".localized, color: DesignSystem.Colors.primaryActionBackground.color)
+        case "فاقد معلومات":
             view?.setApplicationStatus(status: "missing info".localized, color: DesignSystem.Colors.primaryActionBackground.color)
         default:
 //            view?.setApplicationStatus(status: status, color: DesignSystem.Colors.primaryActionBackground.color)

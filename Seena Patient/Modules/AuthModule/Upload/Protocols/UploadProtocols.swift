@@ -25,7 +25,7 @@ protocol UploadInputInteractorProtocol: class {
     var localDataManager: UploadLocalDataManagerProtocol { get set }
     var remoteDataManager: AuthenticationRemoteDataManager { get set }
     // Presenter -> Interactor
-    func upload(images: [Data], forType type: Int)
+    func upload(images: [FileModel], forType type: Int)
 }
 protocol UploadOutputInteractorProtocol: class {
     // Interactor -> Presenter
@@ -43,7 +43,7 @@ protocol UploadPresenterProtocol: class {
     func backButtonTapped()
     func uploadButtonTapped()
     func finishButtonTapped()
-    func imageSelected(_ image: Data?)
+    func imageSelected(_ image: Data?, type: Int)
     func config(UploadImageCell cell: UploadImageCellProtocol, atIndex index: Int)
     func deleteImageButtonTapped(atIndex index: Int)
     var numberOfImages: Int { get }
@@ -65,4 +65,5 @@ protocol UploadViewProtocol: class {
 // MARK: - UploadImageCell Protocol
 protocol  UploadImageCellProtocol {
     func setImage(_ image: Data)
+    func setPDF()
 }

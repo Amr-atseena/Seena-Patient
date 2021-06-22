@@ -464,6 +464,39 @@ class APIClient{
 
 
 
+//    func testPdf(images : Int, onSuccess: @escaping (OTPtransferCompleteModel) -> Void, onError: @escaping (_ error: String)-> Void) {
+//
+//        let params = ["OTP" : otp]
+//        let token = UserDefaults.standard.string(forKey: "TOKEN")
+//        let header = ["Authorization" : "Bearer " + token!] as HTTPHeaders?
+//
+//        let url = "http://dashboard.seenapay.com/api/payment/transferComplete"
+//
+//        AF.request(URL(string: url)!, method: .post, parameters: params ,encoding: JSONEncoding.default, headers: header).responseData {
+//            response in
+//            switch response.result {
+//            case .success(let jsonData):
+//                do {
+//                    print(jsonData)
+//                    let data = try JSONDecoder().decode(OTPtransferCompleteModel.self, from: jsonData)
+//                    print(data)
+//                    if data.response != nil {
+//                        onSuccess(data)
+//                    } else {
+//                        onError(data.error.validation ?? "")
+//                    }
+//                } catch {
+//                    print("ParseError",error.localizedDescription)
+//                    onError(error.localizedDescription)
+//                }
+//                break
+//            case .failure(let error):
+//                print("Request error: \(error)")
+//                onError(error.localizedDescription)
+//                break
+//            }
+//        }
+//    }
 
 
 

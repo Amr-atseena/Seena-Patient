@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MOLH
 
 class ProfileVC: UIViewController, ProfileViewProtocol {
     // MARK: - Outlets

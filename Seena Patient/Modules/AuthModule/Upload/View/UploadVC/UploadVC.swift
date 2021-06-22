@@ -32,10 +32,16 @@ class UploadVC: UIViewController, UploadViewProtocol {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+
+    var fromImageOrFile = ""
+
     // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter.viewDidLoad()
+        uploadButton.backgroundColor = #colorLiteral(red: 0.8588235294, green: 0.07843137255, blue: 0.07843137255, alpha: 1)
+        uploadPdfBtn.backgroundColor = #colorLiteral(red: 0.8588235294, green: 0.07843137255, blue: 0.07843137255, alpha: 1)
+
         viewController?.hidesBottomBarWhenPushed = true
 
         uploadPdfBtn.setTitle("Upload pdf file".toLocalize, for: .normal)
@@ -55,8 +61,10 @@ class UploadVC: UIViewController, UploadViewProtocol {
         finishButton.setTitle(presenter.localization.finish, for: .normal)
         finishButton.titleLabel?.font = DesignSystem.Typography.subHeading3.font
         //upload Button
-        uploadButton.setTitle(presenter.localization.upload, for: .normal)
+        uploadButton.setTitle("Upload photo".toLocalize, for: .normal)
         uploadButton.titleLabel?.font = DesignSystem.Typography.subHeading3.font
+
+        uploadPdfBtn.titleLabel?.font = DesignSystem.Typography.subHeading3.font
     }
     func setupImagesCollectionView() {
         imagesCollectionView.dataSource = self
@@ -72,10 +80,38 @@ class UploadVC: UIViewController, UploadViewProtocol {
     func enableFinishButton() {
         finishButton.isUserInteractionEnabled = true
         finishButton.backgroundColor = DesignSystem.Colors.primaryActionBackground.color
+
+        if fromImageOrFile == "imagee" {
+            uploadButton.isUserInteractionEnabled = true
+            uploadButton.backgroundColor = #colorLiteral(red: 0.8588235294, green: 0.07843137255, blue: 0.07843137255, alpha: 1)
+            uploadPdfBtn.backgroundColor = .gray
+            uploadPdfBtn.isUserInteractionEnabled = false
+        }else if fromImageOrFile == "file"{
+            uploadButton.isUserInteractionEnabled = false
+            uploadPdfBtn.isUserInteractionEnabled = true
+            uploadPdfBtn.backgroundColor = #colorLiteral(red: 0.8588235294, green: 0.07843137255, blue: 0.07843137255, alpha: 1)
+            uploadButton.backgroundColor = .gray
+
+        }else{
+            uploadButton.isUserInteractionEnabled = true
+            uploadPdfBtn.isUserInteractionEnabled = true
+            uploadButton.backgroundColor = #colorLiteral(red: 0.8588235294, green: 0.07843137255, blue: 0.07843137255, alpha: 1)
+            uploadPdfBtn.backgroundColor = #colorLiteral(red: 0.8588235294, green: 0.07843137255, blue: 0.07843137255, alpha: 1)
+
+        }
+
     }
     func disableFinishButton() {
         finishButton.isUserInteractionEnabled = false
         finishButton.backgroundColor = DesignSystem.Colors.primaryBorder.color
+
+        uploadButton.isUserInteractionEnabled = true
+        uploadPdfBtn.isUserInteractionEnabled = true
+
+        uploadButton.backgroundColor = #colorLiteral(red: 0.8588235294, green: 0.07843137255, blue: 0.07843137255, alpha: 1)
+        uploadPdfBtn.backgroundColor = #colorLiteral(red: 0.8588235294, green: 0.07843137255, blue: 0.07843137255, alpha: 1)
+
+        fromImageOrFile = ""
     }
     func openImagePicker() {
         imagePicker.present(from: uploadButton)
@@ -85,15 +121,15 @@ class UploadVC: UIViewController, UploadViewProtocol {
     }
     // MARK: - Actions
     @IBAction func didTapUploadButton(_ sender: UIButton) {
-//        if presenter.docType == 0 {
-//            if presenter.numberOfImages == 1 {
-//                showAlertController(title: "Alert!".toLocalize, message: "You can only upload one image for profile picture".toLocalize, actions: [])
-//            }else{
-//                presenter.uploadButtonTapped()
-//            }
-//        }else{
+        if presenter.docType == 0 {
+            if presenter.numberOfImages == 1 {
+                showAlertController(title: "Alert!".toLocalize, message: "You can only upload one image for profile picture".toLocalize, actions: [])
+            }else{
+                presenter.uploadButtonTapped()
+            }
+        }else{
             presenter.uploadButtonTapped()
-//        }
+        }
 
     }
     @IBAction func didTapBackButton(_ sender: UIButton) {
@@ -111,12 +147,12 @@ class UploadVC: UIViewController, UploadViewProtocol {
 
     }
     @IBAction func didTapFinishButton(_ sender: UIButton) {
-//        let noAction = UIAlertAction(title: "No".localized, style: .default) {  (_) in
+        let noAction = UIAlertAction(title: "No".localized, style: .default) {  (_) in
             self.presenter.finishButtonTapped()
-//        }
-//        let yesAction = UIAlertAction(title: "Yes".localized, style: .default, handler: nil)
-//
-//        self.showAlertController(title: "Confirm!".toLocalize, message: "Would you like to change uploaded photo/s".toLocalize, actions: [noAction,yesAction])
+        }
+        let yesAction = UIAlertAction(title: "Yes".localized, style: .default, handler: nil)
+
+        self.showAlertController(title: "Confirm!".toLocalize, message: "Would you like to change uploaded photo/s".toLocalize, actions: [noAction,yesAction])
     }
     // MARK: - DeInit
     deinit {
@@ -124,13 +160,18 @@ class UploadVC: UIViewController, UploadViewProtocol {
     }
 
 
+//    var types = [kUTTypePDF,kUTTypePNG,kUTTypeJPEG,kUTTypeImage]
     var types = [kUTTypePDF]
 
+
     @IBAction func uploadPdf(_ sender: Any) {
+//        let documentPicker = UIDocumentPickerViewController(documentTypes: ["public.data"] , in: .import)
         let documentPicker = UIDocumentPickerViewController(documentTypes: types as [String] , in: .import)
+
         documentPicker.delegate = self
         documentPicker.modalPresentationStyle = .formSheet
         self.present(documentPicker, animated: true, completion: nil)
+
     }
 
 
@@ -140,7 +181,9 @@ class UploadVC: UIViewController, UploadViewProtocol {
 // MARK: - ImagePickerDelegate Implementation
 extension UploadVC: ImagePickerDelegate {
     func didSelect(image: UIImage?) {
-        presenter.imageSelected((image?.jpegData(compressionQuality: 0.8)))
+        fromImageOrFile = "imagee"
+
+        presenter.imageSelected((image?.jpegData(compressionQuality: 0.8)), type: 0)
     }
 }
 // MARK: - Images CollectionView DataSource
@@ -193,13 +236,29 @@ extension UploadVC: UIDocumentPickerDelegate,UINavigationControllerDelegate
         print("import result : \(myURL)")
 
 
+        do{
+            fromImageOrFile = "file"
+
+            let fileData = try Data(contentsOf: myURL)
+            print(fileData)
+            presenter.imageSelected(fileData, type: 1)
+
+        }catch{
+            print("No file data")
+        }
+        
+//        var filePath = urls[0].absoluteString
+//        filePath = filePath.replacingOccurrences(of: "file:/", with: "")//making url to file path
+//        print(filePath)
+
+
     }
 
     func documentPickerWasCancelled(_ controller: UIDocumentPickerViewController) {
 
         // Picker Cancelled
         print("view was cancelled")
-        dismiss(animated: true, completion: nil)
+        controller.dismiss(animated: true, completion: nil)
     }
 
 

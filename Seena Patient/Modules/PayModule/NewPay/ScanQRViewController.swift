@@ -15,11 +15,13 @@ class ScanQRViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
     @IBOutlet weak var mainView: UIView!
     @IBOutlet weak var nextBtn: UIButton!
     
+    @IBOutlet weak var backBtn: UIButton!
 
     var captureSession: AVCaptureSession!
     var previewLayer: AVCaptureVideoPreviewLayer!
 
     var theCode : String?
+    var shouldGo : Bool?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -63,8 +65,12 @@ class ScanQRViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
 
         captureSession.startRunning()
         viewDesign()
+
     }
 
+    @IBAction func back(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
 
 
     func viewDesign(){
@@ -90,6 +96,9 @@ class ScanQRViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
             captureSession.startRunning()
         }
     }
+
+
+    
 
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
@@ -126,9 +135,12 @@ class ScanQRViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
             newViewController!.modalPresentationStyle = .fullScreen
             self.present(newViewController!, animated: true, completion: nil)
 
+            self.shouldGo = true
+
 
         } onError: { (error) in
             self.showAlertController(title: "Error!", message: error, actions: [])
+            self.shouldGo = false
         }
 
         
@@ -157,10 +169,26 @@ class ScanQRViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
     }
 
     @IBAction func next(_ sender: Any) {
-        let storyBoard: UIStoryboard = UIStoryboard(name: "NewPayment", bundle: nil)
-        let newViewController = storyBoard.instantiateViewController(withIdentifier: "OTPViewController") as? OTPViewController
-        newViewController!.modalPresentationStyle = .fullScreen
-        self.present(newViewController!, animated: true, completion: nil)
+        if shouldGo == true {
+            let storyBoard: UIStoryboard = UIStoryboard(name: "NewPayment", bundle: nil)
+            let newViewController = storyBoard.instantiateViewController(withIdentifier: "OTPViewController") as? OTPViewController
+            newViewController!.modalPresentationStyle = .fullScreen
+            self.present(newViewController!, animated: true, completion: nil)
+        }else{
+            showAlertController(title: "Error!".toLocalize, message: "Check QR code correctly".toLocalize, actions: [])
+        }
+
+
     }
 
+}
+
+
+extension ScanQRViewController: UIGestureRecognizerDelegate {
+func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
+    if gestureRecognizer.isEqual(navigationController?.interactivePopGestureRecognizer) {
+        navigationController?.popViewController(animated: true)
+    }
+    return false
+}
 }

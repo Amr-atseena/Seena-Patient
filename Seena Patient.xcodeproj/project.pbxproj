@@ -274,6 +274,7 @@
 		88F706C624EE6804005C2ADB /* PackageDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F706BF24EE6804005C2ADB /* PackageDetailsVC.swift */; };
 		88F83BA825210E6D00C9295A /* ServicesLocalDataManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F83BA725210E6D00C9295A /* ServicesLocalDataManagerProtocol.swift */; };
 		88F83BAC25210E9100C9295A /* ServicesLocalDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F83BAB25210E9100C9295A /* ServicesLocalDataManager.swift */; };
+		8C05D28D2680BE1900E30493 /* TestPDF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C05D28C2680BE1900E30493 /* TestPDF.swift */; };
 		8C07525F2667BFC800EE5DCB /* paymentPay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C07525E2667BFC800EE5DCB /* paymentPay.swift */; };
 		8C0F8A352648180C00DD30E6 /* CheckOTPForget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0F8A342648180C00DD30E6 /* CheckOTPForget.swift */; };
 		8C0F8A39264818CF00DD30E6 /* ResetPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0F8A38264818CF00DD30E6 /* ResetPassword.swift */; };
@@ -657,6 +658,7 @@
 		88F706BF24EE6804005C2ADB /* PackageDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageDetailsVC.swift; sourceTree = "<group>"; };
 		88F83BA725210E6D00C9295A /* ServicesLocalDataManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesLocalDataManagerProtocol.swift; sourceTree = "<group>"; };
 		88F83BAB25210E9100C9295A /* ServicesLocalDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesLocalDataManager.swift; sourceTree = "<group>"; };
+		8C05D28C2680BE1900E30493 /* TestPDF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPDF.swift; sourceTree = "<group>"; };
 		8C07525E2667BFC800EE5DCB /* paymentPay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = paymentPay.swift; sourceTree = "<group>"; };
 		8C0F8A342648180C00DD30E6 /* CheckOTPForget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckOTPForget.swift; sourceTree = "<group>"; };
 		8C0F8A38264818CF00DD30E6 /* ResetPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPassword.swift; sourceTree = "<group>"; };
@@ -2925,6 +2927,7 @@
 				8C78E2032663AB8D008FF88A /* InstallmentPlansModel.swift */,
 				8C78E2072663D280008FF88A /* OTPtransferCompleteModel.swift */,
 				8C07525E2667BFC800EE5DCB /* paymentPay.swift */,
+				8C05D28C2680BE1900E30493 /* TestPDF.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -3654,6 +3657,7 @@
 				8C78E2002663A242008FF88A /* PayForDoctorModel.swift in Sources */,
 				88D291272515153D008738A5 /* UploadDocumentsRouter.swift in Sources */,
 				88120B7F24EF2C66004A2381 /* ClinicDetailsLocalization.swift in Sources */,
+				8C05D28D2680BE1900E30493 /* TestPDF.swift in Sources */,
 				887C630B25021CE800C69E2A /* SplashResponse.swift in Sources */,
 				887C631B25023AB700C69E2A /* ClinicsSearchLocolDataManager.swift in Sources */,
 				8829891F2512A624004C5AB6 /* SignUpLocalDataManagerProtocol.swift in Sources */,
@@ -4008,7 +4012,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Seena Patient/Seena.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = LL84DY2BWT;
 				INFOPLIST_FILE = "$(SRCROOT)/Seena Patient/Configurations/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
@@ -4033,7 +4037,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Seena Patient/Seena.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = LL84DY2BWT;
 				INFOPLIST_FILE = "$(SRCROOT)/Seena Patient/Configurations/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.4;

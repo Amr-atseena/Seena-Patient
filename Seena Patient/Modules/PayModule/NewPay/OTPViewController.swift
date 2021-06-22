@@ -16,6 +16,8 @@ class OTPViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var secondTF: UITextField!
     @IBOutlet weak var thirdTF: UITextField!
     @IBOutlet weak var fourthTF: UITextField!
+    @IBOutlet weak var backBtn: UIButton!
+
 
     var fullOTP : String = ""
     let progressHUD = ProgressHUD(text: "")
@@ -38,6 +40,11 @@ class OTPViewController: UIViewController, UITextFieldDelegate {
         viewDesign()
 
     }
+
+    @IBAction func back(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+
 
     func viewDesign(){
         //Main view

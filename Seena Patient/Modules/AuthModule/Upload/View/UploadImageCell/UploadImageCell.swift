@@ -23,4 +23,8 @@ extension UploadImageCell: UploadImageCellProtocol {
     func setImage(_ image: Data) {
         uploadImage.image = UIImage(data: image)
     }
+
+    func setPDF() {
+        uploadImage.image = UIImage(named: "pdf-icon")
+    }
 }

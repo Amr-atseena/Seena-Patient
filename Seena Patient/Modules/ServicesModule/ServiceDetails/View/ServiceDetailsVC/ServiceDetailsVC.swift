@@ -17,6 +17,7 @@ class ServiceDetailsVC: UIViewController, ServiceDetailsViewProtocol {
     @IBOutlet var clinicsProvidingServiceKeywordLabel: UILabel!
     @IBOutlet var rangePriceLabel: UILabel!
     @IBOutlet var clinicsCollectionView: UICollectionView!
+    @IBOutlet weak var callBtn: UIButton!
     // MARK: - Attributes
     var presenter: ServiceDetailsPresenterProtocol!
     // MARK: - Init
@@ -31,6 +32,7 @@ class ServiceDetailsVC: UIViewController, ServiceDetailsViewProtocol {
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter.viewDidLoad()
+        callBtn.setTitle("Call".toLocalize, for: .normal)
     }
     // MARK: - Methods
     func setupNavBar() {
@@ -87,6 +89,18 @@ class ServiceDetailsVC: UIViewController, ServiceDetailsViewProtocol {
     deinit {
         debugPrint(ServiceDetailsVC.className + " Release from Momery")
     }
+
+    @IBAction func call(_ sender: Any) {
+        makeCall(toNumber: "16938")
+    }
+
+    private func makeCall(toNumber number: String) {
+        guard let numberURL =  URL(string: "tel://\(number)") else {
+            return
+        }
+        UIApplication.shared.open(numberURL)
+    }
+
 }
 
 // MARK: - ClinicsCollectionView DataSoucrce Implementation

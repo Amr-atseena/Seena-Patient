@@ -12,11 +12,11 @@ import Moya
 struct UploadRequestParamaters {
     var multipartData: [MultipartFormData]
     let token: String
-    init(images: [Data], documentType: Int, token: String) {
+    init(images: [FileModel], documentType: Int, token: String) {
         self.token = token
         let documetTypeData = "\(documentType + 1)".data(using: .utf8) ?? Data()
         self.multipartData = images.map {
-            MultipartFormData(provider: .data($0), name: "images[]", fileName: "image.jpeg", mimeType: "image/jpeg")
+             $0.type == 0 ? MultipartFormData(provider: .data($0.file!), name: "images[]", fileName: "image.jpeg", mimeType: "image/jpeg") : MultipartFormData(provider: .data($0.file!), name: "images[]", fileName: "file.pdf", mimeType: "pdf/*")
         }
         self.multipartData.append(MultipartFormData(provider: .data(documetTypeData), name: "type"))
     }

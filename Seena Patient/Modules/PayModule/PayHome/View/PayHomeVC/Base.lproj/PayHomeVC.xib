@@ -40,8 +40,8 @@
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="TdC-6e-0WS">
                     <rect key="frame" x="20" y="384.66666666666669" width="374" height="24"/>
                     <subviews>
-                        <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="1wE-VT-i31">
-                            <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="1wE-VT-i31">
+                            <rect key="frame" x="0.0" y="0.0" width="374" height="0.0"/>
                             <subviews>
                                 <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UTr-SS-6mY" customClass="AnimatableView" customModule="IBAnimatable">
                                     <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -75,17 +75,17 @@
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
                                 </view>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZwS-fx-vlS" customClass="AnimatableView" customModule="IBAnimatable">
-                                    <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
+                                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZwS-fx-vlS" customClass="AnimatableView" customModule="IBAnimatable">
+                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="zqv-WH-yuD">
-                                            <rect key="frame" x="20" y="10" width="334" height="30"/>
+                                            <rect key="frame" x="20" y="10" width="10" height="30"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="1000" image="calculator" translatesAutoresizingMaskIntoConstraints="NO" id="ucb-W3-F6F">
-                                                    <rect key="frame" x="0.0" y="0.0" width="20" height="30"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="0.0" height="30"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calculator" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qhM-17-oYP">
-                                                    <rect key="frame" x="30" y="0.0" width="304" height="30"/>
+                                                    <rect key="frame" x="10" y="0.0" width="0.0" height="30"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" name="secondaryActionText"/>
                                                     <nil key="highlightedColor"/>
@@ -326,7 +326,7 @@
                         <constraint firstAttribute="trailing" secondItem="xYU-mg-gQQ" secondAttribute="trailing" constant="20" id="jT5-89-Pwx"/>
                     </constraints>
                 </view>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9P0-Pz-8zS">
+                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9P0-Pz-8zS">
                     <rect key="frame" x="20" y="384.66666666666669" width="50" height="50"/>
                     <connections>
                         <action selector="didTapPayButton:" destination="-1" eventType="touchUpInside" id="s36-9E-ltk"/>
@@ -336,7 +336,7 @@
                     <rect key="frame" x="188.66666666666666" y="617" width="37" height="37"/>
                     <color key="color" name="payEnd"/>
                 </activityIndicatorView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oKj-OA-3El">
+                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oKj-OA-3El">
                     <rect key="frame" x="20" y="384.66666666666669" width="374" height="50"/>
                     <connections>
                         <action selector="didTapCalculateButton:" destination="-1" eventType="touchUpInside" id="v2T-vX-f6W"/>

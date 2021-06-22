@@ -29,6 +29,7 @@ class PaymentMethodsViewController: UIViewController {
     @IBOutlet weak var sixDur: UILabel!
     @IBOutlet weak var twelveAmount: UILabel!
     @IBOutlet weak var twelveDur: UILabel!
+    @IBOutlet weak var backBtn: UIButton!
 
     var whichInstallment : Int?
     var arrayOfValues = [Int]()
@@ -37,6 +38,7 @@ class PaymentMethodsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         nextBtn.layer.cornerRadius = 10
+
 
         let amo = Int(UserDefaults.standard.string(forKey: "amount") ?? "") ?? 0
 
@@ -62,6 +64,12 @@ class PaymentMethodsViewController: UIViewController {
         viewDesign()
         viewActions()
     }
+
+
+    @IBAction func back(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+
 
     func viewDesign(){
         //Main view
@@ -219,3 +227,5 @@ class PaymentMethodsViewController: UIViewController {
     
 
 }
+
+

@@ -20,7 +20,7 @@ class UploadInteractor: UploadInputInteractorProtocol {
         self.remoteDataManager = remoteDataManager
     }
     // MARK: - Methods
-    func upload(images: [Data], forType type: Int) {
+    func upload(images: [FileModel], forType type: Int) {
 //        let tok = UserDefaults.standard.string(forKey: "firstSignUpToken")
 //        let params = UploadRequestParamaters(images: images, documentType: type, token: tok!)
 

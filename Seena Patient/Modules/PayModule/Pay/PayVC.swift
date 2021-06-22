@@ -136,6 +136,7 @@ class PayVC: UIViewController, PayViewProtocol, UIImagePickerControllerDelegate 
         // do something interesting here!
         print(newImage)
         uploadedImage = newImage
+        print(uploadedImage)
         infoBtn.isHidden = true
         rightImage.isHidden = false
         enableNextButton()

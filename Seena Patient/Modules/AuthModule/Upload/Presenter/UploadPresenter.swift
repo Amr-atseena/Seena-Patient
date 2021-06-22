@@ -8,6 +8,11 @@
 
 import Foundation
 
+struct FileModel {
+    var file : Data?
+    var type : Int?
+}
+
 class UploadPresenter: UploadPresenterProtocol {
     // MARK: - Attributes
     weak var view: UploadViewProtocol?
@@ -15,7 +20,7 @@ class UploadPresenter: UploadPresenterProtocol {
     var router: UploadRouterProtocol?
     let localization = UploadLocalization()
     private let documentType: Int
-    var selectedImages = [Data]() {
+    var selectedImages = [FileModel]() {
         didSet {
             view?.reoladImages()
             if selectedImages.isEmpty {
@@ -57,15 +62,19 @@ class UploadPresenter: UploadPresenterProtocol {
         view?.showLoadingIndictor()
         interactor?.upload(images: selectedImages, forType: documentType)
     }
-    func imageSelected(_ image: Data?) {
+    func imageSelected(_ image: Data?, type: Int ) {
         guard let selectedImage = image  else {
             return
         }
-        selectedImages.append(selectedImage)
+        selectedImages.append(FileModel(file: selectedImage, type: type))
     }
     func config(UploadImageCell cell: UploadImageCellProtocol, atIndex index: Int) {
         let image = selectedImages[index]
-        cell.setImage(image)
+        if image.type == 0 {
+            cell.setImage(image.file!)
+        }else{
+            cell.setPDF()
+        }
     }
     func deleteImageButtonTapped(atIndex index: Int) {
         selectedImages.remove(at: index)

@@ -409,7 +409,7 @@ registered number</string>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="nOM-Im-Xa3"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
-                                <state key="normal" title="next">
+                                <state key="normal" title="Next">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
@@ -472,25 +472,25 @@ registered number</string>
             <size key="intrinsicContentSize" width="39" height="30"/>
         </designable>
         <designable name="Kxa-Hi-dIB">
-            <size key="intrinsicContentSize" width="374" height="44.369671875000002"/>
+            <size key="intrinsicContentSize" width="68.5" height="34"/>
         </designable>
         <designable name="U0L-MO-LlO">
-            <size key="intrinsicContentSize" width="374" height="44.369671875000002"/>
+            <size key="intrinsicContentSize" width="102" height="34"/>
         </designable>
         <designable name="Zma-gm-aDt">
-            <size key="intrinsicContentSize" width="374" height="44.369671875000002"/>
+            <size key="intrinsicContentSize" width="96.5" height="34"/>
         </designable>
         <designable name="ihh-gT-pWn">
-            <size key="intrinsicContentSize" width="374" height="44.369671875000002"/>
+            <size key="intrinsicContentSize" width="161.5" height="34"/>
         </designable>
         <designable name="lwA-UE-PZ7">
-            <size key="intrinsicContentSize" width="374" height="44.369671875000002"/>
+            <size key="intrinsicContentSize" width="104" height="34"/>
         </designable>
         <designable name="qqS-cJ-FCi">
-            <size key="intrinsicContentSize" width="374" height="44.369671875000002"/>
+            <size key="intrinsicContentSize" width="99" height="34"/>
         </designable>
         <designable name="ya2-Jx-fzx">
-            <size key="intrinsicContentSize" width="374" height="44.369671875000002"/>
+            <size key="intrinsicContentSize" width="137" height="34"/>
         </designable>
     </designables>
     <resources>

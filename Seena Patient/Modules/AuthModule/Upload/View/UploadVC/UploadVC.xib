@@ -49,7 +49,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="334" height="180"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Xaa-OC-1rz">
-                                                    <rect key="frame" x="20" y="40.5" width="294" height="99"/>
+                                                    <rect key="frame" x="20" y="5.5" width="294" height="169"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Upload the required documents" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SEG-re-HKc">
                                                             <rect key="frame" x="26.5" y="0.0" width="241" height="29"/>
@@ -57,8 +57,8 @@
                                                             <color key="textColor" name="secondaryText"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PVt-Tq-lBz" customClass="AnimatableButton" customModule="IBAnimatable">
-                                                            <rect key="frame" x="96.5" y="39" width="101" height="50"/>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PVt-Tq-lBz" customClass="AnimatableButton" customModule="IBAnimatable">
+                                                            <rect key="frame" x="44" y="49" width="206" height="50"/>
                                                             <color key="backgroundColor" name="primaryBorder"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="50" id="GHU-Qc-uOy"/>
@@ -76,7 +76,7 @@
                                                             </connections>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="deA-PZ-MYG" customClass="AnimatableButton" customModule="IBAnimatable">
-                                                            <rect key="frame" x="44" y="49" width="206" height="50"/>
+                                                            <rect key="frame" x="44" y="119" width="206" height="50"/>
                                                             <color key="backgroundColor" name="primaryBorder"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="50" id="dTv-Dh-XRB"/>
@@ -96,6 +96,7 @@
                                                     </subviews>
                                                     <constraints>
                                                         <constraint firstItem="deA-PZ-MYG" firstAttribute="width" secondItem="Xaa-OC-1rz" secondAttribute="width" multiplier="0.7" id="5Ct-yQ-TPW"/>
+                                                        <constraint firstItem="PVt-Tq-lBz" firstAttribute="width" secondItem="Xaa-OC-1rz" secondAttribute="width" multiplier="0.7" id="Xs9-sc-Iwh"/>
                                                     </constraints>
                                                 </stackView>
                                             </subviews>
