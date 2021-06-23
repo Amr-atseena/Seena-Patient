@@ -113,6 +113,18 @@ class UploadVC: UIViewController, UploadViewProtocol {
 
         fromImageOrFile = ""
     }
+
+    func disableButtonsWhilefinish(){
+        uploadButton.isUserInteractionEnabled = false
+        uploadPdfBtn.isUserInteractionEnabled = false
+        uploadButton.backgroundColor = .gray
+
+        if !uploadPdfBtn.isHidden {
+        uploadPdfBtn.backgroundColor = .gray
+        }else{
+        }
+    }
+
     func openImagePicker() {
         imagePicker.present(from: uploadButton)
     }
@@ -183,7 +195,8 @@ extension UploadVC: ImagePickerDelegate {
     func didSelect(image: UIImage?) {
         fromImageOrFile = "imagee"
 
-        presenter.imageSelected((image?.jpegData(compressionQuality: 0.8)), type: 0)
+        presenter.imageSelected((image?.jpegData(compressionQuality: 0.5)), type: 0)
+        
     }
 }
 // MARK: - Images CollectionView DataSource
@@ -241,7 +254,17 @@ extension UploadVC: UIDocumentPickerDelegate,UINavigationControllerDelegate
 
             let fileData = try Data(contentsOf: myURL)
             print(fileData)
-            presenter.imageSelected(fileData, type: 1)
+
+            let res = try myURL.resourceValues(forKeys: [.fileSizeKey])
+            let filesize = res.fileSize!
+            print("\(filesize) MB")
+
+            if filesize >= 4000000 {
+                showAlertController(title: "Error!".toLocalize, message: "File size is too big, please select another file".toLocalize, actions: [])
+            }else{
+                presenter.imageSelected(fileData, type: 1)
+
+            }
 
         }catch{
             print("No file data")

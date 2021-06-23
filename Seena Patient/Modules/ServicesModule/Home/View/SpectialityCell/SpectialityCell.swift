@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MOLH
 
 class SpectialityCell: UITableViewCell {
     // MARK: - Outlets
@@ -19,6 +20,14 @@ class SpectialityCell: UITableViewCell {
         spectialityNameLabel.textColor = DesignSystem.Colors.secondaryText.color
         spectialityNameLabel.font = DesignSystem.Typography.subHeading2.font
         servicesCollectionView.register(cellWithClass: ServiceCell.self)
+
+        if MOLHLanguage.isArabic(){
+            servicesCollectionView.semanticContentAttribute = UISemanticContentAttribute.forceRightToLeft
+
+        }else{
+            servicesCollectionView.semanticContentAttribute = UISemanticContentAttribute.forceLeftToRight
+
+        }
         
     }
 

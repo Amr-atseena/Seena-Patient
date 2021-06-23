@@ -60,6 +60,7 @@ class UploadPresenter: UploadPresenterProtocol {
     }
     func finishButtonTapped() {
         view?.showLoadingIndictor()
+        view?.disableButtonsWhilefinish()
         interactor?.upload(images: selectedImages, forType: documentType)
     }
     func imageSelected(_ image: Data?, type: Int ) {

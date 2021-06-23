@@ -8,6 +8,8 @@
 
 import UIKit
 import SkeletonView
+import MOLH
+
 class HomeVC: UIViewController, HomeViewProtocol {
     // MARK: - Outlets
     @IBOutlet var helloKeywordLabel: UILabel!
@@ -185,7 +187,11 @@ extension HomeVC: UITableViewDataSource {
             if cell.spectialityNameLabel.text == "Clinics" || cell.spectialityNameLabel.text == "العيادات"{
                 self.navigationController?.pushViewController(ClinicsHomeRouter.assembleModule(), animated: true)
             }else{
+
+
                 self.presenter.serviceSelected(atIndex: indexPath.row, andSection: -2)
+                
+                
             }
             
             //            self.navigationController?.pushViewController(ClinicsHomeRouter.assembleModule(), animated: true)

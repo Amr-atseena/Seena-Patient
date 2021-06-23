@@ -61,6 +61,7 @@ protocol UploadViewProtocol: class {
     func enableFinishButton()
     func disableFinishButton()
     func reoladImages()
+    func disableButtonsWhilefinish()
 }
 // MARK: - UploadImageCell Protocol
 protocol  UploadImageCellProtocol {
