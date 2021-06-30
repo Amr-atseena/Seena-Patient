@@ -30,8 +30,14 @@ class HomeTabBarVC: UITabBarController {
             let isSigned = UserDefaults.standard.bool(forKey: "Signin")
 
             if isSigned == true {
-            guard let self = self else { return }
-            self.selectedIndex = 2
+                let userStatus = UserDefaults.standard.string(forKey: "status")
+
+                if userStatus == "active"{
+                guard let self = self else { return }
+                self.selectedIndex = 2
+                }else{
+                    self?.showAlertController(title: "Alert!".toLocalize, message: "Please, wait until being an active user".toLocalize, actions: [])
+                }
             }else{
                 self?.showAlertController(title: "Alert!".toLocalize, message: "Please, sign in first".toLocalize, actions: [])
             }
@@ -44,28 +50,28 @@ class HomeTabBarVC: UITabBarController {
         return home
 
 
-//                let pay = UINavigationController(rootViewController: PayHomeRouter.assembleModule())
-//                pay.tabBarItem = UITabBarItem(title: localization.home, image: #imageLiteral(resourceName: "home"), tag: 0)
-//                return pay
+        //                let pay = UINavigationController(rootViewController: PayHomeRouter.assembleModule())
+        //                pay.tabBarItem = UITabBarItem(title: localization.home, image: #imageLiteral(resourceName: "home"), tag: 0)
+        //                return pay
     }
     
     private func clinicsModule() -> UIViewController {
-//        let clinics = UINavigationController(rootViewController: ClinicsHomeRouter.assembleModule())
-//        clinics.tabBarItem = UITabBarItem(title: localization.clinics, image: #imageLiteral(resourceName: "Clinics"), tag: 1)
-//        return clinics
-//        let home = UINavigationController(rootViewController: HomeRouter.assembleModule())
-//        home.tabBarItem = UITabBarItem(title: localization.clinics, image: #imageLiteral(resourceName: "Clinics"), tag: 1)
-//        return home
+        //        let clinics = UINavigationController(rootViewController: ClinicsHomeRouter.assembleModule())
+        //        clinics.tabBarItem = UITabBarItem(title: localization.clinics, image: #imageLiteral(resourceName: "Clinics"), tag: 1)
+        //        return clinics
+        //        let home = UINavigationController(rootViewController: HomeRouter.assembleModule())
+        //        home.tabBarItem = UITabBarItem(title: localization.clinics, image: #imageLiteral(resourceName: "Clinics"), tag: 1)
+        //        return home
 
-                        let pay = UINavigationController(rootViewController: PayHomeRouter.assembleModule())
-                        pay.tabBarItem = UITabBarItem(title: localization.home, image: #imageLiteral(resourceName: "transaction"), tag: 0)
-                        return pay
+        let pay = UINavigationController(rootViewController: PayHomeRouter.assembleModule())
+        pay.tabBarItem = UITabBarItem(title: "Wallet".toLocalize, image: UIImage(named: "wallet"), tag: 0)
+        return pay
 
     }
     private func payModule() -> UIViewController {
-//        let pay = UINavigationController(rootViewController: PayHomeRouter.assembleModule())
-//        pay.tabBarItem = UITabBarItem()
-//        return pay
+        //        let pay = UINavigationController(rootViewController: PayHomeRouter.assembleModule())
+        //        pay.tabBarItem = UITabBarItem()
+        //        return pay
 
 
         let storyBoard: UIStoryboard = UIStoryboard(name: "NewPayment", bundle: nil)

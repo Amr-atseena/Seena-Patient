@@ -9,6 +9,9 @@
 import Foundation
 
 class ServicesSearchPresenter: ServicesSearchPresenterProtocol {
+
+
+
     // MARK: - Attributes
     weak var view: ServicesSearchViewProtocol?
     var interactor: ServicesSearchInputInteractorProtocol?
@@ -17,6 +20,7 @@ class ServicesSearchPresenter: ServicesSearchPresenterProtocol {
     var keyword = ""
     var page = 0
     var services = [Service]()
+    var speciality: Int?
     // MARK: - Init
     init(view: ServicesSearchViewProtocol?, interactor: ServicesSearchInputInteractorProtocol, router: ServicesSearchRouterProtocol ) {
         self.view = view
@@ -24,17 +28,18 @@ class ServicesSearchPresenter: ServicesSearchPresenterProtocol {
         self.router = router
     }
     // MARK: - Methods
-    func viewDidLoad() {
+    func viewDidLoad(speci: Int?) {
         view?.setupUI()
         view?.setupServicesTableView()
         view?.setupInifityScrolling()
+        speciality = speci
         fetchServicesList(forKeyword: keyword)
     }
     func fetchServicesList(forKeyword keyword: String?) {
         if services.isEmpty {
             view?.showSkelton()
         }
-        interactor?.fetchServicesList(forKeyword: keyword ?? "", atPage: page)
+        interactor?.fetchServicesList(forKeyword: keyword ?? "", atPage: page, specialityID: speciality)
     }
     func backButtonTapped() {
         router?.go(to: .home)

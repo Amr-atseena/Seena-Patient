@@ -25,7 +25,7 @@ class OTPVerifyPhoneNumberViewController: UIViewController, UITextFieldDelegate 
 
     var phoneNum: String?
 
-    var result : SignUpFirst?
+    var result: SignUpFirst?
     let progressHUD = ProgressHUD(text: "")
     
     override func viewDidLoad() {

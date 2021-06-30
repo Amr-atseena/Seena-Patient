@@ -211,9 +211,9 @@ class PaymentMethodsViewController: UIViewController {
 
 
         if installmentStackView.isHidden == false && selectedMo == nil {
-            showAlertController(title: "Error!".localized, message: "Select one of installment plans".toLocalize, actions: [])
+            showAlertController(title: "Error!".toLocalize, message: "Select one of installment plans".toLocalize, actions: [])
         }else if oneOfPaymentMethodsSelected == nil || oneOfPaymentMethodsSelected == false{
-            showAlertController(title: "Error!".localized, message: "Select one of payment methods".localized, actions: [])
+            showAlertController(title: "Error!".toLocalize, message: "Select one of payment methods".localized, actions: [])
 
         }else{
             let storyBoard: UIStoryboard = UIStoryboard(name: "NewPayment", bundle: nil)

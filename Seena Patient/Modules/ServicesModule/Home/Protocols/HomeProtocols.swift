@@ -16,7 +16,7 @@ enum HomeRoute {
     case specialities(_ spec : Speciality)
     case clincss(_ cli : Clinic)
     case serviceList
-    case servicesSearch
+    case servicesSearch(_ type: Int)
 }
 protocol HomeRouterProtocol: class {
     var viewController: UIViewController? { get set }
@@ -47,7 +47,7 @@ protocol HomePresenterProtocol: class {
     // View -> Presenter
     func viewDidLoad()
     func viewWillAppear()
-    func serachButtonTapped()
+    func serachButtonTapped(type: Int)
     func configure(spectialityCell cell: SpecialityCellView, atIndex index: Int )
     func configure(packageCell cell: PackageCellView, atIndex index: Int )
     func configure(serviceCell cell: ServiceCellProtocol, atIndex index: Int, andSection section: Int)

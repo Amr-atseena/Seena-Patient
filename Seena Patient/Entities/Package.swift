@@ -14,10 +14,11 @@ struct Package: Codable {
     let name, packageDescription: String
     let price: Int
     let services: [Service]
+    let phone: String?
 
     enum CodingKeys: String, CodingKey {
         case id, image, name
         case packageDescription = "description"
-        case price, services
+        case price, services, phone
     }
 }

@@ -31,8 +31,8 @@ class HomeRouter: HomeRouterProtocol {
             navigateToServiceDetails(service)
         case .packageDetails(let package):
             navigateToPackageDetails(withPackage: package)
-        case .servicesSearch:
-            navigateToServicesSearch()
+        case .servicesSearch(let type):
+            navigateToServicesSearch(type: type)
         case .specialities(let spec):
             navigateToServiceDetails(withSpeciality: spec)
 
@@ -49,8 +49,8 @@ class HomeRouter: HomeRouterProtocol {
     private func navigateToPackageDetails(withPackage package: Package) {
         viewController?.navigationController?.pushViewController(PackageDetailsRouter.assembleModule(withPackage: package), animated: true)
     }
-    private func navigateToServicesSearch() {
-        viewController?.navigationController?.pushViewController(ServicesSearchRouter.assembleModule(), animated: true)
+    private func navigateToServicesSearch(type: Int) {
+        viewController?.navigationController?.pushViewController(ServicesSearchRouter.assembleModule(type : type), animated: true)
     }
     private func navigateToServiceDetails(withSpeciality speciality: Speciality) {
         viewController?.navigationController?.pushViewController(ClinicsSearchRouter.assembleModule(withSpeciality: speciality), animated: true)

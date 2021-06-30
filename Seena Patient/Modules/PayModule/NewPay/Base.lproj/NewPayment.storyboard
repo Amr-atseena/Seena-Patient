@@ -61,7 +61,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="tMZ-5l-FdV" firstAttribute="top" secondItem="t9G-66-laN" secondAttribute="bottom" constant="60" id="AVA-TL-NH6"/>
                                     <constraint firstItem="t9G-66-laN" firstAttribute="leading" secondItem="aVb-n7-gh8" secondAttribute="leading" id="EjD-3s-a4w"/>
@@ -333,7 +333,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="Rw0-2V-RgK" secondAttribute="trailing" constant="154" id="CN4-b6-ycL"/>
                                     <constraint firstItem="T6Z-Fo-gkS" firstAttribute="leading" secondItem="U8s-NE-0eV" secondAttribute="leading" constant="20" id="IK3-QR-QMq"/>
@@ -440,15 +440,24 @@
                                             <action selector="back:" destination="Oqf-hW-mqi" eventType="touchUpInside" id="m1C-nr-RNg"/>
                                         </connections>
                                     </button>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="qr-code" translatesAutoresizingMaskIntoConstraints="NO" id="KlJ-Gt-A3n">
+                                        <rect key="frame" x="118" y="474" width="178" height="169"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="KlJ-Gt-A3n" secondAttribute="height" multiplier="178:169" id="PGo-qn-xJq"/>
+                                        </constraints>
+                                    </imageView>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="xP0-cw-N5V" firstAttribute="top" secondItem="9aD-ed-RcI" secondAttribute="top" constant="10" id="2XP-Ux-Le9"/>
                                     <constraint firstItem="qUZ-Lj-owl" firstAttribute="top" secondItem="xP0-cw-N5V" secondAttribute="bottom" constant="20" id="3dZ-xc-jcu"/>
                                     <constraint firstItem="xP0-cw-N5V" firstAttribute="leading" secondItem="9aD-ed-RcI" secondAttribute="leading" constant="20" id="6Hj-O4-0LN"/>
+                                    <constraint firstItem="KlJ-Gt-A3n" firstAttribute="centerX" secondItem="BcQ-5l-wJc" secondAttribute="centerX" id="AvO-Ba-R9N"/>
                                     <constraint firstItem="c2Y-PB-ajd" firstAttribute="leading" secondItem="9aD-ed-RcI" secondAttribute="leading" constant="20" id="ED0-hS-N7e"/>
                                     <constraint firstAttribute="bottom" secondItem="c2Y-PB-ajd" secondAttribute="bottom" constant="40" id="Gfg-op-alx"/>
                                     <constraint firstAttribute="trailing" secondItem="c2Y-PB-ajd" secondAttribute="trailing" constant="20" id="HOI-xr-bVK"/>
+                                    <constraint firstItem="c2Y-PB-ajd" firstAttribute="top" secondItem="KlJ-Gt-A3n" secondAttribute="bottom" constant="51.5" id="JN5-MF-9wk"/>
+                                    <constraint firstItem="KlJ-Gt-A3n" firstAttribute="top" secondItem="BcQ-5l-wJc" secondAttribute="bottom" constant="24" id="NCO-Fz-pYl"/>
                                     <constraint firstItem="BcQ-5l-wJc" firstAttribute="centerX" secondItem="9aD-ed-RcI" secondAttribute="centerX" id="cEd-mL-urC"/>
                                     <constraint firstItem="qUZ-Lj-owl" firstAttribute="leading" secondItem="9aD-ed-RcI" secondAttribute="leading" constant="20" id="gDM-7E-qdO"/>
                                     <constraint firstItem="BcQ-5l-wJc" firstAttribute="top" secondItem="qUZ-Lj-owl" secondAttribute="bottom" constant="150" id="hs6-4E-w4s"/>
@@ -555,7 +564,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="IAa-Fe-JFC" firstAttribute="leading" secondItem="5j9-qt-qPy" secondAttribute="leading" constant="20" id="0nE-5W-QVg"/>
                                     <constraint firstItem="NC3-EL-HCf" firstAttribute="leading" secondItem="5j9-qt-qPy" secondAttribute="leading" constant="20" id="CHQ-w4-Pqy"/>
@@ -679,7 +688,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="Lh3-OL-Saf" firstAttribute="top" secondItem="WpU-hh-fTd" secondAttribute="bottom" constant="50" id="4au-Mv-awR"/>
                                     <constraint firstItem="P45-EB-xXO" firstAttribute="centerX" secondItem="O0h-Qt-Q5r" secondAttribute="centerX" id="9q2-Ab-M40"/>
@@ -723,6 +732,7 @@
         <image name="Seena-Logo" width="237" height="357"/>
         <image name="back-1" width="22" height="14"/>
         <image name="clinic" width="100" height="100"/>
+        <image name="qr-code" width="119" height="240"/>
         <image name="unselected" width="20" height="20"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

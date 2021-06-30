@@ -23,10 +23,32 @@
                                 <color key="color" name="secondroyActionBackground"/>
                             </activityIndicatorView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qqn-tU-rve">
-                                <rect key="frame" x="0.0" y="138" width="414" height="558"/>
+                                <rect key="frame" x="0.0" y="98" width="414" height="598"/>
                                 <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="4WE-il-iCH">
+                                        <rect key="frame" x="119" y="10" width="176.5" height="175.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cfe-D9-me5">
+                                                <rect key="frame" x="13" y="0.0" width="150" height="150"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="150" id="sIg-wJ-MeY"/>
+                                                    <constraint firstAttribute="width" constant="150" id="syr-b2-5Zq"/>
+                                                </constraints>
+                                                <state key="normal" image="uploadPic"/>
+                                                <connections>
+                                                    <action selector="uploadPic:" destination="ZY2-Ko-kh5" eventType="touchUpInside" id="eQb-zQ-5h7"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Upload your profile pic" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2x9-pd-57w">
+                                                <rect key="frame" x="0.0" y="155" width="176.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="BkP-RI-LuX">
-                                        <rect key="frame" x="20" y="20" width="374" height="400"/>
+                                        <rect key="frame" x="20" y="195.5" width="374" height="400"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="hOO-gY-fOa">
                                                 <rect key="frame" x="0.0" y="0.0" width="374" height="400"/>
@@ -284,9 +306,11 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
+                                    <constraint firstItem="BkP-RI-LuX" firstAttribute="top" secondItem="4WE-il-iCH" secondAttribute="bottom" constant="10" id="81D-Jz-vYJ"/>
+                                    <constraint firstItem="4WE-il-iCH" firstAttribute="centerX" secondItem="qqn-tU-rve" secondAttribute="centerX" id="G6f-LX-lxj"/>
+                                    <constraint firstItem="4WE-il-iCH" firstAttribute="top" secondItem="qqn-tU-rve" secondAttribute="top" constant="10" id="RWG-La-13s"/>
                                     <constraint firstAttribute="trailing" secondItem="BkP-RI-LuX" secondAttribute="trailing" constant="20" id="lJI-jw-X4R"/>
                                     <constraint firstItem="BkP-RI-LuX" firstAttribute="leading" secondItem="qqn-tU-rve" secondAttribute="leading" constant="20" id="muo-b0-a2G"/>
-                                    <constraint firstItem="BkP-RI-LuX" firstAttribute="top" secondItem="qqn-tU-rve" secondAttribute="top" constant="20" id="oPI-QR-IGr"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Ca-aB-tOh" customClass="AnimatableButton" customModule="IBAnimatable">
@@ -319,7 +343,7 @@
                             <constraint firstAttribute="trailing" secondItem="2Ca-aB-tOh" secondAttribute="trailing" constant="20" id="kqS-TC-oLb"/>
                             <constraint firstItem="Fj8-i4-86r" firstAttribute="centerX" secondItem="YXb-UY-clg" secondAttribute="centerX" id="lhC-qi-lDH"/>
                             <constraint firstItem="2Ca-aB-tOh" firstAttribute="top" secondItem="qqn-tU-rve" secondAttribute="bottom" constant="20" id="okj-oT-Z1Q"/>
-                            <constraint firstItem="qqn-tU-rve" firstAttribute="top" secondItem="WcC-by-JrN" secondAttribute="top" constant="50" id="uJ2-kx-QTt"/>
+                            <constraint firstItem="qqn-tU-rve" firstAttribute="top" secondItem="WcC-by-JrN" secondAttribute="top" constant="10" id="uJ2-kx-QTt"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="2PP-ra-d0x"/>
@@ -333,6 +357,7 @@
                         <outlet property="nextBtn" destination="2Ca-aB-tOh" id="BhH-Ny-s8h"/>
                         <outlet property="password" destination="Zma-gm-aDt" id="BTR-st-VKM"/>
                         <outlet property="phone" destination="ya2-Jx-fzx" id="H2i-aa-2jh"/>
+                        <outlet property="profilePicBtn" destination="cfe-D9-me5" id="fWl-ll-D0d"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dIX-Se-Ssq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -472,29 +497,27 @@ registered number</string>
             <size key="intrinsicContentSize" width="39" height="30"/>
         </designable>
         <designable name="Kxa-Hi-dIB">
-            <size key="intrinsicContentSize" width="68.5" height="34"/>
+            <size key="intrinsicContentSize" width="374" height="44.369671875000002"/>
         </designable>
         <designable name="U0L-MO-LlO">
-            <size key="intrinsicContentSize" width="102" height="34"/>
+            <size key="intrinsicContentSize" width="374" height="44.369671875000002"/>
         </designable>
         <designable name="Zma-gm-aDt">
-            <size key="intrinsicContentSize" width="96.5" height="34"/>
+            <size key="intrinsicContentSize" width="374" height="44.369671875000002"/>
         </designable>
         <designable name="ihh-gT-pWn">
-            <size key="intrinsicContentSize" width="161.5" height="34"/>
+            <size key="intrinsicContentSize" width="374" height="44.369671875000002"/>
         </designable>
         <designable name="lwA-UE-PZ7">
-            <size key="intrinsicContentSize" width="104" height="34"/>
+            <size key="intrinsicContentSize" width="374" height="44.369671875000002"/>
         </designable>
         <designable name="qqS-cJ-FCi">
-            <size key="intrinsicContentSize" width="99" height="34"/>
-        </designable>
-        <designable name="ya2-Jx-fzx">
-            <size key="intrinsicContentSize" width="137" height="34"/>
+            <size key="intrinsicContentSize" width="374" height="44.369671875000002"/>
         </designable>
     </designables>
     <resources>
         <image name="Seena-Logo" width="237" height="357"/>
+        <image name="uploadPic" width="218" height="219"/>
         <namedColor name="primaryActionText">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

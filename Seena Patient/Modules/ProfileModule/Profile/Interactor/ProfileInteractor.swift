@@ -29,6 +29,8 @@ class ProfileInteractor: ProfileInputInteractorProtocol {
         UserDefaults.standard.removeObject(forKey: "Uploaded")
         UserDefaults.standard.removeObject(forKey: "UploadSignin")
         UserDefaults.standard.removeObject(forKey: "Signin")
+        UserDefaults.standard.removeObject(forKey: "status")
+        UserDefaults.standard.removeObject(forKey: "PackagePhone")
         
 
     }

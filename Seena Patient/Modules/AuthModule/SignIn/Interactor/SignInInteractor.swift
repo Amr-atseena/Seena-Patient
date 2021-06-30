@@ -53,7 +53,6 @@ class SignInInteractor: SignInInputInteractorProtocol {
                     UserDefaults.standard.set(true, forKey: "UploadSignin")
                 }
                 self.localDataManager.save(token: response.serverResonse.token)
-                self.presenter?.onLoginSuccess(withStatus: status)
 
                 let id = response.response?.status?.idType
                 let fin = response.response?.status?.financialProof
@@ -67,16 +66,29 @@ class SignInInteractor: SignInInputInteractorProtocol {
 
                 if status.financialProof == true {
                     UserDefaults.standard.set(true, forKey: "financialProofLogin")
+                }else{
+                    UserDefaults.standard.set(false, forKey: "financialProofLogin")
                 }
                 if status.idType == true {
                     UserDefaults.standard.set(true, forKey: "idTypeLogin")
+                }else{
+                    UserDefaults.standard.set(false, forKey: "idTypeLogin")
                 }
                 if status.profilePicture == true {
                     UserDefaults.standard.set(true, forKey: "profilePictureLogin")
+                }else{
+                    UserDefaults.standard.set(false, forKey: "profilePictureLogin")
                 }
                 if status.residenceProof == true {
                     UserDefaults.standard.set(true, forKey: "residenceProofLogin")
+                }else{
+                    UserDefaults.standard.set(false, forKey: "residenceProofLogin")
                 }
+
+                print(response.response?.user?.status)
+                UserDefaults.standard.set(response.response?.user!.status, forKey: "status")
+
+                self.presenter?.onLoginSuccess(withStatus: status)
 
 
             }

@@ -9,7 +9,7 @@
 import UIKit
 import SkyFloatingLabelTextField
 
-class FirstSignUpViewController: UIViewController {
+class FirstSignUpViewController: UIViewController, UIImagePickerControllerDelegate & UINavigationControllerDelegate {
     @IBOutlet weak var email: SkyFloatingLabelTextField!
     @IBOutlet weak var phone: SkyFloatingLabelTextField!
     @IBOutlet weak var firstName: SkyFloatingLabelTextField!
@@ -19,15 +19,20 @@ class FirstSignUpViewController: UIViewController {
     @IBOutlet weak var nextBtn: UIButton!
     @IBOutlet weak var birthDate: SkyFloatingLabelTextField!
     @IBOutlet weak var loadingIndictor: UIActivityIndicatorView!
+    @IBOutlet weak var profilePicBtn: UIButton!
 
     var selectedDate = ""
     let datePicker = UIDatePicker()
     let progressHUD = ProgressHUD(text: "")
+    var profilePic : UIImage?
 
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setDatePicker()
+
+        profilePicBtn.layer.cornerRadius = 0.5 * profilePicBtn.bounds.size.width
+        profilePicBtn.clipsToBounds = true
 
         lastName.addTarget(self, action: #selector(dateChanged(_:)), for: .valueChanged)
         confirmPass.addTarget(self, action: #selector(textDidBeginEditing), for: .editingDidEnd)
@@ -160,8 +165,9 @@ class FirstSignUpViewController: UIViewController {
     func mainAPI(){
 
         if goCallAPI == true{
+            self.view.addSubview(progressHUD)
 
-            let regUser = UserInfo(firstName: firstName.text!, lastName: lastName.text, password: password.text!, phone: phone.text!.replacedArabicDigitsWithEnglish, email: email.text, birthdate: selectedDate)
+            let regUser = UserInfo(firstName: firstName.text!, lastName: lastName.text, password: password.text!, phone: phone.text!.replacedArabicDigitsWithEnglish, email: email.text, birthdate: selectedDate, image: profilePic )
 
             APIClient().signUpFirst(userInfo: regUser) {(res) in
                 self.progressHUD.removeFromSuperview()
@@ -174,7 +180,7 @@ class FirstSignUpViewController: UIViewController {
 
 
 
-                UserDefaults.standard.setValue(res.response?.status?.idType, forKey: "keyRegistered")
+//                UserDefaults.standard.setValue(res.response?.status?.idType, forKey: "keyRegistered")
                 UserDefaults.standard.set(res.error?.token, forKey: "TOKEN")
 
 
@@ -209,7 +215,6 @@ class FirstSignUpViewController: UIViewController {
 
     @IBAction func finish(_ sender: Any) {
         
-        self.view.addSubview(progressHUD)
         
         emailAndPassValidation()
 
@@ -277,6 +282,13 @@ class FirstSignUpViewController: UIViewController {
             textFieldsFilled = true
         }
 
+        if profilePic == nil {
+            textFieldsFilled = false
+            showToast(message: "Upload a profile pic", font: .systemFont(ofSize: 16))
+        }else{
+            textFieldsFilled = true
+        }
+
         if textFieldsFilled == true {
             
             mainAPI()
@@ -284,6 +296,27 @@ class FirstSignUpViewController: UIViewController {
 
 
     }
+
+
+
+    @IBAction func uploadPic(_ sender: Any) {
+        let picker = UIImagePickerController()
+            picker.allowsEditing = true
+            picker.delegate = self
+            present(picker, animated: true)
+    }
+
+
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        guard let image = info[.editedImage] as? UIImage else { return }
+
+        dismiss(animated: true)
+
+        profilePicBtn.setImage(image, for: .normal)
+        profilePic = image
+    }
+
+
 
 
 }

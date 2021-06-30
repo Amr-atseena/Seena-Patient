@@ -36,7 +36,7 @@ class CheckoutViewController: UIViewController {
             nextBtn.backgroundColor = #colorLiteral(red: 0.568627451, green: 0.568627451, blue: 0.568627451, alpha: 1)
             nextBtn.isUserInteractionEnabled = false
         }else{
-        nextBtn.backgroundColor = .red
+        nextBtn.backgroundColor = #colorLiteral(red: 0.8588235294, green: 0.07843137255, blue: 0.07843137255, alpha: 1)
         nextBtn.isUserInteractionEnabled = true
         }
     }
@@ -45,7 +45,7 @@ class CheckoutViewController: UIViewController {
 
         UserDefaults.standard.setValue(amountTF.text!, forKey: "amount")
 
-        if nextBtn.backgroundColor == .red{
+        if nextBtn.backgroundColor == #colorLiteral(red: 0.8588235294, green: 0.07843137255, blue: 0.07843137255, alpha: 1){
         let storyBoard: UIStoryboard = UIStoryboard(name: "NewPayment", bundle: nil)
         let newViewController = storyBoard.instantiateViewController(withIdentifier: "PaymentMethodsViewController") as? PaymentMethodsViewController
         newViewController!.modalPresentationStyle = .fullScreen

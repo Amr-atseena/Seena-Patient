@@ -47,12 +47,17 @@ extension ServicesEndPoint: TargetType, EnvironmentProtocol {
         switch self {
         case .home:
             return .requestPlain
-        case .servicesList(let parms):
-            let parms: [String: Any] = [
-                "offset": parms.offset,
-                "limit": parms.limit,
-                "search": parms.search]
-            return .requestParameters(parameters: parms, encoding: URLEncoding.queryString)
+        case .servicesList(let params):
+            var parms: [String: Any] = [
+                "offset": params.offset,
+                "limit": params.limit,
+                "search": params.search]
+
+            if params.specialityID != nil {
+                parms["specialityID"] = params.specialityID
+            }
+
+        return .requestParameters(parameters: parms, encoding: URLEncoding.queryString)
         case .serviceDetails:
             return .requestPlain
         }

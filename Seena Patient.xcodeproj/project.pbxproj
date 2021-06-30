@@ -4012,7 +4012,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Seena Patient/Seena.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_TEAM = LL84DY2BWT;
 				INFOPLIST_FILE = "$(SRCROOT)/Seena Patient/Configurations/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
@@ -4037,7 +4037,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Seena Patient/Seena.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_TEAM = LL84DY2BWT;
 				INFOPLIST_FILE = "$(SRCROOT)/Seena Patient/Configurations/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.4;

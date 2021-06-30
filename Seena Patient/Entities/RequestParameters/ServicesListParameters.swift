@@ -9,11 +9,14 @@
 import Foundation
 
 struct ServicesListParameters {
-    private(set) var limit = 10
+    private(set) var limit = 100
     private(set) var offset = 0
     private(set) var search = ""
-    init(searchKeyword: String, currentPage: Int) {
+    private(set) var specialityID : Int?
+
+    init(searchKeyword: String, currentPage: Int , specialityID: Int?) {
         self.offset = currentPage * limit
         self.search = searchKeyword
+        self.specialityID = specialityID
     }
 }

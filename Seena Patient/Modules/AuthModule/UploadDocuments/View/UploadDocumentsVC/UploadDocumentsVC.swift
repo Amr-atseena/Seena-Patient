@@ -91,6 +91,15 @@ extension UploadDocumentsVC: UITableViewDataSource {
         presenter.config(documentTypeCell: cell, atIndex: indexPath.row)
         return cell
     }
+
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+
+        if indexPath.row == 0 {
+            return 0
+        }else{
+            return 60
+        }
+    }
 }
 // MARK: - TableView Delegate Implementation
 extension UploadDocumentsVC: UITableViewDelegate {

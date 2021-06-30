@@ -51,6 +51,7 @@ class UploadDocumentsPresenter: UploadDocumentsPresenterProtocol {
     func documentType(selectedAtIndex index: Int) {
         switch index {
         case 0:
+            print("Profile picture has been moved to signup")
             guard status.profilePicture else {
                 router?.go(to: .upload(doucmentTypeIndex: index))
                 return

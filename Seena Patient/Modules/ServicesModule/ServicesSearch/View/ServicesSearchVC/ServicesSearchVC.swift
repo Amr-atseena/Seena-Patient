@@ -17,6 +17,7 @@ class ServicesSearchVC: UIViewController, ServicesSearchViewProtocol {
     @IBOutlet private var servicesResultsCollectionView: UICollectionView!
     // MARK: - Attributes
     var presenter: ServicesSearchPresenterProtocol!
+    var type: Int?
     // MARK: - Init
     init() {
         super.init(nibName: ServicesSearchVC.className, bundle: nil)
@@ -28,7 +29,7 @@ class ServicesSearchVC: UIViewController, ServicesSearchViewProtocol {
     // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        presenter.viewDidLoad()
+        presenter.viewDidLoad(speci: type == -1 ? nil : type )
     }
     // MARK: - Methods
     func setupUI() {

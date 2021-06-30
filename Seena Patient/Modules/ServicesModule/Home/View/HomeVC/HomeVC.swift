@@ -33,7 +33,7 @@ class HomeVC: UIViewController, HomeViewProtocol {
     
     @objc func buttonAction(sender: UIButton!) {
         print("Button tapped")
-        presenter.serachButtonTapped()
+        presenter.serachButtonTapped(type: -1)
         
     }
     
@@ -155,7 +155,7 @@ class HomeVC: UIViewController, HomeViewProtocol {
     }
     // MARK: - Actions
     @IBAction private func didTapSearchButton(_ sender: UIButton) {
-        presenter.serachButtonTapped()
+        presenter.serachButtonTapped(type: -1)
     }
     // MARK: - DeInit
     deinit {
@@ -189,7 +189,10 @@ extension HomeVC: UITableViewDataSource {
             }else{
 
 
-                self.presenter.serviceSelected(atIndex: indexPath.row, andSection: -2)
+
+                self.presenter.serachButtonTapped(type: indexPath.row)
+
+//                self.presenter.serviceSelected(atIndex: indexPath.row, andSection: -2)
                 
                 
             }

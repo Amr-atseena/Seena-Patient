@@ -42,7 +42,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="16x-AJ-icC">
-                            <rect key="frame" x="10" y="70.5" width="384" height="290"/>
+                            <rect key="frame" x="10" y="70.5" width="384" height="215"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UfP-EH-X8m" customClass="AnimatableView" customModule="IBAnimatable">
                                     <rect key="frame" x="0.0" y="0.0" width="384" height="65"/>
@@ -89,8 +89,8 @@
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
                                 </view>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Rg-eg-get" customClass="AnimatableView" customModule="IBAnimatable">
-                                    <rect key="frame" x="0.0" y="75" width="384" height="65"/>
+                                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Rg-eg-get" customClass="AnimatableView" customModule="IBAnimatable">
+                                    <rect key="frame" x="0.0" y="70" width="384" height="65"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="jlO-Rm-DPI">
                                             <rect key="frame" x="20" y="5" width="344" height="55"/>
@@ -135,7 +135,7 @@
                                     </userDefinedRuntimeAttributes>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sOm-yL-4W7" customClass="AnimatableView" customModule="IBAnimatable">
-                                    <rect key="frame" x="0.0" y="150" width="384" height="65"/>
+                                    <rect key="frame" x="0.0" y="75" width="384" height="65"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="hxR-ts-YPL">
                                             <rect key="frame" x="20" y="5" width="344" height="55"/>
@@ -186,7 +186,7 @@
                                     </userDefinedRuntimeAttributes>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hVy-u3-l5Z" customClass="AnimatableView" customModule="IBAnimatable">
-                                    <rect key="frame" x="0.0" y="225" width="384" height="65"/>
+                                    <rect key="frame" x="0.0" y="150" width="384" height="65"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="gMa-aO-epp">
                                             <rect key="frame" x="20" y="5" width="344" height="55"/>

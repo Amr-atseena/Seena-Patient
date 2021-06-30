@@ -133,28 +133,21 @@ class UploadVC: UIViewController, UploadViewProtocol {
     }
     // MARK: - Actions
     @IBAction func didTapUploadButton(_ sender: UIButton) {
-        if presenter.docType == 0 {
-            if presenter.numberOfImages == 1 {
-                showAlertController(title: "Alert!".toLocalize, message: "You can only upload one image for profile picture".toLocalize, actions: [])
-            }else{
-                presenter.uploadButtonTapped()
-            }
-        }else{
+//        if presenter.docType == 0 {
+//            if presenter.numberOfImages == 1 {
+//                showAlertController(title: "Alert!".toLocalize, message: "You can only upload one image for profile picture".toLocalize, actions: [])
+//            }else{
+//                presenter.uploadButtonTapped()
+//            }
+//        }else{
             presenter.uploadButtonTapped()
-        }
+//        }
 
     }
     @IBAction func didTapBackButton(_ sender: UIButton) {
-//        if presenter.numberOfImages == 0 {
+
             self.presenter.backButtonTapped()
-//        }else{
-//            let noAction = UIAlertAction(title: "No".localized, style: .default) {  (_) in
-//                self.presenter.backButtonTapped()
-//            }
-//            let yesAction = UIAlertAction(title: "Yes".localized, style: .default, handler: nil)
-//
-//            self.showAlertController(title: "Confirm!".toLocalize, message: "Would you like to change uploaded photo/s".toLocalize, actions: [noAction,yesAction])
-//        }
+
 
 
     }

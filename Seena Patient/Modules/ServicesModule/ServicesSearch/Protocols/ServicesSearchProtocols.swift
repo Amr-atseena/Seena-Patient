@@ -17,14 +17,14 @@ protocol ServicesSearchRouterProtocol {
     // Presenter -> Router
     var viewController: UIViewController? { get set }
     func go(to router: ServicesSearchRoute)
-    static func assembleModule() -> UIViewController
+    static func assembleModule(type : Int) -> UIViewController
 }
 // MARK: - ServicesSearch Interactor
 protocol ServicesSearchInputInteractorProtocol: class {
     var presenter: ServicesSearchOutputInteractorProtocol? { get set }
     var remoteDataServices: ServicesRemoteDataManager? { get set }
     // Presenter -> Interactor
-    func fetchServicesList(forKeyword keyword: String, atPage page: Int)
+    func fetchServicesList(forKeyword keyword: String, atPage page: Int, specialityID: Int?)
 }
 protocol ServicesSearchOutputInteractorProtocol: class {
     // Interactor -> Presenter
@@ -38,7 +38,7 @@ protocol ServicesSearchPresenterProtocol: class {
     var router: ServicesSearchRouterProtocol? { get set }
     var localization: ServicesSearchLocalization { get }
     // view -> Presenter
-    func viewDidLoad()
+    func viewDidLoad(speci: Int?)
     func fetchServicesList(forKeyword keyword: String?)
     func backButtonTapped()
     func searchButtonTapped(withKeyword keyword: String?)

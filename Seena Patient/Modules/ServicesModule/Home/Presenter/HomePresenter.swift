@@ -49,8 +49,9 @@ class HomePresenter: HomePresenterProtocol {
     func viewWillAppear() {
         interactor?.retriveUser()
     }
-    func serachButtonTapped() {
-        router?.go(to: .servicesSearch)
+    func serachButtonTapped(type: Int) {
+//        print(specialities[type])
+        router?.go(to: .servicesSearch(type != -1 ? specialities[type].id : type))
     }
     func configure(packageCell cell: PackageCellView, atIndex index: Int) {
         let package = packages[index]
@@ -138,6 +139,8 @@ extension HomePresenter: HomeOutputInteractorProtocol {
 //        specialities = homeServices.specialities
         packages = homeServices.packages
         clinic = homeServices.sponsoredClinics
+        UserDefaults.standard.set(homeServices.packages.first?.phone ?? "", forKey: "PackagePhone")
+        print(homeServices.packages.first?.phone)
 
         specialities.removeAll()
         specialities.append(Speciality(id: -1, image: "",speciality: "Clinics".localized,services: [],clinics: homeServices.sponsoredClinics))

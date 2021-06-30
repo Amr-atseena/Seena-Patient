@@ -17,6 +17,7 @@ class PackageDetailsVC: UIViewController, PackageDetailsViewProtocol {
     @IBOutlet var packagePriceLabel: UILabel!
     @IBOutlet var servicesInpackageKeywordLabel: UILabel!
     @IBOutlet var servicesCollectionView: UICollectionView!
+    @IBOutlet weak var callBtn: UIButton!
     // MARK: - Attributes
     var presenter: PackageDetailsPresenterProtocol!
     // MARK: - Init
@@ -77,6 +78,12 @@ class PackageDetailsVC: UIViewController, PackageDetailsViewProtocol {
     deinit {
          debugPrint(PackageDetailsVC.className + " Release from Momery")
     }
+
+    @IBAction func call(_ sender: Any) {
+        ServiceDetailsVC.makeCall(toNumber: UserDefaults.standard.string(forKey: "PackagePhone")!)
+    }
+
+
 }
 // MARK: - ClinicsCollectionView DataSoucrce Implementation
 extension PackageDetailsVC: UICollectionViewDataSource {

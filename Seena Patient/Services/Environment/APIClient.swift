@@ -18,6 +18,7 @@ struct UserInfo {
     var phone : String?
     var email: String?
     var birthdate: String?
+    var image : UIImage?
 
 }
 
@@ -47,7 +48,17 @@ class APIClient{
 
         let url = "http://dashboard.seenapay.com/api/auth/register?"
 
-        AF.request(URL(string: url)!, method: .post, parameters: params, encoding: JSONEncoding.default).responseData {
+        let imgData = userInfo.image != nil ? userInfo.image?.jpegData(compressionQuality: 0.5) : nil
+
+        AF.upload(multipartFormData: { multipartFormData in
+            for (key, value) in params {
+                multipartFormData.append(value!.data(using: String.Encoding.utf8)!, withName: key)
+            }
+            if imgData != nil {
+                multipartFormData.append(imgData!, withName: "image",fileName: "image.jpg", mimeType: "image/jpg")
+            }
+
+        }, to: URL(string: url)!,method: .post).responseData {
             response in
             switch response.result {
             case .success(let jsonData):

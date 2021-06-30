@@ -91,10 +91,10 @@ class ServiceDetailsVC: UIViewController, ServiceDetailsViewProtocol {
     }
 
     @IBAction func call(_ sender: Any) {
-        makeCall(toNumber: "16938")
+        ServiceDetailsVC.makeCall(toNumber: "16938")
     }
 
-    private func makeCall(toNumber number: String) {
+    public static func makeCall(toNumber number: String) {
         guard let numberURL =  URL(string: "tel://\(number)") else {
             return
         }

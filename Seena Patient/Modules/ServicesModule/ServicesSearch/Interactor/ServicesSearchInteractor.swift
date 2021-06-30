@@ -9,6 +9,7 @@
 import Foundation
 
 class ServicesSearchInteractor: ServicesSearchInputInteractorProtocol {
+
     // MARK: - Attributes
     weak var presenter: ServicesSearchOutputInteractorProtocol?
     var remoteDataServices: ServicesRemoteDataManager?
@@ -17,8 +18,8 @@ class ServicesSearchInteractor: ServicesSearchInputInteractorProtocol {
         self.remoteDataServices = remoteDataServices
     }
     // MARK: - Methods
-    func fetchServicesList(forKeyword keyword: String, atPage page: Int) {
-        remoteDataServices?.fetchServicesList(parms: ServicesListParameters(searchKeyword: keyword, currentPage: page), completionHandler: { [weak self] (results) in
+    func fetchServicesList(forKeyword keyword: String, atPage page: Int, specialityID specID : Int?) {
+        remoteDataServices?.fetchServicesList(parms: ServicesListParameters(searchKeyword: keyword, currentPage: page, specialityID: specID), completionHandler: { [weak self] (results) in
             guard let self = self else { return }
             switch results {
             case .failure:
