@@ -415,9 +415,42 @@
                                             <action selector="back:" destination="adN-aN-Msg" eventType="touchUpInside" id="pnH-a3-g9U"/>
                                         </connections>
                                     </button>
+                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KUX-4a-bK3">
+                                        <rect key="frame" x="57" y="300" width="300" height="120"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="16b-NT-bzP">
+                                                <rect key="frame" x="86" y="25" width="128.5" height="70"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Balance" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jiZ-jk-WWc">
+                                                        <rect key="frame" x="34" y="0.0" width="60.5" height="26"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="EGP 30,000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eer-lB-LAQ">
+                                                        <rect key="frame" x="0.0" y="41" width="128.5" height="29"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="70" id="a8N-f2-INP"/>
+                                                </constraints>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="16b-NT-bzP" firstAttribute="centerY" secondItem="KUX-4a-bK3" secondAttribute="centerY" id="49y-3u-doU"/>
+                                            <constraint firstAttribute="height" constant="120" id="9AD-1t-bxg"/>
+                                            <constraint firstItem="16b-NT-bzP" firstAttribute="centerX" secondItem="KUX-4a-bK3" secondAttribute="centerX" id="wgz-wW-1Ve"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstItem="KUX-4a-bK3" firstAttribute="top" secondItem="Rw0-2V-RgK" secondAttribute="bottom" constant="30.5" id="0gA-K8-GV3"/>
+                                    <constraint firstItem="KUX-4a-bK3" firstAttribute="leading" secondItem="DQe-1s-a58" secondAttribute="leading" id="8VU-FF-4cv"/>
                                     <constraint firstAttribute="trailing" secondItem="Rw0-2V-RgK" secondAttribute="trailing" constant="154" id="CN4-b6-ycL"/>
                                     <constraint firstItem="T6Z-Fo-gkS" firstAttribute="leading" secondItem="U8s-NE-0eV" secondAttribute="leading" constant="20" id="IK3-QR-QMq"/>
                                     <constraint firstItem="DQe-1s-a58" firstAttribute="centerX" secondItem="U8s-NE-0eV" secondAttribute="centerX" id="M0h-oF-Fyg"/>
@@ -430,6 +463,7 @@
                                     <constraint firstItem="QhV-hY-w01" firstAttribute="top" secondItem="U8s-NE-0eV" secondAttribute="top" constant="10" id="Wci-rk-Uqf"/>
                                     <constraint firstAttribute="trailing" secondItem="KVb-8S-2C5" secondAttribute="trailing" constant="20" id="XPY-DB-NFA"/>
                                     <constraint firstItem="E1J-if-fcf" firstAttribute="leading" secondItem="DQe-1s-a58" secondAttribute="leading" id="cVe-d7-T9I"/>
+                                    <constraint firstItem="KUX-4a-bK3" firstAttribute="centerX" secondItem="U8s-NE-0eV" secondAttribute="centerX" id="dFq-Uw-qHU"/>
                                     <constraint firstItem="DQe-1s-a58" firstAttribute="leading" secondItem="U8s-NE-0eV" secondAttribute="leading" constant="57" id="rdC-cs-53n"/>
                                     <constraint firstItem="E1J-if-fcf" firstAttribute="top" secondItem="Rw0-2V-RgK" secondAttribute="bottom" constant="30.5" id="spA-2t-0EC"/>
                                     <constraint firstItem="KVb-8S-2C5" firstAttribute="leading" secondItem="U8s-NE-0eV" secondAttribute="leading" constant="20" id="wOS-wv-9j4"/>
@@ -450,6 +484,7 @@
                     </view>
                     <connections>
                         <outlet property="backBtn" destination="QhV-hY-w01" id="dYb-gH-Cv7"/>
+                        <outlet property="balanceView" destination="KUX-4a-bK3" id="GIw-oC-vzz"/>
                         <outlet property="installmentImg" destination="ezv-2j-goW" id="VHe-Nl-Vj0"/>
                         <outlet property="installmentStackView" destination="DQe-1s-a58" id="omF-K2-2C4"/>
                         <outlet property="installmentView" destination="Vmd-H7-Jur" id="4tM-18-ojc"/>

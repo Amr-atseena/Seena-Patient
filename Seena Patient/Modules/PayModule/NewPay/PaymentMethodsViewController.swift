@@ -19,6 +19,10 @@ class PaymentMethodsViewController: UIViewController {
     @IBOutlet weak var valuView: UIView!
     @IBOutlet weak var valuImg: UIImageView!
     @IBOutlet weak var installmentStackView: UIStackView!
+
+    @IBOutlet weak var balanceView: UIView!
+
+
     @IBOutlet weak var nextBtn: UIButton!
 
     @IBOutlet weak var threeMons: UIView!
@@ -131,12 +135,14 @@ class PaymentMethodsViewController: UIViewController {
         installmentImg.image = UIImage(named: "unselected")
         valuImg.image = UIImage(named: "unselected")
         //        installmentStackView.isHidden = true
+//        UserDefaults.standard.setValue("2", forKey: "installmentsPayment")
         whichInstallment = 0
-        oneOfPaymentMethodsSelected = false
+        oneOfPaymentMethodsSelected = true
         tableView.isHidden = true
 
+        balanceView.isHidden = false
 
-        showAlertController(title: "Soon".localized, message: "Will be available soon".localized, actions: [])
+//        showAlertController(title: "Soon".localized, message: "Will be available soon".localized, actions: [])
     }
 
     @objc func installmentAction(sender : UITapGestureRecognizer) {
@@ -152,6 +158,7 @@ class PaymentMethodsViewController: UIViewController {
         tableView.isHidden = false
 
         installmentStackView.isHidden = true
+        balanceView.isHidden = true
     }
 
     @objc func valuAction(sender : UITapGestureRecognizer) {
@@ -162,6 +169,7 @@ class PaymentMethodsViewController: UIViewController {
         whichInstallment = 0
         oneOfPaymentMethodsSelected = false
         tableView.isHidden = true
+        balanceView.isHidden = true
 
         showAlertController(title: "Soon".localized, message: "Will be available soon".localized, actions: [])
     }
