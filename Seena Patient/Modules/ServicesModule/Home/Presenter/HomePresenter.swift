@@ -129,10 +129,10 @@ class HomePresenter: HomePresenterProtocol {
 extension HomePresenter: HomeOutputInteractorProtocol {
     func onRetriveUserSuccess(withUser user: User?) {
         guard let user = user else {
-            view?.setUsername(localization.guest)
+            view?.setUsername(localization.guest, status: "")
             return
         }
-        view?.setUsername(user.firstName)
+        view?.setUsername(user.firstName, status: user.status ?? "")
     }
     func onRetriveDataSuccess(with homeServices: HomeResponse) {
         view?.hideSkeltonView()

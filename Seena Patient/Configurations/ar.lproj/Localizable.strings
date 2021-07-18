@@ -47,8 +47,10 @@
 "of" = "من";
 "Payment Channel" = "طرق الدفع";
 "Seena Pay" = "الدفع عن طريق سينا";
+"Seena Branches" = "الدفع عن طريق سينا";
 "ATM" = "ماكينة الصراف الآلي";
 "Online Payment" = "الدفع الالكتروني";
+"Online Transfer" = "الدفع الالكتروني";
 "Vodafone Cash" = "فودافون كاش";
 "Next" = "التالي";
 "Please deposit your payment in any of the following bank accounts; select the bank you chose then click next" = "
@@ -142,13 +144,14 @@
 "Please, sign in first" = "من فضلك قم بتسجيل الدخول اولاً";
 "Clinics" = "العيادات";
 "Etisalat Cash" = "اتصالات كاش";
+"Orange Cash" = "اورانج كاش";
 "Upload receipt reference" = "رفع مرجع الإيصال";
 "Payment pending" = "الدفع قيد الانتظار";
 "No" = "لا";
 "Yes" = "نعم";
 "Confirm!" = "تأكيد!";
 "Would you like to change uploaded photo/s" = "هل ترغب في تغيير الصورة / الصور التي تم تحميلها";
-"You can pay only current unpaid and rejected installments" = "يمكنك فقط دفع الأقساط الحالية غير المسددة والمرفوضة";
+"Sorry you can only pay unpaid installments" = "يمكنك فقط دفع الأقساط الحالية غير المسددة والمرفوضة";
 "Attention!" = "!تنبيه";
 "Alert!" = "تنبيه!";
 "You can only upload one image for profile picture" = "يمكنك فقط تحميل صورة واحدة لصورة الملف الشخصي";
@@ -162,3 +165,8 @@
 "Call" = "اتصل";
 "File size is too big, please select another file" = "حجم الملف كبير جدًا، يرجى تحديد ملف آخر";
 "Wallet" = "المحفظة";
+"Please, wait until being an active user" = "من فضلك انتظر حتى يتم تفعيل حسابك";
+"Inactive" = "غير فعال";
+"Upload your profile pic" = "اختر صورة شخصية";
+"You have to be more than 21 years" = "يجب أن يكون عمرك أكثر من 21 عامًا";
+"Tutorials" = "دروس";

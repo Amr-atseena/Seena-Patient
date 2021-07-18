@@ -20,4 +20,6 @@ inhibit_all_warnings!
   pod 'Firebase/Messaging'
   pod "SkeletonView"
   pod 'SkyFloatingLabelTextField', '~> 3.0'
+pod 'IQKeyboardManagerSwift'
+
 end

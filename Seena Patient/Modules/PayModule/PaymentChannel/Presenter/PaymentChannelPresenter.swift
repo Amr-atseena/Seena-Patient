@@ -32,11 +32,13 @@ class PaymentChannelPresenter: PaymentChannelPresenterProtocol {
         view?.setupNavBar()
         view?.setupUI()
         view?.setupPaymentMethodsTableView()
-        paymentMethods = [OptionViewModel(name: localization.seenaPay),
+        paymentMethods = [OptionViewModel(name: "Seena Branches".toLocalize),
                           OptionViewModel(name: localization.atm),
-                          OptionViewModel(name: localization.onlinePay),
+                          OptionViewModel(name: "Online Transfer".toLocalize),
                           OptionViewModel(name: localization.vodafoneCash),
-                          OptionViewModel(name: localization.etisalatCash)]
+                          OptionViewModel(name: localization.etisalatCash),
+//                          OptionViewModel(name: localization.orangeCash)
+        ]
     }
     func config(paymentCell cell: PaymentMethodCellProtocol, atIndex index: Int) {
         let option = paymentMethods[index]

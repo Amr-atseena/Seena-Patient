@@ -34,6 +34,14 @@ class ClinicDetailsVC: UIViewController, ClinicDetailsViewProtocol {
         super.viewDidLoad()
         presenter.viewDidLoad()
     }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tabBarController?.tabBar.isHidden = true
+    }
+
+
+
     // MARK: - Methods
     func setupUI() {
         // clinicName Label

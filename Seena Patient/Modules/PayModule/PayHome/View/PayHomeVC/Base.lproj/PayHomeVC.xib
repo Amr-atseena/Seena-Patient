@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PayHomeVC">
             <connections>
+                <outlet property="allFilterBtn" destination="Z9O-7O-nnx" id="eX4-PJ-p72"/>
                 <outlet property="amountPayedLabel" destination="wTj-u8-hPs" id="3Wa-o5-TRf"/>
                 <outlet property="applyBtn" destination="ooF-qv-EoG" id="ZoV-Xm-Jvf"/>
                 <outlet property="availableBalanceKeywordLabel" destination="dmt-kB-UDy" id="KWX-fe-b4s"/>
@@ -22,10 +23,14 @@
                 <outlet property="getYourSeenaView" destination="iXr-zB-LIW" id="ceC-Ty-YSF"/>
                 <outlet property="loadingIndictor" destination="emT-Qi-WZT" id="LWc-78-irI"/>
                 <outlet property="noDataView" destination="5hH-Vq-Ob3" id="3aR-nr-xwm"/>
+                <outlet property="paidFilterBtn" destination="YpP-0w-fiv" id="MuQ-Ih-ct6"/>
                 <outlet property="payLabel" destination="Rlo-uG-PD9" id="W2k-rs-BRR"/>
                 <outlet property="paymentsDueKeywordLabel" destination="Zia-VY-44m" id="byO-oE-n7b"/>
                 <outlet property="paymentsDueTableView" destination="p0h-37-Zio" id="yAv-HK-OlM"/>
+                <outlet property="pendingFilterBtn" destination="2tf-ZO-UAj" id="gYl-zl-M0G"/>
                 <outlet property="progressView" destination="0d7-W4-1DF" id="Nh5-8O-JeM"/>
+                <outlet property="rejectedFilterBtn" destination="L7c-iz-se0" id="DeL-E8-X41"/>
+                <outlet property="unpaidFilterBtn" destination="WaF-MI-bly" id="Vhb-GG-FHL"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="youHaveLbl" destination="Z5T-vB-SuQ" id="IZG-gd-IxW"/>
                 <outlet property="youPayKeywordLabel" destination="UcN-bw-QIG" id="l6v-Gm-hw2"/>
@@ -146,7 +151,7 @@
                     </userDefinedRuntimeAttributes>
                 </view>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="p0h-37-Zio">
-                    <rect key="frame" x="20" y="418.66666666666674" width="374" height="433.33333333333326"/>
+                    <rect key="frame" x="20" y="484.66666666666674" width="374" height="367.33333333333326"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Df9-04-0Dy" customClass="AnimatableView" customModule="IBAnimatable">
@@ -155,7 +160,7 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iXr-zB-LIW">
                             <rect key="frame" x="40" y="40.000000000000014" width="292.66666666666669" height="239.33333333333337"/>
                             <subviews>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GetYourSeena" translatesAutoresizingMaskIntoConstraints="NO" id="cbV-7J-psJ">
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="freeCredit" translatesAutoresizingMaskIntoConstraints="NO" id="cbV-7J-psJ">
                                     <rect key="frame" x="25.000000000000014" y="30.000000000000021" width="242.66666666666669" height="87.333333333333314"/>
                                     <constraints>
                                         <constraint firstAttribute="width" secondItem="cbV-7J-psJ" secondAttribute="height" multiplier="242:87" id="K1X-kM-i1t"/>
@@ -302,10 +307,10 @@
                     </userDefinedRuntimeAttributes>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5hH-Vq-Ob3">
-                    <rect key="frame" x="20" y="418.66666666666674" width="374" height="433.33333333333326"/>
+                    <rect key="frame" x="20" y="484.66666666666674" width="374" height="367.33333333333326"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="xYU-mg-gQQ">
-                            <rect key="frame" x="20" y="175.66666666666669" width="334" height="82.333333333333314"/>
+                            <rect key="frame" x="20" y="142.66666666666669" width="334" height="82.333333333333314"/>
                             <subviews>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="like1" translatesAutoresizingMaskIntoConstraints="NO" id="pm6-Oq-usS">
                                     <rect key="frame" x="141" y="0.0" width="52" height="52"/>
@@ -333,7 +338,7 @@
                     </connections>
                 </button>
                 <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="emT-Qi-WZT">
-                    <rect key="frame" x="188.66666666666666" y="617" width="37" height="37"/>
+                    <rect key="frame" x="188.66666666666666" y="650" width="37" height="37"/>
                     <color key="color" name="payEnd"/>
                 </activityIndicatorView>
                 <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oKj-OA-3El">
@@ -342,6 +347,71 @@
                         <action selector="didTapCalculateButton:" destination="-1" eventType="touchUpInside" id="v2T-vX-f6W"/>
                     </connections>
                 </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8i2-4z-Zq2">
+                    <rect key="frame" x="20" y="434.66666666666669" width="374" height="50"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="7Bn-8r-ilP">
+                            <rect key="frame" x="5" y="5" width="364" height="40"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z9O-7O-nnx">
+                                    <rect key="frame" x="0.0" y="0.0" width="41" height="40"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <state key="normal" title="All"/>
+                                    <connections>
+                                        <action selector="all:" destination="-1" eventType="touchUpInside" id="YqK-Hm-DKX"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YpP-0w-fiv">
+                                    <rect key="frame" x="51" y="0.0" width="41" height="40"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <state key="normal" title="Paid"/>
+                                    <connections>
+                                        <action selector="paid:" destination="-1" eventType="touchUpInside" id="Tqg-Dw-XDe"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WaF-MI-bly">
+                                    <rect key="frame" x="102" y="0.0" width="67" height="40"/>
+                                    <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <state key="normal" title="Unpaid">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="unpaid:" destination="-1" eventType="touchUpInside" id="dOn-tb-0mi"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2tf-ZO-UAj">
+                                    <rect key="frame" x="179" y="0.0" width="76.666666666666686" height="40"/>
+                                    <color key="backgroundColor" red="1" green="0.47450980390000003" blue="0.0" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                    <state key="normal" title="Pending">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="pending:" destination="-1" eventType="touchUpInside" id="Byi-Ha-5ay"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L7c-iz-se0">
+                                    <rect key="frame" x="265.66666666666669" y="0.0" width="98.333333333333314" height="40"/>
+                                    <color key="backgroundColor" red="0.85882352939999995" green="0.078431372550000003" blue="0.078431372550000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <state key="normal" title="Rejected">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="rejected:" destination="-1" eventType="touchUpInside" id="zSt-fE-fW9"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="7Bn-8r-ilP" secondAttribute="bottom" constant="5" id="Je1-JB-j2p"/>
+                        <constraint firstAttribute="trailing" secondItem="7Bn-8r-ilP" secondAttribute="trailing" constant="5" id="K6W-aO-R1i"/>
+                        <constraint firstAttribute="height" constant="50" id="MjW-gb-tZf"/>
+                        <constraint firstItem="7Bn-8r-ilP" firstAttribute="top" secondItem="8i2-4z-Zq2" secondAttribute="top" constant="5" id="SNg-qT-cLB"/>
+                        <constraint firstItem="7Bn-8r-ilP" firstAttribute="leading" secondItem="8i2-4z-Zq2" secondAttribute="leading" constant="5" id="aGe-yg-QbZ"/>
+                    </constraints>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -350,6 +420,7 @@
                 <constraint firstItem="emT-Qi-WZT" firstAttribute="centerY" secondItem="5hH-Vq-Ob3" secondAttribute="centerY" id="1n1-rR-BiP"/>
                 <constraint firstItem="oKj-OA-3El" firstAttribute="trailing" secondItem="ZwS-fx-vlS" secondAttribute="trailing" id="2GI-Ql-nAH"/>
                 <constraint firstItem="rtt-tq-ZNX" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="2zW-cm-PAR"/>
+                <constraint firstItem="p0h-37-Zio" firstAttribute="top" secondItem="8i2-4z-Zq2" secondAttribute="bottom" id="4EU-4l-rMQ"/>
                 <constraint firstItem="rtt-tq-ZNX" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.35" id="8MN-4g-xNS"/>
                 <constraint firstItem="oKj-OA-3El" firstAttribute="leading" secondItem="ZwS-fx-vlS" secondAttribute="leading" id="ABW-6U-7sy"/>
                 <constraint firstItem="TdC-6e-0WS" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" constant="-20" id="B5u-0D-th4"/>
@@ -367,26 +438,28 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="rtt-tq-ZNX" secondAttribute="trailing" id="Ug4-ki-RKa"/>
                 <constraint firstItem="oKj-OA-3El" firstAttribute="top" secondItem="ZwS-fx-vlS" secondAttribute="top" id="XgI-qA-bjK"/>
                 <constraint firstItem="5hH-Vq-Ob3" firstAttribute="bottom" secondItem="p0h-37-Zio" secondAttribute="bottom" id="Xhu-RK-94x"/>
+                <constraint firstItem="8i2-4z-Zq2" firstAttribute="trailing" secondItem="p0h-37-Zio" secondAttribute="trailing" id="XpO-9X-jLc"/>
                 <constraint firstItem="emT-Qi-WZT" firstAttribute="centerX" secondItem="5hH-Vq-Ob3" secondAttribute="centerX" id="ZFO-ZH-XWh"/>
+                <constraint firstItem="8i2-4z-Zq2" firstAttribute="top" secondItem="oKj-OA-3El" secondAttribute="bottom" id="cc1-Zp-0ce"/>
                 <constraint firstItem="9P0-Pz-8zS" firstAttribute="baseline" secondItem="oKj-OA-3El" secondAttribute="baseline" id="ehN-RX-yE8"/>
                 <constraint firstItem="Df9-04-0Dy" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.9" id="hwt-io-bR0"/>
                 <constraint firstItem="5hH-Vq-Ob3" firstAttribute="leading" secondItem="p0h-37-Zio" secondAttribute="leading" id="irO-3A-9Fs"/>
                 <constraint firstItem="9P0-Pz-8zS" firstAttribute="trailing" secondItem="UTr-SS-6mY" secondAttribute="trailing" id="l5M-ol-x94"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="p0h-37-Zio" secondAttribute="trailing" constant="20" id="oD6-Pb-1PN"/>
-                <constraint firstItem="p0h-37-Zio" firstAttribute="top" secondItem="TdC-6e-0WS" secondAttribute="bottom" constant="10" id="oZZ-bf-rs1"/>
                 <constraint firstItem="Df9-04-0Dy" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="qQX-9V-xJP"/>
                 <constraint firstItem="p0h-37-Zio" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="rQE-yH-Zz8"/>
                 <constraint firstItem="5hH-Vq-Ob3" firstAttribute="top" secondItem="p0h-37-Zio" secondAttribute="top" id="uJk-kB-xiB"/>
                 <constraint firstItem="9P0-Pz-8zS" firstAttribute="leading" secondItem="UTr-SS-6mY" secondAttribute="leading" id="weq-oH-krj"/>
+                <constraint firstItem="8i2-4z-Zq2" firstAttribute="leading" secondItem="p0h-37-Zio" secondAttribute="leading" id="xGQ-DX-vqF"/>
             </constraints>
             <point key="canvasLocation" x="140.57971014492756" y="124.55357142857142"/>
         </view>
     </objects>
     <resources>
-        <image name="GetYourSeena" width="248.66667175292969" height="88"/>
         <image name="calculator" width="20" height="22"/>
         <image name="card" width="28.666666030883789" height="24"/>
         <image name="credit-card" width="20" height="20"/>
+        <image name="freeCredit" width="210" height="82"/>
         <image name="like1" width="52" height="52"/>
         <namedColor name="PrimaryNavBarText">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

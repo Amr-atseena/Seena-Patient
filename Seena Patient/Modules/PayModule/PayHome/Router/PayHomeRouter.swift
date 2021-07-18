@@ -47,7 +47,7 @@ class PayHomeRouter: PayHomeRouterProtocol {
     }
 
     private func notActivee() {
-        viewController?.showAlertController(title: "Attention!".toLocalize, message: "You can pay only current unpaid and rejected installments".toLocalize, actions: [])
+        viewController?.showAlertController(title: "Attention!".toLocalize, message: "Sorry you can only pay unpaid installments".toLocalize, actions: [])
 //        viewController?.showToast(message: "You can pay only current unpaid and rejected installments".toLocalize, font: .systemFont(ofSize: 15))
     }
 }

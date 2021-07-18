@@ -17,6 +17,7 @@
                 <outlet property="pushNotificationsKeywordLabel" destination="bcS-BS-gSm" id="qS7-ww-0OT"/>
                 <outlet property="rateAppKeywordLabel" destination="NDc-0X-EKd" id="Ttp-Di-bBY"/>
                 <outlet property="settingsKeywordLabel" destination="vNM-fG-mxs" id="ayu-0b-QIA"/>
+                <outlet property="tutorialsLbl" destination="dqY-Mk-zKi" id="h8Q-3C-X4x"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -166,6 +167,57 @@
                                         <constraint firstAttribute="trailing" secondItem="GIB-MA-fRw" secondAttribute="trailing" id="mDs-oO-vu3"/>
                                         <constraint firstItem="GIB-MA-fRw" firstAttribute="top" secondItem="sOm-yL-4W7" secondAttribute="top" id="pfK-1D-c9S"/>
                                         <constraint firstAttribute="bottom" secondItem="GIB-MA-fRw" secondAttribute="bottom" id="zTJ-y1-vFr"/>
+                                    </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="8"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                            <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                            <real key="value" value="2"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                            <real key="value" value="0.25"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="point" keyPath="shadowOffset">
+                                            <point key="value" x="0.0" y="0.0"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Vk-RX-On5" customClass="AnimatableView" customModule="IBAnimatable">
+                                    <rect key="frame" x="0.0" y="145" width="384" height="65"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="K7S-3e-XjR">
+                                            <rect key="frame" x="20" y="5" width="344" height="55"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tutorials" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dqY-Mk-zKi">
+                                                    <rect key="frame" x="0.0" y="17.5" width="344" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" name="secondaryText"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qxR-BB-CyD">
+                                            <rect key="frame" x="0.0" y="0.0" width="384" height="65"/>
+                                            <connections>
+                                                <action selector="tutorials:" destination="-1" eventType="touchUpInside" id="Nsf-Ut-iyv"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="K7S-3e-XjR" secondAttribute="bottom" constant="5" id="7eV-YV-f1z"/>
+                                        <constraint firstItem="qxR-BB-CyD" firstAttribute="top" secondItem="1Vk-RX-On5" secondAttribute="top" id="HJY-GS-8LN"/>
+                                        <constraint firstAttribute="height" constant="65" id="NWv-8R-UOi"/>
+                                        <constraint firstItem="K7S-3e-XjR" firstAttribute="top" secondItem="1Vk-RX-On5" secondAttribute="top" constant="5" id="oaT-00-O2J"/>
+                                        <constraint firstAttribute="trailing" secondItem="K7S-3e-XjR" secondAttribute="trailing" constant="20" id="oti-cw-TW3"/>
+                                        <constraint firstAttribute="bottom" secondItem="qxR-BB-CyD" secondAttribute="bottom" id="uk3-QK-gW2"/>
+                                        <constraint firstAttribute="trailing" secondItem="qxR-BB-CyD" secondAttribute="trailing" id="yJF-2Q-MVg"/>
+                                        <constraint firstItem="K7S-3e-XjR" firstAttribute="leading" secondItem="1Vk-RX-On5" secondAttribute="leading" constant="20" id="zDh-BQ-2RA"/>
+                                        <constraint firstItem="qxR-BB-CyD" firstAttribute="leading" secondItem="1Vk-RX-On5" secondAttribute="leading" id="zK8-UR-jZN"/>
                                     </constraints>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">

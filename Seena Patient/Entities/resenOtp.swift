@@ -1,17 +1,17 @@
 //
-//  PayForDoctorModel.swift
+//  resenOtp.swift
 //  Seena Patient
 //
-//  Created by RKAnjel on 5/30/21.
+//  Created by RKAnjel on 7/8/21.
 //  Copyright © 2021 RKAnjel. All rights reserved.
 //
 
 import Foundation
 
-// MARK: - PayForDoctorModel
-struct PayForDoctorModel: Codable {
-    let error: PayForDoctorModelError
-    let response: PayForDoctorModelResponse
+// MARK: - ResenOtp
+struct ResenOtp: Codable {
+    let error: ResenOtpError
+    let response: ResenOtpResponse
 
     enum CodingKeys: String, CodingKey {
         case error = "Error"
@@ -20,19 +20,17 @@ struct PayForDoctorModel: Codable {
 }
 
 // MARK: - Error
-struct PayForDoctorModelError: Codable {
+struct ResenOtpError: Codable {
     let status: Bool
     let code: Int
     let validation, desc, token: String
 }
 
 // MARK: - Response
-struct PayForDoctorModelResponse: Codable {
+struct ResenOtpResponse: Codable {
     let success: String
-    let paymentID : Int
 
     enum CodingKeys: String, CodingKey {
         case success = "Success"
-        case paymentID = "PaymentID"
     }
 }

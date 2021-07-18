@@ -41,6 +41,7 @@ class ForgetPassViewController: UIViewController {
                 newViewController!.modalPresentationStyle = .fullScreen
                 newViewController?.userPhoneNum = self.phoneNumTF.text
                 UserDefaults.standard.set(self.phoneNumTF.text, forKey: "num")
+                newViewController?.userPhoneNum = self.phoneNumTF.text
                 self.navigationController?.pushViewController(newViewController!, animated: true)
             }
         } onError: { (error) in

@@ -31,6 +31,11 @@ class ServicesSearchVC: UIViewController, ServicesSearchViewProtocol {
         super.viewDidLoad()
         presenter.viewDidLoad(speci: type == -1 ? nil : type )
     }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tabBarController?.tabBar.isHidden = false
+    }
     // MARK: - Methods
     func setupUI() {
         // results keyword Label

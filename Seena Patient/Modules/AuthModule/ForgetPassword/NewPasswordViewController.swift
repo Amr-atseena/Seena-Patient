@@ -20,7 +20,11 @@ class NewPasswordViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        newPass.layer.cornerRadius = 10
+
+
         newPass.addTarget(self, action: #selector(textDidBeginEditing), for: .editingDidEnd)
+        tabBarController?.tabBar.isHidden = true
 
     }
 

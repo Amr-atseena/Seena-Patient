@@ -32,6 +32,7 @@ class PackageDetailsVC: UIViewController, PackageDetailsViewProtocol {
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter.viewDidLoad()
+        tabBarController?.tabBar.isHidden = true
     }
     // MARK: - Methods
     func setupNavBar() {
@@ -80,7 +81,7 @@ class PackageDetailsVC: UIViewController, PackageDetailsViewProtocol {
     }
 
     @IBAction func call(_ sender: Any) {
-        ServiceDetailsVC.makeCall(toNumber: UserDefaults.standard.string(forKey: "PackagePhone")!)
+        ServiceDetailsVC.makeCall(toNumber: UserDefaults.standard.string(forKey: "PackagePhone") ?? "16938")
     }
 
 

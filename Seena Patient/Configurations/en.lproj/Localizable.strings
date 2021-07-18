@@ -48,8 +48,10 @@
 "of" = "of";
 "Payment Channel" = "Payment Channels";
 "Seena Pay" = "Seena Pay";
+"Seena Branches" = "Seena Branches";
 "ATM" = "ATM";
 "Online Payment" = "Online Payment";
+"Online Transfer" = "Online Transfer";
 "Vodafone Cash" = "Vodafone Cash";
 "Next" = "Next";
 "Please deposit your payment in any of the following bank accounts; select the bank you chose then click next" = "Please deposit your payment in any of the following bank accounts; select the bank you chose then click next";
@@ -103,7 +105,7 @@ we will shortly update you with the status of your application";
 "rejected" = "rejected";
 "missing info" = "missing info";
 "Available Balance" = "Available Balance";
-"SeenaPayMessage" = "Seena pay will be available soon please use another payment method";
+"SeenaPayMessage" = "Seena Branches will be available soon; please choose another payment method";
 
 
 
@@ -140,6 +142,7 @@ we will shortly update you with the status of your application";
 "Alert!" = "Alert!";
 "Please, sign in first" = "Please, sign in first";
 "Etisalat Cash" = "Etisalat Cash";
+"Orange Cash" = "Orange Cash";
 "Upload receipt reference" = "Upload receipt reference";
 "Payment pending" = "Payment pending";
 "Clinics" = "Clinics";
@@ -148,7 +151,7 @@ we will shortly update you with the status of your application";
 "Yes" = "Yes";
 "Confirm!" = "Confirm!";
 "Would you like to change uploaded photo/s" = "Would you like to change uploaded photo/s";
-"You can pay only current unpaid and rejected installments" = "You can pay only current unpaid and rejected installments";
+"Sorry you can only pay unpaid installments" = "Sorry you can only pay unpaid installments";
 "Attention!" = "Attention!";
 "Alert!" = "Alert!";
 "You can only upload one image for profile picture" = "You can only upload one image for profile picture";
@@ -164,3 +167,8 @@ we will shortly update you with the status of your application";
 "Call" = "Call";
 "File size is too big, please select another file" = "File size is too big, please select another file";
 "Wallet" = "Wallet";
+"Please, wait until being an active user" = "Please, wait until being an active user";
+"Inactive" = "Inactive";
+"Upload your profile pic" = "Upload your profile pic";
+"You have to be more than 21 years" = "You have to be more than 21 years";
+"Tutorials" = "Tutorials";

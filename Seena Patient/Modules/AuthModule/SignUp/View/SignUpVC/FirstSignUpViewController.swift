@@ -20,16 +20,20 @@ class FirstSignUpViewController: UIViewController, UIImagePickerControllerDelega
     @IBOutlet weak var birthDate: SkyFloatingLabelTextField!
     @IBOutlet weak var loadingIndictor: UIActivityIndicatorView!
     @IBOutlet weak var profilePicBtn: UIButton!
+    @IBOutlet weak var uploadPicLbl: UILabel!
 
     var selectedDate = ""
     let datePicker = UIDatePicker()
     let progressHUD = ProgressHUD(text: "")
     var profilePic : UIImage?
+    var agee : Int?
 
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setDatePicker()
+
+        uploadPicLbl.text = "Upload your profile pic".toLocalize
 
         profilePicBtn.layer.cornerRadius = 0.5 * profilePicBtn.bounds.size.width
         profilePicBtn.clipsToBounds = true
@@ -37,6 +41,11 @@ class FirstSignUpViewController: UIViewController, UIImagePickerControllerDelega
         lastName.addTarget(self, action: #selector(dateChanged(_:)), for: .valueChanged)
         confirmPass.addTarget(self, action: #selector(textDidBeginEditing), for: .editingDidEnd)
 
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tabBarController?.tabBar.isHidden = true
     }
 
     @objc func textDidBeginEditing(sender:UITextField) -> Void
@@ -103,8 +112,20 @@ class FirstSignUpViewController: UIViewController, UIImagePickerControllerDelega
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd"
         birthDate.text = formatter.string(from: datePicker.date).replacedArabicDigitsWithEnglish
-        selectedDate = formatter.string(from: datePicker.date).replacedArabicDigitsWithEnglish
-        self.setBirthDate(selectedDate)
+
+        let date = formatter.date(from: birthDate.text!)
+               let age = Calendar.current.dateComponents([.year], from: date!, to: Date()).year!
+               print(age)
+             if age < 21 {
+                showAlertController(title: "Alert!", message: "You have to be more than 21 years".toLocalize, actions: [])
+                birthDate.text = ""
+                self.agee = age
+             }else{
+
+                selectedDate = formatter.string(from: datePicker.date).replacedArabicDigitsWithEnglish
+                self.setBirthDate(selectedDate)
+
+             }
         self.view.endEditing(true)
     }
 
@@ -177,6 +198,7 @@ class FirstSignUpViewController: UIViewController, UIImagePickerControllerDelega
 
                 print(res.error?.token)
 
+                UserDefaults.standard.set(res.error?.token, forKey: "RegisterToken")
 
 
 
@@ -196,6 +218,13 @@ class FirstSignUpViewController: UIViewController, UIImagePickerControllerDelega
                 newViewController!.modalPresentationStyle = .fullScreen
                     newViewController?.phoneNum = res.response?.user?.phone
                     newViewController?.result = res
+
+                    newViewController?.firstName = self.firstName.text
+                    newViewController?.lastName = self.lastName.text
+                    newViewController?.pass = self.password.text
+                    newViewController?.email = self.email.text
+                    newViewController?.birthdate = self.birthDate.text
+                    newViewController?.pp = self.profilePic
                 self.navigationController?.pushViewController(newViewController!, animated: true)
                 }
 
@@ -272,19 +301,19 @@ class FirstSignUpViewController: UIViewController, UIImagePickerControllerDelega
             confirmPass.selectedLineColor = UIColor(named: "secondaryActionText")!
             textFieldsFilled = true
         }
-        if (birthDate.text?.isEmpty == true) {
-            birthDate.selectedLineColor = .red
-            birthDate.lineColor = .red
-            textFieldsFilled = false
-        }else{
-            birthDate.lineColor = UIColor(named: "secondaryActionText")!
-            birthDate.selectedLineColor = UIColor(named: "secondaryActionText")!
-            textFieldsFilled = true
-        }
+//        if (birthDate.text?.isEmpty == true) {
+//            birthDate.selectedLineColor = .red
+//            birthDate.lineColor = .red
+//            textFieldsFilled = false
+//        }else{
+//            birthDate.lineColor = UIColor(named: "secondaryActionText")!
+//            birthDate.selectedLineColor = UIColor(named: "secondaryActionText")!
+//            textFieldsFilled = true
+//        }
 
         if profilePic == nil {
             textFieldsFilled = false
-            showToast(message: "Upload a profile pic", font: .systemFont(ofSize: 16))
+            showToast(message: "Upload your profile pic".toLocalize, font: .systemFont(ofSize: 16))
         }else{
             textFieldsFilled = true
         }
@@ -315,6 +344,12 @@ class FirstSignUpViewController: UIViewController, UIImagePickerControllerDelega
         profilePicBtn.setImage(image, for: .normal)
         profilePic = image
     }
+
+
+    @IBAction func back(_ sender: Any) {
+        navigationController?.popToRootViewController(animated: true)
+    }
+
 
 
 

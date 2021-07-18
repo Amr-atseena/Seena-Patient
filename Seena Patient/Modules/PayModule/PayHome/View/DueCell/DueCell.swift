@@ -42,6 +42,7 @@ extension DueCell: DueCellProtocol {
         }else{
         status.text = due.status
         }
+        
 
 //            if due.active == 1 && due.status == "rejected" {
 //                dueContainer.backgroundColor = #colorLiteral(red: 0.9999960065, green: 1, blue: 1, alpha: 1)

@@ -50,9 +50,15 @@
 		</dict>
 	</dict>
 	<key>NSCameraUsageDescription</key>
-	<string>Seena need camera access to allow our customers to provide us with a copy of their required ID's , documents and upload their profile picture</string>
+	<string>Seena need camera access to allow our customers to provide us with a copy of their required ID&apos;s , documents and upload their profile picture</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>Do you allow this app to know your current location?</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Will you allow this app to always know your location?</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Do you allow this app to know your current location?</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>Seena need camera access to allow our customers to provide us with a copy of their required ID's , documents and upload their profile picture</string>
+	<string>Seena need camera access to allow our customers to provide us with a copy of their required ID&apos;s , documents and upload their profile picture</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>Tajawal-Bold.ttf</string>

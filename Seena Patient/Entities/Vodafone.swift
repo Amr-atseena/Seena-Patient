@@ -22,3 +22,10 @@ struct Etisalat: Codable {
     let image: String
     let number: String
 }
+
+struct Orange: Codable {
+    let id: Int
+    let provider: String
+    let image: String
+    let number: String
+}

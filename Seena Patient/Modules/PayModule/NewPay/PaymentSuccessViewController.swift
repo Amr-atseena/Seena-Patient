@@ -34,7 +34,7 @@ class PaymentSuccessViewController: UIViewController {
         let imagee = UserDefaults.standard.string(forKey: "doctorImage")
 
         amount.text = "EGP \(savedAmount ?? "")"
-        duration.text = "\(period ?? "") months"
+        duration.text = "\(period ?? "")"
         date.text = datee
         clinicName.text = name
 

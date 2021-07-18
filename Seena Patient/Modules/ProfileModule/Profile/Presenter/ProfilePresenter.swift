@@ -34,10 +34,12 @@ class ProfilePresenter: ProfilePresenterProtocol {
         case 1:
             router?.go(to: .settings)
         case 2:
-            router?.go(to: .share)
+            router?.go(to: .tut)
         case 3:
-            router?.go(to: .alert(AlertEntity(title: "", message: "LogoutMessage".localized)))
+            router?.go(to: .share)
         case 4:
+            router?.go(to: .alert(AlertEntity(title: "", message: "LogoutMessage".localized)))
+        case 5:
             print("Profile")
             router?.go(to: .applicationStatus)
         default:
@@ -79,6 +81,11 @@ extension ProfilePresenter: ProfileOutputInteractorProtocol {
             view?.setApplicationStatus(status: "missing info".localized, color: DesignSystem.Colors.primaryActionBackground.color)
         case "فاقد معلومات":
             view?.setApplicationStatus(status: "missing info".localized, color: DesignSystem.Colors.primaryActionBackground.color)
+        case "Inactive":
+            view?.setApplicationStatus(status: "Inactive".localized, color: DesignSystem.Colors.primaryActionBackground.color)
+        case "غير فعال":
+            view?.setApplicationStatus(status: "Inactive".localized, color: DesignSystem.Colors.primaryActionBackground.color)
+
         default:
 //            view?.setApplicationStatus(status: status, color: DesignSystem.Colors.primaryActionBackground.color)
             view?.setApplicationStatus(status: status, color: .clear)

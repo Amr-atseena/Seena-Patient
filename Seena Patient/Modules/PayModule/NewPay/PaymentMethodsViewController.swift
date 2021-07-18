@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MOLH
 
 class PaymentMethodsViewController: UIViewController {
 
@@ -31,18 +32,36 @@ class PaymentMethodsViewController: UIViewController {
     @IBOutlet weak var twelveDur: UILabel!
     @IBOutlet weak var backBtn: UIButton!
 
+    @IBOutlet weak var tableView: UITableView!
+
     var whichInstallment : Int?
     var arrayOfValues = [Int]()
     var oneOfPaymentMethodsSelected: Bool?
+    var instPlans = [InstallmentPlansModelResponse]()
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
         nextBtn.layer.cornerRadius = 10
 
+        tableView.isHidden = true
 
+        viewDesign()
+        viewActions()
+    }
+
+    var docId : Int?
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
         let amo = Int(UserDefaults.standard.string(forKey: "amount") ?? "") ?? 0
 
-        APIClient().installmentPlans(amount: amo) { (res) in
+        APIClient().installmentPlans(amount: amo, doctorID: docId ?? 0) { (res) in
+
+            self.instPlans = res.response
+
+            self.tableView.reloadData()
 
             for ing in res.response {
                 print(ing.value)
@@ -50,20 +69,15 @@ class PaymentMethodsViewController: UIViewController {
                 print(self.arrayOfValues)
             }
 
-            self.threeAmount.text = "EGP \(self.arrayOfValues[2])"
-            self.sixAmount.text = "EGP \(self.arrayOfValues[1])"
-            self.twelveAmount.text = "EGP \(self.arrayOfValues[0])"
+            //            self.threeAmount.text = "EGP \(self.arrayOfValues[2])"
+            //            self.sixAmount.text = "EGP \(self.arrayOfValues[1])"
+            //            self.twelveAmount.text = "EGP \(self.arrayOfValues[0])"
 
         } onError: { (error) in
             self.showAlertController(title: "Error!", message: error, actions: [])
         }
-
-
-
-
-        viewDesign()
-        viewActions()
     }
+
 
 
     @IBAction func back(_ sender: Any) {
@@ -82,9 +96,9 @@ class PaymentMethodsViewController: UIViewController {
         unSelectedInst(container: sixMons, amount: sixAmount, duration: sixDur)
         unSelectedInst(container: twelveMons, amount: twelveAmount, duration: twelveDur)
 
-//        walletImg.image = UIImage(named: "unselected")
-//        installmentImg.image = UIImage(named: "selected")
-//        valuImg.image = UIImage(named: "unselected")
+        //        walletImg.image = UIImage(named: "unselected")
+        //        installmentImg.image = UIImage(named: "selected")
+        //        valuImg.image = UIImage(named: "unselected")
 
 
         whichInstallment = 0
@@ -116,9 +130,11 @@ class PaymentMethodsViewController: UIViewController {
         walletImg.image = UIImage(named: "selected")
         installmentImg.image = UIImage(named: "unselected")
         valuImg.image = UIImage(named: "unselected")
-        installmentStackView.isHidden = true
+        //        installmentStackView.isHidden = true
         whichInstallment = 0
         oneOfPaymentMethodsSelected = false
+        tableView.isHidden = true
+
 
         showAlertController(title: "Soon".localized, message: "Will be available soon".localized, actions: [])
     }
@@ -132,16 +148,20 @@ class PaymentMethodsViewController: UIViewController {
         valuImg.image = UIImage(named: "unselected")
         oneOfPaymentMethodsSelected = true
 
-        installmentStackView.isHidden = false
+        //        installmentStackView.isHidden = false
+        tableView.isHidden = false
+
+        installmentStackView.isHidden = true
     }
 
     @objc func valuAction(sender : UITapGestureRecognizer) {
         valuImg.image = UIImage(named: "selected")
         installmentImg.image = UIImage(named: "unselected")
         walletImg.image = UIImage(named: "unselected")
-        installmentStackView.isHidden = true
+        //        installmentStackView.isHidden = true
         whichInstallment = 0
         oneOfPaymentMethodsSelected = false
+        tableView.isHidden = true
 
         showAlertController(title: "Soon".localized, message: "Will be available soon".localized, actions: [])
     }
@@ -210,16 +230,43 @@ class PaymentMethodsViewController: UIViewController {
 
 
 
-        if installmentStackView.isHidden == false && selectedMo == nil {
+        if tableView.isHidden == false && selectedMo == nil {
             showAlertController(title: "Error!".toLocalize, message: "Select one of installment plans".toLocalize, actions: [])
         }else if oneOfPaymentMethodsSelected == nil || oneOfPaymentMethodsSelected == false{
             showAlertController(title: "Error!".toLocalize, message: "Select one of payment methods".localized, actions: [])
 
         }else{
-            let storyBoard: UIStoryboard = UIStoryboard(name: "NewPayment", bundle: nil)
-            let newViewController = storyBoard.instantiateViewController(withIdentifier: "ScanQRViewController") as? ScanQRViewController
-            newViewController!.modalPresentationStyle = .fullScreen
-            self.present(newViewController!, animated: true, completion: nil)
+            //            let storyBoard: UIStoryboard = UIStoryboard(name: "NewPayment", bundle: nil)
+            //            let newViewController = storyBoard.instantiateViewController(withIdentifier: "ScanQRViewController") as? ScanQRViewController
+            //            newViewController!.modalPresentationStyle = .fullScreen
+            //            self.present(newViewController!, animated: true, completion: nil)
+
+
+
+
+            let amo = UserDefaults.standard.string(forKey: "amount")
+            let pay = UserDefaults.standard.string(forKey: "installmentsPayment")
+            //        let docId = UserDefaults.standard.string(forKey: "QRCode")
+            let inst = UserDefaults.standard.integer(forKey: "installment_plans_ID")
+
+            APIClient().payForDoctor(amount: amo!, paymentMethod: pay!, doctorID: "\(docId ?? 0)", inst: inst) { (res) in
+                print(res.response.success)
+
+                UserDefaults.standard.set(res.response.paymentID, forKey: "PAYMENTID")
+
+
+                let storyBoard: UIStoryboard = UIStoryboard(name: "NewPayment", bundle: nil)
+                let newViewController = storyBoard.instantiateViewController(withIdentifier: "OTPViewController") as? OTPViewController
+                newViewController!.modalPresentationStyle = .fullScreen
+                self.present(newViewController!, animated: true, completion: nil)
+
+
+
+
+            } onError: { (error) in
+                self.showAlertController(title: "Error!", message: error, actions: [])
+            }
+            
         }
         
 
@@ -229,3 +276,43 @@ class PaymentMethodsViewController: UIViewController {
 }
 
 
+extension PaymentMethodsViewController: UITableViewDataSource, UITableViewDelegate {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return instPlans.count
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "InstallmentTableViewCell") as? InstallmentTableViewCell
+        cell?.amountLbl.text = "EGP \(instPlans[indexPath.row].value)"
+
+        if MOLHLanguage.isArabic(){
+            cell?.dutationLbl.text = "\(instPlans[indexPath.row].arName)"
+        }else{
+            cell?.dutationLbl.text = "\(instPlans[indexPath.row].enName)"
+        }
+
+
+        return cell!
+    }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+
+        print(instPlans[indexPath.row].value)
+        UserDefaults.standard.setValue(instPlans[indexPath.row].id, forKey: "installment_plans_ID")
+
+        if MOLHLanguage.isArabic() {
+            UserDefaults.standard.setValue(instPlans[indexPath.row].arName, forKey: "installmentPeriod")
+        }else{
+            UserDefaults.standard.setValue(instPlans[indexPath.row].enName, forKey: "installmentPeriod")
+        }
+
+        selectedMo = 12313123
+
+        print(instPlans[indexPath.row].months)
+        print(instPlans[indexPath.row].enName)
+        print(instPlans[indexPath.row].id)
+
+
+    }
+
+}

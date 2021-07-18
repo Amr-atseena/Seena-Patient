@@ -14,8 +14,8 @@ struct PaymentDueViewModel {
     private(set) var amount: String
     private(set) var clinicPlaceHolder: String
     private(set) var paymentDate: String
-    private(set) var status: String
-    private(set) var statusar: String
+    private(set) var status: String?
+    private(set) var statusar: String?
     private(set) var active: Int
 
     // MARK: - Init

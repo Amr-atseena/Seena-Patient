@@ -60,6 +60,7 @@ class ClinicDetailsPresenter: ClinicDetailsPresenterProtocol {
         view?.showSkelton()
         interactor?.retriveClinicDetails(atClinicId: clinic.id)
     }
+
     func callButtonTapped() {
         router?.go(to: .call(number: clinic.phone))
     }

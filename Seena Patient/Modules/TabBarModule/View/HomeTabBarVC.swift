@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MOLH
 
 class HomeTabBarVC: UITabBarController {
     // MARK: - Attributes
@@ -29,15 +30,31 @@ class HomeTabBarVC: UITabBarController {
         customTabBar.centerButtonActionHandler = { [weak self] in
             let isSigned = UserDefaults.standard.bool(forKey: "Signin")
 
+
+
+
+
+
             if isSigned == true {
                 let userStatus = UserDefaults.standard.string(forKey: "status")
 
-                if userStatus == "active"{
-                guard let self = self else { return }
-                self.selectedIndex = 2
-                }else{
-                    self?.showAlertController(title: "Alert!".toLocalize, message: "Please, wait until being an active user".toLocalize, actions: [])
+                APIClient().getUserStatus { (res) in
+                    print(res.response.isEnabled)
+                    if res.response.isEnabled == "Enabled"{
+                        guard let self = self else { return }
+                        self.selectedIndex = 2
+                    }else{
+                        if MOLHLanguage.isArabic(){
+                            self?.showAlertController(title: "Alert!".toLocalize, message: res.response.messageAr, actions: [])
+                        }else{
+                            self?.showAlertController(title: "Alert!".toLocalize, message: res.response.message, actions: [])
+                        }
+                    }
+                } onError: { (error) in
+                    print(error)
                 }
+
+
             }else{
                 self?.showAlertController(title: "Alert!".toLocalize, message: "Please, sign in first".toLocalize, actions: [])
             }

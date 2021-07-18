@@ -15,6 +15,7 @@ class SettingsVC: UIViewController, SettingsViewProtocol {
     @IBOutlet private var paymentReminderKeywordLabel: UILabel!
     @IBOutlet private var languageKeywordLabel: UILabel!
     @IBOutlet private var rateAppKeywordLabel: UILabel!
+    @IBOutlet weak var tutorialsLbl: UILabel!
     // MARK: - Attributes
     var presenter: SettingsPresenterProtocol!
     // MARK: - Init
@@ -44,6 +45,10 @@ class SettingsVC: UIViewController, SettingsViewProtocol {
         // languageKeyword Label
         languageKeywordLabel.text = presenter.localization.language
         languageKeywordLabel.font = DesignSystem.Typography.subHeading4.font
+
+        tutorialsLbl.text = "Tutorials".toLocalize
+        tutorialsLbl.font = DesignSystem.Typography.subHeading4.font
+
         // rateAppKeywordLabel Label
         rateAppKeywordLabel.text = presenter.localization.rateApp
         rateAppKeywordLabel.font = DesignSystem.Typography.subHeading4.font
@@ -59,8 +64,28 @@ class SettingsVC: UIViewController, SettingsViewProtocol {
         UIApplication.shared.open(settingsUrl)
     }
     @IBAction func didTapRateApp(_ sender: UIButton) {
-        SKStoreReviewController.requestReview()
+//        SKStoreReviewController.requestReview()
+
+
+        guard let writeReviewURL = URL(string: "https://apps.apple.com/si/app/seena-pay/id1539209003?action=write-review")
+            else { fatalError("Expected a valid URL") }
+            UIApplication.shared.open(writeReviewURL, options: [:], completionHandler: nil)
     }
+
+    @IBAction func tutorials(_ sender: Any) {
+        guard let url = URL(string: "https://www.youtube.com/watch?v=e8OuEbxfpOs&list=PL9e3yBVerJtiNgI8CMI9EOB9AOmY5PLXo&index=3") else {
+          return //be safe
+        }
+
+        if #available(iOS 10.0, *) {
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        } else {
+            UIApplication.shared.openURL(url)
+        }
+    }
+
+
+
     // MARK: - DeInit
     deinit {
          debugPrint(SettingsVC.className + "Release from Momery")

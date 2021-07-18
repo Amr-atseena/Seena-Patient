@@ -14,6 +14,8 @@ protocol PaymentLocalDataManagerProtocol: AuthenticationLocalDataManagerProtocol
     func retriveVodafoneAccount() -> [Vodafone]
     func save(etisalatAccount: [Etisalat])
     func retriveEtisalatAccount() -> [Etisalat]
+//    func save(orangeAccount: [Orange])
+//    func retriveOrangeAccount() -> [Orange]
 }
 
 extension PaymentLocalDataManagerProtocol {
@@ -46,6 +48,16 @@ extension PaymentLocalDataManagerProtocol {
         let account = try? JSONDecoder().decode([Etisalat].self, from: data)
         return account ?? []
     }
+
+//    func save(orangeAccount: [Orange]) {
+//        let data = try? JSONEncoder().encode(orangeAccount)
+//        UserDefaults.standard.set(data, forKey: "ORANGEACCOUNT")
+//    }
+//    func retriveOrangeAccount() -> [Etisalat] {
+//        let data = UserDefaults.standard.data(forKey: "ORANGEACCOUNT")!
+//        let account = try? JSONDecoder().decode([Orange].self, from: data)
+//        return account ?? []
+//    }
 
 
 }

@@ -30,6 +30,7 @@ class PackageDetailsPresenter: PackageDetailsPresenterProtocol {
         view?.setupUI()
         view?.setupServicesCollectionView()
         view?.updateUI(withPackage: PackageViewModel(package: package))
+
     }
     func shareButtonTapped() {
     }

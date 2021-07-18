@@ -52,6 +52,7 @@ class ATMPayPresenter: ATMPayPresenterProtocol {
         case 1, 2: interactor?.retriveBanksAccount()
         case 3: interactor?.retriveVodafoneAccount()
         case 4: interactor?.retriveEtisalatAccount()
+//        case 5: interactor?.retriveOrangeAccount()
         default: print(type)
         }
     }
@@ -121,6 +122,12 @@ extension ATMPayPresenter: ATMPayOutputInteractorProtocol {
         accounts = etisalatAccounts.map {
             AccountViewModel(id: $0.id, title: localization.phoneNumbers, accountNumber: $0.number, image: $0.image)
         }
+
+//        func onRetriveOrangeAccountSuccess(_ orangeAccounts: [Orange]) {
+//            accounts = orangeAccounts.map {
+//                AccountViewModel(id: $0.id, title: localization.phoneNumbers, accountNumber: $0.number, image: $0.image)
+//            }
+
     }
     func onRetriveSeena() {
         accounts.removeAll()

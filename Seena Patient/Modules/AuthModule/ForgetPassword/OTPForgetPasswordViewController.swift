@@ -15,15 +15,44 @@ class OTPForgetPasswordViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var secondCodeTF: UITextField!
     @IBOutlet weak var thirdCodeTF: UITextField!
     @IBOutlet weak var fourthCodeTF: UITextField!
+    @IBOutlet weak var resendCodeBtn: UIButton!
+    @IBOutlet weak var countDownLbl: UILabel!
 
     var abc : String = ""
     var userPhoneNum : String?
     let progressHUD = ProgressHUD(text: "")
+    var count = 59
+    var timer : Timer?
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         viewDesign()
+
+        doneBtn.layer.cornerRadius = 10
+
+        resendCodeBtn.isUserInteractionEnabled = false
+        resendCodeBtn.setTitleColor(#colorLiteral(red: 0.6862745098, green: 0.6862745098, blue: 0.6862745098, alpha: 1), for: .normal)
+        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateCounter), userInfo: nil, repeats: true)
+
+
+
+    }
+
+    @objc func updateCounter() {
+        if count > 0 {
+            print("\(count) seconds to the end of the world")
+            count -= 1
+            countDownLbl.text = "00:\(count)"
+        }
+
+        if count == 0 {
+            timer?.invalidate()
+            timer = nil
+            resendCodeBtn.isUserInteractionEnabled = true
+            resendCodeBtn.setTitleColor(#colorLiteral(red: 0.8588235294, green: 0.07843137255, blue: 0.07843137255, alpha: 1), for: .normal)
+        }
 
     }
     
@@ -42,6 +71,13 @@ class OTPForgetPasswordViewController: UIViewController, UITextFieldDelegate {
 
         doneBtn.layer.cornerRadius = 10
 
+        fourthCodeTF.addTarget(self, action: #selector(myTargetFunction), for: UIControl.Event.editingDidEnd)
+
+
+    }
+
+    @objc func myTargetFunction(textField: UITextField) {
+        otpCall()
     }
 
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
@@ -97,6 +133,13 @@ class OTPForgetPasswordViewController: UIViewController, UITextFieldDelegate {
         }
 
     @IBAction func done(_ sender: Any) {
+
+        otpCall()
+
+    }
+
+
+    func otpCall(){
         self.view.addSubview(progressHUD)
 
         abc = firstCodeTF.text! + secondCodeTF.text! + thirdCodeTF.text! + fourthCodeTF.text!
@@ -124,12 +167,40 @@ class OTPForgetPasswordViewController: UIViewController, UITextFieldDelegate {
 
             self.showAlertController(title: "Error!".toLocalize, message: error, actions: [okAction])
         }
+    }
 
 
+
+    @IBAction func resendCode(_ sender: Any) {
+        resendCodeBtn.isUserInteractionEnabled = false
+        resendCodeBtn.setTitleColor(#colorLiteral(red: 0.6862745098, green: 0.6862745098, blue: 0.6862745098, alpha: 1), for: .normal)
+        count = 59
+        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateCounter), userInfo: nil, repeats: true)
+
+
+        self.view.addSubview(progressHUD)
+
+
+        APIClient().forgetPassword(phone: userPhoneNum ?? "") { (res) in
+            print(res)
+
+            self.progressHUD.removeFromSuperview()
+
+
+        } onError: { (error) in
+
+            self.progressHUD.removeFromSuperview()
+            let okAction = UIAlertAction(title: "OK".localized, style: .default, handler: nil)
+
+            self.showAlertController(title: "Error!".toLocalize, message: error, actions: [okAction])
+        }
 
 
 
 
     }
+
+
+
 
 }

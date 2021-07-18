@@ -17,16 +17,24 @@ class OTPViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var thirdTF: UITextField!
     @IBOutlet weak var fourthTF: UITextField!
     @IBOutlet weak var backBtn: UIButton!
+    @IBOutlet weak var resendCodeBtn: UIButton!
+    @IBOutlet weak var counterLbl: UILabel!
 
 
     var fullOTP : String = ""
     let progressHUD = ProgressHUD(text: "")
-
+    var count = 59
+    var timer : Timer?
 
 
     override func viewDidLoad() {
         super.viewDidLoad()
         doneBtn.layer.cornerRadius = 10
+
+        resendCodeBtn.isUserInteractionEnabled = false
+        resendCodeBtn.setTitleColor(#colorLiteral(red: 0.6862745098, green: 0.6862745098, blue: 0.6862745098, alpha: 1), for: .normal)
+        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateCounter), userInfo: nil, repeats: true)
+
 
         print(UserDefaults.standard.string(forKey: "amount")!)
 
@@ -38,6 +46,22 @@ class OTPViewController: UIViewController, UITextFieldDelegate {
 
 
         viewDesign()
+
+    }
+
+    @objc func updateCounter() {
+        if count > 0 {
+            print("\(count) seconds to the end of the world")
+            count -= 1
+            counterLbl.text = "00:\(count)"
+        }
+
+        if count == 0 {
+            timer?.invalidate()
+            timer = nil
+            resendCodeBtn.isUserInteractionEnabled = true
+            resendCodeBtn.setTitleColor(#colorLiteral(red: 0.8588235294, green: 0.07843137255, blue: 0.07843137255, alpha: 1), for: .normal)
+        }
 
     }
 
@@ -149,6 +173,33 @@ class OTPViewController: UIViewController, UITextFieldDelegate {
 
 
     }
+
+
+
+    @IBAction func resendCode(_ sender: Any) {
+
+        resendCodeBtn.isUserInteractionEnabled = false
+        resendCodeBtn.setTitleColor(#colorLiteral(red: 0.6862745098, green: 0.6862745098, blue: 0.6862745098, alpha: 1), for: .normal)
+        count = 59
+        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateCounter), userInfo: nil, repeats: true)
+
+        let payID = UserDefaults.standard.integer(forKey: "PAYMENTID")
+
+        self.view.addSubview(progressHUD)
+
+        APIClient().resendPaymentOTP(paymentID: payID) { (res) in
+            self.progressHUD.removeFromSuperview()
+
+            print(res)
+        } onError: { (error) in
+            self.progressHUD.removeFromSuperview()
+
+            print(error)
+        }
+
+
+    }
+
 
 
 }

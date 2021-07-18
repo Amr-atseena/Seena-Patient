@@ -17,13 +17,25 @@ class OTPVerifyPhoneNumberViewController: UIViewController, UITextFieldDelegate 
     @IBOutlet weak var thirdCodeTF: UITextField!
     @IBOutlet weak var fourthCodeTF: UITextField!
     @IBOutlet weak var fifthTF: UITextField!
+    @IBOutlet weak var resendCodeBtn: UIButton!
+    @IBOutlet weak var countDownLbl: UILabel!
 
 
     //    var otpFields: [UITextField] {
 //       return [firstCodeTF!, secondCodeTF!, thirdCodeTF!, fourthCodeTF!]
 //    }
 
+    var firstName : String?
+    var lastName : String?
+    var pass : String?
     var phoneNum: String?
+    var email : String?
+    var birthdate : String?
+    var pp : UIImage?
+
+    var count = 59
+    var timer : Timer?
+
 
     var result: SignUpFirst?
     let progressHUD = ProgressHUD(text: "")
@@ -32,8 +44,28 @@ class OTPVerifyPhoneNumberViewController: UIViewController, UITextFieldDelegate 
         super.viewDidLoad()
         viewDesign()
 
+        resendCodeBtn.isUserInteractionEnabled = false
+        resendCodeBtn.setTitleColor(#colorLiteral(red: 0.6862745098, green: 0.6862745098, blue: 0.6862745098, alpha: 1), for: .normal)
+        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateCounter), userInfo: nil, repeats: true)
+
     }
 
+
+    @objc func updateCounter() {
+        if count > 0 {
+            print("\(count) seconds to the end of the world")
+            count -= 1
+            countDownLbl.text = "00:\(count)"
+        }
+
+        if count == 0 {
+            timer?.invalidate()
+            timer = nil
+            resendCodeBtn.isUserInteractionEnabled = true
+            resendCodeBtn.setTitleColor(#colorLiteral(red: 0.8588235294, green: 0.07843137255, blue: 0.07843137255, alpha: 1), for: .normal)
+        }
+
+    }
 
 
     func viewDesign(){
@@ -236,5 +268,31 @@ class OTPVerifyPhoneNumberViewController: UIViewController, UITextFieldDelegate 
         self.present(tabBar, animated: true)
 
     }
+
+
+
+
+    @IBAction func resendCode(_ sender: Any) {
+        resendCodeBtn.isUserInteractionEnabled = false
+        resendCodeBtn.setTitleColor(#colorLiteral(red: 0.6862745098, green: 0.6862745098, blue: 0.6862745098, alpha: 1), for: .normal)
+        count = 59
+        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateCounter), userInfo: nil, repeats: true)
+
+
+        APIClient().resendotp { (res) in
+            print(res)
+        } onError: { (error) in
+            self.showAlertController(title: "Error!", message: error, actions: [])
+        }
+
+
+
+
+    }
+
+
+
+
+
 
 }

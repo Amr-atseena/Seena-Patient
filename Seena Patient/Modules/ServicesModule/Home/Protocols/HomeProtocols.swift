@@ -66,7 +66,7 @@ protocol HomeViewProtocol: class {
     func setupNavBar(withTitle title: String)
     func setupUI()
     func setupTableView()
-    func setUsername(_ username: String)
+    func setUsername(_ username: String, status: String)
     func reloadPackageCollectionView()
     func reloadCategoryTableView()
     func showSkeltonView()

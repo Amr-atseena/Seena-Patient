@@ -50,6 +50,7 @@ class FinishSignUpVC: UIViewController {
         UserDefaults.standard.removeObject(forKey: "idTypeLogin")
         UserDefaults.standard.removeObject(forKey: "profilePictureLogin")
         UserDefaults.standard.removeObject(forKey: "residenceProofLogin")
+        UserDefaults.standard.removeObject(forKey: "RegisterToken")
         
         let tabBar = HomeTabBarVC()
         self.present(tabBar, animated: true, completion: nil)

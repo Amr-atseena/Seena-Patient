@@ -39,6 +39,8 @@ class ProfileRouter: ProfileRouterProtocol {
             showAlert(alertEntity: alertEntity)
         case .applicationStatus:
             navigateToApplicationStatus()
+        case .tut:
+            tutorials()
 
         }
     }
@@ -95,5 +97,18 @@ class ProfileRouter: ProfileRouterProtocol {
         let newViewController = storyBoard.instantiateViewController(withIdentifier: "ApplicationStatusViewController") as? ApplicationStatusViewController
         newViewController!.modalPresentationStyle = .fullScreen
         viewController?.navigationController?.pushViewController(newViewController!, animated: true)
+    }
+
+
+    private func tutorials(){
+        guard let url = URL(string: "https://www.youtube.com/watch?v=e8OuEbxfpOs&list=PL9e3yBVerJtiNgI8CMI9EOB9AOmY5PLXo&index=3") else {
+          return //be safe
+        }
+
+        if #available(iOS 10.0, *) {
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        } else {
+            UIApplication.shared.openURL(url)
+        }
     }
 }

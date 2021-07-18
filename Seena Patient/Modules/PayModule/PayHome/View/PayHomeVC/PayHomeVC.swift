@@ -31,6 +31,15 @@ class PayHomeVC: UIViewController, PayHomeViewProtocol {
     @IBOutlet weak var youHaveLbl: UILabel!
     @IBOutlet weak var getYourSeenaImage: UIImageView!
 
+    @IBOutlet weak var allFilterBtn: UIButton!
+    @IBOutlet weak var paidFilterBtn: UIButton!
+    @IBOutlet weak var unpaidFilterBtn: UIButton!
+    @IBOutlet weak var pendingFilterBtn: UIButton!
+    @IBOutlet weak var rejectedFilterBtn: UIButton!
+
+
+
+
 
     // MARK: - Attributes
     var presenter: PayHomePresenterProtocol!
@@ -47,7 +56,14 @@ class PayHomeVC: UIViewController, PayHomeViewProtocol {
         super.viewDidLoad()
         presenter.viewDidLoad()
 
+
         applyBtn.layer.cornerRadius = 10
+        allFilterBtn.layer.cornerRadius = 10
+        paidFilterBtn.layer.cornerRadius = 10
+        unpaidFilterBtn.layer.cornerRadius = 10
+        pendingFilterBtn.layer.cornerRadius = 10
+        rejectedFilterBtn.layer.cornerRadius = 10
+
     }
 
 
@@ -123,9 +139,9 @@ class PayHomeVC: UIViewController, PayHomeViewProtocol {
         getYourSeenaView.isHidden = false
 
         if MOLHLanguage.isArabic() {
-            getYourSeenaImage.image = UIImage(named: "GetYourCreditAr")
+            getYourSeenaImage.image = UIImage(named: "freeCreditAr")
         }else{
-            getYourSeenaImage.image = UIImage(named: "GetYourSeena")
+            getYourSeenaImage.image = UIImage(named: "freeCredit")
         }
 
 
@@ -174,13 +190,96 @@ class PayHomeVC: UIViewController, PayHomeViewProtocol {
     }
 
 
+    @IBAction func all(_ sender: Any) {
+        print("All")
+        paymentsDueTableView.reloadData()
+    }
+
+    @IBAction func paid(_ sender: Any) {
+        print("paid")
+    }
+
+    @IBAction func unpaid(_ sender: Any) {
+        print("unpaid")
+    }
+
+    @IBAction func pending(_ sender: Any) {
+        print("pending")
+    }
+
+    @IBAction func rejected(_ sender: Any) {
+        print("rejected")
+    }
+
+    var sendProfile: Bool?
+    var sendID: Bool?
+    var sendFin: Bool?
+    var sendRes:Bool?
+
+
     // MARK: - Actions
 
     @IBAction func apply(_ sender: Any) {
-        let storyBoard: UIStoryboard = UIStoryboard(name: "SecondSignUp", bundle: nil)
-        let newViewController = storyBoard.instantiateViewController(withIdentifier: "CompleteSignStageOneViewController") as? CompleteSignStageOneViewController
-        newViewController!.hidesBottomBarWhenPushed = true
-        self.navigationController?.pushViewController(newViewController!, animated: true)
+
+
+
+
+                    let isID = UserDefaults.standard.bool(forKey: "idType")
+                    let isIDLogin = UserDefaults.standard.bool(forKey: "idTypeLogin")
+                    let isFin = UserDefaults.standard.bool(forKey: "financialProof")
+                    let isFinLogin = UserDefaults.standard.bool(forKey: "financialProofLogin")
+                    let isProfile = UserDefaults.standard.bool(forKey: "profilePicture")
+                    let isProfileLogin = UserDefaults.standard.bool(forKey: "profilePictureLogin")
+                    let isRes = UserDefaults.standard.bool(forKey: "residenceProof")
+                    let isResLogin = UserDefaults.standard.bool(forKey: "residenceProofLogin")
+
+
+                    if isID == true || isIDLogin == true {
+                        self.sendID = true
+                    }else{
+                        self.sendID = false
+                    }
+
+                    if isProfile == true || isProfileLogin == true{
+                        self.sendProfile = true
+                    }else{
+                        self.sendProfile = false
+                    }
+
+                    if isRes == true || isResLogin == true{
+                        self.sendRes = true
+                    }else{
+                        self.sendRes = false
+                    }
+
+                    if isFin == true || isFinLogin == true{
+                        self.sendFin = true
+                    }else{
+                        self.sendFin = false
+                    }
+
+                    let status = Status(profilePicture: self.sendProfile ?? false, idType: self.sendID ?? false, financialProof: self.sendFin ?? false, residenceProof: self.sendRes ?? false)
+                    let router = UploadDocumentsRouter()
+                    let interactor = UploadDocumentsInteractor()
+                    let vc = UploadDocumentsVC()
+                    let presenter = UploadDocumentsPresenter(view: vc, interactor: interactor, router: router, status: status)
+
+                    router.viewController = vc
+                    interactor.presenter = presenter
+                    vc.presenter = presenter
+                    self.navigationController?.pushViewController(vc, animated: true)
+
+
+
+
+
+
+
+
+//        let storyBoard: UIStoryboard = UIStoryboard(name: "SecondSignUp", bundle: nil)
+//        let newViewController = storyBoard.instantiateViewController(withIdentifier: "CompleteSignStageOneViewController") as? CompleteSignStageOneViewController
+//        newViewController!.hidesBottomBarWhenPushed = true
+//        self.navigationController?.pushViewController(newViewController!, animated: true)
 //        newViewController!.modalPresentationStyle = .fullScreen
 //        self.present(newViewController!, animated: true, completion: nil)
     }

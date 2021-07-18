@@ -139,7 +139,12 @@ class PayVC: UIViewController, PayViewProtocol, UIImagePickerControllerDelegate 
         print(uploadedImage)
         infoBtn.isHidden = true
         rightImage.isHidden = false
+
+        if uploadedImage != nil {
         enableNextButton()
+        }else{
+            
+        }
 
         dismiss(animated: true)
     }

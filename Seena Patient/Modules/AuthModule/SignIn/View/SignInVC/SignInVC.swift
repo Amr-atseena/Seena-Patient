@@ -39,6 +39,11 @@ class SignInVC: UIViewController, SignInViewProtocol {
         presenter.viewDidLoad()
         regView.isHidden = isInAppleReview
     }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tabBarController?.tabBar.isHidden = false
+    }
     // MARK: - Methods
     func setupUI() {
         // welcomeKeyword Label

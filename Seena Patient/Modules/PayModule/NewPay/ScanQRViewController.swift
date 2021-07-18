@@ -122,26 +122,34 @@ class ScanQRViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
 //        UserDefaults.standard.setValue(self.theCode, forKey: "QRCode")
 
 
-        let amo = UserDefaults.standard.string(forKey: "amount")
-        let pay = UserDefaults.standard.string(forKey: "installmentsPayment")
-//        let docId = UserDefaults.standard.string(forKey: "QRCode")
-        let inst = UserDefaults.standard.integer(forKey: "installment_plans_ID")
-
-        APIClient().payForDoctor(amount: amo!, paymentMethod: pay!, doctorID: self.theCode!, inst: inst) { (res) in
-            print(res.response.success)
-
+//        let amo = UserDefaults.standard.string(forKey: "amount")
+//        let pay = UserDefaults.standard.string(forKey: "installmentsPayment")
+////        let docId = UserDefaults.standard.string(forKey: "QRCode")
+//        let inst = UserDefaults.standard.integer(forKey: "installment_plans_ID")
+//
+//        APIClient().payForDoctor(amount: amo!, paymentMethod: pay!, doctorID: self.theCode!, inst: inst) { (res) in
+//            print(res.response.success)
+//
+//            UserDefaults.standard.set(res.response.paymentID, forKey: "PAYMENTID")
+//
+////            let storyBoard: UIStoryboard = UIStoryboard(name: "NewPayment", bundle: nil)
+////            let newViewController = storyBoard.instantiateViewController(withIdentifier: "OTPViewController") as? OTPViewController
+////            newViewController!.modalPresentationStyle = .fullScreen
+////            self.present(newViewController!, animated: true, completion: nil)
+//
             let storyBoard: UIStoryboard = UIStoryboard(name: "NewPayment", bundle: nil)
-            let newViewController = storyBoard.instantiateViewController(withIdentifier: "OTPViewController") as? OTPViewController
+            let newViewController = storyBoard.instantiateViewController(withIdentifier: "PaymentMethodsViewController") as? PaymentMethodsViewController
+            newViewController?.docId = Int(self.theCode!)
             newViewController!.modalPresentationStyle = .fullScreen
             self.present(newViewController!, animated: true, completion: nil)
-
-            self.shouldGo = true
-
-
-        } onError: { (error) in
-            self.showAlertController(title: "Error!", message: error, actions: [])
-            self.shouldGo = false
-        }
+//
+//            self.shouldGo = true
+//
+//
+//        } onError: { (error) in
+//            self.showAlertController(title: "Error!", message: error, actions: [])
+//            self.shouldGo = false
+//        }
 
         
     }
@@ -170,8 +178,13 @@ class ScanQRViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
 
     @IBAction func next(_ sender: Any) {
         if shouldGo == true {
+//            let storyBoard: UIStoryboard = UIStoryboard(name: "NewPayment", bundle: nil)
+//            let newViewController = storyBoard.instantiateViewController(withIdentifier: "OTPViewController") as? OTPViewController
+//            newViewController!.modalPresentationStyle = .fullScreen
+//            self.present(newViewController!, animated: true, completion: nil)
+
             let storyBoard: UIStoryboard = UIStoryboard(name: "NewPayment", bundle: nil)
-            let newViewController = storyBoard.instantiateViewController(withIdentifier: "OTPViewController") as? OTPViewController
+            let newViewController = storyBoard.instantiateViewController(withIdentifier: "PaymentMethodsViewController") as? PaymentMethodsViewController
             newViewController!.modalPresentationStyle = .fullScreen
             self.present(newViewController!, animated: true, completion: nil)
         }else{

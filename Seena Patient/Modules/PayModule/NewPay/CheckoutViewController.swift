@@ -13,10 +13,27 @@ class CheckoutViewController: UIViewController {
     @IBOutlet weak var amountTF: UITextField!
     @IBOutlet weak var nextBtn: UIButton!
 
+    var limit : Int?
+
     override func viewDidLoad() {
         super.viewDidLoad()
         viewDesign()
         nextBtn.layer.cornerRadius = 10
+        getlimitOfWallet()
+
+//        tabBarController?.tabBar.isHidden = true
+
+    }
+
+    func getlimitOfWallet(){
+        APIClientSecond().getWalletLimit { (res) in
+
+            self.limit = res.response.limitWallet
+            print(self.limit ?? 0)
+
+        } onError: { (error) in
+            print(error)
+        }
 
     }
 
@@ -36,8 +53,8 @@ class CheckoutViewController: UIViewController {
             nextBtn.backgroundColor = #colorLiteral(red: 0.568627451, green: 0.568627451, blue: 0.568627451, alpha: 1)
             nextBtn.isUserInteractionEnabled = false
         }else{
-        nextBtn.backgroundColor = #colorLiteral(red: 0.8588235294, green: 0.07843137255, blue: 0.07843137255, alpha: 1)
-        nextBtn.isUserInteractionEnabled = true
+            nextBtn.backgroundColor = #colorLiteral(red: 0.8588235294, green: 0.07843137255, blue: 0.07843137255, alpha: 1)
+            nextBtn.isUserInteractionEnabled = true
         }
     }
 
@@ -45,14 +62,29 @@ class CheckoutViewController: UIViewController {
 
         UserDefaults.standard.setValue(amountTF.text!, forKey: "amount")
 
-        if nextBtn.backgroundColor == #colorLiteral(red: 0.8588235294, green: 0.07843137255, blue: 0.07843137255, alpha: 1){
-        let storyBoard: UIStoryboard = UIStoryboard(name: "NewPayment", bundle: nil)
-        let newViewController = storyBoard.instantiateViewController(withIdentifier: "PaymentMethodsViewController") as? PaymentMethodsViewController
-        newViewController!.modalPresentationStyle = .fullScreen
-        self.present(newViewController!, animated: true, completion: nil)
+        if Int(amountTF.text ?? "0") ?? 0 < limit ?? 0 {
+            showAlertController(title: "Error!", message: "Minumam amount is \(limit ?? 0) EGP", actions: [])
         }else{
+            if nextBtn.backgroundColor == #colorLiteral(red: 0.8588235294, green: 0.07843137255, blue: 0.07843137255, alpha: 1){
+//                let storyBoard: UIStoryboard = UIStoryboard(name: "NewPayment", bundle: nil)
+//                let newViewController = storyBoard.instantiateViewController(withIdentifier: "PaymentMethodsViewController") as? PaymentMethodsViewController
+//                newViewController!.modalPresentationStyle = .fullScreen
+//                self.present(newViewController!, animated: true, completion: nil)
 
+                            let storyBoard: UIStoryboard = UIStoryboard(name: "NewPayment", bundle: nil)
+                            let newViewController = storyBoard.instantiateViewController(withIdentifier: "ScanQRViewController") as? ScanQRViewController
+                            newViewController!.modalPresentationStyle = .fullScreen
+                            self.present(newViewController!, animated: true, completion: nil)
+                
+            }else{
+
+            }
         }
+
+
     }
 
+    @IBAction func back(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
 }

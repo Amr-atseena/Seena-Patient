@@ -33,6 +33,7 @@ class ServiceDetailsVC: UIViewController, ServiceDetailsViewProtocol {
         super.viewDidLoad()
         presenter.viewDidLoad()
         callBtn.setTitle("Call".toLocalize, for: .normal)
+        tabBarController?.tabBar.isHidden = true
     }
     // MARK: - Methods
     func setupNavBar() {

@@ -18,5 +18,7 @@ struct SplashResponse: Codable {
     let plans: [Plan]
     let isInReview: Bool
     let eCash: [Etisalat]
+//    let eCash: [Orange]
+
 
 }

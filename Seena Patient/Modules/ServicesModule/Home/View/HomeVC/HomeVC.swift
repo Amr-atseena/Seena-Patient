@@ -9,8 +9,9 @@
 import UIKit
 import SkeletonView
 import MOLH
+import MapKit
 
-class HomeVC: UIViewController, HomeViewProtocol {
+class HomeVC: UIViewController, HomeViewProtocol, CLLocationManagerDelegate {
     // MARK: - Outlets
     @IBOutlet var helloKeywordLabel: UILabel!
     @IBOutlet var usernameLabel: UILabel!
@@ -92,15 +93,81 @@ class HomeVC: UIViewController, HomeViewProtocol {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+
+    var locationManager: CLLocationManager!
+
+
     // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter.viewDidLoad()
+
+        let isSigned = UserDefaults.standard.bool(forKey: "Signin")
+
+        if isSigned == true{
+            if (CLLocationManager.locationServicesEnabled())
+            {
+                locationManager = CLLocationManager()
+                locationManager.delegate = self
+                locationManager.desiredAccuracy = kCLLocationAccuracyBest
+                locationManager.requestAlwaysAuthorization()
+                locationManager.startUpdatingLocation()
+            }
+        }else{}
+
+        //        sendUserLocation()
+
     }
+
+    var lati: Double?
+    var lon : Double?
+
+    func sendUserLocation() {
+
+        //        let isSigned = UserDefaults.standard.bool(forKey: "Signin")
+
+        //        if isSigned == true{
+        APIClientSecond().userLocation(latitude: lati ?? 0, longitude: lon ?? 0) { (res) in
+            print(res)
+        } onError: { (error) in
+            print(error)
+        }
+        //        }else{}
+
+
+    }
+
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation])
+    {
+
+        let location = locations.last! as CLLocation
+
+        /* you can use these values*/
+        let lat = location.coordinate.latitude
+        let long = location.coordinate.longitude
+        if userStatus == "activate"{
+            //            print(lat,long)
+            lati = lat
+            lon = long
+
+            APIClientSecond().userLocation(latitude: lat, longitude: long) { (res) in
+                print(res)
+            } onError: { (error) in
+                print(error)
+            }
+
+        }else{
+            print("No user to print his cordinates")
+        }
+    }
+
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         presenter.viewWillAppear()
+
+
+        tabBarController?.tabBar.isHidden = false
         
     }
     // MARK: - Methods
@@ -136,8 +203,11 @@ class HomeVC: UIViewController, HomeViewProtocol {
         specialitiesTableView.tableHeaderView = headerView
         
     }
-    func setUsername(_ username: String) {
+
+    var userStatus : String?
+    func setUsername(_ username: String, status: String ) {
         usernameLabel.text = username
+        userStatus = status
     }
     func reloadCategoryTableView() {
         specialitiesTableView.reloadData()
@@ -192,7 +262,7 @@ extension HomeVC: UITableViewDataSource {
 
                 self.presenter.serachButtonTapped(type: indexPath.row)
 
-//                self.presenter.serviceSelected(atIndex: indexPath.row, andSection: -2)
+                //                self.presenter.serviceSelected(atIndex: indexPath.row, andSection: -2)
                 
                 
             }

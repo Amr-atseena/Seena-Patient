@@ -35,4 +35,9 @@ class ATMPayInteractor: ATMPayInputInteractorProtocol {
         presenter?.onRetriveEtisalatAccountSuccess(localDataManager.retriveEtisalatAccount())
     }
 
+//    func retriveOrangeAccount() {
+//        presenter?.onRetriveOrangeAccountSuccess(localDataManager.retriveOrangeAccount())
+//    }
+
+
 }
