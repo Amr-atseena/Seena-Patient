@@ -36,13 +36,13 @@ class OTPViewController: UIViewController, UITextFieldDelegate {
         timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateCounter), userInfo: nil, repeats: true)
 
 
-        print(UserDefaults.standard.string(forKey: "amount")!)
+//        print(UserDefaults.standard.string(forKey: "amount")!)
 
-        print(UserDefaults.standard.string(forKey: "installmentsPayment")!)
+//        print(UserDefaults.standard.string(forKey: "installmentsPayment")!)
 
 //        print(UserDefaults.standard.string(forKey: "QRCode")!)
 
-        print(UserDefaults.standard.integer(forKey: "installment_plans_ID"))
+//        print(UserDefaults.standard.integer(forKey: "installment_plans_ID"))
 
 
         viewDesign()
@@ -157,6 +157,7 @@ class OTPViewController: UIViewController, UITextFieldDelegate {
                 UserDefaults.standard.setValue(res.response.doctor.name, forKey: "doctorName")
                 UserDefaults.standard.setValue(res.response.createdAt, forKey: "paymentDate")
                 UserDefaults.standard.setValue(res.response.doctor.image, forKey: "doctorImage")
+                UserDefaults.standard.set(res.response.walletMoney, forKey: "walletMoney")
 
                 let storyBoard: UIStoryboard = UIStoryboard(name: "NewPayment", bundle: nil)
                 let newViewController = storyBoard.instantiateViewController(withIdentifier: "PaymentSuccessViewController") as? PaymentSuccessViewController

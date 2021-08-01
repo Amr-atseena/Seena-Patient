@@ -170,3 +170,7 @@
 "Upload your profile pic" = "اختر صورة شخصية";
 "You have to be more than 21 years" = "يجب أن يكون عمرك أكثر من 21 عامًا";
 "Tutorials" = "دروس";
+"Terms and conditions" = "الشروط والأحكام";
+"The balance you entered exceeds your wallet amount" = "الرصيد الذي أدخلته يتجاوز مبلغ محفظتك";
+"Please, input a number greater than 0" = "من فضلك ، أدخل رقمًا أكبر من 0";
+"Payment method using vaLU will be available soon" = "ستتوفر طريقة الدفع باستخدام vaLU قريبًا";

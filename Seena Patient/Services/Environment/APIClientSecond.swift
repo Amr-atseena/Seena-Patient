@@ -59,8 +59,46 @@ class APIClientSecond {
             switch response.result {
             case .success(let jsonData):
                 do {
-                    print(jsonData)
+//                    print(jsonData)
                     let data = try JSONDecoder().decode(UserLocationModel.self, from: jsonData)
+//                    print(data)
+                    if data.response != nil {
+                        onSuccess(data)
+                    } else {
+                        onError(data.error.validation ?? "")
+                    }
+                } catch {
+                    print("ParseError",error.localizedDescription)
+                    onError(error.localizedDescription)
+                }
+                break
+            case .failure(let error):
+                print("Request error: \(error)")
+                onError(error.localizedDescription)
+                break
+            }
+        }
+    }
+
+
+
+    //MARK:- pay for doctor wallet
+
+    func payForDoctorWallet(amount : String, paymentMethod : String, doctorID : String, onSuccess: @escaping (PayForDoctorModel) -> Void, onError: @escaping (_ error: String)-> Void) {
+
+        let params = ["Amount" : amount,"PaymentMethod" : paymentMethod,"DoctorID" :doctorID]
+        let token = UserDefaults.standard.string(forKey: "TOKEN")
+        let header = ["Authorization" : "Bearer " + token!] as HTTPHeaders?
+
+        let url = "http://dashboard.seenapay.com/api/payment/payForDoctor"
+
+        AF.request(URL(string: url)!, method: .post, parameters: params ,encoding: JSONEncoding.default, headers: header).responseData {
+            response in
+            switch response.result {
+            case .success(let jsonData):
+                do {
+                    print(jsonData)
+                    let data = try JSONDecoder().decode(PayForDoctorModel.self, from: jsonData)
                     print(data)
                     if data.response != nil {
                         onSuccess(data)

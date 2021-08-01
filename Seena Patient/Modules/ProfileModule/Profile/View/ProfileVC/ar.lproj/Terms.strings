@@ -1,0 +1,13 @@
+
+/* Class = "UILabel"; text = "Terms and conditions"; ObjectID = "LFC-UR-Wvs"; */
+"LFC-UR-Wvs.text" = "الشروط والأحكام";
+
+/* Class = "UITextView"; text = "Loan terms and conditions\n-User must be above 21 years old\n-User must provide an income proof for more than EGP 3000 monthly\n-User must provide a proof of residence within Egypt only-User must provide through the a valid national ID\n-Our APR is 10% for all loans through the app\n-Payment terms is a monthly installment to be paid at the beginning of each month\n-Payment plan starts after 30 days from the loan approval\n-Our loans are only available for 12 months"; ObjectID = "wrO-S9-Uxa"; */
+"wrO-S9-Uxa.text" = "شروط وأحكام القرض:
+- يجب أن يكون عمر المستخدم أكبر من 21 عامًا.
+- يجب على المستخدم تقديم إثبات دخل يزيد عن 3000 جنيه شهريًا.
+- يجب على المستخدم تقديم دليل على الإقامة داخل مصر فقط - يجب على المستخدم تقديم إثبات الإقامة من خلال رقم تعريف قومي ساري المفعول.
+- معدل الفائدة السنوية لدينا هو 10٪ لجميع القروض من خلال التطبيق.
+- شروط السداد عبارة عن قسط شهري يتم دفعه في بداية كل شهر.
+- تبدأ خطة الدفع بعد 30 يومًا من الموافقة على القرض.
+- قروضنا متاحة فقط لمدة 12 شهرًا.";

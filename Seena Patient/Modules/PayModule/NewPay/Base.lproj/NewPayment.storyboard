@@ -419,24 +419,21 @@
                                         <rect key="frame" x="57" y="300" width="300" height="120"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="16b-NT-bzP">
-                                                <rect key="frame" x="86" y="25" width="128.5" height="70"/>
+                                                <rect key="frame" x="111.5" y="25.5" width="77.5" height="69.5"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Balance" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jiZ-jk-WWc">
-                                                        <rect key="frame" x="34" y="0.0" width="60.5" height="26"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <nil key="textColor"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Balance" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jiZ-jk-WWc">
+                                                        <rect key="frame" x="0.0" y="0.0" width="77.5" height="30.5"/>
+                                                        <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="22"/>
+                                                        <color key="textColor" red="0.015686274510000001" green="0.17254901959999999" blue="0.36078431370000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="EGP 30,000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eer-lB-LAQ">
-                                                        <rect key="frame" x="0.0" y="41" width="128.5" height="29"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                                        <nil key="textColor"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EGP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RWg-hq-DM3">
+                                                        <rect key="frame" x="19.5" y="45.5" width="38" height="24"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                        <color key="textColor" red="0.015686274510000001" green="0.17254901959999999" blue="0.36078431370000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="70" id="a8N-f2-INP"/>
-                                                </constraints>
                                             </stackView>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -503,6 +500,7 @@
                         <outlet property="twelveMons" destination="VWp-yI-Akp" id="Nea-19-IOM"/>
                         <outlet property="valuImg" destination="pfJ-Ft-Ujo" id="ZSk-dM-jew"/>
                         <outlet property="valuView" destination="bdG-qJ-Yjo" id="Edd-tK-82h"/>
+                        <outlet property="walletAmountLbl" destination="RWg-hq-DM3" id="iM9-ho-pXp"/>
                         <outlet property="walletImg" destination="1Fx-IK-R1k" id="pst-1B-ASG"/>
                     </connections>
                 </viewController>

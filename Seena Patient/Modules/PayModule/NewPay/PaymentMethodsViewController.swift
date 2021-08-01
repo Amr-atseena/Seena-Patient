@@ -21,6 +21,7 @@ class PaymentMethodsViewController: UIViewController {
     @IBOutlet weak var installmentStackView: UIStackView!
 
     @IBOutlet weak var balanceView: UIView!
+    @IBOutlet weak var walletAmountLbl: UILabel!
 
 
     @IBOutlet weak var nextBtn: UIButton!
@@ -42,7 +43,7 @@ class PaymentMethodsViewController: UIViewController {
     var arrayOfValues = [Int]()
     var oneOfPaymentMethodsSelected: Bool?
     var instPlans = [InstallmentPlansModelResponse]()
-
+    var whichPayMethod : Int?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,9 +56,14 @@ class PaymentMethodsViewController: UIViewController {
     }
 
     var docId : Int?
+    var userWalletMoney: Int?
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+
+        // To get money wallet for user
+        userWalletMoney = UserDefaults.standard.integer(forKey: "walletMoney")
+//
         
         let amo = Int(UserDefaults.standard.string(forKey: "amount") ?? "") ?? 0
 
@@ -95,7 +101,10 @@ class PaymentMethodsViewController: UIViewController {
         mainView.layer.masksToBounds = true
         mainView.layer.maskedCorners = [ .layerMaxXMinYCorner,.layerMinXMinYCorner]
         installmentStackView.isHidden = true
-
+        balanceView.layer.masksToBounds = true
+        balanceView.layer.borderWidth = 2
+        balanceView.layer.borderColor = #colorLiteral(red: 0.1019607857, green: 0.2784313858, blue: 0.400000006, alpha: 1)
+        balanceView.layer.cornerRadius = 10
         unSelectedInst(container: threeMons, amount: threeAmount, duration: threeDur)
         unSelectedInst(container: sixMons, amount: sixAmount, duration: sixDur)
         unSelectedInst(container: twelveMons, amount: twelveAmount, duration: twelveDur)
@@ -135,14 +144,16 @@ class PaymentMethodsViewController: UIViewController {
         installmentImg.image = UIImage(named: "unselected")
         valuImg.image = UIImage(named: "unselected")
         //        installmentStackView.isHidden = true
-//        UserDefaults.standard.setValue("2", forKey: "installmentsPayment")
+        //        UserDefaults.standard.setValue("2", forKey: "installmentsPayment")
         whichInstallment = 0
         oneOfPaymentMethodsSelected = true
         tableView.isHidden = true
-
         balanceView.isHidden = false
+        whichPayMethod = 2
+        walletAmountLbl.text = "EGP \(userWalletMoney ?? 0)"
 
-//        showAlertController(title: "Soon".localized, message: "Will be available soon".localized, actions: [])
+
+        //        showAlertController(title: "Soon".localized, message: "Will be available soon".localized, actions: [])
     }
 
     @objc func installmentAction(sender : UITapGestureRecognizer) {
@@ -159,6 +170,7 @@ class PaymentMethodsViewController: UIViewController {
 
         installmentStackView.isHidden = true
         balanceView.isHidden = true
+        whichPayMethod = 1
     }
 
     @objc func valuAction(sender : UITapGestureRecognizer) {
@@ -167,9 +179,10 @@ class PaymentMethodsViewController: UIViewController {
         walletImg.image = UIImage(named: "unselected")
         //        installmentStackView.isHidden = true
         whichInstallment = 0
-        oneOfPaymentMethodsSelected = false
+        oneOfPaymentMethodsSelected = true
         tableView.isHidden = true
         balanceView.isHidden = true
+        whichPayMethod = 3
 
         showAlertController(title: "Soon".localized, message: "Will be available soon".localized, actions: [])
     }
@@ -235,7 +248,7 @@ class PaymentMethodsViewController: UIViewController {
     }
 
     @IBAction func next(_ sender: Any) {
-
+        let amo = UserDefaults.standard.string(forKey: "amount")
 
 
         if tableView.isHidden == false && selectedMo == nil {
@@ -244,45 +257,64 @@ class PaymentMethodsViewController: UIViewController {
             showAlertController(title: "Error!".toLocalize, message: "Select one of payment methods".localized, actions: [])
 
         }else{
-            //            let storyBoard: UIStoryboard = UIStoryboard(name: "NewPayment", bundle: nil)
-            //            let newViewController = storyBoard.instantiateViewController(withIdentifier: "ScanQRViewController") as? ScanQRViewController
-            //            newViewController!.modalPresentationStyle = .fullScreen
-            //            self.present(newViewController!, animated: true, completion: nil)
+            if whichPayMethod == 1 {
+
+                //            let storyBoard: UIStoryboard = UIStoryboard(name: "NewPayment", bundle: nil)
+                //            let newViewController = storyBoard.instantiateViewController(withIdentifier: "ScanQRViewController") as? ScanQRViewController
+                //            newViewController!.modalPresentationStyle = .fullScreen
+                //            self.present(newViewController!, animated: true, completion: nil)
 
 
 
+                let pay = UserDefaults.standard.string(forKey: "installmentsPayment")
+                //        let docId = UserDefaults.standard.string(forKey: "QRCode")
+                let inst = UserDefaults.standard.integer(forKey: "installment_plans_ID")
 
-            let amo = UserDefaults.standard.string(forKey: "amount")
-            let pay = UserDefaults.standard.string(forKey: "installmentsPayment")
-            //        let docId = UserDefaults.standard.string(forKey: "QRCode")
-            let inst = UserDefaults.standard.integer(forKey: "installment_plans_ID")
+                APIClient().payForDoctor(amount: amo!, paymentMethod: pay!, doctorID: "\(docId ?? 0)", inst: inst) { (res) in
+                    print(res.response.success)
 
-            APIClient().payForDoctor(amount: amo!, paymentMethod: pay!, doctorID: "\(docId ?? 0)", inst: inst) { (res) in
-                print(res.response.success)
+                    UserDefaults.standard.set(res.response.paymentID, forKey: "PAYMENTID")
 
-                UserDefaults.standard.set(res.response.paymentID, forKey: "PAYMENTID")
-
-
-                let storyBoard: UIStoryboard = UIStoryboard(name: "NewPayment", bundle: nil)
-                let newViewController = storyBoard.instantiateViewController(withIdentifier: "OTPViewController") as? OTPViewController
-                newViewController!.modalPresentationStyle = .fullScreen
-                self.present(newViewController!, animated: true, completion: nil)
+                    let storyBoard: UIStoryboard = UIStoryboard(name: "NewPayment", bundle: nil)
+                    let newViewController = storyBoard.instantiateViewController(withIdentifier: "OTPViewController") as? OTPViewController
+                    newViewController!.modalPresentationStyle = .fullScreen
+                    self.present(newViewController!, animated: true, completion: nil)
 
 
 
+                } onError: { (error) in
+                    self.showAlertController(title: "Error!", message: error, actions: [])
+                }
+            } else if whichPayMethod == 2 {
+                print("Payment method selected")
 
-            } onError: { (error) in
-                self.showAlertController(title: "Error!", message: error, actions: [])
+
+                if Int(amo ?? "") ?? 0 > userWalletMoney ?? 0 {
+                    showAlertController(title: "Error!".toLocalize, message: "The balance you entered exceeds your wallet amount".toLocalize, actions: [])
+                }
+//                    else{
+//                    if Int(balanceTF.text ?? "0") ?? 0 < 1 {
+//                        showAlertController(title: "Error!".toLocalize, message: "Please, input a number greater than 0".toLocalize, actions: [])
+//                    }
+            else{
+                        print("Call my wallet api")
+                        APIClientSecond().payForDoctorWallet(amount: amo!, paymentMethod: "\(whichPayMethod ?? 0)", doctorID: "\(docId ?? 0)") { (res) in
+                            print(res)
+                            let storyBoard: UIStoryboard = UIStoryboard(name: "NewPayment", bundle: nil)
+                            let newViewController = storyBoard.instantiateViewController(withIdentifier: "OTPViewController") as? OTPViewController
+                            newViewController!.modalPresentationStyle = .fullScreen
+                            self.present(newViewController!, animated: true, completion: nil)
+                        } onError: { (error) in
+                            self.showAlertController(title: "Error!".toLocalize, message: error, actions: [])
+                }
             }
-            
+
+            }else if whichPayMethod == 3 {
+                showAlertController(title: "Error!".toLocalize, message: "Payment method using vaLU will be available soon".toLocalize, actions: [])
+            }
         }
-        
-
     }
-    
-
 }
-
 
 extension PaymentMethodsViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -319,7 +351,6 @@ extension PaymentMethodsViewController: UITableViewDataSource, UITableViewDelega
         print(instPlans[indexPath.row].months)
         print(instPlans[indexPath.row].enName)
         print(instPlans[indexPath.row].id)
-
 
     }
 

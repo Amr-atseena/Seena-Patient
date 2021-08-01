@@ -10,5 +10,6 @@ import Foundation
 // MARK: - PaymentHomeResponse
 struct PaymentHomeResponse: Codable {
     let dueCredit, paidCredit, walletCredit: Int
+    let walletMoney : Int?
     let installment: [Installment]
 }

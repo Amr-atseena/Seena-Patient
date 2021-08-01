@@ -102,18 +102,18 @@ class HomeVC: UIViewController, HomeViewProtocol, CLLocationManagerDelegate {
         super.viewDidLoad()
         presenter.viewDidLoad()
 
-        let isSigned = UserDefaults.standard.bool(forKey: "Signin")
-
-        if isSigned == true{
-            if (CLLocationManager.locationServicesEnabled())
-            {
-                locationManager = CLLocationManager()
-                locationManager.delegate = self
-                locationManager.desiredAccuracy = kCLLocationAccuracyBest
-                locationManager.requestAlwaysAuthorization()
-                locationManager.startUpdatingLocation()
-            }
-        }else{}
+//        let isSigned = UserDefaults.standard.bool(forKey: "Signin")
+//
+//        if isSigned == true{
+//            if (CLLocationManager.locationServicesEnabled())
+//            {
+//                locationManager = CLLocationManager()
+//                locationManager.delegate = self
+//                locationManager.desiredAccuracy = kCLLocationAccuracyBest
+//                locationManager.requestAlwaysAuthorization()
+//                locationManager.startUpdatingLocation()
+//            }
+//        }else{}
 
         //        sendUserLocation()
 
@@ -128,7 +128,7 @@ class HomeVC: UIViewController, HomeViewProtocol, CLLocationManagerDelegate {
 
         //        if isSigned == true{
         APIClientSecond().userLocation(latitude: lati ?? 0, longitude: lon ?? 0) { (res) in
-            print(res)
+//            print(res)
         } onError: { (error) in
             print(error)
         }
@@ -145,13 +145,17 @@ class HomeVC: UIViewController, HomeViewProtocol, CLLocationManagerDelegate {
         /* you can use these values*/
         let lat = location.coordinate.latitude
         let long = location.coordinate.longitude
+        
+        let isSigned = UserDefaults.standard.bool(forKey: "Signin")
+
+        if isSigned == true{
         if userStatus == "activate"{
             //            print(lat,long)
             lati = lat
             lon = long
 
             APIClientSecond().userLocation(latitude: lat, longitude: long) { (res) in
-                print(res)
+//                print(res)
             } onError: { (error) in
                 print(error)
             }
@@ -159,11 +163,24 @@ class HomeVC: UIViewController, HomeViewProtocol, CLLocationManagerDelegate {
         }else{
             print("No user to print his cordinates")
         }
+        }
     }
 
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        let isSigned = UserDefaults.standard.bool(forKey: "Signin")
+
+        if isSigned == true{
+            if (CLLocationManager.locationServicesEnabled())
+            {
+                locationManager = CLLocationManager()
+                locationManager.delegate = self
+                locationManager.desiredAccuracy = kCLLocationAccuracyBest
+                locationManager.requestAlwaysAuthorization()
+                locationManager.startUpdatingLocation()
+            }
+        }else{}
         presenter.viewWillAppear()
 
 

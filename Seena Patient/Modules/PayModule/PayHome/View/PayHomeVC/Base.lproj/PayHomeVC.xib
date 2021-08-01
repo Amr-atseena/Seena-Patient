@@ -350,50 +350,59 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8i2-4z-Zq2">
                     <rect key="frame" x="20" y="434.66666666666669" width="374" height="50"/>
                     <subviews>
-                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="7Bn-8r-ilP">
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="7Bn-8r-ilP">
                             <rect key="frame" x="5" y="5" width="364" height="40"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z9O-7O-nnx">
-                                    <rect key="frame" x="0.0" y="0.0" width="41" height="40"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="39" height="40"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <state key="normal" title="All"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <state key="normal" title="All">
+                                        <color key="titleColor" red="0.027450980392156862" green="0.16862745098039217" blue="0.37647058823529411" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
                                     <connections>
                                         <action selector="all:" destination="-1" eventType="touchUpInside" id="YqK-Hm-DKX"/>
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YpP-0w-fiv">
-                                    <rect key="frame" x="51" y="0.0" width="41" height="40"/>
+                                    <rect key="frame" x="47" y="0.0" width="43" height="40"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <state key="normal" title="Paid"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <state key="normal" title="Paid">
+                                        <color key="titleColor" red="0.015686274510000001" green="0.17254901959999999" blue="0.36078431370000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
                                     <connections>
                                         <action selector="paid:" destination="-1" eventType="touchUpInside" id="Tqg-Dw-XDe"/>
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WaF-MI-bly">
-                                    <rect key="frame" x="102" y="0.0" width="67" height="40"/>
-                                    <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <rect key="frame" x="98" y="0.0" width="71.333333333333314" height="40"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <state key="normal" title="Unpaid">
-                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="titleColor" red="0.015686274510000001" green="0.17254901959999999" blue="0.36078431370000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </state>
                                     <connections>
                                         <action selector="unpaid:" destination="-1" eventType="touchUpInside" id="dOn-tb-0mi"/>
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2tf-ZO-UAj">
-                                    <rect key="frame" x="179" y="0.0" width="76.666666666666686" height="40"/>
-                                    <color key="backgroundColor" red="1" green="0.47450980390000003" blue="0.0" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                    <rect key="frame" x="177.33333333333334" y="0.0" width="82.000000000000028" height="40"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <state key="normal" title="Pending">
-                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="titleColor" red="0.015686274510000001" green="0.17254901959999999" blue="0.36078431370000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </state>
                                     <connections>
                                         <action selector="pending:" destination="-1" eventType="touchUpInside" id="Byi-Ha-5ay"/>
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L7c-iz-se0">
-                                    <rect key="frame" x="265.66666666666669" y="0.0" width="98.333333333333314" height="40"/>
-                                    <color key="backgroundColor" red="0.85882352939999995" green="0.078431372550000003" blue="0.078431372550000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <rect key="frame" x="267.33333333333331" y="0.0" width="96.666666666666686" height="40"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <state key="normal" title="Rejected">
-                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="titleColor" red="0.015686274510000001" green="0.17254901959999999" blue="0.36078431370000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </state>
                                     <connections>
                                         <action selector="rejected:" destination="-1" eventType="touchUpInside" id="zSt-fE-fW9"/>

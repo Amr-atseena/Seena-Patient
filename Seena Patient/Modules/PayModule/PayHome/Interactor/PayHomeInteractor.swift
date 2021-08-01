@@ -22,10 +22,10 @@ class PayHomeInteractor: PayHomeInputInteractorProtocol {
     func retriveUser() {
         presenter?.onRetriveUserSuccess(localDataManager.retriveUser())
     }
-    func retrivePaymentDue() {
+    func retrivePaymentDue(status : String) {
 //        let tok = UserDefaults.standard.string(forKey: "firstSignUpToken")
 
-        remoteDataManager.retrivePayment(token: localDataManager.retriveToken())
+        remoteDataManager.retrivePayment(token: localDataManager.retriveToken(), status: status)
 //        remoteDataManager.retrivePayment(token: tok!)
         { [weak self] (result) in
             guard let self = self else { return }

@@ -56,27 +56,56 @@ class PayHomeVC: UIViewController, PayHomeViewProtocol {
         super.viewDidLoad()
         presenter.viewDidLoad()
 
-
-        applyBtn.layer.cornerRadius = 10
-        allFilterBtn.layer.cornerRadius = 10
-        paidFilterBtn.layer.cornerRadius = 10
-        unpaidFilterBtn.layer.cornerRadius = 10
-        pendingFilterBtn.layer.cornerRadius = 10
-        rejectedFilterBtn.layer.cornerRadius = 10
-
     }
 
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
+        selectedButton(button: allFilterBtn)
+        unselectedButton(button: paidFilterBtn)
+        unselectedButton(button: unpaidFilterBtn)
+        unselectedButton(button: pendingFilterBtn)
+        unselectedButton(button: rejectedFilterBtn)
+
         presenter.viewWillAppear()
         tabBarController?.tabBar.isHidden = false
+
     }
     // MARK: - Methods
     func setupNavBar() {
         self.navigationController?.navigationBar.isHidden = true
     }
+
+
+    func buttonsUI(button: UIButton){
+        button.layer.borderWidth = 1
+        button.layer.borderColor = #colorLiteral(red: 0.4392156863, green: 0.4392156863, blue: 0.4392156863, alpha: 1)
+        button.layer.cornerRadius = 10
+    }
+
+    func selectedButton(button : UIButton){
+        button.backgroundColor = #colorLiteral(red: 0.8588235294, green: 0.07843137255, blue: 0.07843137255, alpha: 1)
+        button.setTitleColor(#colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0), for: .normal)
+    }
+    func unselectedButton(button : UIButton){
+        button.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        button.setTitleColor(#colorLiteral(red: 0.02745098039, green: 0.168627451, blue: 0.3764705882, alpha: 1), for: .normal)
+    }
+
+
     func setupUI() {
+
+
+        buttonsUI(button: allFilterBtn)
+        buttonsUI(button: paidFilterBtn)
+        buttonsUI(button: unpaidFilterBtn)
+        buttonsUI(button: pendingFilterBtn)
+        buttonsUI(button: rejectedFilterBtn)
+
+
+        applyBtn.layer.cornerRadius = 10
+
         // yourBalanceKeyword Label
         yourBalanceKeywordLabel.text = presenter.localization.yourBalance
         yourBalanceKeywordLabel.font = DesignSystem.Typography.heading.font
@@ -191,24 +220,62 @@ class PayHomeVC: UIViewController, PayHomeViewProtocol {
 
 
     @IBAction func all(_ sender: Any) {
-        print("All")
-        paymentsDueTableView.reloadData()
+        print("all")
+        selectedButton(button: allFilterBtn)
+        unselectedButton(button: paidFilterBtn)
+        unselectedButton(button: unpaidFilterBtn)
+        unselectedButton(button: pendingFilterBtn)
+        unselectedButton(button: rejectedFilterBtn)
+
+
+        presenter.forStatusUse(status: "all")
     }
 
     @IBAction func paid(_ sender: Any) {
         print("paid")
+
+        selectedButton(button: paidFilterBtn)
+        unselectedButton(button: allFilterBtn)
+        unselectedButton(button: unpaidFilterBtn)
+        unselectedButton(button: pendingFilterBtn)
+        unselectedButton(button: rejectedFilterBtn)
+
+        presenter.forStatusUse(status: "paid")
     }
 
     @IBAction func unpaid(_ sender: Any) {
         print("unpaid")
+
+        selectedButton(button: unpaidFilterBtn)
+        unselectedButton(button: allFilterBtn)
+        unselectedButton(button: paidFilterBtn)
+        unselectedButton(button: pendingFilterBtn)
+        unselectedButton(button: rejectedFilterBtn)
+
+        presenter.forStatusUse(status: "unpaid")
     }
 
     @IBAction func pending(_ sender: Any) {
         print("pending")
+
+        selectedButton(button: pendingFilterBtn)
+        unselectedButton(button: allFilterBtn)
+        unselectedButton(button: paidFilterBtn)
+        unselectedButton(button: unpaidFilterBtn)
+        unselectedButton(button: rejectedFilterBtn)
+
+        presenter.forStatusUse(status: "pending")
     }
 
     @IBAction func rejected(_ sender: Any) {
         print("rejected")
+        selectedButton(button: rejectedFilterBtn)
+        unselectedButton(button: allFilterBtn)
+        unselectedButton(button: paidFilterBtn)
+        unselectedButton(button: unpaidFilterBtn)
+        unselectedButton(button: pendingFilterBtn)
+
+        presenter.forStatusUse(status: "rejected")
     }
 
     var sendProfile: Bool?

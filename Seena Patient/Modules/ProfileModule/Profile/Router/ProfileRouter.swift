@@ -37,8 +37,10 @@ class ProfileRouter: ProfileRouterProtocol {
             share()
         case .alert(let alertEntity):
             showAlert(alertEntity: alertEntity)
-        case .applicationStatus:
-            navigateToApplicationStatus()
+        case .profile:
+            navigateToProfile()
+        case .terms:
+            navigateTerms()
         case .tut:
             tutorials()
 
@@ -92,9 +94,16 @@ class ProfileRouter: ProfileRouterProtocol {
         viewController?.showAlertController(title: alertEntity.title, message: alertEntity.message, actions: [okAction, cancelAction])
     }
 
-    private func navigateToApplicationStatus() {
-        let storyBoard: UIStoryboard = UIStoryboard(name: "ApplicationStatus", bundle: nil)
-        let newViewController = storyBoard.instantiateViewController(withIdentifier: "ApplicationStatusViewController") as? ApplicationStatusViewController
+    private func navigateToProfile() {
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Profile", bundle: nil)
+        let newViewController = storyBoard.instantiateViewController(withIdentifier: "ProfileViewController") as? ProfileViewController
+        newViewController!.modalPresentationStyle = .fullScreen
+        viewController?.navigationController?.pushViewController(newViewController!, animated: true)
+    }
+
+    private func navigateTerms() {
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Terms", bundle: nil)
+        let newViewController = storyBoard.instantiateViewController(withIdentifier: "TermsViewController") as? TermsViewController
         newViewController!.modalPresentationStyle = .fullScreen
         viewController?.navigationController?.pushViewController(newViewController!, animated: true)
     }

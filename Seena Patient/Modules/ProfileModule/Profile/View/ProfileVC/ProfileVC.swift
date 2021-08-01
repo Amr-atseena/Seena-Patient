@@ -24,7 +24,10 @@ class ProfileVC: UIViewController, ProfileViewProtocol {
     @IBOutlet weak var applicationStatusLbl: UILabel!
     @IBOutlet weak var statusLbl: UILabel!
     @IBOutlet weak var tutorialKeywordLabel: UILabel!
+    @IBOutlet weak var profileLbl: UILabel!
+    @IBOutlet weak var termsAndLbl: UILabel!
 
+    
     // MARK: - Attributes
     var presenter: ProfilePresenterProtocol!
     // MARK: - Init
@@ -42,22 +45,29 @@ class ProfileVC: UIViewController, ProfileViewProtocol {
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        tabBarController?.tabBar.isHidden = false
         presenter.viewWillAppear()
     }
     // MARK: - Methods
     func setupUI() {
         navigationController?.navigationBar.isHidden = true
         // profileKeyword Label
-        profileKeywordLabel.text = presenter.localization.profile
-        profileKeywordLabel.font = DesignSystem.Typography.heading.font
+//        profileKeywordLabel.text = presenter.localization.profile
+//        profileKeywordLabel.font = DesignSystem.Typography.heading.font
         // userName Label
-        userNameLabel.font = DesignSystem.Typography.subHeading4.font
+//        userNameLabel.font = DesignSystem.Typography.subHeading4.font
         //transactionsKeyword Label
         transactionsKeywordLabel.text = presenter.localization.transactions
         transactionsKeywordLabel.font = DesignSystem.Typography.subHeading4.font
 
         tutorialKeywordLabel.text = "Tutorials".toLocalize
         tutorialKeywordLabel.font = DesignSystem.Typography.subHeading4.font
+
+        termsAndLbl.text = "Terms and conditions".toLocalize
+        termsAndLbl.font = DesignSystem.Typography.subHeading4.font
+
+        profileLbl.text = "Profile".toLocalize
+        profileLbl.font = DesignSystem.Typography.subHeading4.font
 
         applicationStatusLbl.text = "Application status".toLocalize
         applicationStatusLbl.font = DesignSystem.Typography.subHeading4.font
@@ -72,16 +82,16 @@ class ProfileVC: UIViewController, ProfileViewProtocol {
         logOutKeywordLabel.font = DesignSystem.Typography.subHeading4.font
     }
     func updateProfile(userName: String, image: String) {
-        userNameLabel.text = userName
-        userImage.kf.setImage(with: URL(string: image))
+//        userNameLabel.text = userName
+//        userImage.kf.setImage(with: URL(string: image))
     }
     func setApplicationStatus(status: String, color: UIColor) {
-        statusLabel.text = status
-        holderView.isHidden = false
-        tagView.backgroundColor = color
-        UIView.animate(withDuration: 0.3) {
-            self.tagView.layoutIfNeeded()
-        }
+//        statusLabel.text = status
+//        holderView.isHidden = false
+//        tagView.backgroundColor = color
+//        UIView.animate(withDuration: 0.3) {
+//            self.tagView.layoutIfNeeded()
+//        }
     }
     func hideApplicationStatus() {
         holderView.isHidden = true

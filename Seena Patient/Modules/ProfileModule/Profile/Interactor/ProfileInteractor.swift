@@ -31,6 +31,8 @@ class ProfileInteractor: ProfileInputInteractorProtocol {
         UserDefaults.standard.removeObject(forKey: "Signin")
         UserDefaults.standard.removeObject(forKey: "status")
         UserDefaults.standard.removeObject(forKey: "PackagePhone")
+        UserDefaults.standard.removeObject(forKey: "walletMoney")
+
         
 
     }

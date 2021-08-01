@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Terms View Controller-->
+        <scene sceneID="H97-cJ-mYY">
+            <objects>
+                <viewController storyboardIdentifier="TermsViewController" id="Ci5-bX-vWp" customClass="TermsViewController" customModule="Seena" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="91y-Pu-IID">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Terms and conditions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LFC-UR-Wvs">
+                                <rect key="frame" x="20" y="118" width="209" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="vcg-QK-BmS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="21"/>
+                                <color key="textColor" red="0.85882352939999995" green="0.078431372550000003" blue="0.078431372550000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="wrO-S9-Uxa">
+                                <rect key="frame" x="20" y="186" width="374" height="636"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">Loan terms and conditions:
+
+- User must be above 21 years old.
+- User must provide an income proof for more than EGP 3000 monthly.
+- User must provide a proof of residence within Egypt only-User must provide through the a valid national ID.
+- Our APR is 10% for all loans through the app.
+- Payment terms is a monthly installment to be paid at the beginning of each month.
+- Payment plan starts after 30 days from the loan approval.
+- Our loans are only available for 12 months.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="9qn-pY-omz"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="9qn-pY-omz" firstAttribute="bottom" secondItem="wrO-S9-Uxa" secondAttribute="bottom" constant="40" id="2Mu-hp-3nQ"/>
+                            <constraint firstItem="9qn-pY-omz" firstAttribute="trailing" secondItem="wrO-S9-Uxa" secondAttribute="trailing" constant="20" id="JoL-3C-Zip"/>
+                            <constraint firstItem="LFC-UR-Wvs" firstAttribute="top" secondItem="9qn-pY-omz" secondAttribute="top" constant="30" id="JpI-nL-ItB"/>
+                            <constraint firstItem="wrO-S9-Uxa" firstAttribute="top" secondItem="LFC-UR-Wvs" secondAttribute="bottom" constant="39" id="bk0-VT-SNB"/>
+                            <constraint firstItem="LFC-UR-Wvs" firstAttribute="leading" secondItem="9qn-pY-omz" secondAttribute="leading" constant="20" id="elB-kn-9GF"/>
+                            <constraint firstItem="wrO-S9-Uxa" firstAttribute="leading" secondItem="LFC-UR-Wvs" secondAttribute="leading" id="xXh-Xp-iIr"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="RtV-vO-shL"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x54-f1-h55" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="921.73913043478262" y="40.848214285714285"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="aoK-iP-uLh">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="snY-Ah-BhZ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="UQg-iC-h3I">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Ci5-bX-vWp" kind="relationship" relationship="rootViewController" id="T45-ml-rrL"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QIX-w2-5If" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="11.594202898550726" y="40.848214285714285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

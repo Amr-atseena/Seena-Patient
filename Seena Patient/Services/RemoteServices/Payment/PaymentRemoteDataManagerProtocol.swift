@@ -8,7 +8,7 @@
 
 import Foundation
 protocol PaymentRemoteDataManagerProtocol: class {
-    func retrivePayment(token: String ,completionHandler: @escaping ((_ result: Result<Codable, Error>) -> Void))
+    func retrivePayment(token: String , status :String , completionHandler: @escaping ((_ result: Result<Codable, Error>) -> Void))
     func retriveTransactions(token: String, completionHandler: @escaping ((_ result: Result<Codable, Error>) -> Void))
     func payInstallment(token: String, payment: Payment, completionHandler: @escaping ((_ result: Result<Codable, Error>) -> Void))
 }

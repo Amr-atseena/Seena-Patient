@@ -34,3 +34,10 @@
 
 /* Class = "UILabel"; text = "EGP 14,390"; ObjectID = "wTj-u8-hPs"; */
 "wTj-u8-hPs.text" = "EGP 14,390";
+
+
+"Z9O-7O-nnx.normalTitle" = "الكل";
+"YpP-0w-fiv.normalTitle" = "مدفوع";
+"WaF-MI-bly.normalTitle" = "غير مدفوع";
+"2tf-ZO-UAj.normalTitle" = "معلق";
+"L7c-iz-se0.normalTitle" = "مرفوض";

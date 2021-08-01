@@ -30,18 +30,19 @@ class ProfilePresenter: ProfilePresenterProtocol {
     func optionButtonTapped(atIndex index: Int) {
         switch index {
         case 0:
-            router?.go(to: .transactions)
+            router?.go(to: .profile)
         case 1:
-            router?.go(to: .settings)
+            router?.go(to: .transactions)
         case 2:
-            router?.go(to: .tut)
+            router?.go(to: .settings)
         case 3:
-            router?.go(to: .share)
+            router?.go(to: .tut)
         case 4:
-            router?.go(to: .alert(AlertEntity(title: "", message: "LogoutMessage".localized)))
+            router?.go(to: .share)
         case 5:
-            print("Profile")
-            router?.go(to: .applicationStatus)
+            router?.go(to: .terms)
+        case 6:
+            router?.go(to: .alert(AlertEntity(title: "", message: "LogoutMessage".localized)))
         default:
             print(index)
         }

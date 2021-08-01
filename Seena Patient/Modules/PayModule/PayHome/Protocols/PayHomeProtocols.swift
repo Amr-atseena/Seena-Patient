@@ -27,7 +27,7 @@ protocol PayHomeInputInteractorProtocol: class {
     var remoteDataManager: PaymentRemoteDataManagerProtocol { get set }
     // Presenter -> Interactor
     func retriveUser()
-    func retrivePaymentDue()
+    func retrivePaymentDue(status : String)
 }
 protocol PayHomeOutputInteractorProtocol: class {
     // Interactor -> Presenter
@@ -45,6 +45,7 @@ protocol PayHomePresenterProtocol: class {
     func viewDidLoad()
     func viewWillAppear()
     func payButtonTapped()
+    func forStatusUse(status :String)
     func calculateButtonTapped()
     func config(dueCell cell: DueCellProtocol, atIndex index: Int)
     func dueCell(selectedAtIndex index: Int)

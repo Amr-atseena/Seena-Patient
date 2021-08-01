@@ -37,6 +37,13 @@ class PayHomePresenter: PayHomePresenterProtocol {
         view?.setupUI()
         view?.setupPaymentsDueTableView()
     }
+
+    func forStatusUse(status : String) {
+        view?.showLoadingIndictor()
+        interactor?.retrivePaymentDue(status: status)
+    }
+
+
     func payButtonTapped() {
        // router?.go(to: .paymentChannel)
     }
@@ -103,7 +110,7 @@ extension PayHomePresenter: PayHomeOutputInteractorProtocol {
         //        view?.hideNoDataView()
                 view?.showNoDataView()
                 view?.showLoadingIndictor()
-                interactor?.retrivePaymentDue()
+                interactor?.retrivePaymentDue(status: "all")
 
             }else{
                 view?.showNoDataView()
@@ -123,7 +130,7 @@ extension PayHomePresenter: PayHomeOutputInteractorProtocol {
     //        view?.hideNoDataView()
             view?.showNoDataView()
             view?.showLoadingIndictor()
-            interactor?.retrivePaymentDue()
+            interactor?.retrivePaymentDue(status: "all")
         }
         return
 
@@ -156,6 +163,8 @@ extension PayHomePresenter: PayHomeOutputInteractorProtocol {
             let ratio = Double(payment.paidCredit ) / Double(payment.dueCredit + payment.paidCredit)
             let avaliable = String(payment.walletCredit) + " " + "EGP".localized
             view?.setPaymentProgress(totalAmount: total, paidAmount: paid, avaliableBalance: avaliable, ratio: Double(ratio))
+            print("Wallet money is: \(payment.walletMoney ?? 0)")
+            UserDefaults.standard.set(payment.walletMoney, forKey: "walletMoney")
         }
     }
     func onRetrivePaymentFail() {

@@ -1,0 +1,56 @@
+
+/* Class = "UILabel"; text = "Application status"; ObjectID = "3TX-9d-aS2"; */
+"3TX-9d-aS2.text" = "حالة الطلب";
+
+/* Class = "UIButton"; normalTitle = "Finish"; ObjectID = "3VF-Za-yO7"; */
+"3VF-Za-yO7.normalTitle" = "انهاء";
+
+/* Class = "UILabel"; text = "This is a reason and clarification"; ObjectID = "4eH-0o-xZb"; */
+"4eH-0o-xZb.text" = "السبب والتوضيح";
+
+/* Class = "UITextField"; placeholder = "Phone number"; ObjectID = "EQV-uC-CaF"; */
+"EQV-uC-CaF.placeholder" = "رقم الهاتف";
+
+/* Class = "UITextField"; placeholder = "Last name"; ObjectID = "FiQ-m7-B1a"; */
+"FiQ-m7-B1a.placeholder" = "الاسم الأخير";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Kc9-Px-Rld"; */
+"Kc9-Px-Rld.text" = "Label";
+
+/* Class = "UILabel"; text = "Rejected"; ObjectID = "Yny-IK-0hF"; */
+"Yny-IK-0hF.text" = "مرفوض";
+
+/* Class = "UILabel"; text = "Upload the following"; ObjectID = "bXj-ea-EAq"; */
+"bXj-ea-EAq.text" = "قم برفع الآتي";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "eGI-Cj-V13"; */
+"eGI-Cj-V13.text" = "Label";
+
+/* Class = "UILabel"; text = "Profile"; ObjectID = "mGn-gf-pNe"; */
+"mGn-gf-pNe.text" = "الملف الشخصي";
+
+/* Class = "UILabel"; text = "Personal information"; ObjectID = "mVR-HT-5vY"; */
+"mVR-HT-5vY.text" = "معلومات شخصية";
+
+/* Class = "UITextField"; placeholder = "First name"; ObjectID = "nDF-Jg-H5f"; */
+"nDF-Jg-H5f.placeholder" = "الاسم الأول";
+
+/* Class = "UILabel"; text = "Change profile picture"; ObjectID = "s3e-WI-Kcu"; */
+"s3e-WI-Kcu.text" = "تغيير صورة الملف الشخصي";
+
+/* Class = "UILabel"; text = "Application status"; ObjectID = "sWi-wG-WoL"; */
+"sWi-wG-WoL.text" = "حالة الطلب";
+
+/* Class = "UILabel"; text = "Action required"; ObjectID = "sY9-OT-8J4"; */
+"sY9-OT-8J4.text" = "الإجراء مطلوب";
+
+/* Class = "UITextField"; placeholder = "Email"; ObjectID = "uQ2-wW-SmG"; */
+"uQ2-wW-SmG.placeholder" = "البريد الإلكتروني";
+
+/* Class = "UIButton"; normalTitle = "Next"; ObjectID = "unP-cS-vYw"; */
+"unP-cS-vYw.normalTitle" = "التالي";
+
+/* Class = "UILabel"; text = "Reason for rejection"; ObjectID = "zYE-Vf-wDI"; */
+"zYE-Vf-wDI.text" = "سبب الرفض";
+
+

@@ -10,7 +10,7 @@ import Foundation
 import Moya
 import MOLH
 enum PaymentEndPoint {
-    case paymentHome(String)
+    case paymentHome(String, String)
     case transactions(String)
     case pay(String, Payment)
 }
@@ -33,6 +33,8 @@ extension PaymentEndPoint: TargetType, EnvironmentProtocol {
         switch self {
         case .pay:
             return .patch
+        case .paymentHome:
+            return .post
         default:
             return .get
         }
@@ -42,8 +44,9 @@ extension PaymentEndPoint: TargetType, EnvironmentProtocol {
     }
     var task: Task {
         switch self {
-        case .paymentHome:
-            return .requestPlain
+        case .paymentHome(_, let status):
+            let params = ["status": status] as [String: Any]
+            return .requestParameters(parameters: params, encoding: JSONEncoding.default)
         case .transactions:
             return .requestPlain
         case .pay(_, let payment):
@@ -57,7 +60,7 @@ extension PaymentEndPoint: TargetType, EnvironmentProtocol {
     }
     var headers: [String: String]? {
         switch self {
-        case .paymentHome(let token):
+        case .paymentHome(let token, _):
         return [
             "Authorization": "Bearer \(token)",
             "Accept-Encoding": "gzip, deflate, br",
@@ -78,3 +81,4 @@ extension PaymentEndPoint: TargetType, EnvironmentProtocol {
         }
     }
 }
+

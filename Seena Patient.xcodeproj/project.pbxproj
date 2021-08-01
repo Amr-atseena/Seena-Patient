@@ -288,12 +288,12 @@
 		8C3FD6382642D054002B5240 /* OTPSignUpModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3FD6372642D054002B5240 /* OTPSignUpModel.swift */; };
 		8C3FD63C2642D391002B5240 /* SignUpSecond.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3FD63B2642D391002B5240 /* SignUpSecond.swift */; };
 		8C3FD6402642D705002B5240 /* ForgetPassModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3FD63F2642D705002B5240 /* ForgetPassModel.swift */; };
+		8C6CA25726AECD800056F0C6 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6CA25626AECD800056F0C6 /* ProfileViewController.swift */; };
 		8C6DEF7D265A707B00C69E0A /* SponsoredClincs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6DEF7C265A707B00C69E0A /* SponsoredClincs.swift */; };
 		8C6DFF9226566B31008C52CE /* ForgetPassword.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C6DFF9426566B31008C52CE /* ForgetPassword.storyboard */; };
 		8C6DFF9726566B9A008C52CE /* SignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C6DFF9926566B9A008C52CE /* SignUp.storyboard */; };
 		8C6DFFA026566C4B008C52CE /* NewPayment.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C6DFFA226566C4B008C52CE /* NewPayment.storyboard */; };
 		8C6DFFA726566CA5008C52CE /* SecondSignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C6DFFA926566CA5008C52CE /* SecondSignUp.storyboard */; };
-		8C6DFFAE26566CC0008C52CE /* ApplicationStatus.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C6DFFB026566CC0008C52CE /* ApplicationStatus.storyboard */; };
 		8C6DFFBF26567BBC008C52CE /* PayHomeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C6DFFC126567BBC008C52CE /* PayHomeVC.xib */; };
 		8C6DFFCA26567F68008C52CE /* HomeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C6DFFCC26567F68008C52CE /* HomeVC.xib */; };
 		8C6DFFD326567FE9008C52CE /* ClinicsHomeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C6DFFD526567FE9008C52CE /* ClinicsHomeVC.xib */; };
@@ -378,6 +378,10 @@
 		8CEC780924E9CC2B000CED1F /* ServiceDetailsLocalizaition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEC780824E9CC2B000CED1F /* ServiceDetailsLocalizaition.swift */; };
 		8CEC780E24E9DDDB000CED1F /* ServiceClinicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEC780C24E9DDDB000CED1F /* ServiceClinicCell.swift */; };
 		8CEC780F24E9DDDB000CED1F /* ServiceClinicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CEC780D24E9DDDB000CED1F /* ServiceClinicCell.xib */; };
+		8CF64BF226AF9DE4004DDDA4 /* PersonalInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF64BF126AF9DE4004DDDA4 /* PersonalInfoViewController.swift */; };
+		8CF64BF626B02CA1004DDDA4 /* TermsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF64BF526B02CA1004DDDA4 /* TermsViewController.swift */; };
+		8CF64BFD26B04827004DDDA4 /* Terms.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CF64BFF26B04827004DDDA4 /* Terms.storyboard */; };
+		8CF64C1126B049F5004DDDA4 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CF64C1326B049F5004DDDA4 /* Profile.storyboard */; };
 		8CFD17E5263E5CBF002C0F8A /* OTPForgetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFD17E4263E5CBF002C0F8A /* OTPForgetPasswordViewController.swift */; };
 		8CFD17E9263E6339002C0F8A /* ApplicationStatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFD17E8263E6339002C0F8A /* ApplicationStatusViewController.swift */; };
 /* End PBXBuildFile section */
@@ -678,6 +682,7 @@
 		8C3FD6372642D054002B5240 /* OTPSignUpModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPSignUpModel.swift; sourceTree = "<group>"; };
 		8C3FD63B2642D391002B5240 /* SignUpSecond.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpSecond.swift; sourceTree = "<group>"; };
 		8C3FD63F2642D705002B5240 /* ForgetPassModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPassModel.swift; sourceTree = "<group>"; };
+		8C6CA25626AECD800056F0C6 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		8C6DEF7C265A707B00C69E0A /* SponsoredClincs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SponsoredClincs.swift; sourceTree = "<group>"; };
 		8C6DFF9326566B31008C52CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/ForgetPassword.storyboard; sourceTree = "<group>"; };
 		8C6DFF9626566B3D008C52CE /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/ForgetPassword.strings; sourceTree = "<group>"; };
@@ -687,8 +692,6 @@
 		8C6DFFA426566C7C008C52CE /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/NewPayment.strings; sourceTree = "<group>"; };
 		8C6DFFA826566CA5008C52CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/SecondSignUp.storyboard; sourceTree = "<group>"; };
 		8C6DFFAD26566CA8008C52CE /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/SecondSignUp.strings; sourceTree = "<group>"; };
-		8C6DFFAF26566CC0008C52CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/ApplicationStatus.storyboard; sourceTree = "<group>"; };
-		8C6DFFB226566CC5008C52CE /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/ApplicationStatus.strings; sourceTree = "<group>"; };
 		8C6DFFC026567BBC008C52CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/PayHomeVC.xib; sourceTree = "<group>"; };
 		8C6DFFC326567BC2008C52CE /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/PayHomeVC.strings; sourceTree = "<group>"; };
 		8C6DFFC726567D77008C52CE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/PayHomeVC.strings; sourceTree = "<group>"; };
@@ -778,6 +781,12 @@
 		8CEC780824E9CC2B000CED1F /* ServiceDetailsLocalizaition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceDetailsLocalizaition.swift; sourceTree = "<group>"; };
 		8CEC780C24E9DDDB000CED1F /* ServiceClinicCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceClinicCell.swift; sourceTree = "<group>"; };
 		8CEC780D24E9DDDB000CED1F /* ServiceClinicCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServiceClinicCell.xib; sourceTree = "<group>"; };
+		8CF64BF126AF9DE4004DDDA4 /* PersonalInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalInfoViewController.swift; sourceTree = "<group>"; };
+		8CF64BF526B02CA1004DDDA4 /* TermsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsViewController.swift; sourceTree = "<group>"; };
+		8CF64BFE26B04827004DDDA4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Terms.storyboard; sourceTree = "<group>"; };
+		8CF64C1226B049F5004DDDA4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Profile.storyboard; sourceTree = "<group>"; };
+		8CF64C1726B04A31004DDDA4 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Profile.strings; sourceTree = "<group>"; };
+		8CF64C1B26B04BB7004DDDA4 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Terms.strings; sourceTree = "<group>"; };
 		8CFD17E4263E5CBF002C0F8A /* OTPForgetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPForgetPasswordViewController.swift; sourceTree = "<group>"; };
 		8CFD17E8263E6339002C0F8A /* ApplicationStatusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationStatusViewController.swift; sourceTree = "<group>"; };
 		A829CAD199C8BC7D0018D428 /* Pods_Seena_Patient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Seena_Patient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1389,8 +1398,12 @@
 			children = (
 				88EDA12824FAE41200460B4D /* ProfileVC.swift */,
 				88EDA12224FAE41200460B4D /* ProfileVC.xib */,
+				8C6CA25626AECD800056F0C6 /* ProfileViewController.swift */,
+				8CF64BF126AF9DE4004DDDA4 /* PersonalInfoViewController.swift */,
 				8CFD17E8263E6339002C0F8A /* ApplicationStatusViewController.swift */,
-				8C6DFFB026566CC0008C52CE /* ApplicationStatus.storyboard */,
+				8CF64C1326B049F5004DDDA4 /* Profile.storyboard */,
+				8CF64BF526B02CA1004DDDA4 /* TermsViewController.swift */,
+				8CF64BFF26B04827004DDDA4 /* Terms.storyboard */,
 			);
 			path = ProfileVC;
 			sourceTree = "<group>";
@@ -3355,14 +3368,15 @@
 				88ED03FC24EFC7B300BBCEF6 /* ClinicsSectionHeaderCell.xib in Resources */,
 				8C6DFFD326567FE9008C52CE /* ClinicsHomeVC.xib in Resources */,
 				887C63242502683700C69E2A /* ClinicSkeletonCell.xib in Resources */,
-				8C6DFFAE26566CC0008C52CE /* ApplicationStatus.storyboard in Resources */,
 				88D291252515153D008738A5 /* UploadDocumentsVC.xib in Resources */,
 				8C6DFF9726566B9A008C52CE /* SignUp.storyboard in Resources */,
 				8803D1F125082532004A6A46 /* PayOptionCell.xib in Resources */,
 				88C0F1BC25BB3EBF0035E422 /* ClinicOfTheWeekHeaderView.xib in Resources */,
 				8803D1E025081EAA004A6A46 /* ATMPayVC.xib in Resources */,
 				88ED042E24F0042600BBCEF6 /* NotificationCell.xib in Resources */,
+				8CF64BFD26B04827004DDDA4 /* Terms.storyboard in Resources */,
 				8C8CB3CB24E6B817009679E5 /* Assets.xcassets in Resources */,
+				8CF64C1126B049F5004DDDA4 /* Profile.storyboard in Resources */,
 				8C6DFFDE2656861A008C52CE /* SpectialityCell.xib in Resources */,
 				88695C722555D7B600A680C8 /* Tajawal-Bold.ttf in Resources */,
 				882DE7A72510005900B1F4F7 /* SignUpVC.xib in Resources */,
@@ -3718,6 +3732,7 @@
 				88D29164251549DD008738A5 /* UploadRouter.swift in Sources */,
 				88BE60C52506CD8E00EB2F03 /* PaymentMethodCell.swift in Sources */,
 				8C3D84372696FFF700F507D9 /* resenOtp.swift in Sources */,
+				8C6CA25726AECD800056F0C6 /* ProfileViewController.swift in Sources */,
 				8803D1E325081EAA004A6A46 /* ATMPayProtocols.swift in Sources */,
 				88B460CF25193BA5002E798C /* SettingsProtocols.swift in Sources */,
 				88ED040B24EFCD9A00BBCEF6 /* ClinicsSearchVC.swift in Sources */,
@@ -3727,6 +3742,7 @@
 				88126AB1252F49C500F99665 /* PaymentDueViewModel.swift in Sources */,
 				8803D1E225081EAA004A6A46 /* ATMPayRouter.swift in Sources */,
 				8C3D843B26970C2F00F507D9 /* resendPaymentOtp.swift in Sources */,
+				8CF64BF226AF9DE4004DDDA4 /* PersonalInfoViewController.swift in Sources */,
 				88295E69253040E300AFF5A3 /* PaymentSuccessProtocols.swift in Sources */,
 				8829891A2512A0C7004C5AB6 /* DocumentsLocalDataManagerProtocol.swift in Sources */,
 				88B460D025193BA5002E798C /* SettingsInteractor.swift in Sources */,
@@ -3740,6 +3756,7 @@
 				8829891525129D04004C5AB6 /* Account.swift in Sources */,
 				882DE7AD2510005900B1F4F7 /* SignUpVC.swift in Sources */,
 				8C0F8A39264818CF00DD30E6 /* ResetPassword.swift in Sources */,
+				8CF64BF626B02CA1004DDDA4 /* TermsViewController.swift in Sources */,
 				88BD395025161FF3004D149B /* UploadRequestParamaters.swift in Sources */,
 				88B460A8251928E5002E798C /* TransactionsRouter.swift in Sources */,
 				88295E6A253040E300AFF5A3 /* PaymentSuccessInteractor.swift in Sources */,
@@ -3814,15 +3831,6 @@
 			name = SecondSignUp.storyboard;
 			sourceTree = "<group>";
 		};
-		8C6DFFB026566CC0008C52CE /* ApplicationStatus.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8C6DFFAF26566CC0008C52CE /* Base */,
-				8C6DFFB226566CC5008C52CE /* ar */,
-			);
-			name = ApplicationStatus.storyboard;
-			sourceTree = "<group>";
-		};
 		8C6DFFC126567BBC008C52CE /* PayHomeVC.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -3865,6 +3873,24 @@
 				88789EBC2531B20E006979D2 /* ar */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		8CF64BFF26B04827004DDDA4 /* Terms.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8CF64BFE26B04827004DDDA4 /* Base */,
+				8CF64C1B26B04BB7004DDDA4 /* ar */,
+			);
+			name = Terms.storyboard;
+			sourceTree = "<group>";
+		};
+		8CF64C1326B049F5004DDDA4 /* Profile.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8CF64C1226B049F5004DDDA4 /* Base */,
+				8CF64C1726B04A31004DDDA4 /* ar */,
+			);
+			name = Profile.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -4036,7 +4062,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Seena Patient/Seena.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 12;
+				CURRENT_PROJECT_VERSION = 14;
 				DEVELOPMENT_TEAM = LL84DY2BWT;
 				INFOPLIST_FILE = "$(SRCROOT)/Seena Patient/Configurations/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
@@ -4061,7 +4087,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Seena Patient/Seena.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 12;
+				CURRENT_PROJECT_VERSION = 14;
 				DEVELOPMENT_TEAM = LL84DY2BWT;
 				INFOPLIST_FILE = "$(SRCROOT)/Seena Patient/Configurations/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
